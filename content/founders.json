@@ -1,0 +1,22 @@
+{
+  "section_label": "Founders",
+  "title_l1": "Talk to one of us",
+  "title_l2": "directly.",
+  "intro": "Beyond Rational was founded by Morten and Rasmus Melberg in 2024. Both pick up the phone, both read every brief.",
+  "morten": {
+    "eyebrow": "Co-founder",
+    "name": "Morten Melberg",
+    "role": "Commercial, partnerships, projects.",
+    "email": "morten@beyondrational.com",
+    "phone": "+45 22 55 54 70",
+    "photo": "assets/morten-melberg.jpg"
+  },
+  "rasmus": {
+    "eyebrow": "Co-founder",
+    "name": "Rasmus Melberg",
+    "role": "Product, design, technical specification.",
+    "email": "rasmus@beyondrational.com",
+    "studio": "Refshalevej 167, CPH",
+    "photo": "assets/rasmus-melberg.jpg"
+  }
+}

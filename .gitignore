@@ -1,0 +1,15 @@
+# Preview & local
+.tmp/
+backup_*
+test_*.html
+test_*.py
+view_*.html
+view_*.xml
+
+# OS / editor
+.DS_Store
+*.swp
+
+# Secrets
+sales_agent/.env
+.env

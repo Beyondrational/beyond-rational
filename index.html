@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond Rational — A studio for materials in architecture</title>
+<meta name="description" content="A studio in Copenhagen and Helsinki, developing materials for architecture that don't compromise. Sound, surface, and substance, designed in the same line.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="br.css">
+<style>
+  /* Landing-only composition */
+  .home-hero {
+    min-height: 96vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding-top: 96px;
+    padding-bottom: var(--bra-s-4);
+  }
+  .home-hero__title {
+    font-family: var(--bra-font);
+    font-weight: 300;
+    font-size: clamp(40px, 6vw, 96px);
+    line-height: 1.04;
+    letter-spacing: -0.022em;
+    max-width: 20ch;
+    text-wrap: balance;
+  }
+  .home-hero__title em {
+    font-style: normal;
+    font-weight: 500;
+  }
+  .home-hero__sub {
+    margin-top: var(--bra-s-3);
+    max-width: 44ch;
+    font-size: clamp(16px, 1.3vw, 19px);
+    line-height: 1.55;
+    color: var(--bra-ink-2);
+  }
+  .home-hero__top, .home-hero__foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--bra-s-3);
+    flex-wrap: wrap;
+  }
+
+  .manifesto {
+    padding: var(--bra-s-6) 0;
+  }
+  .manifesto-row {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: var(--bra-s-4);
+    align-items: baseline;
+    padding: var(--bra-s-4) 0;
+    border-top: 1px solid rgba(28,28,26,0.12);
+  }
+  .manifesto-row:last-child { border-bottom: 1px solid rgba(28,28,26,0.12); }
+  .manifesto-row__num {
+    font-family: var(--bra-font);
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--bra-ink-2);
+    font-variant-numeric: tabular-nums;
+  }
+  .manifesto-row__statement {
+    font-family: var(--bra-font);
+    font-weight: 300;
+    font-size: clamp(24px, 3vw, 44px);
+    line-height: 1.15;
+    letter-spacing: -0.012em;
+    text-wrap: balance;
+  }
+  .manifesto-row__statement em { font-style: normal; font-weight: 500; }
+  @media (max-width: 720px) {
+    .manifesto-row { grid-template-columns: 40px 1fr; gap: var(--bra-s-3); }
+  }
+
+  .split-tight {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: clamp(40px, 5vw, 96px);
+    align-items: start;
+  }
+  @media (max-width: 720px) { .split-tight { grid-template-columns: 1fr; } }
+
+  .studio-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .studio-stats__cell {
+    padding: var(--bra-s-3);
+    border-right: 1px solid rgba(244,242,237,0.20);
+  }
+  .studio-stats__cell:last-child { border-right: none; }
+  .studio-stats__num {
+    font-family: var(--bra-font);
+    font-weight: 300;
+    font-size: clamp(40px, 5vw, 72px);
+    line-height: 1;
+    letter-spacing: -0.022em;
+    font-variant-numeric: tabular-nums;
+  }
+  .studio-stats__label {
+    font-family: var(--bra-font);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: rgba(244,242,237,0.65);
+    margin-top: var(--bra-s-2);
+  }
+  @media (max-width: 720px) { .studio-stats { grid-template-columns: 1fr; } .studio-stats__cell { border-right: none; border-bottom: 1px solid rgba(244,242,237,0.20); } }
+
+  .notes-row {
+    display: grid;
+    grid-template-columns: 110px 1fr 1fr 40px;
+    align-items: baseline;
+    gap: var(--bra-s-3);
+    padding: var(--bra-s-3) 0;
+    border-top: 1px solid rgba(28,28,26,0.14);
+    transition: padding var(--bra-dur-base) var(--bra-ease);
+  }
+  .notes-row:last-child { border-bottom: 1px solid rgba(28,28,26,0.14); }
+  .notes-row:hover { padding-left: var(--bra-s-3); }
+  .notes-row__date {
+    font-family: var(--bra-font);
+    font-weight: 500; font-size: 12px;
+    color: var(--bra-ink-2);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .notes-row__title {
+    font-family: var(--bra-font);
+    font-weight: 500;
+    font-size: clamp(18px, 1.6vw, 24px);
+    letter-spacing: -0.012em;
+    line-height: 1.20;
+  }
+  .notes-row__sub {
+    font-family: var(--bra-font);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--bra-ink-2);
+    line-height: 1.45;
+  }
+  .notes-row__arrow {
+    text-align: right;
+    transition: transform var(--bra-dur-base) var(--bra-ease);
+  }
+  .notes-row:hover .notes-row__arrow { transform: translate(4px, -4px); }
+  @media (max-width: 720px) {
+    .notes-row { grid-template-columns: 1fr; gap: 4px; }
+    .notes-row__arrow { display: none; }
+  }
+</style>
+</head>
+<body class="bra" data-page="home">
+
+<!-- Page loader (CLOU-style curtain, once per session) -->
+<div class="br-loader" aria-hidden="true">
+  <div class="br-loader__top">
+    <span class="br-loader__top-l">Beyond Rational</span>
+    <span class="br-loader__top-r">Studio / 2026</span>
+  </div>
+  <div class="br-loader__middle">
+    <div class="br-loader__counter">00</div>
+  </div>
+  <div class="br-loader__bottom">
+    <span class="br-loader__bottom-l">Loading</span>
+    <div class="br-loader__bar"></div>
+  </div>
+</div>
+
+<div class="bra-cursor" aria-hidden="true"></div>
+<div class="bra-scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<nav class="bra-nav">
+  <a href="index.html" class="bra-nav__brand">Beyond Rational</a>
+  <div class="bra-nav__links">
+    <a href="product.html"       class="bra-nav__link">Product</a>
+    <a href="projects.html"      class="bra-nav__link">Projects</a>
+    <a href="contact.html"       class="bra-nav__link">Contact</a>
+    <a href="design-system.html" class="bra-nav__link">Design</a>
+    <a href="index.html"         class="bra-nav__link" aria-current="page">Studio</a>
+  </div>
+</nav>
+
+<!-- =====================================================
+     1 / HERO — type-led, no product photo
+     ===================================================== -->
+<section class="bra-container home-hero">
+  <header class="home-hero__top">
+    <span class="bra-caption" data-content="hero.eyebrow_left">Beyond Rational · Copenhagen / Helsinki</span>
+    <span class="bra-caption" data-content="hero.eyebrow_right">Est. 2024</span>
+  </header>
+
+  <div style="display: flex; flex-direction: column; justify-content: center;">
+    <h1 class="home-hero__title">
+      <span class="bra-reveal-line" data-reveal data-content="hero.title_l1">A studio for materials</span><br>
+      <span class="bra-reveal-line" data-reveal data-content-html="true" data-content="hero.title_l2_em"><em>that don't compromise.</em></span>
+    </h1>
+    <p class="home-hero__sub" data-content="hero.subtitle">
+      Beyond Rational designs and manufactures architectural surfaces in Copenhagen and Helsinki. We start with a question — what should a material be? — and stop only when the answer holds up on the building.
+    </p>
+  </div>
+
+  <footer class="home-hero__foot">
+    <div style="display: flex; gap: var(--bra-s-3); align-items: center; flex-wrap: wrap;">
+      <a href="projects.html" style="text-decoration: none;">
+        <button class="bra-btn-mag" data-magnetic>
+          <span data-content="hero.cta_primary">See our work</span>
+          <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+      </a>
+      <a href="contact.html" class="bra-cta" data-content="hero.cta_secondary">Visit the studio</a>
+    </div>
+    <span class="bra-micro">Scroll ↓</span>
+  </footer>
+</section>
+
+<!-- =====================================================
+     2 / MANIFESTO — three beliefs
+     ===================================================== -->
+<section class="bra-container manifesto">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-4);" data-content="manifesto.section_label">What we believe</p>
+
+  <div class="manifesto-row">
+    <span class="manifesto-row__num">01</span>
+    <p class="manifesto-row__statement">
+      A material is <em>what it is</em>, all the way through.
+    </p>
+  </div>
+  <div class="manifesto-row">
+    <span class="manifesto-row__num">02</span>
+    <p class="manifesto-row__statement">
+      Performance and surface aren't <em>trade-offs.</em>
+    </p>
+  </div>
+  <div class="manifesto-row">
+    <span class="manifesto-row__num">03</span>
+    <p class="manifesto-row__statement">
+      The best acoustic surface is the one <em>you don't notice.</em>
+    </p>
+  </div>
+</section>
+
+<!-- =====================================================
+     3 / WHAT WE MAKE — single short paragraph + link to product
+     ===================================================== -->
+<section class="bra-surface-stone">
+  <div class="bra-container" style="padding-top: var(--bra-s-6); padding-bottom: var(--bra-s-6);">
+    <div class="split-tight">
+      <p class="bra-caption" data-content="what_we_make.section_label">What we make</p>
+      <div>
+        <p class="bra-lede" style="max-width: 56ch; font-size: clamp(20px, 2vw, 28px); line-height: 1.4; font-weight: 400;">
+          We make acoustic surfaces. Compressed wood fibre with nothing else added, specified for ceilings and walls where a room can't be allowed to sound like a recording studio. Our first product, <a href="product.html" style="border-bottom: 2px solid currentColor; padding-bottom: 2px;">Aisti</a>, ships from Helsinki.
+        </p>
+        <p class="bra-caption" style="margin-top: var(--bra-s-3); display: flex; gap: var(--bra-s-3); flex-wrap: wrap;">
+          <a href="product.html" class="bra-cta" style="border: none; padding: 0;">See the product</a>
+          <a href="projects.html" class="bra-cta" style="border: none; padding: 0;">See projects</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     4 / PROCESS — foam-forming
+     ===================================================== -->
+<section class="bra-container" style="padding-top: var(--bra-s-6); padding-bottom: var(--bra-s-6);">
+  <div class="split-tight">
+    <div>
+      <p class="bra-caption" style="margin-bottom: var(--bra-s-2);" data-content="process.section_label">How we work</p>
+      <h2 class="home-hero__title" style="font-size: clamp(32px, 4vw, 64px); max-width: 12ch;">
+        <span class="bra-reveal-line" data-reveal>Foam-formed,</span><br>
+        <span class="bra-reveal-line" data-reveal><em>not pressed.</em></span>
+      </h2>
+    </div>
+    <div class="bra-stack-wide">
+      <p class="bra-body" style="font-size: 17px;">
+        We adapted our process from the Finnish paper industry. Instead of pressing fibre flat under load, we suspend it in foam — the fibres set into an open cell structure that absorbs sound at the cell level, without binders or plastics.
+      </p>
+      <p class="bra-body" style="font-size: 17px;">
+        It is a slow process. It is also the only one we know that produces a single-substance acoustic plate. Material first, all the way through.
+      </p>
+      <a href="product.html" class="bra-cta">Read the technical paper</a>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     5 / STUDIO — two cities, one studio
+     ===================================================== -->
+<section class="bra-surface-oak">
+  <div class="bra-container" style="padding-top: var(--bra-s-6); padding-bottom: var(--bra-s-6);">
+    <div class="split-tight" style="align-items: end; margin-bottom: var(--bra-s-5);">
+      <p class="bra-caption" data-content="studio.section_label">Where we work</p>
+      <h2 class="home-hero__title" style="color: var(--bra-on-oak); font-size: clamp(32px, 4vw, 64px); max-width: 14ch;">
+        <span class="bra-reveal-line" data-reveal>Two cities.</span><br>
+        <span class="bra-reveal-line" data-reveal><em>One studio.</em></span>
+      </h2>
+    </div>
+
+    <div class="studio-stats">
+      <div class="studio-stats__cell">
+        <div class="studio-stats__num" data-content="studio.stat_founded">2024</div>
+        <div class="studio-stats__label">Founded</div>
+      </div>
+      <div class="studio-stats__cell">
+        <div class="studio-stats__num"><span data-count="11">0</span></div>
+        <div class="studio-stats__label">People</div>
+      </div>
+      <div class="studio-stats__cell">
+        <div class="studio-stats__num" data-content="studio.stat_studios">CPH / HEL</div>
+        <div class="studio-stats__label">Studios</div>
+      </div>
+    </div>
+
+    <p class="bra-lede" style="margin-top: var(--bra-s-4); max-width: 56ch;">
+      Design happens in Copenhagen, manufacturing in Helsinki. We specify, prototype, and ship from the same drawing.
+    </p>
+  </div>
+</section>
+
+<!-- =====================================================
+     6 / FIELD NOTES — depth signal
+     ===================================================== -->
+<section class="bra-container" style="padding-top: var(--bra-s-6); padding-bottom: var(--bra-s-6);">
+  <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: var(--bra-s-4); gap: var(--bra-s-3); flex-wrap: wrap;">
+    <p class="bra-caption">Field notes</p>
+    <a href="#" class="bra-cta">All notes</a>
+  </div>
+
+  <a href="#" class="notes-row">
+    <span class="notes-row__date">06 / 2026</span>
+    <span class="notes-row__title">Why foam-forming, not pressing</span>
+    <span class="notes-row__sub">A walk through the process and the alternatives we ruled out.</span>
+    <span class="notes-row__arrow">↗</span>
+  </a>
+  <a href="#" class="notes-row">
+    <span class="notes-row__date">05 / 2026</span>
+    <span class="notes-row__title">The carbon math of an acoustic plate</span>
+    <span class="notes-row__sub">Why a single-substance plate beats a layered system on embodied CO₂e.</span>
+    <span class="notes-row__arrow">↗</span>
+  </a>
+  <a href="#" class="notes-row">
+    <span class="notes-row__date">04 / 2026</span>
+    <span class="notes-row__title">What architects told us about specifying</span>
+    <span class="notes-row__sub">Findings from 28 interviews with studios across the Nordics.</span>
+    <span class="notes-row__arrow">↗</span>
+  </a>
+  <a href="#" class="notes-row">
+    <span class="notes-row__date">02 / 2026</span>
+    <span class="notes-row__title">A studio note on Material Matters</span>
+    <span class="notes-row__sub">Our position ahead of the Copenhagen launch, June 10–12.</span>
+    <span class="notes-row__arrow">↗</span>
+  </a>
+</section>
+
+<!-- =====================================================
+     7 / PRESS / QUOTES — social proof
+     ===================================================== -->
+<section class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-6);">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-4);">Said by others</p>
+
+  <div class="bra-card-grid bra-stagger" data-stagger>
+    <article class="bra-card bra-card-quote bra-card--oak bra-stagger-item">
+      <div class="bra-card-quote__mark">"</div>
+      <p class="bra-card-quote__text">A surface that lets a room sound like a room. The first acoustic plate we've put on a finish drawing without an asterisk.</p>
+      <div class="bra-card-quote__attr">
+        <p class="bra-card__eyebrow">Tham &amp; Videgård</p>
+        <p class="bra-card__meta">Stockholm</p>
+      </div>
+    </article>
+    <article class="bra-card bra-card-quote bra-stagger-item">
+      <div class="bra-card-quote__mark" style="color: rgba(28,28,26,0.40);">"</div>
+      <p class="bra-card-quote__text">They start from the material and stop when it's right. We rarely meet manufacturers who work that way.</p>
+      <div class="bra-card-quote__attr" style="border-top-color: rgba(28,28,26,0.18);">
+        <p class="bra-card__eyebrow">Henning Larsen</p>
+        <p class="bra-card__meta">Copenhagen</p>
+      </div>
+    </article>
+    <article class="bra-card bra-card--ink bra-stagger-item">
+      <p class="bra-card__eyebrow">Frame · Issue 156</p>
+      <h3 class="bra-card__title" style="margin-top: var(--bra-s-3); font-size: clamp(18px, 1.5vw, 24px);">"Beyond Rational pulls Nordic acoustics into a register no one else is using."</h3>
+      <p class="bra-card__meta" style="margin-top: var(--bra-s-3);">April 2026 · Sara Holm</p>
+      <a href="#" class="bra-cta" style="margin-top: auto; padding-top: var(--bra-s-3); color: var(--bra-on-oak);">Read the feature</a>
+    </article>
+    <article class="bra-card bra-card--stone bra-stagger-item">
+      <p class="bra-card__eyebrow">Wallpaper* · May 2026</p>
+      <h3 class="bra-card__title" style="margin-top: var(--bra-s-3); font-size: clamp(18px, 1.5vw, 24px);">Featured in "Materials to watch 2026"</h3>
+      <p class="bra-card__meta" style="margin-top: var(--bra-s-3);">12 studios named, BR among them.</p>
+      <a href="#" class="bra-cta" style="margin-top: auto; padding-top: var(--bra-s-3);">Read the feature</a>
+    </article>
+  </div>
+</section>
+
+<!-- =====================================================
+     8 / GET IN TOUCH — single calm CTA
+     ===================================================== -->
+<section class="bra-surface-oak">
+  <div class="bra-container" style="padding-top: var(--bra-s-7); padding-bottom: var(--bra-s-7);">
+    <div class="split-tight" style="align-items: end;">
+      <p class="bra-caption" data-content="cta.section_label">Get in touch</p>
+      <div>
+        <h2 class="home-hero__title" style="color: var(--bra-on-oak); font-size: clamp(36px, 5vw, 80px); max-width: 16ch;">
+          <span class="bra-reveal-line" data-reveal>Send the brief.</span><br>
+          <span class="bra-reveal-line" data-reveal><em>We'll read it carefully.</em></span>
+        </h2>
+        <p class="bra-lede" style="margin-top: var(--bra-s-3); max-width: 48ch;">
+          The studio answers Monday to Friday. We work directly with architects, no salespeople in the room.
+        </p>
+        <div style="display: flex; gap: var(--bra-s-3); align-items: center; margin-top: var(--bra-s-4); flex-wrap: wrap;">
+          <a href="contact.html" style="text-decoration: none;">
+            <button class="bra-btn-mag" data-magnetic style="background: var(--bra-on-oak); color: var(--bra-ink);">
+              <span>Get in touch</span>
+              <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </button>
+          </a>
+          <a href="mailto:hello@beyondrational.com" class="bra-cta" style="color: var(--bra-on-oak);" data-content="cta.email" data-content-attr="href" data-href-template="mailto:{cta.email}">hello@beyondrational.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Shared footer ===== -->
+<footer class="bra-footer">
+  <div class="bra-footer__grid">
+    <div class="bra-footer__brand">
+      <div class="bra-footer__brand-line">Beyond Rational</div>
+      <p class="bra-body" style="margin-top: var(--bra-s-3); max-width: 36ch; color: var(--bra-ink-2);">
+        A studio for materials in architecture. Copenhagen and Helsinki, since 2024.
+      </p>
+    </div>
+    <div>
+      <h4>Product</h4>
+      <ul>
+        <li><a href="product.html" class="bra-cta" style="border: none; padding: 0;">Aisti Teno</a></li>
+        <li><a href="product.html#finish" class="bra-cta" style="border: none; padding: 0;">Finishes</a></li>
+        <li><a href="product.html#spec" class="bra-cta" style="border: none; padding: 0;">Spec sheet</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="projects.html" class="bra-cta" style="border: none; padding: 0;">Projects</a></li>
+        <li><a href="#" class="bra-cta" style="border: none; padding: 0;">Field notes</a></li>
+        <li><a href="design-system.html" class="bra-cta" style="border: none; padding: 0;">Design system</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;">hello@beyondrational.com</a></li>
+        <li><span class="bra-body" style="font-size: 14px;">Refshalevej 167, Copenhagen</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bra-footer__base">
+    <span class="bra-micro">© 2026 Beyond Rational ApS</span>
+    <span class="bra-micro">B_R Design System · v1.0</span>
+  </div>
+</footer>
+
+<script src="br.js" defer></script>
+<script src="br-content.js" defer></script>
+</body>
+</html>

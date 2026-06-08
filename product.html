@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aisti Teno — the product · Beyond Rational</title>
+<meta name="description" content="Aisti Teno acoustic tile: 40 mm pressed wood fibre, NRC 0.85, Euroclass B, 100% recyclable. Configure dimensions, thickness, and finish.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://beyond-rational.odoo.com">
+<link rel="stylesheet" href="br.css">
+</head>
+<body class="bra">
+
+<!-- Page loader (CLOU-style curtain, once per session) -->
+<div class="br-loader" aria-hidden="true">
+  <div class="br-loader__top">
+    <span class="br-loader__top-l">Beyond Rational</span>
+    <span class="br-loader__top-r">Aisti / 2026</span>
+  </div>
+  <div class="br-loader__middle">
+    <div class="br-loader__counter">00</div>
+  </div>
+  <div class="br-loader__bottom">
+    <span class="br-loader__bottom-l">Loading</span>
+    <div class="br-loader__bar"></div>
+  </div>
+</div>
+
+
+
+<div class="bra-cursor" aria-hidden="true"></div>
+<div class="bra-scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<nav class="bra-nav">
+  <a href="index.html" class="bra-nav__brand">Beyond Rational</a>
+  <div class="bra-nav__links">
+    <a href="product.html"       class="bra-nav__link" aria-current="page">Product</a>
+    <a href="projects.html"      class="bra-nav__link">Projects</a>
+    <a href="contact.html"       class="bra-nav__link">Contact</a>
+    <a href="design-system.html" class="bra-nav__link">Design</a>
+    <a href="index.html"         class="bra-nav__link">Home</a>
+  </div>
+</nav>
+
+<div class="bra-nav-spacer"></div>
+
+<!-- ===== Product hero ===== -->
+<section class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-4);">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);">The product</p>
+  <h1 class="bra-mega">
+    <span class="bra-reveal-line" data-reveal>Aisti Teno.</span>
+  </h1>
+  <p class="bra-lede" style="margin-top: var(--bra-s-3); max-width: 48ch;">
+    A single layer of compressed wood fibre. Two formats, two thicknesses, five fibre finishes. Specified by architects, hung where the problem isn't allowed to show.
+  </p>
+</section>
+
+<!-- ===== Configurator ===== -->
+<section id="configure" class="bra-container" style="padding-bottom: var(--bra-s-6);">
+  <div class="bra-configurator">
+
+    <div class="bra-tile-stage" data-tile-stage>
+      <div class="bra-tile-3d" id="tile3d">
+        <div class="bra-tile-face bra-tile-face--front"></div>
+        <div class="bra-tile-face bra-tile-face--back"></div>
+        <div class="bra-tile-face bra-tile-face--top"></div>
+        <div class="bra-tile-face bra-tile-face--bottom"></div>
+        <div class="bra-tile-face bra-tile-face--left"></div>
+        <div class="bra-tile-face bra-tile-face--right"></div>
+      </div>
+      <span class="bra-tile-stage__hint">Move the cursor inside the stage</span>
+    </div>
+
+    <div class="bra-config-panel">
+
+      <div class="bra-config-section bra-config-section--first">
+        <h2 class="bra-h3" style="margin-bottom: var(--bra-s-2);">Build your tile.</h2>
+        <p class="bra-body">Every choice updates the live tile. The configuration carries straight onto the spec sheet.</p>
+      </div>
+
+      <div class="bra-config-section">
+        <p class="bra-config-section__label">Dimensions</p>
+        <div class="bra-config-row" data-config-group="dim">
+          <button class="bra-config-opt is-active" data-config="dim" data-w="240" data-h="240" data-w-mm="600"  data-h-mm="600">600 × 600 mm</button>
+          <button class="bra-config-opt"           data-config="dim" data-w="440" data-h="220" data-w-mm="1200" data-h-mm="600">1200 × 600 mm</button>
+        </div>
+      </div>
+
+      <div class="bra-config-section">
+        <p class="bra-config-section__label">Thickness</p>
+        <div class="bra-config-row" data-config-group="thick">
+          <button class="bra-config-opt is-active" data-config="thick" data-d="10" data-d-mm="20">20 mm</button>
+          <button class="bra-config-opt"           data-config="thick" data-d="20" data-d-mm="40">40 mm</button>
+        </div>
+      </div>
+
+      <div class="bra-config-section">
+        <p class="bra-config-section__label">Install · air gap to wall</p>
+        <div class="bra-config-row" data-config-group="gap">
+          <button class="bra-config-opt is-active" data-config="gap" data-gap="tight">Tight (plate-flush)</button>
+          <button class="bra-config-opt"           data-config="gap" data-gap="wide">Wide (200&thinsp;mm batten)</button>
+        </div>
+        <p class="bra-config-readout" id="gap-readout" style="margin-top: 12px;">Acoustic effect updates on the chart below.</p>
+      </div>
+
+      <div id="finish" class="bra-config-section">
+        <p class="bra-config-section__label">Finish</p>
+        <div class="bra-config-row" data-config-group="color">
+          <button class="bra-color-swatch is-active" data-config="color" data-color="#E8DCC4" data-name="Birch"  style="--swatch: #E8DCC4;" aria-label="Birch"></button>
+          <button class="bra-color-swatch"           data-config="color" data-color="#A8855E" data-name="Oak"    style="--swatch: #A8855E;" aria-label="Oak"></button>
+          <button class="bra-color-swatch"           data-config="color" data-color="#5A3F2E" data-name="Walnut" style="--swatch: #5A3F2E;" aria-label="Walnut"></button>
+          <button class="bra-color-swatch"           data-config="color" data-color="#7A7770" data-name="Stone"  style="--swatch: #7A7770;" aria-label="Stone"></button>
+          <button class="bra-color-swatch"           data-config="color" data-color="#6B7F5C" data-name="Lichen" style="--swatch: #6B7F5C;" aria-label="Lichen"></button>
+        </div>
+        <p class="bra-config-readout" id="color-readout" style="margin-top: 12px;">Birch · pale fibre</p>
+      </div>
+
+      <div class="bra-config-summary">
+        <span class="bra-config-summary__label">Your spec</span>
+        <span class="bra-config-summary__value" id="config-summary">600 × 600 × 20 mm · Birch</span>
+      </div>
+
+      <a href="contact.html" style="align-self: flex-start; text-decoration: none;">
+        <button class="bra-btn-mag" data-magnetic>
+          <span>Add to specification</span>
+          <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Spec sheet ===== -->
+<section id="spec" class="bra-surface-stone">
+  <div class="bra-container bra-section">
+    <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">The spec</p>
+    <div class="bra-grid-2">
+      <h2 class="bra-h1">
+        <span class="bra-reveal-line" data-reveal>40 mm.</span><br>
+        <span class="bra-reveal-line" data-reveal>Pressed wood fibre.</span>
+      </h2>
+      <div>
+        <div class="bra-spec">
+          <div class="bra-spec-row"><div class="bra-spec-key">Core</div><div class="bra-spec-val">Wood fibre, 100%</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key">Format</div><div class="bra-spec-val">600 × 1200 mm</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key">Thickness</div><div class="bra-spec-val">20 or 40 mm</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key">Weight</div><div class="bra-spec-val">9.4 kg / plate</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key">NRC</div><div class="bra-spec-val">0.85</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key">Fire</div><div class="bra-spec-val">Euroclass B</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key">Embodied CO₂e</div><div class="bra-spec-val">−3 kg / m²</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key">End of life</div><div class="bra-spec-val">100% recyclable</div></div>
+        </div>
+        <button class="bra-btn-fill" style="margin-top: var(--bra-s-3);">
+          <span>Download datasheet</span><span>↓</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Performance — absorption curve + data grid ===== -->
+<section id="performance" class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Performance</p>
+
+  <!-- Absorption chart -->
+  <div class="bra-chart" data-chart>
+    <div class="bra-chart__head">
+      <h2 class="bra-chart__title">
+        <span class="bra-reveal-line" data-reveal>Aisti® — </span>
+        <span class="bra-reveal-line" data-reveal><em>four configurations.</em></span>
+      </h2>
+      <div class="bra-chart__legend" role="tablist" aria-label="Filter by configuration">
+        <button type="button" class="bra-chart__legend-item" data-variant="20 / 20 mm"  aria-pressed="false"><span class="bra-chart__legend-dot" style="--dot: #D4A02C;"></span>20 / 20</button>
+        <button type="button" class="bra-chart__legend-item" data-variant="20 / 200 mm" aria-pressed="false"><span class="bra-chart__legend-dot" style="--dot: #9E3B65;"></span>20 / 200</button>
+        <button type="button" class="bra-chart__legend-item" data-variant="40 / 40 mm"  aria-pressed="false"><span class="bra-chart__legend-dot" style="--dot: #8B3A1F;"></span>40 / 40</button>
+        <button type="button" class="bra-chart__legend-item" data-variant="40 / 200 mm" aria-pressed="false"><span class="bra-chart__legend-dot" style="--dot: #D08AA0;"></span>40 / 200</button>
+      </div>
+    </div>
+
+    <p class="bra-chart__hint">
+      Air gap shifts absorption from mid-frequency to broadband.
+      <span class="bra-chart__hint-action">Hover a line, or click to lock.</span>
+    </p>
+
+    <svg class="bra-chart__svg" viewBox="0 0 1000 480" preserveAspectRatio="xMidYMid meet" role="img"
+         aria-label="Absorption coefficient vs. frequency for four Aisti configurations">
+
+      <!-- Y-axis title (rotated) -->
+      <text class="bra-chart-axis-text" x="20" y="225" transform="rotate(-90 20 225)" text-anchor="middle">Α (Sound absorption)</text>
+
+      <!-- Horizontal grid + Y labels (every 0.20) -->
+      <g class="bra-chart-grid">
+        <line x1="90" x2="970" y1="30"  y2="30"/>
+        <line x1="90" x2="970" y1="108" y2="108"/>
+        <line x1="90" x2="970" y1="186" y2="186"/>
+        <line x1="90" x2="970" y1="264" y2="264"/>
+        <line x1="90" x2="970" y1="342" y2="342"/>
+        <line x1="90" x2="970" y1="420" y2="420" class="is-baseline"/>
+      </g>
+      <g class="bra-chart-grid" opacity="0.5">
+        <line x1="90" x2="970" y1="69"  y2="69"/>
+        <line x1="90" x2="970" y1="147" y2="147"/>
+        <line x1="90" x2="970" y1="225" y2="225"/>
+        <line x1="90" x2="970" y1="303" y2="303"/>
+        <line x1="90" x2="970" y1="381" y2="381"/>
+      </g>
+
+      <!-- Y-axis tick labels -->
+      <g>
+        <text class="bra-chart-axis-text" x="78" y="34"  text-anchor="end">1.00</text>
+        <text class="bra-chart-axis-text" x="78" y="112" text-anchor="end">0.80</text>
+        <text class="bra-chart-axis-text" x="78" y="190" text-anchor="end">0.60</text>
+        <text class="bra-chart-axis-text" x="78" y="268" text-anchor="end">0.40</text>
+        <text class="bra-chart-axis-text" x="78" y="346" text-anchor="end">0.20</text>
+        <text class="bra-chart-axis-text" x="78" y="424" text-anchor="end">0.00</text>
+      </g>
+
+      <!-- X-axis labels -->
+      <g>
+        <text class="bra-chart-axis-text" x="90"  y="445" text-anchor="middle">125 Hz</text>
+        <text class="bra-chart-axis-text" x="266" y="445" text-anchor="middle">250 Hz</text>
+        <text class="bra-chart-axis-text" x="442" y="445" text-anchor="middle">500 Hz</text>
+        <text class="bra-chart-axis-text" x="618" y="445" text-anchor="middle">1 kHz</text>
+        <text class="bra-chart-axis-text" x="794" y="445" text-anchor="middle">2 kHz</text>
+        <text class="bra-chart-axis-text" x="970" y="445" text-anchor="middle">4 kHz</text>
+      </g>
+
+      <!-- Line A: 20/20 — amber -->
+      <polyline class="bra-chart-line bra-chart-line--a"
+                points="90,381 266,283.5 442,127.5 618,127.5 794,108 970,88.5"/>
+      <!-- Line B: 20/200 — magenta -->
+      <polyline class="bra-chart-line bra-chart-line--b"
+                points="90,225 266,186 442,30 618,69 794,49.5 970,30"/>
+      <!-- Line C: 40/40 — maroon -->
+      <polyline class="bra-chart-line bra-chart-line--c"
+                points="90,322.5 266,69 442,49.5 618,30 794,49.5 970,30"/>
+      <!-- Line D: 40/200 — rose -->
+      <polyline class="bra-chart-line bra-chart-line--d"
+                points="90,205.5 266,69 442,69 618,49.5 794,49.5 970,49.5"/>
+
+      <!-- Markers (4 lines × 6 freq = 24 dots) -->
+      <g>
+        <!-- 20/20 -->
+        <circle class="bra-chart-marker bra-chart-marker--a" cx="90"  cy="381"   style="--i:0" data-variant="20 / 20 mm"  data-freq="125 Hz" data-alpha="0.10"/>
+        <circle class="bra-chart-marker bra-chart-marker--a" cx="266" cy="283.5" style="--i:1" data-variant="20 / 20 mm"  data-freq="250 Hz" data-alpha="0.35"/>
+        <circle class="bra-chart-marker bra-chart-marker--a" cx="442" cy="127.5" style="--i:2" data-variant="20 / 20 mm"  data-freq="500 Hz" data-alpha="0.75"/>
+        <circle class="bra-chart-marker bra-chart-marker--a" cx="618" cy="127.5" style="--i:3" data-variant="20 / 20 mm"  data-freq="1 kHz"  data-alpha="0.75"/>
+        <circle class="bra-chart-marker bra-chart-marker--a" cx="794" cy="108"   style="--i:4" data-variant="20 / 20 mm"  data-freq="2 kHz"  data-alpha="0.80"/>
+        <circle class="bra-chart-marker bra-chart-marker--a" cx="970" cy="88.5"  style="--i:5" data-variant="20 / 20 mm"  data-freq="4 kHz"  data-alpha="0.85"/>
+        <!-- 20/200 -->
+        <circle class="bra-chart-marker bra-chart-marker--b" cx="90"  cy="225"  style="--i:0" data-variant="20 / 200 mm" data-freq="125 Hz" data-alpha="0.50"/>
+        <circle class="bra-chart-marker bra-chart-marker--b" cx="266" cy="186"  style="--i:1" data-variant="20 / 200 mm" data-freq="250 Hz" data-alpha="0.60"/>
+        <circle class="bra-chart-marker bra-chart-marker--b" cx="442" cy="30"   style="--i:2" data-variant="20 / 200 mm" data-freq="500 Hz" data-alpha="1.00"/>
+        <circle class="bra-chart-marker bra-chart-marker--b" cx="618" cy="69"   style="--i:3" data-variant="20 / 200 mm" data-freq="1 kHz"  data-alpha="0.90"/>
+        <circle class="bra-chart-marker bra-chart-marker--b" cx="794" cy="49.5" style="--i:4" data-variant="20 / 200 mm" data-freq="2 kHz"  data-alpha="0.95"/>
+        <circle class="bra-chart-marker bra-chart-marker--b" cx="970" cy="30"   style="--i:5" data-variant="20 / 200 mm" data-freq="4 kHz"  data-alpha="1.00"/>
+        <!-- 40/40 -->
+        <circle class="bra-chart-marker bra-chart-marker--c" cx="90"  cy="322.5" style="--i:0" data-variant="40 / 40 mm"  data-freq="125 Hz" data-alpha="0.25"/>
+        <circle class="bra-chart-marker bra-chart-marker--c" cx="266" cy="69"    style="--i:1" data-variant="40 / 40 mm"  data-freq="250 Hz" data-alpha="0.90"/>
+        <circle class="bra-chart-marker bra-chart-marker--c" cx="442" cy="49.5"  style="--i:2" data-variant="40 / 40 mm"  data-freq="500 Hz" data-alpha="0.95"/>
+        <circle class="bra-chart-marker bra-chart-marker--c" cx="618" cy="30"    style="--i:3" data-variant="40 / 40 mm"  data-freq="1 kHz"  data-alpha="1.00"/>
+        <circle class="bra-chart-marker bra-chart-marker--c" cx="794" cy="49.5"  style="--i:4" data-variant="40 / 40 mm"  data-freq="2 kHz"  data-alpha="0.95"/>
+        <circle class="bra-chart-marker bra-chart-marker--c" cx="970" cy="30"    style="--i:5" data-variant="40 / 40 mm"  data-freq="4 kHz"  data-alpha="1.00"/>
+        <!-- 40/200 -->
+        <circle class="bra-chart-marker bra-chart-marker--d" cx="90"  cy="205.5" style="--i:0" data-variant="40 / 200 mm" data-freq="125 Hz" data-alpha="0.55"/>
+        <circle class="bra-chart-marker bra-chart-marker--d" cx="266" cy="69"    style="--i:1" data-variant="40 / 200 mm" data-freq="250 Hz" data-alpha="0.90"/>
+        <circle class="bra-chart-marker bra-chart-marker--d" cx="442" cy="69"    style="--i:2" data-variant="40 / 200 mm" data-freq="500 Hz" data-alpha="0.90"/>
+        <circle class="bra-chart-marker bra-chart-marker--d" cx="618" cy="49.5"  style="--i:3" data-variant="40 / 200 mm" data-freq="1 kHz"  data-alpha="0.95"/>
+        <circle class="bra-chart-marker bra-chart-marker--d" cx="794" cy="49.5"  style="--i:4" data-variant="40 / 200 mm" data-freq="2 kHz"  data-alpha="0.95"/>
+        <circle class="bra-chart-marker bra-chart-marker--d" cx="970" cy="49.5"  style="--i:5" data-variant="40 / 200 mm" data-freq="4 kHz"  data-alpha="0.95"/>
+      </g>
+
+      <!-- Hover hit-zones: invisible thick polylines that match each visible line.
+           Rendered last so they sit on top and capture pointer events. -->
+      <g class="bra-chart-hitzones">
+        <polyline class="bra-chart-hitzone" data-variant="20 / 20 mm"
+                  points="90,381 266,283.5 442,127.5 618,127.5 794,108 970,88.5"/>
+        <polyline class="bra-chart-hitzone" data-variant="20 / 200 mm"
+                  points="90,225 266,186 442,30 618,69 794,49.5 970,30"/>
+        <polyline class="bra-chart-hitzone" data-variant="40 / 40 mm"
+                  points="90,322.5 266,69 442,49.5 618,30 794,49.5 970,30"/>
+        <polyline class="bra-chart-hitzone" data-variant="40 / 200 mm"
+                  points="90,205.5 266,69 442,69 618,49.5 794,49.5 970,49.5"/>
+      </g>
+    </svg>
+
+    <!-- Tooltip (positioned in JS) -->
+    <div class="bra-chart__tooltip" role="status" aria-live="polite" hidden>
+      <span class="bra-chart__tooltip-variant"></span>
+      <span class="bra-chart__tooltip-meta"></span>
+    </div>
+
+    <p class="bra-caption" style="margin-top: var(--bra-s-3); font-size: 11px;">
+      EN ISO 354 reverberation room. Plate thickness / air gap (mm).
+      <span style="opacity: 0.6;">α ≥ 0.90 across speech bands qualifies as Class A.</span>
+    </p>
+  </div>
+
+  <!-- Data grid — variant comparison + product facts -->
+  <div class="bra-gallery bra-stagger" data-stagger style="margin-top: var(--bra-s-4);">
+
+    <!-- Row 1 — 4 variant cells (interactive: hover highlights chart line, click locks) -->
+    <button type="button" class="bra-gallery-cell bra-gallery-data bra-stagger-item bra-gallery-data--interactive" data-variant="20 / 20 mm" aria-pressed="false" style="grid-column: span 3;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="width: 14px; height: 2px; background: #D4A02C; border-radius: 1px;"></span>
+        <span class="bra-gallery-data__label">20 / 20 mm</span>
+      </div>
+      <div>
+        <div class="bra-gallery-data__big"><span data-count="0.65">0.00</span></div>
+        <div class="bra-gallery-data__label" style="margin-top: 4px; font-size: 10px;">NRC, weighted · higher = more absorbed</div>
+      </div>
+      <div class="bra-gallery-data__note">Pure surface absorber. Peaks where speech lives (500 Hz–2 kHz).</div>
+    </button>
+
+    <button type="button" class="bra-gallery-cell bra-gallery-data bra-stagger-item bra-gallery-data--interactive" data-variant="20 / 200 mm" aria-pressed="false" style="grid-column: span 3;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="width: 14px; height: 2px; background: #9E3B65; border-radius: 1px;"></span>
+        <span class="bra-gallery-data__label">20 / 200 mm</span>
+      </div>
+      <div>
+        <div class="bra-gallery-data__big"><span data-count="0.85">0.00</span></div>
+        <div class="bra-gallery-data__label" style="margin-top: 4px; font-size: 10px;">NRC, weighted</div>
+      </div>
+      <div class="bra-gallery-data__note">Air gap unlocks bass. Broadband from 500&thinsp;Hz onward.</div>
+    </button>
+
+    <button type="button" class="bra-gallery-cell bra-gallery-data bra-gallery-data--ink bra-stagger-item bra-gallery-data--interactive" data-variant="40 / 40 mm" aria-pressed="false" style="grid-column: span 3;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="width: 14px; height: 2px; background: #8B3A1F; border-radius: 1px;"></span>
+        <span class="bra-gallery-data__label">40 / 40 mm</span>
+      </div>
+      <div>
+        <div class="bra-gallery-data__big"><span data-count="0.95">0.00</span></div>
+        <div class="bra-gallery-data__label" style="margin-top: 4px; font-size: 10px;">NRC, weighted</div>
+      </div>
+      <div class="bra-gallery-data__note">Heavier plate. Class A from 250&thinsp;Hz upward.</div>
+    </button>
+
+    <button type="button" class="bra-gallery-cell bra-gallery-data bra-gallery-data--oak bra-stagger-item bra-gallery-data--interactive" data-variant="40 / 200 mm" aria-pressed="false" style="grid-column: span 3;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="width: 14px; height: 2px; background: #D08AA0; border-radius: 1px;"></span>
+        <span class="bra-gallery-data__label">40 / 200 mm</span>
+      </div>
+      <div>
+        <div class="bra-gallery-data__big"><span data-count="0.90">0.00</span></div>
+        <div class="bra-gallery-data__label" style="margin-top: 4px; font-size: 10px;">NRC, weighted</div>
+      </div>
+      <div class="bra-gallery-data__note">Full bass reach to 125&thinsp;Hz. Studios, control rooms, podcast booths.</div>
+    </button>
+
+    <!-- Row 2 — product facts -->
+    <div class="bra-gallery-cell bra-gallery-data bra-stagger-item" style="grid-column: span 4;">
+      <div class="bra-gallery-data__label">Format</div>
+      <div>
+        <div class="bra-h3" style="font-size: 22px; margin-top: 4px;">600 × 600 mm</div>
+        <div class="bra-h3" style="font-size: 22px; opacity: 0.6;">1200 × 600 mm</div>
+      </div>
+      <div class="bra-gallery-data__note">Same plate, two formats.</div>
+    </div>
+
+    <div class="bra-gallery-cell bra-gallery-data bra-stagger-item" style="grid-column: span 4;">
+      <div class="bra-gallery-data__label">Thickness</div>
+      <div>
+        <div class="bra-h3" style="font-size: 22px; margin-top: 4px;">20 mm</div>
+        <div class="bra-h3" style="font-size: 22px; opacity: 0.6;">40 mm</div>
+      </div>
+      <div class="bra-gallery-data__note">20 mm for cassettes, 40 mm for free-hung.</div>
+    </div>
+
+    <div class="bra-gallery-cell bra-gallery-data bra-stagger-item" style="grid-column: span 4;">
+      <div class="bra-gallery-data__label">Material & life</div>
+      <div class="bra-spec" style="grid-template-columns: 1fr 1fr; gap: 0 var(--bra-s-2);">
+        <div class="bra-spec-row"><div class="bra-spec-key">Core</div><div class="bra-spec-val" style="font-size: 16px;">Wood fibre</div></div>
+        <div class="bra-spec-row"><div class="bra-spec-key">Fire</div><div class="bra-spec-val" style="font-size: 16px;">Euroclass B</div></div>
+        <div class="bra-spec-row"><div class="bra-spec-key">CO₂e</div><div class="bra-spec-val" style="font-size: 16px;">−3 kg/m²</div></div>
+        <div class="bra-spec-row"><div class="bra-spec-key">Recyc.</div><div class="bra-spec-val" style="font-size: 16px;">100 %</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Material panel (CSS-art) ===== -->
+<section class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Material study</p>
+  <div class="bra-grid-2">
+    <div class="bra-parallax-stage" data-parallax style="aspect-ratio: 4/5;">
+      <div class="bra-parallax-stage__inner">
+        <div class="bra-material" role="img" style="width: 100%; height: 100%;"
+             aria-label="Wood fibre plate rendered in raked light: warm upper-left highlight, directional grain, deep shadow at the lower-right corner.">
+        </div>
+      </div>
+    </div>
+    <div class="bra-stack-wide">
+      <h3 class="bra-h2">
+        <span class="bra-reveal-line" data-reveal>Wood</span><br>
+        <span class="bra-reveal-line" data-reveal>fibre,</span><br>
+        <span class="bra-reveal-line" data-reveal>foam-formed.</span>
+      </h3>
+      <p class="bra-body">
+        The plate is built by suspending wood fibre in foam, not by pressing it. The result is a controlled, open cell structure that absorbs sound at the cell level, while the surface stays calm and tactile.
+      </p>
+      <p class="bra-body">
+        It belongs on the same drawing as the limestone, the oak, the brass.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Marquee ===== -->
+<section class="bra-marquee">
+  <div class="bra-marquee__track">
+    <span>NRC 0.85</span>
+    <span>Euroclass B</span>
+    <span>Wood fibre</span>
+    <span>−3 kg CO₂e</span>
+    <span>100% recyclable</span>
+    <span>NRC 0.85</span>
+    <span>Euroclass B</span>
+    <span>Wood fibre</span>
+    <span>−3 kg CO₂e</span>
+    <span>100% recyclable</span>
+  </div>
+</section>
+
+<!-- ===== Variants — image gallery ===== -->
+<section class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">In place</p>
+  <h2 class="bra-h2" style="margin-bottom: var(--bra-s-5); max-width: 18ch;">
+    <span class="bra-reveal-line" data-reveal>Aisti, on the wall.</span>
+  </h2>
+
+  <div class="bra-gallery bra-stagger" data-stagger>
+    <div class="bra-gallery-cell bra-gallery-img bra-cell-a bra-stagger-item">
+      <img class="bra-gallery-img__img" src="https://beyond-rational.odoo.com/web/image/2915-5474c372/MDLC_Aisti_highres_026.jpg" alt="Daylit interior with Aisti panels" loading="lazy">
+      <div class="bra-gallery-img__overlay">
+        <div class="bra-gallery-img__title">Daylit interior</div>
+        <div class="bra-gallery-img__meta">2025 · Helsinki</div>
+      </div>
+    </div>
+    <div class="bra-gallery-cell bra-gallery-img bra-cell-b bra-stagger-item">
+      <img class="bra-gallery-img__img" src="https://beyond-rational.odoo.com/web/image/2929-8454cef9/MDLC_Aisti_highres_003.jpg" alt="Aisti plate close-up" loading="lazy">
+      <div class="bra-gallery-img__overlay">
+        <div class="bra-gallery-img__title">Plate, raked</div>
+        <div class="bra-gallery-img__meta">Studio shot</div>
+      </div>
+    </div>
+    <div class="bra-gallery-cell bra-gallery-img bra-cell-c bra-stagger-item">
+      <img class="bra-gallery-img__img" src="https://beyond-rational.odoo.com/web/image/2928-2ffa9ea8/MDLC_Aisti_highres_035.jpg" alt="Mounted detail" loading="lazy">
+      <div class="bra-gallery-img__overlay">
+        <div class="bra-gallery-img__title">Mounted</div>
+        <div class="bra-gallery-img__meta">Detail</div>
+      </div>
+    </div>
+    <div class="bra-gallery-cell bra-gallery-img bra-cell-d bra-stagger-item">
+      <img class="bra-gallery-img__img" src="https://beyond-rational.odoo.com/web/image/2924-3218b629/MDLC_Aisti_highres_042.jpg" alt="Surface study" loading="lazy">
+      <div class="bra-gallery-img__overlay">
+        <div class="bra-gallery-img__title">Surface, compressed</div>
+        <div class="bra-gallery-img__meta">Material study</div>
+      </div>
+    </div>
+    <div class="bra-gallery-cell bra-gallery-img bra-cell-e bra-stagger-item">
+      <img class="bra-gallery-img__img" src="https://beyond-rational.odoo.com/web/image/2925-9b9424c9/MDLC_Aisti_highres_025.jpg" alt="Workshop" loading="lazy">
+      <div class="bra-gallery-img__overlay">
+        <div class="bra-gallery-img__title">Workshop</div>
+        <div class="bra-gallery-img__meta">Behind the press</div>
+      </div>
+    </div>
+    <div class="bra-gallery-cell bra-gallery-img bra-cell-f bra-stagger-item">
+      <img class="bra-gallery-img__img" src="https://beyond-rational.odoo.com/web/image/2926-f5a97221/MDLC_Aisti_highres_008.jpg" alt="Ceiling install" loading="lazy">
+      <div class="bra-gallery-img__overlay">
+        <div class="bra-gallery-img__title">Ceiling, calm</div>
+        <div class="bra-gallery-img__meta">2024 · Copenhagen</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Specify CTA — drenched oak ===== -->
+<section class="bra-surface-oak">
+  <div class="bra-container bra-section">
+    <div class="bra-grid-2" style="align-items: end;">
+      <h2 class="bra-mega" style="line-height: 0.86;">
+        <span class="bra-reveal-line" data-reveal>Specify</span><br>
+        <span class="bra-reveal-line" data-reveal>Aisti.</span>
+      </h2>
+      <div class="bra-stack-wide">
+        <p class="bra-lede">
+          A sample box arrives in a week. Ten plates, your preferred finish, the spec sheet, the data.
+        </p>
+        <div style="display: flex; gap: var(--bra-s-3); align-items: center; flex-wrap: wrap;">
+          <a href="contact.html" style="text-decoration: none;">
+            <button class="bra-btn-mag" data-magnetic style="background: var(--bra-on-oak); color: var(--bra-ink);">
+              <span>Request a sample</span>
+              <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </button>
+          </a>
+          <a href="contact.html" class="bra-cta" style="color: var(--bra-on-oak);">Book a studio call</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Shared footer ===== -->
+<footer class="bra-footer">
+  <div class="bra-footer__grid">
+    <div class="bra-footer__brand">
+      <div class="bra-footer__brand-line">Beyond Rational</div>
+      <p class="bra-body" style="margin-top: var(--bra-s-3); max-width: 36ch; color: var(--bra-ink-2);">
+        Acoustic plates designed in Copenhagen, foam-formed in Finland, specified across Northern Europe.
+      </p>
+    </div>
+    <div>
+      <h4>Product</h4>
+      <ul>
+        <li><a href="product.html" class="bra-cta" style="border: none; padding: 0;">Aisti Teno</a></li>
+        <li><a href="product.html#finish" class="bra-cta" style="border: none; padding: 0;">Finishes</a></li>
+        <li><a href="product.html#spec" class="bra-cta" style="border: none; padding: 0;">Spec sheet</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="projects.html" class="bra-cta" style="border: none; padding: 0;">Projects</a></li>
+        <li><a href="design-system.html" class="bra-cta" style="border: none; padding: 0;">Design system</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;">hello@beyondrational.com</a></li>
+        <li><span class="bra-body" style="font-size: 14px;">Refshalevej 167, Copenhagen</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bra-footer__base">
+    <span class="bra-micro">© 2026 Beyond Rational ApS</span>
+    <span class="bra-micro">B_R Design System · v1.0</span>
+  </div>
+</footer>
+
+<script src="br.js" defer></script>
+</body>
+</html>

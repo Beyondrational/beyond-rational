@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "eyebrow_left": "Beyond Rational · Copenhagen / Helsinki",
+    "eyebrow_right": "Est. 2024",
+    "title_l1": "A studio for materials",
+    "title_l2_em": "that don't compromise.",
+    "subtitle": "Beyond Rational designs and manufactures architectural surfaces in Copenhagen and Helsinki. We start with a question — what should a material be? — and stop only when the answer holds up on the building.",
+    "cta_primary": "See our work",
+    "cta_secondary": "Visit the studio"
+  },
+  "manifesto": {
+    "section_label": "What we believe",
+    "items": [
+      { "num": "01", "text_pre": "A material is ", "text_em": "what it is", "text_post": ", all the way through." },
+      { "num": "02", "text_pre": "Performance and surface aren't ", "text_em": "trade-offs.", "text_post": "" },
+      { "num": "03", "text_pre": "The best acoustic surface is the one ", "text_em": "you don't notice.", "text_post": "" }
+    ]
+  },
+  "what_we_make": {
+    "section_label": "What we make",
+    "body": "We make acoustic surfaces. Compressed wood fibre with nothing else added, specified for ceilings and walls where a room can't be allowed to sound like a recording studio. Our first product, Aisti, ships from Helsinki."
+  },
+  "process": {
+    "section_label": "How we work",
+    "title_l1": "Foam-formed,",
+    "title_l2_em": "not pressed.",
+    "body_p1": "We adapted our process from the Finnish paper industry. Instead of pressing fibre flat under load, we suspend it in foam — the fibres set into an open cell structure that absorbs sound at the cell level, without binders or plastics.",
+    "body_p2": "It is a slow process. It is also the only one we know that produces a single-substance acoustic plate. Material first, all the way through."
+  },
+  "studio": {
+    "section_label": "Where we work",
+    "title_l1": "Two cities.",
+    "title_l2_em": "One studio.",
+    "stat_founded": "2024",
+    "stat_people": "11",
+    "stat_studios": "CPH / HEL",
+    "body": "Design happens in Copenhagen, manufacturing in Helsinki. We specify, prototype, and ship from the same drawing."
+  },
+  "cta": {
+    "section_label": "Get in touch",
+    "title_l1": "Send the brief.",
+    "title_l2_em": "We'll read it carefully.",
+    "body": "The studio answers Monday to Friday. We work directly with architects, no salespeople in the room.",
+    "email": "hello@beyondrational.com"
+  }
+}

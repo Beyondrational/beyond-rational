@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects · Beyond Rational</title>
+<meta name="description" content="Plates in place: Aisti installations specified by architects across the Nordics. Vinkler Gymnasium, Nordic Sound Pavilion, Folkets Hus.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://beyond-rational.odoo.com">
+<link rel="stylesheet" href="br.css">
+<style>
+  .project-row {
+    display: grid;
+    grid-template-columns: 60px 1.5fr 1fr 100px 40px;
+    align-items: baseline;
+    gap: var(--bra-s-3);
+    padding: var(--bra-s-3) 0;
+    border-bottom: 1px solid rgba(28,28,26,0.20);
+    transition: padding var(--bra-dur-base) var(--bra-ease);
+  }
+  .project-row:hover { padding-left: var(--bra-s-3); }
+  .project-row__num {
+    font-family: var(--bra-font);
+    font-weight: 500; font-size: 13px;
+    color: var(--bra-ink-2);
+    font-variant-numeric: tabular-nums;
+  }
+  .project-row__title {
+    font-family: var(--bra-font); font-weight: 500;
+    font-size: clamp(20px, 1.8vw, 26px);
+    letter-spacing: -0.012em;
+    line-height: 1.05;
+  }
+  .project-row__meta {
+    font-family: var(--bra-font);
+    font-weight: 500; font-size: 14px;
+    color: var(--bra-ink-2);
+  }
+  .project-row__year {
+    font-family: var(--bra-font);
+    font-weight: 500; font-size: 14px;
+    color: var(--bra-ink-2);
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+  }
+  .project-row__arrow {
+    text-align: right;
+    transition: transform var(--bra-dur-base) var(--bra-ease);
+    font-size: 18px;
+  }
+  .project-row:hover .project-row__arrow { transform: translate(4px, -4px); }
+  @media (max-width: 720px) {
+    .project-row { grid-template-columns: 50px 1fr 40px; }
+    .project-row__meta, .project-row__year { display: none; }
+  }
+</style>
+</head>
+<body class="bra" data-page="projects">
+
+<!-- Page loader (CLOU-style curtain, once per session) -->
+<div class="br-loader" aria-hidden="true">
+  <div class="br-loader__top">
+    <span class="br-loader__top-l">Beyond Rational</span>
+    <span class="br-loader__top-r">Aisti / 2026</span>
+  </div>
+  <div class="br-loader__middle">
+    <div class="br-loader__counter">00</div>
+  </div>
+  <div class="br-loader__bottom">
+    <span class="br-loader__bottom-l">Loading</span>
+    <div class="br-loader__bar"></div>
+  </div>
+</div>
+
+
+
+<div class="bra-cursor" aria-hidden="true"></div>
+<div class="bra-scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<nav class="bra-nav">
+  <a href="index.html" class="bra-nav__brand">Beyond Rational</a>
+  <div class="bra-nav__links">
+    <a href="product.html"       class="bra-nav__link">Product</a>
+    <a href="projects.html"      class="bra-nav__link" aria-current="page">Projects</a>
+    <a href="contact.html"       class="bra-nav__link">Contact</a>
+    <a href="design-system.html" class="bra-nav__link">Design</a>
+    <a href="index.html"         class="bra-nav__link">Home</a>
+  </div>
+</nav>
+
+<div class="bra-nav-spacer"></div>
+
+<!-- ===== Hero ===== -->
+<section class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-4);">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);" data-content="hero.eyebrow">Projects · 2023 – 2026</p>
+  <h1 class="bra-mega">
+    <span class="bra-reveal-line" data-reveal data-content="hero.title_l1">Plates</span><br>
+    <span class="bra-reveal-line" data-reveal data-content="hero.title_l2">in place.</span>
+  </h1>
+  <p class="bra-lede" style="margin-top: var(--bra-s-3); max-width: 50ch;" data-content="hero.subtitle">Aisti is specified by architects across the Nordics: civic, cultural, hospitality, education. Below: installations we are allowed to publish.</p>
+</section>
+
+<!-- ===== Image gallery ===== -->
+<section class="bra-container" style="padding-bottom: var(--bra-s-6);">
+  <div class="bra-gallery bra-stagger" data-stagger>
+    <div class="bra-gallery-cell bra-gallery-img bra-cell-a bra-stagger-item">
+      <img class="bra-gallery-img__img" src="https://beyond-rational.odoo.com/web/image/2915-5474c372/MDLC_Aisti_highres_026.jpg" alt="Daylit interior" loading="lazy">
+      <div class="bra-gallery-img__overlay">
+        <div class="bra-gallery-img__title">Vinkler Gymnasium</div>
+        <div class="bra-gallery-img__meta">3F Studio · Aarhus · 2025</div>
+      </div>
+    </div>
+    <div class="bra-gallery-cell bra-gallery-img bra-cell-b bra-stagger-item">
+      <img class="bra-gallery-img__img" src="https://beyond-rational.odoo.com/web/image/2929-8454cef9/MDLC_Aisti_highres_003.jpg" alt="Plate detail" loading="lazy">
+      <div class="bra-gallery-img__overlay">
+        <div class="bra-gallery-img__title">Plate, raked</div>
+        <div class="bra-gallery-img__meta">Detail</div>
+      </div>
+    </div>
+    <div class="bra-gallery-cell bra-gallery-img bra-cell-c bra-stagger-item">
+      <img class="bra-gallery-img__img" src="https://beyond-rational.odoo.com/web/image/2928-2ffa9ea8/MDLC_Aisti_highres_035.jpg" alt="Mount" loading="lazy">
+      <div class="bra-gallery-img__overlay">
+        <div class="bra-gallery-img__title">Mount</div>
+        <div class="bra-gallery-img__meta">Spec</div>
+      </div>
+    </div>
+    <div class="bra-gallery-cell bra-gallery-img bra-cell-d bra-stagger-item">
+      <img class="bra-gallery-img__img" src="https://beyond-rational.odoo.com/web/image/2924-3218b629/MDLC_Aisti_highres_042.jpg" alt="Folkets Hus" loading="lazy">
+      <div class="bra-gallery-img__overlay">
+        <div class="bra-gallery-img__title">Folkets Hus, Vesterbro</div>
+        <div class="bra-gallery-img__meta">Vandkunsten · Copenhagen · 2024</div>
+      </div>
+    </div>
+    <div class="bra-gallery-cell bra-gallery-img bra-cell-e bra-stagger-item">
+      <img class="bra-gallery-img__img" src="https://beyond-rational.odoo.com/web/image/2925-9b9424c9/MDLC_Aisti_highres_025.jpg" alt="Workshop" loading="lazy">
+      <div class="bra-gallery-img__overlay">
+        <div class="bra-gallery-img__title">Atelier Lindefelt</div>
+        <div class="bra-gallery-img__meta">Tham & Videgård · Stockholm · 2024</div>
+      </div>
+    </div>
+    <div class="bra-gallery-cell bra-gallery-img bra-cell-f bra-stagger-item">
+      <img class="bra-gallery-img__img" src="https://beyond-rational.odoo.com/web/image/2926-f5a97221/MDLC_Aisti_highres_008.jpg" alt="Ceiling install" loading="lazy">
+      <div class="bra-gallery-img__overlay">
+        <div class="bra-gallery-img__title">Nordic Sound Pavilion</div>
+        <div class="bra-gallery-img__meta">Henning Larsen · Helsinki · 2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Project list ===== -->
+<section class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">The list</p>
+  <h2 class="bra-h2" style="margin-bottom: var(--bra-s-5); max-width: 18ch;">
+    <span class="bra-reveal-line" data-reveal>Every install,</span><br>
+    <span class="bra-reveal-line" data-reveal>by name.</span>
+  </h2>
+
+  <div>
+    <a href="#" class="project-row">
+      <span class="project-row__num">01 /</span>
+      <span class="project-row__title">Vinkler Gymnasium</span>
+      <span class="project-row__meta">3F Studio · Aarhus · 1,420 m²</span>
+      <span class="project-row__year">2025</span>
+      <span class="project-row__arrow">↗</span>
+    </a>
+    <a href="#" class="project-row">
+      <span class="project-row__num">02 /</span>
+      <span class="project-row__title">Nordic Sound Pavilion</span>
+      <span class="project-row__meta">Henning Larsen · Helsinki · 860 m²</span>
+      <span class="project-row__year">2025</span>
+      <span class="project-row__arrow">↗</span>
+    </a>
+    <a href="#" class="project-row">
+      <span class="project-row__num">03 /</span>
+      <span class="project-row__title">Folkets Hus, Vesterbro</span>
+      <span class="project-row__meta">Vandkunsten · Copenhagen · 2,100 m²</span>
+      <span class="project-row__year">2024</span>
+      <span class="project-row__arrow">↗</span>
+    </a>
+    <a href="#" class="project-row">
+      <span class="project-row__num">04 /</span>
+      <span class="project-row__title">Atelier Lindefelt</span>
+      <span class="project-row__meta">Tham & Videgård · Stockholm · 480 m²</span>
+      <span class="project-row__year">2024</span>
+      <span class="project-row__arrow">↗</span>
+    </a>
+    <a href="#" class="project-row">
+      <span class="project-row__num">05 /</span>
+      <span class="project-row__title">Kasper Salin annex</span>
+      <span class="project-row__meta">Wingårdh Arkitekter · Göteborg · 920 m²</span>
+      <span class="project-row__year">2023</span>
+      <span class="project-row__arrow">↗</span>
+    </a>
+    <a href="#" class="project-row">
+      <span class="project-row__num">06 /</span>
+      <span class="project-row__title">Henning Larsen HQ refit</span>
+      <span class="project-row__meta">Henning Larsen Architects · Copenhagen · 1,180 m²</span>
+      <span class="project-row__year">2023</span>
+      <span class="project-row__arrow">↗</span>
+    </a>
+  </div>
+</section>
+
+<!-- ===== Cards — featured ===== -->
+<section class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Featured</p>
+  <h2 class="bra-h2" style="margin-bottom: var(--bra-s-5); max-width: 18ch;">
+    <span class="bra-reveal-line" data-reveal>Recent stories.</span>
+  </h2>
+
+  <div class="bra-card-grid bra-stagger" data-stagger>
+
+    <article class="bra-card bra-stagger-item">
+      <img class="bra-card__img" src="https://beyond-rational.odoo.com/web/image/2929-8454cef9/MDLC_Aisti_highres_003.jpg" alt="Vinkler" loading="lazy">
+      <p class="bra-card__eyebrow">Case</p>
+      <h3 class="bra-card__title" style="margin-top: 6px;">Vinkler<br>Gymnasium</h3>
+      <p class="bra-card__meta" style="margin-top: var(--bra-s-2);">3F Studio · Aarhus</p>
+      <p class="bra-card__meta">1,420 m² ceiling, oak finish</p>
+      <a href="#" class="bra-cta" style="margin-top: auto; padding-top: var(--bra-s-3);">Read the case</a>
+    </article>
+
+    <article class="bra-card bra-card--stone bra-stagger-item">
+      <img class="bra-card__img" src="https://beyond-rational.odoo.com/web/image/2924-3218b629/MDLC_Aisti_highres_042.jpg" alt="Folkets Hus" loading="lazy">
+      <p class="bra-card__eyebrow">Case</p>
+      <h3 class="bra-card__title" style="margin-top: 6px;">Folkets Hus,<br>Vesterbro</h3>
+      <p class="bra-card__meta" style="margin-top: var(--bra-s-2);">Vandkunsten · Copenhagen</p>
+      <p class="bra-card__meta">2,100 m², birch finish</p>
+      <a href="#" class="bra-cta" style="margin-top: auto; padding-top: var(--bra-s-3);">Read the case</a>
+    </article>
+
+    <article class="bra-card bra-card--ink bra-stagger-item">
+      <p class="bra-card__eyebrow">Frame · Issue 156</p>
+      <h3 class="bra-card__title" style="margin-top: var(--bra-s-3); font-size: clamp(20px, 1.7vw, 26px);">"Aisti pulls Nordic acoustics into a register no one else is using."</h3>
+      <p class="bra-card__meta" style="margin-top: var(--bra-s-3);">April 2026 · Sara Holm</p>
+      <a href="#" class="bra-cta" style="margin-top: auto; padding-top: var(--bra-s-3); color: var(--bra-on-oak);">Read the feature</a>
+    </article>
+
+    <article class="bra-card bra-card-quote bra-card--oak bra-stagger-item">
+      <div class="bra-card-quote__mark">"</div>
+      <p class="bra-card-quote__text">A surface that lets a room sound like a room. The first acoustic plate we've put on a finish drawing without an asterisk.</p>
+      <div class="bra-card-quote__attr">
+        <p class="bra-card__eyebrow">Tham &amp; Videgård</p>
+        <p class="bra-card__meta">Stockholm, 2025</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="bra-surface-oak">
+  <div class="bra-container bra-section">
+    <div class="bra-grid-2" style="align-items: end;">
+      <h2 class="bra-mega" style="line-height: 0.86;">
+        <span class="bra-reveal-line" data-reveal>Specify</span><br>
+        <span class="bra-reveal-line" data-reveal>your project.</span>
+      </h2>
+      <div class="bra-stack-wide">
+        <p class="bra-lede">
+          Send the brief, get a sample. We'll help you select format, finish, and fixings for your specific room.
+        </p>
+        <a href="contact.html" style="text-decoration: none; align-self: flex-start; display: inline-block;">
+          <button class="bra-btn-mag" data-magnetic style="background: var(--bra-on-oak); color: var(--bra-ink);">
+            <span>Request a sample</span>
+            <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bra-footer">
+  <div class="bra-footer__grid">
+    <div class="bra-footer__brand">
+      <div class="bra-footer__brand-line">Beyond Rational</div>
+      <p class="bra-body" style="margin-top: var(--bra-s-3); max-width: 36ch; color: var(--bra-ink-2);">
+        Acoustic plates designed in Copenhagen, foam-formed in Finland, specified across Northern Europe.
+      </p>
+    </div>
+    <div>
+      <h4>Product</h4>
+      <ul>
+        <li><a href="product.html" class="bra-cta" style="border: none; padding: 0;">Aisti Teno</a></li>
+        <li><a href="product.html#finish" class="bra-cta" style="border: none; padding: 0;">Finishes</a></li>
+        <li><a href="product.html#spec" class="bra-cta" style="border: none; padding: 0;">Spec sheet</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="projects.html" class="bra-cta" style="border: none; padding: 0;">Projects</a></li>
+        <li><a href="design-system.html" class="bra-cta" style="border: none; padding: 0;">Design system</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;">hello@beyondrational.com</a></li>
+        <li><span class="bra-body" style="font-size: 14px;">Refshalevej 167, Copenhagen</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bra-footer__base">
+    <span class="bra-micro">© 2026 Beyond Rational ApS</span>
+    <span class="bra-micro">B_R Design System · v1.0</span>
+  </div>
+</footer>
+
+<script src="br.js" defer></script>
+<script src="br-content.js" defer></script>
+</body>
+</html>

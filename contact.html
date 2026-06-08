@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact · Beyond Rational</title>
+<meta name="description" content="Request a sample box. Specify Aisti for your project. Visit the studio in Copenhagen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="br.css">
+<style>
+  /* Form fields tuned for v1 design system */
+  .bra-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: var(--bra-s-2); }
+  .bra-field__label {
+    font-family: var(--bra-font); font-weight: 700;
+    font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
+    color: var(--bra-ink-2);
+  }
+  .bra-field__input, .bra-field__select, .bra-field__textarea {
+    background: transparent;
+    border: 0; border-bottom: 2px solid var(--bra-ink);
+    padding: 10px 0;
+    font-family: var(--bra-font);
+    font-weight: 500;
+    font-size: 17px;
+    color: var(--bra-ink);
+    width: 100%;
+    transition: border-color var(--bra-dur-base) var(--bra-ease);
+  }
+  .bra-field__textarea { resize: vertical; min-height: 120px; line-height: 1.5; }
+  .bra-field__input:focus, .bra-field__select:focus, .bra-field__textarea:focus {
+    outline: none;
+    border-bottom-color: var(--bra-oak-warm);
+  }
+  .bra-field__input::placeholder, .bra-field__textarea::placeholder { color: var(--bra-ink-mute); }
+  .bra-form-cols { display: grid; grid-template-columns: 1fr 1fr; gap: var(--bra-s-3); }
+  @media (max-width: 720px) { .bra-form-cols { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body class="bra" data-page="contact">
+
+<!-- Page loader (CLOU-style curtain, once per session) -->
+<div class="br-loader" aria-hidden="true">
+  <div class="br-loader__top">
+    <span class="br-loader__top-l">Beyond Rational</span>
+    <span class="br-loader__top-r">Aisti / 2026</span>
+  </div>
+  <div class="br-loader__middle">
+    <div class="br-loader__counter">00</div>
+  </div>
+  <div class="br-loader__bottom">
+    <span class="br-loader__bottom-l">Loading</span>
+    <div class="br-loader__bar"></div>
+  </div>
+</div>
+
+
+
+<div class="bra-cursor" aria-hidden="true"></div>
+<div class="bra-scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<nav class="bra-nav">
+  <a href="index.html" class="bra-nav__brand">Beyond Rational</a>
+  <div class="bra-nav__links">
+    <a href="product.html"       class="bra-nav__link">Product</a>
+    <a href="projects.html"      class="bra-nav__link">Projects</a>
+    <a href="contact.html"       class="bra-nav__link" aria-current="page">Contact</a>
+    <a href="design-system.html" class="bra-nav__link">Design</a>
+    <a href="index.html"         class="bra-nav__link">Home</a>
+  </div>
+</nav>
+
+<div class="bra-nav-spacer"></div>
+
+<!-- ===== Hero ===== -->
+<section class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-4);">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);">Specify · sample · visit</p>
+  <h1 class="bra-mega">
+    <span class="bra-reveal-line" data-reveal>Tell us</span><br>
+    <span class="bra-reveal-line" data-reveal>about the room.</span>
+  </h1>
+  <p class="bra-lede" style="margin-top: var(--bra-s-3); max-width: 50ch;">
+    Pick a path below. The form fits the conversation — sample, project spec, or general information. We answer within the working day.
+  </p>
+</section>
+
+<!-- ===== Contact cards ===== -->
+<section class="bra-container" style="padding-top: var(--bra-s-3); padding-bottom: var(--bra-s-6);">
+  <div class="bra-contact-grid">
+
+    <a href="#form-section" class="bra-contact-card" data-jump-tab="sample">
+      <img class="bra-contact-card__img" src="https://beyond-rational.odoo.com/web/image/3027-61944b68/ChatGPT%20Image%20Oct%2028%2C%202025%20at%2009_09_15%20PM.png" alt="Aisti sample box" loading="lazy">
+      <p class="bra-contact-card__num">01 / Sample</p>
+      <h3 class="bra-contact-card__title">Sample box</h3>
+      <p class="bra-contact-card__meta">Ten plates in your finish, free across Northern Europe. Lead time 5–7 days.</p>
+      <span class="bra-contact-card__action bra-cta">Request a box</span>
+    </a>
+
+    <a href="#form-section" class="bra-contact-card" data-jump-tab="specify">
+      <img class="bra-contact-card__img" src="https://beyond-rational.odoo.com/web/image/2924-3218b629/MDLC_Aisti_highres_042.jpg" alt="Aisti panel mounted in interior" loading="lazy">
+      <p class="bra-contact-card__num">02 / Project</p>
+      <h3 class="bra-contact-card__title">Specify for project</h3>
+      <p class="bra-contact-card__meta">Send brief and program. We help with format, finish, fixings, and acoustic targets.</p>
+      <span class="bra-contact-card__action bra-cta">Send a brief</span>
+    </a>
+
+    <a href="#form-section" class="bra-contact-card" data-jump-tab="info">
+      <img class="bra-contact-card__img" src="https://beyond-rational.odoo.com/web/image/2233-bf9a55b9/MDLC_Aisti_highres_001.webp" alt="Wood-fibre material close-up" loading="lazy">
+      <p class="bra-contact-card__num">03 / Info</p>
+      <h3 class="bra-contact-card__title">Information</h3>
+      <p class="bra-contact-card__meta">Technical paper, EPD, datasheet, press kit. Sent the same day on weekdays.</p>
+      <span class="bra-contact-card__action bra-cta">Ask for material</span>
+    </a>
+
+    <a href="#form-section" class="bra-contact-card" data-jump-tab="other">
+      <img class="bra-contact-card__img" src="https://beyond-rational.odoo.com/web/image/2925-9b9424c9/MDLC_Aisti_highres_025.jpg" alt="Workshop, Helsinki" loading="lazy">
+      <p class="bra-contact-card__num">04 / Other</p>
+      <h3 class="bra-contact-card__title">Anything else</h3>
+      <p class="bra-contact-card__meta">Partnerships, residencies, supplier introductions, careers. Tell us what you're after.</p>
+      <span class="bra-contact-card__action bra-cta">Write to us</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- ===== Founders — Morten & Rasmus ===== -->
+<section class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-6);">
+  <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: var(--bra-s-4); gap: var(--bra-s-3); flex-wrap: wrap;">
+    <div>
+      <p class="bra-caption" style="margin-bottom: var(--bra-s-2);" data-content="founders.section_label">Founders</p>
+      <h2 class="bra-h2" style="max-width: 20ch;">
+        <span class="bra-reveal-line" data-reveal>Talk to one of us</span><br>
+        <span class="bra-reveal-line" data-reveal>directly.</span>
+      </h2>
+    </div>
+    <p class="bra-body" style="max-width: 40ch;">
+      Beyond Rational was founded by Morten and Rasmus Melberg in 2024. Both pick up the phone, both read every brief.
+    </p>
+  </div>
+
+  <div class="founder-grid">
+
+    <!-- Morten -->
+    <article class="founder-card">
+      <img class="founder-card__img" src="assets/morten-melberg.jpg" data-content="founders.morten.photo" data-content-attr="src" alt="Morten Melberg, co-founder, Beyond Rational" loading="lazy">
+      <div class="founder-card__body">
+        <p class="founder-card__eyebrow" data-content="founders.morten.eyebrow">Co-founder</p>
+        <h3 class="founder-card__title" data-content="founders.morten.name">Morten Melberg</h3>
+        <p class="founder-card__meta" data-content="founders.morten.role">Commercial, partnerships, projects.</p>
+      </div>
+      <div class="founder-card__contact">
+        <div class="founder-card__row">
+          <span class="founder-card__key">Email</span>
+          <a href="mailto:morten@beyondrational.com" class="founder-card__val">morten@beyondrational.com</a>
+        </div>
+        <div class="founder-card__row">
+          <span class="founder-card__key">Phone</span>
+          <a href="tel:+4522555470" class="founder-card__val">+45 22 55 54 70</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Rasmus -->
+    <article class="founder-card">
+      <img class="founder-card__img" src="assets/rasmus-melberg.jpg" data-content="founders.rasmus.photo" data-content-attr="src" alt="Rasmus Melberg, co-founder, Beyond Rational" loading="lazy">
+      <div class="founder-card__body">
+        <p class="founder-card__eyebrow" data-content="founders.rasmus.eyebrow">Co-founder</p>
+        <h3 class="founder-card__title" data-content="founders.rasmus.name">Rasmus Melberg</h3>
+        <p class="founder-card__meta" data-content="founders.rasmus.role">Product, design, technical specification.</p>
+      </div>
+      <div class="founder-card__contact">
+        <div class="founder-card__row">
+          <span class="founder-card__key">Email</span>
+          <a href="mailto:rasmus@beyondrational.com" class="founder-card__val">rasmus@beyondrational.com</a>
+        </div>
+        <div class="founder-card__row">
+          <span class="founder-card__key">Studio</span>
+          <span class="founder-card__val">Refshalevej 167, CPH</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<style>
+  .founder-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--bra-s-3);
+  }
+  @media (max-width: 720px) { .founder-grid { grid-template-columns: 1fr; } }
+
+  .founder-card {
+    border: 2px solid var(--bra-ink);
+    background: var(--bra-paper);
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    overflow: hidden;
+  }
+  .founder-card__img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+    border-bottom: 2px solid var(--bra-ink);
+  }
+  .founder-card__body {
+    padding: var(--bra-s-3) var(--bra-s-3) 0;
+  }
+  .founder-card__eyebrow {
+    font-family: var(--bra-font);
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--bra-ink-2);
+  }
+  .founder-card__title {
+    font-family: var(--bra-font);
+    font-weight: 500;
+    font-size: clamp(22px, 1.9vw, 28px);
+    line-height: 1.15;
+    letter-spacing: -0.012em;
+    margin-top: 8px;
+  }
+  .founder-card__meta {
+    font-family: var(--bra-font);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--bra-ink-2);
+    margin-top: 6px;
+  }
+  .founder-card__contact {
+    padding: var(--bra-s-3);
+    border-top: 2px solid var(--bra-ink);
+    margin-top: var(--bra-s-3);
+  }
+  .founder-card__row {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    align-items: baseline;
+    gap: var(--bra-s-2);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(28,28,26,0.18);
+  }
+  .founder-card__row:last-child { border-bottom: none; padding-bottom: 0; }
+  .founder-card__row:first-child { padding-top: 0; }
+  .founder-card__key {
+    font-family: var(--bra-font);
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--bra-ink-2);
+  }
+  .founder-card__val {
+    font-family: var(--bra-font);
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.005em;
+    color: var(--bra-ink);
+    word-break: break-word;
+  }
+  a.founder-card__val {
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+    transition: opacity var(--bra-dur-fast) var(--bra-ease);
+  }
+  a.founder-card__val:hover { opacity: 0.7; }
+</style>
+
+<!-- ===== Multi-form (tabbed) ===== -->
+<section id="form-section" class="bra-surface-stone">
+  <div class="bra-container bra-section">
+    <p class="bra-caption" style="margin-bottom: var(--bra-s-2);">Get in touch</p>
+    <h2 class="bra-h2" style="margin-bottom: var(--bra-s-4); max-width: 18ch;">
+      <span class="bra-reveal-line" data-reveal>One form,</span><br>
+      <span class="bra-reveal-line" data-reveal>four paths.</span>
+    </h2>
+
+    <div class="bra-grid-2" style="align-items: start;">
+
+      <div>
+        <p class="bra-body" style="max-width: 42ch;">
+          Pick a tab that fits what you need. The form changes to ask the right questions. We answer Monday to Friday, within the working day.
+        </p>
+        <div class="bra-spec" style="margin-top: var(--bra-s-4); max-width: 420px;">
+          <div class="bra-spec-row"><div class="bra-spec-key">Email</div><div class="bra-spec-val" style="font-size: 18px;">hello@beyondrational.com</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key">Press</div><div class="bra-spec-val" style="font-size: 18px;">press@beyondrational.com</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key">Studio</div><div class="bra-spec-val" style="font-size: 18px;">Refshalevej 167, CPH</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key">Hours</div><div class="bra-spec-val" style="font-size: 18px;">Mon–Fri · 09–17</div></div>
+        </div>
+      </div>
+
+      <div style="max-width: 560px;">
+        <!-- Tabs -->
+        <div class="bra-form-tabs" data-form-tabs>
+          <button type="button" class="bra-form-tab is-active" data-tab="sample">Sample box</button>
+          <button type="button" class="bra-form-tab" data-tab="specify">Specify for project</button>
+          <button type="button" class="bra-form-tab" data-tab="info">Information</button>
+          <button type="button" class="bra-form-tab" data-tab="other">Other</button>
+        </div>
+
+        <!-- Form 1 — Sample box -->
+        <form action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="sample" class="is-active">
+          <div class="bra-field">
+            <label class="bra-field__label" for="s-name">Full name *</label>
+            <input class="bra-field__input" type="text" name="contact_name" id="s-name" required autocomplete="name">
+          </div>
+          <div class="bra-form-cols">
+            <div class="bra-field">
+              <label class="bra-field__label" for="s-email">Email *</label>
+              <input class="bra-field__input" type="email" name="email_from" id="s-email" required autocomplete="email">
+            </div>
+            <div class="bra-field">
+              <label class="bra-field__label" for="s-phone">Phone</label>
+              <input class="bra-field__input" type="tel" name="phone" id="s-phone" autocomplete="tel">
+            </div>
+          </div>
+          <div class="bra-field">
+            <label class="bra-field__label" for="s-company">Studio / company *</label>
+            <input class="bra-field__input" type="text" name="partner_name" id="s-company" required autocomplete="organization">
+          </div>
+          <div class="bra-field">
+            <label class="bra-field__label" for="s-finish">Preferred finish</label>
+            <select class="bra-field__select" name="finish" id="s-finish">
+              <option value="">No preference — send the full set</option>
+              <option>Birch</option><option>Oak</option><option>Walnut</option><option>Stone</option><option>Lichen</option>
+            </select>
+          </div>
+          <div class="bra-field">
+            <label class="bra-field__label" for="s-addr">Delivery address *</label>
+            <textarea class="bra-field__textarea" name="description" id="s-addr" required placeholder="Street, city, postal code, country"></textarea>
+          </div>
+          <input type="hidden" name="name" value="Sample box request">
+          <input type="hidden" name="team_id" value="1">
+          <input type="hidden" name="tag_ids" value="6">
+          <button type="submit" class="bra-btn-mag" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
+            <span>Request a sample</span>
+            <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Form 2 — Specify for project -->
+        <form action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="specify">
+          <div class="bra-field">
+            <label class="bra-field__label" for="p-name">Full name *</label>
+            <input class="bra-field__input" type="text" name="contact_name" id="p-name" required autocomplete="name">
+          </div>
+          <div class="bra-form-cols">
+            <div class="bra-field">
+              <label class="bra-field__label" for="p-email">Email *</label>
+              <input class="bra-field__input" type="email" name="email_from" id="p-email" required autocomplete="email">
+            </div>
+            <div class="bra-field">
+              <label class="bra-field__label" for="p-role">Your role</label>
+              <select class="bra-field__select" name="function" id="p-role">
+                <option value="">Select</option>
+                <option>Architect</option>
+                <option>Interior designer</option>
+                <option>Developer / contractor</option>
+                <option>Project manager</option>
+                <option>Acoustic consultant</option>
+              </select>
+            </div>
+          </div>
+          <div class="bra-field">
+            <label class="bra-field__label" for="p-company">Studio / company *</label>
+            <input class="bra-field__input" type="text" name="partner_name" id="p-company" required autocomplete="organization">
+          </div>
+          <div class="bra-field">
+            <label class="bra-field__label" for="p-project">Project name *</label>
+            <input class="bra-field__input" type="text" name="project_name" id="p-project" required>
+          </div>
+          <div class="bra-form-cols">
+            <div class="bra-field">
+              <label class="bra-field__label" for="p-type">Project type</label>
+              <select class="bra-field__select" name="project_type" id="p-type">
+                <option value="">Select</option>
+                <option>New build</option>
+                <option>Refurbishment</option>
+                <option>Tenant fit-out</option>
+                <option>Public / civic</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="bra-field">
+              <label class="bra-field__label" for="p-area">Area (m²)</label>
+              <input class="bra-field__input" type="number" name="area_m2" id="p-area" min="1" placeholder="e.g. 1200">
+            </div>
+          </div>
+          <div class="bra-field">
+            <label class="bra-field__label" for="p-deadline">Target completion</label>
+            <input class="bra-field__input" type="month" name="target_date" id="p-deadline">
+          </div>
+          <div class="bra-field">
+            <label class="bra-field__label" for="p-brief">Brief *</label>
+            <textarea class="bra-field__textarea" name="description" id="p-brief" required placeholder="Programme, ceiling height, acoustic targets, finishes you are pairing with…"></textarea>
+          </div>
+          <input type="hidden" name="name" value="Project specification request">
+          <input type="hidden" name="team_id" value="1">
+          <input type="hidden" name="tag_ids" value="6">
+          <button type="submit" class="bra-btn-mag" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
+            <span>Send the brief</span>
+            <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Form 3 — Information -->
+        <form action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="info">
+          <div class="bra-field">
+            <label class="bra-field__label" for="i-name">Full name *</label>
+            <input class="bra-field__input" type="text" name="contact_name" id="i-name" required autocomplete="name">
+          </div>
+          <div class="bra-form-cols">
+            <div class="bra-field">
+              <label class="bra-field__label" for="i-email">Email *</label>
+              <input class="bra-field__input" type="email" name="email_from" id="i-email" required autocomplete="email">
+            </div>
+            <div class="bra-field">
+              <label class="bra-field__label" for="i-company">Studio / outlet</label>
+              <input class="bra-field__input" type="text" name="partner_name" id="i-company" autocomplete="organization">
+            </div>
+          </div>
+          <div class="bra-field">
+            <label class="bra-field__label" for="i-kind">What do you need?</label>
+            <select class="bra-field__select" name="info_kind" id="i-kind">
+              <option>Technical paper</option>
+              <option>Spec sheet</option>
+              <option>EPD / sustainability data</option>
+              <option>Press kit</option>
+              <option>CAD &amp; BIM files</option>
+              <option>Commercial / dealer</option>
+              <option>General enquiry</option>
+            </select>
+          </div>
+          <div class="bra-field">
+            <label class="bra-field__label" for="i-msg">Anything else?</label>
+            <textarea class="bra-field__textarea" name="description" id="i-msg" placeholder="Optional — give us context so we send the right thing."></textarea>
+          </div>
+          <input type="hidden" name="name" value="Information request">
+          <input type="hidden" name="team_id" value="1">
+          <input type="hidden" name="tag_ids" value="6">
+          <button type="submit" class="bra-btn-mag" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
+            <span>Send the request</span>
+            <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Form 4 — Other -->
+        <form action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="other">
+          <div class="bra-field">
+            <label class="bra-field__label" for="o-name">Full name *</label>
+            <input class="bra-field__input" type="text" name="contact_name" id="o-name" required autocomplete="name">
+          </div>
+          <div class="bra-form-cols">
+            <div class="bra-field">
+              <label class="bra-field__label" for="o-email">Email *</label>
+              <input class="bra-field__input" type="email" name="email_from" id="o-email" required autocomplete="email">
+            </div>
+            <div class="bra-field">
+              <label class="bra-field__label" for="o-company">Organisation</label>
+              <input class="bra-field__input" type="text" name="partner_name" id="o-company" autocomplete="organization">
+            </div>
+          </div>
+          <div class="bra-field">
+            <label class="bra-field__label" for="o-msg">Your message *</label>
+            <textarea class="bra-field__textarea" name="description" id="o-msg" required placeholder="What's on your mind?"></textarea>
+          </div>
+          <input type="hidden" name="name" value="General enquiry">
+          <input type="hidden" name="team_id" value="1">
+          <input type="hidden" name="tag_ids" value="6">
+          <button type="submit" class="bra-btn-mag" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
+            <span>Send the message</span>
+            <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Studio info ===== -->
+<section class="bra-surface-stone">
+  <div class="bra-container bra-section">
+    <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Studio</p>
+    <h2 class="bra-h2" style="margin-bottom: var(--bra-s-4); max-width: 18ch;">
+      <span class="bra-reveal-line" data-reveal>Refshalevej 167,</span><br>
+      <span class="bra-reveal-line" data-reveal>Copenhagen.</span>
+    </h2>
+
+    <div class="bra-gallery">
+      <div class="bra-gallery-cell bra-gallery-data" style="grid-column: span 4;">
+        <div class="bra-gallery-data__label">Visit</div>
+        <div class="bra-h3" style="font-size: 24px; margin-top: 8px;">By appointment</div>
+        <div class="bra-gallery-data__note" style="margin-top: var(--bra-s-2);">
+          Tuesdays and Thursdays, 10–17. Book a slot — we'll have samples laid out and the kettle on.
+        </div>
+        <a href="#" class="bra-cta" style="margin-top: auto; padding-top: var(--bra-s-3);">Book a visit</a>
+      </div>
+      <div class="bra-gallery-cell bra-gallery-data" style="grid-column: span 4;">
+        <div class="bra-gallery-data__label">Email</div>
+        <div class="bra-h3" style="font-size: 22px; margin-top: 8px;">hello@beyondrational.com</div>
+        <div class="bra-gallery-data__note" style="margin-top: var(--bra-s-2);">
+          For samples, datasheets, and project briefs. We answer the same day Mon–Fri.
+        </div>
+      </div>
+      <div class="bra-gallery-cell bra-gallery-data bra-gallery-data--ink" style="grid-column: span 4;">
+        <div class="bra-gallery-data__label">For press</div>
+        <div class="bra-h3" style="font-size: 22px; margin-top: 8px;">press@beyondrational.com</div>
+        <div class="bra-gallery-data__note" style="margin-top: var(--bra-s-2);">
+          Hi-res images, EPD, technical paper. Embargo policy on request.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Material Matters event ===== -->
+<section class="bra-surface-oak">
+  <div class="bra-container bra-section">
+    <div class="bra-grid-2" style="align-items: end;">
+      <h2 class="bra-mega" style="line-height: 0.86;">
+        <span class="bra-reveal-line" data-reveal>Meet us</span><br>
+        <span class="bra-reveal-line" data-reveal>at Material</span><br>
+        <span class="bra-reveal-line" data-reveal>Matters.</span>
+      </h2>
+      <div class="bra-stack-wide">
+        <p class="bra-lede">
+          We launch Aisti in Denmark at 3daysofdesign, June 10–12 2026. Free entry. Drop by anytime.
+        </p>
+        <div class="bra-spec">
+          <div class="bra-spec-row"><div class="bra-spec-key">Dates</div><div class="bra-spec-val">10–12 June 2026</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key">Venue</div><div class="bra-spec-val">Gammel Dok</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bra-footer">
+  <div class="bra-footer__grid">
+    <div class="bra-footer__brand">
+      <div class="bra-footer__brand-line">Beyond Rational</div>
+      <p class="bra-body" style="margin-top: var(--bra-s-3); max-width: 36ch; color: var(--bra-ink-2);">
+        Acoustic plates designed in Copenhagen, foam-formed in Finland, specified across Northern Europe.
+      </p>
+    </div>
+    <div>
+      <h4>Product</h4>
+      <ul>
+        <li><a href="product.html" class="bra-cta" style="border: none; padding: 0;">Aisti Teno</a></li>
+        <li><a href="product.html#finish" class="bra-cta" style="border: none; padding: 0;">Finishes</a></li>
+        <li><a href="product.html#spec" class="bra-cta" style="border: none; padding: 0;">Spec sheet</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="projects.html" class="bra-cta" style="border: none; padding: 0;">Projects</a></li>
+        <li><a href="design-system.html" class="bra-cta" style="border: none; padding: 0;">Design system</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;">hello@beyondrational.com</a></li>
+        <li><span class="bra-body" style="font-size: 14px;">Refshalevej 167, Copenhagen</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bra-footer__base">
+    <span class="bra-micro">© 2026 Beyond Rational ApS</span>
+    <span class="bra-micro">B_R Design System · v1.0</span>
+  </div>
+</footer>
+
+<script src="br.js" defer></script>
+<script src="br-content.js" defer></script>
+</body>
+</html>
