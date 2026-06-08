@@ -1,18 +1,15 @@
 # Sveltia CMS configuration
-# Edit the GitHub repo path below after pushing the site.
 
 backend:
   name: github
   repo: Beyondrational/beyond-rational
   branch: main
-  base_url: https://api.netlify.com   # only used if you wire auth via Netlify; otherwise leave default GitHub flow
 
 media_folder: "assets"
 public_folder: "assets"
 
-site_url: https://example.com
-display_url: https://example.com
-logo_url: /assets/logo.svg
+site_url: https://beyondrational.github.io/beyond-rational
+display_url: https://beyondrational.github.io/beyond-rational
 
 collections:
 
@@ -24,46 +21,71 @@ collections:
         name: "home"
         label: "Home page"
         fields:
-          - { label: "Hero — eyebrow left",   name: "hero.eyebrow_left",  widget: "string" }
-          - { label: "Hero — eyebrow right",  name: "hero.eyebrow_right", widget: "string" }
-          - { label: "Hero — title (line 1)", name: "hero.title_l1",      widget: "string" }
-          - { label: "Hero — title (line 2 emphasised)", name: "hero.title_l2_em", widget: "string" }
-          - { label: "Hero — subtitle",       name: "hero.subtitle",      widget: "text"   }
-          - { label: "Hero — primary CTA",    name: "hero.cta_primary",   widget: "string" }
-          - { label: "Hero — secondary CTA",  name: "hero.cta_secondary", widget: "string" }
 
-          - { label: "Manifesto — section label", name: "manifesto.section_label", widget: "string" }
-          - label: "Manifesto items"
-            name: "manifesto.items"
-            widget: "list"
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
             fields:
-              - { label: "Number",  name: "num",       widget: "string" }
-              - { label: "Pre",     name: "text_pre",  widget: "string" }
-              - { label: "Emphasis",name: "text_em",   widget: "string" }
-              - { label: "Post",    name: "text_post", widget: "string", required: false }
+              - { label: "Eyebrow left",          name: "eyebrow_left",  widget: "string" }
+              - { label: "Eyebrow right",         name: "eyebrow_right", widget: "string" }
+              - { label: "Title line 1",          name: "title_l1",      widget: "string" }
+              - { label: "Title line 2 (emphasised)", name: "title_l2_em", widget: "string" }
+              - { label: "Subtitle",              name: "subtitle",      widget: "text"   }
+              - { label: "Primary CTA",           name: "cta_primary",   widget: "string" }
+              - { label: "Secondary CTA",         name: "cta_secondary", widget: "string" }
 
-          - { label: "What we make — section label", name: "what_we_make.section_label", widget: "string" }
-          - { label: "What we make — body",          name: "what_we_make.body",          widget: "text"   }
+          - label: "Manifesto"
+            name: "manifesto"
+            widget: "object"
+            fields:
+              - { label: "Section label", name: "section_label", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Number",   name: "num",       widget: "string" }
+                  - { label: "Text pre", name: "text_pre",  widget: "string" }
+                  - { label: "Emphasis", name: "text_em",   widget: "string" }
+                  - { label: "Text post",name: "text_post", widget: "string", required: false }
 
-          - { label: "Process — section label", name: "process.section_label", widget: "string" }
-          - { label: "Process — title line 1",  name: "process.title_l1",      widget: "string" }
-          - { label: "Process — title line 2 (em)", name: "process.title_l2_em", widget: "string" }
-          - { label: "Process — paragraph 1",   name: "process.body_p1",       widget: "text"   }
-          - { label: "Process — paragraph 2",   name: "process.body_p2",       widget: "text"   }
+          - label: "What we make"
+            name: "what_we_make"
+            widget: "object"
+            fields:
+              - { label: "Section label", name: "section_label", widget: "string" }
+              - { label: "Body",          name: "body",          widget: "text"   }
 
-          - { label: "Studio — section label",  name: "studio.section_label", widget: "string" }
-          - { label: "Studio — title line 1",   name: "studio.title_l1",      widget: "string" }
-          - { label: "Studio — title line 2 (em)", name: "studio.title_l2_em", widget: "string" }
-          - { label: "Studio — founded year",   name: "studio.stat_founded",  widget: "string" }
-          - { label: "Studio — people count",   name: "studio.stat_people",   widget: "string" }
-          - { label: "Studio — locations",      name: "studio.stat_studios",  widget: "string" }
-          - { label: "Studio — body",           name: "studio.body",          widget: "text"   }
+          - label: "Process"
+            name: "process"
+            widget: "object"
+            fields:
+              - { label: "Section label",        name: "section_label", widget: "string" }
+              - { label: "Title line 1",         name: "title_l1",      widget: "string" }
+              - { label: "Title line 2 (em)",    name: "title_l2_em",   widget: "string" }
+              - { label: "Paragraph 1",          name: "body_p1",       widget: "text"   }
+              - { label: "Paragraph 2",          name: "body_p2",       widget: "text"   }
 
-          - { label: "Closing CTA — section label", name: "cta.section_label", widget: "string" }
-          - { label: "Closing CTA — title line 1",  name: "cta.title_l1",      widget: "string" }
-          - { label: "Closing CTA — title line 2 (em)", name: "cta.title_l2_em", widget: "string" }
-          - { label: "Closing CTA — body",          name: "cta.body",          widget: "text"   }
-          - { label: "Closing CTA — email",         name: "cta.email",         widget: "string" }
+          - label: "Studio"
+            name: "studio"
+            widget: "object"
+            fields:
+              - { label: "Section label",     name: "section_label", widget: "string" }
+              - { label: "Title line 1",      name: "title_l1",      widget: "string" }
+              - { label: "Title line 2 (em)", name: "title_l2_em",   widget: "string" }
+              - { label: "Founded year",      name: "stat_founded",  widget: "string" }
+              - { label: "People count",      name: "stat_people",   widget: "string" }
+              - { label: "Locations",         name: "stat_studios",  widget: "string" }
+              - { label: "Body",              name: "body",          widget: "text"   }
+
+          - label: "Closing CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Section label",     name: "section_label", widget: "string" }
+              - { label: "Title line 1",      name: "title_l1",      widget: "string" }
+              - { label: "Title line 2 (em)", name: "title_l2_em",   widget: "string" }
+              - { label: "Body",              name: "body",          widget: "text"   }
+              - { label: "Email",             name: "email",         widget: "string" }
 
   # =============== FOUNDERS ===============
   - name: "founders"
@@ -108,10 +130,15 @@ collections:
         name: "projects"
         label: "Projects page"
         fields:
-          - { label: "Hero — eyebrow",  name: "hero.eyebrow", widget: "string" }
-          - { label: "Hero — title line 1", name: "hero.title_l1", widget: "string" }
-          - { label: "Hero — title line 2", name: "hero.title_l2", widget: "string" }
-          - { label: "Hero — subtitle",     name: "hero.subtitle", widget: "text"   }
+
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",       name: "eyebrow",   widget: "string" }
+              - { label: "Title line 1",  name: "title_l1",  widget: "string" }
+              - { label: "Title line 2",  name: "title_l2",  widget: "string" }
+              - { label: "Subtitle",      name: "subtitle",  widget: "text"   }
 
           - label: "Image gallery (6 cells)"
             name: "gallery"
