@@ -1,46 +1,50 @@
 {
   "hero": {
-    "eyebrow_left": "Beyond Rational · Copenhagen / Helsinki",
-    "eyebrow_right": "Est. 2024",
-    "title_l1": "A studio for materials",
-    "title_l2_em": "that don't compromise.",
-    "subtitle": "Beyond Rational designs and manufactures architectural surfaces in Copenhagen and Helsinki. We start with a question — what should a material be? — and stop only when the answer holds up on the building.",
+    "eyebrow_left": "Beyond Rational · Copenhagen",
+    "eyebrow_right": "Conscious acoustics",
+    "title_l1": "Conscious acoustics",
+    "title_l2_em": "for modern architecture.",
+    "subtitle": "Beyond Rational is a Copenhagen-based company supplying sustainable, design-driven acoustic materials. We combine Scandinavian aesthetics with high-performance functionality — and partner with architects, designers, and developers who care about quality, innovation, and impact.",
     "cta_primary": "See our work",
     "cta_secondary": "Visit the studio"
   },
   "manifesto": {
     "section_label": "What we believe",
     "items": [
-      { "num": "01", "text_pre": "A material is ", "text_em": "what it is", "text_post": ", all the way through." },
-      { "num": "02", "text_pre": "Performance and surface aren't ", "text_em": "trade-offs.", "text_post": "" },
+      { "num": "01", "text_pre": "Sustainable solutions should be ", "text_em": "the obvious choice.", "text_post": "" },
+      { "num": "02", "text_pre": "Form and function aren't ", "text_em": "trade-offs.", "text_post": "" },
       { "num": "03", "text_pre": "The best acoustic surface is the one ", "text_em": "you don't notice.", "text_post": "" }
     ]
   },
   "what_we_make": {
-    "section_label": "What we make",
-    "body": "We make acoustic surfaces. Compressed wood fibre with nothing else added, specified for ceilings and walls where a room can't be allowed to sound like a recording studio. Our first product, Aisti, ships from Helsinki."
+    "section_label": "What we supply",
+    "body": "We are the official distributor of Aisti® in Denmark. The Aisti® Acoustic Tile is a bio-based absorber made from natural wood fibre — Absorption Class A, no synthetic binders, no plastics, no irritating fibres."
   },
   "process": {
-    "section_label": "How we work",
+    "section_label": "The technology",
     "title_l1": "Foam-formed,",
     "title_l2_em": "not pressed.",
-    "body_p1": "We adapted our process from the Finnish paper industry. Instead of pressing fibre flat under load, we suspend it in foam — the fibres set into an open cell structure that absorbs sound at the cell level, without binders or plastics.",
-    "body_p2": "It is a slow process. It is also the only one we know that produces a single-substance acoustic plate. Material first, all the way through."
+    "body_p1": "Aisti's foam-forming technology, adapted from the Finnish paper industry, suspends wood fibre in foam instead of pressing it flat. The fibres set into an open, porous structure that captures sound across a wide frequency range — without binders or plastics.",
+    "body_p2": "The technology is cost-effective and energy-conscious, producing tiles that are light in weight, plastic-free, and 100% recyclable. Produced in Jyväskylä, Finland.",
+    "cta": "Read more about the tile"
   },
   "studio": {
-    "section_label": "Where we work",
-    "title_l1": "Two cities.",
-    "title_l2_em": "One studio.",
-    "stat_founded": "2024",
-    "stat_people": "11",
-    "stat_studios": "CPH / HEL",
-    "body": "Design happens in Copenhagen, manufacturing in Helsinki. We specify, prototype, and ship from the same drawing."
+    "section_label": "Who we are",
+    "title_l1": "Copenhagen office.",
+    "title_l2_em": "Finnish production.",
+    "stat_founded": "CPH",
+    "stat_people": "2",
+    "stat_studios": "2026",
+    "stat_founded_label": "Based in Copenhagen",
+    "stat_people_label": "Partners",
+    "stat_studios_label": "Full capacity, August",
+    "body": "Beyond Rational is based in Copenhagen. Our partner Aisti produces in Jyväskylä, Finland. We specify and supply across Denmark."
   },
   "cta": {
     "section_label": "Get in touch",
     "title_l1": "Send the brief.",
     "title_l2_em": "We'll read it carefully.",
-    "body": "The studio answers Monday to Friday. We work directly with architects, no salespeople in the room.",
-    "email": "hello@beyondrational.com"
+    "body": "We answer Monday to Friday and work directly with architects, designers, and property owners.",
+    "email": "morten@beyondrational.com"
   }
 }
