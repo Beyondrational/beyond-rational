@@ -925,6 +925,9 @@ form[data-form].is-active { display: flex; flex-direction: column; gap: 0; }
   gap: 2px;
   background: var(--bra-ink); /* gap shows as 2px ink rules */
 }
+/* Image galleries use fixed row height so cells tessellate evenly and
+   images cover cleanly (data galleries keep auto height for their text). */
+.bra-gallery--img { grid-auto-rows: clamp(150px, 19vw, 260px); }
 .bra-gallery-cell {
   position: relative;
   background: var(--bra-paper);
@@ -1046,13 +1049,14 @@ form[data-form].is-active { display: flex; flex-direction: column; gap: 0; }
 .bra-gallery-data--ink .bra-vbar,
 .bra-gallery-data--oak .bra-vbar { background: var(--bra-on-oak); }
 
-/* Asymmetric span helpers (mirrors v3 ix-grid but in v2 namespace) */
-.bra-cell-a { grid-column: span 5; grid-row: span 2; }  /* tall left */
-.bra-cell-b { grid-column: span 4; grid-row: span 1; }
-.bra-cell-c { grid-column: span 3; grid-row: span 1; }
-.bra-cell-d { grid-column: span 7; grid-row: span 1; }
-.bra-cell-e { grid-column: span 4; grid-row: span 2; }  /* tall right */
-.bra-cell-f { grid-column: span 8; grid-row: span 1; }
+/* Asymmetric image-gallery cells — explicit placement so the 6 cells
+   tessellate a 12-col × 4-row block with no empty (black) slots. */
+.bra-cell-a { grid-column: 1 / 8;  grid-row: span 2; }  /* big top-left */
+.bra-cell-b { grid-column: 8 / 13; grid-row: span 1; }
+.bra-cell-c { grid-column: 8 / 13; grid-row: span 1; }
+.bra-cell-d { grid-column: 1 / 6;  grid-row: span 2; }  /* tall bottom-left */
+.bra-cell-e { grid-column: 6 / 13; grid-row: span 1; }
+.bra-cell-f { grid-column: 6 / 13; grid-row: span 1; }
 .bra-cell-g { grid-column: span 6; grid-row: span 1; }
 .bra-cell-h { grid-column: span 6; grid-row: span 1; }
 
@@ -1380,6 +1384,7 @@ body.is-loading { overflow: hidden; }
 }
 .bra-nav__toggle span:nth-child(1) { top: 11px; }
 .bra-nav__toggle span:nth-child(2) { bottom: 11px; }
+.bra-nav.is-open .bra-nav__toggle { color: var(--bra-on-oak); }
 .bra-nav.is-open .bra-nav__toggle span:nth-child(1) { transform: translateY(4px) rotate(45deg); }
 .bra-nav.is-open .bra-nav__toggle span:nth-child(2) { transform: translateY(-4px) rotate(-45deg); }
 
@@ -1492,6 +1497,7 @@ body.bra-nav-locked { overflow: hidden; }
   }
   .bra-gallery > * {
     grid-column: auto !important;
+    grid-row: auto !important;
     box-shadow: 0 0 0 1px rgba(28,28,26,0.12);
   }
 }
