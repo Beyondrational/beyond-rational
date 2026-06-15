@@ -537,6 +537,36 @@
     update();
   }
 
+  /* ---------- Mobile nav (hamburger) ---------- */
+  const navEl = document.querySelector('.bra-nav');
+  const navLinks = navEl && navEl.querySelector('.bra-nav__links');
+  if (navEl && navLinks) {
+    // Inject toggle button
+    const toggle = document.createElement('button');
+    toggle.className = 'bra-nav__toggle';
+    toggle.setAttribute('aria-label', 'Menu');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.innerHTML = '<span></span><span></span>';
+    navEl.appendChild(toggle);
+
+    // Inject scrim
+    const scrim = document.createElement('div');
+    scrim.className = 'bra-nav__scrim';
+    navEl.appendChild(scrim);
+
+    const setOpen = (open) => {
+      navEl.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.classList.toggle('bra-nav-locked', open);
+    };
+    toggle.addEventListener('click', () => setOpen(!navEl.classList.contains('is-open')));
+    scrim.addEventListener('click', () => setOpen(false));
+    navLinks.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+    // Close menu if resized up to desktop
+    window.addEventListener('resize', () => { if (window.innerWidth > 720) setOpen(false); });
+  }
+
   /* ---------- Nav theme switch over dark sections ---------- */
   const nav = document.querySelector('.bra-nav');
   const darkSections = document.querySelectorAll('.bra-vault, .bra-surface-oak, .bra-surface-ink, .br-logo-hero');

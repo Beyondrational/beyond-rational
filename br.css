@@ -1326,6 +1326,7 @@ body.is-loading { overflow: hidden; }
   font-weight: 600;
   font-size: 14px;
   letter-spacing: -0.010em;
+  white-space: nowrap;
 }
 .bra-nav__links {
   display: flex;
@@ -1355,10 +1356,73 @@ body.is-loading { overflow: hidden; }
   transform-origin: left;
   transform: scaleX(1);
 }
-@media (max-width: 720px) {
-  .bra-nav__links { gap: var(--bra-s-2); }
-  .bra-nav__link { font-size: 12px; }
+
+/* Hamburger toggle — injected by br.js, hidden on desktop */
+.bra-nav__toggle {
+  display: none;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+  color: inherit;
 }
+.bra-nav__toggle span {
+  position: absolute;
+  left: 5px; right: 5px;
+  height: 2px;
+  background: currentColor;
+  transition: transform var(--bra-dur-base) var(--bra-ease),
+              opacity var(--bra-dur-fast) var(--bra-ease);
+}
+.bra-nav__toggle span:nth-child(1) { top: 11px; }
+.bra-nav__toggle span:nth-child(2) { bottom: 11px; }
+.bra-nav.is-open .bra-nav__toggle span:nth-child(1) { transform: translateY(4px) rotate(45deg); }
+.bra-nav.is-open .bra-nav__toggle span:nth-child(2) { transform: translateY(-4px) rotate(-45deg); }
+
+@media (max-width: 720px) {
+  .bra-nav { padding: 12px var(--bra-pad-x); }
+  .bra-nav__toggle { display: block; }
+  .bra-nav__links {
+    position: fixed;
+    top: 0; right: 0;
+    width: min(78vw, 320px);
+    height: 100dvh;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--bra-s-3);
+    padding: var(--bra-s-5) var(--bra-pad-x);
+    background: var(--bra-ink);
+    color: var(--bra-on-oak);
+    transform: translateX(100%);
+    transition: transform var(--bra-dur-base) var(--bra-ease-quart);
+    box-shadow: -40px 0 80px rgba(0,0,0,0.25);
+  }
+  .bra-nav.is-open .bra-nav__links { transform: translateX(0); }
+  .bra-nav__link {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    padding: 8px 0;
+  }
+  .bra-nav__link::after { display: none; }
+  /* Dim the page behind the open menu */
+  .bra-nav__scrim {
+    position: fixed;
+    inset: 0;
+    background: rgba(28,28,26,0.40);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--bra-dur-base) var(--bra-ease);
+    z-index: 1;
+  }
+  .bra-nav.is-open .bra-nav__scrim { opacity: 1; pointer-events: auto; }
+}
+body.bra-nav-locked { overflow: hidden; }
 
 /* Bottom footer (shared across pages) */
 .bra-footer {
@@ -1414,6 +1478,33 @@ body.is-loading { overflow: hidden; }
 
 /* Page top spacer to clear sticky nav */
 .bra-nav-spacer { height: 64px; }
+
+/* ---------- Responsive: collapse data/image grids that use inline spans ----------
+   Gallery cells carry inline grid-column: span N. Reducing the grid's own track
+   count clamps every span, so cells reflow regardless of their inline value. */
+@media (max-width: 900px) {
+  /* Transparent bg + per-cell hairline avoids the ink gap showing as a black
+     block in the empty slot when a grid has an odd cell count. */
+  .bra-gallery {
+    grid-template-columns: 1fr 1fr !important;
+    background: transparent !important;
+    gap: 2px;
+  }
+  .bra-gallery > * {
+    grid-column: auto !important;
+    box-shadow: 0 0 0 1px rgba(28,28,26,0.12);
+  }
+}
+@media (max-width: 600px) {
+  .bra-gallery { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 720px) {
+  /* Off-canvas menu sits off-screen right; clip horizontal overflow it creates */
+  html, body.bra { overflow-x: clip; }
+  /* Tile hint references a cursor that doesn't exist on touch */
+  .bra-tile-stage__hint { display: none; }
+}
 
 /* ---------- Configurator (3D tile + controls) ---------- */
 
