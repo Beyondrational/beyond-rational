@@ -1510,6 +1510,14 @@ body.bra-nav-locked { overflow: hidden; }
   html, body.bra { overflow-x: clip; }
   /* Tile hint references a cursor that doesn't exist on touch */
   .bra-tile-stage__hint { display: none; }
+  /* Reduce section breathing room — 160px is too much on a small viewport */
+  .bra-section { padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-5); }
+  .bra-section--tight { padding-top: var(--bra-s-4); padding-bottom: var(--bra-s-4); }
+}
+
+@media (max-width: 600px) {
+  .bra-section { padding-top: var(--bra-s-4); padding-bottom: var(--bra-s-4); }
+  .bra-section--tight { padding-top: var(--bra-s-3); padding-bottom: var(--bra-s-3); }
 }
 
 /* ---------- Configurator (3D tile + controls) ---------- */
