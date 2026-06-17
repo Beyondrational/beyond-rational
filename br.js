@@ -74,21 +74,7 @@
     });
   }
 
-  /* ---------- Magnetic buttons ---------- */
-  document.querySelectorAll('[data-magnetic]').forEach((btn) => {
-    const radius = 120, pull = 0.35;
-    btn.addEventListener('mousemove', (e) => {
-      const r = btn.getBoundingClientRect();
-      const dx = e.clientX - (r.left + r.width / 2);
-      const dy = e.clientY - (r.top + r.height / 2);
-      const dist = Math.hypot(dx, dy);
-      if (dist < radius) {
-        const k = 1 - dist / radius;
-        btn.style.transform = `translate(${dx * pull * k}px, ${dy * pull * k}px)`;
-      }
-    });
-    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
-  });
+
 
   /* ---------- Parallax stage ---------- */
   document.querySelectorAll('[data-parallax]').forEach((el) => {

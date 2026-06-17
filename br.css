@@ -397,9 +397,7 @@
   text-transform: uppercase;
   overflow: hidden;
   isolation: isolate;
-  transition: color var(--bra-dur-base) var(--bra-ease),
-              transform var(--bra-dur-base) var(--bra-ease);
-  will-change: transform;
+  transition: color var(--bra-dur-base) var(--bra-ease);
 }
 .bra-btn-mag::before {
   content: "";
