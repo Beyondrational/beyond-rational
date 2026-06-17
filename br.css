@@ -382,24 +382,45 @@
 
 /* Magnetic primary button — drenched oak, heavy weight */
 .bra-btn-mag {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 20px 36px;
-  background: var(--bra-oak);
-  color: var(--bra-on-oak);
+  padding: 18px 32px;
+  border: 2px solid var(--bra-oak);
+  background: transparent;
+  color: var(--bra-oak);
   font-family: var(--bra-font);
   font-weight: 700;
-  font-size: 15px;
-  letter-spacing: -0.005em;
-  border: 0;
-  transition: background var(--bra-dur-base) var(--bra-ease),
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color var(--bra-dur-base) var(--bra-ease),
               transform var(--bra-dur-base) var(--bra-ease);
   will-change: transform;
 }
-.bra-btn-mag:hover { background: var(--bra-oak-deep); }
+.bra-btn-mag::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: var(--bra-oak);
+  z-index: -1;
+  transform: translateY(101%);
+  transition: transform var(--bra-dur-base) var(--bra-ease);
+}
+.bra-btn-mag:hover { color: var(--bra-on-oak); }
+.bra-btn-mag:hover::before { transform: translateY(0); }
 .bra-btn-mag__arrow { transition: transform var(--bra-dur-base) var(--bra-ease); }
 .bra-btn-mag:hover .bra-btn-mag__arrow { transform: translate(4px, -4px); }
+
+/* Inverted — for use on oak / dark surfaces */
+.bra-btn-mag--inv {
+  border-color: var(--bra-on-oak);
+  color: var(--bra-on-oak);
+}
+.bra-btn-mag--inv::before { background: var(--bra-on-oak); }
+.bra-btn-mag--inv:hover { color: var(--bra-ink); }
 
 /* Slide-fill button — ink rises from bottom, text inverts */
 .bra-btn-fill {
