@@ -1642,6 +1642,33 @@ body.bra-nav-locked { overflow: hidden; }
   transform: translate(-50%, -50%) rotateY(90deg) translateZ(calc(var(--tile-w) / 2));
 }
 
+/* T-grid ceiling context — a 5×5 suspended grid behind the tile, sharing
+   its rotation. Centre cell is empty so the real tile sits lay-in. The
+   plane is large and clipped by the stage, reading as an endless ceiling. */
+.bra-tile-grid {
+  position: absolute;
+  left: 50%; top: 50%;
+  display: none;
+  grid-template-columns: repeat(5, var(--tile-w));
+  grid-template-rows: repeat(5, var(--tile-h));
+  gap: 5px;
+  padding: 5px;
+  background: #8c877c;                 /* rail metal */
+  transform: translate(-50%, -50%) translateZ(calc(var(--tile-d) / 2 - 0.5px));
+  backface-visibility: hidden;
+  transition: --tile-w 700ms var(--bra-ease), --tile-h 700ms var(--bra-ease);
+}
+.bra-tile-3d.show-grid .bra-tile-grid { display: grid; }
+.bra-tile-grid > i {
+  display: block;
+  background-color: #c8c3b8;           /* ceiling panel */
+  background-image: radial-gradient(circle at 38% 28%, rgba(255,255,255,0.30), transparent 62%);
+}
+.bra-tile-grid > i:nth-child(13) {     /* centre of 5×5 = the live tile */
+  background: transparent;
+  background-image: none;
+}
+
 /* Config panel */
 .bra-config-panel {
   display: flex;

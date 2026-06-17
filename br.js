@@ -610,6 +610,7 @@
   };
   const summaryEl = document.getElementById('config-summary');
   const readoutEl = document.getElementById('color-readout');
+  const viewReadoutEl = document.getElementById('view-readout');
   const applyTileState = () => {
     if (!tile3d) return;
     tile3d.style.setProperty('--tile-w', tileState.dimW + 'px');
@@ -636,6 +637,14 @@
         } else if (c === 'color') {
           tileState.color = btn.dataset.color;
           tileState.name  = btn.dataset.name;
+        } else if (c === 'view') {
+          const inGrid = btn.dataset.view === 'grid';
+          tile3d.classList.toggle('show-grid', inGrid);
+          if (viewReadoutEl) {
+            viewReadoutEl.textContent = inGrid
+              ? 'Laid into a standard suspended T-grid.'
+              : 'The tile on its own.';
+          }
         }
         applyTileState();
       });
