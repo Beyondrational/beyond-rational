@@ -1848,6 +1848,167 @@ body.bra-nav-locked { overflow: hidden; }
   border-top: 1px solid rgba(244,242,237,0.18);
 }
 
+/* ---------- Video showcase (custom player, monograph chrome) ---------- */
+.bra-video {
+  position: relative;
+  border: 2px solid var(--bra-ink);
+  background: var(--bra-ink);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  isolation: isolate;
+}
+.bra-video__media {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  background: var(--bra-ink);
+}
+/* Poster sits over the video until first play */
+.bra-video__poster {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  transition: opacity var(--bra-dur-slow) var(--bra-ease);
+}
+.bra-video.is-started .bra-video__poster { opacity: 0; pointer-events: none; }
+/* Soft ink veil so overlay type stays legible */
+.bra-video__veil {
+  position: absolute; inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(28,28,26,0.28) 0%, transparent 32%, transparent 58%, rgba(28,28,26,0.72) 100%);
+  transition: opacity var(--bra-dur-base) var(--bra-ease);
+}
+.bra-video.is-playing .bra-video__veil { opacity: 0; }
+
+/* Top meta (eyebrow + duration) over the poster */
+.bra-video__meta {
+  position: absolute; top: 0; left: 0; right: 0;
+  z-index: 4;
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: var(--bra-s-3);
+  padding: var(--bra-s-3) var(--bra-s-3) 0;
+  color: var(--bra-on-oak);
+  transition: opacity var(--bra-dur-base) var(--bra-ease);
+}
+.bra-video__eyebrow {
+  font-family: var(--bra-font);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(244,242,237,0.8);
+}
+.bra-video.is-playing .bra-video__meta { opacity: 0; }
+
+/* Centre play button — circular, ink, cream triangle */
+.bra-video__play {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  width: clamp(64px, 7vw, 96px);
+  height: clamp(64px, 7vw, 96px);
+  border-radius: 999px;
+  border: 0;
+  background: var(--bra-on-oak);
+  color: var(--bra-ink);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform var(--bra-dur-base) var(--bra-ease),
+              background var(--bra-dur-fast) var(--bra-ease),
+              opacity var(--bra-dur-base) var(--bra-ease);
+}
+.bra-video__play::before {
+  content: "";
+  width: 0; height: 0;
+  margin-left: 4px;
+  border-style: solid;
+  border-width: 11px 0 11px 18px;
+  border-color: transparent transparent transparent currentColor;
+}
+.bra-video__play:hover { transform: translate(-50%, -50%) scale(1.06); background: var(--bra-oak-warm); color: var(--bra-on-oak); }
+.bra-video.is-playing .bra-video__play { opacity: 0; pointer-events: none; }
+
+/* Bottom control bar */
+.bra-video__bar {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  z-index: 5;
+  display: flex; align-items: center;
+  gap: var(--bra-s-3);
+  padding: var(--bra-s-3);
+  color: var(--bra-on-oak);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity var(--bra-dur-base) var(--bra-ease),
+              transform var(--bra-dur-base) var(--bra-ease);
+}
+.bra-video.is-started:hover .bra-video__bar,
+.bra-video.is-started.is-paused .bra-video__bar { opacity: 1; transform: none; }
+@media (pointer: coarse) { .bra-video.is-started .bra-video__bar { opacity: 1; transform: none; } }
+
+.bra-video__ctrl {
+  flex: none;
+  width: 34px; height: 34px;
+  border: 0;
+  background: transparent;
+  color: currentColor;
+  cursor: pointer;
+  display: grid; place-items: center;
+  font-family: var(--bra-font);
+  font-size: 15px;
+  line-height: 1;
+  opacity: 0.85;
+  transition: opacity var(--bra-dur-fast) var(--bra-ease);
+}
+.bra-video__ctrl:hover { opacity: 1; }
+
+/* Scrubber — thin 2px track, cream fill (matches loader bar) */
+.bra-video__track {
+  flex: 1;
+  position: relative;
+  height: 2px;
+  background: rgba(244,242,237,0.30);
+  cursor: pointer;
+}
+.bra-video__fill {
+  position: absolute; inset: 0 auto 0 0;
+  width: 0%;
+  background: var(--bra-on-oak);
+}
+.bra-video__track::after {            /* enlarge hit area */
+  content: ""; position: absolute; inset: -12px 0;
+}
+.bra-video__time {
+  flex: none;
+  font-family: var(--bra-font);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: rgba(244,242,237,0.85);
+  font-variant-numeric: tabular-nums;
+  min-width: 84px;
+  text-align: right;
+}
+
+/* Caption strip below the frame (optional) */
+.bra-video-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--bra-s-3);
+  flex-wrap: wrap;
+  padding-top: var(--bra-s-2);
+}
+
+@media (max-width: 600px) {
+  .bra-video__time { min-width: 0; }
+  .bra-video__bar { gap: var(--bra-s-2); padding: var(--bra-s-2); }
+}
+
 /* Magnetic specifier (for buttons) reduces motion gracefully */
 @media (prefers-reduced-motion: reduce) {
   .bra { cursor: auto; }

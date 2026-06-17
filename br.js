@@ -651,4 +651,75 @@
     });
   });
   applyTileState();
+
+  /* ---------- Video showcase (custom player) ---------- */
+  const fmtTime = (s) => {
+    if (!isFinite(s) || s < 0) s = 0;
+    const m = Math.floor(s / 60);
+    const sec = Math.floor(s % 60);
+    return `${m}:${sec.toString().padStart(2, '0')}`;
+  };
+  document.querySelectorAll('.bra-video').forEach((root) => {
+    const video = root.querySelector('.bra-video__media');
+    if (!video) return;
+    const play   = root.querySelector('.bra-video__play');
+    const toggle = root.querySelector('[data-video-toggle]');
+    const mute   = root.querySelector('[data-video-mute]');
+    const full   = root.querySelector('[data-video-full]');
+    const track  = root.querySelector('.bra-video__track');
+    const fill   = root.querySelector('.bra-video__fill');
+    const time   = root.querySelector('.bra-video__time');
+
+    const setToggleGlyph = () => { if (toggle) toggle.textContent = video.paused ? '►' : '❙❙'; };
+    const startPlay = () => {
+      root.classList.add('is-started');
+      video.play();
+    };
+    const updateState = () => {
+      root.classList.toggle('is-playing', !video.paused);
+      root.classList.toggle('is-paused', video.paused);
+      setToggleGlyph();
+    };
+
+    if (play) play.addEventListener('click', startPlay);
+    if (toggle) toggle.addEventListener('click', () => { video.paused ? startPlay() : video.pause(); });
+    video.addEventListener('click', () => { if (root.classList.contains('is-started')) { video.paused ? video.play() : video.pause(); } });
+    video.addEventListener('play', updateState);
+    video.addEventListener('pause', updateState);
+    video.addEventListener('ended', () => { root.classList.remove('is-started'); updateState(); });
+
+    video.addEventListener('timeupdate', () => {
+      const pct = video.duration ? (video.currentTime / video.duration) * 100 : 0;
+      if (fill) fill.style.width = pct + '%';
+      if (time) time.textContent = `${fmtTime(video.currentTime)} / ${fmtTime(video.duration)}`;
+    });
+    video.addEventListener('loadedmetadata', () => {
+      if (time) time.textContent = `0:00 / ${fmtTime(video.duration)}`;
+    });
+
+    if (track) {
+      const seek = (e) => {
+        const r = track.getBoundingClientRect();
+        const ratio = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width));
+        if (video.duration) video.currentTime = ratio * video.duration;
+      };
+      let scrubbing = false;
+      track.addEventListener('pointerdown', (e) => { scrubbing = true; track.setPointerCapture(e.pointerId); seek(e); });
+      track.addEventListener('pointermove', (e) => { if (scrubbing) seek(e); });
+      track.addEventListener('pointerup', () => { scrubbing = false; });
+    }
+
+    if (mute) {
+      const setMuteGlyph = () => { mute.textContent = video.muted ? '🔇' : '🔊'; };
+      mute.addEventListener('click', () => { video.muted = !video.muted; setMuteGlyph(); });
+      setMuteGlyph();
+    }
+    if (full) {
+      full.addEventListener('click', () => {
+        if (document.fullscreenElement) document.exitFullscreen();
+        else if (root.requestFullscreen) root.requestFullscreen();
+      });
+    }
+    setToggleGlyph();
+  });
 })();

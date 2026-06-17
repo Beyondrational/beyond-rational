@@ -6,7 +6,7 @@
 <title>Beyond Rational · v0.2 · Reference</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=2">
+<link rel="stylesheet" href="br.css?v=3">
 </head>
 <body class="bra">
 
@@ -608,6 +608,45 @@
 </section>
 
 <!-- =====================================================
+     VIDEO — custom player, monograph chrome
+     ===================================================== -->
+<section class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Video</p>
+  <h2 class="bra-h2" style="margin-bottom: var(--bra-s-5); max-width: 18ch;">
+    <span class="bra-reveal-line" data-reveal>The film,</span><br>
+    <span class="bra-reveal-line" data-reveal>framed in ink.</span>
+  </h2>
+
+  <div class="bra-video" data-video>
+    <video class="bra-video__media" playsinline preload="metadata"
+           poster="https://beyond-rational.odoo.com/web/image/2915-5474c372/MDLC_Aisti_highres_026.jpg"
+           src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"></video>
+    <img class="bra-video__poster" src="https://beyond-rational.odoo.com/web/image/2915-5474c372/MDLC_Aisti_highres_026.jpg" alt="Aisti tile, daylit interior — film still">
+    <div class="bra-video__veil" aria-hidden="true"></div>
+
+    <div class="bra-video__meta">
+      <span class="bra-video__eyebrow">Aisti® — the film</span>
+      <span class="bra-video__eyebrow">Demo clip · replace with your film</span>
+    </div>
+
+    <button class="bra-video__play" aria-label="Play film"></button>
+
+    <div class="bra-video__bar">
+      <button class="bra-video__ctrl" data-video-toggle aria-label="Play / pause">►</button>
+      <div class="bra-video__track"><div class="bra-video__fill"></div></div>
+      <span class="bra-video__time">0:00 / 0:00</span>
+      <button class="bra-video__ctrl" data-video-mute aria-label="Mute">🔊</button>
+      <button class="bra-video__ctrl" data-video-full aria-label="Fullscreen">⛶</button>
+    </div>
+  </div>
+
+  <div class="bra-video-caption">
+    <p class="bra-caption">A studio film, custom controls, no browser chrome.</p>
+    <p class="bra-micro">16:9 · poster + scrubber · ink frame</p>
+  </div>
+</section>
+
+<!-- =====================================================
      MARQUEE — monograph, hover scrubs
      ===================================================== -->
 <section class="bra-marquee" data-marquee>
@@ -647,7 +686,8 @@
     <div class="bra-index-row"><span class="bra-h3" style="font-size: 28px;">Data gallery</span><span class="bra-index-letter">I</span></div>
     <div class="bra-index-row"><span class="bra-h3" style="font-size: 28px;">Configurator</span><span class="bra-index-letter">J</span></div>
     <div class="bra-index-row"><span class="bra-h3" style="font-size: 28px;">Cards</span><span class="bra-index-letter">K</span></div>
-    <div class="bra-index-row"><span class="bra-h3" style="font-size: 28px;">Marquee</span><span class="bra-index-letter">L</span></div>
+    <div class="bra-index-row"><span class="bra-h3" style="font-size: 28px;">Video</span><span class="bra-index-letter">L</span></div>
+    <div class="bra-index-row"><span class="bra-h3" style="font-size: 28px;">Marquee</span><span class="bra-index-letter">M</span></div>
   </div>
 </section>
 
@@ -691,7 +731,7 @@
   </div>
 </footer>
 
-<script src="br.js?v=2" defer></script>
+<script src="br.js?v=3" defer></script>
 
 </body>
 </html>
