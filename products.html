@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products · Beyond Rational</title>
+<meta name="description" content="The Beyond Rational product range: Wuud, Aisti® Aalto, and Sappa — sustainable acoustic materials for modern architecture.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://beyond-rational.odoo.com">
+<link rel="stylesheet" href="br.css?v=3">
+<style>
+  .prod-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 5vw, 96px);
+    align-items: center;
+    padding: var(--bra-s-6) 0;
+    border-top: 2px solid var(--bra-ink);
+  }
+  .prod-row:last-child { border-bottom: 2px solid var(--bra-ink); }
+  .prod-row--reverse { direction: rtl; }
+  .prod-row--reverse > * { direction: ltr; }
+  .prod-row__visual {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--bra-stone);
+    border: 2px solid var(--bra-ink);
+  }
+  .prod-row__visual img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.4s var(--bra-ease); }
+  .prod-row:hover .prod-row__visual img { transform: scale(1.04); }
+  .prod-row__num {
+    font-family: var(--bra-font);
+    font-weight: 500; font-size: 13px;
+    letter-spacing: 0.10em; text-transform: uppercase;
+    color: var(--bra-ink-2);
+    font-variant-numeric: tabular-nums;
+    margin-bottom: var(--bra-s-2);
+  }
+  .prod-row__name {
+    font-family: var(--bra-font);
+    font-weight: 500;
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  .prod-row__tag {
+    display: inline-block;
+    margin-top: var(--bra-s-2);
+    font-family: var(--bra-font);
+    font-weight: 600; font-size: 11px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--bra-ink-2);
+    border: 2px solid var(--bra-ink);
+    padding: 5px 12px;
+  }
+  .prod-row__body {
+    margin-top: var(--bra-s-3);
+    max-width: 44ch;
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--bra-ink-2);
+  }
+  .prod-row__cta { margin-top: var(--bra-s-4); }
+  /* Placeholder material panels for products without photography yet */
+  .prod-panel { width: 100%; height: 100%; position: relative; }
+  .prod-panel--wuud {
+    background:
+      radial-gradient(ellipse 70% 50% at 28% 22%, #c9a878 0%, transparent 60%),
+      linear-gradient(145deg, #b8966a 0%, #6f5536 55%, #463525 100%);
+  }
+  .prod-panel--sappa {
+    background:
+      radial-gradient(ellipse 70% 50% at 30% 24%, #9fb08a 0%, transparent 60%),
+      linear-gradient(150deg, #8c9a73 0%, #59624a 55%, #353c2d 100%);
+  }
+  .prod-panel__grain {
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(90deg, transparent 0 11px, rgba(0,0,0,0.08) 11px 12px);
+    mix-blend-mode: overlay; opacity: 0.5;
+  }
+  .prod-panel__soon {
+    position: absolute; bottom: var(--bra-s-3); left: var(--bra-s-3);
+    font-family: var(--bra-font); font-weight: 600;
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: rgba(244,242,237,0.85);
+  }
+  @media (max-width: 720px) {
+    .prod-row { grid-template-columns: 1fr; gap: var(--bra-s-3); padding: var(--bra-s-5) 0; }
+    .prod-row--reverse { direction: ltr; }
+  }
+</style>
+</head>
+<body class="bra" data-page="products">
+
+<!-- Page loader -->
+<div class="br-loader" aria-hidden="true">
+  <div class="br-loader__top">
+    <span class="br-loader__top-l">Beyond Rational</span>
+    <span class="br-loader__top-r">Products / 2026</span>
+  </div>
+  <div class="br-loader__middle"><div class="br-loader__counter">00</div></div>
+  <div class="br-loader__bottom">
+    <span class="br-loader__bottom-l">Loading</span>
+    <div class="br-loader__bar"></div>
+  </div>
+</div>
+
+<div class="bra-cursor" aria-hidden="true"></div>
+<div class="bra-scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<nav class="bra-nav">
+  <a href="index.html" class="bra-nav__brand">Beyond Rational</a>
+  <div class="bra-nav__links">
+    <a href="products.html"      class="bra-nav__link" aria-current="page">Products</a>
+    <a href="projects.html"      class="bra-nav__link">Projects</a>
+    <a href="contact.html"       class="bra-nav__link">Contact</a>
+    <a href="design-system.html" class="bra-nav__link">Design</a>
+    <a href="index.html"         class="bra-nav__link">Studio</a>
+  </div>
+</nav>
+
+<div class="bra-nav-spacer"></div>
+
+<!-- ===== Hero ===== -->
+<section class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-5);">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);">Products</p>
+  <h1 class="bra-mega" style="max-width: 14ch;">
+    <span class="bra-reveal-line" data-reveal>The range.</span>
+  </h1>
+  <p class="bra-lede" style="margin-top: var(--bra-s-3); max-width: 50ch;">
+    Three sustainable acoustic materials for modern architecture. Each chosen for performance, surface, and a low footprint — and each with its own page.
+  </p>
+</section>
+
+<!-- ===== Product rows ===== -->
+<section class="bra-container" style="padding-bottom: var(--bra-s-6);">
+
+  <!-- 01 · Wuud -->
+  <a href="product-wuud.html" class="prod-row" style="text-decoration: none; color: inherit;">
+    <div class="prod-row__visual">
+      <div class="prod-panel prod-panel--wuud">
+        <div class="prod-panel__grain"></div>
+        <span class="prod-panel__soon">Visual coming soon</span>
+      </div>
+    </div>
+    <div>
+      <p class="prod-row__num">01 / Product</p>
+      <h2 class="prod-row__name">Wuud</h2>
+      <span class="prod-row__tag">In development</span>
+      <p class="prod-row__body">
+        A new addition to the Beyond Rational range. Full presentation and specifications coming soon.
+      </p>
+      <span class="bra-cta prod-row__cta">View product</span>
+    </div>
+  </a>
+
+  <!-- 02 · Aisti Aalto (live product) -->
+  <a href="product.html" class="prod-row prod-row--reverse" style="text-decoration: none; color: inherit;">
+    <div class="prod-row__visual">
+      <img src="https://beyond-rational.odoo.com/web/image/2915-5474c372/MDLC_Aisti_highres_026.jpg" alt="Aisti Aalto acoustic tile in a daylit interior" loading="lazy">
+    </div>
+    <div>
+      <p class="prod-row__num">02 / Product</p>
+      <h2 class="prod-row__name">Aisti® Aalto</h2>
+      <span class="prod-row__tag">Available 2026</span>
+      <p class="prod-row__body">
+        Foam-formed natural wood fibre. Absorption Class A, two formats, two thicknesses. Fits standard T-grid ceilings or mounts directly with adhesive. Official distributor in Denmark.
+      </p>
+      <span class="bra-cta prod-row__cta">View product</span>
+    </div>
+  </a>
+
+  <!-- 03 · Sappa -->
+  <a href="product-sappa.html" class="prod-row" style="text-decoration: none; color: inherit;">
+    <div class="prod-row__visual">
+      <div class="prod-panel prod-panel--sappa">
+        <div class="prod-panel__grain"></div>
+        <span class="prod-panel__soon">Visual coming soon</span>
+      </div>
+    </div>
+    <div>
+      <p class="prod-row__num">03 / Product</p>
+      <h2 class="prod-row__name">Sappa</h2>
+      <span class="prod-row__tag">In development</span>
+      <p class="prod-row__body">
+        A new addition to the Beyond Rational range. Full presentation and specifications coming soon.
+      </p>
+      <span class="bra-cta prod-row__cta">View product</span>
+    </div>
+  </a>
+
+</section>
+
+<!-- ===== CTA band ===== -->
+<section class="bra-surface-oak">
+  <div class="bra-container bra-section">
+    <div class="split-tight" style="display:grid; grid-template-columns: 5fr 7fr; gap: clamp(40px,5vw,96px); align-items: end;">
+      <h2 class="bra-mega" style="color: var(--bra-on-oak); font-size: clamp(36px,5vw,80px); line-height: 0.9; max-width: 14ch;">
+        <span class="bra-reveal-line" data-reveal>Specify</span><br>
+        <span class="bra-reveal-line" data-reveal>the range.</span>
+      </h2>
+      <div class="bra-stack-wide">
+        <p class="bra-lede">Send the brief and we'll help you choose the right material, format, and mounting for your room.</p>
+        <a href="contact.html" style="text-decoration: none;">
+          <button class="bra-btn-mag" data-magnetic style="background: var(--bra-on-oak); color: var(--bra-ink);">
+            <span>Get in touch</span>
+            <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="bra-footer">
+  <div class="bra-footer__grid">
+    <div class="bra-footer__brand">
+      <div class="bra-footer__brand-line">Beyond Rational</div>
+      <p class="bra-body" style="margin-top: var(--bra-s-3); max-width: 36ch; color: var(--bra-ink-2);">
+        Conscious acoustics. Official distributor of Aisti® in Denmark.
+      </p>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="product-wuud.html" class="bra-cta" style="border: none; padding: 0;">Wuud</a></li>
+        <li><a href="product.html" class="bra-cta" style="border: none; padding: 0;">Aisti® Aalto</a></li>
+        <li><a href="product-sappa.html" class="bra-cta" style="border: none; padding: 0;">Sappa</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="projects.html" class="bra-cta" style="border: none; padding: 0;">Projects</a></li>
+        <li><a href="design-system.html" class="bra-cta" style="border: none; padding: 0;">Design system</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:morten@beyondrational.com" class="bra-cta" style="border: none; padding: 0;">morten@beyondrational.com</a></li>
+        <li><span class="bra-body" style="font-size: 14px;">Landskronagade 41, 2100 Copenhagen</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bra-footer__base">
+    <span class="bra-micro">© 2026 Beyond Rational ApS</span>
+    <span class="bra-micro">B_R Design System · v1.0</span>
+  </div>
+</footer>
+
+<script src="br.js?v=3" defer></script>
+</body>
+</html>
