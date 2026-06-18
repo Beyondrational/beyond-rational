@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Products · Beyond Rational</title>
-<meta name="description" content="The Beyond Rational product range: Wuud, Aisti® Aalto, and Sappa — sustainable acoustic materials for modern architecture.">
+<meta name="description" content="The Beyond Rational product range: Aisti® Aalto, Wuud, Sappa, and Mogu — sustainable acoustic materials for modern architecture.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://beyond-rational.odoo.com">
@@ -76,6 +76,11 @@
       radial-gradient(ellipse 70% 50% at 30% 24%, #9fb08a 0%, transparent 60%),
       linear-gradient(150deg, #8c9a73 0%, #59624a 55%, #353c2d 100%);
   }
+  .prod-panel--mogu {
+    background:
+      radial-gradient(ellipse 70% 50% at 28% 22%, #c8b6a4 0%, transparent 60%),
+      linear-gradient(148deg, #b3a08c 0%, #7a6a59 55%, #4a4038 100%);
+  }
   .prod-panel__grain {
     position: absolute; inset: 0;
     background: repeating-linear-gradient(90deg, transparent 0 11px, rgba(0,0,0,0.08) 11px 12px);
@@ -131,15 +136,31 @@
     <span class="bra-reveal-line" data-reveal>The range.</span>
   </h1>
   <p class="bra-lede" style="margin-top: var(--bra-s-3); max-width: 50ch;">
-    Three sustainable acoustic materials for modern architecture. Each chosen for performance, surface, and a low footprint — and each with its own page.
+    Four sustainable acoustic materials for modern architecture. Each chosen for performance, surface, and a low footprint — and each with its own page.
   </p>
 </section>
 
 <!-- ===== Product rows ===== -->
 <section class="bra-container" style="padding-bottom: var(--bra-s-6);">
 
-  <!-- 01 · Wuud -->
-  <a href="product-wuud.html" class="prod-row" style="text-decoration: none; color: inherit;">
+  <!-- 01 · Aisti Aalto (live product) -->
+  <a href="product.html" class="prod-row" style="text-decoration: none; color: inherit;">
+    <div class="prod-row__visual">
+      <img src="https://beyond-rational.odoo.com/web/image/2915-5474c372/MDLC_Aisti_highres_026.jpg" alt="Aisti Aalto acoustic tile in a daylit interior" loading="lazy">
+    </div>
+    <div>
+      <p class="prod-row__num">01 / Product</p>
+      <h2 class="prod-row__name">Aisti® Aalto</h2>
+      <span class="prod-row__tag">Available 2026</span>
+      <p class="prod-row__body">
+        Foam-formed natural wood fibre. Absorption Class A, two formats, two thicknesses. Fits standard T-grid ceilings or mounts directly with adhesive. Official distributor in Denmark.
+      </p>
+      <span class="bra-cta prod-row__cta">View product</span>
+    </div>
+  </a>
+
+  <!-- 02 · Wuud -->
+  <a href="product-wuud.html" class="prod-row prod-row--reverse" style="text-decoration: none; color: inherit;">
     <div class="prod-row__visual">
       <div class="prod-panel prod-panel--wuud">
         <div class="prod-panel__grain"></div>
@@ -147,27 +168,11 @@
       </div>
     </div>
     <div>
-      <p class="prod-row__num">01 / Product</p>
+      <p class="prod-row__num">02 / Product</p>
       <h2 class="prod-row__name">Wuud</h2>
       <span class="prod-row__tag">In development</span>
       <p class="prod-row__body">
         A new addition to the Beyond Rational range. Full presentation and specifications coming soon.
-      </p>
-      <span class="bra-cta prod-row__cta">View product</span>
-    </div>
-  </a>
-
-  <!-- 02 · Aisti Aalto (live product) -->
-  <a href="product.html" class="prod-row prod-row--reverse" style="text-decoration: none; color: inherit;">
-    <div class="prod-row__visual">
-      <img src="https://beyond-rational.odoo.com/web/image/2915-5474c372/MDLC_Aisti_highres_026.jpg" alt="Aisti Aalto acoustic tile in a daylit interior" loading="lazy">
-    </div>
-    <div>
-      <p class="prod-row__num">02 / Product</p>
-      <h2 class="prod-row__name">Aisti® Aalto</h2>
-      <span class="prod-row__tag">Available 2026</span>
-      <p class="prod-row__body">
-        Foam-formed natural wood fibre. Absorption Class A, two formats, two thicknesses. Fits standard T-grid ceilings or mounts directly with adhesive. Official distributor in Denmark.
       </p>
       <span class="bra-cta prod-row__cta">View product</span>
     </div>
@@ -184,6 +189,25 @@
     <div>
       <p class="prod-row__num">03 / Product</p>
       <h2 class="prod-row__name">Sappa</h2>
+      <span class="prod-row__tag">In development</span>
+      <p class="prod-row__body">
+        A new addition to the Beyond Rational range. Full presentation and specifications coming soon.
+      </p>
+      <span class="bra-cta prod-row__cta">View product</span>
+    </div>
+  </a>
+
+  <!-- 04 · Mogu -->
+  <a href="product-mogu.html" class="prod-row prod-row--reverse" style="text-decoration: none; color: inherit;">
+    <div class="prod-row__visual">
+      <div class="prod-panel prod-panel--mogu">
+        <div class="prod-panel__grain"></div>
+        <span class="prod-panel__soon">Visual coming soon</span>
+      </div>
+    </div>
+    <div>
+      <p class="prod-row__num">04 / Product</p>
+      <h2 class="prod-row__name">Mogu</h2>
       <span class="prod-row__tag">In development</span>
       <p class="prod-row__body">
         A new addition to the Beyond Rational range. Full presentation and specifications coming soon.
@@ -232,6 +256,7 @@
         <li><a href="product-wuud.html" class="bra-cta" style="border: none; padding: 0;">Wuud</a></li>
         <li><a href="product.html" class="bra-cta" style="border: none; padding: 0;">Aisti® Aalto</a></li>
         <li><a href="product-sappa.html" class="bra-cta" style="border: none; padding: 0;">Sappa</a></li>
+        <li><a href="product-mogu.html" class="bra-cta" style="border: none; padding: 0;">Mogu</a></li>
       </ul>
     </div>
     <div>
