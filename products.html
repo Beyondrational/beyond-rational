@@ -67,9 +67,14 @@
   /* Placeholder material panels for products without photography yet */
   .prod-panel { width: 100%; height: 100%; position: relative; }
   .prod-panel--wuud {
-    background:
-      radial-gradient(ellipse 70% 50% at 28% 22%, #c9a878 0%, transparent 60%),
-      linear-gradient(145deg, #b8966a 0%, #6f5536 55%, #463525 100%);
+    background: radial-gradient(ellipse 80% 90% at 50% 30%, #1f1f1f 0%, #0c0c0c 55%, #050505 100%);
+  }
+  .prod-panel--wuud .prod-panel__grain {
+    background-image:
+      repeating-linear-gradient(45deg,  rgba(255,255,255,0.05) 0 2px, transparent 2px 15px),
+      repeating-linear-gradient(-45deg, rgba(0,0,0,0.55) 0 2px, transparent 2px 15px),
+      repeating-linear-gradient(90deg,  rgba(0,0,0,0.6) 0 1px, transparent 1px 30px);
+    mix-blend-mode: normal; opacity: 0.7;
   }
   .prod-panel--sappa {
     background:
@@ -172,7 +177,7 @@
       <h2 class="prod-row__name">Wuud</h2>
       <span class="prod-row__tag">In development</span>
       <p class="prod-row__body">
-        A new addition to the Beyond Rational range. Full presentation and specifications coming soon.
+        Embossed interior cladding panels — deep relief worked into the surface to catch light and calm a room. Formats and specifications coming soon.
       </p>
       <span class="bra-cta prod-row__cta">View product</span>
     </div>
