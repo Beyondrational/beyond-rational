@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Wuud embossed graphite finish sample">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0%" stop-color="#2a2a2a"/>
+      <stop offset="55%" stop-color="#131313"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </linearGradient>
+    <pattern id="knurl" width="26" height="26" patternUnits="userSpaceOnUse">
+      <g stroke-linecap="square" fill="none">
+        <path d="M0 26 L26 0 M0 0 L26 26" stroke="#000000" stroke-opacity="0.6" stroke-width="2" transform="translate(1,1)"/>
+        <path d="M0 26 L26 0 M0 0 L26 26" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1.4"/>
+      </g>
+      <line x1="0" y1="0" x2="0" y2="26" stroke="#000000" stroke-opacity="0.55" stroke-width="1.4"/>
+    </pattern>
+    <radialGradient id="vig" cx="50%" cy="28%" r="85%">
+      <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.28"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#base)"/>
+  <rect width="800" height="600" fill="url(#knurl)" opacity="0.7"/>
+  <rect width="800" height="600" fill="url(#vig)"/>
+</svg>

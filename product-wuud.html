@@ -94,9 +94,37 @@
   @media (max-width: 720px) {
     .wuud-points { grid-template-columns: 1fr; gap: var(--bra-s-4); }
   }
+
+  /* ===== Gallery grid (CMS-managed, /admin) ===== */
+  .wuud-gallery {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: clamp(10px, 1.2vw, 20px); margin-top: var(--bra-s-4);
+  }
+  .wuud-cell {
+    position: relative; margin: 0; overflow: hidden; aspect-ratio: 4 / 3;
+    border: 2px solid var(--bra-ink); background: var(--bra-stone);
+  }
+  .wuud-cell__img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .wuud-cell:hover .wuud-cell__img { transform: scale(1.04); }
+  .wuud-cell__cap {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+    padding: 14px 16px; color: #f4f2ed;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    opacity: 0; transform: translateY(8px); transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  .wuud-cell:hover .wuud-cell__cap { opacity: 1; transform: none; }
+  .wuud-cell__title { font-family: var(--bra-font); font-weight: 600; font-size: 14px; letter-spacing: 0.01em; }
+  .wuud-cell__meta { font-family: var(--bra-font); font-weight: 500; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(244,242,237,0.7); }
+  .wuud-gallery:empty { display: none; }
+  @media (max-width: 900px) { .wuud-gallery { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .wuud-gallery { grid-template-columns: 1fr; } }
 </style>
 </head>
-<body class="bra" data-page="product">
+<body class="bra" data-page="wuud">
 
 <!-- Page loader -->
 <div class="br-loader" aria-hidden="true">
@@ -200,6 +228,31 @@
       <span class="wuud-chip">Aspen</span>
       <span class="wuud-chip">Pine</span>
     </div>
+  </div>
+</section>
+
+<!-- ===== Gallery (CMS-managed via /admin) ===== -->
+<section id="gallery" class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Gallery</p>
+  <div class="bra-grid-2" style="align-items: end; margin-bottom: var(--bra-s-2);">
+    <h2 class="bra-h1">
+      <span class="bra-reveal-line" data-reveal>Wuud,</span><br>
+      <span class="bra-reveal-line" data-reveal>in place.</span>
+    </h2>
+    <p class="bra-body" style="color: var(--bra-ink-2); max-width: 40ch;">
+      Finishes, patterns and panels in situ. Images are managed in the CMS — add or replace them at <span style="white-space:nowrap;">/admin</span>.
+    </p>
+  </div>
+  <div class="wuud-gallery" data-content-each="gallery">
+    <template>
+      <figure class="wuud-cell">
+        <img class="wuud-cell__img" data-each="image" data-each-attr="src" alt="Wuud cladding" loading="lazy">
+        <figcaption class="wuud-cell__cap">
+          <span class="wuud-cell__title" data-each="title"></span>
+          <span class="wuud-cell__meta" data-each="meta"></span>
+        </figcaption>
+      </figure>
+    </template>
   </div>
 </section>
 
@@ -342,6 +395,7 @@
 })();
 </script>
 
+<script src="br-content.js?v=3" defer></script>
 <script src="br.js?v=3" defer></script>
 </body>
 </html>

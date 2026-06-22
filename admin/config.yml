@@ -159,3 +159,22 @@ collections:
               - { label: "Title",  name: "title", widget: "string" }
               - { label: "Meta",   name: "meta",  widget: "string" }
               - { label: "Year",   name: "year",  widget: "string" }
+
+  # =============== WUUD ===============
+  - name: "wuud"
+    label: "Wuud"
+    files:
+      - file: "content/wuud.json"
+        name: "wuud"
+        label: "Wuud page"
+        fields:
+
+          - label: "Image gallery"
+            name: "gallery"
+            label_singular: "Image"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Meta",  name: "meta",  widget: "string", required: false }

@@ -1,0 +1,19 @@
+{
+  "gallery": [
+    {
+      "image": "assets/wuud-sample-graphite.svg",
+      "title": "Painted graphite",
+      "meta": "Finish sample"
+    },
+    {
+      "image": "assets/wuud-sample-birch.svg",
+      "title": "Natural birch",
+      "meta": "Finish sample"
+    },
+    {
+      "image": "assets/wuud-sample-oak.svg",
+      "title": "Translucent oak",
+      "meta": "Finish sample"
+    }
+  ]
+}
