@@ -21,14 +21,21 @@
     transform-style: preserve-3d;
     will-change: transform;
   }
-  /* Embossed diamond knurl + vertical seams, tinted to the active finish */
+  /* Embossed capsule-dash field (W01 pattern) + plank seams.
+     Dash relief is a tiled SVG that reads over any finish; the plank
+     seams are tinted to the active finish via CSS vars. */
   .prod-hero-panel__emboss {
     position: absolute; inset: 0;
     background-image:
-      repeating-linear-gradient(45deg,  var(--w-el) 0 2px, transparent 2px 15px),
-      repeating-linear-gradient(-45deg, var(--w-ed) 0 2px, transparent 2px 15px),
-      repeating-linear-gradient(90deg,  var(--w-ed) 0 1px, transparent 1px 30px);
-    opacity: 0.7; transition: background-image 0.6s ease;
+      repeating-linear-gradient(90deg,
+        transparent 0 150px,
+        var(--w-ed) 150px 151px,
+        var(--w-el) 151px 152px,
+        transparent 152px 152px),
+      url("assets/wuud-emboss.svg");
+    background-repeat: repeat, repeat;
+    background-size: auto, 190px 68px;
+    opacity: 0.85;
   }
   /* Cursor-driven sheen */
   .prod-hero-panel__sheen {
