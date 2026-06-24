@@ -6,12 +6,12 @@
     "subtitle": "Demo installations with the Aisti® tile, delivered from the pilot plant in Jyväskylä, Finland, and installed by professional teams."
   },
   "gallery": [
-    { "image": "https://beyond-rational.odoo.com/web/image/2915-5474c372/MDLC_Aisti_highres_026.jpg", "title": "Aisti® tile, interior", "meta": "Product photography" },
-    { "image": "https://beyond-rational.odoo.com/web/image/2929-8454cef9/MDLC_Aisti_highres_003.jpg", "title": "Tile, raked light", "meta": "Material study" },
-    { "image": "https://beyond-rational.odoo.com/web/image/2928-2ffa9ea8/MDLC_Aisti_highres_035.jpg", "title": "Surface detail", "meta": "Material study" },
-    { "image": "https://beyond-rational.odoo.com/web/image/2924-3218b629/MDLC_Aisti_highres_042.jpg", "title": "Wood fibre, compressed", "meta": "Material study" },
-    { "image": "https://beyond-rational.odoo.com/web/image/2925-9b9424c9/MDLC_Aisti_highres_025.jpg", "title": "Behind the press", "meta": "Production" },
-    { "image": "https://beyond-rational.odoo.com/web/image/2926-f5a97221/MDLC_Aisti_highres_008.jpg", "title": "Ceiling, calm", "meta": "Product photography" }
+    { "image": "assets/aisti-026.jpg", "title": "Aisti® tile, interior", "meta": "Product photography" },
+    { "image": "assets/aisti-003.jpg", "title": "Tile, raked light", "meta": "Material study" },
+    { "image": "assets/aisti-035.jpg", "title": "Surface detail", "meta": "Material study" },
+    { "image": "assets/aisti-042.jpg", "title": "Wood fibre, compressed", "meta": "Material study" },
+    { "image": "assets/aisti-025.jpg", "title": "Behind the press", "meta": "Production" },
+    { "image": "assets/aisti-008.jpg", "title": "Ceiling, calm", "meta": "Product photography" }
   ],
   "list": [
     { "num": "01 /", "title": "Ångtvätten 22", "meta": "Stockholm · Office well-being · 600×600, 20 mm, dark blue", "year": "SE" },
