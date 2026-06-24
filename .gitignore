@@ -10,6 +10,35 @@ view_*.xml
 .DS_Store
 *.swp
 
-# Secrets
-sales_agent/.env
+# Local tooling / agent config (never part of the website)
+.claude/
+
+# --- Non-website working files (odoo, email, data, build scripts) ---
+# Keep this repo strictly the static site. These live locally only.
+*.py
+sales_agent/
+upload_app/
+tile_project/
+
+# Data dumps
+*.xlsx
+*.csv
+
+# One-off / preview / email HTML (not part of the site)
+*-preview.html
+canva_*.html
+mailing*_body.html
+aligned_static_body_html.html
+design-solutions.html
+
+# Stray images at repo root (real site images live in assets/)
+/IMG_*.png
+/page*.png
+
+# Secrets — ignorér alle .env-filer, men behold .env.example
 .env
+.env.*
+sales_agent/.env
+sales_agent/.env.*
+!.env.example
+!sales_agent/.env.example
