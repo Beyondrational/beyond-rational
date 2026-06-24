@@ -4,10 +4,9 @@ backend:
   name: github
   repo: Beyondrational/beyond-rational
   branch: main
-  # OAuth proxy that completes "Login with GitHub" (required on GitHub Pages).
-  # Deploy the Cloudflare Worker "sveltia-cms-auth" and paste its URL here.
+  # OAuth proxy (Cloudflare Worker) that completes "Login with GitHub".
   # See DECAP-SETUP.md for the full walkthrough.
-  base_url: https://REPLACE-WITH-YOUR-WORKER.workers.dev
+  base_url: https://br-cms-auth.rasmus-177.workers.dev
 
 media_folder: "assets"
 public_folder: "assets"
