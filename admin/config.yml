@@ -1,17 +1,18 @@
-# Sveltia CMS configuration
+# Decap CMS configuration
 
 backend:
   name: github
   repo: Beyondrational/beyond-rational
   branch: main
-  auth_type: pkce
-  app_id: Ov23ctAbTeXW6M2AFbnU
+  # OAuth proxy that completes GitHub login (required on GitHub Pages — no Netlify).
+  # Deploy the free Cloudflare Worker "sveltia-cms-auth" and paste its URL below.
+  base_url: https://REPLACE-WITH-YOUR-WORKER.workers.dev
 
 media_folder: "assets"
 public_folder: "assets"
 
-site_url: https://beyondrational.github.io/beyond-rational
-display_url: https://beyondrational.github.io/beyond-rational
+site_url: https://beyondrational.com
+display_url: https://beyondrational.com
 
 collections:
 
