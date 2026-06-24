@@ -1,11 +1,13 @@
-# Sveltia CMS configuration
+# Decap CMS configuration
 
 backend:
   name: github
   repo: Beyondrational/beyond-rational
   branch: main
-  # No OAuth backend needed: sign in via the "Sign In with Token" (PAT) button.
-  # (Sveltia does NOT support PKCE for GitHub, so no auth_type/app_id here.)
+  # OAuth proxy that completes "Login with GitHub" (required on GitHub Pages).
+  # Deploy the Cloudflare Worker "sveltia-cms-auth" and paste its URL here.
+  # See DECAP-SETUP.md for the full walkthrough.
+  base_url: https://REPLACE-WITH-YOUR-WORKER.workers.dev
 
 media_folder: "assets"
 public_folder: "assets"
