@@ -3,7 +3,7 @@
     "eyebrow_left": "Beyond Rational · Copenhagen",
     "eyebrow_right": "Conscious acoustics",
     "title_l1": "Conscious acoustics",
-    "title_l2_em": "for modern architecture.",
+    "title_l2_em": "for modern architecture. Pik",
     "subtitle": "Beyond Rational is a Copenhagen-based company supplying sustainable, design-driven acoustic materials. We combine Scandinavian aesthetics with high-performance functionality — and partner with architects, designers, and developers who care about quality, innovation, and impact.",
     "cta_primary": "See our work",
     "cta_secondary": "Visit the studio"
@@ -11,9 +11,24 @@
   "manifesto": {
     "section_label": "What we believe",
     "items": [
-      { "num": "01", "text_pre": "Sustainable solutions should be ", "text_em": "the obvious choice.", "text_post": "" },
-      { "num": "02", "text_pre": "Form and function aren't ", "text_em": "trade-offs.", "text_post": "" },
-      { "num": "03", "text_pre": "The best acoustic surface is the one ", "text_em": "you don't notice.", "text_post": "" }
+      {
+        "num": "01",
+        "text_pre": "Sustainable solutions should be ",
+        "text_em": "the obvious choice.",
+        "text_post": ""
+      },
+      {
+        "num": "02",
+        "text_pre": "Form and function aren't ",
+        "text_em": "trade-offs.",
+        "text_post": ""
+      },
+      {
+        "num": "03",
+        "text_pre": "The best acoustic surface is the one ",
+        "text_em": "you don't notice.",
+        "text_post": ""
+      }
     ]
   },
   "what_we_make": {
@@ -29,16 +44,16 @@
     "cta": "Read more about the tile"
   },
   "studio": {
-    "section_label": "Who we are",
-    "title_l1": "Copenhagen office.",
-    "title_l2_em": "Finnish production.",
-    "stat_founded": "CPH",
-    "stat_people": "2",
-    "stat_studios": "2026",
-    "stat_founded_label": "Based in Copenhagen",
-    "stat_people_label": "Partners",
+    "body": "Beyond Rational is based in Copenhagen. Our partner Aisti produces in Jyväskylä, Finland. We specify and supply across Denmark.",
     "stat_studios_label": "Full capacity, August",
-    "body": "Beyond Rational is based in Copenhagen. Our partner Aisti produces in Jyväskylä, Finland. We specify and supply across Denmark."
+    "stat_founded_label": "Based in Copenhagen",
+    "title_l1": "Copenhagen office.",
+    "stat_people_label": "Partners",
+    "stat_studios": "2026",
+    "stat_founded": "CPH",
+    "section_label": "Who we are",
+    "title_l2_em": "Finnish production.",
+    "stat_people": "2"
   },
   "cta": {
     "section_label": "Get in touch",
