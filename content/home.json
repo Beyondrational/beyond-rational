@@ -12,15 +12,15 @@
     "section_label": "What we believe",
     "items": [
       {
-        "num": "01",
-        "text_pre": "Sustainable solutions should be ",
-        "text_em": "the obvious choice.",
-        "text_post": ""
-      },
-      {
         "num": "02",
         "text_pre": "Form and function aren't ",
         "text_em": "trade-offs.",
+        "text_post": ""
+      },
+      {
+        "num": "01",
+        "text_pre": "Sustainable solutions should be ",
+        "text_em": "the obvious choice.",
         "text_post": ""
       },
       {
