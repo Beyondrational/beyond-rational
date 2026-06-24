@@ -3,7 +3,7 @@
     "eyebrow_left": "Beyond Rational · Copenhagen",
     "eyebrow_right": "Conscious acoustics",
     "title_l1": "Conscious acoustics",
-    "title_l2_em": "for modern architecture. Pik",
+    "title_l2_em": "for modern architecture.",
     "subtitle": "Beyond Rational is a Copenhagen-based company supplying sustainable, design-driven acoustic materials. We combine Scandinavian aesthetics with high-performance functionality — and partner with architects, designers, and developers who care about quality, innovation, and impact.",
     "cta_primary": "See our work",
     "cta_secondary": "Visit the studio"
@@ -12,15 +12,15 @@
     "section_label": "What we believe",
     "items": [
       {
-        "num": "02",
-        "text_pre": "Form and function aren't ",
-        "text_em": "trade-offs.",
-        "text_post": ""
-      },
-      {
         "num": "01",
         "text_pre": "Sustainable solutions should be ",
         "text_em": "the obvious choice.",
+        "text_post": ""
+      },
+      {
+        "num": "02",
+        "text_pre": "Form and function aren't ",
+        "text_em": "trade-offs.",
         "text_post": ""
       },
       {
