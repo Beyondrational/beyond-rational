@@ -6,7 +6,13 @@
     "title_l2_em": "for modern architecture.",
     "subtitle": "Beyond Rational is a Copenhagen-based company supplying sustainable, design-driven acoustic materials. We combine Scandinavian aesthetics with high-performance functionality — and partner with architects, designers, and developers who care about quality, innovation, and impact.",
     "cta_primary": "See our work",
-    "cta_secondary": "Visit the studio"
+    "cta_secondary": "Visit the studio",
+    "image": "assets/aisti-012.jpg"
+  },
+  "feature": {
+    "image": "assets/aisti-feeling-angtvatten.webp",
+    "caption_left": "In place",
+    "caption_right": "Aisti® Acoustic Tile · Absorption Class A"
   },
   "manifesto": {
     "section_label": "What we believe",
@@ -33,7 +39,8 @@
   },
   "what_we_make": {
     "section_label": "What we supply",
-    "body": "We are the official distributor of Aisti® in Denmark. The Aisti® Acoustic Tile is a bio-based absorber made from natural wood fibre — Absorption Class A, no synthetic binders, no plastics, no irritating fibres."
+    "body": "We are the official distributor of Aisti® in Denmark. The Aisti® Acoustic Tile is a bio-based absorber made from natural wood fibre — Absorption Class A, no synthetic binders, no plastics, no irritating fibres.",
+    "image": "assets/aisti-tile-001.webp"
   },
   "process": {
     "section_label": "The technology",
@@ -44,16 +51,37 @@
     "cta": "Read more about the tile"
   },
   "studio": {
-    "body": "Beyond Rational is based in Copenhagen. Our partner Aisti produces in Jyväskylä, Finland. We specify and supply across Denmark.",
-    "stat_studios_label": "Full capacity, August",
-    "stat_founded_label": "Based in Copenhagen",
-    "title_l1": "Copenhagen office.",
-    "stat_people_label": "Partners",
-    "stat_studios": "2026",
-    "stat_founded": "CPH",
     "section_label": "Who we are",
+    "title_l1": "Copenhagen office.",
     "title_l2_em": "Finnish production.",
-    "stat_people": "2"
+    "stat_founded": "CPH",
+    "stat_people": "2",
+    "stat_studios": "2026",
+    "stat_founded_label": "Based in Copenhagen",
+    "stat_people_label": "Partners",
+    "stat_studios_label": "Full capacity, August",
+    "body": "Beyond Rational is based in Copenhagen. Our partner Aisti produces in Jyväskylä, Finland. We specify and supply across Denmark.",
+    "image": "assets/br-office.webp"
+  },
+  "cases": {
+    "section_label": "Cases",
+    "link_label": "All cases",
+    "items": [
+      {
+        "image": "assets/aisti-026.jpg",
+        "eyebrow": "Case · Stockholm",
+        "title": "Ångtvätten 22",
+        "meta1": "Office well-being · 600×600 mm, 20 mm, dark blue",
+        "meta2": "Tiles installed in standard T-grid, absorbing sound reflections and reducing echo in the office space."
+      },
+      {
+        "image": "assets/aisti-008.jpg",
+        "eyebrow": "Case · Helsinki",
+        "title": "Bulevardi 2",
+        "meta1": "Echo reduction · 600×1200 mm, 40 mm, white",
+        "meta2": "Reverberation time improved roughly 29% across octave bands after ceiling installation."
+      }
+    ]
   },
   "cta": {
     "section_label": "Get in touch",

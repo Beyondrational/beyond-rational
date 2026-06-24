@@ -36,6 +36,15 @@ collections:
               - { label: "Subtitle",              name: "subtitle",      widget: "text"   }
               - { label: "Primary CTA",           name: "cta_primary",   widget: "string" }
               - { label: "Secondary CTA",         name: "cta_secondary", widget: "string" }
+              - { label: "Hero image",            name: "image",         widget: "image"  }
+
+          - label: "Feature band"
+            name: "feature"
+            widget: "object"
+            fields:
+              - { label: "Image",         name: "image",         widget: "image"  }
+              - { label: "Caption left",  name: "caption_left",  widget: "string" }
+              - { label: "Caption right", name: "caption_right", widget: "string" }
 
           - label: "Manifesto"
             name: "manifesto"
@@ -57,6 +66,7 @@ collections:
             fields:
               - { label: "Section label", name: "section_label", widget: "string" }
               - { label: "Body",          name: "body",          widget: "text"   }
+              - { label: "Image",         name: "image",         widget: "image"  }
 
           - label: "Process"
             name: "process"
@@ -79,6 +89,23 @@ collections:
               - { label: "People count",      name: "stat_people",   widget: "string" }
               - { label: "Locations",         name: "stat_studios",  widget: "string" }
               - { label: "Body",              name: "body",          widget: "text"   }
+              - { label: "Image",             name: "image",         widget: "image"  }
+
+          - label: "Cases"
+            name: "cases"
+            widget: "object"
+            fields:
+              - { label: "Section label", name: "section_label", widget: "string" }
+              - { label: "Link label",    name: "link_label",    widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Image",   name: "image",   widget: "image"  }
+                  - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+                  - { label: "Title",   name: "title",   widget: "string" }
+                  - { label: "Meta 1",  name: "meta1",   widget: "string" }
+                  - { label: "Meta 2",  name: "meta2",   widget: "text"   }
 
           - label: "Closing CTA"
             name: "cta"
