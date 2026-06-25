@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "eyebrow": "Products",
+    "title": "The range.",
+    "lede": "Four sustainable acoustic materials for modern architecture. Each chosen for performance, surface, and a low footprint — and each with its own page."
+  },
+  "items": [
+    {
+      "name": "Aisti® Aalto",
+      "tag": "Available 2026",
+      "body": "Foam-formed natural wood fibre. Absorption Class A, two formats, two thicknesses. Fits standard T-grid ceilings or mounts directly with adhesive. Official distributor in Denmark.",
+      "image": "assets/aisti-026.jpg"
+    },
+    {
+      "name": "Wuud",
+      "tag": "In development",
+      "body": "Embossed wooden cladding for interior and exterior — real birch, alder, aspen and pine, modified to hold deep relief. Finnish-developed; finishes and patterns on request."
+    },
+    {
+      "name": "Sappa",
+      "tag": "In development",
+      "body": "A new addition to the Beyond Rational range. Full presentation and specifications coming soon."
+    },
+    {
+      "name": "Mogu",
+      "tag": "In development",
+      "body": "A new addition to the Beyond Rational range. Full presentation and specifications coming soon."
+    }
+  ],
+  "cta": {
+    "title_l1": "Specify",
+    "title_l2": "the range.",
+    "lede": "Send the brief and we'll help you choose the right material, format, and mounting for your room."
+  }
+}

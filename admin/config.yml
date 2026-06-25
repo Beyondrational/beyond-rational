@@ -256,3 +256,38 @@ collections:
               - { label: "Title line 1", name: "title_l1", widget: "string" }
               - { label: "Title line 2", name: "title_l2", widget: "string" }
               - { label: "Lede",         name: "lede",     widget: "text"   }
+
+  # =============== PRODUCTS (overview) ===============
+  - name: "products"
+    label: "Products — overview"
+    files:
+      - file: "content/products.json"
+        name: "products"
+        label: "Products overview page"
+        fields:
+
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title",   name: "title",   widget: "string" }
+              - { label: "Lede",    name: "lede",    widget: "text"   }
+
+          - label: "Product rows"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Tag",  name: "tag",  widget: "string" }
+              - { label: "Body", name: "body", widget: "text"   }
+              - { label: "Image (optional)", name: "image", widget: "image", required: false }
+
+          - label: "Closing CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Lede",         name: "lede",     widget: "text"   }
