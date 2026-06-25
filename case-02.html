@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="br.css">
 </head>
-<body class="bra">
+<body class="bra" data-page="case-02">
 
 <div class="br-loader" aria-hidden="true">
   <div class="br-loader__top">
@@ -43,12 +43,12 @@
 
 <!-- ===== Hero ===== -->
 <section class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-4);">
-  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);">Case 02 · Helsinki · 2025</p>
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);" data-content="hero.eyebrow">Case 02 · Helsinki · 2025</p>
   <h1 class="bra-mega">
-    <span class="bra-reveal-line" data-reveal>Bulevardi</span><br>
-    <span class="bra-reveal-line" data-reveal>2.</span>
+    <span class="bra-reveal-line" data-reveal data-content="hero.title_l1">Bulevardi</span><br>
+    <span class="bra-reveal-line" data-reveal data-content="hero.title_l2">2.</span>
   </h1>
-  <p class="bra-lede" style="margin-top: var(--bra-s-3); max-width: 52ch;">
+  <p class="bra-lede" style="margin-top: var(--bra-s-3); max-width: 52ch;" data-content="hero.lede">
     A commercial office in the heart of Helsinki. High ceilings, hard surfaces, and a reverberation problem that made the space feel louder than it was.
   </p>
 </section>
@@ -56,7 +56,7 @@
 <!-- ===== Hero image ===== -->
 <div class="bra-container" style="padding-bottom: var(--bra-s-5);">
   <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden;">
-    <img src="assets/br-office.webp"
+    <img src="assets/br-office.webp" data-content="hero.image" data-content-attr="src"
          alt="Office at Bulevardi 2, Helsinki with Aisti tiles installed"
          style="width: 100%; height: 100%; object-fit: cover;"
          loading="eager">
@@ -68,20 +68,20 @@
   <div class="bra-container bra-section">
     <div class="bra-grid-2">
       <div>
-        <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">The brief</p>
+        <p class="bra-caption" style="margin-bottom: var(--bra-s-3);" data-content="brief.eyebrow">The brief</p>
         <h2 class="bra-h1">
-          <span class="bra-reveal-line" data-reveal>Reverberation</span><br>
-          <span class="bra-reveal-line" data-reveal>tamed.</span>
+          <span class="bra-reveal-line" data-reveal data-content="brief.title_l1">Reverberation</span><br>
+          <span class="bra-reveal-line" data-reveal data-content="brief.title_l2">tamed.</span>
         </h2>
       </div>
       <div class="bra-stack">
-        <p class="bra-body">
+        <p class="bra-body" data-content="brief.body_p1">
           The space had a measured reverberation time (RT60) above 1.2 seconds — typical for an untreated office with high ceilings and exposed concrete. Conversations blurred. Meetings felt tiring.
         </p>
-        <p class="bra-body">
+        <p class="bra-body" data-content="brief.body_p2">
           The challenge was treating the ceiling without drop-in suspended panels or visible absorption baffles. The brief called for a flush, neutral ceiling surface that could be specified directly from an architectural drawing.
         </p>
-        <p class="bra-body">
+        <p class="bra-body" data-content="brief.body_p3">
           Aisti® at 40 mm, mounted with a 200 mm batten to create an air gap, was the specification. The wider tile format — 600×1200 mm — reduced the number of visible joints and kept the ceiling plane clean.
         </p>
       </div>
@@ -114,24 +114,24 @@
 <section class="bra-container" style="padding-bottom: var(--bra-s-5);">
   <div class="bra-gallery bra-gallery--img bra-stagger" data-stagger>
     <div class="bra-gallery-cell bra-gallery-img bra-cell-a bra-stagger-item">
-      <img class="bra-gallery-img__img" src="assets/br-office.webp" alt="Office at Bulevardi 2 with Aisti tiles in ceiling" loading="lazy">
+      <img class="bra-gallery-img__img" src="assets/br-office.webp" data-content="gallery.0.image" data-content-attr="src" alt="Office at Bulevardi 2 with Aisti tiles in ceiling" loading="lazy">
       <div class="bra-gallery-img__overlay">
-        <div class="bra-gallery-img__title">Bulevardi 2</div>
-        <div class="bra-gallery-img__meta">In place</div>
+        <div class="bra-gallery-img__title" data-content="gallery.0.title">Bulevardi 2</div>
+        <div class="bra-gallery-img__meta" data-content="gallery.0.meta">In place</div>
       </div>
     </div>
     <div class="bra-gallery-cell bra-gallery-img bra-cell-b bra-stagger-item">
-      <img class="bra-gallery-img__img" src="assets/br-office-2.webp" alt="Office detail, Bulevardi 2" loading="lazy">
+      <img class="bra-gallery-img__img" src="assets/br-office-2.webp" data-content="gallery.1.image" data-content-attr="src" alt="Office detail, Bulevardi 2" loading="lazy">
       <div class="bra-gallery-img__overlay">
-        <div class="bra-gallery-img__title">The space</div>
-        <div class="bra-gallery-img__meta">Helsinki city centre</div>
+        <div class="bra-gallery-img__title" data-content="gallery.1.title">The space</div>
+        <div class="bra-gallery-img__meta" data-content="gallery.1.meta">Helsinki city centre</div>
       </div>
     </div>
     <div class="bra-gallery-cell bra-gallery-img bra-cell-c bra-stagger-item">
-      <img class="bra-gallery-img__img" src="assets/aisti-render-2.png" alt="Aisti tiles ceiling installation" loading="lazy">
+      <img class="bra-gallery-img__img" src="assets/aisti-render-2.png" data-content="gallery.2.image" data-content-attr="src" alt="Aisti tiles ceiling installation" loading="lazy">
       <div class="bra-gallery-img__overlay">
-        <div class="bra-gallery-img__title">Ceiling detail</div>
-        <div class="bra-gallery-img__meta">White, 600×1200</div>
+        <div class="bra-gallery-img__title" data-content="gallery.2.title">Ceiling detail</div>
+        <div class="bra-gallery-img__meta" data-content="gallery.2.meta">White, 600×1200</div>
       </div>
     </div>
   </div>
@@ -142,10 +142,10 @@
   <div class="bra-container bra-section">
     <div class="bra-grid-2">
       <div>
-        <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">The result</p>
+        <p class="bra-caption" style="margin-bottom: var(--bra-s-3);" data-content="results.eyebrow">The result</p>
         <h2 class="bra-h1">
-          <span class="bra-reveal-line" data-reveal>−29 %</span><br>
-          <span class="bra-reveal-line" data-reveal>RT60.</span>
+          <span class="bra-reveal-line" data-reveal data-content="results.title_l1">−29 %</span><br>
+          <span class="bra-reveal-line" data-reveal data-content="results.title_l2">RT60.</span>
         </h2>
       </div>
       <div>
@@ -159,7 +159,7 @@
           <div class="bra-spec-row"><div class="bra-spec-key">Absorption class</div><div class="bra-spec-val">Class A</div></div>
           <div class="bra-spec-row"><div class="bra-spec-key">Test standard</div><div class="bra-spec-val">EN ISO 354</div></div>
         </div>
-        <p class="bra-body" style="margin-top: var(--bra-s-3); color: var(--bra-ink-2);">
+        <p class="bra-body" style="margin-top: var(--bra-s-3); color: var(--bra-ink-2);" data-content="results.note">
           Reverberation time measured in-situ pre and post installation. Absorption coefficients from EN ISO 354 reverberation room test. Configuration: 40 mm / 200 mm air gap.
         </p>
       </div>
@@ -198,11 +198,11 @@
   <div class="bra-container bra-section">
     <div class="bra-grid-2" style="align-items: end;">
       <h2 class="bra-mega" style="line-height: 0.86;">
-        <span class="bra-reveal-line" data-reveal>Specify</span><br>
-        <span class="bra-reveal-line" data-reveal>your project.</span>
+        <span class="bra-reveal-line" data-reveal data-content="cta.title_l1">Specify</span><br>
+        <span class="bra-reveal-line" data-reveal data-content="cta.title_l2">your project.</span>
       </h2>
       <div class="bra-stack-wide">
-        <p class="bra-lede">
+        <p class="bra-lede" data-content="cta.lede">
           Send the brief. We'll help you select format, thickness, and mounting for your room — and get you samples ahead of full production in August 2026.
         </p>
         <a href="contact.html" style="text-decoration: none; align-self: flex-start; display: inline-block;">
@@ -256,5 +256,6 @@
 </footer>
 
 <script src="br.js" defer></script>
+<script src="br-content.js" defer></script>
 </body>
 </html>

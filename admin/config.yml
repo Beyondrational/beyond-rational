@@ -291,3 +291,105 @@ collections:
               - { label: "Title line 1", name: "title_l1", widget: "string" }
               - { label: "Title line 2", name: "title_l2", widget: "string" }
               - { label: "Lede",         name: "lede",     widget: "text"   }
+
+  # =============== CASE 01 — Ångtvätten 22 ===============
+  - name: "case-01"
+    label: "Case 01 — Ångtvätten"
+    files:
+      - file: "content/case-01.json"
+        name: "case-01"
+        label: "Case 01 page"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Lede",         name: "lede",     widget: "text"   }
+              - { label: "Hero image",   name: "image",    widget: "image"  }
+          - label: "Brief"
+            name: "brief"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Paragraph 1",  name: "body_p1",  widget: "text"   }
+              - { label: "Paragraph 2",  name: "body_p2",  widget: "text"   }
+              - { label: "Paragraph 3",  name: "body_p3",  widget: "text"   }
+          - label: "Gallery"
+            name: "gallery"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image"  }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Meta",  name: "meta",  widget: "string" }
+          - label: "Results"
+            name: "results"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Note",         name: "note",     widget: "text"   }
+          - label: "Closing CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Lede",         name: "lede",     widget: "text"   }
+
+  # =============== CASE 02 — Bulevardi 2 ===============
+  - name: "case-02"
+    label: "Case 02 — Bulevardi"
+    files:
+      - file: "content/case-02.json"
+        name: "case-02"
+        label: "Case 02 page"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Lede",         name: "lede",     widget: "text"   }
+              - { label: "Hero image",   name: "image",    widget: "image"  }
+          - label: "Brief"
+            name: "brief"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Paragraph 1",  name: "body_p1",  widget: "text"   }
+              - { label: "Paragraph 2",  name: "body_p2",  widget: "text"   }
+              - { label: "Paragraph 3",  name: "body_p3",  widget: "text"   }
+          - label: "Gallery"
+            name: "gallery"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image"  }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Meta",  name: "meta",  widget: "string" }
+          - label: "Results"
+            name: "results"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Note",         name: "note",     widget: "text"   }
+          - label: "Closing CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Lede",         name: "lede",     widget: "text"   }

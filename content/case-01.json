@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "eyebrow": "Case 01 · Stockholm · 2025",
+    "title_l1": "Ångtvätten",
+    "title_l2": "22.",
+    "lede": "A 40,000 m² commercial property in Stora Essingen. Open-plan offices with a ceiling that needed to absorb sound — without calling attention to itself.",
+    "image": "assets/aisti-person-angtvatten.webp"
+  },
+  "brief": {
+    "eyebrow": "The brief",
+    "title_l1": "Speech,",
+    "title_l2": "not noise.",
+    "body_p1": "The building management wanted a ceiling solution that would improve speech intelligibility across the open floor. The space was a standard suspended T-grid layout — fast to install, but acoustically untreated.",
+    "body_p2": "The requirement was clear: achieve Class A absorption in the 500 Hz–2 kHz range without altering the aesthetics of the ceiling. The tile had to read as a neutral surface, not as an acoustic treatment.",
+    "body_p3": "Aisti® was installed side-by-side with standard mineral wool tiles as a blind comparison. Installers and occupants reported no visible difference between the two products."
+  },
+  "gallery": [
+    { "image": "assets/aisti-person-angtvatten.webp", "title": "Ångtvätten 22", "meta": "In place" },
+    { "image": "assets/aisti-render-3.webp", "title": "Ceiling install", "meta": "Dark blue, 600×600" },
+    { "image": "assets/aisti-feeling-angtvatten.webp", "title": "The space", "meta": "Atmosphere" },
+    { "image": "assets/portrait-1662451190177.jpeg", "title": "Stora Essingen", "meta": "The property" }
+  ],
+  "results": {
+    "eyebrow": "The result",
+    "title_l1": "Class A,",
+    "title_l2": "confirmed.",
+    "note": "Absorption coefficients from EN ISO 354 reverberation room test. Configuration: 20 mm / tight (plate-flush). α ≥ 0.90 across speech bands qualifies as Class A."
+  },
+  "cta": {
+    "title_l1": "Specify",
+    "title_l2": "your project.",
+    "lede": "Send the brief. We'll help you select format, thickness, and mounting for your room — and get you samples ahead of full production in August 2026."
+  }
+}

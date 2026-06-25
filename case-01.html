@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="br.css">
 </head>
-<body class="bra">
+<body class="bra" data-page="case-01">
 
 <div class="br-loader" aria-hidden="true">
   <div class="br-loader__top">
@@ -43,12 +43,12 @@
 
 <!-- ===== Hero ===== -->
 <section class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-4);">
-  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);">Case 01 · Stockholm · 2025</p>
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);" data-content="hero.eyebrow">Case 01 · Stockholm · 2025</p>
   <h1 class="bra-mega">
-    <span class="bra-reveal-line" data-reveal>Ångtvätten</span><br>
-    <span class="bra-reveal-line" data-reveal>22.</span>
+    <span class="bra-reveal-line" data-reveal data-content="hero.title_l1">Ångtvätten</span><br>
+    <span class="bra-reveal-line" data-reveal data-content="hero.title_l2">22.</span>
   </h1>
-  <p class="bra-lede" style="margin-top: var(--bra-s-3); max-width: 52ch;">
+  <p class="bra-lede" style="margin-top: var(--bra-s-3); max-width: 52ch;" data-content="hero.lede">
     A 40,000 m² commercial property in Stora Essingen. Open-plan offices with a ceiling that needed to absorb sound — without calling attention to itself.
   </p>
 </section>
@@ -56,7 +56,7 @@
 <!-- ===== Hero image ===== -->
 <div class="bra-container" style="padding-bottom: var(--bra-s-5);">
   <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden;">
-    <img src="assets/aisti-person-angtvatten.webp"
+    <img src="assets/aisti-person-angtvatten.webp" data-content="hero.image" data-content-attr="src"
          alt="Office space at Ångtvätten 22 with Aisti tiles installed"
          style="width: 100%; height: 100%; object-fit: cover;"
          loading="eager">
@@ -68,20 +68,20 @@
   <div class="bra-container bra-section">
     <div class="bra-grid-2">
       <div>
-        <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">The brief</p>
+        <p class="bra-caption" style="margin-bottom: var(--bra-s-3);" data-content="brief.eyebrow">The brief</p>
         <h2 class="bra-h1">
-          <span class="bra-reveal-line" data-reveal>Speech,</span><br>
-          <span class="bra-reveal-line" data-reveal>not noise.</span>
+          <span class="bra-reveal-line" data-reveal data-content="brief.title_l1">Speech,</span><br>
+          <span class="bra-reveal-line" data-reveal data-content="brief.title_l2">not noise.</span>
         </h2>
       </div>
       <div class="bra-stack">
-        <p class="bra-body">
+        <p class="bra-body" data-content="brief.body_p1">
           The building management wanted a ceiling solution that would improve speech intelligibility across the open floor. The space was a standard suspended T-grid layout — fast to install, but acoustically untreated.
         </p>
-        <p class="bra-body">
+        <p class="bra-body" data-content="brief.body_p2">
           The requirement was clear: achieve Class A absorption in the 500 Hz–2 kHz range without altering the aesthetics of the ceiling. The tile had to read as a neutral surface, not as an acoustic treatment.
         </p>
-        <p class="bra-body">
+        <p class="bra-body" data-content="brief.body_p3">
           Aisti® was installed side-by-side with standard mineral wool tiles as a blind comparison. Installers and occupants reported no visible difference between the two products.
         </p>
       </div>
@@ -114,31 +114,31 @@
 <section class="bra-container" style="padding-bottom: var(--bra-s-5);">
   <div class="bra-gallery bra-gallery--img bra-stagger" data-stagger>
     <div class="bra-gallery-cell bra-gallery-img bra-cell-a bra-stagger-item">
-      <img class="bra-gallery-img__img" src="assets/aisti-person-angtvatten.webp" alt="Office at Ångtvätten 22 with Aisti tiles" loading="lazy">
+      <img class="bra-gallery-img__img" src="assets/aisti-person-angtvatten.webp" data-content="gallery.0.image" data-content-attr="src" alt="Office at Ångtvätten 22 with Aisti tiles" loading="lazy">
       <div class="bra-gallery-img__overlay">
-        <div class="bra-gallery-img__title">Ångtvätten 22</div>
-        <div class="bra-gallery-img__meta">In place</div>
+        <div class="bra-gallery-img__title" data-content="gallery.0.title">Ångtvätten 22</div>
+        <div class="bra-gallery-img__meta" data-content="gallery.0.meta">In place</div>
       </div>
     </div>
     <div class="bra-gallery-cell bra-gallery-img bra-cell-b bra-stagger-item">
-      <img class="bra-gallery-img__img" src="assets/aisti-render-3.webp" alt="Aisti tiles in office ceiling" loading="lazy">
+      <img class="bra-gallery-img__img" src="assets/aisti-render-3.webp" data-content="gallery.1.image" data-content-attr="src" alt="Aisti tiles in office ceiling" loading="lazy">
       <div class="bra-gallery-img__overlay">
-        <div class="bra-gallery-img__title">Ceiling install</div>
-        <div class="bra-gallery-img__meta">Dark blue, 600×600</div>
+        <div class="bra-gallery-img__title" data-content="gallery.1.title">Ceiling install</div>
+        <div class="bra-gallery-img__meta" data-content="gallery.1.meta">Dark blue, 600×600</div>
       </div>
     </div>
     <div class="bra-gallery-cell bra-gallery-img bra-cell-c bra-stagger-item">
-      <img class="bra-gallery-img__img" src="assets/aisti-feeling-angtvatten.webp" alt="Atmosphere photo Ångtvätten 22" loading="lazy">
+      <img class="bra-gallery-img__img" src="assets/aisti-feeling-angtvatten.webp" data-content="gallery.2.image" data-content-attr="src" alt="Atmosphere photo Ångtvätten 22" loading="lazy">
       <div class="bra-gallery-img__overlay">
-        <div class="bra-gallery-img__title">The space</div>
-        <div class="bra-gallery-img__meta">Atmosphere</div>
+        <div class="bra-gallery-img__title" data-content="gallery.2.title">The space</div>
+        <div class="bra-gallery-img__meta" data-content="gallery.2.meta">Atmosphere</div>
       </div>
     </div>
     <div class="bra-gallery-cell bra-gallery-img bra-cell-d bra-stagger-item">
-      <img class="bra-gallery-img__img" src="assets/portrait-1662451190177.jpeg" alt="Ångtvätten 22 property exterior" loading="lazy">
+      <img class="bra-gallery-img__img" src="assets/portrait-1662451190177.jpeg" data-content="gallery.3.image" data-content-attr="src" alt="Ångtvätten 22 property exterior" loading="lazy">
       <div class="bra-gallery-img__overlay">
-        <div class="bra-gallery-img__title">Stora Essingen</div>
-        <div class="bra-gallery-img__meta">The property</div>
+        <div class="bra-gallery-img__title" data-content="gallery.3.title">Stora Essingen</div>
+        <div class="bra-gallery-img__meta" data-content="gallery.3.meta">The property</div>
       </div>
     </div>
   </div>
@@ -149,10 +149,10 @@
   <div class="bra-container bra-section">
     <div class="bra-grid-2">
       <div>
-        <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">The result</p>
+        <p class="bra-caption" style="margin-bottom: var(--bra-s-3);" data-content="results.eyebrow">The result</p>
         <h2 class="bra-h1">
-          <span class="bra-reveal-line" data-reveal>Class A,</span><br>
-          <span class="bra-reveal-line" data-reveal>confirmed.</span>
+          <span class="bra-reveal-line" data-reveal data-content="results.title_l1">Class A,</span><br>
+          <span class="bra-reveal-line" data-reveal data-content="results.title_l2">confirmed.</span>
         </h2>
       </div>
       <div>
@@ -164,7 +164,7 @@
           <div class="bra-spec-row"><div class="bra-spec-key">vs. mineral wool</div><div class="bra-spec-val">No measurable difference</div></div>
           <div class="bra-spec-row"><div class="bra-spec-key">Test standard</div><div class="bra-spec-val">EN ISO 354</div></div>
         </div>
-        <p class="bra-body" style="margin-top: var(--bra-s-3); color: var(--bra-ink-2);">
+        <p class="bra-body" style="margin-top: var(--bra-s-3); color: var(--bra-ink-2);" data-content="results.note">
           Absorption coefficients from EN ISO 354 reverberation room test. Configuration: 20 mm / tight (plate-flush). α ≥ 0.90 across speech bands qualifies as Class A.
         </p>
       </div>
@@ -203,11 +203,11 @@
   <div class="bra-container bra-section">
     <div class="bra-grid-2" style="align-items: end;">
       <h2 class="bra-mega" style="line-height: 0.86;">
-        <span class="bra-reveal-line" data-reveal>Specify</span><br>
-        <span class="bra-reveal-line" data-reveal>your project.</span>
+        <span class="bra-reveal-line" data-reveal data-content="cta.title_l1">Specify</span><br>
+        <span class="bra-reveal-line" data-reveal data-content="cta.title_l2">your project.</span>
       </h2>
       <div class="bra-stack-wide">
-        <p class="bra-lede">
+        <p class="bra-lede" data-content="cta.lede">
           Send the brief. We'll help you select format, thickness, and mounting for your room — and get you samples ahead of full production in August 2026.
         </p>
         <a href="contact.html" style="text-decoration: none; align-self: flex-start; display: inline-block;">
@@ -261,5 +261,6 @@
 </footer>
 
 <script src="br.js" defer></script>
+<script src="br-content.js" defer></script>
 </body>
 </html>
