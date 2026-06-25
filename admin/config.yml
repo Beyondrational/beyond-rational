@@ -197,6 +197,42 @@ collections:
         label: "Wuud page"
         fields:
 
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title",   name: "title",   widget: "string" }
+              - { label: "Lede",    name: "lede",    widget: "text"   }
+          - { label: "Hero note (under finishes)", name: "hero_note", widget: "text" }
+
+          - label: "The idea"
+            name: "idea"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - label: "Points (3)"
+                name: "points"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Number", name: "num",   widget: "string" }
+                  - { label: "Title",  name: "title", widget: "string" }
+                  - { label: "Body",   name: "body",  widget: "text"   }
+              - { label: "Species label", name: "species_label", widget: "string" }
+              - { label: "Wood species",  name: "species",       widget: "list"   }
+
+          - label: "Gallery heading"
+            name: "gallery_head"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Body",         name: "body",     widget: "text"   }
+
           - label: "Image gallery"
             name: "gallery"
             label_singular: "Image"
@@ -206,6 +242,29 @@ collections:
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Title", name: "title", widget: "string", required: false }
               - { label: "Meta",  name: "meta",  widget: "string", required: false }
+
+          - label: "Spec"
+            name: "spec"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - label: "Rows"
+                name: "rows"
+                widget: "list"
+                summary: "{{fields.key}}: {{fields.value}}"
+                fields:
+                  - { label: "Key",   name: "key",   widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+
+          - label: "Closing CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Lede",         name: "lede",     widget: "text"   }
 
   # =============== PRODUCT (Aisti tile page) ===============
   - name: "product"
