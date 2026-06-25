@@ -206,3 +206,53 @@ collections:
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Title", name: "title", widget: "string", required: false }
               - { label: "Meta",  name: "meta",  widget: "string", required: false }
+
+  # =============== PRODUCT (Aisti tile page) ===============
+  - name: "product"
+    label: "Product — Aisti"
+    files:
+      - file: "content/product.json"
+        name: "product"
+        label: "Product page (Aisti)"
+        fields:
+
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title",   name: "title",   widget: "string" }
+              - { label: "Lede",    name: "lede",    widget: "text"   }
+
+          - label: "Material study"
+            name: "material"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",        name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1",   name: "title_l1", widget: "string" }
+              - { label: "Title line 2",   name: "title_l2", widget: "string" }
+              - { label: "Title line 3",   name: "title_l3", widget: "string" }
+              - { label: "Paragraph 1",    name: "body_p1",  widget: "text"   }
+              - { label: "Paragraph 2",    name: "body_p2",  widget: "text"   }
+
+          - label: "Image gallery"
+            name: "gallery"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title",   name: "title",   widget: "string" }
+              - label: "Images (6 cells)"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "image", widget: "image"  }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Meta",  name: "meta",  widget: "string" }
+
+          - label: "Closing CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Lede",         name: "lede",     widget: "text"   }

@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "eyebrow": "The product",
+    "title": "Aisti® Aalto.",
+    "lede": "Foam-formed natural wood fibre. Absorption Class A, two formats, two thicknesses. Fits standard T-grid ceilings or mounts directly with adhesive. Full production capacity from August 2026 — preorder now."
+  },
+  "material": {
+    "eyebrow": "Material study",
+    "title_l1": "Wood",
+    "title_l2": "fibre,",
+    "title_l3": "foam-formed.",
+    "body_p1": "The tile is built by suspending wood fibre in foam, not by pressing it. The result is an open, porous structure that captures sound across a wide frequency range, while the surface stays calm and tactile.",
+    "body_p2": "It belongs on the same drawing as the limestone, the oak, the brass."
+  },
+  "gallery": {
+    "eyebrow": "In place",
+    "title": "Aisti, on the wall.",
+    "items": [
+      { "image": "assets/aisti-026.jpg", "title": "Daylit interior", "meta": "Product photography" },
+      { "image": "assets/aisti-003.jpg", "title": "Tile, raked light", "meta": "Material study" },
+      { "image": "assets/aisti-035.jpg", "title": "Mounted", "meta": "Detail" },
+      { "image": "assets/aisti-042.jpg", "title": "Surface, compressed", "meta": "Material study" },
+      { "image": "assets/aisti-025.jpg", "title": "Workshop", "meta": "Behind the press" },
+      { "image": "assets/aisti-008.jpg", "title": "Ceiling, calm", "meta": "Product photography" }
+    ]
+  },
+  "cta": {
+    "title_l1": "Specify",
+    "title_l2": "Aisti.",
+    "lede": "Production ramps to full capacity in August 2026. Preorder now, or request samples and the full data package."
+  }
+}

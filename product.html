@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="br.css?v=3">
 </head>
-<body class="bra">
+<body class="bra" data-page="product">
 
 <!-- Page loader (CLOU-style curtain, once per session) -->
 <div class="br-loader" aria-hidden="true">
@@ -46,11 +46,11 @@
 
 <!-- ===== Product hero ===== -->
 <section class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-4);">
-  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);">The product</p>
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);" data-content="hero.eyebrow">The product</p>
   <h1 class="bra-mega">
-    <span class="bra-reveal-line" data-reveal>Aisti® Aalto.</span>
+    <span class="bra-reveal-line" data-reveal data-content="hero.title">Aisti® Aalto.</span>
   </h1>
-  <p class="bra-lede" style="margin-top: var(--bra-s-3); max-width: 48ch;">
+  <p class="bra-lede" style="margin-top: var(--bra-s-3); max-width: 48ch;" data-content="hero.lede">
     Foam-formed natural wood fibre. Absorption Class A, two formats, two thicknesses. Fits standard T-grid ceilings or mounts directly with adhesive. Full production capacity from August 2026 — preorder now.
   </p>
 </section>
@@ -393,7 +393,7 @@
 
 <!-- ===== Material panel (CSS-art) ===== -->
 <section class="bra-container bra-section">
-  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Material study</p>
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);" data-content="material.eyebrow">Material study</p>
   <div class="bra-grid-2">
     <div class="bra-parallax-stage" data-parallax style="aspect-ratio: 4/5;">
       <div class="bra-parallax-stage__inner">
@@ -404,15 +404,15 @@
     </div>
     <div class="bra-stack-wide">
       <h3 class="bra-h2">
-        <span class="bra-reveal-line" data-reveal>Wood</span><br>
-        <span class="bra-reveal-line" data-reveal>fibre,</span><br>
-        <span class="bra-reveal-line" data-reveal>foam-formed.</span>
+        <span class="bra-reveal-line" data-reveal data-content="material.title_l1">Wood</span><br>
+        <span class="bra-reveal-line" data-reveal data-content="material.title_l2">fibre,</span><br>
+        <span class="bra-reveal-line" data-reveal data-content="material.title_l3">foam-formed.</span>
       </h3>
       <div class="bra-stack">
-        <p class="bra-body">
+        <p class="bra-body" data-content="material.body_p1">
           The tile is built by suspending wood fibre in foam, not by pressing it. The result is an open, porous structure that captures sound across a wide frequency range, while the surface stays calm and tactile.
         </p>
-        <p class="bra-body">
+        <p class="bra-body" data-content="material.body_p2">
           It belongs on the same drawing as the limestone, the oak, the brass.
         </p>
       </div>
@@ -438,52 +438,52 @@
 
 <!-- ===== Variants — image gallery ===== -->
 <section class="bra-container bra-section">
-  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">In place</p>
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);" data-content="gallery.eyebrow">In place</p>
   <h2 class="bra-h2" style="margin-bottom: var(--bra-s-5); max-width: 18ch;">
-    <span class="bra-reveal-line" data-reveal>Aisti, on the wall.</span>
+    <span class="bra-reveal-line" data-reveal data-content="gallery.title">Aisti, on the wall.</span>
   </h2>
 
   <div class="bra-gallery bra-gallery--img bra-stagger" data-stagger>
     <div class="bra-gallery-cell bra-gallery-img bra-cell-a bra-stagger-item">
-      <img class="bra-gallery-img__img" src="assets/aisti-026.jpg" alt="Daylit interior with Aisti panels" loading="lazy">
+      <img class="bra-gallery-img__img" src="assets/aisti-026.jpg" data-content="gallery.items.0.image" data-content-attr="src" alt="Daylit interior with Aisti panels" loading="lazy">
       <div class="bra-gallery-img__overlay">
-        <div class="bra-gallery-img__title">Daylit interior</div>
-        <div class="bra-gallery-img__meta">Product photography</div>
+        <div class="bra-gallery-img__title" data-content="gallery.items.0.title">Daylit interior</div>
+        <div class="bra-gallery-img__meta" data-content="gallery.items.0.meta">Product photography</div>
       </div>
     </div>
     <div class="bra-gallery-cell bra-gallery-img bra-cell-b bra-stagger-item">
-      <img class="bra-gallery-img__img" src="assets/aisti-003.jpg" alt="Aisti plate close-up" loading="lazy">
+      <img class="bra-gallery-img__img" src="assets/aisti-003.jpg" data-content="gallery.items.1.image" data-content-attr="src" alt="Aisti plate close-up" loading="lazy">
       <div class="bra-gallery-img__overlay">
-        <div class="bra-gallery-img__title">Tile, raked light</div>
-        <div class="bra-gallery-img__meta">Material study</div>
+        <div class="bra-gallery-img__title" data-content="gallery.items.1.title">Tile, raked light</div>
+        <div class="bra-gallery-img__meta" data-content="gallery.items.1.meta">Material study</div>
       </div>
     </div>
     <div class="bra-gallery-cell bra-gallery-img bra-cell-c bra-stagger-item">
-      <img class="bra-gallery-img__img" src="assets/aisti-035.jpg" alt="Mounted detail" loading="lazy">
+      <img class="bra-gallery-img__img" src="assets/aisti-035.jpg" data-content="gallery.items.2.image" data-content-attr="src" alt="Mounted detail" loading="lazy">
       <div class="bra-gallery-img__overlay">
-        <div class="bra-gallery-img__title">Mounted</div>
-        <div class="bra-gallery-img__meta">Detail</div>
+        <div class="bra-gallery-img__title" data-content="gallery.items.2.title">Mounted</div>
+        <div class="bra-gallery-img__meta" data-content="gallery.items.2.meta">Detail</div>
       </div>
     </div>
     <div class="bra-gallery-cell bra-gallery-img bra-cell-d bra-stagger-item">
-      <img class="bra-gallery-img__img" src="assets/aisti-042.jpg" alt="Surface study" loading="lazy">
+      <img class="bra-gallery-img__img" src="assets/aisti-042.jpg" data-content="gallery.items.3.image" data-content-attr="src" alt="Surface study" loading="lazy">
       <div class="bra-gallery-img__overlay">
-        <div class="bra-gallery-img__title">Surface, compressed</div>
-        <div class="bra-gallery-img__meta">Material study</div>
+        <div class="bra-gallery-img__title" data-content="gallery.items.3.title">Surface, compressed</div>
+        <div class="bra-gallery-img__meta" data-content="gallery.items.3.meta">Material study</div>
       </div>
     </div>
     <div class="bra-gallery-cell bra-gallery-img bra-cell-e bra-stagger-item">
-      <img class="bra-gallery-img__img" src="assets/aisti-025.jpg" alt="Workshop" loading="lazy">
+      <img class="bra-gallery-img__img" src="assets/aisti-025.jpg" data-content="gallery.items.4.image" data-content-attr="src" alt="Workshop" loading="lazy">
       <div class="bra-gallery-img__overlay">
-        <div class="bra-gallery-img__title">Workshop</div>
-        <div class="bra-gallery-img__meta">Behind the press</div>
+        <div class="bra-gallery-img__title" data-content="gallery.items.4.title">Workshop</div>
+        <div class="bra-gallery-img__meta" data-content="gallery.items.4.meta">Behind the press</div>
       </div>
     </div>
     <div class="bra-gallery-cell bra-gallery-img bra-cell-f bra-stagger-item">
-      <img class="bra-gallery-img__img" src="assets/aisti-008.jpg" alt="Ceiling install" loading="lazy">
+      <img class="bra-gallery-img__img" src="assets/aisti-008.jpg" data-content="gallery.items.5.image" data-content-attr="src" alt="Ceiling install" loading="lazy">
       <div class="bra-gallery-img__overlay">
-        <div class="bra-gallery-img__title">Ceiling, calm</div>
-        <div class="bra-gallery-img__meta">Product photography</div>
+        <div class="bra-gallery-img__title" data-content="gallery.items.5.title">Ceiling, calm</div>
+        <div class="bra-gallery-img__meta" data-content="gallery.items.5.meta">Product photography</div>
       </div>
     </div>
   </div>
@@ -494,11 +494,11 @@
   <div class="bra-container bra-section">
     <div class="bra-grid-2" style="align-items: end;">
       <h2 class="bra-mega" style="line-height: 0.86;">
-        <span class="bra-reveal-line" data-reveal>Specify</span><br>
-        <span class="bra-reveal-line" data-reveal>Aisti.</span>
+        <span class="bra-reveal-line" data-reveal data-content="cta.title_l1">Specify</span><br>
+        <span class="bra-reveal-line" data-reveal data-content="cta.title_l2">Aisti.</span>
       </h2>
       <div class="bra-stack-wide">
-        <p class="bra-lede">
+        <p class="bra-lede" data-content="cta.lede">
           Production ramps to full capacity in August 2026. Preorder now, or request samples and the full data package.
         </p>
         <div style="display: flex; gap: var(--bra-s-3); align-items: center; flex-wrap: wrap;">
@@ -556,5 +556,6 @@
 </footer>
 
 <script src="br.js?v=3" defer></script>
+<script src="br-content.js?v=3" defer></script>
 </body>
 </html>
