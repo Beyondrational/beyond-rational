@@ -393,3 +393,53 @@ collections:
               - { label: "Title line 1", name: "title_l1", widget: "string" }
               - { label: "Title line 2", name: "title_l2", widget: "string" }
               - { label: "Lede",         name: "lede",     widget: "text"   }
+
+  # =============== PRODUCT — Mogu (placeholder) ===============
+  - name: "mogu"
+    label: "Product — Mogu"
+    files:
+      - file: "content/mogu.json"
+        name: "mogu"
+        label: "Mogu page"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title",   name: "title",   widget: "string" }
+              - { label: "Lede",    name: "lede",    widget: "text"   }
+          - { label: "Spec title line 1", name: "spec_title_l1", widget: "string" }
+          - { label: "Spec title line 2", name: "spec_title_l2", widget: "string" }
+          - label: "Closing CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Lede",         name: "lede",     widget: "text"   }
+
+  # =============== PRODUCT — Sappa (placeholder) ===============
+  - name: "sappa"
+    label: "Product — Sappa"
+    files:
+      - file: "content/sappa.json"
+        name: "sappa"
+        label: "Sappa page"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title",   name: "title",   widget: "string" }
+              - { label: "Lede",    name: "lede",    widget: "text"   }
+          - { label: "Spec title line 1", name: "spec_title_l1", widget: "string" }
+          - { label: "Spec title line 2", name: "spec_title_l2", widget: "string" }
+          - label: "Closing CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Lede",         name: "lede",     widget: "text"   }

@@ -29,7 +29,7 @@
   }
 </style>
 </head>
-<body class="bra" data-page="product">
+<body class="bra" data-page="sappa">
 
 <!-- Page loader -->
 <div class="br-loader" aria-hidden="true">
@@ -63,9 +63,9 @@
 <!-- ===== Breadcrumb + hero ===== -->
 <section class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-4);">
   <a href="products.html" class="bra-cta" style="margin-bottom: var(--bra-s-4); display: inline-block;">← Products</a>
-  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);">Product · In development</p>
-  <h1 class="bra-mega"><span class="bra-reveal-line" data-reveal>Sappa.</span></h1>
-  <p class="bra-lede" style="margin-top: var(--bra-s-3); max-width: 48ch;">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);" data-content="hero.eyebrow">Product · In development</p>
+  <h1 class="bra-mega"><span class="bra-reveal-line" data-reveal data-content="hero.title">Sappa.</span></h1>
+  <p class="bra-lede" style="margin-top: var(--bra-s-3); max-width: 48ch;" data-content="hero.lede">
     A new acoustic material joining the Beyond Rational range. This page is a placeholder — the full presentation, imagery, and specifications are on their way.
   </p>
 </section>
@@ -84,8 +84,8 @@
     <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">The spec</p>
     <div class="bra-grid-2">
       <h2 class="bra-h1">
-        <span class="bra-reveal-line" data-reveal>Details</span><br>
-        <span class="bra-reveal-line" data-reveal>coming soon.</span>
+        <span class="bra-reveal-line" data-reveal data-content="spec_title_l1">Details</span><br>
+        <span class="bra-reveal-line" data-reveal data-content="spec_title_l2">coming soon.</span>
       </h2>
       <div class="bra-spec">
         <div class="bra-spec-row"><div class="bra-spec-key">Core</div><div class="bra-spec-val">—</div></div>
@@ -104,11 +104,11 @@
   <div class="bra-container bra-section">
     <div style="display:grid; grid-template-columns: 5fr 7fr; gap: clamp(40px,5vw,96px); align-items: end;" class="split-tight">
       <h2 class="bra-mega" style="color: var(--bra-on-oak); font-size: clamp(36px,5vw,80px); line-height: 0.9; max-width: 16ch;">
-        <span class="bra-reveal-line" data-reveal>Register</span><br>
-        <span class="bra-reveal-line" data-reveal>your interest.</span>
+        <span class="bra-reveal-line" data-reveal data-content="cta.title_l1">Register</span><br>
+        <span class="bra-reveal-line" data-reveal data-content="cta.title_l2">your interest.</span>
       </h2>
       <div class="bra-stack-wide">
-        <p class="bra-lede">Want to hear when Sappa is ready? Send us a line and we'll keep you posted.</p>
+        <p class="bra-lede" data-content="cta.lede">Want to hear when Sappa is ready? Send us a line and we'll keep you posted.</p>
         <a href="contact.html" style="text-decoration: none;">
           <button class="bra-btn-mag" data-magnetic style="background: var(--bra-on-oak); color: var(--bra-ink);">
             <span>Get in touch</span>
@@ -162,5 +162,6 @@
 </footer>
 
 <script src="br.js?v=3" defer></script>
+<script src="br-content.js?v=3" defer></script>
 </body>
 </html>
