@@ -7,7 +7,7 @@
 <meta name="description" content="Aisti® Acoustic Tile: foam-formed natural wood fibre. Absorption Class A, Euroclass B-s1,d0, M1 / A+ certified, 100% recyclable. Available 2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=3">
+<link rel="stylesheet" href="br.css?v=5">
 </head>
 <body class="bra" data-page="product">
 
@@ -443,49 +443,16 @@
     <span class="bra-reveal-line" data-reveal data-content="gallery.title">Aisti, on the wall.</span>
   </h2>
 
-  <div class="bra-gallery bra-gallery--img bra-stagger" data-stagger>
-    <div class="bra-gallery-cell bra-gallery-img bra-cell-a bra-stagger-item">
-      <img class="bra-gallery-img__img" src="assets/aisti-026.jpg" data-content="gallery.items.0.image" data-content-attr="src" alt="Daylit interior with Aisti panels" loading="lazy">
-      <div class="bra-gallery-img__overlay">
-        <div class="bra-gallery-img__title" data-content="gallery.items.0.title">Daylit interior</div>
-        <div class="bra-gallery-img__meta" data-content="gallery.items.0.meta">Product photography</div>
-      </div>
-    </div>
-    <div class="bra-gallery-cell bra-gallery-img bra-cell-b bra-stagger-item">
-      <img class="bra-gallery-img__img" src="assets/aisti-003.jpg" data-content="gallery.items.1.image" data-content-attr="src" alt="Aisti plate close-up" loading="lazy">
-      <div class="bra-gallery-img__overlay">
-        <div class="bra-gallery-img__title" data-content="gallery.items.1.title">Tile, raked light</div>
-        <div class="bra-gallery-img__meta" data-content="gallery.items.1.meta">Material study</div>
-      </div>
-    </div>
-    <div class="bra-gallery-cell bra-gallery-img bra-cell-c bra-stagger-item">
-      <img class="bra-gallery-img__img" src="assets/aisti-035.jpg" data-content="gallery.items.2.image" data-content-attr="src" alt="Mounted detail" loading="lazy">
-      <div class="bra-gallery-img__overlay">
-        <div class="bra-gallery-img__title" data-content="gallery.items.2.title">Mounted</div>
-        <div class="bra-gallery-img__meta" data-content="gallery.items.2.meta">Detail</div>
-      </div>
-    </div>
-    <div class="bra-gallery-cell bra-gallery-img bra-cell-d bra-stagger-item">
-      <img class="bra-gallery-img__img" src="assets/aisti-042.jpg" data-content="gallery.items.3.image" data-content-attr="src" alt="Surface study" loading="lazy">
-      <div class="bra-gallery-img__overlay">
-        <div class="bra-gallery-img__title" data-content="gallery.items.3.title">Surface, compressed</div>
-        <div class="bra-gallery-img__meta" data-content="gallery.items.3.meta">Material study</div>
-      </div>
-    </div>
-    <div class="bra-gallery-cell bra-gallery-img bra-cell-e bra-stagger-item">
-      <img class="bra-gallery-img__img" src="assets/aisti-025.jpg" data-content="gallery.items.4.image" data-content-attr="src" alt="Workshop" loading="lazy">
-      <div class="bra-gallery-img__overlay">
-        <div class="bra-gallery-img__title" data-content="gallery.items.4.title">Workshop</div>
-        <div class="bra-gallery-img__meta" data-content="gallery.items.4.meta">Behind the press</div>
-      </div>
-    </div>
-    <div class="bra-gallery-cell bra-gallery-img bra-cell-f bra-stagger-item">
-      <img class="bra-gallery-img__img" src="assets/aisti-008.jpg" data-content="gallery.items.5.image" data-content-attr="src" alt="Ceiling install" loading="lazy">
-      <div class="bra-gallery-img__overlay">
-        <div class="bra-gallery-img__title" data-content="gallery.items.5.title">Ceiling, calm</div>
-        <div class="bra-gallery-img__meta" data-content="gallery.items.5.meta">Product photography</div>
-      </div>
-    </div>
+  <div class="brg" data-content-each="gallery.items">
+    <template>
+      <figure class="brg__cell">
+        <img class="brg__img" data-each="image" data-each-attr="src" alt="Aisti in place" loading="lazy">
+        <figcaption class="brg__cap">
+          <span class="brg__title" data-each="title"></span>
+          <span class="brg__meta" data-each="meta"></span>
+        </figcaption>
+      </figure>
+    </template>
   </div>
 </section>
 
@@ -555,7 +522,7 @@
   </div>
 </footer>
 
-<script src="br.js?v=3" defer></script>
-<script src="br-content.js?v=3" defer></script>
+<script src="br.js?v=5" defer></script>
+<script src="br-content.js?v=5" defer></script>
 </body>
 </html>

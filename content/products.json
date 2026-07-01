@@ -27,6 +27,24 @@
       "body": "A new addition to the Beyond Rational range. Full presentation and specifications coming soon."
     }
   ],
+  "gallery_head": {
+    "eyebrow": "Gallery",
+    "title_l1": "The range,",
+    "title_l2": "in place.",
+    "body": "Images are managed in the CMS — add or replace them at /admin."
+  },
+  "gallery": [
+    { "image": "assets/aisti-026.jpg", "title": "Aisti, interior", "meta": "In place" },
+    { "image": "assets/aisti-003.jpg", "title": "Tile, raked light", "meta": "Material study" },
+    { "image": "assets/aisti-person-angtvatten.webp", "title": "In use", "meta": "Office" },
+    { "image": "assets/aisti-042.jpg", "title": "Surface", "meta": "Texture" },
+    { "image": "assets/aisti-008.jpg", "title": "Ceiling, calm", "meta": "In place" },
+    { "image": "assets/br-office.webp", "title": "Install", "meta": "Interior" },
+    { "image": "assets/aisti-035.jpg", "title": "Mounted", "meta": "Detail" },
+    { "image": "assets/aisti-012.jpg", "title": "Wall detail", "meta": "In place" },
+    { "image": "assets/aisti-tile-001.webp", "title": "Wood fibre", "meta": "Material study" },
+    { "image": "assets/aisti-025.jpg", "title": "Workshop", "meta": "Behind the scenes" }
+  ],
   "cta": {
     "title_l1": "Specify",
     "title_l2": "the range.",

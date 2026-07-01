@@ -7,12 +7,20 @@
     "subtitle": "Beyond Rational is a Copenhagen-based company supplying sustainable, design-driven acoustic materials. We combine Scandinavian aesthetics with high-performance functionality — and partner with architects, designers, and developers who care about quality, innovation, and impact.",
     "cta_primary": "See our work",
     "cta_secondary": "Visit the studio",
-    "image": "assets/aisti-012.jpg"
+    "bg_image": "assets/aisti-person-angtvatten.webp"
   },
-  "feature": {
-    "image": "assets/aisti-feeling-angtvatten.webp",
-    "caption_left": "In place",
-    "caption_right": "Aisti® Acoustic Tile · Absorption Class A"
+  "range": {
+    "section_label": "What we offer",
+    "meta": "Beyond Rational",
+    "intro": "Beyond Rational is a Copenhagen company supplying a curated range of conscious acoustic and surface materials for modern architecture — chosen for performance, surface, and a low footprint.",
+    "image": "assets/aisti-003.jpg",
+    "link_label": "See all products",
+    "items": [
+      { "name": "Aisti® Acoustic Tile", "tag": "Available 2026", "href": "product.html" },
+      { "name": "Wuud", "tag": "In development", "href": "product-wuud.html" },
+      { "name": "Sappa", "tag": "In development", "href": "product-sappa.html" },
+      { "name": "Mogu", "tag": "In development", "href": "product-mogu.html" }
+    ]
   },
   "manifesto": {
     "section_label": "What we believe",
@@ -48,7 +56,8 @@
     "title_l2_em": "not pressed.",
     "body_p1": "Aisti's foam-forming technology, adapted from the Finnish paper industry, suspends wood fibre in foam instead of pressing it flat. The fibres set into an open, porous structure that captures sound across a wide frequency range — without binders or plastics.",
     "body_p2": "The technology is cost-effective and energy-conscious, producing tiles that are light in weight, plastic-free, and 100% recyclable. Produced in Jyväskylä, Finland.",
-    "cta": "Read more about the tile"
+    "cta": "Read more about the tile",
+    "image": "assets/aisti-042.jpg"
   },
   "studio": {
     "section_label": "Who we are",

@@ -178,20 +178,28 @@
 
 /* ---------- CTA (line-button) ---------- */
 .bra-cta {
+  position: relative;
   display: inline-flex;
   align-items: baseline;
-  gap: var(--bra-s-2);
   font-family: var(--bra-font);
   font-weight: 700;
   font-size: var(--bra-fs-body);
   letter-spacing: -0.005em;
-  padding-bottom: 6px;
-  border-bottom: 2px solid currentColor;
-  transition: gap var(--bra-dur-base) var(--bra-ease);
+  padding-bottom: 5px;
   cursor: pointer;
 }
-.bra-cta::after { content: "↗"; font-weight: 400; }
-.bra-cta:hover  { gap: calc(var(--bra-s-2) * 1.8); }
+/* Underline draws in from the left on hover (no arrow) */
+.bra-cta::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%; height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--bra-dur-base) var(--bra-ease);
+}
+.bra-cta:hover::after { transform: scaleX(1); }
 
 /* ---------- Spec sheet (heavy weights, no hairlines) ---------- */
 .bra-spec {
@@ -410,7 +418,18 @@
 .bra-btn-mag:hover { color: var(--bra-on-oak); }
 .bra-btn-mag:hover::before { transform: translateY(0); }
 .bra-btn-mag__arrow { transition: transform var(--bra-dur-base) var(--bra-ease); }
-.bra-btn-mag:hover .bra-btn-mag__arrow { transform: translate(4px, -4px); }
+.bra-btn-mag:hover .bra-btn-mag__arrow { transform: translateX(5px); }
+
+/* Label roll — current text rolls up, a clone rolls in from below */
+.bra-swap { position: relative; display: inline-block; overflow: hidden; line-height: 1.1; vertical-align: bottom; }
+.bra-swap > span { display: block; transition: transform 480ms var(--bra-ease); }
+.bra-swap__b { position: absolute; left: 0; top: 0; transform: translateY(115%); }
+.bra-btn-mag:hover .bra-swap__a { transform: translateY(-115%); }
+.bra-btn-mag:hover .bra-swap__b { transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .bra-swap > span { transition: none; }
+  .bra-swap__b { display: none; }
+}
 
 /* Inverted — for use on oak / dark surfaces */
 .bra-btn-mag--inv {
@@ -2041,3 +2060,39 @@ body.bra-nav-locked { overflow: hidden; }
   .bra-spec-key { padding-bottom: 4px; border-bottom: none; font-weight: 500; color: var(--bra-ink-2); }
   .bra-spec-val { text-align: left; padding-top: 0; font-size: var(--bra-fs-h3); }
 }
+
+/* ============================================================
+   Shared photo gallery (CMS-dynamic, wuud-style 3-col grid)
+   Use with: <div class="brg" data-content-each="gallery">…template…</div>
+   ============================================================ */
+.brg {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(10px, 1.2vw, 20px);
+  margin-top: var(--bra-s-4);
+}
+.brg__cell {
+  position: relative; margin: 0; overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border: 2px solid var(--bra-ink);
+  background: var(--bra-stone);
+}
+.brg__img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.brg__cell:hover .brg__img { transform: scale(1.04); }
+.brg__cap {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  padding: 14px 16px; color: #f4f2ed;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  opacity: 0; transform: translateY(8px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.brg__cell:hover .brg__cap { opacity: 1; transform: none; }
+.brg__title { font-family: var(--bra-font); font-weight: 600; font-size: 14px; letter-spacing: 0.01em; }
+.brg__meta  { font-family: var(--bra-font); font-weight: 500; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(244,242,237,0.7); }
+.brg:empty { display: none; }
+@media (max-width: 900px) { .brg { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .brg { grid-template-columns: 1fr; } }

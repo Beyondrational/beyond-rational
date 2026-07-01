@@ -36,15 +36,25 @@ collections:
               - { label: "Subtitle",              name: "subtitle",      widget: "text"   }
               - { label: "Primary CTA",           name: "cta_primary",   widget: "string" }
               - { label: "Secondary CTA",         name: "cta_secondary", widget: "string" }
-              - { label: "Hero image",            name: "image",         widget: "image"  }
+              - { label: "Hero background image", name: "bg_image",      widget: "image"  }
 
-          - label: "Feature band"
-            name: "feature"
+          - label: "The range (Beyond Rational + products)"
+            name: "range"
             widget: "object"
             fields:
+              - { label: "Section label", name: "section_label", widget: "string" }
+              - { label: "Meta tag",      name: "meta",          widget: "string" }
+              - { label: "Intro",         name: "intro",         widget: "text"   }
               - { label: "Image",         name: "image",         widget: "image"  }
-              - { label: "Caption left",  name: "caption_left",  widget: "string" }
-              - { label: "Caption right", name: "caption_right", widget: "string" }
+              - { label: "Link label",    name: "link_label",    widget: "string" }
+              - label: "Products"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Tag",  name: "tag",  widget: "string" }
+                  - { label: "Link", name: "href", widget: "string", hint: "e.g. product.html, product-wuud.html" }
 
           - label: "Manifesto"
             name: "manifesto"
@@ -77,6 +87,7 @@ collections:
               - { label: "Title line 2 (em)",    name: "title_l2_em",   widget: "string" }
               - { label: "Paragraph 1",          name: "body_p1",       widget: "text"   }
               - { label: "Paragraph 2",          name: "body_p2",       widget: "text"   }
+              - { label: "Image",                name: "image",         widget: "image"  }
 
           - label: "Studio"
             name: "studio"
@@ -300,9 +311,10 @@ collections:
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Title",   name: "title",   widget: "string" }
-              - label: "Images (6 cells)"
+              - label: "Images (add as many as you like)"
                 name: "items"
                 widget: "list"
+                summary: "{{fields.title}}"
                 fields:
                   - { label: "Image", name: "image", widget: "image"  }
                   - { label: "Title", name: "title", widget: "string" }
@@ -342,6 +354,25 @@ collections:
               - { label: "Tag",  name: "tag",  widget: "string" }
               - { label: "Body", name: "body", widget: "text"   }
               - { label: "Image (optional)", name: "image", widget: "image", required: false }
+
+          - label: "Gallery heading"
+            name: "gallery_head"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Body",         name: "body",     widget: "text"   }
+
+          - label: "Image gallery"
+            name: "gallery"
+            label_singular: "Image"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Meta",  name: "meta",  widget: "string", required: false }
 
           - label: "Closing CTA"
             name: "cta"
@@ -470,6 +501,23 @@ collections:
               - { label: "Lede",    name: "lede",    widget: "text"   }
           - { label: "Spec title line 1", name: "spec_title_l1", widget: "string" }
           - { label: "Spec title line 2", name: "spec_title_l2", widget: "string" }
+          - label: "Gallery heading"
+            name: "gallery_head"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Body",         name: "body",     widget: "text"   }
+          - label: "Image gallery"
+            name: "gallery"
+            label_singular: "Image"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Meta",  name: "meta",  widget: "string", required: false }
           - label: "Closing CTA"
             name: "cta"
             widget: "object"
@@ -495,6 +543,23 @@ collections:
               - { label: "Lede",    name: "lede",    widget: "text"   }
           - { label: "Spec title line 1", name: "spec_title_l1", widget: "string" }
           - { label: "Spec title line 2", name: "spec_title_l2", widget: "string" }
+          - label: "Gallery heading"
+            name: "gallery_head"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Body",         name: "body",     widget: "text"   }
+          - label: "Image gallery"
+            name: "gallery"
+            label_singular: "Image"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Meta",  name: "meta",  widget: "string", required: false }
           - label: "Closing CTA"
             name: "cta"
             widget: "object"

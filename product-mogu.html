@@ -7,7 +7,7 @@
 <meta name="description" content="Mogu — a new acoustic material in the Beyond Rational range. In development; full presentation coming soon.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=3">
+<link rel="stylesheet" href="br.css?v=5">
 <style>
   .prod-hero-panel {
     width: 100%; aspect-ratio: 16 / 7; border: 2px solid var(--bra-ink);
@@ -99,6 +99,31 @@
   </div>
 </section>
 
+<!-- ===== Gallery ===== -->
+<section id="gallery" class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);" data-content="gallery_head.eyebrow">Gallery</p>
+  <div class="bra-grid-2" style="align-items: end; margin-bottom: var(--bra-s-2);">
+    <h2 class="bra-h1">
+      <span class="bra-reveal-line" data-reveal data-content="gallery_head.title_l1">Mogu,</span><br>
+      <span class="bra-reveal-line" data-reveal data-content="gallery_head.title_l2">in place.</span>
+    </h2>
+    <p class="bra-body" style="color: var(--bra-ink-2); max-width: 40ch;" data-content="gallery_head.body">
+      Images are managed in the CMS — add or replace them at <span style="white-space:nowrap;">/admin</span>.
+    </p>
+  </div>
+  <div class="brg" data-content-each="gallery">
+    <template>
+      <figure class="brg__cell">
+        <img class="brg__img" data-each="image" data-each-attr="src" alt="Mogu" loading="lazy">
+        <figcaption class="brg__cap">
+          <span class="brg__title" data-each="title"></span>
+          <span class="brg__meta" data-each="meta"></span>
+        </figcaption>
+      </figure>
+    </template>
+  </div>
+</section>
+
 <!-- ===== CTA ===== -->
 <section class="bra-surface-oak">
   <div class="bra-container bra-section">
@@ -161,7 +186,7 @@
   </div>
 </footer>
 
-<script src="br.js?v=3" defer></script>
-<script src="br-content.js?v=3" defer></script>
+<script src="br.js?v=5" defer></script>
+<script src="br-content.js?v=5" defer></script>
 </body>
 </html>

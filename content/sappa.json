@@ -6,6 +6,24 @@
   },
   "spec_title_l1": "Details",
   "spec_title_l2": "coming soon.",
+  "gallery_head": {
+    "eyebrow": "Gallery",
+    "title_l1": "Sappa,",
+    "title_l2": "in place.",
+    "body": "Images are managed in the CMS — add or replace them at /admin."
+  },
+  "gallery": [
+    { "image": "assets/aisti-003.jpg", "title": "Surface", "meta": "Material study" },
+    { "image": "assets/aisti-026.jpg", "title": "Interior", "meta": "In place" },
+    { "image": "assets/aisti-042.jpg", "title": "Detail", "meta": "Texture" },
+    { "image": "assets/aisti-person-angtvatten.webp", "title": "In use", "meta": "Office" },
+    { "image": "assets/aisti-035.jpg", "title": "Mounted", "meta": "Detail" },
+    { "image": "assets/aisti-008.jpg", "title": "Ceiling", "meta": "In place" },
+    { "image": "assets/aisti-012.jpg", "title": "Wall", "meta": "In place" },
+    { "image": "assets/br-office-2.webp", "title": "Install", "meta": "Interior" },
+    { "image": "assets/aisti-tile-001.webp", "title": "Material", "meta": "Study" },
+    { "image": "assets/aisti-025.jpg", "title": "Workshop", "meta": "Behind the scenes" }
+  ],
   "cta": {
     "title_l1": "Register",
     "title_l2": "your interest.",

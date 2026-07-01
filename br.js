@@ -555,7 +555,7 @@
 
   /* ---------- Nav theme switch over dark sections ---------- */
   const nav = document.querySelector('.bra-nav');
-  const darkSections = document.querySelectorAll('.bra-vault, .bra-surface-oak, .bra-surface-ink, .br-logo-hero');
+  const darkSections = document.querySelectorAll('.bra-vault, .bra-surface-oak, .bra-surface-ink, .br-logo-hero, .home-hero');
   if (nav && darkSections.length) {
     const update = () => {
       const top = 80;

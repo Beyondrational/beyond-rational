@@ -38,7 +38,14 @@
       "image": "assets/wuud-sample-oak.svg",
       "title": "Translucent oak",
       "meta": "Finish sample"
-    }
+    },
+    { "image": "assets/aisti-003.jpg", "title": "Panel detail", "meta": "Surface" },
+    { "image": "assets/aisti-042.jpg", "title": "Relief, raked light", "meta": "Texture" },
+    { "image": "assets/aisti-035.jpg", "title": "Mounted", "meta": "In place" },
+    { "image": "assets/aisti-012.jpg", "title": "Cladding run", "meta": "Interior" },
+    { "image": "assets/aisti-026.jpg", "title": "Wall, daylit", "meta": "Interior" },
+    { "image": "assets/br-office-2.webp", "title": "Full height", "meta": "In place" },
+    { "image": "assets/aisti-025.jpg", "title": "Edge profile", "meta": "Detail" }
   ],
   "spec": {
     "eyebrow": "The spec",

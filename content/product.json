@@ -21,7 +21,11 @@
       { "image": "assets/aisti-035.jpg", "title": "Mounted", "meta": "Detail" },
       { "image": "assets/aisti-042.jpg", "title": "Surface, compressed", "meta": "Material study" },
       { "image": "assets/aisti-025.jpg", "title": "Workshop", "meta": "Behind the press" },
-      { "image": "assets/aisti-008.jpg", "title": "Ceiling, calm", "meta": "Product photography" }
+      { "image": "assets/aisti-008.jpg", "title": "Ceiling, calm", "meta": "Product photography" },
+      { "image": "assets/aisti-person-angtvatten.webp", "title": "In use", "meta": "Office interior" },
+      { "image": "assets/aisti-012.jpg", "title": "Wall detail", "meta": "Product photography" },
+      { "image": "assets/aisti-tile-001.webp", "title": "Wood fibre", "meta": "Material study" },
+      { "image": "assets/br-office.webp", "title": "Ceiling install", "meta": "In place" }
     ]
   },
   "cta": {
