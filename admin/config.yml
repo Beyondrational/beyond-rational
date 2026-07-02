@@ -181,6 +181,7 @@ collections:
               - { label: "Title line 2",  name: "title_l2",  widget: "string" }
               - { label: "Subtitle",      name: "subtitle",  widget: "text"   }
 
+              - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
           - label: "Image gallery (6 cells)"
             name: "gallery"
             widget: "list"
@@ -215,6 +216,7 @@ collections:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Title",   name: "title",   widget: "string" }
               - { label: "Lede",    name: "lede",    widget: "text"   }
+              - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
           - { label: "Hero note (under finishes)", name: "hero_note", widget: "text" }
 
           - label: "The idea"
@@ -294,6 +296,7 @@ collections:
               - { label: "Title",   name: "title",   widget: "string" }
               - { label: "Lede",    name: "lede",    widget: "text"   }
 
+              - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
           - label: "Material study"
             name: "material"
             widget: "object"
@@ -345,6 +348,7 @@ collections:
               - { label: "Title",   name: "title",   widget: "string" }
               - { label: "Lede",    name: "lede",    widget: "text"   }
 
+              - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
           - label: "Product rows"
             name: "items"
             widget: "list"
@@ -354,25 +358,6 @@ collections:
               - { label: "Tag",  name: "tag",  widget: "string" }
               - { label: "Body", name: "body", widget: "text"   }
               - { label: "Image (optional)", name: "image", widget: "image", required: false }
-
-          - label: "Gallery heading"
-            name: "gallery_head"
-            widget: "object"
-            fields:
-              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
-              - { label: "Title line 1", name: "title_l1", widget: "string" }
-              - { label: "Title line 2", name: "title_l2", widget: "string" }
-              - { label: "Body",         name: "body",     widget: "text"   }
-
-          - label: "Image gallery"
-            name: "gallery"
-            label_singular: "Image"
-            widget: "list"
-            summary: "{{fields.title}}"
-            fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Title", name: "title", widget: "string", required: false }
-              - { label: "Meta",  name: "meta",  widget: "string", required: false }
 
           - label: "Closing CTA"
             name: "cta"
@@ -499,6 +484,7 @@ collections:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Title",   name: "title",   widget: "string" }
               - { label: "Lede",    name: "lede",    widget: "text"   }
+              - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
           - { label: "Spec title line 1", name: "spec_title_l1", widget: "string" }
           - { label: "Spec title line 2", name: "spec_title_l2", widget: "string" }
           - label: "Gallery heading"
@@ -541,6 +527,7 @@ collections:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Title",   name: "title",   widget: "string" }
               - { label: "Lede",    name: "lede",    widget: "text"   }
+              - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
           - { label: "Spec title line 1", name: "spec_title_l1", widget: "string" }
           - { label: "Spec title line 2", name: "spec_title_l2", widget: "string" }
           - label: "Gallery heading"

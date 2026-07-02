@@ -7,7 +7,7 @@
 <meta name="description" content="Mogu — a new acoustic material in the Beyond Rational range. In development; full presentation coming soon.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=5">
+<link rel="stylesheet" href="br.css?v=11">
 <style>
   .prod-hero-panel {
     width: 100%; aspect-ratio: 16 / 7; border: 2px solid var(--bra-ink);
@@ -54,27 +54,34 @@
     <a href="projects.html"      class="bra-nav__link">Projects</a>
     <a href="contact.html"       class="bra-nav__link">Contact</a>
     <a href="design-system.html" class="bra-nav__link">Design</a>
-    <a href="index.html"         class="bra-nav__link">Studio</a>
   </div>
 </nav>
 
-<div class="bra-nav-spacer"></div>
+<!-- ===== Cinematic hero ===== -->
+<section class="home-hero home-hero--sub" data-on-dark>
+  <div class="home-hero__bg" aria-hidden="true">
+    <img src="assets/aisti-025.jpg" data-content="hero.bg_image" data-content-attr="src" alt="" width="1440" height="1920" loading="eager" fetchpriority="high">
+  </div>
+  <div class="home-hero__grain" aria-hidden="true"></div>
 
-<!-- ===== Breadcrumb + hero ===== -->
-<section class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-4);">
-  <a href="products.html" class="bra-cta" style="margin-bottom: var(--bra-s-4); display: inline-block;">← Products</a>
-  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);" data-content="hero.eyebrow">Product · In development</p>
-  <h1 class="bra-mega"><span class="bra-reveal-line" data-reveal data-content="hero.title">Mogu.</span></h1>
-  <p class="bra-lede" style="margin-top: var(--bra-s-3); max-width: 48ch;" data-content="hero.lede">
-    A new acoustic material joining the Beyond Rational range. This page is a placeholder — the full presentation, imagery, and specifications are on their way.
-  </p>
-</section>
+  <div class="bra-container home-hero__inner">
+    <header class="home-hero__top">
+      <a href="products.html" class="bra-caption home-hero__back">← Products</a>
+      <span class="bra-caption" data-content="hero.eyebrow">Product · In development</span>
+    </header>
 
-<!-- ===== Hero panel ===== -->
-<section class="bra-container" style="padding-bottom: var(--bra-s-6);">
-  <div class="prod-hero-panel">
-    <div class="prod-hero-panel__grain"></div>
-    <span class="prod-hero-panel__label">Visual coming soon</span>
+    <div class="home-hero__center">
+      <h1 class="home-hero__title">
+        <span class="bra-reveal-line" data-reveal data-content="hero.title">Mogu.</span>
+      </h1>
+      <p class="home-hero__sub" data-content="hero.lede">
+        A new acoustic material joining the Beyond Rational range. This page is a placeholder; the full presentation, imagery, and specifications are on their way.
+      </p>
+    </div>
+
+    <footer class="home-hero__foot">
+      <span class="bra-micro">Beyond Rational · Copenhagen</span>
+    </footer>
   </div>
 </section>
 
@@ -186,7 +193,7 @@
   </div>
 </footer>
 
-<script src="br.js?v=5" defer></script>
-<script src="br-content.js?v=5" defer></script>
+<script src="br.js?v=11" defer></script>
+<script src="br-content.js?v=11" defer></script>
 </body>
 </html>

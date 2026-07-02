@@ -723,3 +723,178 @@
     setToggleGlyph();
   });
 })();
+
+/* ============================================================
+   Design-system v1.1 behaviours — accordion · filter chips · lightbox
+   Event-delegated so they work on CMS-rendered content too.
+   ============================================================ */
+(function () {
+  /* ---- Accordion ---- */
+  document.addEventListener('click', function (e) {
+    var trig = e.target.closest && e.target.closest('.bra-accordion__trigger');
+    if (!trig) return;
+    var item = trig.closest('.bra-accordion__item');
+    if (!item) return;
+    var open = item.classList.toggle('is-open');
+    trig.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  /* ---- Filter chips ----
+     <div data-filter-group [data-filter-target="#grid"]>
+       <button class="bra-chip is-active" data-filter="all">All</button> ...
+     items to filter carry data-category="x" (inside group, or in target) */
+  document.addEventListener('click', function (e) {
+    var chip = e.target.closest && e.target.closest('.bra-chip[data-filter]');
+    if (!chip) return;
+    var group = chip.closest('[data-filter-group]');
+    if (!group) return;
+    var val = chip.dataset.filter;
+    group.querySelectorAll('.bra-chip').forEach(function (c) { c.classList.toggle('is-active', c === chip); });
+    var scope = group.dataset.filterTarget ? document.querySelector(group.dataset.filterTarget) : group;
+    if (!scope) return;
+    scope.querySelectorAll('[data-category]').forEach(function (it) {
+      it.style.display = (val === 'all' || it.dataset.category === val) ? '' : 'none';
+    });
+  });
+
+  /* ---- Image lightbox ----
+     Auto-enabled on .brg, .bra-gallery--img, and any [data-lightbox] container. */
+  var box = null, items = [], idx = 0, imgEl, titleEl, countEl;
+  function build() {
+    box = document.createElement('div');
+    box.className = 'bra-lightbox';
+    box.setAttribute('aria-hidden', 'true');
+    box.setAttribute('role', 'dialog');
+    box.innerHTML =
+      '<button class="bra-lightbox__close" type="button" aria-label="Close">✕</button>' +
+      '<button class="bra-lightbox__nav bra-lightbox__nav--prev" type="button" aria-label="Previous">‹</button>' +
+      '<button class="bra-lightbox__nav bra-lightbox__nav--next" type="button" aria-label="Next">›</button>' +
+      '<div class="bra-lightbox__stage"><img class="bra-lightbox__img" alt="">' +
+      '<div class="bra-lightbox__cap"><span data-lb-title></span><span data-lb-count></span></div></div>';
+    document.body.appendChild(box);
+    imgEl = box.querySelector('.bra-lightbox__img');
+    titleEl = box.querySelector('[data-lb-title]');
+    countEl = box.querySelector('[data-lb-count]');
+    box.querySelector('.bra-lightbox__close').addEventListener('click', close);
+    box.querySelector('.bra-lightbox__nav--prev').addEventListener('click', function (e) { e.stopPropagation(); show(idx - 1); });
+    box.querySelector('.bra-lightbox__nav--next').addEventListener('click', function (e) { e.stopPropagation(); show(idx + 1); });
+    box.addEventListener('click', function (e) { if (e.target === box) close(); });
+  }
+  function show(i) {
+    if (!items.length) return;
+    idx = (i + items.length) % items.length;
+    var it = items[idx];
+    imgEl.src = it.src; imgEl.alt = it.alt || '';
+    titleEl.textContent = it.title || '';
+    countEl.textContent = (idx + 1) + ' / ' + items.length;
+  }
+  function open(list, i) {
+    if (!box) build();
+    items = list;
+    box.classList.add('is-open'); box.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    show(i);
+  }
+  function close() {
+    if (!box) return;
+    box.classList.remove('is-open'); box.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('click', function (e) {
+    var img = e.target.closest && e.target.closest('img');
+    if (!img) return;
+    var group = img.closest('[data-lightbox], .brg, .bra-gallery--img');
+    if (!group) return;
+    var imgs = Array.prototype.slice.call(group.querySelectorAll('img'));
+    var i = imgs.indexOf(img);
+    if (i < 0) return;
+    var list = imgs.map(function (m) {
+      var fig = m.closest('figure, .bra-gallery-cell');
+      var t = fig && fig.querySelector('.brg__title, .bra-gallery-img__title');
+      return { src: m.currentSrc || m.src, alt: m.alt, title: t ? t.textContent : (m.alt || '') };
+    });
+    open(list, i);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (!box || !box.classList.contains('is-open')) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') show(idx - 1);
+    else if (e.key === 'ArrowRight') show(idx + 1);
+  });
+})();
+
+/* ============================================================
+   Design-system v1.2 behaviours
+   sub-nav scrollspy · back-to-top · cookie banner · form validation
+   ============================================================ */
+(function () {
+  /* ---- Sticky sub-nav scrollspy ---- */
+  document.querySelectorAll('[data-subnav]').forEach(function (nav) {
+    var links = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]'));
+    var map = links.map(function (l) { return { l: l, sec: document.querySelector(l.getAttribute('href')) }; })
+                   .filter(function (x) { return x.sec; });
+    if (!map.length) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (l) { l.classList.remove('is-active'); });
+        var m = map.find(function (x) { return x.sec === e.target; });
+        if (m) m.l.classList.add('is-active');
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    map.forEach(function (m) { io.observe(m.sec); });
+  });
+
+  /* ---- Back-to-top (auto-injected once) ---- */
+  var totop = document.querySelector('.bra-totop');
+  if (!totop) {
+    totop = document.createElement('button');
+    totop.className = 'bra-totop'; totop.type = 'button'; totop.setAttribute('aria-label', 'Back to top');
+    totop.innerHTML = '↑';
+    document.body.appendChild(totop);
+  }
+  var onScroll = function () { totop.classList.toggle('is-visible', window.pageYOffset > window.innerHeight * 0.8); };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  totop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: (window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth') });
+  });
+
+  /* ---- Cookie / consent banner (opt-in via [data-cookie]) ---- */
+  var cookie = document.querySelector('[data-cookie]');
+  if (cookie) {
+    var KEY = 'brConsent';
+    if (!localStorage.getItem(KEY)) {
+      setTimeout(function () { cookie.classList.add('is-in'); }, 800);
+    }
+    cookie.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-consent]');
+      if (!btn) return;
+      localStorage.setItem(KEY, btn.dataset.consent); // "accept" | "decline"
+      cookie.classList.remove('is-in');
+      document.dispatchEvent(new CustomEvent('br-consent', { detail: btn.dataset.consent }));
+    });
+  }
+
+  /* ---- Form validation (opt-in via [data-validate]) ---- */
+  document.querySelectorAll('form[data-validate]').forEach(function (form) {
+    // 'invalid' fires per control when the form is validated, even though the
+    // browser then blocks submit — mark the field so our styled error shows.
+    form.addEventListener('invalid', function (e) {
+      var field = e.target.closest && e.target.closest('.bra-field');
+      if (field) field.classList.add('is-error');
+    }, true);
+    // On submit attempt, focus the first invalid control.
+    form.addEventListener('submit', function () {
+      var bad = form.querySelector(':invalid');
+      if (bad) { var f = bad.closest('.bra-field'); if (f) f.classList.add('is-error'); bad.focus(); }
+    });
+    // Clear the error state as soon as the control becomes valid again.
+    form.querySelectorAll('.bra-field input, .bra-field textarea, .bra-field select').forEach(function (ctrl) {
+      ctrl.addEventListener('input', function () {
+        var field = ctrl.closest('.bra-field');
+        if (field && field.classList.contains('is-error') && ctrl.checkValidity()) field.classList.remove('is-error');
+      });
+    });
+  });
+})();

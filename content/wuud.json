@@ -2,7 +2,8 @@
   "hero": {
     "eyebrow": "Product · Embossed wood cladding",
     "title": "Wuud.",
-    "lede": "Embossed wooden cladding for interior and exterior architecture. Real wood — birch, alder, aspen, pine — modified to hold deep relief, then finished natural, translucent or painted. Developed in Finland; brought to Denmark by Beyond Rational."
+    "lede": "Embossed wooden cladding for interior and exterior architecture. Real wood — birch, alder, aspen, pine — modified to hold deep relief, then finished natural, translucent or painted. Developed in Finland; brought to Denmark by Beyond Rational.",
+    "bg_image": "assets/aisti-042.jpg"
   },
   "hero_note": "Surfaces shown are an indicative rendering of the finish range. Final samples and patterns on request.",
   "idea": {
@@ -10,12 +11,29 @@
     "title_l1": "Wood, worked",
     "title_l2": "into relief.",
     "points": [
-      { "num": "01", "title": "Embossed, not printed", "body": "A novel wood-modifying process presses pattern into the surface of real timber — true depth that catches light and throws shadow. Standard patterns or fully custom." },
-      { "num": "02", "title": "Inside and out", "body": "The same modification that forms the relief weatherproofs the wood and adds fire retardancy — so one panel language runs from interior walls to building façades." },
-      { "num": "03", "title": "From Finnish research", "body": "Developed out of a Business Finland & Aalto University research programme. Conscious, contemporary cladding — now available through Beyond Rational in Denmark." }
+      {
+        "num": "01",
+        "title": "Embossed, not printed",
+        "body": "A novel wood-modifying process presses pattern into the surface of real timber — true depth that catches light and throws shadow. Standard patterns or fully custom."
+      },
+      {
+        "num": "02",
+        "title": "Inside and out",
+        "body": "The same modification that forms the relief weatherproofs the wood and adds fire retardancy — so one panel language runs from interior walls to building façades."
+      },
+      {
+        "num": "03",
+        "title": "From Finnish research",
+        "body": "Developed out of a Business Finland & Aalto University research programme. Conscious, contemporary cladding — now available through Beyond Rational in Denmark."
+      }
     ],
     "species_label": "Wood species",
-    "species": ["Birch", "Alder", "Aspen", "Pine"]
+    "species": [
+      "Birch",
+      "Alder",
+      "Aspen",
+      "Pine"
+    ]
   },
   "gallery_head": {
     "eyebrow": "Gallery",
@@ -39,28 +57,83 @@
       "title": "Translucent oak",
       "meta": "Finish sample"
     },
-    { "image": "assets/aisti-003.jpg", "title": "Panel detail", "meta": "Surface" },
-    { "image": "assets/aisti-042.jpg", "title": "Relief, raked light", "meta": "Texture" },
-    { "image": "assets/aisti-035.jpg", "title": "Mounted", "meta": "In place" },
-    { "image": "assets/aisti-012.jpg", "title": "Cladding run", "meta": "Interior" },
-    { "image": "assets/aisti-026.jpg", "title": "Wall, daylit", "meta": "Interior" },
-    { "image": "assets/br-office-2.webp", "title": "Full height", "meta": "In place" },
-    { "image": "assets/aisti-025.jpg", "title": "Edge profile", "meta": "Detail" }
+    {
+      "image": "assets/aisti-003.jpg",
+      "title": "Panel detail",
+      "meta": "Surface"
+    },
+    {
+      "image": "assets/aisti-042.jpg",
+      "title": "Relief, raked light",
+      "meta": "Texture"
+    },
+    {
+      "image": "assets/aisti-035.jpg",
+      "title": "Mounted",
+      "meta": "In place"
+    },
+    {
+      "image": "assets/aisti-012.jpg",
+      "title": "Cladding run",
+      "meta": "Interior"
+    },
+    {
+      "image": "assets/aisti-026.jpg",
+      "title": "Wall, daylit",
+      "meta": "Interior"
+    },
+    {
+      "image": "assets/br-office-2.webp",
+      "title": "Full height",
+      "meta": "In place"
+    },
+    {
+      "image": "assets/aisti-025.jpg",
+      "title": "Edge profile",
+      "meta": "Detail"
+    }
   ],
   "spec": {
     "eyebrow": "The spec",
     "title_l1": "Real wood,",
     "title_l2": "made to last.",
     "rows": [
-      { "key": "Type", "value": "Embossed wood cladding" },
-      { "key": "Use", "value": "Interior & exterior" },
-      { "key": "Species", "value": "Birch · Alder · Aspen · Pine" },
-      { "key": "Finishes", "value": "Natural · Translucent · Painted" },
-      { "key": "Patterns", "value": "Standard & custom" },
-      { "key": "Surface", "value": "Embossed, weatherproofed" },
-      { "key": "Fire", "value": "Fire-retardant treatment" },
-      { "key": "Origin", "value": "Made in Finland" },
-      { "key": "Formats", "value": "On request" }
+      {
+        "key": "Type",
+        "value": "Embossed wood cladding"
+      },
+      {
+        "key": "Use",
+        "value": "Interior & exterior"
+      },
+      {
+        "key": "Species",
+        "value": "Birch · Alder · Aspen · Pine"
+      },
+      {
+        "key": "Finishes",
+        "value": "Natural · Translucent · Painted"
+      },
+      {
+        "key": "Patterns",
+        "value": "Standard & custom"
+      },
+      {
+        "key": "Surface",
+        "value": "Embossed, weatherproofed"
+      },
+      {
+        "key": "Fire",
+        "value": "Fire-retardant treatment"
+      },
+      {
+        "key": "Origin",
+        "value": "Made in Finland"
+      },
+      {
+        "key": "Formats",
+        "value": "On request"
+      }
     ]
   },
   "cta": {

@@ -7,7 +7,7 @@
 <meta name="description" content="Cases: demo installations with the Aisti® Acoustic Tile in Stockholm and Helsinki, delivered from the pilot plant in Jyväskylä, Finland.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=3">
+<link rel="stylesheet" href="br.css?v=11">
 <style>
   .project-row {
     display: grid;
@@ -84,20 +84,34 @@
     <a href="projects.html"      class="bra-nav__link" aria-current="page">Projects</a>
     <a href="contact.html"       class="bra-nav__link">Contact</a>
     <a href="design-system.html" class="bra-nav__link">Design</a>
-    <a href="index.html"         class="bra-nav__link">Home</a>
   </div>
 </nav>
 
-<div class="bra-nav-spacer"></div>
+<!-- ===== Cinematic hero ===== -->
+<section class="home-hero home-hero--sub" data-on-dark>
+  <div class="home-hero__bg" aria-hidden="true">
+    <img src="assets/aisti-026.jpg" data-content="hero.bg_image" data-content-attr="src" alt="" width="1920" height="1371" loading="eager" fetchpriority="high">
+  </div>
+  <div class="home-hero__grain" aria-hidden="true"></div>
 
-<!-- ===== Hero ===== -->
-<section class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-4);">
-  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);" data-content="hero.eyebrow">Cases</p>
-  <h1 class="bra-mega">
-    <span class="bra-reveal-line" data-reveal data-content="hero.title_l1">Tiles</span><br>
-    <span class="bra-reveal-line" data-reveal data-content="hero.title_l2">in place.</span>
-  </h1>
-  <p class="bra-lede" style="margin-top: var(--bra-s-3); max-width: 50ch;" data-content="hero.subtitle">Demo installations with the Aisti® tile, delivered from the pilot plant in Jyväskylä, Finland, and installed by professional teams.</p>
+  <div class="bra-container home-hero__inner">
+    <header class="home-hero__top">
+      <a href="index.html" class="bra-caption home-hero__back">← Home</a>
+      <span class="bra-caption" data-content="hero.eyebrow">Cases</span>
+    </header>
+
+    <div class="home-hero__center">
+      <h1 class="home-hero__title">
+        <span class="bra-reveal-line" data-reveal data-content="hero.title_l1">Tiles</span><br>
+        <span class="bra-reveal-line" data-reveal data-content="hero.title_l2">in place.</span>
+      </h1>
+      <p class="home-hero__sub" data-content="hero.subtitle">Demo installations with the Aisti® tile, delivered from the pilot plant in Jyväskylä, Finland, and installed by professional teams.</p>
+    </div>
+
+    <footer class="home-hero__foot">
+      <span class="bra-micro">Beyond Rational · Copenhagen</span>
+    </footer>
+  </div>
 </section>
 
 <!-- ===== Image gallery ===== -->
@@ -267,7 +281,7 @@
   </div>
 </footer>
 
-<script src="br.js?v=3" defer></script>
-<script src="br-content.js?v=3" defer></script>
+<script src="br.js?v=11" defer></script>
+<script src="br-content.js?v=11" defer></script>
 </body>
 </html>

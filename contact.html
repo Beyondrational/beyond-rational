@@ -7,7 +7,7 @@
 <meta name="description" content="Request a sample box. Specify Aisti for your project. Visit the studio in Copenhagen.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=6">
+<link rel="stylesheet" href="br.css?v=11">
 <style>
   /* Form fields tuned for v1 design system */
   .bra-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: var(--bra-s-2); }
@@ -66,22 +66,36 @@
     <a href="projects.html"      class="bra-nav__link">Projects</a>
     <a href="contact.html"       class="bra-nav__link" aria-current="page">Contact</a>
     <a href="design-system.html" class="bra-nav__link">Design</a>
-    <a href="index.html"         class="bra-nav__link">Home</a>
   </div>
 </nav>
 
-<div class="bra-nav-spacer"></div>
+<!-- ===== Cinematic hero ===== -->
+<section class="home-hero home-hero--sub" data-on-dark>
+  <div class="home-hero__bg" aria-hidden="true">
+    <img src="assets/br-office-2.webp" alt="" width="1282" height="1920" loading="eager" fetchpriority="high">
+  </div>
+  <div class="home-hero__grain" aria-hidden="true"></div>
 
-<!-- ===== Hero ===== -->
-<section class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-4);">
-  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);">Specify · sample · visit</p>
-  <h1 class="bra-mega">
-    <span class="bra-reveal-line" data-reveal>Tell us</span><br>
-    <span class="bra-reveal-line" data-reveal>about the room.</span>
-  </h1>
-  <p class="bra-lede" style="margin-top: var(--bra-s-3); max-width: 50ch;">
-    Pick a path below. The form fits the conversation — sample, project spec, or general information. We answer Monday to Friday.
-  </p>
+  <div class="bra-container home-hero__inner">
+    <header class="home-hero__top">
+      <a href="index.html" class="bra-caption home-hero__back">← Home</a>
+      <span class="bra-caption">Specify · sample · visit</span>
+    </header>
+
+    <div class="home-hero__center">
+      <h1 class="home-hero__title">
+        <span class="bra-reveal-line" data-reveal>Tell us</span><br>
+        <span class="bra-reveal-line" data-reveal>about the room.</span>
+      </h1>
+      <p class="home-hero__sub">
+        Pick a path below. The form fits the conversation: sample, project spec, or general information. We answer Monday to Friday.
+      </p>
+    </div>
+
+    <footer class="home-hero__foot">
+      <span class="bra-micro">Beyond Rational · Copenhagen</span>
+    </footer>
+  </div>
 </section>
 
 <!-- ===== Contact cards ===== -->
@@ -303,7 +317,7 @@
 
       <div style="max-width: 560px;">
         <!-- Form 1 — Sample box -->
-        <form action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="sample" class="is-active">
+        <form data-validate action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="sample" class="is-active">
           <div class="bra-field">
             <label class="bra-field__label" for="s-name">Full name *</label>
             <input class="bra-field__input" type="text" name="contact_name" id="s-name" required autocomplete="name">
@@ -342,7 +356,7 @@
         </form>
 
         <!-- Form 2 — Specify for project -->
-        <form action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="specify">
+        <form data-validate action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="specify">
           <div class="bra-field">
             <label class="bra-field__label" for="p-name">Full name *</label>
             <input class="bra-field__input" type="text" name="contact_name" id="p-name" required autocomplete="name">
@@ -409,7 +423,7 @@
         </form>
 
         <!-- Form 3 — Information -->
-        <form action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="info">
+        <form data-validate action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="info">
           <div class="bra-field">
             <label class="bra-field__label" for="i-name">Full name *</label>
             <input class="bra-field__input" type="text" name="contact_name" id="i-name" required autocomplete="name">
@@ -452,7 +466,7 @@
         </form>
 
         <!-- Form 4 — Other -->
-        <form action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="other">
+        <form data-validate action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="other">
           <div class="bra-field">
             <label class="bra-field__label" for="o-name">Full name *</label>
             <input class="bra-field__input" type="text" name="contact_name" id="o-name" required autocomplete="name">
@@ -582,7 +596,7 @@
   </div>
 </footer>
 
-<script src="br.js?v=6" defer></script>
-<script src="br-content.js?v=6" defer></script>
+<script src="br.js?v=11" defer></script>
+<script src="br-content.js?v=11" defer></script>
 </body>
 </html>

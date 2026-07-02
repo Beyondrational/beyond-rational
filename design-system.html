@@ -6,7 +6,7 @@
 <title>Beyond Rational · v0.2 · Reference</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=3">
+<link rel="stylesheet" href="br.css?v=11">
 </head>
 <body class="bra">
 
@@ -38,7 +38,6 @@
     <a href="projects.html"      class="bra-nav__link">Projects</a>
     <a href="contact.html"       class="bra-nav__link">Contact</a>
     <a href="design-system.html" class="bra-nav__link" aria-current="page">Design</a>
-    <a href="index.html"         class="bra-nav__link">Home</a>
   </div>
 </nav>
 
@@ -692,6 +691,198 @@
 </section>
 
 <!-- =====================================================
+     N / COMPONENTS v1.1 — new building blocks
+     ===================================================== -->
+<section class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);">N · New components (v1.1)</p>
+  <h2 class="bra-h1" style="margin-bottom: var(--bra-s-5);">More to build with.</h2>
+
+  <!-- Tags -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Tags</p>
+  <div style="display: flex; gap: var(--bra-s-2); flex-wrap: wrap; margin-bottom: var(--bra-s-5);">
+    <span class="bra-tag">Available 2026</span>
+    <span class="bra-tag bra-tag--oak">Class A</span>
+    <span class="bra-tag bra-tag--solid">New</span>
+  </div>
+
+  <!-- Filter chips -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Filter chips</p>
+  <div data-filter-group data-filter-target="#ds-chip-demo" style="margin-bottom: var(--bra-s-3);">
+    <div class="bra-chips">
+      <button class="bra-chip is-active" data-filter="all">All</button>
+      <button class="bra-chip" data-filter="acoustic">Acoustic</button>
+      <button class="bra-chip" data-filter="cladding">Cladding</button>
+    </div>
+  </div>
+  <div id="ds-chip-demo" style="display: flex; gap: var(--bra-s-2); flex-wrap: wrap; margin-bottom: var(--bra-s-5);">
+    <span class="bra-tag" data-category="acoustic">Aisti</span>
+    <span class="bra-tag" data-category="cladding">Wuud</span>
+    <span class="bra-tag" data-category="acoustic">Sappa</span>
+    <span class="bra-tag" data-category="cladding">Mogu</span>
+  </div>
+
+  <!-- Steps -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Steps · how it works</p>
+  <div class="bra-steps" style="margin-bottom: var(--bra-s-5);">
+    <div class="bra-step"><p class="bra-step__num">01</p><h3 class="bra-step__title">Specify</h3><p class="bra-step__body">Send the brief. We help you pick material, format and mounting.</p></div>
+    <div class="bra-step"><p class="bra-step__num">02</p><h3 class="bra-step__title">Sample</h3><p class="bra-step__body">Order physical samples in the finishes you are considering.</p></div>
+    <div class="bra-step"><p class="bra-step__num">03</p><h3 class="bra-step__title">Install</h3><p class="bra-step__body">Delivered from Jyväskylä and installed by professional teams.</p></div>
+  </div>
+
+  <!-- Stats -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Stats band</p>
+  <div class="bra-stats" style="margin-bottom: var(--bra-s-5);">
+    <div class="bra-stats__cell"><div class="bra-stats__num">A</div><div class="bra-stats__label">Absorption class</div></div>
+    <div class="bra-stats__cell"><div class="bra-stats__num">−2.55</div><div class="bra-stats__label">kg CO₂e per tile</div></div>
+    <div class="bra-stats__cell"><div class="bra-stats__num">100%</div><div class="bra-stats__label">Recyclable</div></div>
+  </div>
+
+  <!-- Logo wall -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Partner wall</p>
+  <div class="bra-logos" style="margin-bottom: var(--bra-s-5);">
+    <span class="bra-logos__item">Aisti®</span>
+    <span class="bra-logos__item">Aalto University</span>
+    <span class="bra-logos__item">Business Finland</span>
+  </div>
+
+  <!-- Callout + ghost button -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Callout &amp; secondary button</p>
+  <div class="bra-callout" style="margin-bottom: var(--bra-s-3);">
+    <span class="bra-callout__label">Lead time</span>
+    <p class="bra-callout__body">Full production capacity from August 2026. Preorders and samples ship from the pilot plant now.</p>
+  </div>
+  <div style="display: flex; gap: var(--bra-s-2); flex-wrap: wrap; margin-bottom: var(--bra-s-5); align-items: center;">
+    <button class="bra-btn-ghost">Request samples</button>
+    <button class="bra-btn-ghost" disabled>Disabled</button>
+  </div>
+
+  <!-- Accordion -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Accordion · FAQ</p>
+  <div class="bra-accordion" data-accordion style="margin-bottom: var(--bra-s-5);">
+    <div class="bra-accordion__item">
+      <button class="bra-accordion__trigger" aria-expanded="false"><span>What is the Aisti® tile made of?</span><span class="bra-accordion__icon" aria-hidden="true"></span></button>
+      <div class="bra-accordion__panel"><div class="bra-accordion__inner"><p class="bra-accordion__body">Foam-formed natural wood fibre. No synthetic binders, no plastics, no irritating fibres.</p></div></div>
+    </div>
+    <div class="bra-accordion__item">
+      <button class="bra-accordion__trigger" aria-expanded="false"><span>Can I get custom colours?</span><span class="bra-accordion__icon" aria-hidden="true"></span></button>
+      <div class="bra-accordion__panel"><div class="bra-accordion__inner"><p class="bra-accordion__body">Yes. Contact us for the current colour programme and custom options.</p></div></div>
+    </div>
+  </div>
+
+  <!-- Pager -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Prev / next pager</p>
+  <nav class="bra-pager">
+    <a class="bra-pager__link bra-pager__link--prev" href="#"><span class="bra-pager__dir">← Previous</span><span class="bra-pager__title">Ångtvätten 22</span></a>
+    <a class="bra-pager__link bra-pager__link--next" href="#"><span class="bra-pager__dir">Next →</span><span class="bra-pager__title">Bulevardi 2</span></a>
+  </nav>
+
+  <p class="bra-body" style="margin-top: var(--bra-s-4); color: var(--bra-ink-2);">Image lightbox is enabled automatically on every gallery (<code>.brg</code>, <code>.bra-gallery--img</code>) and any <code>[data-lightbox]</code> container — click an image above in section H to open it.</p>
+</section>
+
+<!-- =====================================================
+     O / COMPONENTS v1.2 — specifier-facing blocks
+     ===================================================== -->
+<section class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);">O · New components (v1.2)</p>
+  <h2 class="bra-h1" style="margin-bottom: var(--bra-s-5);">For architects &amp; specifiers.</h2>
+
+  <!-- Downloads -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Downloads · documents</p>
+  <div class="bra-downloads" style="margin-bottom: var(--bra-s-5);">
+    <a class="bra-download" href="#" download>
+      <span class="bra-download__icon"><svg viewBox="0 0 24 24"><path d="M6 3h9l5 5v13a0 0 0 0 1 0 0H6z"/><path d="M15 3v5h5"/></svg></span>
+      <span class="bra-download__main"><span class="bra-download__title">Aisti® Aalto — data sheet</span><span class="bra-download__meta">PDF · 1.2 MB</span></span>
+      <span class="bra-download__dl" aria-hidden="true">↓</span>
+    </a>
+    <a class="bra-download" href="#" download>
+      <span class="bra-download__icon"><svg viewBox="0 0 24 24"><path d="M6 3h9l5 5v13H6z"/><path d="M15 3v5h5"/></svg></span>
+      <span class="bra-download__main"><span class="bra-download__title">Environmental Product Declaration (EPD)</span><span class="bra-download__meta">PDF · 640 KB</span></span>
+      <span class="bra-download__dl" aria-hidden="true">↓</span>
+    </a>
+    <a class="bra-download" href="#" download>
+      <span class="bra-download__icon"><svg viewBox="0 0 24 24"><path d="M6 3h9l5 5v13H6z"/><path d="M15 3v5h5"/></svg></span>
+      <span class="bra-download__main"><span class="bra-download__title">Installation guide + BIM object</span><span class="bra-download__meta">ZIP · 8.4 MB</span></span>
+      <span class="bra-download__dl" aria-hidden="true">↓</span>
+    </a>
+  </div>
+
+  <!-- Comparison table -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Comparison table</p>
+  <div class="bra-compare-wrap" style="margin-bottom: var(--bra-s-5);">
+    <table class="bra-compare">
+      <thead><tr><th scope="col">&nbsp;</th><th scope="col" class="bra-compare__hi">Aisti® Aalto</th><th scope="col">Mineral wool</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Absorption</th><td>Class A</td><td>Class A</td></tr>
+        <tr><th scope="row">Material</th><td>Natural wood fibre</td><td>Mineral fibre</td></tr>
+        <tr><th scope="row">Binders</th><td>None</td><td>Synthetic</td></tr>
+        <tr><th scope="row">End of life</th><td>100% recyclable</td><td>Landfill</td></tr>
+        <tr><th scope="row">Footprint</th><td>−2.55 kg CO₂e</td><td>Positive</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Feature grid -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Feature grid</p>
+  <div class="bra-features" style="margin-bottom: var(--bra-s-5);">
+    <div class="bra-feature">
+      <span class="bra-feature__icon"><svg viewBox="0 0 24 24"><path d="M4 20C4 11 11 4 20 4c0 9-7 16-16 16Z"/><path d="M4 20C9 15 13 11 18 8"/></svg></span>
+      <h3 class="bra-feature__title">Bio-based</h3>
+      <p class="bra-feature__body">Natural wood fibre, no synthetic binders, no plastics, no irritating fibres.</p>
+    </div>
+    <div class="bra-feature">
+      <span class="bra-feature__icon"><svg viewBox="0 0 24 24"><path d="M4 12h2M8 6v12M12 3v18M16 7v10M20 11v2"/></svg></span>
+      <h3 class="bra-feature__title">Absorption Class A</h3>
+      <p class="bra-feature__body">Broadband sound absorption across the frequencies where speech lives.</p>
+    </div>
+    <div class="bra-feature">
+      <span class="bra-feature__icon"><svg viewBox="0 0 24 24"><path d="M8 5l-4 4 4 4"/><path d="M4 9h11a5 5 0 0 1 5 5v1"/><path d="M16 19l4-4-4-4"/></svg></span>
+      <h3 class="bra-feature__title">100% recyclable</h3>
+      <p class="bra-feature__body">A negative carbon footprint per tile and a fully recyclable end of life.</p>
+    </div>
+  </div>
+
+  <!-- Testimonial -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Testimonial</p>
+  <div class="bra-testimonial" style="margin-bottom: var(--bra-s-5);">
+    <p class="bra-testimonial__quote">The ceiling reads as a <em>calm, neutral surface</em> — you would never guess it is doing acoustic work.</p>
+    <div class="bra-testimonial__attr">
+      <img class="bra-testimonial__avatar" src="assets/portrait-1662451190177.jpeg" alt="">
+      <span><span class="bra-testimonial__name" style="display:block;">Project architect</span><span class="bra-testimonial__role">Vandkunsten, Copenhagen</span></span>
+    </div>
+  </div>
+
+  <!-- Form states -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Form states</p>
+  <div class="bra-form-note bra-form-note--success">Thanks — your request is on its way. We answer Monday to Friday.</div>
+  <div class="bra-form-note bra-form-note--error">Something went wrong. Please check the highlighted fields and try again.</div>
+  <div class="bra-field is-error" style="max-width: 360px; margin-top: var(--bra-s-2);">
+    <label class="bra-field__label" for="ds-demo-email">Email *</label>
+    <input class="bra-field__input" id="ds-demo-email" type="email" value="not-an-email">
+    <span class="bra-field__error">Enter a valid email address.</span>
+  </div>
+
+  <!-- Newsletter -->
+  <p class="bra-caption" style="margin: var(--bra-s-5) 0 var(--bra-s-3);">Newsletter</p>
+  <form class="bra-newsletter" style="margin-bottom: var(--bra-s-5);" onsubmit="return false;">
+    <input type="email" placeholder="you@studio.com" aria-label="Email">
+    <button type="submit">Subscribe</button>
+  </form>
+
+  <!-- Sub-nav note -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Sticky sub-nav &amp; back-to-top</p>
+  <p class="bra-body" style="color: var(--bra-ink-2);">A sticky anchor nav (<code>.bra-subnav</code> with <code>data-subnav</code>) highlights the section in view — best on long product pages. The back-to-top button is injected automatically and appears once you scroll past one screen (bottom-right).</p>
+</section>
+
+<!-- Consent banner (demo — appears once, choice stored in localStorage) -->
+<div class="bra-cookie" data-cookie>
+  <p class="bra-cookie__text">We use minimal cookies to understand what works. See the <a href="#">privacy notice</a>.</p>
+  <div class="bra-cookie__actions">
+    <button class="bra-cookie__btn" data-consent="decline">Decline</button>
+    <button class="bra-cookie__btn bra-cookie__btn--accept" data-consent="accept">Accept</button>
+  </div>
+</div>
+
+<!-- =====================================================
      FOOTER — closing oak band
      ===================================================== -->
 <footer class="bra-footer">
@@ -731,7 +922,7 @@
   </div>
 </footer>
 
-<script src="br.js?v=3" defer></script>
+<script src="br.js?v=11" defer></script>
 
 </body>
 </html>

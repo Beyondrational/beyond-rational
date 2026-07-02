@@ -3,18 +3,53 @@
     "eyebrow": "Cases",
     "title_l1": "Tiles",
     "title_l2": "in place.",
-    "subtitle": "Demo installations with the Aisti® tile, delivered from the pilot plant in Jyväskylä, Finland, and installed by professional teams."
+    "subtitle": "Demo installations with the Aisti® tile, delivered from the pilot plant in Jyväskylä, Finland, and installed by professional teams.",
+    "bg_image": "assets/aisti-026.jpg"
   },
   "gallery": [
-    { "image": "assets/aisti-026.jpg", "title": "Aisti® tile, interior", "meta": "Product photography" },
-    { "image": "assets/aisti-003.jpg", "title": "Tile, raked light", "meta": "Material study" },
-    { "image": "assets/aisti-035.jpg", "title": "Surface detail", "meta": "Material study" },
-    { "image": "assets/aisti-042.jpg", "title": "Wood fibre, compressed", "meta": "Material study" },
-    { "image": "assets/aisti-025.jpg", "title": "Behind the press", "meta": "Production" },
-    { "image": "assets/aisti-008.jpg", "title": "Ceiling, calm", "meta": "Product photography" }
+    {
+      "image": "assets/aisti-026.jpg",
+      "title": "Aisti® tile, interior",
+      "meta": "Product photography"
+    },
+    {
+      "image": "assets/aisti-003.jpg",
+      "title": "Tile, raked light",
+      "meta": "Material study"
+    },
+    {
+      "image": "assets/aisti-035.jpg",
+      "title": "Surface detail",
+      "meta": "Material study"
+    },
+    {
+      "image": "assets/aisti-042.jpg",
+      "title": "Wood fibre, compressed",
+      "meta": "Material study"
+    },
+    {
+      "image": "assets/aisti-025.jpg",
+      "title": "Behind the press",
+      "meta": "Production"
+    },
+    {
+      "image": "assets/aisti-008.jpg",
+      "title": "Ceiling, calm",
+      "meta": "Product photography"
+    }
   ],
   "list": [
-    { "num": "01 /", "title": "Ångtvätten 22", "meta": "Stockholm · Office well-being · 600×600, 20 mm, dark blue", "year": "SE" },
-    { "num": "02 /", "title": "Bulevardi 2",   "meta": "Helsinki · Echo reduction · 600×1200, 40 mm, white",      "year": "FI" }
+    {
+      "num": "01 /",
+      "title": "Ångtvätten 22",
+      "meta": "Stockholm · Office well-being · 600×600, 20 mm, dark blue",
+      "year": "SE"
+    },
+    {
+      "num": "02 /",
+      "title": "Bulevardi 2",
+      "meta": "Helsinki · Echo reduction · 600×1200, 40 mm, white",
+      "year": "FI"
+    }
   ]
 }
