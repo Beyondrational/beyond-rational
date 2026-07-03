@@ -2411,3 +2411,94 @@ body.bra-nav-locked { overflow: hidden; }
 .bra-newsletter input:focus { outline: none; }
 .bra-newsletter button { background: none; border: 0; cursor: pointer; font-family: var(--bra-font); font-weight: 700;
   font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: inherit; padding: 0 4px; white-space: nowrap; }
+
+/* ============================================================
+   Design-system additions v1.3 — Comparison & proof
+   CO2 savings calculator · versus card · proof matrix
+   ============================================================ */
+
+/* ---------- CO2 savings calculator ---------- */
+.bra-co2calc { display: grid; gap: var(--bra-s-4); }
+.bra-co2calc__control { display: grid; gap: var(--bra-s-2); }
+.bra-co2calc__ctrl-top { display: flex; justify-content: space-between; align-items: baseline; gap: var(--bra-s-3); }
+.bra-co2calc__label { font-family: var(--bra-font); font-weight: 600; font-size: 11px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--bra-ink-2); }
+.bra-co2calc__area { font-family: var(--bra-font); font-weight: 300; font-size: clamp(28px, 3vw, 44px);
+  line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.bra-co2calc__range { -webkit-appearance: none; appearance: none; width: 100%; height: 2px; background: rgba(28,28,26,0.2);
+  outline: none; cursor: pointer; }
+.bra-co2calc__range::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 20px; height: 20px;
+  border-radius: 999px; background: var(--bra-ink); cursor: pointer; border: 3px solid var(--bra-paper); }
+.bra-co2calc__range::-moz-range-thumb { width: 20px; height: 20px; border-radius: 999px; background: var(--bra-ink);
+  cursor: pointer; border: 3px solid var(--bra-paper); }
+
+.bra-co2calc__rows { display: grid; gap: var(--bra-s-3); }
+.bra-co2calc__row { display: grid; grid-template-columns: minmax(120px, 1.2fr) 3fr minmax(90px, auto);
+  gap: var(--bra-s-3); align-items: center; }
+.bra-co2calc__name { font-family: var(--bra-font); font-weight: 500; font-size: 15px; letter-spacing: -0.005em; }
+.bra-co2calc__row[data-ours] .bra-co2calc__name { font-weight: 600; }
+.bra-co2calc__note { display: block; font-weight: 500; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--bra-ink-2); margin-top: 2px; }
+.bra-co2calc__bar { position: relative; height: 14px; background: rgba(28,28,26,0.06); }
+.bra-co2calc__bar::before { content: ""; position: absolute; left: 50%; top: -3px; bottom: -3px; width: 1px; background: rgba(28,28,26,0.35); }
+.bra-co2calc__fill { position: absolute; top: 0; bottom: 0; width: 0;
+  transition: left var(--bra-dur-base) var(--bra-ease), width var(--bra-dur-base) var(--bra-ease); }
+.bra-co2calc__row[data-ours] .bra-co2calc__fill { background: var(--bra-oak-warm); }
+.bra-co2calc__row:not([data-ours]) .bra-co2calc__fill { background: #a5382c; }
+.bra-co2calc__val { font-family: var(--bra-font); font-weight: 500; font-size: 15px; text-align: right;
+  font-variant-numeric: tabular-nums; }
+
+.bra-co2calc__result { border-top: 2px solid var(--bra-ink); padding-top: var(--bra-s-3);
+  display: flex; justify-content: space-between; align-items: baseline; gap: var(--bra-s-3); flex-wrap: wrap; }
+.bra-co2calc__save-num { font-family: var(--bra-font); font-weight: 300; font-size: clamp(40px, 5.5vw, 76px);
+  line-height: 1; letter-spacing: -0.026em; font-variant-numeric: tabular-nums; }
+.bra-co2calc__save-lbl { font-family: var(--bra-font); font-weight: 500; font-size: 12px; letter-spacing: 0.10em;
+  text-transform: uppercase; color: var(--bra-ink-2); margin-top: var(--bra-s-2); }
+.bra-co2calc__equiv { font-family: var(--bra-font); font-weight: 400; font-size: 16px; line-height: 1.5;
+  color: var(--bra-ink-2); max-width: 30ch; text-align: right; }
+.bra-co2calc__foot { font-family: var(--bra-font); font-weight: 500; font-size: 11px; letter-spacing: 0.04em;
+  color: var(--bra-ink-mute); }
+.bra-surface-oak .bra-co2calc__range { background: rgba(244,242,237,0.25); }
+.bra-surface-oak .bra-co2calc__bar { background: rgba(244,242,237,0.10); }
+.bra-surface-oak .bra-co2calc__result { border-top-color: rgba(244,242,237,0.3); }
+.bra-surface-oak .bra-co2calc__label, .bra-surface-oak .bra-co2calc__note,
+.bra-surface-oak .bra-co2calc__save-lbl, .bra-surface-oak .bra-co2calc__equiv { color: rgba(244,242,237,0.7); }
+@media (max-width: 600px) {
+  .bra-co2calc__row { grid-template-columns: 1fr auto; }
+  .bra-co2calc__bar { grid-column: 1 / -1; order: 3; }
+}
+
+/* ---------- Versus / head-to-head ---------- */
+.bra-versus { display: grid; grid-template-columns: 1fr 56px 1fr; align-items: stretch; border: 2px solid var(--bra-ink); }
+.bra-versus__side { padding: var(--bra-s-4); }
+.bra-versus__side--ours { background: var(--bra-oak); color: var(--bra-on-oak); }
+.bra-versus__vs { display: flex; align-items: center; justify-content: center; font-family: var(--bra-font);
+  font-weight: 600; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bra-ink-2);
+  border-left: 2px solid var(--bra-ink); border-right: 2px solid var(--bra-ink); }
+.bra-versus__name { font-family: var(--bra-font); font-weight: 500; font-size: clamp(22px, 2.2vw, 30px); letter-spacing: -0.014em; }
+.bra-versus__side--ours .bra-versus__name { color: var(--bra-on-oak); }
+.bra-versus__tag { display: inline-block; margin-top: var(--bra-s-2); font-family: var(--bra-font); font-weight: 600;
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bra-ink-2); }
+.bra-versus__side--ours .bra-versus__tag { color: var(--bra-oak-warm); }
+.bra-versus__list { list-style: none; margin: var(--bra-s-3) 0 0; padding: 0; }
+.bra-versus__list li { padding: 10px 0; font-family: var(--bra-font); font-weight: 500; font-size: 15px; line-height: 1.4;
+  border-top: 1px solid rgba(28,28,26,0.14); }
+.bra-versus__side--ours .bra-versus__list li { border-top-color: rgba(244,242,237,0.18); }
+@media (max-width: 640px) {
+  .bra-versus { grid-template-columns: 1fr; }
+  .bra-versus__vs { border: none; border-top: 2px solid var(--bra-ink); border-bottom: 2px solid var(--bra-ink); padding: 10px; }
+}
+
+/* ---------- Proof matrix (checks vs crosses) ---------- */
+.bra-matrix { width: 100%; border-collapse: collapse; font-family: var(--bra-font); min-width: 520px; }
+.bra-matrix th, .bra-matrix td { padding: var(--bra-s-3) var(--bra-s-2); border-bottom: 1px solid rgba(28,28,26,0.14);
+  text-align: center; }
+.bra-matrix th:first-child, .bra-matrix td:first-child { text-align: left; }
+.bra-matrix thead th { font-weight: 600; font-size: 12px; letter-spacing: 0.10em; text-transform: uppercase; color: var(--bra-ink-2); }
+.bra-matrix thead th.bra-matrix__ours { color: var(--bra-ink); border-bottom: 2px solid var(--bra-oak); }
+.bra-matrix th[scope="row"] { font-weight: 500; font-size: 15px; color: var(--bra-ink); text-align: left; }
+.bra-matrix__ours-col { background: color-mix(in oklch, var(--bra-oak) 7%, transparent); }
+.bra-matrix__yes, .bra-matrix__no { font-size: 18px; line-height: 1; }
+.bra-matrix__yes { color: #3d6b4f; }
+.bra-matrix__no  { color: var(--bra-ink-mute); }
+.bra-matrix td small { display: block; font-size: 12px; color: var(--bra-ink-2); font-weight: 500; margin-top: 2px; }

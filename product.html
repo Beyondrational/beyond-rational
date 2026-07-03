@@ -7,7 +7,7 @@
 <meta name="description" content="Aisti® Acoustic Tile: foam-formed natural wood fibre. Absorption Class A, Euroclass B-s1,d0, M1 / A+ certified, 100% recyclable. Available 2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=11">
+<link rel="stylesheet" href="br.css?v=17">
 </head>
 <body class="bra" data-page="product">
 
@@ -66,6 +66,20 @@
     <footer class="home-hero__foot">
       <span class="bra-micro">Beyond Rational · Copenhagen</span>
     </footer>
+  </div>
+</section>
+
+<!-- ===== What we supply (carried over from the home page) ===== -->
+<section class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-4);" data-content="supply.section_label">What we supply</p>
+  <div class="bra-grid-2" style="align-items: center;">
+    <p class="bra-lede" style="font-size: clamp(20px, 2vw, 30px); line-height: 1.4;" data-content="supply.body">
+      We are the official distributor of Aisti® in Denmark. The Aisti® Acoustic Tile is a bio-based absorber made from natural wood fibre. Absorption Class A, no synthetic binders, no plastics, no irritating fibres.
+    </p>
+    <figure class="bra-stagger" data-stagger style="margin: 0; overflow: hidden;">
+      <img class="bra-stagger-item" src="assets/aisti-tile-001.webp" data-content="supply.image" data-content-attr="src"
+           alt="Aisti acoustic tile" loading="lazy" style="width: 100%; display: block; aspect-ratio: 4 / 5; object-fit: cover;">
+    </figure>
   </div>
 </section>
 
@@ -434,6 +448,32 @@
   </div>
 </section>
 
+<!-- ===== Technology — foam-forming (carried over from the home page) ===== -->
+<section class="bra-container bra-section">
+  <div class="bra-grid-2">
+    <div>
+      <p class="bra-caption" style="margin-bottom: var(--bra-s-2);" data-content="technology.section_label">The technology</p>
+      <h2 class="bra-h1" style="max-width: 12ch; margin-bottom: var(--bra-s-4);">
+        <span class="bra-reveal-line" data-reveal data-content="technology.title_l1">Foam-formed,</span><br>
+        <span class="bra-reveal-line" data-reveal data-content="technology.title_l2">not pressed.</span>
+      </h2>
+      <figure class="bra-stagger" data-stagger style="margin: 0; overflow: hidden; border: 2px solid var(--bra-ink);">
+        <img class="bra-stagger-item" src="assets/aisti-042.jpg" data-content="technology.image" data-content-attr="src"
+             alt="Macro of foam-formed wood fibre tile edges" loading="lazy"
+             style="width: 100%; display: block; aspect-ratio: 4 / 3; object-fit: cover;">
+      </figure>
+    </div>
+    <div class="bra-stack-wide">
+      <p class="bra-body" style="font-size: 17px;" data-content="technology.body_p1">
+        Aisti's foam-forming technology, adapted from the Finnish paper industry, suspends wood fibre in foam instead of pressing it flat. The fibres set into an open, porous structure that captures sound across a wide frequency range, without binders or plastics.
+      </p>
+      <p class="bra-body" style="font-size: 17px;" data-content="technology.body_p2">
+        The technology is cost-effective and energy-conscious, producing tiles that are light in weight, plastic-free, and 100% recyclable. Produced in Jyväskylä, Finland.
+      </p>
+    </div>
+  </div>
+</section>
+
 <!-- ===== Marquee ===== -->
 <section class="bra-marquee">
   <div class="bra-marquee__track">
@@ -468,6 +508,45 @@
       </figure>
     </template>
   </div>
+</section>
+
+<!-- ===== Film — one large player, chips switch clips (CMS-uploadable) ===== -->
+<section class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);" data-content="video.section_label">Video</p>
+  <h2 class="bra-h2" style="margin-bottom: var(--bra-s-4); max-width: 18ch;">
+    <span class="bra-reveal-line" data-reveal data-content="video.title_l1">The film,</span><br>
+    <span class="bra-reveal-line" data-reveal data-content="video.title_l2">in place.</span>
+  </h2>
+
+  <div class="bra-chips" data-video-switch style="margin-bottom: var(--bra-s-3);">
+    <button type="button" class="bra-chip is-active" data-video-index="0"
+            data-src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+            data-poster="assets/aisti-026.jpg" data-content="video.items.0.label">In place</button>
+    <button type="button" class="bra-chip" data-video-index="1"
+            data-src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+            data-poster="assets/aisti-042.jpg" data-content="video.items.1.label">How it's made</button>
+  </div>
+
+  <div class="bra-video" data-video data-video-player>
+    <video class="bra-video__media" playsinline preload="metadata"
+           poster="assets/aisti-026.jpg"
+           src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"></video>
+    <img class="bra-video__poster" src="assets/aisti-026.jpg" alt="">
+    <div class="bra-video__veil" aria-hidden="true"></div>
+    <div class="bra-video__meta">
+      <span class="bra-video__eyebrow" data-video-label>In place</span>
+      <span class="bra-video__eyebrow">Aisti® film · upload your clips in the CMS</span>
+    </div>
+    <button class="bra-video__play" aria-label="Play film"></button>
+    <div class="bra-video__bar">
+      <button class="bra-video__ctrl" data-video-toggle aria-label="Play / pause">►</button>
+      <div class="bra-video__track"><div class="bra-video__fill"></div></div>
+      <span class="bra-video__time">0:00 / 0:00</span>
+      <button class="bra-video__ctrl" data-video-mute aria-label="Mute">🔊</button>
+      <button class="bra-video__ctrl" data-video-full aria-label="Fullscreen">⛶</button>
+    </div>
+  </div>
+  <div class="bra-video-caption"><p class="bra-caption" data-video-caption>The tile in a daylit interior</p></div>
 </section>
 
 <!-- ===== Specify CTA — drenched oak ===== -->
@@ -532,11 +611,63 @@
   </div>
   <div class="bra-footer__base">
     <span class="bra-micro">© 2026 Beyond Rational ApS</span>
+    <a class="bra-micro" href="privatlivspolitik.html" style="text-decoration: none;">Privatlivspolitik</a>
+    <a class="bra-micro" href="betalingsbetingelser.html" style="text-decoration: none;">Betalingsbetingelser</a>
     <span class="bra-micro">B_R Design System · v1.0</span>
   </div>
 </footer>
 
-<script src="br.js?v=11" defer></script>
-<script src="br-content.js?v=11" defer></script>
+<script src="br.js?v=17" defer></script>
+<script src="br-content.js?v=17" defer></script>
+<script>
+/* Video switcher — chips swap the single player's clip (CMS-aware) */
+(function () {
+  var switcher = document.querySelector('[data-video-switch]');
+  var player = document.querySelector('[data-video-player]');
+  if (!switcher || !player) return;
+  var media = player.querySelector('.bra-video__media');
+  var posterImg = player.querySelector('.bra-video__poster');
+  var labelEl = player.querySelector('[data-video-label]');
+  var captionEl = document.querySelector('[data-video-caption]');
+  var chips = Array.prototype.slice.call(switcher.querySelectorAll('[data-video-index]'));
+  var current = 0;
+
+  function activate(i) {
+    var chip = chips[i];
+    if (!chip) return;
+    current = i;
+    var src = chip.getAttribute('data-src');
+    var poster = chip.getAttribute('data-poster');
+    if (src) media.setAttribute('src', src);
+    if (poster) { media.setAttribute('poster', poster); if (posterImg) posterImg.setAttribute('src', poster); }
+    if (labelEl && chip.getAttribute('data-label')) labelEl.textContent = chip.getAttribute('data-label');
+    else if (labelEl) labelEl.textContent = chip.textContent;
+    if (captionEl && chip.getAttribute('data-caption')) captionEl.textContent = chip.getAttribute('data-caption');
+    try { media.pause(); media.load(); } catch (e) {}
+    player.classList.remove('is-started', 'is-playing');
+    var fill = player.querySelector('.bra-video__fill'); if (fill) fill.style.width = '0%';
+    chips.forEach(function (c, ci) { c.classList.toggle('is-active', ci === i); });
+  }
+
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () { activate(parseInt(chip.dataset.videoIndex, 10)); });
+  });
+
+  // Pull CMS values into the chips once content has loaded.
+  document.addEventListener('br-content-ready', function (e) {
+    var items = (e.detail && e.detail.video && e.detail.video.items) || [];
+    chips.forEach(function (chip, i) {
+      var it = items[i]; if (!it) return;
+      if (it.src) chip.setAttribute('data-src', it.src);
+      if (it.poster) chip.setAttribute('data-poster', it.poster);
+      if (it.label) chip.setAttribute('data-label', it.label);
+      if (it.caption) chip.setAttribute('data-caption', it.caption);
+    });
+    activate(current);
+  });
+
+  activate(0);
+})();
+</script>
 </body>
 </html>

@@ -6,7 +6,7 @@
 <title>Beyond Rational · v0.2 · Reference</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=11">
+<link rel="stylesheet" href="br.css?v=17">
 </head>
 <body class="bra">
 
@@ -873,14 +873,108 @@
   <p class="bra-body" style="color: var(--bra-ink-2);">A sticky anchor nav (<code>.bra-subnav</code> with <code>data-subnav</code>) highlights the section in view — best on long product pages. The back-to-top button is injected automatically and appears once you scroll past one screen (bottom-right).</p>
 </section>
 
-<!-- Consent banner (demo — appears once, choice stored in localStorage) -->
-<div class="bra-cookie" data-cookie>
-  <p class="bra-cookie__text">We use minimal cookies to understand what works. See the <a href="#">privacy notice</a>.</p>
-  <div class="bra-cookie__actions">
-    <button class="bra-cookie__btn" data-consent="decline">Decline</button>
-    <button class="bra-cookie__btn bra-cookie__btn--accept" data-consent="accept">Accept</button>
+<!-- =====================================================
+     P / COMPONENTS v1.3 — comparison & proof
+     ===================================================== -->
+<section class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);">P · Comparison &amp; proof (v1.3)</p>
+  <h2 class="bra-h1" style="margin-bottom: var(--bra-s-5);">Why the tile wins.</h2>
+
+  <!-- CO2 savings calculator -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">CO₂ savings calculator</p>
+  <div class="bra-co2calc" data-co2calc data-co2-km="0.15" style="margin-bottom: var(--bra-s-6);">
+    <div class="bra-co2calc__control">
+      <div class="bra-co2calc__ctrl-top">
+        <span class="bra-co2calc__label">Ceiling area</span>
+        <span class="bra-co2calc__area"><span data-co2-area-val>150</span> m²</span>
+      </div>
+      <input class="bra-co2calc__range" type="range" min="10" max="1000" step="10" value="150" data-co2-area aria-label="Ceiling area in square metres">
+    </div>
+
+    <div class="bra-chips" data-co2-alts>
+      <button class="bra-chip is-active" type="button" data-co2-alt="mineral">vs Mineral wool</button>
+      <button class="bra-chip" type="button" data-co2-alt="glass">vs Glass wool</button>
+    </div>
+
+    <div class="bra-co2calc__rows">
+      <div class="bra-co2calc__row" data-ours data-key="aisti" data-name="Aisti® Aalto" data-factor="-7.1">
+        <span class="bra-co2calc__name">Aisti® Aalto<small class="bra-co2calc__note">Bio-based · stores carbon</small></span>
+        <div class="bra-co2calc__bar"><span class="bra-co2calc__fill"></span></div>
+        <span class="bra-co2calc__val" data-co2-val>0</span>
+      </div>
+      <div class="bra-co2calc__row" data-key="mineral" data-name="mineral wool" data-factor="4.2">
+        <span class="bra-co2calc__name">Mineral wool<small class="bra-co2calc__note">Emits CO₂e</small></span>
+        <div class="bra-co2calc__bar"><span class="bra-co2calc__fill"></span></div>
+        <span class="bra-co2calc__val" data-co2-val>0</span>
+      </div>
+      <div class="bra-co2calc__row" data-key="glass" data-name="glass wool" data-factor="3.1">
+        <span class="bra-co2calc__name">Glass wool<small class="bra-co2calc__note">Emits CO₂e</small></span>
+        <div class="bra-co2calc__bar"><span class="bra-co2calc__fill"></span></div>
+        <span class="bra-co2calc__val" data-co2-val>0</span>
+      </div>
+    </div>
+
+    <div class="bra-co2calc__result">
+      <div>
+        <div class="bra-co2calc__save-num"><span data-co2-save>0</span> kg</div>
+        <div class="bra-co2calc__save-lbl">CO₂e saved vs <span data-co2-alt-name>mineral wool</span></div>
+      </div>
+      <p class="bra-co2calc__equiv" data-co2-equiv></p>
+    </div>
+    <p class="bra-co2calc__foot">Indicative figures (kg CO₂e per m²). Replace with your verified EPD data via the factors.</p>
   </div>
-</div>
+
+  <!-- Versus / head-to-head -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Head-to-head</p>
+  <div class="bra-versus" style="margin-bottom: var(--bra-s-6);">
+    <div class="bra-versus__side bra-versus__side--ours">
+      <h3 class="bra-versus__name">Aisti® Aalto</h3>
+      <span class="bra-versus__tag">Our tile</span>
+      <ul class="bra-versus__list">
+        <li>Natural wood fibre</li>
+        <li>No synthetic binders</li>
+        <li>Stores carbon (negative footprint)</li>
+        <li>100% recyclable</li>
+        <li>No irritating fibres</li>
+      </ul>
+    </div>
+    <div class="bra-versus__vs">vs</div>
+    <div class="bra-versus__side">
+      <h3 class="bra-versus__name">Mineral wool</h3>
+      <span class="bra-versus__tag">The default</span>
+      <ul class="bra-versus__list">
+        <li>Mineral fibre</li>
+        <li>Synthetic binders</li>
+        <li>Positive carbon footprint</li>
+        <li>Landfill at end of life</li>
+        <li>Can irritate skin and lungs</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Proof matrix -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Proof matrix</p>
+  <div class="bra-compare-wrap">
+    <table class="bra-matrix">
+      <thead>
+        <tr>
+          <th scope="col">&nbsp;</th>
+          <th scope="col" class="bra-matrix__ours">Aisti®</th>
+          <th scope="col">Mineral wool</th>
+          <th scope="col">Glass wool</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Absorption Class A</th><td class="bra-matrix__ours-col"><span class="bra-matrix__yes">✓</span></td><td><span class="bra-matrix__yes">✓</span></td><td><span class="bra-matrix__yes">✓</span></td></tr>
+        <tr><th scope="row">Bio-based material</th><td class="bra-matrix__ours-col"><span class="bra-matrix__yes">✓</span></td><td><span class="bra-matrix__no">✕</span></td><td><span class="bra-matrix__no">✕</span></td></tr>
+        <tr><th scope="row">No synthetic binders</th><td class="bra-matrix__ours-col"><span class="bra-matrix__yes">✓</span></td><td><span class="bra-matrix__no">✕</span></td><td><span class="bra-matrix__no">✕</span></td></tr>
+        <tr><th scope="row">100% recyclable</th><td class="bra-matrix__ours-col"><span class="bra-matrix__yes">✓</span></td><td><span class="bra-matrix__no">✕</span></td><td><span class="bra-matrix__no">✕</span></td></tr>
+        <tr><th scope="row">Negative carbon footprint</th><td class="bra-matrix__ours-col"><span class="bra-matrix__yes">✓</span></td><td><span class="bra-matrix__no">✕</span></td><td><span class="bra-matrix__no">✕</span></td></tr>
+        <tr><th scope="row">No irritating fibres</th><td class="bra-matrix__ours-col"><span class="bra-matrix__yes">✓</span></td><td><span class="bra-matrix__no">✕</span></td><td><span class="bra-matrix__no">✕</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
 <!-- =====================================================
      FOOTER — closing oak band
@@ -918,11 +1012,13 @@
   </div>
   <div class="bra-footer__base">
     <span class="bra-micro">© 2026 Beyond Rational ApS</span>
+    <a class="bra-micro" href="privatlivspolitik.html" style="text-decoration: none;">Privatlivspolitik</a>
+    <a class="bra-micro" href="betalingsbetingelser.html" style="text-decoration: none;">Betalingsbetingelser</a>
     <span class="bra-micro">B_R Design System · v1.0</span>
   </div>
 </footer>
 
-<script src="br.js?v=11" defer></script>
+<script src="br.js?v=17" defer></script>
 
 </body>
 </html>

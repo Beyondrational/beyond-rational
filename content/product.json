@@ -69,6 +69,28 @@
       }
     ]
   },
+  "supply": {
+    "section_label": "What we supply",
+    "body": "We are the official distributor of Aisti® in Denmark. The Aisti® Acoustic Tile is a bio-based absorber made from natural wood fibre. Absorption Class A, no synthetic binders, no plastics, no irritating fibres.",
+    "image": "assets/aisti-tile-001.webp"
+  },
+  "technology": {
+    "section_label": "The technology",
+    "title_l1": "Foam-formed,",
+    "title_l2": "not pressed.",
+    "body_p1": "Aisti's foam-forming technology, adapted from the Finnish paper industry, suspends wood fibre in foam instead of pressing it flat. The fibres set into an open, porous structure that captures sound across a wide frequency range, without binders or plastics.",
+    "body_p2": "The technology is cost-effective and energy-conscious, producing tiles that are light in weight, plastic-free, and 100% recyclable. Produced in Jyväskylä, Finland.",
+    "image": "assets/aisti-042.jpg"
+  },
+  "video": {
+    "section_label": "Video",
+    "title_l1": "The film,",
+    "title_l2": "in place.",
+    "items": [
+      { "src": "", "poster": "assets/aisti-026.jpg", "label": "In place", "caption": "The tile in a daylit interior" },
+      { "src": "", "poster": "assets/aisti-042.jpg", "label": "How it's made", "caption": "Foam-forming the wood fibre" }
+    ]
+  },
   "cta": {
     "title_l1": "Specify",
     "title_l2": "Aisti.",

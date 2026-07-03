@@ -308,6 +308,25 @@ collections:
               - { label: "Paragraph 1",    name: "body_p1",  widget: "text"   }
               - { label: "Paragraph 2",    name: "body_p2",  widget: "text"   }
 
+          - label: "What we supply"
+            name: "supply"
+            widget: "object"
+            fields:
+              - { label: "Section label", name: "section_label", widget: "string" }
+              - { label: "Body",          name: "body",          widget: "text"   }
+              - { label: "Image",         name: "image",         widget: "image"  }
+
+          - label: "Technology (foam-forming)"
+            name: "technology"
+            widget: "object"
+            fields:
+              - { label: "Section label", name: "section_label", widget: "string" }
+              - { label: "Title line 1",  name: "title_l1",      widget: "string" }
+              - { label: "Title line 2",  name: "title_l2",      widget: "string" }
+              - { label: "Paragraph 1",   name: "body_p1",       widget: "text"   }
+              - { label: "Paragraph 2",   name: "body_p2",       widget: "text"   }
+              - { label: "Image",         name: "image",         widget: "image"  }
+
           - label: "Image gallery"
             name: "gallery"
             widget: "object"
@@ -322,6 +341,25 @@ collections:
                   - { label: "Image", name: "image", widget: "image"  }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Meta",  name: "meta",  widget: "string" }
+
+          - label: "Video (two clips)"
+            name: "video"
+            widget: "object"
+            fields:
+              - { label: "Section label", name: "section_label", widget: "string" }
+              - { label: "Title line 1",  name: "title_l1",      widget: "string" }
+              - { label: "Title line 2",  name: "title_l2",      widget: "string" }
+              - label: "Clips (up to 2)"
+                name: "items"
+                widget: "list"
+                max: 2
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Video file",   name: "src",     widget: "file",   required: false, hint: "MP4 recommended" }
+                  - { label: "Poster image", name: "poster",  widget: "image",  required: false }
+                  - { label: "Label",        name: "label",   widget: "string", required: false }
+                  - { label: "Note",         name: "note",    widget: "string", required: false }
+                  - { label: "Caption",      name: "caption", widget: "string", required: false }
 
           - label: "Closing CTA"
             name: "cta"

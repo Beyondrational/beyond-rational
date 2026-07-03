@@ -860,21 +860,31 @@
     window.scrollTo({ top: 0, behavior: (window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth') });
   });
 
-  /* ---- Cookie / consent banner (opt-in via [data-cookie]) ---- */
+  /* ---- Cookie / consent banner (auto-injected on every page) ---- */
   var cookie = document.querySelector('[data-cookie]');
-  if (cookie) {
-    var KEY = 'brConsent';
-    if (!localStorage.getItem(KEY)) {
-      setTimeout(function () { cookie.classList.add('is-in'); }, 800);
-    }
-    cookie.addEventListener('click', function (e) {
-      var btn = e.target.closest('[data-consent]');
-      if (!btn) return;
-      localStorage.setItem(KEY, btn.dataset.consent); // "accept" | "decline"
-      cookie.classList.remove('is-in');
-      document.dispatchEvent(new CustomEvent('br-consent', { detail: btn.dataset.consent }));
-    });
+  if (!cookie) {
+    cookie = document.createElement('div');
+    cookie.className = 'bra-cookie';
+    cookie.setAttribute('data-cookie', '');
+    cookie.innerHTML =
+      '<p class="bra-cookie__text">Vi bruger minimale cookies for at forstå hvad der virker. Se vores <a href="privatlivspolitik.html">privatlivspolitik</a>.</p>' +
+      '<div class="bra-cookie__actions">' +
+      '<button class="bra-cookie__btn" type="button" data-consent="decline">Afvis</button>' +
+      '<button class="bra-cookie__btn bra-cookie__btn--accept" type="button" data-consent="accept">Accepter</button>' +
+      '</div>';
+    document.body.appendChild(cookie);
   }
+  var CONSENT_KEY = 'brConsent';
+  if (!localStorage.getItem(CONSENT_KEY)) {
+    setTimeout(function () { cookie.classList.add('is-in'); }, 800);
+  }
+  cookie.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-consent]');
+    if (!btn) return;
+    localStorage.setItem(CONSENT_KEY, btn.dataset.consent); // "accept" | "decline"
+    cookie.classList.remove('is-in');
+    document.dispatchEvent(new CustomEvent('br-consent', { detail: btn.dataset.consent }));
+  });
 
   /* ---- Form validation (opt-in via [data-validate]) ---- */
   document.querySelectorAll('form[data-validate]').forEach(function (form) {
@@ -896,5 +906,82 @@
         if (field && field.classList.contains('is-error') && ctrl.checkValidity()) field.classList.remove('is-error');
       });
     });
+  });
+})();
+
+/* ============================================================
+   Design-system v1.3 — CO2 savings calculator
+   <div class="bra-co2calc" data-co2calc data-co2-km="0.15"> … </div>
+   rows carry data-factor (kg CO2e/m2), one row has data-ours.
+   ============================================================ */
+(function () {
+  var fmt = function (n) { return Math.round(n).toLocaleString('en-US'); };
+
+  document.querySelectorAll('[data-co2calc]').forEach(function (calc) {
+    var range   = calc.querySelector('[data-co2-area]');
+    var areaOut = calc.querySelector('[data-co2-area-val]');
+    var rows    = Array.prototype.slice.call(calc.querySelectorAll('.bra-co2calc__row'));
+    var saveEl  = calc.querySelector('[data-co2-save]');
+    var altNm   = calc.querySelector('[data-co2-alt-name]');
+    var equivEl = calc.querySelector('[data-co2-equiv]');
+    var chips   = Array.prototype.slice.call(calc.querySelectorAll('[data-co2-alt]'));
+    var kmFactor = parseFloat(calc.getAttribute('data-co2-km') || '0.15');
+    if (!range || !rows.length) return;
+
+    var activeAlt = (chips.filter(function (c) { return c.classList.contains('is-active'); })[0] || chips[0]);
+    var altKey = activeAlt ? activeAlt.getAttribute('data-co2-alt') : null;
+
+    function ours() { return rows.filter(function (r) { return r.hasAttribute('data-ours'); })[0]; }
+
+    function render() {
+      var area = parseFloat(range.value) || 0;
+      if (areaOut) areaOut.textContent = fmt(area);
+
+      // visible rows: ours + the selected alternative (or all if no chips)
+      var visible = rows.filter(function (r) {
+        if (r.hasAttribute('data-ours')) return true;
+        if (!altKey) return true;
+        return r.getAttribute('data-key') === altKey;
+      });
+      var totals = visible.map(function (r) { return area * (parseFloat(r.getAttribute('data-factor')) || 0); });
+      var maxAbs = Math.max.apply(null, totals.map(Math.abs).concat([1]));
+
+      rows.forEach(function (r) {
+        var isVis = visible.indexOf(r) !== -1;
+        r.style.display = isVis ? '' : 'none';
+        if (!isVis) return;
+        var total = area * (parseFloat(r.getAttribute('data-factor')) || 0);
+        var val = r.querySelector('[data-co2-val]');
+        if (val) val.textContent = (total > 0 ? '+' : '') + fmt(total) + ' kg';
+        var fill = r.querySelector('.bra-co2calc__fill');
+        if (fill) {
+          var w = Math.min(Math.abs(total) / maxAbs, 1) * 50;
+          if (total < 0) { fill.style.left = (50 - w) + '%'; fill.style.width = w + '%'; }
+          else { fill.style.left = '50%'; fill.style.width = w + '%'; }
+        }
+      });
+
+      // savings = alternative total - ours total (ours is negative -> large positive saving)
+      var o = ours();
+      var altRow = visible.filter(function (r) { return !r.hasAttribute('data-ours'); })[0];
+      if (o && altRow) {
+        var oursTotal = area * (parseFloat(o.getAttribute('data-factor')) || 0);
+        var altTotal  = area * (parseFloat(altRow.getAttribute('data-factor')) || 0);
+        var saving = altTotal - oursTotal;
+        if (saveEl) saveEl.textContent = fmt(saving);
+        if (altNm) altNm.textContent = altRow.getAttribute('data-name') || altRow.querySelector('.bra-co2calc__name').firstChild.textContent.trim();
+        if (equivEl) equivEl.textContent = 'Roughly the same as ' + fmt(saving / kmFactor) + ' km of driving avoided.';
+      }
+    }
+
+    range.addEventListener('input', render);
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        chips.forEach(function (c) { c.classList.toggle('is-active', c === chip); });
+        altKey = chip.getAttribute('data-co2-alt');
+        render();
+      });
+    });
+    render();
   });
 })();

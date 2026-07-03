@@ -7,7 +7,7 @@
 <meta name="description" content="The Beyond Rational product range: Aisti® Aalto, Wuud, Sappa, and Mogu — sustainable acoustic materials for modern architecture.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=11">
+<link rel="stylesheet" href="br.css?v=17">
 <style>
   .prod-row {
     display: grid;
@@ -116,12 +116,12 @@
     position: absolute; inset: 0;
     display: grid; grid-template-columns: 1fr 1.02fr; gap: clamp(36px, 5vw, 88px);
     align-items: center;
-    opacity: 0; transform: translateY(26px);
-    transition: opacity 640ms var(--bra-ease), transform 640ms var(--bra-ease);
+    opacity: 0;
+    transition: opacity 560ms var(--bra-ease);
     pointer-events: none;
   }
-  .deck__panel.is-active { opacity: 1; transform: none; pointer-events: auto; }
-  .deck__panel.is-past { opacity: 0; transform: translateY(-26px); }
+  .deck__panel.is-active { opacity: 1; pointer-events: auto; }
+  .deck__panel.is-past { opacity: 0; }
 
   .deck__name { font-family: var(--bra-font); font-weight: 500;
     font-size: clamp(48px, 7vw, 108px); line-height: 0.94; letter-spacing: -0.03em;
@@ -133,10 +133,39 @@
   .deck__cta { margin-top: var(--bra-s-4); color: var(--bra-on-oak); }
 
   .deck__visual { display: block; justify-self: end; width: 100%; max-width: 640px; }
-  .deck__visual-inner { display: block; overflow: hidden; aspect-ratio: 16 / 9; background: var(--bra-oak-deep); }
-  .deck__visual img { width: 100%; height: 100%; object-fit: cover; display: block;
-    transform: scale(1.05); transition: transform 900ms var(--bra-ease); }
-  .deck__panel.is-active .deck__visual img { transform: scale(1); }
+  .deck__visual-inner { display: block; overflow: hidden; aspect-ratio: 16 / 9; background: var(--bra-oak-deep);
+    border: 1px solid rgba(244,242,237,0.22); }
+
+  /* ===== Product-switch choreography (replays each flip) ===== */
+  /* Name: per-character reveal */
+  .deck__name .ch { display: inline-block; white-space: pre; opacity: 0; transform: translateY(0.7em); }
+  .deck__panel.is-active .deck__name .ch { animation: deck-char 620ms var(--bra-ease) forwards; animation-delay: calc(var(--i) * 22ms); }
+  @keyframes deck-char { to { opacity: 1; transform: none; } }
+
+  /* Tag / body / CTA: staggered rise */
+  .deck__tag, .deck__body, .deck__cta { opacity: 0; transform: translateY(16px); }
+  .deck__panel.is-active .deck__tag  { animation: deck-up 640ms var(--bra-ease) 200ms both; }
+  .deck__panel.is-active .deck__body { animation: deck-up 640ms var(--bra-ease) 290ms both; }
+  .deck__panel.is-active .deck__cta  { animation: deck-up 640ms var(--bra-ease) 380ms both; }
+  @keyframes deck-up { to { opacity: 1; transform: none; } }
+
+  /* Image: wipe in from the right + settle */
+  .deck__visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .deck__panel.is-active .deck__visual img { animation: deck-img 1000ms var(--bra-ease) both; }
+  @keyframes deck-img {
+    from { clip-path: inset(0 0 0 100%); transform: scale(1.09); }
+    to   { clip-path: inset(0 0 0 0);    transform: scale(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .deck__name .ch, .deck__tag, .deck__body, .deck__cta { opacity: 1; transform: none; }
+    .deck__panel.is-active .deck__name .ch,
+    .deck__panel.is-active .deck__tag,
+    .deck__panel.is-active .deck__body,
+    .deck__panel.is-active .deck__cta,
+    .deck__panel.is-active .deck__visual img { animation: none; }
+    .deck__visual img { clip-path: none; }
+  }
 
   /* Bottom index — the only chrome: product names + active marker on the rule */
   .deck__nav { display: flex; gap: clamp(20px, 3vw, 52px); flex-wrap: wrap; list-style: none; margin: 0; padding: 0;
@@ -337,12 +366,14 @@
   </div>
   <div class="bra-footer__base">
     <span class="bra-micro">© 2026 Beyond Rational ApS</span>
+    <a class="bra-micro" href="privatlivspolitik.html" style="text-decoration: none;">Privatlivspolitik</a>
+    <a class="bra-micro" href="betalingsbetingelser.html" style="text-decoration: none;">Betalingsbetingelser</a>
     <span class="bra-micro">B_R Design System · v1.0</span>
   </div>
 </footer>
 
-<script src="br.js?v=11" defer></script>
-<script src="br-content.js?v=11" defer></script>
+<script src="br.js?v=17" defer></script>
+<script src="br-content.js?v=17" defer></script>
 <script>
 /* Product deck — pin + scroll-flip through the range (native scroll, class-driven) */
 (function () {
@@ -356,7 +387,24 @@
   if (!n) return;
 
   var pad2 = function (v) { return (v < 10 ? '0' : '') + v; };
-  var setHeight = function () { deck.style.height = (n * 100) + 'vh'; };
+  /* Scroll length per product (vh). Higher = each product lingers longer. */
+  var PER_PRODUCT_VH = 185;
+  var setHeight = function () { deck.style.height = (n * PER_PRODUCT_VH) + 'vh'; };
+
+  // Split each product name into per-character spans so it can text-reveal on flip.
+  var splitName = function (el) {
+    if (!el || el.querySelector('.ch')) return;
+    var text = el.textContent, idx = 0;
+    el.textContent = '';
+    Array.prototype.forEach.call(text, function (ch) {
+      var s = document.createElement('span');
+      s.className = 'ch';
+      s.style.setProperty('--i', idx++);
+      s.textContent = ch;
+      el.appendChild(s);
+    });
+  };
+  var splitAll = function () { panels.forEach(function (p) { splitName(p.querySelector('.deck__name')); }); };
 
   var current = -1;
   var update = function () {
@@ -389,9 +437,10 @@
   });
 
   setHeight();
+  splitAll();
   window.addEventListener('scroll', update, { passive: true });
   window.addEventListener('resize', function () { setHeight(); update(); });
-  document.addEventListener('br-content-ready', function () { setHeight(); update(); });
+  document.addEventListener('br-content-ready', function () { setHeight(); splitAll(); update(); });
   update();
 })();
 </script>
