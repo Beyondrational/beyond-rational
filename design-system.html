@@ -6,7 +6,7 @@
 <title>Beyond Rational · v0.2 · Reference</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=17">
+<link rel="stylesheet" href="br.css?v=18">
 </head>
 <body class="bra">
 
@@ -631,11 +631,11 @@
     <button class="bra-video__play" aria-label="Play film"></button>
 
     <div class="bra-video__bar">
-      <button class="bra-video__ctrl" data-video-toggle aria-label="Play / pause">►</button>
+      <button class="bra-video__ctrl" data-video-toggle aria-label="Play / pause"><svg class="bra-ic" aria-hidden="true"><use href="#ph-play"></use></svg></button>
       <div class="bra-video__track"><div class="bra-video__fill"></div></div>
       <span class="bra-video__time">0:00 / 0:00</span>
-      <button class="bra-video__ctrl" data-video-mute aria-label="Mute">🔊</button>
-      <button class="bra-video__ctrl" data-video-full aria-label="Fullscreen">⛶</button>
+      <button class="bra-video__ctrl" data-video-mute aria-label="Mute"><svg class="bra-ic" aria-hidden="true"><use href="#ph-speaker"></use></svg></button>
+      <button class="bra-video__ctrl" data-video-full aria-label="Fullscreen"><svg class="bra-ic" aria-hidden="true"><use href="#ph-fullscreen"></use></svg></button>
     </div>
   </div>
 
@@ -792,17 +792,17 @@
     <a class="bra-download" href="#" download>
       <span class="bra-download__icon"><svg viewBox="0 0 24 24"><path d="M6 3h9l5 5v13a0 0 0 0 1 0 0H6z"/><path d="M15 3v5h5"/></svg></span>
       <span class="bra-download__main"><span class="bra-download__title">Aisti® Aalto — data sheet</span><span class="bra-download__meta">PDF · 1.2 MB</span></span>
-      <span class="bra-download__dl" aria-hidden="true">↓</span>
+      <span class="bra-download__dl" aria-hidden="true"><svg class="bra-ic" aria-hidden="true"><use href="#ph-download"></use></svg></span>
     </a>
     <a class="bra-download" href="#" download>
       <span class="bra-download__icon"><svg viewBox="0 0 24 24"><path d="M6 3h9l5 5v13H6z"/><path d="M15 3v5h5"/></svg></span>
       <span class="bra-download__main"><span class="bra-download__title">Environmental Product Declaration (EPD)</span><span class="bra-download__meta">PDF · 640 KB</span></span>
-      <span class="bra-download__dl" aria-hidden="true">↓</span>
+      <span class="bra-download__dl" aria-hidden="true"><svg class="bra-ic" aria-hidden="true"><use href="#ph-download"></use></svg></span>
     </a>
     <a class="bra-download" href="#" download>
       <span class="bra-download__icon"><svg viewBox="0 0 24 24"><path d="M6 3h9l5 5v13H6z"/><path d="M15 3v5h5"/></svg></span>
       <span class="bra-download__main"><span class="bra-download__title">Installation guide + BIM object</span><span class="bra-download__meta">ZIP · 8.4 MB</span></span>
-      <span class="bra-download__dl" aria-hidden="true">↓</span>
+      <span class="bra-download__dl" aria-hidden="true"><svg class="bra-ic" aria-hidden="true"><use href="#ph-download"></use></svg></span>
     </a>
   </div>
 
@@ -825,17 +825,17 @@
   <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Feature grid</p>
   <div class="bra-features" style="margin-bottom: var(--bra-s-5);">
     <div class="bra-feature">
-      <span class="bra-feature__icon"><svg viewBox="0 0 24 24"><path d="M4 20C4 11 11 4 20 4c0 9-7 16-16 16Z"/><path d="M4 20C9 15 13 11 18 8"/></svg></span>
+      <span class="bra-feature__icon"><svg class="bra-ic" aria-hidden="true"><use href="#ph-leaf"></use></svg></span>
       <h3 class="bra-feature__title">Bio-based</h3>
       <p class="bra-feature__body">Natural wood fibre, no synthetic binders, no plastics, no irritating fibres.</p>
     </div>
     <div class="bra-feature">
-      <span class="bra-feature__icon"><svg viewBox="0 0 24 24"><path d="M4 12h2M8 6v12M12 3v18M16 7v10M20 11v2"/></svg></span>
+      <span class="bra-feature__icon"><svg class="bra-ic" aria-hidden="true"><use href="#ph-wave"></use></svg></span>
       <h3 class="bra-feature__title">Absorption Class A</h3>
       <p class="bra-feature__body">Broadband sound absorption across the frequencies where speech lives.</p>
     </div>
     <div class="bra-feature">
-      <span class="bra-feature__icon"><svg viewBox="0 0 24 24"><path d="M8 5l-4 4 4 4"/><path d="M4 9h11a5 5 0 0 1 5 5v1"/><path d="M16 19l4-4-4-4"/></svg></span>
+      <span class="bra-feature__icon"><svg class="bra-ic" aria-hidden="true"><use href="#ph-recycle"></use></svg></span>
       <h3 class="bra-feature__title">100% recyclable</h3>
       <p class="bra-feature__body">A negative carbon footprint per tile and a fully recyclable end of life.</p>
     </div>
@@ -965,14 +965,55 @@
         </tr>
       </thead>
       <tbody>
-        <tr><th scope="row">Absorption Class A</th><td class="bra-matrix__ours-col"><span class="bra-matrix__yes">✓</span></td><td><span class="bra-matrix__yes">✓</span></td><td><span class="bra-matrix__yes">✓</span></td></tr>
-        <tr><th scope="row">Bio-based material</th><td class="bra-matrix__ours-col"><span class="bra-matrix__yes">✓</span></td><td><span class="bra-matrix__no">✕</span></td><td><span class="bra-matrix__no">✕</span></td></tr>
-        <tr><th scope="row">No synthetic binders</th><td class="bra-matrix__ours-col"><span class="bra-matrix__yes">✓</span></td><td><span class="bra-matrix__no">✕</span></td><td><span class="bra-matrix__no">✕</span></td></tr>
-        <tr><th scope="row">100% recyclable</th><td class="bra-matrix__ours-col"><span class="bra-matrix__yes">✓</span></td><td><span class="bra-matrix__no">✕</span></td><td><span class="bra-matrix__no">✕</span></td></tr>
-        <tr><th scope="row">Negative carbon footprint</th><td class="bra-matrix__ours-col"><span class="bra-matrix__yes">✓</span></td><td><span class="bra-matrix__no">✕</span></td><td><span class="bra-matrix__no">✕</span></td></tr>
-        <tr><th scope="row">No irritating fibres</th><td class="bra-matrix__ours-col"><span class="bra-matrix__yes">✓</span></td><td><span class="bra-matrix__no">✕</span></td><td><span class="bra-matrix__no">✕</span></td></tr>
+        <tr><th scope="row">Absorption Class A</th><td class="bra-matrix__ours-col"><span class="bra-matrix__yes"><svg class="bra-ic" aria-hidden="true"><use href="#ph-check"></use></svg></span></td><td><span class="bra-matrix__yes"><svg class="bra-ic" aria-hidden="true"><use href="#ph-check"></use></svg></span></td><td><span class="bra-matrix__yes"><svg class="bra-ic" aria-hidden="true"><use href="#ph-check"></use></svg></span></td></tr>
+        <tr><th scope="row">Bio-based material</th><td class="bra-matrix__ours-col"><span class="bra-matrix__yes"><svg class="bra-ic" aria-hidden="true"><use href="#ph-check"></use></svg></span></td><td><span class="bra-matrix__no"><svg class="bra-ic" aria-hidden="true"><use href="#ph-close"></use></svg></span></td><td><span class="bra-matrix__no"><svg class="bra-ic" aria-hidden="true"><use href="#ph-close"></use></svg></span></td></tr>
+        <tr><th scope="row">No synthetic binders</th><td class="bra-matrix__ours-col"><span class="bra-matrix__yes"><svg class="bra-ic" aria-hidden="true"><use href="#ph-check"></use></svg></span></td><td><span class="bra-matrix__no"><svg class="bra-ic" aria-hidden="true"><use href="#ph-close"></use></svg></span></td><td><span class="bra-matrix__no"><svg class="bra-ic" aria-hidden="true"><use href="#ph-close"></use></svg></span></td></tr>
+        <tr><th scope="row">100% recyclable</th><td class="bra-matrix__ours-col"><span class="bra-matrix__yes"><svg class="bra-ic" aria-hidden="true"><use href="#ph-check"></use></svg></span></td><td><span class="bra-matrix__no"><svg class="bra-ic" aria-hidden="true"><use href="#ph-close"></use></svg></span></td><td><span class="bra-matrix__no"><svg class="bra-ic" aria-hidden="true"><use href="#ph-close"></use></svg></span></td></tr>
+        <tr><th scope="row">Negative carbon footprint</th><td class="bra-matrix__ours-col"><span class="bra-matrix__yes"><svg class="bra-ic" aria-hidden="true"><use href="#ph-check"></use></svg></span></td><td><span class="bra-matrix__no"><svg class="bra-ic" aria-hidden="true"><use href="#ph-close"></use></svg></span></td><td><span class="bra-matrix__no"><svg class="bra-ic" aria-hidden="true"><use href="#ph-close"></use></svg></span></td></tr>
+        <tr><th scope="row">No irritating fibres</th><td class="bra-matrix__ours-col"><span class="bra-matrix__yes"><svg class="bra-ic" aria-hidden="true"><use href="#ph-check"></use></svg></span></td><td><span class="bra-matrix__no"><svg class="bra-ic" aria-hidden="true"><use href="#ph-close"></use></svg></span></td><td><span class="bra-matrix__no"><svg class="bra-ic" aria-hidden="true"><use href="#ph-close"></use></svg></span></td></tr>
       </tbody>
     </table>
+  </div>
+</section>
+
+<!-- =====================================================
+     Q / ICONS — Phosphor Light (MIT)
+     ===================================================== -->
+<section class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);">Q · Icons</p>
+  <h2 class="bra-h1" style="margin-bottom: var(--bra-s-3);">Phosphor Light.</h2>
+  <p class="bra-body" style="max-width: 60ch; color: var(--bra-ink-2); margin-bottom: var(--bra-s-5);">
+    One family, hairline weight, tuned to the type system. Injected once as an SVG sprite via <code>br.js</code>. Use anywhere with <code>&lt;svg class="bra-ic"&gt;&lt;use href="#ph-play"&gt;&lt;/use&gt;&lt;/svg&gt;</code>; colour follows <code>currentColor</code> and size follows font-size. Licensed MIT.
+  </p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 1px; background: rgba(28,28,26,0.12); border: 1px solid rgba(28,28,26,0.12);">
+    <!-- each cell -->
+    <div style="background: var(--bra-paper); padding: var(--bra-s-3); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;"><svg class="bra-ic" style="width:28px;height:28px;" aria-hidden="true"><use href="#ph-play"></use></svg><span class="bra-micro">play</span></div>
+    <div style="background: var(--bra-paper); padding: var(--bra-s-3); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;"><svg class="bra-ic" style="width:28px;height:28px;" aria-hidden="true"><use href="#ph-pause"></use></svg><span class="bra-micro">pause</span></div>
+    <div style="background: var(--bra-paper); padding: var(--bra-s-3); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;"><svg class="bra-ic" style="width:28px;height:28px;" aria-hidden="true"><use href="#ph-speaker"></use></svg><span class="bra-micro">speaker</span></div>
+    <div style="background: var(--bra-paper); padding: var(--bra-s-3); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;"><svg class="bra-ic" style="width:28px;height:28px;" aria-hidden="true"><use href="#ph-mute"></use></svg><span class="bra-micro">mute</span></div>
+    <div style="background: var(--bra-paper); padding: var(--bra-s-3); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;"><svg class="bra-ic" style="width:28px;height:28px;" aria-hidden="true"><use href="#ph-fullscreen"></use></svg><span class="bra-micro">fullscreen</span></div>
+    <div style="background: var(--bra-paper); padding: var(--bra-s-3); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;"><svg class="bra-ic" style="width:28px;height:28px;" aria-hidden="true"><use href="#ph-close"></use></svg><span class="bra-micro">close</span></div>
+    <div style="background: var(--bra-paper); padding: var(--bra-s-3); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;"><svg class="bra-ic" style="width:28px;height:28px;" aria-hidden="true"><use href="#ph-prev"></use></svg><span class="bra-micro">prev</span></div>
+    <div style="background: var(--bra-paper); padding: var(--bra-s-3); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;"><svg class="bra-ic" style="width:28px;height:28px;" aria-hidden="true"><use href="#ph-next"></use></svg><span class="bra-micro">next</span></div>
+    <div style="background: var(--bra-paper); padding: var(--bra-s-3); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;"><svg class="bra-ic" style="width:28px;height:28px;" aria-hidden="true"><use href="#ph-arrow-up"></use></svg><span class="bra-micro">arrow-up</span></div>
+    <div style="background: var(--bra-paper); padding: var(--bra-s-3); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;"><svg class="bra-ic" style="width:28px;height:28px;" aria-hidden="true"><use href="#ph-arrow-right"></use></svg><span class="bra-micro">arrow-right</span></div>
+    <div style="background: var(--bra-paper); padding: var(--bra-s-3); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;"><svg class="bra-ic" style="width:28px;height:28px;" aria-hidden="true"><use href="#ph-arrow-left"></use></svg><span class="bra-micro">arrow-left</span></div>
+    <div style="background: var(--bra-paper); padding: var(--bra-s-3); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;"><svg class="bra-ic" style="width:28px;height:28px;" aria-hidden="true"><use href="#ph-arrow-ur"></use></svg><span class="bra-micro">arrow-ur</span></div>
+    <div style="background: var(--bra-paper); padding: var(--bra-s-3); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;"><svg class="bra-ic" style="width:28px;height:28px;" aria-hidden="true"><use href="#ph-download"></use></svg><span class="bra-micro">download</span></div>
+    <div style="background: var(--bra-paper); padding: var(--bra-s-3); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;"><svg class="bra-ic" style="width:28px;height:28px;" aria-hidden="true"><use href="#ph-check"></use></svg><span class="bra-micro">check</span></div>
+    <div style="background: var(--bra-paper); padding: var(--bra-s-3); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;"><svg class="bra-ic" style="width:28px;height:28px;" aria-hidden="true"><use href="#ph-leaf"></use></svg><span class="bra-micro">leaf</span></div>
+    <div style="background: var(--bra-paper); padding: var(--bra-s-3); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;"><svg class="bra-ic" style="width:28px;height:28px;" aria-hidden="true"><use href="#ph-recycle"></use></svg><span class="bra-micro">recycle</span></div>
+    <div style="background: var(--bra-paper); padding: var(--bra-s-3); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;"><svg class="bra-ic" style="width:28px;height:28px;" aria-hidden="true"><use href="#ph-wave"></use></svg><span class="bra-micro">wave</span></div>
+    <div style="background: var(--bra-paper); padding: var(--bra-s-3); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;"><svg class="bra-ic" style="width:28px;height:28px;" aria-hidden="true"><use href="#ph-plus"></use></svg><span class="bra-micro">plus</span></div>
+    <div style="background: var(--bra-paper); padding: var(--bra-s-3); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;"><svg class="bra-ic" style="width:28px;height:28px;" aria-hidden="true"><use href="#ph-minus"></use></svg><span class="bra-micro">minus</span></div>
+  </div>
+
+  <!-- weight demo: icon scales + colours with text -->
+  <div style="display: flex; align-items: baseline; gap: var(--bra-s-4); flex-wrap: wrap; margin-top: var(--bra-s-4);">
+    <span style="font-size: 16px;"><svg class="bra-ic" aria-hidden="true"><use href="#ph-leaf"></use></svg> Inline at 16px</span>
+    <span style="font-size: 28px;"><svg class="bra-ic" aria-hidden="true"><use href="#ph-leaf"></use></svg> at 28px</span>
+    <span style="font-size: 40px; color: var(--bra-oak-warm);"><svg class="bra-ic" aria-hidden="true"><use href="#ph-leaf"></use></svg> in oak</span>
   </div>
 </section>
 
@@ -1018,7 +1059,7 @@
   </div>
 </footer>
 
-<script src="br.js?v=17" defer></script>
+<script src="br.js?v=18" defer></script>
 
 </body>
 </html>

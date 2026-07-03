@@ -2502,3 +2502,18 @@ body.bra-nav-locked { overflow: hidden; }
 .bra-matrix__yes { color: #3d6b4f; }
 .bra-matrix__no  { color: var(--bra-ink-mute); }
 .bra-matrix td small { display: block; font-size: 12px; color: var(--bra-ink-2); font-weight: 500; margin-top: 2px; }
+
+/* ============================================================
+   Icons — Phosphor Light sprite (see br.js). Use:
+   <svg class="bra-ic" aria-hidden="true"><use href="#ph-play"></use></svg>
+   ============================================================ */
+.bra-ic { display: inline-block; width: 1em; height: 1em; fill: currentColor;
+  vertical-align: -0.15em; flex: none; pointer-events: none; }
+.bra-ic--lg { width: 1.4em; height: 1.4em; }
+/* Sized icons inside control chrome */
+.bra-video__ctrl .bra-ic { width: 20px; height: 20px; vertical-align: middle; }
+.bra-lightbox__close .bra-ic, .bra-lightbox__nav .bra-ic { width: 22px; height: 22px; }
+.bra-totop .bra-ic { width: 20px; height: 20px; }
+.bra-download__dl .bra-ic { width: 20px; height: 20px; }
+.bra-feature__icon .bra-ic { width: 100%; height: 100%; }
+.bra-matrix__yes .bra-ic, .bra-matrix__no .bra-ic { width: 20px; height: 20px; vertical-align: middle; }

@@ -670,7 +670,7 @@
     const fill   = root.querySelector('.bra-video__fill');
     const time   = root.querySelector('.bra-video__time');
 
-    const setToggleGlyph = () => { if (toggle) toggle.textContent = video.paused ? '►' : '❙❙'; };
+    const setToggleGlyph = () => { if (toggle) toggle.innerHTML = video.paused ? '<svg class="bra-ic"><use href="#ph-play"></use></svg>' : '<svg class="bra-ic"><use href="#ph-pause"></use></svg>'; };
     const startPlay = () => {
       root.classList.add('is-started');
       video.play();
@@ -710,7 +710,7 @@
     }
 
     if (mute) {
-      const setMuteGlyph = () => { mute.textContent = video.muted ? '🔇' : '🔊'; };
+      const setMuteGlyph = () => { mute.innerHTML = video.muted ? '<svg class="bra-ic"><use href="#ph-mute"></use></svg>' : '<svg class="bra-ic"><use href="#ph-speaker"></use></svg>'; };
       mute.addEventListener('click', () => { video.muted = !video.muted; setMuteGlyph(); });
       setMuteGlyph();
     }
@@ -766,9 +766,9 @@
     box.setAttribute('aria-hidden', 'true');
     box.setAttribute('role', 'dialog');
     box.innerHTML =
-      '<button class="bra-lightbox__close" type="button" aria-label="Close">✕</button>' +
-      '<button class="bra-lightbox__nav bra-lightbox__nav--prev" type="button" aria-label="Previous">‹</button>' +
-      '<button class="bra-lightbox__nav bra-lightbox__nav--next" type="button" aria-label="Next">›</button>' +
+      '<button class="bra-lightbox__close" type="button" aria-label="Close"><svg class="bra-ic" aria-hidden="true"><use href="#ph-close"></use></svg></button>' +
+      '<button class="bra-lightbox__nav bra-lightbox__nav--prev" type="button" aria-label="Previous"><svg class="bra-ic" aria-hidden="true"><use href="#ph-prev"></use></svg></button>' +
+      '<button class="bra-lightbox__nav bra-lightbox__nav--next" type="button" aria-label="Next"><svg class="bra-ic" aria-hidden="true"><use href="#ph-next"></use></svg></button>' +
       '<div class="bra-lightbox__stage"><img class="bra-lightbox__img" alt="">' +
       '<div class="bra-lightbox__cap"><span data-lb-title></span><span data-lb-count></span></div></div>';
     document.body.appendChild(box);
@@ -850,7 +850,7 @@
   if (!totop) {
     totop = document.createElement('button');
     totop.className = 'bra-totop'; totop.type = 'button'; totop.setAttribute('aria-label', 'Back to top');
-    totop.innerHTML = '↑';
+    totop.innerHTML = '<svg class="bra-ic" aria-hidden="true"><use href="#ph-arrow-up"></use></svg>';
     document.body.appendChild(totop);
   }
   var onScroll = function () { totop.classList.toggle('is-visible', window.pageYOffset > window.innerHeight * 0.8); };
@@ -984,4 +984,21 @@
     });
     render();
   });
+})();
+
+/* ============================================================
+   Icon sprite — Phosphor Light (MIT, phosphoricons.com), injected once.
+   Use anywhere:  <svg class="bra-ic" aria-hidden="true"><use href="#ph-play"></use></svg>
+   Available ids: ph-play ph-pause ph-speaker ph-mute ph-fullscreen ph-close
+     ph-prev ph-next ph-arrow-up ph-arrow-right ph-arrow-left ph-arrow-ur
+     ph-download ph-check ph-leaf ph-recycle ph-wave ph-plus ph-minus
+   ============================================================ */
+(function () {
+  if (document.getElementById('bra-icon-sprite')) return;
+  var wrap = document.createElement('div');
+  wrap.id = 'bra-icon-sprite';
+  wrap.setAttribute('aria-hidden', 'true');
+  wrap.style.cssText = 'position:absolute;width:0;height:0;overflow:hidden';
+  wrap.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg"><symbol id="ph-play" viewBox="0 0 256 256"><path d="M231.36,116.19,87.28,28.06a14,14,0,0,0-14.18-.27A13.69,13.69,0,0,0,66,39.87V216.13a13.69,13.69,0,0,0,7.1,12.08,14,14,0,0,0,14.18-.27l144.08-88.13a13.82,13.82,0,0,0,0-23.62Zm-6.26,13.38L81,217.7a2,2,0,0,1-2.06,0,1.78,1.78,0,0,1-1-1.61V39.87a1.78,1.78,0,0,1,1-1.61A2.06,2.06,0,0,1,80,38a2,2,0,0,1,1,.31L225.1,126.43a1.82,1.82,0,0,1,0,3.14Z"/></symbol><symbol id="ph-pause" viewBox="0 0 256 256"><path d="M200,34H160a14,14,0,0,0-14,14V208a14,14,0,0,0,14,14h40a14,14,0,0,0,14-14V48A14,14,0,0,0,200,34Zm2,174a2,2,0,0,1-2,2H160a2,2,0,0,1-2-2V48a2,2,0,0,1,2-2h40a2,2,0,0,1,2,2ZM96,34H56A14,14,0,0,0,42,48V208a14,14,0,0,0,14,14H96a14,14,0,0,0,14-14V48A14,14,0,0,0,96,34Zm2,174a2,2,0,0,1-2,2H56a2,2,0,0,1-2-2V48a2,2,0,0,1,2-2H96a2,2,0,0,1,2,2Z"/></symbol><symbol id="ph-speaker" viewBox="0 0 256 256"><path d="M154.64,26.61a6,6,0,0,0-6.32.65L77.94,82H32A14,14,0,0,0,18,96v64a14,14,0,0,0,14,14H77.94l70.38,54.74A6,6,0,0,0,158,224V32A6,6,0,0,0,154.64,26.61ZM30,160V96a2,2,0,0,1,2-2H74v68H32A2,2,0,0,1,30,160Zm116,51.73L86,165.07V90.93l60-46.66Zm50.53-108.85a38,38,0,0,1,0,50.24,6,6,0,1,1-9-7.94,26,26,0,0,0,0-34.37,6,6,0,0,1,9-7.93ZM246,128a77.86,77.86,0,0,1-19.86,52,6,6,0,1,1-8.94-8,66,66,0,0,0,0-88,6,6,0,1,1,8.94-8A77.86,77.86,0,0,1,246,128Z"/></symbol><symbol id="ph-mute" viewBox="0 0 256 256"><path d="M52.44,36A6,6,0,0,0,43.56,44L78,81.94l-.08.06H32A14,14,0,0,0,18,96v64a14,14,0,0,0,14,14H77.94l70.38,54.74A6,6,0,0,0,158,224V169.92L203.56,220a6,6,0,0,0,8.88-8.08ZM30,160V96a2,2,0,0,1,2-2H74v68H32A2,2,0,0,1,30,160Zm116,51.73L86,165.07V90.93l.11-.08L146,156.72Zm41.5-66.53a26,26,0,0,0,0-34.37,6,6,0,1,1,9-7.93,38,38,0,0,1,0,50.24,6,6,0,0,1-9-7.94ZM107.41,66.68a6,6,0,0,1,1.06-8.42l39.85-31A6,6,0,0,1,158,32v74.83a6,6,0,0,1-12,0V44.27L115.83,67.73A6,6,0,0,1,107.41,66.68ZM246,128a77.86,77.86,0,0,1-19.86,52,6,6,0,1,1-8.94-8,66,66,0,0,0,0-88,6,6,0,1,1,8.94-8A77.86,77.86,0,0,1,246,128Z"/></symbol><symbol id="ph-fullscreen" viewBox="0 0 256 256"><path d="M214,48V88a6,6,0,0,1-12,0V54H168a6,6,0,0,1,0-12h40A6,6,0,0,1,214,48ZM88,202H54V168a6,6,0,0,0-12,0v40a6,6,0,0,0,6,6H88a6,6,0,0,0,0-12Zm120-40a6,6,0,0,0-6,6v34H168a6,6,0,0,0,0,12h40a6,6,0,0,0,6-6V168A6,6,0,0,0,208,162ZM88,42H48a6,6,0,0,0-6,6V88a6,6,0,0,0,12,0V54H88a6,6,0,0,0,0-12Z"/></symbol><symbol id="ph-close" viewBox="0 0 256 256"><path d="M204.24,195.76a6,6,0,1,1-8.48,8.48L128,136.49,60.24,204.24a6,6,0,0,1-8.48-8.48L119.51,128,51.76,60.24a6,6,0,0,1,8.48-8.48L128,119.51l67.76-67.75a6,6,0,0,1,8.48,8.48L136.49,128Z"/></symbol><symbol id="ph-prev" viewBox="0 0 256 256"><path d="M164.24,203.76a6,6,0,1,1-8.48,8.48l-80-80a6,6,0,0,1,0-8.48l80-80a6,6,0,0,1,8.48,8.48L88.49,128Z"/></symbol><symbol id="ph-next" viewBox="0 0 256 256"><path d="M180.24,132.24l-80,80a6,6,0,0,1-8.48-8.48L167.51,128,91.76,52.24a6,6,0,0,1,8.48-8.48l80,80A6,6,0,0,1,180.24,132.24Z"/></symbol><symbol id="ph-arrow-up" viewBox="0 0 256 256"><path d="M204.24,116.24a6,6,0,0,1-8.48,0L134,54.49V216a6,6,0,0,1-12,0V54.49L60.24,116.24a6,6,0,0,1-8.48-8.48l72-72a6,6,0,0,1,8.48,0l72,72A6,6,0,0,1,204.24,116.24Z"/></symbol><symbol id="ph-arrow-right" viewBox="0 0 256 256"><path d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></symbol><symbol id="ph-arrow-left" viewBox="0 0 256 256"><path d="M222,128a6,6,0,0,1-6,6H54.49l61.75,61.76a6,6,0,1,1-8.48,8.48l-72-72a6,6,0,0,1,0-8.48l72-72a6,6,0,0,1,8.48,8.48L54.49,122H216A6,6,0,0,1,222,128Z"/></symbol><symbol id="ph-arrow-ur" viewBox="0 0 256 256"><path d="M198,64V168a6,6,0,0,1-12,0V78.48L68.24,196.24a6,6,0,0,1-8.48-8.48L177.52,70H88a6,6,0,0,1,0-12H192A6,6,0,0,1,198,64Z"/></symbol><symbol id="ph-download" viewBox="0 0 256 256"><path d="M222,144v64a6,6,0,0,1-6,6H40a6,6,0,0,1-6-6V144a6,6,0,0,1,12,0v58H210V144a6,6,0,0,1,12,0Zm-98.24,4.24a6,6,0,0,0,8.48,0l40-40a6,6,0,0,0-8.48-8.48L134,129.51V32a6,6,0,0,0-12,0v97.51L92.24,99.76a6,6,0,0,0-8.48,8.48Z"/></symbol><symbol id="ph-check" viewBox="0 0 256 256"><path d="M228.24,76.24l-128,128a6,6,0,0,1-8.48,0l-56-56a6,6,0,0,1,8.48-8.48L96,191.51,219.76,67.76a6,6,0,0,1,8.48,8.48Z"/></symbol><symbol id="ph-leaf" viewBox="0 0 256 256"><path d="M221.45,40.19a6,6,0,0,0-5.64-5.64C140.43,30.11,80.14,52.71,54.53,95c-17.44,28.79-16.76,62.8,1.79,96.2L35.76,211.76a6,6,0,1,0,8.48,8.48L64.8,199.68c17.27,9.59,34.7,14.41,51.49,14.41A85.38,85.38,0,0,0,161,201.47C203.29,175.86,225.88,115.57,221.45,40.19Zm-66.66,151c-24.08,14.58-52.64,14.37-81.13-.39l90.59-90.59a6,6,0,0,0-8.48-8.48L65.18,182.34c-14.76-28.49-15-57-.39-81.13,22.68-37.43,76.63-57.8,145-54.95C212.59,114.58,192.22,168.54,154.79,191.21Z"/></symbol><symbol id="ph-recycle" viewBox="0 0 256 256"><path d="M94,208a6,6,0,0,1-6,6H40a22,22,0,0,1-19-33l36.71-63.44-18.76,5a6,6,0,0,1-3.1-11.6l32.77-8.77A6,6,0,0,1,76,106.45l8.8,32.76a6,6,0,0,1-4.24,7.35,6.09,6.09,0,0,1-1.56.21,6,6,0,0,1-5.79-4.45l-5-18.8L31.38,187A10,10,0,0,0,40,202H88A6,6,0,0,1,94,208Zm141-27-23.14-40a6,6,0,0,0-10.38,6l23.14,40A10,10,0,0,1,216,202H142.48l13.76-13.76a6,6,0,0,0-8.48-8.48l-24,24a6,6,0,0,0,0,8.48l24,24a6,6,0,0,0,8.48-8.48L142.48,214H216a22,22,0,0,0,19-33ZM136.65,35l36.72,63.44-18.76-5A6,6,0,0,0,151.5,105l32.78,8.79a6,6,0,0,0,7.34-4.25l8.79-32.78a6,6,0,1,0-11.58-3.11l-5.05,18.82L147,29A22,22,0,0,0,109,29L85.8,69a6,6,0,0,0,10.39,6l23.16-40a10,10,0,0,1,17.3,0Z"/></symbol><symbol id="ph-wave" viewBox="0 0 256 256"><path d="M237.43,130.55C215.84,176.57,197,198,178,198c-23.83,0-39.2-32.76-55.47-67.45C109.26,102.17,94.17,70,78,70c-9.18,0-25,10.5-48.53,60.55a6,6,0,0,1-10.86-5.1C40.16,79.43,59,58,78,58c23.83,0,39.2,32.76,55.47,67.45C146.74,153.83,161.83,186,178,186c9.18,0,25.05-10.5,48.53-60.55a6,6,0,0,1,10.86,5.1Z"/></symbol><symbol id="ph-plus" viewBox="0 0 256 256"><path d="M222,128a6,6,0,0,1-6,6H134v82a6,6,0,0,1-12,0V134H40a6,6,0,0,1,0-12h82V40a6,6,0,0,1,12,0v82h82A6,6,0,0,1,222,128Z"/></symbol><symbol id="ph-minus" viewBox="0 0 256 256"><path d="M222,128a6,6,0,0,1-6,6H40a6,6,0,0,1,0-12H216A6,6,0,0,1,222,128Z"/></symbol></svg>';
+  document.body.insertBefore(wrap, document.body.firstChild);
 })();
