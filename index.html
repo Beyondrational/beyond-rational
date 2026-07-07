@@ -7,7 +7,7 @@
 <meta name="description" content="Beyond Rational supplies sustainable, design-driven acoustic materials for modern architecture. Official distributor of Aisti® in Denmark.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=18">
+<link rel="stylesheet" href="br.css?v=23">
 <style>
   /* =====================================================
      Landing hero — full-bleed cinematic image
@@ -77,76 +77,6 @@
   }
   .home-hero__foot { align-items: center; }
 
-  .manifesto {
-    padding: var(--bra-s-6) 0;
-  }
-  .manifesto-row {
-    display: grid;
-    grid-template-columns: 60px 1fr;
-    gap: var(--bra-s-4);
-    align-items: baseline;
-    padding: var(--bra-s-4) 0;
-    border-top: 1px solid rgba(28,28,26,0.12);
-  }
-  .manifesto-row:last-child { border-bottom: 1px solid rgba(28,28,26,0.12); }
-  .manifesto-row__num {
-    font-family: var(--bra-font);
-    font-weight: 500;
-    font-size: 13px;
-    letter-spacing: 0.10em;
-    text-transform: uppercase;
-    color: var(--bra-ink-2);
-    font-variant-numeric: tabular-nums;
-  }
-  .manifesto-row__statement {
-    font-family: var(--bra-font);
-    font-weight: 300;
-    font-size: clamp(24px, 3vw, 44px);
-    line-height: 1.15;
-    letter-spacing: -0.012em;
-    text-wrap: balance;
-  }
-  .manifesto-row__statement em { font-style: normal; font-weight: 500; }
-  @media (max-width: 720px) {
-    .manifesto-row { grid-template-columns: 40px 1fr; gap: var(--bra-s-3); }
-  }
-
-  .split-tight {
-    display: grid;
-    grid-template-columns: 5fr 7fr;
-    gap: clamp(40px, 5vw, 96px);
-    align-items: start;
-  }
-  @media (max-width: 720px) { .split-tight { grid-template-columns: 1fr; } }
-
-  .studio-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .studio-stats__cell {
-    padding: var(--bra-s-3);
-    border-right: 1px solid rgba(244,242,237,0.20);
-  }
-  .studio-stats__cell:last-child { border-right: none; }
-  .studio-stats__num {
-    font-family: var(--bra-font);
-    font-weight: 300;
-    font-size: clamp(40px, 5vw, 72px);
-    line-height: 1;
-    letter-spacing: -0.022em;
-    font-variant-numeric: tabular-nums;
-  }
-  .studio-stats__label {
-    font-family: var(--bra-font);
-    font-weight: 500;
-    font-size: 12px;
-    letter-spacing: 0.10em;
-    text-transform: uppercase;
-    color: rgba(244,242,237,0.65);
-    margin-top: var(--bra-s-2);
-  }
-  @media (max-width: 720px) { .studio-stats { grid-template-columns: 1fr; } .studio-stats__cell { border-right: none; border-bottom: 1px solid rgba(244,242,237,0.20); } }
-
   .notes-row {
     display: grid;
     grid-template-columns: 110px 1fr 1fr 40px;
@@ -200,124 +130,9 @@
   .br-figure--blend img { mix-blend-mode: multiply; }
   .br-figure--wide img { aspect-ratio: 3 / 2; object-fit: cover; }
 
-  /* =====================================================
-     Editorial pair — cohesive image + text within a section
-     ===================================================== */
+  /* Editorial pair (.home-head / .home-pair / .studio-stats) now lives in
+     shared br.css — promoted once studio.html needed the same component. */
 
-  /* Section header: hairline + eyebrow + meta tag */
-  .home-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: var(--bra-s-3);
-    flex-wrap: wrap;
-    padding-top: var(--bra-s-2);
-    border-top: 1px solid rgba(28,28,26,0.16);
-    margin-bottom: var(--bra-s-5);
-  }
-  .bra-surface-oak .home-head { border-top-color: rgba(244,242,237,0.22); }
-  .home-head__meta {
-    font-family: var(--bra-font);
-    font-weight: 500; font-size: 12px;
-    letter-spacing: 0.10em; text-transform: uppercase;
-    color: var(--bra-ink-2);
-    font-variant-numeric: tabular-nums;
-  }
-  .bra-surface-oak .home-head__meta { color: rgba(244,242,237,0.62); }
-
-  /* Image + text pair, vertically bonded */
-  .home-pair {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(28px, 3.5vw, 64px);
-    align-items: center;
-  }
-  /* Pairs that carry an image become an equal-height band:
-     the photo fills exactly the height of the text beside it */
-  .home-pair--media {
-    grid-template-columns: 0.92fr 1.08fr;
-    align-items: stretch;
-  }
-  /* Fixed band height so portrait photos crop to the text height
-     instead of towering over it */
-  .home-pair--media .home-pair__media { height: clamp(440px, 58vh, 640px); }
-  .home-pair--media .home-pair__text { align-self: center; }
-  /* When text is the first column (text left / image right),
-     push it toward the image so they read as one unit */
-  .home-pair--media > .home-pair__text:first-child { margin-left: auto; }
-
-  .home-pair__media { opacity: 0; transition: opacity 900ms var(--bra-ease); display: flex; flex-direction: column; }
-  .home-pair__media.is-in { opacity: 1; }
-  .home-pair__fig { overflow: hidden; flex: 1; min-height: 0; }
-  .home-pair__fig img {
-    width: 100%; height: 100%; display: block;
-    object-fit: cover;
-    transform: scale(1.06);
-    transition: transform 1500ms var(--bra-ease);
-  }
-  .home-pair__media.is-in .home-pair__fig img { transform: scale(1); }
-  /* Standalone wide figure (e.g. studio) keeps its own ratio */
-  .home-pair__fig--wide { flex: none; }
-  .home-pair__fig--wide img { aspect-ratio: 16 / 10; height: auto; }
-  .home-pair__cap {
-    display: flex; justify-content: space-between; gap: var(--bra-s-3);
-    margin-top: var(--bra-s-2); padding-top: var(--bra-s-2);
-    border-top: 1px solid rgba(28,28,26,0.16);
-  }
-  .bra-surface-oak .home-pair__cap { border-top-color: rgba(244,242,237,0.22); }
-
-  /* Text block reveals as ONE calm unit (no flying apart) */
-  .home-reveal { opacity: 0; transform: translateY(14px); transition: opacity 820ms var(--bra-ease), transform 820ms var(--bra-ease); }
-  .home-reveal.is-in { opacity: 1; transform: none; }
-  .home-pair__text { max-width: 44ch; }
-
-  /* Stretch variant — image grows to match a tall text column (range list) */
-  .home-pair--stretch { align-items: stretch; }
-  .home-pair--stretch .home-pair__media { height: auto; }
-  .home-pair--stretch .home-pair__fig { flex: 1; min-height: 360px; }
-
-  /* Product range list */
-  .range-list { margin-top: var(--bra-s-3); }
-  .range-row {
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    align-items: baseline;
-    gap: var(--bra-s-3);
-    padding: var(--bra-s-3) 0;
-    border-top: 1px solid rgba(28,28,26,0.14);
-    text-decoration: none; color: inherit;
-    transition: padding-left var(--bra-dur-base) var(--bra-ease);
-  }
-  .range-row:last-of-type { border-bottom: 1px solid rgba(28,28,26,0.14); }
-  .range-row:hover { padding-left: var(--bra-s-2); }
-  .range-row__name {
-    font-family: var(--bra-font); font-weight: 500;
-    font-size: clamp(19px, 1.7vw, 25px);
-    letter-spacing: -0.012em; line-height: 1.1;
-  }
-  .range-row__tag {
-    font-family: var(--bra-font); font-weight: 500;
-    font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
-    color: var(--bra-ink-2); white-space: nowrap;
-  }
-  .range-row__arrow { color: var(--bra-ink-2); transition: transform var(--bra-dur-base) var(--bra-ease); }
-  .range-row:hover .range-row__arrow { transform: translateX(5px); }
-  @media (max-width: 560px) {
-    .range-row { grid-template-columns: 1fr auto; }
-    .range-row__arrow { display: none; }
-  }
-
-  @media (max-width: 820px) {
-    .home-pair, .home-pair--media { grid-template-columns: 1fr; gap: var(--bra-s-4); }
-    .home-pair--media .home-pair__media { height: auto; }
-    .home-pair--media > .home-pair__text:first-child { margin-left: 0; }
-    .home-pair__fig img { aspect-ratio: 4 / 5; }
-    .home-pair__media { order: 2; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .home-pair__media, .home-reveal { opacity: 1; transform: none; }
-    .home-pair__fig img { transform: none; }
-  }
 
   /* Full-bleed cinematic band */
   .br-feature-band {
@@ -382,10 +197,9 @@
 <nav class="bra-nav">
   <a href="index.html" class="bra-nav__brand">Beyond Rational</a>
   <div class="bra-nav__links">
-    <a href="products.html"       class="bra-nav__link">Products</a>
-    <a href="projects.html"      class="bra-nav__link">Projects</a>
-    <a href="contact.html"       class="bra-nav__link">Contact</a>
-    <a href="design-system.html" class="bra-nav__link">Design</a>
+    <a href="products.html" class="bra-nav__link">Products</a>
+    <a href="projects.html" class="bra-nav__link">Projects</a>
+    <a href="contact.html" class="bra-nav__link">Contact</a>
   </div>
 </nav>
 
@@ -411,44 +225,25 @@
         <span class="bra-reveal-line" data-reveal data-content="hero.title_l1">Conscious acoustics</span><br>
         <span class="bra-reveal-line" data-reveal data-content-html="true" data-content="hero.title_l2_em"><em>for modern architecture.</em></span>
       </h1>
-      <p class="home-hero__sub" data-content="hero.subtitle">
+      <p class="home-hero__sub home-reveal" data-stagger data-content="hero.subtitle">
         Beyond Rational is a Copenhagen-based company supplying sustainable, design-driven acoustic materials. We combine Scandinavian aesthetics with high-performance functionality — and partner with architects, designers, and developers who care about quality, innovation, and impact.
       </p>
     </div>
 
     <footer class="home-hero__foot">
       <div style="display: flex; gap: var(--bra-s-3); align-items: center; flex-wrap: wrap;">
-        <a href="projects.html" style="text-decoration: none;">
+        <a href="products.html" style="text-decoration: none;">
           <button class="bra-btn-mag bra-btn-mag--inv" data-magnetic>
             <span class="bra-swap">
-              <span class="bra-swap__a" data-content="hero.cta_primary">See our work</span>
-              <span class="bra-swap__b" data-content="hero.cta_primary" aria-hidden="true">See our work</span>
+              <span class="bra-swap__a" data-content="hero.cta_primary">See our solutions</span>
+              <span class="bra-swap__b" data-content="hero.cta_primary" aria-hidden="true">See our solutions</span>
             </span>
           </button>
         </a>
-        <a href="contact.html" class="bra-cta" style="color: var(--bra-on-oak);" data-content="hero.cta_secondary">Visit the studio</a>
+        <a href="contact.html" class="bra-cta" style="color: var(--bra-on-oak);" data-content="hero.cta_secondary">Contact</a>
       </div>
       <span class="bra-micro">Scroll ↓</span>
     </footer>
-  </div>
-</section>
-
-<!-- =====================================================
-     2 / MANIFESTO — three beliefs
-     ===================================================== -->
-<section class="bra-container manifesto">
-  <div class="home-head">
-    <p class="bra-caption" style="margin: 0;" data-content="manifesto.section_label">What we believe</p>
-    <span class="home-head__meta">Manifesto</span>
-  </div>
-
-  <div data-content-each="manifesto.items">
-    <template>
-      <div class="manifesto-row">
-        <span class="manifesto-row__num" data-each="num"></span>
-        <p class="manifesto-row__statement"><span data-each="text_pre"></span><em data-each="text_em"></em><span data-each="text_post"></span></p>
-      </div>
-    </template>
   </div>
 </section>
 
@@ -461,78 +256,33 @@
     <span class="home-head__meta" data-content="range.meta">Beyond Rational</span>
   </div>
 
-  <div class="home-pair home-pair--stretch">
-    <div class="home-pair__text home-reveal" data-stagger style="max-width: 52ch;">
-      <p class="bra-lede" style="font-size: clamp(20px, 2vw, 28px); line-height: 1.4; font-weight: 400;" data-content="range.intro">
-        Beyond Rational is a Copenhagen company supplying a curated range of conscious acoustic and surface materials for modern architecture — chosen for performance, surface, and a low footprint.
-      </p>
-      <nav class="range-list" data-content-each="range.items">
-        <template>
-          <a class="range-row" data-each="href" data-each-attr="href">
-            <span class="range-row__name" data-each="name"></span>
-            <span class="range-row__tag" data-each="tag"></span>
-            <span class="range-row__arrow" aria-hidden="true">→</span>
-          </a>
-        </template>
-      </nav>
-      <a href="products.html" class="bra-cta" style="margin-top: var(--bra-s-3);" data-content="range.link_label">See all products</a>
-    </div>
+  <p class="bra-lede home-reveal" data-stagger style="font-size: clamp(20px, 2vw, 28px); line-height: 1.4; font-weight: 400; max-width: 60ch; margin-bottom: var(--bra-s-5);" data-content="range.intro">
+    Beyond Rational is a Copenhagen company supplying a curated range of conscious acoustic and surface materials for modern architecture — chosen for performance, surface, and a low footprint.
+  </p>
 
-    <figure class="home-pair__media" data-stagger style="margin: 0;">
-      <div class="home-pair__fig">
-        <img src="assets/aisti-003.jpg" data-content="range.image" data-content-attr="src"
-             alt="A Beyond Rational acoustic material against raw natural texture" loading="lazy">
-      </div>
-      <figcaption class="home-pair__cap">
-        <span class="bra-micro">The range</span>
-        <span class="bra-micro">Four materials</span>
-      </figcaption>
-    </figure>
-  </div>
-</section>
-
-<!-- =====================================================
-     3 / WHAT WE MAKE — single short paragraph + link to product
-     ===================================================== -->
-<section class="bra-surface-stone">
-  <div class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-5);">
-    <div class="home-head">
-      <p class="bra-caption" style="margin: 0;" data-content="what_we_make.section_label">What we supply</p>
-      <span class="home-head__meta">01 — Material</span>
-    </div>
-
-    <div class="home-pair home-pair--media">
-      <div class="home-pair__text home-reveal" data-stagger>
-        <p class="bra-lede" style="font-size: clamp(20px, 2vw, 28px); line-height: 1.4; font-weight: 400;" data-content="what_we_make.body">
-          We are the official distributor of Aisti® in Denmark. The Aisti® Acoustic Tile is a bio-based absorber made from natural wood fibre — Absorption Class A, no synthetic binders, no plastics, no irritating fibres.
-        </p>
-        <p class="bra-caption" style="margin-top: var(--bra-s-3); display: flex; gap: var(--bra-s-3); flex-wrap: wrap;">
-          <a href="product.html" class="bra-cta" style="border: none; padding: 0;">See the tile</a>
-          <a href="projects.html" class="bra-cta" style="border: none; padding: 0;">See cases</a>
-        </p>
-      </div>
-
-      <figure class="home-pair__media" data-stagger style="margin: 0;">
-        <div class="home-pair__fig">
-          <img src="assets/aisti-tile-001.webp" data-content="what_we_make.image" data-content-attr="src"
-               alt="Aisti acoustic tile resting against raw wood fibre" loading="lazy">
+  <div class="bra-cardset bra-cardset--4up" data-content-each="range.items">
+    <template>
+      <a class="bra-cardset__card" data-each="href" data-each-attr="href" style="text-decoration: none; color: inherit;">
+        <figure class="bra-cardset__media">
+          <img data-each="image" data-each-attr="src" alt="" loading="lazy">
+        </figure>
+        <div class="bra-cardset__content">
+          <h3 class="bra-cardset__title" data-each="name"></h3>
         </div>
-        <figcaption class="home-pair__cap">
-          <span class="bra-micro">Aisti® Acoustic Tile</span>
-          <span class="bra-micro">Wood fibre · Class A</span>
-        </figcaption>
-      </figure>
-    </div>
+      </a>
+    </template>
   </div>
+
+  <a href="products.html" class="bra-cta" style="margin-top: var(--bra-s-4); display: inline-block;" data-content="range.link_label">See all products</a>
 </section>
 
 <!-- =====================================================
-     4 / PROCESS — foam-forming
+     4 / MISSION STATEMENT
      ===================================================== -->
 <section class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-5);">
   <div class="home-head">
-    <p class="bra-caption" style="margin: 0;" data-content="process.section_label">The technology</p>
-    <span class="home-head__meta">02 — Foam-forming</span>
+    <p class="bra-caption" style="margin: 0;" data-content="process.section_label">Mission statement</p>
+    <span class="home-head__meta">02 — Mission</span>
   </div>
 
   <div class="home-pair home-pair--media">
@@ -543,22 +293,21 @@
       </div>
       <figcaption class="home-pair__cap">
         <span class="bra-micro">Open porous structure</span>
-        <span class="bra-micro">Jyväskylä, Finland</span>
+        <span class="bra-micro">Conscious by design</span>
       </figcaption>
     </figure>
 
     <div class="home-pair__text home-reveal" data-stagger>
-      <h2 class="home-hero__title" style="font-size: clamp(32px, 4vw, 60px); max-width: 12ch; margin-bottom: var(--bra-s-3);">
-        <span class="bra-reveal-line" data-reveal data-content="process.title_l1">Foam-formed,</span><br>
-        <span class="bra-reveal-line" data-reveal data-content="process.title_l2_em">not pressed.</span>
+      <h2 class="home-hero__title" style="font-size: clamp(32px, 4vw, 60px); max-width: 14ch; margin-bottom: var(--bra-s-3);">
+        <span class="bra-reveal-line" data-reveal data-content="process.title_l1">Good for the room,</span><br>
+        <span class="bra-reveal-line" data-reveal data-content="process.title_l2_em">good for the planet.</span>
       </h2>
       <p class="bra-body" style="font-size: 17px; margin-bottom: var(--bra-s-2);" data-content="process.body_p1">
-        Aisti's foam-forming technology, adapted from the Finnish paper industry, suspends wood fibre in foam instead of pressing it flat. The fibres set into an open, porous structure that captures sound across a wide frequency range — without binders or plastics.
+        Beyond Rational exists to make the conscious choice the easy choice. We curate acoustic and surface materials that perform to the standard architects expect, without the compromises that usually come with "sustainable" — no downgrade in finish, no downgrade in specification.
       </p>
       <p class="bra-body" style="font-size: 17px; margin-bottom: var(--bra-s-3);" data-content="process.body_p2">
-        The technology is cost-effective and energy-conscious, producing tiles that are light in weight, plastic-free, and 100% recyclable. Produced in Jyväskylä, Finland.
+        Every material we carry is chosen on its own merits first: how it sounds, how it looks, how it lasts. The lower footprint is the baseline we start from, not the trade-off we ask architects to accept.
       </p>
-      <a href="product.html" class="bra-cta">Read more about the tile</a>
     </div>
   </div>
 </section>
@@ -576,7 +325,7 @@
     <div class="home-pair" style="align-items: end; margin-bottom: var(--bra-s-4);">
       <h2 class="home-hero__title home-reveal" data-stagger style="color: var(--bra-on-oak); font-size: clamp(32px, 4vw, 60px); max-width: 14ch;">
         <span class="bra-reveal-line" data-reveal data-content="studio.title_l1">Copenhagen office.</span><br>
-        <span class="bra-reveal-line" data-reveal data-content="studio.title_l2_em">Finnish production.</span>
+        <span class="bra-reveal-line" data-reveal data-content="studio.title_l2_em">Globally inspired.</span>
       </h2>
       <p class="bra-lede home-reveal" data-stagger style="max-width: 46ch;" data-content="studio.body">
         Beyond Rational is based in Copenhagen. Our partner Aisti produces in Jyväskylä, Finland. We specify and supply across Denmark.
@@ -589,12 +338,12 @@
         <div class="studio-stats__label">Based in Copenhagen</div>
       </div>
       <div class="studio-stats__cell">
-        <div class="studio-stats__num" data-content="studio.stat_people">2</div>
-        <div class="studio-stats__label">Partners</div>
+        <div class="studio-stats__num" data-content="studio.stat_people">4</div>
+        <div class="studio-stats__label">Suppliers</div>
       </div>
       <div class="studio-stats__cell">
-        <div class="studio-stats__num" data-content="studio.stat_studios">2026</div>
-        <div class="studio-stats__label">Full capacity, August</div>
+        <div class="studio-stats__num" data-content="studio.stat_studios">2024</div>
+        <div class="studio-stats__label">In business since</div>
       </div>
     </div>
 
@@ -608,6 +357,8 @@
         <span class="bra-micro">Aisti® ceiling install</span>
       </figcaption>
     </figure>
+
+    <a href="contact.html" class="bra-cta" style="margin-top: var(--bra-s-3); display: inline-block;" data-content="studio.link_label">Contact →</a>
   </div>
 </section>
 
@@ -620,46 +371,16 @@
     <a href="projects.html" class="home-head__meta" style="text-decoration: none;" data-content="cases.link_label">All cases →</a>
   </div>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--bra-s-3);" class="bra-stagger" data-stagger>
-    <article class="bra-card bra-card--stone bra-stagger-item" style="min-height: auto;">
-      <img class="bra-card__img" src="assets/aisti-026.jpg" data-content="cases.items.0.image" data-content-attr="src" alt="Aisti tiles installed in office interior" loading="lazy">
-      <p class="bra-card__eyebrow" data-content="cases.items.0.eyebrow">Case · Stockholm</p>
-      <h3 class="bra-card__title" style="margin-top: 6px;" data-content="cases.items.0.title">Ångtvätten 22</h3>
-      <p class="bra-card__meta" style="margin-top: var(--bra-s-2);" data-content="cases.items.0.meta1">Office well-being · 600×600 mm, 20 mm, dark blue</p>
-      <p class="bra-card__meta" data-content="cases.items.0.meta2">Tiles installed in standard T-grid, absorbing sound reflections and reducing echo in the office space.</p>
-      <a href="projects.html" class="bra-cta" style="margin-top: var(--bra-s-3);">Read the case</a>
-    </article>
-
-    <article class="bra-card bra-stagger-item" style="min-height: auto;">
-      <img class="bra-card__img" src="assets/aisti-008.jpg" data-content="cases.items.1.image" data-content-attr="src" alt="Aisti tiles on office ceiling" loading="lazy">
-      <p class="bra-card__eyebrow" data-content="cases.items.1.eyebrow">Case · Helsinki</p>
-      <h3 class="bra-card__title" style="margin-top: 6px;" data-content="cases.items.1.title">Bulevardi 2</h3>
-      <p class="bra-card__meta" style="margin-top: var(--bra-s-2);" data-content="cases.items.1.meta1">Echo reduction · 600×1200 mm, 40 mm, white</p>
-      <p class="bra-card__meta" data-content="cases.items.1.meta2">Reverberation time improved roughly 29% across octave bands after ceiling installation.</p>
-      <a href="projects.html" class="bra-cta" style="margin-top: var(--bra-s-3);">Read the case</a>
-    </article>
-  </div>
-</section>
-
-<!-- =====================================================
-     7 / MARQUEE — spec ribbon for rhythm
-     ===================================================== -->
-<section class="bra-marquee" data-marquee aria-hidden="true">
-  <div class="bra-marquee__track">
-    <span>Class A</span>
-    <span>B-s1,d0</span>
-    <span>M1 / A+</span>
-    <span>−2.55 kg CO₂e</span>
-    <span>100% recyclable</span>
-    <span>Wood fibre</span>
-    <span>No plastics</span>
-    <span>Class A</span>
-    <span>B-s1,d0</span>
-    <span>M1 / A+</span>
-    <span>−2.55 kg CO₂e</span>
-    <span>100% recyclable</span>
-    <span>Wood fibre</span>
-    <span>No plastics</span>
+  <div class="bra-gallery bra-gallery--auto" data-content-each="cases.items">
+    <template>
+      <a class="bra-gallery-cell bra-gallery-data bra-gallery-data--link" data-each="href" data-each-attr="href">
+        <img class="bra-gallery-data__img" data-each="image" data-each-attr="src" alt="" loading="lazy">
+        <div class="bra-gallery-data__label" data-each="eyebrow">Case · Stockholm</div>
+        <div class="bra-h3" style="font-size: 22px; margin-top: 8px;" data-each="title">Ångtvätten 22</div>
+        <div class="bra-gallery-data__note" style="margin-top: var(--bra-s-2);" data-each="meta1">Office well-being · 600×600 mm, 20 mm, dark blue</div>
+        <span class="bra-gallery-data__cta">View case ↗</span>
+      </a>
+    </template>
   </div>
 </section>
 
@@ -687,7 +408,7 @@
               </span>
             </button>
           </a>
-          <a href="mailto:morten@beyondrational.com" class="bra-cta" style="color: var(--bra-on-oak);" data-content="cta.email">morten@beyondrational.com</a>
+          <a href="mailto:hello@beyondrational.com" class="bra-cta" style="color: var(--bra-on-oak);" data-content="cta.email">hello@beyondrational.com</a>
         </div>
       </div>
     </div>
@@ -706,23 +427,23 @@
     <div>
       <h4>Product</h4>
       <ul>
-        <li><a href="product.html" class="bra-cta" style="border: none; padding: 0;">Aisti® Acoustic Tile</a></li>
-        <li><a href="product.html#finish" class="bra-cta" style="border: none; padding: 0;">Finishes</a></li>
-        <li><a href="product.html#spec" class="bra-cta" style="border: none; padding: 0;">Spec sheet</a></li>
+        <li><a href="product-aisti.html" class="bra-cta" style="border: none; padding: 0;">Aisti® Acoustic Tile</a></li>
+        <li><a href="product-wuud.html" class="bra-cta" style="border: none; padding: 0;">Wuud</a></li>
+        <li><a href="product-sappa.html" class="bra-cta" style="border: none; padding: 0;">Sappa</a></li>
+        <li><a href="product-mogu.html" class="bra-cta" style="border: none; padding: 0;">Mogu</a></li>
       </ul>
     </div>
     <div>
       <h4>Studio</h4>
       <ul>
         <li><a href="projects.html" class="bra-cta" style="border: none; padding: 0;">Projects</a></li>
-        <li><a href="design-system.html" class="bra-cta" style="border: none; padding: 0;">Design system</a></li>
       </ul>
     </div>
     <div>
       <h4>Contact</h4>
       <ul>
-        <li><a href="mailto:morten@beyondrational.com" class="bra-cta" style="border: none; padding: 0;">morten@beyondrational.com</a></li>
-        <li><span class="bra-body" style="font-size: 14px;">Landskronagade 41, 2100 Copenhagen</span></li>
+        <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;">hello@beyondrational.com</a></li>
+        <li><span class="bra-body" style="font-size: 14px;">Firskovvej 36, 2800 Kongens Lyngby</span></li>
       </ul>
     </div>
   </div>
@@ -730,11 +451,12 @@
     <span class="bra-micro">© 2026 Beyond Rational ApS</span>
     <a class="bra-micro" href="privatlivspolitik.html" style="text-decoration: none;">Privatlivspolitik</a>
     <a class="bra-micro" href="betalingsbetingelser.html" style="text-decoration: none;">Betalingsbetingelser</a>
+    <a class="bra-micro" href="design-system.html" style="text-decoration: none;">Design system</a>
     <span class="bra-micro">B_R Design System · v1.0</span>
   </div>
 </footer>
 
-<script src="br.js?v=18" defer></script>
-<script src="br-content.js?v=18" defer></script>
+<script src="br.js?v=22" defer></script>
+<script src="br-content.js?v=20" defer></script>
 </body>
 </html>

@@ -6,7 +6,7 @@
 <title>Beyond Rational · v0.2 · Reference</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=18">
+<link rel="stylesheet" href="br.css?v=23">
 </head>
 <body class="bra">
 
@@ -34,10 +34,9 @@
 <nav class="bra-nav">
   <a href="index.html" class="bra-nav__brand">Beyond Rational</a>
   <div class="bra-nav__links">
-    <a href="products.html"       class="bra-nav__link">Products</a>
-    <a href="projects.html"      class="bra-nav__link">Projects</a>
-    <a href="contact.html"       class="bra-nav__link">Contact</a>
-    <a href="design-system.html" class="bra-nav__link" aria-current="page">Design</a>
+    <a href="products.html" class="bra-nav__link">Products</a>
+    <a href="projects.html" class="bra-nav__link">Projects</a>
+    <a href="contact.html" class="bra-nav__link">Contact</a>
   </div>
 </nav>
 
@@ -492,6 +491,7 @@
     <!-- 3D stage -->
     <div class="bra-tile-stage" data-tile-stage>
       <div class="bra-tile-3d" id="tile3d">
+        <div class="bra-tile-grid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
         <div class="bra-tile-face bra-tile-face--front"></div>
         <div class="bra-tile-face bra-tile-face--back"></div>
         <div class="bra-tile-face bra-tile-face--top"></div>
@@ -523,6 +523,24 @@
           <button class="bra-config-opt is-active" data-config="thick" data-d="10" data-d-mm="20">20 mm</button>
           <button class="bra-config-opt" data-config="thick" data-d="20" data-d-mm="40">40 mm</button>
         </div>
+      </div>
+
+      <div class="bra-config-section">
+        <p class="bra-config-section__label">View</p>
+        <div class="bra-config-row" data-config-group="view">
+          <button class="bra-config-opt is-active" data-config="view" data-view="plate">Single tile</button>
+          <button class="bra-config-opt"           data-config="view" data-view="grid">In T-grid</button>
+        </div>
+        <p class="bra-config-readout" id="view-readout" style="margin-top: 12px;">The tile on its own.</p>
+      </div>
+
+      <div class="bra-config-section">
+        <p class="bra-config-section__label">Install · air gap to wall</p>
+        <div class="bra-config-row" data-config-group="gap">
+          <button class="bra-config-opt is-active" data-config="gap" data-gap="tight">Tight (plate-flush)</button>
+          <button class="bra-config-opt"           data-config="gap" data-gap="wide">Wide (200&thinsp;mm batten)</button>
+        </div>
+        <p class="bra-config-readout" id="gap-readout" style="margin-top: 12px;">Acoustic effect updates on the chart below.</p>
       </div>
 
       <div class="bra-config-section">
@@ -687,6 +705,9 @@
     <div class="bra-index-row"><span class="bra-h3" style="font-size: 28px;">Cards</span><span class="bra-index-letter">K</span></div>
     <div class="bra-index-row"><span class="bra-h3" style="font-size: 28px;">Video</span><span class="bra-index-letter">L</span></div>
     <div class="bra-index-row"><span class="bra-h3" style="font-size: 28px;">Marquee</span><span class="bra-index-letter">M</span></div>
+    <div class="bra-index-row"><span class="bra-h3" style="font-size: 28px;">Columns</span><span class="bra-index-letter">R</span></div>
+    <div class="bra-index-row"><span class="bra-h3" style="font-size: 28px;">Card layouts</span><span class="bra-index-letter">S</span></div>
+    <div class="bra-index-row"><span class="bra-h3" style="font-size: 28px;">Inquiry rows</span><span class="bra-index-letter">T</span></div>
   </div>
 </section>
 
@@ -1018,6 +1039,236 @@
 </section>
 
 <!-- =====================================================
+     R / COLUMNS — image + text pairs (4 variants)
+     ===================================================== -->
+<section class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);">R · Columns (v1.4)</p>
+  <h2 class="bra-h1" style="margin-bottom: var(--bra-s-3);">Image + text, four ways.</h2>
+  <p class="bra-body" style="max-width: 60ch; color: var(--bra-ink-2); margin-bottom: var(--bra-s-6);">
+    One component (<code>.bra-columns</code>), three modifiers. Heading size is capped per-column (not tied to full viewport width), so a long unbroken word can never overflow past the media — the bug that showed up on the Aisti technology block.
+  </p>
+
+  <!-- 01 — default: media left, text vertically centered -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">01 · Media left, text centered</p>
+  <div class="bra-columns" style="margin-bottom: var(--bra-s-6);">
+    <figure class="bra-columns__media">
+      <img src="assets/aisti-042.jpg" alt="Macro of foam-formed wood fibre tile edges" loading="lazy">
+    </figure>
+    <div class="bra-columns__text">
+      <p class="bra-caption bra-columns__eyebrow">The technology</p>
+      <h3 class="bra-columns__title">Foam-formed, not pressed.</h3>
+      <p class="bra-body">Suspending wood fibre in foam instead of pressing it flat leaves an open, porous structure that captures sound across a wide frequency range.</p>
+    </div>
+  </div>
+
+  <!-- 02 — reverse: media right -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">02 · Media right</p>
+  <div class="bra-columns bra-columns--reverse" style="margin-bottom: var(--bra-s-6);">
+    <figure class="bra-columns__media">
+      <img src="assets/aisti-042.jpg" alt="Macro of foam-formed wood fibre tile edges" loading="lazy">
+    </figure>
+    <div class="bra-columns__text">
+      <p class="bra-caption bra-columns__eyebrow">The technology</p>
+      <h3 class="bra-columns__title">Foam-formed, not pressed.</h3>
+      <p class="bra-body">Same pair, mirrored — use when the previous section already ended on an image, to keep the page from repeating its own rhythm.</p>
+    </div>
+  </div>
+
+  <!-- 03 — stacked: media full-width on top, text in a narrower column below -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">03 · Stacked, media on top</p>
+  <div class="bra-columns bra-columns--stacked" style="margin-bottom: var(--bra-s-6);">
+    <figure class="bra-columns__media">
+      <img src="assets/aisti-042.jpg" alt="Macro of foam-formed wood fibre tile edges" loading="lazy">
+    </figure>
+    <div class="bra-columns__text">
+      <p class="bra-caption bra-columns__eyebrow">The technology</p>
+      <h3 class="bra-columns__title">Foam-formed, not pressed.</h3>
+      <p class="bra-body">A wide, cinematic image leads, then a narrower reading column follows below a rule — good when the photograph needs the full width to read.</p>
+    </div>
+  </div>
+
+  <!-- 04 — ruled: equal split, top-aligned, portrait media, vertical divider -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">04 · Ruled, equal split</p>
+  <div class="bra-columns bra-columns--ruled">
+    <figure class="bra-columns__media">
+      <img src="assets/aisti-042.jpg" alt="Macro of foam-formed wood fibre tile edges" loading="lazy">
+    </figure>
+    <div class="bra-columns__text">
+      <p class="bra-caption bra-columns__eyebrow">The technology</p>
+      <h3 class="bra-columns__title">Foam-formed, not pressed.</h3>
+      <p class="bra-body">An exact 50/50 split, top-aligned, with a vertical rule as the seam — the most formal, catalogue-plate version of the pair.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     S / CARD LAYOUTS — reusable grid, 4 variants
+     ===================================================== -->
+<section class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);">S · Card layouts (v1.5)</p>
+  <h2 class="bra-h1" style="margin-bottom: var(--bra-s-3);">One card, four layouts.</h2>
+  <p class="bra-body" style="max-width: 60ch; color: var(--bra-ink-2); margin-bottom: var(--bra-s-6);">
+    One component (<code>.bra-cardset</code>), three modifiers. Grid collapses 3 → 2 → 1 column at 900 / 600px; the row variant becomes a single vertical list; title size is capped per-card so it never overflows.
+  </p>
+
+  <!-- 01 — default: vertical, image on top -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">01 · Vertical, image on top</p>
+  <div class="bra-cardset" style="margin-bottom: var(--bra-s-6);">
+    <article class="bra-cardset__card">
+      <figure class="bra-cardset__media"><img src="assets/aisti-003.jpg" alt="Aisti® Aalto tile" loading="lazy"></figure>
+      <div class="bra-cardset__content">
+        <p class="bra-caption bra-cardset__eyebrow">Acoustic tile</p>
+        <h3 class="bra-cardset__title">Aisti® Aalto</h3>
+        <p class="bra-cardset__body">Foam-formed wood fibre, Absorption Class A, two formats.</p>
+      </div>
+    </article>
+    <article class="bra-cardset__card">
+      <figure class="bra-cardset__media"><img src="assets/aisti-042.jpg" alt="Wuud cladding" loading="lazy"></figure>
+      <div class="bra-cardset__content">
+        <p class="bra-caption bra-cardset__eyebrow">Cladding</p>
+        <h3 class="bra-cardset__title">Wuud</h3>
+        <p class="bra-cardset__body">Solid wood profiles for acoustic and visual texture on walls and ceilings.</p>
+      </div>
+    </article>
+    <article class="bra-cardset__card">
+      <figure class="bra-cardset__media"><img src="assets/aisti-035.jpg" alt="Sappa surface" loading="lazy"></figure>
+      <div class="bra-cardset__content">
+        <p class="bra-caption bra-cardset__eyebrow">Surface</p>
+        <h3 class="bra-cardset__title">Sappa</h3>
+        <p class="bra-cardset__body">A calm, tactile surface finish for walls that still need to perform.</p>
+      </div>
+    </article>
+  </div>
+
+  <!-- 02 — row: horizontal list, image left -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">02 · Row, image left</p>
+  <div class="bra-cardset bra-cardset--row" style="margin-bottom: var(--bra-s-6);">
+    <article class="bra-cardset__card">
+      <figure class="bra-cardset__media"><img src="assets/aisti-003.jpg" alt="Aisti® Aalto tile" loading="lazy"></figure>
+      <div class="bra-cardset__content">
+        <p class="bra-caption bra-cardset__eyebrow">Acoustic tile</p>
+        <h3 class="bra-cardset__title">Aisti® Aalto</h3>
+        <p class="bra-cardset__body">Foam-formed wood fibre, Absorption Class A, two formats, two thicknesses.</p>
+      </div>
+    </article>
+    <article class="bra-cardset__card">
+      <figure class="bra-cardset__media"><img src="assets/aisti-025.jpg" alt="Mogu material" loading="lazy"></figure>
+      <div class="bra-cardset__content">
+        <p class="bra-caption bra-cardset__eyebrow">Bio-material</p>
+        <h3 class="bra-cardset__title">Mogu</h3>
+        <p class="bra-cardset__body">Mycelium-based tiles — dense reading column next to a fixed-width image, good for a scannable list.</p>
+      </div>
+    </article>
+  </div>
+
+  <!-- 03 — overlay: image fills the card, text on a scrim -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">03 · Overlay, text on scrim</p>
+  <div class="bra-cardset bra-cardset--overlay" style="margin-bottom: var(--bra-s-6);">
+    <article class="bra-cardset__card">
+      <figure class="bra-cardset__media"><img src="assets/aisti-003.jpg" alt="Aisti® Aalto tile" loading="lazy"></figure>
+      <div class="bra-cardset__content">
+        <p class="bra-caption bra-cardset__eyebrow">Acoustic tile</p>
+        <h3 class="bra-cardset__title">Aisti® Aalto</h3>
+      </div>
+    </article>
+    <article class="bra-cardset__card">
+      <figure class="bra-cardset__media"><img src="assets/aisti-042.jpg" alt="Wuud cladding" loading="lazy"></figure>
+      <div class="bra-cardset__content">
+        <p class="bra-caption bra-cardset__eyebrow">Cladding</p>
+        <h3 class="bra-cardset__title">Wuud</h3>
+      </div>
+    </article>
+    <article class="bra-cardset__card">
+      <figure class="bra-cardset__media"><img src="assets/aisti-035.jpg" alt="Sappa surface" loading="lazy"></figure>
+      <div class="bra-cardset__content">
+        <p class="bra-caption bra-cardset__eyebrow">Surface</p>
+        <h3 class="bra-cardset__title">Sappa</h3>
+      </div>
+    </article>
+  </div>
+
+  <!-- 04 — frame: minimal, no image, bordered text-only -->
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">04 · Frame, text only</p>
+  <div class="bra-cardset bra-cardset--frame">
+    <article class="bra-cardset__card">
+      <div class="bra-cardset__content">
+        <p class="bra-caption bra-cardset__eyebrow">Absorption</p>
+        <h3 class="bra-cardset__title">Class A</h3>
+        <p class="bra-cardset__body">Broadband sound absorption across the frequencies where speech lives.</p>
+      </div>
+    </article>
+    <article class="bra-cardset__card">
+      <div class="bra-cardset__content">
+        <p class="bra-caption bra-cardset__eyebrow">Footprint</p>
+        <h3 class="bra-cardset__title">−2.55 kg CO₂e</h3>
+        <p class="bra-cardset__body">Per tile — a negative carbon footprint over the material's lifecycle.</p>
+      </div>
+    </article>
+    <article class="bra-cardset__card">
+      <div class="bra-cardset__content">
+        <p class="bra-caption bra-cardset__eyebrow">End of life</p>
+        <h3 class="bra-cardset__title">100% recyclable</h3>
+        <p class="bra-cardset__body">No synthetic binders, no plastics — good for specs and stat blocks with no photography.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- =====================================================
+     T / INQUIRY ROWS — "choose a path" (retired from Contact, kept for reuse)
+     ===================================================== -->
+<section class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);">T · Inquiry rows (v1.6)</p>
+  <h2 class="bra-h1" style="margin-bottom: var(--bra-s-3);">Choose a path.</h2>
+  <p class="bra-body" style="max-width: 60ch; color: var(--bra-ink-2); margin-bottom: var(--bra-s-5);">
+    <code>.inquiry-list</code> / <code>.inquiry-row</code> — a set of large clickable rows that jump to a matching form tab (<code>data-jump-tab</code> + <code>href="#form-section"</code>, wired up by <code>data-form-tabs</code> in br.js). Retired from the live Contact page for now; kept here since the pattern is reusable for any "pick one of several paths" flow.
+  </p>
+
+  <div class="inquiry-list">
+    <a href="#" class="inquiry-row" data-jump-tab="sample">
+      <span class="inquiry-row__num">01</span>
+      <span class="inquiry-row__thumb"><img src="assets/aisti-render.png" alt="" loading="lazy"></span>
+      <span class="inquiry-row__text">
+        <span class="inquiry-row__title">Sample box</span>
+        <span class="inquiry-row__meta">Samples of the Aisti® tile ahead of full production in August 2026.</span>
+      </span>
+      <span class="inquiry-row__action">Request a box</span>
+      <span class="inquiry-row__arrow">→</span>
+    </a>
+    <a href="#" class="inquiry-row" data-jump-tab="specify">
+      <span class="inquiry-row__num">02</span>
+      <span class="inquiry-row__thumb"><img src="assets/aisti-042.jpg" alt="" loading="lazy"></span>
+      <span class="inquiry-row__text">
+        <span class="inquiry-row__title">Specify for project</span>
+        <span class="inquiry-row__meta">Send brief and programme. We help with format, thickness, mounting, and acoustic targets.</span>
+      </span>
+      <span class="inquiry-row__action">Send a brief</span>
+      <span class="inquiry-row__arrow">→</span>
+    </a>
+    <a href="#" class="inquiry-row" data-jump-tab="info">
+      <span class="inquiry-row__num">03</span>
+      <span class="inquiry-row__thumb"><img src="assets/aisti-tile-001.webp" alt="" loading="lazy"></span>
+      <span class="inquiry-row__text">
+        <span class="inquiry-row__title">Information</span>
+        <span class="inquiry-row__meta">EPD, installation guide, comparison data. Sent on weekdays.</span>
+      </span>
+      <span class="inquiry-row__action">Ask for material</span>
+      <span class="inquiry-row__arrow">→</span>
+    </a>
+    <a href="#" class="inquiry-row" data-jump-tab="other">
+      <span class="inquiry-row__num">04</span>
+      <span class="inquiry-row__thumb"><img src="assets/aisti-025.jpg" alt="" loading="lazy"></span>
+      <span class="inquiry-row__text">
+        <span class="inquiry-row__title">Anything else</span>
+        <span class="inquiry-row__meta">Partnerships, dealer enquiries, anything else. Tell us what you're after.</span>
+      </span>
+      <span class="inquiry-row__action">Write to us</span>
+      <span class="inquiry-row__arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- =====================================================
      FOOTER — closing oak band
      ===================================================== -->
 <footer class="bra-footer">
@@ -1031,16 +1282,16 @@
     <div>
       <h4>Product</h4>
       <ul>
-        <li><a href="product.html" class="bra-cta" style="border: none; padding: 0;">Aisti Aalto</a></li>
-        <li><a href="product.html#finish" class="bra-cta" style="border: none; padding: 0;">Finishes</a></li>
-        <li><a href="product.html#spec" class="bra-cta" style="border: none; padding: 0;">Spec sheet</a></li>
+        <li><a href="product-aisti.html" class="bra-cta" style="border: none; padding: 0;">Aisti® Acoustic Tile</a></li>
+        <li><a href="product-wuud.html" class="bra-cta" style="border: none; padding: 0;">Wuud</a></li>
+        <li><a href="product-sappa.html" class="bra-cta" style="border: none; padding: 0;">Sappa</a></li>
+        <li><a href="product-mogu.html" class="bra-cta" style="border: none; padding: 0;">Mogu</a></li>
       </ul>
     </div>
     <div>
       <h4>Studio</h4>
       <ul>
         <li><a href="projects.html" class="bra-cta" style="border: none; padding: 0;">Projects</a></li>
-        <li><a href="design-system.html" class="bra-cta" style="border: none; padding: 0;">Design system</a></li>
       </ul>
     </div>
     <div>
@@ -1055,11 +1306,12 @@
     <span class="bra-micro">© 2026 Beyond Rational ApS</span>
     <a class="bra-micro" href="privatlivspolitik.html" style="text-decoration: none;">Privatlivspolitik</a>
     <a class="bra-micro" href="betalingsbetingelser.html" style="text-decoration: none;">Betalingsbetingelser</a>
+    <a class="bra-micro" href="design-system.html" style="text-decoration: none;">Design system</a>
     <span class="bra-micro">B_R Design System · v1.0</span>
   </div>
 </footer>
 
-<script src="br.js?v=18" defer></script>
+<script src="br.js?v=22" defer></script>
 
 </body>
 </html>

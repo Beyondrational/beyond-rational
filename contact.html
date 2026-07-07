@@ -7,7 +7,7 @@
 <meta name="description" content="Request a sample box. Specify Aisti for your project. Visit the studio in Copenhagen.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=18">
+<link rel="stylesheet" href="br.css?v=23">
 <style>
   /* Form fields tuned for v1 design system */
   .bra-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: var(--bra-s-2); }
@@ -35,6 +35,7 @@
   .bra-field__input::placeholder, .bra-field__textarea::placeholder { color: var(--bra-ink-mute); }
   .bra-form-cols { display: grid; grid-template-columns: 1fr 1fr; gap: var(--bra-s-3); }
   @media (max-width: 720px) { .bra-form-cols { grid-template-columns: 1fr; } }
+
 </style>
 </head>
 <body class="bra" data-page="contact">
@@ -62,10 +63,9 @@
 <nav class="bra-nav">
   <a href="index.html" class="bra-nav__brand">Beyond Rational</a>
   <div class="bra-nav__links">
-    <a href="products.html"       class="bra-nav__link">Products</a>
-    <a href="projects.html"      class="bra-nav__link">Projects</a>
-    <a href="contact.html"       class="bra-nav__link" aria-current="page">Contact</a>
-    <a href="design-system.html" class="bra-nav__link">Design</a>
+    <a href="products.html" class="bra-nav__link">Products</a>
+    <a href="projects.html" class="bra-nav__link">Projects</a>
+    <a href="contact.html" class="bra-nav__link" aria-current="page">Contact</a>
   </div>
 </nav>
 
@@ -87,7 +87,7 @@
         <span class="bra-reveal-line" data-reveal>Tell us</span><br>
         <span class="bra-reveal-line" data-reveal>about the room.</span>
       </h1>
-      <p class="home-hero__sub">
+      <p class="home-hero__sub home-reveal" data-stagger>
         Pick a path below. The form fits the conversation: sample, project spec, or general information. We answer Monday to Friday.
       </p>
     </div>
@@ -97,192 +97,6 @@
     </footer>
   </div>
 </section>
-
-<!-- ===== Contact cards ===== -->
-<section class="bra-container" style="padding-top: var(--bra-s-3); padding-bottom: var(--bra-s-6);">
-  <div class="bra-contact-grid">
-
-    <a href="#form-section" class="bra-contact-card" data-jump-tab="sample">
-      <img class="bra-contact-card__img" src="assets/aisti-render.png" alt="Aisti sample box" loading="lazy">
-      <p class="bra-contact-card__num">01 / Sample</p>
-      <h3 class="bra-contact-card__title">Sample box</h3>
-      <p class="bra-contact-card__meta">Samples of the Aisti® tile ahead of full production in August 2026.</p>
-      <span class="bra-contact-card__action bra-cta">Request a box</span>
-    </a>
-
-    <a href="#form-section" class="bra-contact-card" data-jump-tab="specify">
-      <img class="bra-contact-card__img" src="assets/aisti-042.jpg" alt="Aisti panel mounted in interior" loading="lazy">
-      <p class="bra-contact-card__num">02 / Project</p>
-      <h3 class="bra-contact-card__title">Specify for project</h3>
-      <p class="bra-contact-card__meta">Send brief and programme. We help with format, thickness, mounting, and acoustic targets.</p>
-      <span class="bra-contact-card__action bra-cta">Send a brief</span>
-    </a>
-
-    <a href="#form-section" class="bra-contact-card" data-jump-tab="info">
-      <img class="bra-contact-card__img" src="assets/aisti-tile-001.webp" alt="Wood-fibre material close-up" loading="lazy">
-      <p class="bra-contact-card__num">03 / Info</p>
-      <h3 class="bra-contact-card__title">Information</h3>
-      <p class="bra-contact-card__meta">EPD, installation guide, comparison data. Sent on weekdays.</p>
-      <span class="bra-contact-card__action bra-cta">Ask for material</span>
-    </a>
-
-    <a href="#form-section" class="bra-contact-card" data-jump-tab="other">
-      <img class="bra-contact-card__img" src="assets/aisti-025.jpg" alt="Workshop, Helsinki" loading="lazy">
-      <p class="bra-contact-card__num">04 / Other</p>
-      <h3 class="bra-contact-card__title">Anything else</h3>
-      <p class="bra-contact-card__meta">Partnerships, dealer enquiries, anything else. Tell us what you're after.</p>
-      <span class="bra-contact-card__action bra-cta">Write to us</span>
-    </a>
-
-  </div>
-</section>
-
-<!-- ===== Founders — Morten & Rasmus ===== -->
-<section class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-6);">
-  <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: var(--bra-s-4); gap: var(--bra-s-3); flex-wrap: wrap;">
-    <div>
-      <p class="bra-caption" style="margin-bottom: var(--bra-s-2);" data-content="founders.section_label">Founders</p>
-      <h2 class="bra-h2" style="max-width: 20ch;">
-        <span class="bra-reveal-line" data-reveal>Talk to one of us</span><br>
-        <span class="bra-reveal-line" data-reveal>directly.</span>
-      </h2>
-    </div>
-    <p class="bra-body" style="max-width: 40ch;">
-      Beyond Rational is run by Morten and Rasmus Gyldendal Melberg. Both pick up the phone, both read every brief.
-    </p>
-  </div>
-
-  <div class="founder-grid">
-
-    <!-- Morten -->
-    <article class="founder-card">
-      <img class="founder-card__img" src="assets/morten-melberg.jpg" data-content="founders.morten.photo" data-content-attr="src" alt="Morten Gyldendal Melberg, managing partner, Beyond Rational" loading="lazy">
-      <div class="founder-card__body">
-        <p class="founder-card__eyebrow" data-content="founders.morten.eyebrow">Managing partner</p>
-        <h3 class="founder-card__title" data-content="founders.morten.name">Morten Gyldendal Melberg</h3>
-        <p class="founder-card__meta" data-content="founders.morten.role">Commercial, partnerships, projects.</p>
-      </div>
-      <div class="founder-card__contact">
-        <div class="founder-card__row">
-          <span class="founder-card__key">Email</span>
-          <a href="mailto:morten@beyondrational.com" class="founder-card__val">morten@beyondrational.com</a>
-        </div>
-        <div class="founder-card__row">
-          <span class="founder-card__key">Phone</span>
-          <a href="tel:+4522555470" class="founder-card__val">+45 22 55 54 70</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Rasmus -->
-    <article class="founder-card">
-      <img class="founder-card__img" src="assets/rasmus-melberg.jpg" data-content="founders.rasmus.photo" data-content-attr="src" alt="Rasmus Gyldendal Melberg, partner, Beyond Rational" loading="lazy">
-      <div class="founder-card__body">
-        <p class="founder-card__eyebrow" data-content="founders.rasmus.eyebrow">Partner</p>
-        <h3 class="founder-card__title" data-content="founders.rasmus.name">Rasmus Gyldendal Melberg</h3>
-        <p class="founder-card__meta" data-content="founders.rasmus.role">Product, design, specification.</p>
-      </div>
-      <div class="founder-card__contact">
-        <div class="founder-card__row">
-          <span class="founder-card__key">Email</span>
-          <a href="mailto:rasmus@beyondrational.com" class="founder-card__val">rasmus@beyondrational.com</a>
-        </div>
-        <div class="founder-card__row">
-          <span class="founder-card__key">Studio</span>
-          <span class="founder-card__val">Landskronagade 41, CPH</span>
-        </div>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<style>
-  .founder-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--bra-s-3);
-  }
-  @media (max-width: 720px) { .founder-grid { grid-template-columns: 1fr; } }
-
-  .founder-card {
-    border: 2px solid var(--bra-ink);
-    background: var(--bra-paper);
-    display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    overflow: hidden;
-  }
-  .founder-card__img {
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-    display: block;
-    border-bottom: 2px solid var(--bra-ink);
-  }
-  .founder-card__body {
-    padding: var(--bra-s-3) var(--bra-s-3) 0;
-  }
-  .founder-card__eyebrow {
-    font-family: var(--bra-font);
-    font-weight: 600;
-    font-size: 10px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--bra-ink-2);
-  }
-  .founder-card__title {
-    font-family: var(--bra-font);
-    font-weight: 500;
-    font-size: clamp(22px, 1.9vw, 28px);
-    line-height: 1.15;
-    letter-spacing: -0.012em;
-    margin-top: 8px;
-  }
-  .founder-card__meta {
-    font-family: var(--bra-font);
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1.45;
-    color: var(--bra-ink-2);
-    margin-top: 6px;
-  }
-  .founder-card__contact {
-    padding: var(--bra-s-3);
-    border-top: 2px solid var(--bra-ink);
-    margin-top: var(--bra-s-3);
-  }
-  .founder-card__row {
-    display: grid;
-    grid-template-columns: 70px 1fr;
-    align-items: baseline;
-    gap: var(--bra-s-2);
-    padding: 10px 0;
-  }
-  .founder-card__row:last-child { padding-bottom: 0; }
-  .founder-card__row:first-child { padding-top: 0; }
-  .founder-card__key {
-    font-family: var(--bra-font);
-    font-weight: 600;
-    font-size: 11px;
-    letter-spacing: 0.10em;
-    text-transform: uppercase;
-    color: var(--bra-ink-2);
-  }
-  .founder-card__val {
-    font-family: var(--bra-font);
-    font-weight: 500;
-    font-size: 15px;
-    letter-spacing: -0.005em;
-    color: var(--bra-ink);
-    word-break: break-word;
-  }
-  a.founder-card__val {
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 1px;
-    transition: opacity var(--bra-dur-fast) var(--bra-ease);
-  }
-  a.founder-card__val:hover { opacity: 0.7; }
-</style>
 
 <!-- ===== Multi-form (tabbed) ===== -->
 <section id="form-section" class="bra-surface-stone">
@@ -310,7 +124,7 @@
         <div class="bra-spec" style="margin-top: var(--bra-s-4); max-width: 420px;">
           <div class="bra-spec-row"><div class="bra-spec-key">Email</div><div class="bra-spec-val" style="font-size: 18px;">morten@beyondrational.com</div></div>
           <div class="bra-spec-row"><div class="bra-spec-key">Phone</div><div class="bra-spec-val" style="font-size: 18px;">+45 22 55 54 70</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">Office</div><div class="bra-spec-val" style="font-size: 18px;">Landskronagade 41, CPH</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key">Office</div><div class="bra-spec-val" style="font-size: 18px;">Firskovvej 36, 2800 Kongens Lyngby</div></div>
           <div class="bra-spec-row"><div class="bra-spec-key">Hours</div><div class="bra-spec-val" style="font-size: 18px;">Mon–Fri</div></div>
         </div>
       </div>
@@ -501,32 +315,50 @@
   </div>
 </section>
 
+<!-- ===== Contact cards — direct line ===== -->
+<section class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);" data-content="contact_cards.section_label">Direct line</p>
+  <h2 class="bra-h2" style="margin-bottom: var(--bra-s-4); max-width: 32ch;">
+    <span class="bra-reveal-line" data-reveal data-content="contact_cards.title">Beyond Rational is run by Morten and Rasmus.</span>
+  </h2>
+  <p class="bra-body" style="margin-bottom: var(--bra-s-5); max-width: 46ch;" data-content="contact_cards.intro">Both pick up the phone, both read every brief.</p>
+
+  <div class="bra-gallery">
+    <div class="bra-gallery-cell" style="grid-column: span 5; padding: 0;">
+      <img src="assets/rasmus-melberg.jpg" data-content="contact_cards.rasmus.photo" data-content-attr="src" alt="Rasmus Gyldendal Melberg, partner, Beyond Rational" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+    <div class="bra-gallery-cell bra-gallery-data bra-gallery-data--ink" style="grid-column: span 7;">
+      <div>
+        <div class="bra-gallery-data__label" data-content="contact_cards.rasmus.eyebrow">Partner</div>
+        <div class="bra-h3" style="margin-top: 8px;" data-content="contact_cards.rasmus.name">Rasmus Gyldendal Melberg</div>
+        <div class="bra-gallery-data__note" style="margin-top: var(--bra-s-2);" data-content="contact_cards.rasmus.role">Product, design, specification.</div>
+      </div>
+      <div class="bra-spec" style="margin-top: var(--bra-s-3);">
+        <div class="bra-spec-row"><div class="bra-spec-key">Email</div><div class="bra-spec-val"><a href="mailto:rasmus@beyondrational.com" data-content="contact_cards.rasmus.email">rasmus@beyondrational.com</a></div></div>
+        <div class="bra-spec-row"><div class="bra-spec-key">Phone</div><div class="bra-spec-val"><a href="tel:+4524481401" data-content="contact_cards.rasmus.phone">+45 24 48 14 01</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== Studio info ===== -->
 <section class="bra-surface-stone">
   <div class="bra-container bra-section">
     <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Studio</p>
     <h2 class="bra-h2" style="margin-bottom: var(--bra-s-4); max-width: 18ch;">
-      <span class="bra-reveal-line" data-reveal>Landskronagade 41,</span><br>
-      <span class="bra-reveal-line" data-reveal>Copenhagen.</span>
+      <span class="bra-reveal-line" data-reveal>Firskovvej 36,</span><br>
+      <span class="bra-reveal-line" data-reveal>Kongens Lyngby.</span>
     </h2>
 
-    <div class="bra-gallery">
-      <div class="bra-gallery-cell bra-gallery-data" style="grid-column: span 4;">
-        <div class="bra-gallery-data__label">Visit</div>
-        <div class="bra-h3" style="font-size: 24px; margin-top: 8px;">By appointment</div>
-        <div class="bra-gallery-data__note" style="margin-top: var(--bra-s-2);">
-          Book a slot and see the tile in person — we'll have samples laid out.
-        </div>
-        <a href="#" class="bra-cta" style="margin-top: auto; padding-top: var(--bra-s-3);">Book a visit</a>
-      </div>
-      <div class="bra-gallery-cell bra-gallery-data" style="grid-column: span 4;">
+    <div class="bra-gallery bra-gallery--auto">
+      <div class="bra-gallery-cell bra-gallery-data">
         <div class="bra-gallery-data__label">Email</div>
-        <div class="bra-h3" style="font-size: 22px; margin-top: 8px;">morten@beyondrational.com</div>
+        <div class="bra-h3" style="font-size: 22px; margin-top: 8px;">hello@beyondrational.com</div>
         <div class="bra-gallery-data__note" style="margin-top: var(--bra-s-2);">
           For samples, preorders, and project briefs. We answer Mon–Fri.
         </div>
       </div>
-      <div class="bra-gallery-cell bra-gallery-data bra-gallery-data--ink" style="grid-column: span 4;">
+      <div class="bra-gallery-cell bra-gallery-data bra-gallery-data--ink">
         <div class="bra-gallery-data__label">Phone</div>
         <div class="bra-h3" style="font-size: 22px; margin-top: 8px;">+45 22 55 54 70</div>
         <div class="bra-gallery-data__note" style="margin-top: var(--bra-s-2);">
@@ -542,18 +374,17 @@
   <div class="bra-container bra-section">
     <div class="bra-grid-2" style="align-items: end;">
       <h2 class="bra-mega" style="line-height: 0.86;">
-        <span class="bra-reveal-line" data-reveal>Meet us</span><br>
-        <span class="bra-reveal-line" data-reveal>at Material</span><br>
-        <span class="bra-reveal-line" data-reveal>Matters.</span>
+        <span class="bra-reveal-line" data-reveal data-content="journey.title_l1">Follow our</span><br>
+        <span class="bra-reveal-line" data-reveal data-content="journey.title_l2">journey.</span>
       </h2>
       <div class="bra-stack-wide">
-        <p class="bra-lede">
-          We launch Aisti® in Denmark at Material Matters, part of 3daysofdesign, June 10–12 2026. Free entry. Drop by anytime — the first 100 sign-ups get a goodie bag.
+        <p class="bra-lede" data-content="journey.body">
+          Beyond Rational supplies a curated range of conscious acoustic and surface materials for modern architecture — chosen for performance, surface, and a low footprint. Follow along as we bring new materials to Denmark.
         </p>
-        <div class="bra-spec">
-          <div class="bra-spec-row"><div class="bra-spec-key">Dates</div><div class="bra-spec-val">10–12 June 2026</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">Venue</div><div class="bra-spec-val">Gammel Dok</div></div>
-        </div>
+        <form class="bra-newsletter" data-newsletter onsubmit="return false;">
+          <input type="email" placeholder="you@studio.com" aria-label="Email" required>
+          <button type="submit">Subscribe</button>
+        </form>
       </div>
     </div>
   </div>
@@ -570,23 +401,23 @@
     <div>
       <h4>Product</h4>
       <ul>
-        <li><a href="product.html" class="bra-cta" style="border: none; padding: 0;">Aisti® Acoustic Tile</a></li>
-        <li><a href="product.html#finish" class="bra-cta" style="border: none; padding: 0;">Finishes</a></li>
-        <li><a href="product.html#spec" class="bra-cta" style="border: none; padding: 0;">Spec sheet</a></li>
+        <li><a href="product-aisti.html" class="bra-cta" style="border: none; padding: 0;">Aisti® Acoustic Tile</a></li>
+        <li><a href="product-wuud.html" class="bra-cta" style="border: none; padding: 0;">Wuud</a></li>
+        <li><a href="product-sappa.html" class="bra-cta" style="border: none; padding: 0;">Sappa</a></li>
+        <li><a href="product-mogu.html" class="bra-cta" style="border: none; padding: 0;">Mogu</a></li>
       </ul>
     </div>
     <div>
       <h4>Studio</h4>
       <ul>
         <li><a href="projects.html" class="bra-cta" style="border: none; padding: 0;">Projects</a></li>
-        <li><a href="design-system.html" class="bra-cta" style="border: none; padding: 0;">Design system</a></li>
       </ul>
     </div>
     <div>
       <h4>Contact</h4>
       <ul>
-        <li><a href="mailto:morten@beyondrational.com" class="bra-cta" style="border: none; padding: 0;">morten@beyondrational.com</a></li>
-        <li><span class="bra-body" style="font-size: 14px;">Landskronagade 41, 2100 Copenhagen</span></li>
+        <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;">hello@beyondrational.com</a></li>
+        <li><span class="bra-body" style="font-size: 14px;">Firskovvej 36, 2800 Kongens Lyngby</span></li>
       </ul>
     </div>
   </div>
@@ -594,11 +425,12 @@
     <span class="bra-micro">© 2026 Beyond Rational ApS</span>
     <a class="bra-micro" href="privatlivspolitik.html" style="text-decoration: none;">Privatlivspolitik</a>
     <a class="bra-micro" href="betalingsbetingelser.html" style="text-decoration: none;">Betalingsbetingelser</a>
+    <a class="bra-micro" href="design-system.html" style="text-decoration: none;">Design system</a>
     <span class="bra-micro">B_R Design System · v1.0</span>
   </div>
 </footer>
 
-<script src="br.js?v=18" defer></script>
-<script src="br-content.js?v=18" defer></script>
+<script src="br.js?v=22" defer></script>
+<script src="br-content.js?v=20" defer></script>
 </body>
 </html>

@@ -1,0 +1,20 @@
+{
+ "contact_cards": {
+  "section_label": "Direct line",
+  "title": "Beyond Rational is run by Morten and Rasmus.",
+  "intro": "Both pick up the phone, both read every brief.",
+  "rasmus": {
+   "eyebrow": "Partner",
+   "name": "Rasmus Gyldendal Melberg",
+   "role": "Product, design, specification.",
+   "email": "rasmus@beyondrational.com",
+   "phone": "+45 24 48 14 01",
+   "photo": "assets/rasmus-melberg.jpg"
+  }
+ },
+ "journey": {
+  "title_l1": "Follow our",
+  "title_l2": "journey.",
+  "body": "Beyond Rational supplies a curated range of conscious acoustic and surface materials for modern architecture — chosen for performance, surface, and a low footprint. Follow along as we bring new materials to Denmark."
+ }
+}

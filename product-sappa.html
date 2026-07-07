@@ -7,7 +7,7 @@
 <meta name="description" content="Sappa — a new acoustic material in the Beyond Rational range. In development; full presentation coming soon.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=18">
+<link rel="stylesheet" href="br.css?v=23">
 <style>
   .prod-hero-panel {
     width: 100%; aspect-ratio: 16 / 7; border: 2px solid var(--bra-ink);
@@ -50,10 +50,9 @@
 <nav class="bra-nav">
   <a href="index.html" class="bra-nav__brand">Beyond Rational</a>
   <div class="bra-nav__links">
-    <a href="products.html"      class="bra-nav__link" aria-current="page">Products</a>
-    <a href="projects.html"      class="bra-nav__link">Projects</a>
-    <a href="contact.html"       class="bra-nav__link">Contact</a>
-    <a href="design-system.html" class="bra-nav__link">Design</a>
+    <a href="products.html" class="bra-nav__link" aria-current="page">Products</a>
+    <a href="projects.html" class="bra-nav__link">Projects</a>
+    <a href="contact.html" class="bra-nav__link">Contact</a>
   </div>
 </nav>
 
@@ -74,7 +73,7 @@
       <h1 class="home-hero__title">
         <span class="bra-reveal-line" data-reveal data-content="hero.title">Sappa.</span>
       </h1>
-      <p class="home-hero__sub" data-content="hero.lede">
+      <p class="home-hero__sub home-reveal" data-stagger data-content="hero.lede">
         A new acoustic material joining the Beyond Rational range. This page is a placeholder; the full presentation, imagery, and specifications are on their way.
       </p>
     </div>
@@ -82,27 +81,6 @@
     <footer class="home-hero__foot">
       <span class="bra-micro">Beyond Rational · Copenhagen</span>
     </footer>
-  </div>
-</section>
-
-<!-- ===== Skeleton spec ===== -->
-<section id="spec" class="bra-surface-stone">
-  <div class="bra-container bra-section">
-    <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">The spec</p>
-    <div class="bra-grid-2">
-      <h2 class="bra-h1">
-        <span class="bra-reveal-line" data-reveal data-content="spec_title_l1">Details</span><br>
-        <span class="bra-reveal-line" data-reveal data-content="spec_title_l2">coming soon.</span>
-      </h2>
-      <div class="bra-spec">
-        <div class="bra-spec-row"><div class="bra-spec-key">Core</div><div class="bra-spec-val">—</div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">Formats</div><div class="bra-spec-val">—</div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">Thickness</div><div class="bra-spec-val">—</div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">Absorption</div><div class="bra-spec-val">—</div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">Fire</div><div class="bra-spec-val">—</div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">End of life</div><div class="bra-spec-val">—</div></div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -128,6 +106,27 @@
         </figcaption>
       </figure>
     </template>
+  </div>
+</section>
+
+<!-- ===== Skeleton spec ===== -->
+<section id="spec" class="bra-surface-stone">
+  <div class="bra-container bra-section">
+    <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">The spec</p>
+    <div class="bra-grid-2">
+      <h2 class="bra-h1">
+        <span class="bra-reveal-line" data-reveal data-content="spec_title_l1">Details</span><br>
+        <span class="bra-reveal-line" data-reveal data-content="spec_title_l2">coming soon.</span>
+      </h2>
+      <div class="bra-spec">
+        <div class="bra-spec-row"><div class="bra-spec-key">Core</div><div class="bra-spec-val">—</div></div>
+        <div class="bra-spec-row"><div class="bra-spec-key">Formats</div><div class="bra-spec-val">—</div></div>
+        <div class="bra-spec-row"><div class="bra-spec-key">Thickness</div><div class="bra-spec-val">—</div></div>
+        <div class="bra-spec-row"><div class="bra-spec-key">Absorption</div><div class="bra-spec-val">—</div></div>
+        <div class="bra-spec-row"><div class="bra-spec-key">Fire</div><div class="bra-spec-val">—</div></div>
+        <div class="bra-spec-row"><div class="bra-spec-key">End of life</div><div class="bra-spec-val">—</div></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -164,10 +163,10 @@
       </p>
     </div>
     <div>
-      <h4>Products</h4>
+      <h4>Product</h4>
       <ul>
+        <li><a href="product-aisti.html" class="bra-cta" style="border: none; padding: 0;">Aisti® Acoustic Tile</a></li>
         <li><a href="product-wuud.html" class="bra-cta" style="border: none; padding: 0;">Wuud</a></li>
-        <li><a href="product.html" class="bra-cta" style="border: none; padding: 0;">Aisti® Aalto</a></li>
         <li><a href="product-sappa.html" class="bra-cta" style="border: none; padding: 0;">Sappa</a></li>
         <li><a href="product-mogu.html" class="bra-cta" style="border: none; padding: 0;">Mogu</a></li>
       </ul>
@@ -176,14 +175,13 @@
       <h4>Studio</h4>
       <ul>
         <li><a href="projects.html" class="bra-cta" style="border: none; padding: 0;">Projects</a></li>
-        <li><a href="design-system.html" class="bra-cta" style="border: none; padding: 0;">Design system</a></li>
       </ul>
     </div>
     <div>
       <h4>Contact</h4>
       <ul>
-        <li><a href="mailto:morten@beyondrational.com" class="bra-cta" style="border: none; padding: 0;">morten@beyondrational.com</a></li>
-        <li><span class="bra-body" style="font-size: 14px;">Landskronagade 41, 2100 Copenhagen</span></li>
+        <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;">hello@beyondrational.com</a></li>
+        <li><span class="bra-body" style="font-size: 14px;">Firskovvej 36, 2800 Kongens Lyngby</span></li>
       </ul>
     </div>
   </div>
@@ -191,11 +189,12 @@
     <span class="bra-micro">© 2026 Beyond Rational ApS</span>
     <a class="bra-micro" href="privatlivspolitik.html" style="text-decoration: none;">Privatlivspolitik</a>
     <a class="bra-micro" href="betalingsbetingelser.html" style="text-decoration: none;">Betalingsbetingelser</a>
+    <a class="bra-micro" href="design-system.html" style="text-decoration: none;">Design system</a>
     <span class="bra-micro">B_R Design System · v1.0</span>
   </div>
 </footer>
 
-<script src="br.js?v=18" defer></script>
-<script src="br-content.js?v=18" defer></script>
+<script src="br.js?v=22" defer></script>
+<script src="br-content.js?v=20" defer></script>
 </body>
 </html>

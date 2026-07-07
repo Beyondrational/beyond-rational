@@ -5,17 +5,9 @@
     "lede": "Foam-formed natural wood fibre. Absorption Class A, two formats, two thicknesses. Fits standard T-grid ceilings or mounts directly with adhesive. Full production capacity from August 2026 — preorder now.",
     "bg_image": "assets/aisti-person-angtvatten.webp"
   },
-  "material": {
-    "eyebrow": "Material study",
-    "title_l1": "Wood",
-    "title_l2": "fibre,",
-    "title_l3": "foam-formed.",
-    "body_p1": "The tile is built by suspending wood fibre in foam, not by pressing it. The result is an open, porous structure that captures sound across a wide frequency range, while the surface stays calm and tactile.",
-    "body_p2": "It belongs on the same drawing as the limestone, the oak, the brass."
-  },
   "gallery": {
     "eyebrow": "In place",
-    "title": "Aisti, on the wall.",
+    "title": "Aisti gallery",
     "items": [
       {
         "image": "assets/aisti-026.jpg",
@@ -69,11 +61,6 @@
       }
     ]
   },
-  "supply": {
-    "section_label": "What we supply",
-    "body": "We are the official distributor of Aisti® in Denmark. The Aisti® Acoustic Tile is a bio-based absorber made from natural wood fibre. Absorption Class A, no synthetic binders, no plastics, no irritating fibres.",
-    "image": "assets/aisti-tile-001.webp"
-  },
   "technology": {
     "section_label": "The technology",
     "title_l1": "Foam-formed,",
@@ -87,9 +74,14 @@
     "title_l1": "The film,",
     "title_l2": "in place.",
     "items": [
-      { "src": "", "poster": "assets/aisti-026.jpg", "label": "In place", "caption": "The tile in a daylit interior" },
-      { "src": "", "poster": "assets/aisti-042.jpg", "label": "How it's made", "caption": "Foam-forming the wood fibre" }
+      { "youtube_id": "zMcN2KxKzCk", "label": "Baking with Mikko" },
+      { "youtube_id": "sAePbA3sEHA", "label": "Technology behind Aisti's acoustic tiles" }
     ]
+  },
+  "co2": {
+    "section_label": "CO₂ savings",
+    "title_l1": "Aisti Aalto,",
+    "title_l2": "by the numbers."
   },
   "cta": {
     "title_l1": "Specify",

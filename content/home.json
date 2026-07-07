@@ -1,102 +1,95 @@
 {
-  "hero": {
-    "eyebrow_left": "Beyond Rational · Copenhagen",
-    "eyebrow_right": "Conscious acoustics",
-    "title_l1": "Conscious acoustics",
-    "title_l2_em": "for modern architecture.",
-    "subtitle": "Beyond Rational is a Copenhagen-based company supplying sustainable, design-driven acoustic materials. We combine Scandinavian aesthetics with high-performance functionality — and partner with architects, designers, and developers who care about quality, innovation, and impact.",
-    "cta_primary": "See our work",
-    "cta_secondary": "Visit the studio",
-    "bg_image": "assets/aisti-person-angtvatten.webp"
-  },
-  "range": {
-    "section_label": "What we offer",
-    "meta": "Beyond Rational",
-    "intro": "Beyond Rational is a Copenhagen company supplying a curated range of conscious acoustic and surface materials for modern architecture — chosen for performance, surface, and a low footprint.",
-    "image": "assets/aisti-003.jpg",
-    "link_label": "See all products",
-    "items": [
-      { "name": "Aisti® Acoustic Tile", "tag": "Available 2026", "href": "product.html" },
-      { "name": "Wuud", "tag": "In development", "href": "product-wuud.html" },
-      { "name": "Sappa", "tag": "In development", "href": "product-sappa.html" },
-      { "name": "Mogu", "tag": "In development", "href": "product-mogu.html" }
-    ]
-  },
-  "manifesto": {
-    "section_label": "What we believe",
-    "items": [
-      {
-        "num": "01",
-        "text_pre": "Sustainable solutions should be ",
-        "text_em": "the obvious choice.",
-        "text_post": ""
-      },
-      {
-        "num": "02",
-        "text_pre": "Form and function aren't ",
-        "text_em": "trade-offs.",
-        "text_post": ""
-      },
-      {
-        "num": "03",
-        "text_pre": "The best acoustic surface is the one ",
-        "text_em": "you don't notice.",
-        "text_post": ""
-      }
-    ]
-  },
-  "what_we_make": {
-    "section_label": "What we supply",
-    "body": "We are the official distributor of Aisti® in Denmark. The Aisti® Acoustic Tile is a bio-based absorber made from natural wood fibre — Absorption Class A, no synthetic binders, no plastics, no irritating fibres.",
-    "image": "assets/aisti-tile-001.webp"
-  },
-  "process": {
-    "section_label": "The technology",
-    "title_l1": "Foam-formed,",
-    "title_l2_em": "not pressed.",
-    "body_p1": "Aisti's foam-forming technology, adapted from the Finnish paper industry, suspends wood fibre in foam instead of pressing it flat. The fibres set into an open, porous structure that captures sound across a wide frequency range — without binders or plastics.",
-    "body_p2": "The technology is cost-effective and energy-conscious, producing tiles that are light in weight, plastic-free, and 100% recyclable. Produced in Jyväskylä, Finland.",
-    "cta": "Read more about the tile",
-    "image": "assets/aisti-042.jpg"
-  },
-  "studio": {
-    "section_label": "Who we are",
-    "title_l1": "Copenhagen office.",
-    "title_l2_em": "Finnish production.",
-    "stat_founded": "CPH",
-    "stat_people": "2",
-    "stat_studios": "2026",
-    "stat_founded_label": "Based in Copenhagen",
-    "stat_people_label": "Partners",
-    "stat_studios_label": "Full capacity, August",
-    "body": "Beyond Rational is based in Copenhagen. Our partner Aisti produces in Jyväskylä, Finland. We specify and supply across Denmark.",
-    "image": "assets/br-office.webp"
-  },
-  "cases": {
-    "section_label": "Cases",
-    "link_label": "All cases",
-    "items": [
-      {
-        "image": "assets/aisti-026.jpg",
-        "eyebrow": "Case · Stockholm",
-        "title": "Ångtvätten 22",
-        "meta1": "Office well-being · 600×600 mm, 20 mm, dark blue",
-        "meta2": "Tiles installed in standard T-grid, absorbing sound reflections and reducing echo in the office space."
-      },
-      {
-        "image": "assets/aisti-008.jpg",
-        "eyebrow": "Case · Helsinki",
-        "title": "Bulevardi 2",
-        "meta1": "Echo reduction · 600×1200 mm, 40 mm, white",
-        "meta2": "Reverberation time improved roughly 29% across octave bands after ceiling installation."
-      }
-    ]
-  },
-  "cta": {
-    "section_label": "Get in touch",
-    "title_l1": "Send the brief.",
-    "title_l2_em": "We'll read it carefully.",
-    "body": "We answer Monday to Friday and work directly with architects, designers, and property owners.",
-    "email": "morten@beyondrational.com"
-  }
+ "hero": {
+  "eyebrow_left": "Beyond Rational · Copenhagen",
+  "eyebrow_right": "Conscious acoustics",
+  "title_l1": "Conscious acoustics",
+  "title_l2_em": "for modern architecture.",
+  "subtitle": "Beyond Rational is a Copenhagen-based company supplying sustainable, design-driven acoustic materials. We combine Scandinavian aesthetics with high-performance functionality — and partner with architects, designers, and developers who care about quality, innovation, and impact.",
+  "cta_primary": "See our solutions",
+  "cta_secondary": "Contact",
+  "bg_image": "assets/aisti-person-angtvatten.webp"
+ },
+ "range": {
+  "section_label": "What we offer",
+  "meta": "Beyond Rational",
+  "intro": "Beyond Rational is a Copenhagen company supplying a curated range of conscious acoustic and surface materials for modern architecture — chosen for performance, surface, and a low footprint.",
+  "link_label": "See all products",
+  "items": [
+   {
+    "name": "Aisti® Acoustic Tile",
+    "image": "assets/aisti-026.jpg",
+    "tag": "Available 2026",
+    "href": "product-aisti.html"
+   },
+   {
+    "name": "Wuud",
+    "image": "assets/aisti-042.jpg",
+    "tag": "In development",
+    "href": "product-wuud.html"
+   },
+   {
+    "name": "Sappa",
+    "image": "assets/aisti-035.jpg",
+    "tag": "In development",
+    "href": "product-sappa.html"
+   },
+   {
+    "name": "Mogu",
+    "image": "assets/aisti-025.jpg",
+    "tag": "In development",
+    "href": "product-mogu.html"
+   }
+  ]
+ },
+ "process": {
+  "section_label": "Mission statement",
+  "title_l1": "Good for the room,",
+  "title_l2_em": "good for the planet.",
+  "body_p1": "Beyond Rational exists to make the conscious choice the easy choice. We curate acoustic and surface materials that perform to the standard architects expect, without the compromises that usually come with \"sustainable\" — no downgrade in finish, no downgrade in specification.",
+  "body_p2": "Every material we carry is chosen on its own merits first: how it sounds, how it looks, how it lasts. The lower footprint is the baseline we start from, not the trade-off we ask architects to accept.",
+  "image": "assets/aisti-042.jpg"
+ },
+ "studio": {
+  "section_label": "Who we are",
+  "title_l1": "Copenhagen office.",
+  "title_l2_em": "Globally inspired.",
+  "stat_founded": "CPH",
+  "stat_people": "4",
+  "stat_studios": "2024",
+  "stat_founded_label": "Based in Copenhagen",
+  "stat_people_label": "Suppliers",
+  "stat_studios_label": "In business since",
+  "body": "Beyond Rational is based in Copenhagen. Our partner Aisti produces in Jyväskylä, Finland. We specify and supply across Denmark.",
+  "image": "assets/br-office.webp",
+  "link_label": "Contact"
+ },
+ "cases": {
+  "section_label": "Cases",
+  "link_label": "All cases",
+  "items": [
+   {
+    "href": "case-angtvatten-22.html",
+    "image": "assets/aisti-026.jpg",
+    "eyebrow": "Case · Stockholm",
+    "title": "Ångtvätten 22",
+    "meta1": "Office well-being · 600×600 mm, 20 mm, dark blue",
+    "meta2": "Tiles installed in standard T-grid, absorbing sound reflections and reducing echo in the office space."
+   },
+   {
+    "href": "case-bulevardi-2.html",
+    "image": "assets/aisti-008.jpg",
+    "eyebrow": "Case · Helsinki",
+    "title": "Bulevardi 2",
+    "meta1": "Echo reduction · 600×1200 mm, 40 mm, white",
+    "meta2": "Reverberation time improved roughly 29% across octave bands after ceiling installation."
+   }
+  ]
+ },
+ "cta": {
+  "section_label": "Get in touch",
+  "title_l1": "Send the brief.",
+  "title_l2_em": "We'll read it carefully.",
+  "body": "We answer Monday to Friday and work directly with architects, designers, and property owners.",
+  "email": "hello@beyondrational.com"
+ }
 }

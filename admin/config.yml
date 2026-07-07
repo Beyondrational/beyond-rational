@@ -38,47 +38,25 @@ collections:
               - { label: "Secondary CTA",         name: "cta_secondary", widget: "string" }
               - { label: "Hero background image", name: "bg_image",      widget: "image"  }
 
-          - label: "The range (Beyond Rational + products)"
+          - label: "The range (4-image product grid)"
             name: "range"
             widget: "object"
             fields:
               - { label: "Section label", name: "section_label", widget: "string" }
               - { label: "Meta tag",      name: "meta",          widget: "string" }
               - { label: "Intro",         name: "intro",         widget: "text"   }
-              - { label: "Image",         name: "image",         widget: "image"  }
               - { label: "Link label",    name: "link_label",    widget: "string" }
               - label: "Products"
                 name: "items"
                 widget: "list"
                 summary: "{{fields.name}}"
                 fields:
-                  - { label: "Name", name: "name", widget: "string" }
-                  - { label: "Tag",  name: "tag",  widget: "string" }
-                  - { label: "Link", name: "href", widget: "string", hint: "e.g. product.html, product-wuud.html" }
+                  - { label: "Name",  name: "name",  widget: "string" }
+                  - { label: "Image", name: "image", widget: "image"  }
+                  - { label: "Tag",   name: "tag",   widget: "string", required: false, hint: "Not currently displayed, kept for future use" }
+                  - { label: "Link",  name: "href",  widget: "string", hint: "e.g. product-aisti.html, product-wuud.html" }
 
-          - label: "Manifesto"
-            name: "manifesto"
-            widget: "object"
-            fields:
-              - { label: "Section label", name: "section_label", widget: "string" }
-              - label: "Items"
-                name: "items"
-                widget: "list"
-                fields:
-                  - { label: "Number",   name: "num",       widget: "string" }
-                  - { label: "Text pre", name: "text_pre",  widget: "string" }
-                  - { label: "Emphasis", name: "text_em",   widget: "string" }
-                  - { label: "Text post",name: "text_post", widget: "string", required: false }
-
-          - label: "What we make"
-            name: "what_we_make"
-            widget: "object"
-            fields:
-              - { label: "Section label", name: "section_label", widget: "string" }
-              - { label: "Body",          name: "body",          widget: "text"   }
-              - { label: "Image",         name: "image",         widget: "image"  }
-
-          - label: "Process"
+          - label: "Mission statement"
             name: "process"
             widget: "object"
             fields:
@@ -97,10 +75,11 @@ collections:
               - { label: "Title line 1",      name: "title_l1",      widget: "string" }
               - { label: "Title line 2 (em)", name: "title_l2_em",   widget: "string" }
               - { label: "Founded year",      name: "stat_founded",  widget: "string" }
-              - { label: "People count",      name: "stat_people",   widget: "string" }
-              - { label: "Locations",         name: "stat_studios",  widget: "string" }
+              - { label: "Supplier count",    name: "stat_people",   widget: "string" }
+              - { label: "In business since", name: "stat_studios",  widget: "string" }
               - { label: "Body",              name: "body",          widget: "text"   }
               - { label: "Image",             name: "image",         widget: "image"  }
+              - { label: "Link label",        name: "link_label",    widget: "string", default: "Contact" }
 
           - label: "Cases"
             name: "cases"
@@ -112,7 +91,8 @@ collections:
                 name: "items"
                 widget: "list"
                 fields:
-                  - { label: "Image",   name: "image",   widget: "image"  }
+                  - { label: "Link",    name: "href",    widget: "string", hint: "e.g. case-angtvatten-22.html" }
+                  - { label: "Image",   name: "image",   widget: "image", required: false }
                   - { label: "Eyebrow", name: "eyebrow", widget: "string" }
                   - { label: "Title",   name: "title",   widget: "string" }
                   - { label: "Meta 1",  name: "meta1",   widget: "string" }
@@ -128,40 +108,41 @@ collections:
               - { label: "Body",              name: "body",          widget: "text"   }
               - { label: "Email",             name: "email",         widget: "string" }
 
-  # =============== FOUNDERS ===============
-  - name: "founders"
-    label: "Founders"
+  # =============== CONTACT ===============
+  - name: "contact-page"
+    label: "Contact"
     files:
-      - file: "content/founders.json"
-        name: "founders"
-        label: "Founders"
+      - file: "content/contact.json"
+        name: "contact-page"
+        label: "Contact page"
         fields:
-          - { label: "Section label", name: "section_label", widget: "string" }
-          - { label: "Title line 1",  name: "title_l1",      widget: "string" }
-          - { label: "Title line 2",  name: "title_l2",      widget: "string" }
-          - { label: "Intro",         name: "intro",         widget: "text"   }
 
-          - label: "Morten"
-            name: "morten"
+          - label: "Contact cards"
+            name: "contact_cards"
             widget: "object"
             fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-              - { label: "Name",    name: "name",    widget: "string" }
-              - { label: "Role",    name: "role",    widget: "string" }
-              - { label: "Email",   name: "email",   widget: "string" }
-              - { label: "Phone",   name: "phone",   widget: "string" }
-              - { label: "Photo",   name: "photo",   widget: "image" }
+              - { label: "Section label", name: "section_label", widget: "string" }
+              - { label: "Title",         name: "title",         widget: "string" }
+              - { label: "Intro",         name: "intro",         widget: "string" }
 
-          - label: "Rasmus"
-            name: "rasmus"
+              - label: "Rasmus"
+                name: "rasmus"
+                widget: "object"
+                fields:
+                  - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+                  - { label: "Name",    name: "name",    widget: "string" }
+                  - { label: "Role",    name: "role",    widget: "string" }
+                  - { label: "Email",   name: "email",   widget: "string" }
+                  - { label: "Phone",   name: "phone",   widget: "string" }
+                  - { label: "Photo",   name: "photo",   widget: "image" }
+
+          - label: "Follow our journey"
+            name: "journey"
             widget: "object"
             fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-              - { label: "Name",    name: "name",    widget: "string" }
-              - { label: "Role",    name: "role",    widget: "string" }
-              - { label: "Email",   name: "email",   widget: "string" }
-              - { label: "Studio",  name: "studio",  widget: "string" }
-              - { label: "Photo",   name: "photo",   widget: "image" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Body",         name: "body",     widget: "text"   }
 
   # =============== PROJECTS ===============
   - name: "projects"
@@ -280,11 +261,11 @@ collections:
               - { label: "Lede",         name: "lede",     widget: "text"   }
 
   # =============== PRODUCT (Aisti tile page) ===============
-  - name: "product"
+  - name: "product-aisti"
     label: "Product — Aisti"
     files:
-      - file: "content/product.json"
-        name: "product"
+      - file: "content/product-aisti.json"
+        name: "product-aisti"
         label: "Product page (Aisti)"
         fields:
 
@@ -297,24 +278,6 @@ collections:
               - { label: "Lede",    name: "lede",    widget: "text"   }
 
               - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
-          - label: "Material study"
-            name: "material"
-            widget: "object"
-            fields:
-              - { label: "Eyebrow",        name: "eyebrow",  widget: "string" }
-              - { label: "Title line 1",   name: "title_l1", widget: "string" }
-              - { label: "Title line 2",   name: "title_l2", widget: "string" }
-              - { label: "Title line 3",   name: "title_l3", widget: "string" }
-              - { label: "Paragraph 1",    name: "body_p1",  widget: "text"   }
-              - { label: "Paragraph 2",    name: "body_p2",  widget: "text"   }
-
-          - label: "What we supply"
-            name: "supply"
-            widget: "object"
-            fields:
-              - { label: "Section label", name: "section_label", widget: "string" }
-              - { label: "Body",          name: "body",          widget: "text"   }
-              - { label: "Image",         name: "image",         widget: "image"  }
 
           - label: "Technology (foam-forming)"
             name: "technology"
@@ -342,7 +305,7 @@ collections:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Meta",  name: "meta",  widget: "string" }
 
-          - label: "Video (two clips)"
+          - label: "Video (two YouTube clips)"
             name: "video"
             widget: "object"
             fields:
@@ -355,11 +318,16 @@ collections:
                 max: 2
                 summary: "{{fields.label}}"
                 fields:
-                  - { label: "Video file",   name: "src",     widget: "file",   required: false, hint: "MP4 recommended" }
-                  - { label: "Poster image", name: "poster",  widget: "image",  required: false }
-                  - { label: "Label",        name: "label",   widget: "string", required: false }
-                  - { label: "Note",         name: "note",    widget: "string", required: false }
-                  - { label: "Caption",      name: "caption", widget: "string", required: false }
+                  - { label: "YouTube video ID", name: "youtube_id", widget: "string", hint: "The part after watch?v= in the YouTube URL" }
+                  - { label: "Label",            name: "label",      widget: "string", required: false, hint: "Defaults to the video's own YouTube title" }
+
+          - label: "CO2 savings section label/title"
+            name: "co2"
+            widget: "object"
+            fields:
+              - { label: "Section label", name: "section_label", widget: "string" }
+              - { label: "Title line 1",  name: "title_l1",      widget: "string" }
+              - { label: "Title line 2",  name: "title_l2",      widget: "string" }
 
           - label: "Closing CTA"
             name: "cta"
@@ -405,13 +373,13 @@ collections:
               - { label: "Title line 2", name: "title_l2", widget: "string" }
               - { label: "Lede",         name: "lede",     widget: "text"   }
 
-  # =============== CASE 01 — Ångtvätten 22 ===============
-  - name: "case-01"
-    label: "Case 01 — Ångtvätten"
+  # =============== CASE — Ångtvätten 22 ===============
+  - name: "case-angtvatten-22"
+    label: "Case — Ångtvätten 22"
     files:
-      - file: "content/case-01.json"
-        name: "case-01"
-        label: "Case 01 page"
+      - file: "content/case-angtvatten-22.json"
+        name: "case-angtvatten-22"
+        label: "Ångtvätten 22 case page"
         fields:
           - label: "Hero"
             name: "hero"
@@ -456,13 +424,13 @@ collections:
               - { label: "Title line 2", name: "title_l2", widget: "string" }
               - { label: "Lede",         name: "lede",     widget: "text"   }
 
-  # =============== CASE 02 — Bulevardi 2 ===============
-  - name: "case-02"
-    label: "Case 02 — Bulevardi"
+  # =============== CASE — Bulevardi 2 ===============
+  - name: "case-bulevardi-2"
+    label: "Case — Bulevardi 2"
     files:
-      - file: "content/case-02.json"
-        name: "case-02"
-        label: "Case 02 page"
+      - file: "content/case-bulevardi-2.json"
+        name: "case-bulevardi-2"
+        label: "Bulevardi 2 case page"
         fields:
           - label: "Hero"
             name: "hero"

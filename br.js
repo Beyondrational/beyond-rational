@@ -931,7 +931,9 @@
     var activeAlt = (chips.filter(function (c) { return c.classList.contains('is-active'); })[0] || chips[0]);
     var altKey = activeAlt ? activeAlt.getAttribute('data-co2-alt') : null;
 
-    function ours() { return rows.filter(function (r) { return r.hasAttribute('data-ours'); })[0]; }
+    // Supports either one "ours" row, or several (e.g. lifecycle + stored
+    // carbon shown as separate bars but summed together for the total saving).
+    function oursRows() { return rows.filter(function (r) { return r.hasAttribute('data-ours'); }); }
 
     function render() {
       var area = parseFloat(range.value) || 0;
@@ -961,11 +963,11 @@
         }
       });
 
-      // savings = alternative total - ours total (ours is negative -> large positive saving)
-      var o = ours();
+      // savings = alternative total - ours total (ours rows summed; net negative -> large positive saving)
+      var oRows = oursRows();
       var altRow = visible.filter(function (r) { return !r.hasAttribute('data-ours'); })[0];
-      if (o && altRow) {
-        var oursTotal = area * (parseFloat(o.getAttribute('data-factor')) || 0);
+      if (oRows.length && altRow) {
+        var oursTotal = oRows.reduce(function (sum, r) { return sum + area * (parseFloat(r.getAttribute('data-factor')) || 0); }, 0);
         var altTotal  = area * (parseFloat(altRow.getAttribute('data-factor')) || 0);
         var saving = altTotal - oursTotal;
         if (saveEl) saveEl.textContent = fmt(saving);
