@@ -7,12 +7,23 @@
   const page = document.body.dataset.page;
   if (!page) return;
 
-  let data;
+  // Shared, site-wide content (footer, etc.) — merged under page data so a
+  // single edit in the CMS updates every page at once. Optional: pages work
+  // fine without it.
+  let siteData = {};
+  try {
+    const siteRes = await fetch('content/site.json', { cache: 'no-cache' });
+    if (siteRes.ok) siteData = await siteRes.json();
+  } catch (e) { /* no site.json yet — fine */ }
+
+  let pageData;
   try {
     const res = await fetch(`content/${page}.json`, { cache: 'no-cache' });
     if (!res.ok) return;
-    data = await res.json();
+    pageData = await res.json();
   } catch (e) { return; }
+
+  const data = Object.assign({}, siteData, pageData);
 
   const get = (obj, path) => path.split('.').reduce((o, k) => (o == null ? o : o[k]), obj);
 

@@ -7,7 +7,7 @@
 <meta name="description" content="Request a sample box. Specify Aisti for your project. Visit the studio in Copenhagen.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=23">
+<link rel="stylesheet" href="br.css?v=25">
 <style>
   /* Form fields tuned for v1 design system */
   .bra-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: var(--bra-s-2); }
@@ -72,22 +72,22 @@
 <!-- ===== Cinematic hero ===== -->
 <section class="home-hero home-hero--sub" data-on-dark>
   <div class="home-hero__bg" aria-hidden="true">
-    <img src="assets/br-office-2.webp" alt="" width="1282" height="1920" loading="eager" fetchpriority="high">
+    <img src="assets/br-office-2.webp" data-content="hero.image" data-content-attr="src" alt="" width="1282" height="1920" loading="eager" fetchpriority="high">
   </div>
   <div class="home-hero__grain" aria-hidden="true"></div>
 
   <div class="bra-container home-hero__inner">
     <header class="home-hero__top">
       <a href="index.html" class="bra-caption home-hero__back">← Home</a>
-      <span class="bra-caption">Specify · sample · visit</span>
+      <span class="bra-caption" data-content="hero.eyebrow">Specify · sample · visit</span>
     </header>
 
     <div class="home-hero__center">
       <h1 class="home-hero__title">
-        <span class="bra-reveal-line" data-reveal>Tell us</span><br>
-        <span class="bra-reveal-line" data-reveal>about the room.</span>
+        <span class="bra-reveal-line" data-reveal data-content="hero.title_l1">Tell us</span><br>
+        <span class="bra-reveal-line" data-reveal data-content="hero.title_l2">about the room.</span>
       </h1>
-      <p class="home-hero__sub home-reveal" data-stagger>
+      <p class="home-hero__sub home-reveal" data-stagger data-content="hero.lede">
         Pick a path below. The form fits the conversation: sample, project spec, or general information. We answer Monday to Friday.
       </p>
     </div>
@@ -101,31 +101,31 @@
 <!-- ===== Multi-form (tabbed) ===== -->
 <section id="form-section" class="bra-surface-stone">
   <div class="bra-container bra-section">
-    <p class="bra-caption" style="margin-bottom: var(--bra-s-2);">Get in touch</p>
+    <p class="bra-caption" style="margin-bottom: var(--bra-s-2);" data-content="form_section.section_label">Get in touch</p>
     <h2 class="bra-h2" style="margin-bottom: var(--bra-s-4); max-width: 18ch;">
-      <span class="bra-reveal-line" data-reveal>One form,</span><br>
-      <span class="bra-reveal-line" data-reveal>four paths.</span>
+      <span class="bra-reveal-line" data-reveal data-content="form_section.title_l1">One form,</span><br>
+      <span class="bra-reveal-line" data-reveal data-content="form_section.title_l2">four paths.</span>
     </h2>
 
     <!-- Tabs -->
     <div class="bra-form-tabs" data-form-tabs style="margin-bottom: var(--bra-s-4);">
-      <button type="button" class="bra-form-tab is-active" data-tab="sample">Sample box</button>
-      <button type="button" class="bra-form-tab" data-tab="specify">Specify for project</button>
-      <button type="button" class="bra-form-tab" data-tab="info">Information</button>
-      <button type="button" class="bra-form-tab" data-tab="other">Other</button>
+      <button type="button" class="bra-form-tab is-active" data-tab="sample" data-content="form_section.tabs.sample">Sample box</button>
+      <button type="button" class="bra-form-tab" data-tab="specify" data-content="form_section.tabs.specify">Specify for project</button>
+      <button type="button" class="bra-form-tab" data-tab="info" data-content="form_section.tabs.info">Information</button>
+      <button type="button" class="bra-form-tab" data-tab="other" data-content="form_section.tabs.other">Other</button>
     </div>
 
     <div class="bra-grid-2" style="align-items: start;">
 
       <div>
-        <p class="bra-body" style="max-width: 42ch;">
+        <p class="bra-body" style="max-width: 42ch;" data-content="form_section.intro">
           Pick a tab that fits what you need. The form changes to ask the right questions. We answer Monday to Friday.
         </p>
         <div class="bra-spec" style="margin-top: var(--bra-s-4); max-width: 420px;">
-          <div class="bra-spec-row"><div class="bra-spec-key">Email</div><div class="bra-spec-val" style="font-size: 18px;">morten@beyondrational.com</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">Phone</div><div class="bra-spec-val" style="font-size: 18px;">+45 22 55 54 70</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">Office</div><div class="bra-spec-val" style="font-size: 18px;">Firskovvej 36, 2800 Kongens Lyngby</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">Hours</div><div class="bra-spec-val" style="font-size: 18px;">Mon–Fri</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key">Email</div><div class="bra-spec-val" style="font-size: 18px;" data-content="form_section.contact_info.email">morten@beyondrational.com</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key">Phone</div><div class="bra-spec-val" style="font-size: 18px;" data-content="form_section.contact_info.phone">+45 22 55 54 70</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key">Office</div><div class="bra-spec-val" style="font-size: 18px;" data-content="form_section.contact_info.office">Firskovvej 36, 2800 Kongens Lyngby</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key">Hours</div><div class="bra-spec-val" style="font-size: 18px;" data-content="form_section.contact_info.hours">Mon–Fri</div></div>
         </div>
       </div>
 
@@ -133,36 +133,36 @@
         <!-- Form 1 — Sample box -->
         <form data-validate action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="sample" class="is-active">
           <div class="bra-field">
-            <label class="bra-field__label" for="s-name">Full name *</label>
+            <label class="bra-field__label" for="s-name" data-content="form_section.form_sample.name_label">Full name *</label>
             <input class="bra-field__input" type="text" name="contact_name" id="s-name" required autocomplete="name">
           </div>
           <div class="bra-form-cols">
             <div class="bra-field">
-              <label class="bra-field__label" for="s-email">Email *</label>
+              <label class="bra-field__label" for="s-email" data-content="form_section.form_sample.email_label">Email *</label>
               <input class="bra-field__input" type="email" name="email_from" id="s-email" required autocomplete="email">
             </div>
             <div class="bra-field">
-              <label class="bra-field__label" for="s-phone">Phone</label>
+              <label class="bra-field__label" for="s-phone" data-content="form_section.form_sample.phone_label">Phone</label>
               <input class="bra-field__input" type="tel" name="phone" id="s-phone" autocomplete="tel">
             </div>
           </div>
           <div class="bra-field">
-            <label class="bra-field__label" for="s-company">Studio / company *</label>
+            <label class="bra-field__label" for="s-company" data-content="form_section.form_sample.company_label">Studio / company *</label>
             <input class="bra-field__input" type="text" name="partner_name" id="s-company" required autocomplete="organization">
           </div>
           <div class="bra-field">
-            <label class="bra-field__label" for="s-finish">Preferred colour (optional)</label>
-            <input class="bra-field__input" type="text" name="finish" id="s-finish" placeholder="e.g. white, dark blue — or leave blank">
+            <label class="bra-field__label" for="s-finish" data-content="form_section.form_sample.finish_label">Preferred colour (optional)</label>
+            <input class="bra-field__input" type="text" name="finish" id="s-finish" placeholder="e.g. white, dark blue — or leave blank" data-content="form_section.form_sample.finish_placeholder" data-content-attr="placeholder">
           </div>
           <div class="bra-field">
-            <label class="bra-field__label" for="s-addr">Delivery address *</label>
-            <textarea class="bra-field__textarea" name="description" id="s-addr" required placeholder="Street, city, postal code, country"></textarea>
+            <label class="bra-field__label" for="s-addr" data-content="form_section.form_sample.address_label">Delivery address *</label>
+            <textarea class="bra-field__textarea" name="description" id="s-addr" required placeholder="Street, city, postal code, country" data-content="form_section.form_sample.address_placeholder" data-content-attr="placeholder"></textarea>
           </div>
           <input type="hidden" name="name" value="Sample box request">
           <input type="hidden" name="team_id" value="1">
           <input type="hidden" name="tag_ids" value="6">
           <button type="submit" class="bra-btn-mag" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
-            <span>Request a sample</span>
+            <span data-content="form_section.form_sample.submit_label">Request a sample</span>
             <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
             </svg>
@@ -172,64 +172,56 @@
         <!-- Form 2 — Specify for project -->
         <form data-validate action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="specify">
           <div class="bra-field">
-            <label class="bra-field__label" for="p-name">Full name *</label>
+            <label class="bra-field__label" for="p-name" data-content="form_section.form_specify.name_label">Full name *</label>
             <input class="bra-field__input" type="text" name="contact_name" id="p-name" required autocomplete="name">
           </div>
           <div class="bra-form-cols">
             <div class="bra-field">
-              <label class="bra-field__label" for="p-email">Email *</label>
+              <label class="bra-field__label" for="p-email" data-content="form_section.form_specify.email_label">Email *</label>
               <input class="bra-field__input" type="email" name="email_from" id="p-email" required autocomplete="email">
             </div>
             <div class="bra-field">
-              <label class="bra-field__label" for="p-role">Your role</label>
-              <select class="bra-field__select" name="function" id="p-role">
+              <label class="bra-field__label" for="p-role" data-content="form_section.form_specify.role_label">Your role</label>
+              <select class="bra-field__select" name="function" id="p-role" data-content-each="form_section.form_specify.role_options">
                 <option value="">Select</option>
-                <option>Architect</option>
-                <option>Interior designer</option>
-                <option>Developer / contractor</option>
-                <option>Project manager</option>
-                <option>Acoustic consultant</option>
+                <template><option data-each="value"></option></template>
               </select>
             </div>
           </div>
           <div class="bra-field">
-            <label class="bra-field__label" for="p-company">Studio / company *</label>
+            <label class="bra-field__label" for="p-company" data-content="form_section.form_specify.company_label">Studio / company *</label>
             <input class="bra-field__input" type="text" name="partner_name" id="p-company" required autocomplete="organization">
           </div>
           <div class="bra-field">
-            <label class="bra-field__label" for="p-project">Project name *</label>
+            <label class="bra-field__label" for="p-project" data-content="form_section.form_specify.project_label">Project name *</label>
             <input class="bra-field__input" type="text" name="project_name" id="p-project" required>
           </div>
           <div class="bra-form-cols">
             <div class="bra-field">
-              <label class="bra-field__label" for="p-type">Project type</label>
-              <select class="bra-field__select" name="project_type" id="p-type">
+              <label class="bra-field__label" for="p-type" data-content="form_section.form_specify.type_label">Project type</label>
+              <select class="bra-field__select" name="project_type" id="p-type" data-content-each="form_section.form_specify.type_options">
                 <option value="">Select</option>
-                <option>New build</option>
-                <option>Refurbishment</option>
-                <option>Tenant fit-out</option>
-                <option>Public / civic</option>
-                <option>Other</option>
+                <template><option data-each="value"></option></template>
               </select>
             </div>
             <div class="bra-field">
-              <label class="bra-field__label" for="p-area">Area (m²)</label>
-              <input class="bra-field__input" type="number" name="area_m2" id="p-area" min="1" placeholder="e.g. 1200">
+              <label class="bra-field__label" for="p-area" data-content="form_section.form_specify.area_label">Area (m²)</label>
+              <input class="bra-field__input" type="number" name="area_m2" id="p-area" min="1" placeholder="e.g. 1200" data-content="form_section.form_specify.area_placeholder" data-content-attr="placeholder">
             </div>
           </div>
           <div class="bra-field">
-            <label class="bra-field__label" for="p-deadline">Target completion</label>
+            <label class="bra-field__label" for="p-deadline" data-content="form_section.form_specify.deadline_label">Target completion</label>
             <input class="bra-field__input" type="month" name="target_date" id="p-deadline">
           </div>
           <div class="bra-field">
-            <label class="bra-field__label" for="p-brief">Brief *</label>
-            <textarea class="bra-field__textarea" name="description" id="p-brief" required placeholder="Programme, ceiling height, acoustic targets, finishes you are pairing with…"></textarea>
+            <label class="bra-field__label" for="p-brief" data-content="form_section.form_specify.brief_label">Brief *</label>
+            <textarea class="bra-field__textarea" name="description" id="p-brief" required placeholder="Programme, ceiling height, acoustic targets, finishes you are pairing with…" data-content="form_section.form_specify.brief_placeholder" data-content-attr="placeholder"></textarea>
           </div>
           <input type="hidden" name="name" value="Project specification request">
           <input type="hidden" name="team_id" value="1">
           <input type="hidden" name="tag_ids" value="6">
           <button type="submit" class="bra-btn-mag" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
-            <span>Send the brief</span>
+            <span data-content="form_section.form_specify.submit_label">Send the brief</span>
             <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
             </svg>
@@ -239,40 +231,34 @@
         <!-- Form 3 — Information -->
         <form data-validate action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="info">
           <div class="bra-field">
-            <label class="bra-field__label" for="i-name">Full name *</label>
+            <label class="bra-field__label" for="i-name" data-content="form_section.form_info.name_label">Full name *</label>
             <input class="bra-field__input" type="text" name="contact_name" id="i-name" required autocomplete="name">
           </div>
           <div class="bra-form-cols">
             <div class="bra-field">
-              <label class="bra-field__label" for="i-email">Email *</label>
+              <label class="bra-field__label" for="i-email" data-content="form_section.form_info.email_label">Email *</label>
               <input class="bra-field__input" type="email" name="email_from" id="i-email" required autocomplete="email">
             </div>
             <div class="bra-field">
-              <label class="bra-field__label" for="i-company">Studio / outlet</label>
+              <label class="bra-field__label" for="i-company" data-content="form_section.form_info.company_label">Studio / outlet</label>
               <input class="bra-field__input" type="text" name="partner_name" id="i-company" autocomplete="organization">
             </div>
           </div>
           <div class="bra-field">
-            <label class="bra-field__label" for="i-kind">What do you need?</label>
-            <select class="bra-field__select" name="info_kind" id="i-kind">
-              <option>Technical paper</option>
-              <option>Spec sheet</option>
-              <option>EPD / sustainability data</option>
-              <option>Press kit</option>
-              <option>CAD &amp; BIM files</option>
-              <option>Commercial / dealer</option>
-              <option>General enquiry</option>
+            <label class="bra-field__label" for="i-kind" data-content="form_section.form_info.kind_label">What do you need?</label>
+            <select class="bra-field__select" name="info_kind" id="i-kind" data-content-each="form_section.form_info.kind_options">
+              <template><option data-each="value"></option></template>
             </select>
           </div>
           <div class="bra-field">
-            <label class="bra-field__label" for="i-msg">Anything else?</label>
-            <textarea class="bra-field__textarea" name="description" id="i-msg" placeholder="Optional — give us context so we send the right thing."></textarea>
+            <label class="bra-field__label" for="i-msg" data-content="form_section.form_info.msg_label">Anything else?</label>
+            <textarea class="bra-field__textarea" name="description" id="i-msg" placeholder="Optional — give us context so we send the right thing." data-content="form_section.form_info.msg_placeholder" data-content-attr="placeholder"></textarea>
           </div>
           <input type="hidden" name="name" value="Information request">
           <input type="hidden" name="team_id" value="1">
           <input type="hidden" name="tag_ids" value="6">
           <button type="submit" class="bra-btn-mag" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
-            <span>Send the request</span>
+            <span data-content="form_section.form_info.submit_label">Send the request</span>
             <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
             </svg>
@@ -282,28 +268,28 @@
         <!-- Form 4 — Other -->
         <form data-validate action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="other">
           <div class="bra-field">
-            <label class="bra-field__label" for="o-name">Full name *</label>
+            <label class="bra-field__label" for="o-name" data-content="form_section.form_other.name_label">Full name *</label>
             <input class="bra-field__input" type="text" name="contact_name" id="o-name" required autocomplete="name">
           </div>
           <div class="bra-form-cols">
             <div class="bra-field">
-              <label class="bra-field__label" for="o-email">Email *</label>
+              <label class="bra-field__label" for="o-email" data-content="form_section.form_other.email_label">Email *</label>
               <input class="bra-field__input" type="email" name="email_from" id="o-email" required autocomplete="email">
             </div>
             <div class="bra-field">
-              <label class="bra-field__label" for="o-company">Organisation</label>
+              <label class="bra-field__label" for="o-company" data-content="form_section.form_other.company_label">Organisation</label>
               <input class="bra-field__input" type="text" name="partner_name" id="o-company" autocomplete="organization">
             </div>
           </div>
           <div class="bra-field">
-            <label class="bra-field__label" for="o-msg">Your message *</label>
-            <textarea class="bra-field__textarea" name="description" id="o-msg" required placeholder="What's on your mind?"></textarea>
+            <label class="bra-field__label" for="o-msg" data-content="form_section.form_other.msg_label">Your message *</label>
+            <textarea class="bra-field__textarea" name="description" id="o-msg" required placeholder="What's on your mind?" data-content="form_section.form_other.msg_placeholder" data-content-attr="placeholder"></textarea>
           </div>
           <input type="hidden" name="name" value="General enquiry">
           <input type="hidden" name="team_id" value="1">
           <input type="hidden" name="tag_ids" value="6">
           <button type="submit" class="bra-btn-mag" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
-            <span>Send the message</span>
+            <span data-content="form_section.form_other.submit_label">Send the message</span>
             <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
             </svg>
@@ -325,8 +311,20 @@
 
   <div class="bra-gallery">
     <div class="bra-gallery-cell" style="grid-column: span 5; padding: 0;">
-      <img src="assets/rasmus-melberg.jpg" data-content="contact_cards.rasmus.photo" data-content-attr="src" alt="Rasmus Gyldendal Melberg, partner, Beyond Rational" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      <img src="assets/morten-melberg.jpg" data-content="contact_cards.morten.photo" data-content-attr="src" alt="Morten Gyldendal Melberg, managing partner, Beyond Rational" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
     </div>
+    <div class="bra-gallery-cell bra-gallery-data" style="grid-column: span 7;">
+      <div>
+        <div class="bra-gallery-data__label" data-content="contact_cards.morten.eyebrow">Managing partner</div>
+        <div class="bra-h3" style="margin-top: 8px;" data-content="contact_cards.morten.name">Morten Gyldendal Melberg</div>
+        <div class="bra-gallery-data__note" style="margin-top: var(--bra-s-2);" data-content="contact_cards.morten.role">Commercial, partnerships, projects.</div>
+      </div>
+      <div class="bra-spec" style="margin-top: var(--bra-s-3);">
+        <div class="bra-spec-row"><div class="bra-spec-key">Email</div><div class="bra-spec-val"><a href="mailto:morten@beyondrational.com" data-content="contact_cards.morten.email">morten@beyondrational.com</a></div></div>
+        <div class="bra-spec-row"><div class="bra-spec-key">Phone</div><div class="bra-spec-val"><a href="tel:+4522555470" data-content="contact_cards.morten.phone">+45 22 55 54 70</a></div></div>
+      </div>
+    </div>
+
     <div class="bra-gallery-cell bra-gallery-data bra-gallery-data--ink" style="grid-column: span 7;">
       <div>
         <div class="bra-gallery-data__label" data-content="contact_cards.rasmus.eyebrow">Partner</div>
@@ -338,6 +336,9 @@
         <div class="bra-spec-row"><div class="bra-spec-key">Phone</div><div class="bra-spec-val"><a href="tel:+4524481401" data-content="contact_cards.rasmus.phone">+45 24 48 14 01</a></div></div>
       </div>
     </div>
+    <div class="bra-gallery-cell" style="grid-column: span 5; padding: 0;">
+      <img src="assets/rasmus-melberg.jpg" data-content="contact_cards.rasmus.photo" data-content-attr="src" alt="Rasmus Gyldendal Melberg, partner, Beyond Rational" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
   </div>
 </section>
 
@@ -346,22 +347,22 @@
   <div class="bra-container bra-section">
     <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Studio</p>
     <h2 class="bra-h2" style="margin-bottom: var(--bra-s-4); max-width: 18ch;">
-      <span class="bra-reveal-line" data-reveal>Firskovvej 36,</span><br>
-      <span class="bra-reveal-line" data-reveal>Kongens Lyngby.</span>
+      <span class="bra-reveal-line" data-reveal data-content="studio_info.title_l1">Firskovvej 36,</span><br>
+      <span class="bra-reveal-line" data-reveal data-content="studio_info.title_l2">Kongens Lyngby.</span>
     </h2>
 
     <div class="bra-gallery bra-gallery--auto">
       <div class="bra-gallery-cell bra-gallery-data">
         <div class="bra-gallery-data__label">Email</div>
-        <div class="bra-h3" style="font-size: 22px; margin-top: 8px;">hello@beyondrational.com</div>
-        <div class="bra-gallery-data__note" style="margin-top: var(--bra-s-2);">
+        <div class="bra-h3" style="font-size: 22px; margin-top: 8px;" data-content="studio_info.email">hello@beyondrational.com</div>
+        <div class="bra-gallery-data__note" style="margin-top: var(--bra-s-2);" data-content="studio_info.email_note">
           For samples, preorders, and project briefs. We answer Mon–Fri.
         </div>
       </div>
       <div class="bra-gallery-cell bra-gallery-data bra-gallery-data--ink">
         <div class="bra-gallery-data__label">Phone</div>
-        <div class="bra-h3" style="font-size: 22px; margin-top: 8px;">+45 22 55 54 70</div>
-        <div class="bra-gallery-data__note" style="margin-top: var(--bra-s-2);">
+        <div class="bra-h3" style="font-size: 22px; margin-top: 8px;" data-content="studio_info.phone">+45 22 55 54 70</div>
+        <div class="bra-gallery-data__note" style="margin-top: var(--bra-s-2);" data-content="studio_info.phone_note">
           Morten Gyldendal Melberg, managing partner.
         </div>
       </div>
@@ -394,7 +395,7 @@
   <div class="bra-footer__grid">
     <div class="bra-footer__brand">
       <div class="bra-footer__brand-line">Beyond Rational</div>
-      <p class="bra-body" style="margin-top: var(--bra-s-3); max-width: 36ch; color: var(--bra-ink-2);">
+      <p class="bra-body" style="margin-top: var(--bra-s-3); max-width: 36ch; color: var(--bra-ink-2);" data-content="footer.brand_tagline">
         Conscious acoustics. Official distributor of Aisti® in Denmark.
       </p>
     </div>
@@ -416,13 +417,13 @@
     <div>
       <h4>Contact</h4>
       <ul>
-        <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;">hello@beyondrational.com</a></li>
-        <li><span class="bra-body" style="font-size: 14px;">Firskovvej 36, 2800 Kongens Lyngby</span></li>
+        <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;"><span data-content="footer.email">hello@beyondrational.com</span></a></li>
+        <li><span class="bra-body" style="font-size: 14px;" data-content="footer.address">Firskovvej 36, 2800 Kongens Lyngby</span></li>
       </ul>
     </div>
   </div>
   <div class="bra-footer__base">
-    <span class="bra-micro">© 2026 Beyond Rational ApS</span>
+    <span class="bra-micro" data-content="footer.copyright">© 2026 Beyond Rational ApS</span>
     <a class="bra-micro" href="privatlivspolitik.html" style="text-decoration: none;">Privatlivspolitik</a>
     <a class="bra-micro" href="betalingsbetingelser.html" style="text-decoration: none;">Betalingsbetingelser</a>
     <a class="bra-micro" href="design-system.html" style="text-decoration: none;">Design system</a>
@@ -431,6 +432,6 @@
 </footer>
 
 <script src="br.js?v=22" defer></script>
-<script src="br-content.js?v=20" defer></script>
+<script src="br-content.js?v=21" defer></script>
 </body>
 </html>

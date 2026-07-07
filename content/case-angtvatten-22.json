@@ -14,6 +14,18 @@
     "body_p2": "The requirement was clear: achieve Class A absorption in the 500 Hz–2 kHz range without altering the aesthetics of the ceiling. The tile had to read as a neutral surface, not as an acoustic treatment.",
     "body_p3": "Aisti® was installed side-by-side with standard mineral wool tiles as a blind comparison. Installers and occupants reported no visible difference between the two products."
   },
+  "spec": {
+    "items": [
+      { "key": "Product",   "value": "Aisti® Aalto" },
+      { "key": "Format",    "value": "600 × 600 mm" },
+      { "key": "Thickness", "value": "20 mm" },
+      { "key": "Finish",    "value": "Stone · mid-grey" },
+      { "key": "Mounting",  "value": "Tight · T-grid" },
+      { "key": "Area",      "value": "~320 m²" },
+      { "key": "Location",  "value": "Stora Essingen, SE" },
+      { "key": "Installed", "value": "Q4 2025" }
+    ]
+  },
   "gallery": [
     { "image": "assets/aisti-person-angtvatten.webp", "title": "Ångtvätten 22", "meta": "In place" },
     { "image": "assets/aisti-render-3.webp", "title": "Ceiling install", "meta": "Dark blue, 600×600" },
@@ -26,9 +38,29 @@
     "title_l2": "confirmed.",
     "note": "Absorption coefficients from EN ISO 354 reverberation room test. Configuration: 20 mm / tight (plate-flush). α ≥ 0.90 across speech bands qualifies as Class A."
   },
+  "performance": {
+    "items": [
+      { "key": "α at 500 Hz",       "value": "0.75" },
+      { "key": "α at 1 kHz",        "value": "0.75" },
+      { "key": "α at 2 kHz",        "value": "0.80" },
+      { "key": "Absorption class",  "value": "Class A" },
+      { "key": "vs. mineral wool",  "value": "No measurable difference" },
+      { "key": "Test standard",    "value": "EN ISO 354" }
+    ]
+  },
   "cta": {
     "title_l1": "Specify",
     "title_l2": "your project.",
     "lede": "Send the brief. We'll help you select format, thickness, and mounting for your room — and get you samples ahead of full production in August 2026."
+  },
+  "marquee": {
+    "items": [
+      { "text": "Class A" },
+      { "text": "600 × 600 mm" },
+      { "text": "Stockholm" },
+      { "text": "~320 m²" },
+      { "text": "T-grid install" },
+      { "text": "Q4 2025" }
+    ]
   }
 }

@@ -7,7 +7,7 @@
 <meta name="description" content="Aisti® Acoustic Tile: foam-formed natural wood fibre. Absorption Class A, Euroclass B-s1,d0, M1 / A+ certified, 100% recyclable. Available 2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=23">
+<link rel="stylesheet" href="br.css?v=25">
 </head>
 <body class="bra" data-page="product-aisti">
 
@@ -125,26 +125,17 @@
         <span class="bra-reveal-line" data-reveal>wood fibre.</span>
       </h2>
       <div>
-        <div class="bra-spec">
-          <div class="bra-spec-row"><div class="bra-spec-key">Core</div><div class="bra-spec-val">Natural wood fibre</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">Formats</div><div class="bra-spec-val">600×600 / 600×1200</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">Thickness</div><div class="bra-spec-val">20 or 40 mm</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">Absorption</div><div class="bra-spec-val">Class A</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">Emissions</div><div class="bra-spec-val">M1 / French A+</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">Fire</div><div class="bra-spec-val">Euroclass B-s1,d0</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">Embodied CO₂e</div><div class="bra-spec-val">up to −6.71/m²</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">End of life</div><div class="bra-spec-val">100% recyclable</div></div>
+        <div class="bra-spec" data-content-each="spec.items">
+          <template>
+            <div class="bra-spec-row"><div class="bra-spec-key" data-each="key"></div><div class="bra-spec-val" data-each="value"></div></div>
+          </template>
         </div>
-        <div style="display: flex; gap: var(--bra-s-2); flex-wrap: wrap; margin-top: var(--bra-s-3);">
-          <a href="https://aisti.com/documents/9a4qSK39RnOcg6LbSymtLgo403" target="_blank" rel="noopener">
-            <button class="bra-btn-fill"><span>Download specifications</span><span>↓</span></button>
-          </a>
-          <a href="https://aisti.com/documents/_kU7OOv0SxGCLYSZqk-HKQo4e7" target="_blank" rel="noopener">
-            <button class="bra-btn-fill"><span>EPD 20mm</span><span>↓</span></button>
-          </a>
-          <a href="https://aisti.com/documents/QzrA_VDSSVawPcyPQ5OOnAo47b" target="_blank" rel="noopener">
-            <button class="bra-btn-fill"><span>EPD 40mm</span><span>↓</span></button>
-          </a>
+        <div style="display: flex; gap: var(--bra-s-2); flex-wrap: wrap; margin-top: var(--bra-s-3);" data-content-each="spec.downloads">
+          <template>
+            <a data-each="href" data-each-attr="href" target="_blank" rel="noopener">
+              <button class="bra-btn-fill"><span data-each="label"></span><span>↓</span></button>
+            </a>
+          </template>
         </div>
       </div>
     </div>
@@ -345,28 +336,27 @@
     <div class="bra-gallery-cell bra-gallery-data bra-stagger-item" style="grid-column: span 4;">
       <div class="bra-gallery-data__label">Format</div>
       <div>
-        <div class="bra-h3" style="font-size: 22px; margin-top: 4px;">600 × 600 mm</div>
-        <div class="bra-h3" style="font-size: 22px; opacity: 0.6;">1200 × 600 mm</div>
+        <div class="bra-h3" style="font-size: 22px; margin-top: 4px;" data-content="facts.format.big1">600 × 600 mm</div>
+        <div class="bra-h3" style="font-size: 22px; opacity: 0.6;" data-content="facts.format.big2">1200 × 600 mm</div>
       </div>
-      <div class="bra-gallery-data__note">Fits standard T-grid systems.</div>
+      <div class="bra-gallery-data__note" data-content="facts.format.note">Fits standard T-grid systems.</div>
     </div>
 
     <div class="bra-gallery-cell bra-gallery-data bra-stagger-item" style="grid-column: span 4;">
       <div class="bra-gallery-data__label">Thickness</div>
       <div>
-        <div class="bra-h3" style="font-size: 22px; margin-top: 4px;">20 mm</div>
-        <div class="bra-h3" style="font-size: 22px; opacity: 0.6;">40 mm</div>
+        <div class="bra-h3" style="font-size: 22px; margin-top: 4px;" data-content="facts.thickness.big1">20 mm</div>
+        <div class="bra-h3" style="font-size: 22px; opacity: 0.6;" data-content="facts.thickness.big2">40 mm</div>
       </div>
-      <div class="bra-gallery-data__note">20 mm for suspended ceilings, 40 mm for direct mounting.</div>
+      <div class="bra-gallery-data__note" data-content="facts.thickness.note">20 mm for suspended ceilings, 40 mm for direct mounting.</div>
     </div>
 
     <div class="bra-gallery-cell bra-gallery-data bra-stagger-item" style="grid-column: span 4;">
       <div class="bra-gallery-data__label">Material & life</div>
-      <div class="bra-spec" style="grid-template-columns: 1fr 1fr; gap: 0 var(--bra-s-2);">
-        <div class="bra-spec-row"><div class="bra-spec-key">Core</div><div class="bra-spec-val" style="font-size: 16px;">Wood fibre</div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">Fire</div><div class="bra-spec-val" style="font-size: 16px;">B-s1,d0</div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">CO₂e</div><div class="bra-spec-val" style="font-size: 16px;">up to −6.71/m²</div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">Recyc.</div><div class="bra-spec-val" style="font-size: 16px;">100 %</div></div>
+      <div class="bra-spec" style="grid-template-columns: 1fr 1fr; gap: 0 var(--bra-s-2);" data-content-each="facts.material_life">
+        <template>
+          <div class="bra-spec-row"><div class="bra-spec-key" data-each="key"></div><div class="bra-spec-val" style="font-size: 16px;" data-each="value"></div></div>
+        </template>
       </div>
     </div>
   </div>
@@ -415,17 +405,17 @@
 
     <div class="bra-co2calc__rows">
       <div class="bra-co2calc__row" data-ours data-key="aisti-lifecycle" data-name="Aisti® Aalto — lifecycle" data-factor="1.48">
-        <span class="bra-co2calc__name">Aisti® Aalto<small class="bra-co2calc__note">Lifecycle emissions, A1-C4 (fossil)</small></span>
+        <span class="bra-co2calc__name" data-content="co2.aisti_lifecycle.name">Aisti® Aalto<small class="bra-co2calc__note" data-content="co2.aisti_lifecycle.note">Lifecycle emissions, A1-C4 (fossil)</small></span>
         <div class="bra-co2calc__bar"><span class="bra-co2calc__fill"></span></div>
         <span class="bra-co2calc__val" data-co2-val>0</span>
       </div>
       <div class="bra-co2calc__row" data-ours data-key="aisti-stored" data-name="Aisti® Aalto — stored CO₂" data-factor="-3.09">
-        <span class="bra-co2calc__name">Aisti® Aalto<small class="bra-co2calc__note">Stored CO₂ · biogenic carbon at factory gate (A1-A3)</small></span>
+        <span class="bra-co2calc__name" data-content="co2.aisti_stored.name">Aisti® Aalto<small class="bra-co2calc__note" data-content="co2.aisti_stored.note">Stored CO₂ · biogenic carbon at factory gate (A1-A3)</small></span>
         <div class="bra-co2calc__bar"><span class="bra-co2calc__fill"></span></div>
         <span class="bra-co2calc__val" data-co2-val>0</span>
       </div>
       <div class="bra-co2calc__row" data-key="mineral" data-name="Rockfon Sonar 20mm" data-factor="2.29">
-        <span class="bra-co2calc__name">Rockfon Sonar 20mm<small class="bra-co2calc__note">Mineral wool · lifecycle emissions, A1-C4</small></span>
+        <span class="bra-co2calc__name" data-content="co2.rival.name">Rockfon Sonar 20mm<small class="bra-co2calc__note" data-content="co2.rival.note">Mineral wool · lifecycle emissions, A1-C4</small></span>
         <div class="bra-co2calc__bar"><span class="bra-co2calc__fill"></span></div>
         <span class="bra-co2calc__val" data-co2-val>0</span>
       </div>
@@ -438,32 +428,25 @@
       </div>
       <p class="bra-co2calc__equiv" data-co2-equiv></p>
     </div>
-    <p class="bra-co2calc__foot">Calculations are based on manufacturers' EPD — compared with stone wool. Aisti Aalto 20 mm vs Rockfon Sonar 20mm. Aisti figures: EPD Hub HUB-5632 (Aisti Corporation Oy, published 06.03.2026) — lifecycle emissions is GWP-fossil summed across A1-C4; stored CO₂ is GWP-biogenic at A1-A3 (factory gate, before any end-of-life release). Rockfon figure from its public Sonar 20mm datasheet.</p>
+    <p class="bra-co2calc__foot" data-content="co2.disclaimer">Calculations are based on manufacturers' EPD — compared with stone wool. Aisti Aalto 20 mm vs Rockfon Sonar 20mm. Aisti figures: EPD Hub HUB-5632 (Aisti Corporation Oy, published 06.03.2026) — lifecycle emissions is GWP-fossil summed across A1-C4; stored CO₂ is GWP-biogenic at A1-A3 (factory gate, before any end-of-life release). Rockfon figure from its public Sonar 20mm datasheet.</p>
+    <p class="bra-caption" style="margin-top: var(--bra-s-2); opacity: 0.55;">The kg CO₂e factors themselves are set in the page code, not here — ask your developer to update them when a new EPD is published.</p>
   </div>
 
   <!-- Head-to-head -->
   <div class="bra-versus">
     <div class="bra-versus__side bra-versus__side--ours">
-      <h3 class="bra-versus__name">Aisti® Aalto</h3>
-      <span class="bra-versus__tag">Our tile</span>
-      <ul class="bra-versus__list">
-        <li>Natural wood fibre</li>
-        <li>No synthetic binders</li>
-        <li>Stores carbon (negative footprint)</li>
-        <li>100% recyclable</li>
-        <li>No irritating fibres</li>
+      <h3 class="bra-versus__name" data-content="versus.ours.name">Aisti® Aalto</h3>
+      <span class="bra-versus__tag" data-content="versus.ours.tag">Our tile</span>
+      <ul class="bra-versus__list" data-content-each="versus.ours.points">
+        <template><li data-each="text"></li></template>
       </ul>
     </div>
     <div class="bra-versus__vs">vs</div>
     <div class="bra-versus__side">
-      <h3 class="bra-versus__name">Mineral wool</h3>
-      <span class="bra-versus__tag">The default</span>
-      <ul class="bra-versus__list">
-        <li>Mineral fibre</li>
-        <li>Synthetic binders</li>
-        <li>Positive carbon footprint</li>
-        <li>Landfill at end of life</li>
-        <li>Can irritate skin and lungs</li>
+      <h3 class="bra-versus__name" data-content="versus.theirs.name">Mineral wool</h3>
+      <span class="bra-versus__tag" data-content="versus.theirs.tag">The default</span>
+      <ul class="bra-versus__list" data-content-each="versus.theirs.points">
+        <template><li data-each="text"></li></template>
       </ul>
     </div>
   </div>
@@ -506,7 +489,7 @@
   <div class="bra-footer__grid">
     <div class="bra-footer__brand">
       <div class="bra-footer__brand-line">Beyond Rational</div>
-      <p class="bra-body" style="margin-top: var(--bra-s-3); max-width: 36ch; color: var(--bra-ink-2);">
+      <p class="bra-body" style="margin-top: var(--bra-s-3); max-width: 36ch; color: var(--bra-ink-2);" data-content="footer.brand_tagline">
         Conscious acoustics. Official distributor of Aisti® in Denmark.
       </p>
     </div>
@@ -528,13 +511,13 @@
     <div>
       <h4>Contact</h4>
       <ul>
-        <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;">hello@beyondrational.com</a></li>
-        <li><span class="bra-body" style="font-size: 14px;">Firskovvej 36, 2800 Kongens Lyngby</span></li>
+        <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;"><span data-content="footer.email">hello@beyondrational.com</span></a></li>
+        <li><span class="bra-body" style="font-size: 14px;" data-content="footer.address">Firskovvej 36, 2800 Kongens Lyngby</span></li>
       </ul>
     </div>
   </div>
   <div class="bra-footer__base">
-    <span class="bra-micro">© 2026 Beyond Rational ApS</span>
+    <span class="bra-micro" data-content="footer.copyright">© 2026 Beyond Rational ApS</span>
     <a class="bra-micro" href="privatlivspolitik.html" style="text-decoration: none;">Privatlivspolitik</a>
     <a class="bra-micro" href="betalingsbetingelser.html" style="text-decoration: none;">Betalingsbetingelser</a>
     <a class="bra-micro" href="design-system.html" style="text-decoration: none;">Design system</a>
@@ -543,7 +526,7 @@
 </footer>
 
 <script src="br.js?v=22" defer></script>
-<script src="br-content.js?v=20" defer></script>
+<script src="br-content.js?v=21" defer></script>
 <script>
 /* Video switcher — chips swap the YouTube iframe's src (CMS-aware) */
 (function () {

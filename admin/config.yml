@@ -16,6 +16,23 @@ display_url: https://beyondrational.github.io/beyond-rational
 
 collections:
 
+  # =============== SITE-WIDE (shared footer, etc.) ===============
+  - name: "site"
+    label: "Site settings"
+    files:
+      - file: "content/site.json"
+        name: "site"
+        label: "Footer (shown on every page)"
+        fields:
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Brand tagline", name: "brand_tagline", widget: "text"   }
+              - { label: "Email",         name: "email",         widget: "string" }
+              - { label: "Address",       name: "address",       widget: "string" }
+              - { label: "Copyright",     name: "copyright",     widget: "string" }
+
   # =============== HOME ===============
   - name: "home"
     label: "Home"
@@ -117,6 +134,115 @@ collections:
         label: "Contact page"
         fields:
 
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",     name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Lede",        name: "lede",     widget: "text"   }
+              - { label: "Hero image",  name: "image",    widget: "image"  }
+
+          - label: "Form section"
+            name: "form_section"
+            widget: "object"
+            fields:
+              - { label: "Section label", name: "section_label", widget: "string" }
+              - { label: "Title line 1",  name: "title_l1",      widget: "string" }
+              - { label: "Title line 2",  name: "title_l2",      widget: "string" }
+              - { label: "Intro",         name: "intro",         widget: "text"   }
+
+              - label: "Contact info shown next to forms"
+                name: "contact_info"
+                widget: "object"
+                fields:
+                  - { label: "Email",  name: "email",  widget: "string" }
+                  - { label: "Phone",  name: "phone",  widget: "string" }
+                  - { label: "Office", name: "office", widget: "string" }
+                  - { label: "Hours",  name: "hours",  widget: "string" }
+
+              - label: "Tab labels"
+                name: "tabs"
+                widget: "object"
+                fields:
+                  - { label: "Sample box tab",  name: "sample",  widget: "string" }
+                  - { label: "Specify tab",     name: "specify", widget: "string" }
+                  - { label: "Information tab", name: "info",    widget: "string" }
+                  - { label: "Other tab",       name: "other",   widget: "string" }
+
+              - label: "Form 1 — Sample box"
+                name: "form_sample"
+                widget: "object"
+                fields:
+                  - { label: "Name label",              name: "name_label",          widget: "string" }
+                  - { label: "Email label",              name: "email_label",         widget: "string" }
+                  - { label: "Phone label",              name: "phone_label",         widget: "string" }
+                  - { label: "Company label",            name: "company_label",       widget: "string" }
+                  - { label: "Finish label",             name: "finish_label",        widget: "string" }
+                  - { label: "Finish placeholder",       name: "finish_placeholder",  widget: "string" }
+                  - { label: "Address label",            name: "address_label",       widget: "string" }
+                  - { label: "Address placeholder",      name: "address_placeholder", widget: "string" }
+                  - { label: "Submit button",            name: "submit_label",        widget: "string" }
+
+              - label: "Form 2 — Specify for project"
+                name: "form_specify"
+                widget: "object"
+                fields:
+                  - { label: "Name label",         name: "name_label",         widget: "string" }
+                  - { label: "Email label",        name: "email_label",        widget: "string" }
+                  - { label: "Role label",         name: "role_label",         widget: "string" }
+                  - label: "Role options"
+                    name: "role_options"
+                    widget: "list"
+                    summary: "{{fields.value}}"
+                    fields:
+                      - { label: "Option", name: "value", widget: "string" }
+                  - { label: "Company label",      name: "company_label",      widget: "string" }
+                  - { label: "Project name label",  name: "project_label",      widget: "string" }
+                  - { label: "Project type label",  name: "type_label",         widget: "string" }
+                  - label: "Project type options"
+                    name: "type_options"
+                    widget: "list"
+                    summary: "{{fields.value}}"
+                    fields:
+                      - { label: "Option", name: "value", widget: "string" }
+                  - { label: "Area label",           name: "area_label",         widget: "string" }
+                  - { label: "Area placeholder",     name: "area_placeholder",   widget: "string" }
+                  - { label: "Deadline label",       name: "deadline_label",     widget: "string" }
+                  - { label: "Brief label",          name: "brief_label",        widget: "string" }
+                  - { label: "Brief placeholder",    name: "brief_placeholder",  widget: "text"   }
+                  - { label: "Submit button",        name: "submit_label",       widget: "string" }
+
+              - label: "Form 3 — Information"
+                name: "form_info"
+                widget: "object"
+                fields:
+                  - { label: "Name label",    name: "name_label",    widget: "string" }
+                  - { label: "Email label",   name: "email_label",   widget: "string" }
+                  - { label: "Company label", name: "company_label", widget: "string" }
+                  - { label: "Kind label",    name: "kind_label",    widget: "string" }
+                  - label: "Kind options"
+                    name: "kind_options"
+                    widget: "list"
+                    summary: "{{fields.value}}"
+                    fields:
+                      - { label: "Option", name: "value", widget: "string" }
+                  - { label: "Message label",       name: "msg_label",       widget: "string" }
+                  - { label: "Message placeholder", name: "msg_placeholder", widget: "string" }
+                  - { label: "Submit button",       name: "submit_label",    widget: "string" }
+
+              - label: "Form 4 — Other"
+                name: "form_other"
+                widget: "object"
+                fields:
+                  - { label: "Name label",          name: "name_label",       widget: "string" }
+                  - { label: "Email label",         name: "email_label",      widget: "string" }
+                  - { label: "Company label",       name: "company_label",    widget: "string" }
+                  - { label: "Message label",       name: "msg_label",        widget: "string" }
+                  - { label: "Message placeholder", name: "msg_placeholder",  widget: "string" }
+                  - { label: "Submit button",       name: "submit_label",     widget: "string" }
+
           - label: "Contact cards"
             name: "contact_cards"
             widget: "object"
@@ -124,6 +250,17 @@ collections:
               - { label: "Section label", name: "section_label", widget: "string" }
               - { label: "Title",         name: "title",         widget: "string" }
               - { label: "Intro",         name: "intro",         widget: "string" }
+
+              - label: "Morten"
+                name: "morten"
+                widget: "object"
+                fields:
+                  - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+                  - { label: "Name",    name: "name",    widget: "string" }
+                  - { label: "Role",    name: "role",    widget: "string" }
+                  - { label: "Email",   name: "email",   widget: "string" }
+                  - { label: "Phone",   name: "phone",   widget: "string" }
+                  - { label: "Photo",   name: "photo",   widget: "image" }
 
               - label: "Rasmus"
                 name: "rasmus"
@@ -135,6 +272,17 @@ collections:
                   - { label: "Email",   name: "email",   widget: "string" }
                   - { label: "Phone",   name: "phone",   widget: "string" }
                   - { label: "Photo",   name: "photo",   widget: "image" }
+
+          - label: "Studio info (Email / Phone cards)"
+            name: "studio_info"
+            widget: "object"
+            fields:
+              - { label: "Title line 1", name: "title_l1",  widget: "string" }
+              - { label: "Title line 2", name: "title_l2",  widget: "string" }
+              - { label: "Email",        name: "email",      widget: "string" }
+              - { label: "Email note",   name: "email_note", widget: "string" }
+              - { label: "Phone",        name: "phone",      widget: "string" }
+              - { label: "Phone note",   name: "phone_note", widget: "string" }
 
           - label: "Follow our journey"
             name: "journey"
@@ -172,6 +320,17 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Meta",  name: "meta",  widget: "string" }
 
+          - label: "Case studies (prose panels)"
+            name: "cases"
+            widget: "list"
+            hint: "The two large text+image case panels further down the page. Order here must match the two panels on the page (case 1 first, case 2 second)."
+            fields:
+              - { label: "Case label", name: "case_label", widget: "string" }
+              - { label: "Country code", name: "country", widget: "string" }
+              - { label: "Title",  name: "title", widget: "string" }
+              - { label: "Meta line", name: "meta",  widget: "string" }
+              - { label: "Body copy", name: "body", widget: "text" }
+
           - label: "Project list"
             name: "list"
             widget: "list"
@@ -199,6 +358,36 @@ collections:
               - { label: "Lede",    name: "lede",    widget: "text"   }
               - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
           - { label: "Hero note (under finishes)", name: "hero_note", widget: "text" }
+
+          - label: "Finish swatches"
+            name: "finishes"
+            widget: "object"
+            hint: "The 4 finishes are fixed (tied to the interactive panel's CSS/colours) — only the display name and code are editable here."
+            fields:
+              - label: "Graphite"
+                name: "graphite"
+                widget: "object"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Code", name: "code", widget: "string" }
+              - label: "Birch"
+                name: "birch"
+                widget: "object"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Code", name: "code", widget: "string" }
+              - label: "Oak"
+                name: "oak"
+                widget: "object"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Code", name: "code", widget: "string" }
+              - label: "Smoked"
+                name: "smoked"
+                widget: "object"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Code", name: "code", widget: "string" }
 
           - label: "The idea"
             name: "idea"
@@ -305,6 +494,80 @@ collections:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Meta",  name: "meta",  widget: "string" }
 
+          - label: "Spec sheet"
+            name: "spec"
+            widget: "object"
+            fields:
+              - label: "Rows"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.key}}: {{fields.value}}"
+                fields:
+                  - { label: "Label", name: "key",   widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+              - label: "Download buttons"
+                name: "downloads"
+                widget: "list"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Button text", name: "label", widget: "string" }
+                  - { label: "Link (opens in new tab)", name: "href", widget: "string" }
+
+          - label: "Performance data grid — product facts"
+            name: "facts"
+            widget: "object"
+            fields:
+              - label: "Format"
+                name: "format"
+                widget: "object"
+                fields:
+                  - { label: "Value 1", name: "big1", widget: "string" }
+                  - { label: "Value 2", name: "big2", widget: "string" }
+                  - { label: "Note",    name: "note", widget: "string" }
+              - label: "Thickness"
+                name: "thickness"
+                widget: "object"
+                fields:
+                  - { label: "Value 1", name: "big1", widget: "string" }
+                  - { label: "Value 2", name: "big2", widget: "string" }
+                  - { label: "Note",    name: "note", widget: "string" }
+              - label: "Material & life rows"
+                name: "material_life"
+                widget: "list"
+                summary: "{{fields.key}}: {{fields.value}}"
+                fields:
+                  - { label: "Label", name: "key",   widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+
+          - label: "Head-to-head comparison"
+            name: "versus"
+            widget: "object"
+            fields:
+              - label: "Our side"
+                name: "ours"
+                widget: "object"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Tag",  name: "tag",  widget: "string" }
+                  - label: "Points"
+                    name: "points"
+                    widget: "list"
+                    summary: "{{fields.text}}"
+                    fields:
+                      - { label: "Point", name: "text", widget: "string" }
+              - label: "Their side"
+                name: "theirs"
+                widget: "object"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Tag",  name: "tag",  widget: "string" }
+                  - label: "Points"
+                    name: "points"
+                    widget: "list"
+                    summary: "{{fields.text}}"
+                    fields:
+                      - { label: "Point", name: "text", widget: "string" }
+
           - label: "Video (two YouTube clips)"
             name: "video"
             widget: "object"
@@ -321,13 +584,32 @@ collections:
                   - { label: "YouTube video ID", name: "youtube_id", widget: "string", hint: "The part after watch?v= in the YouTube URL" }
                   - { label: "Label",            name: "label",      widget: "string", required: false, hint: "Defaults to the video's own YouTube title" }
 
-          - label: "CO2 savings section label/title"
+          - label: "CO2 savings calculator"
             name: "co2"
             widget: "object"
             fields:
               - { label: "Section label", name: "section_label", widget: "string" }
               - { label: "Title line 1",  name: "title_l1",      widget: "string" }
               - { label: "Title line 2",  name: "title_l2",      widget: "string" }
+              - label: "Aisti — lifecycle row"
+                name: "aisti_lifecycle"
+                widget: "object"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Note", name: "note", widget: "string" }
+              - label: "Aisti — stored CO2 row"
+                name: "aisti_stored"
+                widget: "object"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Note", name: "note", widget: "string" }
+              - label: "Rival product row"
+                name: "rival"
+                widget: "object"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Note", name: "note", widget: "string" }
+              - { label: "Disclaimer / source note", name: "disclaimer", widget: "text", hint: "The kg CO2e factors themselves are set in the page code — update those separately when a new EPD is published" }
 
           - label: "Closing CTA"
             name: "cta"
@@ -400,6 +682,17 @@ collections:
               - { label: "Paragraph 1",  name: "body_p1",  widget: "text"   }
               - { label: "Paragraph 2",  name: "body_p2",  widget: "text"   }
               - { label: "Paragraph 3",  name: "body_p3",  widget: "text"   }
+          - label: "Project spec (table)"
+            name: "spec"
+            widget: "object"
+            fields:
+              - label: "Rows"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.key}}: {{fields.value}}"
+                fields:
+                  - { label: "Label", name: "key",   widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
           - label: "Gallery"
             name: "gallery"
             widget: "list"
@@ -416,6 +709,27 @@ collections:
               - { label: "Title line 1", name: "title_l1", widget: "string" }
               - { label: "Title line 2", name: "title_l2", widget: "string" }
               - { label: "Note",         name: "note",     widget: "text"   }
+          - label: "Performance data (table)"
+            name: "performance"
+            widget: "object"
+            fields:
+              - label: "Rows"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.key}}: {{fields.value}}"
+                fields:
+                  - { label: "Label", name: "key",   widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+          - label: "Marquee (scrolling strip)"
+            name: "marquee"
+            widget: "object"
+            fields:
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
           - label: "Closing CTA"
             name: "cta"
             widget: "object"
@@ -451,6 +765,17 @@ collections:
               - { label: "Paragraph 1",  name: "body_p1",  widget: "text"   }
               - { label: "Paragraph 2",  name: "body_p2",  widget: "text"   }
               - { label: "Paragraph 3",  name: "body_p3",  widget: "text"   }
+          - label: "Project spec (table)"
+            name: "spec"
+            widget: "object"
+            fields:
+              - label: "Rows"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.key}}: {{fields.value}}"
+                fields:
+                  - { label: "Label", name: "key",   widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
           - label: "Gallery"
             name: "gallery"
             widget: "list"
@@ -467,6 +792,27 @@ collections:
               - { label: "Title line 1", name: "title_l1", widget: "string" }
               - { label: "Title line 2", name: "title_l2", widget: "string" }
               - { label: "Note",         name: "note",     widget: "text"   }
+          - label: "Performance data (table)"
+            name: "performance"
+            widget: "object"
+            fields:
+              - label: "Rows"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.key}}: {{fields.value}}"
+                fields:
+                  - { label: "Label", name: "key",   widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+          - label: "Marquee (scrolling strip)"
+            name: "marquee"
+            widget: "object"
+            fields:
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
           - label: "Closing CTA"
             name: "cta"
             widget: "object"

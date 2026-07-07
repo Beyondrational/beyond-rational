@@ -6,6 +6,12 @@
     "bg_image": "assets/aisti-042.jpg"
   },
   "hero_note": "Surfaces shown are an indicative rendering of the finish range. Final samples and patterns on request.",
+  "finishes": {
+    "graphite": { "name": "Painted graphite", "code": "W03" },
+    "birch":    { "name": "Natural birch",    "code": "W04" },
+    "oak":      { "name": "Translucent oak",  "code": "W02" },
+    "smoked":   { "name": "Stained smoked",   "code": "W01" }
+  },
   "idea": {
     "eyebrow": "The idea",
     "title_l1": "Wood, worked",

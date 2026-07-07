@@ -14,6 +14,18 @@
     "body_p2": "The challenge was treating the ceiling without drop-in suspended panels or visible absorption baffles. The brief called for a flush, neutral ceiling surface that could be specified directly from an architectural drawing.",
     "body_p3": "Aisti® at 40 mm, mounted with a 200 mm batten to create an air gap, was the specification. The wider tile format — 600×1200 mm — reduced the number of visible joints and kept the ceiling plane clean."
   },
+  "spec": {
+    "items": [
+      { "key": "Product",   "value": "Aisti® Aalto" },
+      { "key": "Format",    "value": "600 × 1200 mm" },
+      { "key": "Thickness", "value": "40 mm" },
+      { "key": "Finish",    "value": "Birch · pale fibre" },
+      { "key": "Mounting",  "value": "Wide · 200 mm batten" },
+      { "key": "Area",      "value": "~180 m²" },
+      { "key": "Location",  "value": "Helsinki centre, FI" },
+      { "key": "Installed", "value": "Q3 2025" }
+    ]
+  },
   "gallery": [
     { "image": "assets/br-office.webp", "title": "Bulevardi 2", "meta": "In place" },
     { "image": "assets/br-office-2.webp", "title": "The space", "meta": "Helsinki city centre" },
@@ -25,9 +37,31 @@
     "title_l2": "RT60.",
     "note": "Reverberation time measured in-situ pre and post installation. Absorption coefficients from EN ISO 354 reverberation room test. Configuration: 40 mm / 200 mm air gap."
   },
+  "performance": {
+    "items": [
+      { "key": "RT60 before",      "value": "> 1.20 s" },
+      { "key": "RT60 after",       "value": "~0.85 s" },
+      { "key": "Improvement",      "value": "~29 %" },
+      { "key": "α at 125 Hz",      "value": "0.55" },
+      { "key": "α at 500 Hz",      "value": "0.90" },
+      { "key": "α at 1 kHz",       "value": "0.95" },
+      { "key": "Absorption class", "value": "Class A" },
+      { "key": "Test standard",    "value": "EN ISO 354" }
+    ]
+  },
   "cta": {
     "title_l1": "Specify",
     "title_l2": "your project.",
     "lede": "Send the brief. We'll help you select format, thickness, and mounting for your room — and get you samples ahead of full production in August 2026."
+  },
+  "marquee": {
+    "items": [
+      { "text": "−29 % RT60" },
+      { "text": "600 × 1200 mm" },
+      { "text": "Helsinki" },
+      { "text": "~180 m²" },
+      { "text": "40 mm · 200 mm gap" },
+      { "text": "Class A" }
+    ]
   }
 }

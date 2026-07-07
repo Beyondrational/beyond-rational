@@ -38,6 +38,22 @@
       "meta": "Product photography"
     }
   ],
+  "cases": [
+    {
+      "case_label": "Case 01 · Stockholm",
+      "country": "SE",
+      "title": "Ångtvätten 22",
+      "meta": "Stora Essingen, Stockholm · Commercial office, 40,000 m² property",
+      "body": "Aisti® tiles in dark blue, 600×600 mm at 20 mm, installed in the standard T-grid by a professional team. The tiles absorb sound reflections and reduce echo — installed side-by-side with mineral wool to show no difference in acoustic performance."
+    },
+    {
+      "case_label": "Case 02 · Helsinki",
+      "country": "FI",
+      "title": "Bulevardi 2",
+      "meta": "Helsinki city centre · Commercial office",
+      "body": "Aisti® tiles in white, 600×1200 mm at 40 mm, ceiling-mounted. Reverberation time — the time for sound to decay 60 dB — improved roughly 29% across the octave bands after installation."
+    }
+  ],
   "list": [
     {
       "num": "01 /",

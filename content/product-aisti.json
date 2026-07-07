@@ -5,6 +5,65 @@
     "lede": "Foam-formed natural wood fibre. Absorption Class A, two formats, two thicknesses. Fits standard T-grid ceilings or mounts directly with adhesive. Full production capacity from August 2026 — preorder now.",
     "bg_image": "assets/aisti-person-angtvatten.webp"
   },
+  "spec": {
+    "items": [
+      { "key": "Core",           "value": "Natural wood fibre" },
+      { "key": "Formats",        "value": "600×600 / 600×1200" },
+      { "key": "Thickness",      "value": "20 or 40 mm" },
+      { "key": "Absorption",     "value": "Class A" },
+      { "key": "Emissions",      "value": "M1 / French A+" },
+      { "key": "Fire",           "value": "Euroclass B-s1,d0" },
+      { "key": "Embodied CO₂e", "value": "up to −6.71/m²" },
+      { "key": "End of life",    "value": "100% recyclable" }
+    ],
+    "downloads": [
+      { "label": "Download specifications", "href": "https://aisti.com/documents/9a4qSK39RnOcg6LbSymtLgo403" },
+      { "label": "EPD 20mm",                "href": "https://aisti.com/documents/_kU7OOv0SxGCLYSZqk-HKQo4e7" },
+      { "label": "EPD 40mm",                "href": "https://aisti.com/documents/QzrA_VDSSVawPcyPQ5OOnAo47b" }
+    ]
+  },
+  "facts": {
+    "format": {
+      "big1": "600 × 600 mm",
+      "big2": "1200 × 600 mm",
+      "note": "Fits standard T-grid systems."
+    },
+    "thickness": {
+      "big1": "20 mm",
+      "big2": "40 mm",
+      "note": "20 mm for suspended ceilings, 40 mm for direct mounting."
+    },
+    "material_life": [
+      { "key": "Core",   "value": "Wood fibre" },
+      { "key": "Fire",   "value": "B-s1,d0" },
+      { "key": "CO₂e",  "value": "up to −6.71/m²" },
+      { "key": "Recyc.", "value": "100 %" }
+    ]
+  },
+  "versus": {
+    "ours": {
+      "name": "Aisti® Aalto",
+      "tag": "Our tile",
+      "points": [
+        { "text": "Natural wood fibre" },
+        { "text": "No synthetic binders" },
+        { "text": "Stores carbon (negative footprint)" },
+        { "text": "100% recyclable" },
+        { "text": "No irritating fibres" }
+      ]
+    },
+    "theirs": {
+      "name": "Mineral wool",
+      "tag": "The default",
+      "points": [
+        { "text": "Mineral fibre" },
+        { "text": "Synthetic binders" },
+        { "text": "Positive carbon footprint" },
+        { "text": "Landfill at end of life" },
+        { "text": "Can irritate skin and lungs" }
+      ]
+    }
+  },
   "gallery": {
     "eyebrow": "In place",
     "title": "Aisti gallery",
@@ -81,7 +140,20 @@
   "co2": {
     "section_label": "CO₂ savings",
     "title_l1": "Aisti Aalto,",
-    "title_l2": "by the numbers."
+    "title_l2": "by the numbers.",
+    "aisti_lifecycle": {
+      "name": "Aisti® Aalto",
+      "note": "Lifecycle emissions, A1-C4 (fossil)"
+    },
+    "aisti_stored": {
+      "name": "Aisti® Aalto",
+      "note": "Stored CO₂ · biogenic carbon at factory gate (A1-A3)"
+    },
+    "rival": {
+      "name": "Rockfon Sonar 20mm",
+      "note": "Mineral wool · lifecycle emissions, A1-C4"
+    },
+    "disclaimer": "Calculations are based on manufacturers' EPD — compared with stone wool. Aisti Aalto 20 mm vs Rockfon Sonar 20mm. Aisti figures: EPD Hub HUB-5632 (Aisti Corporation Oy, published 06.03.2026) — lifecycle emissions is GWP-fossil summed across A1-C4; stored CO₂ is GWP-biogenic at A1-A3 (factory gate, before any end-of-life release). Rockfon figure from its public Sonar 20mm datasheet."
   },
   "cta": {
     "title_l1": "Specify",

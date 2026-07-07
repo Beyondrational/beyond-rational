@@ -7,7 +7,7 @@
 <meta name="description" content="Wuud — embossed wooden cladding panels for interior and exterior architecture. Real wood, modified for deep relief, weatherproofing and fire retardancy. Developed in Finland; distributed by Beyond Rational.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=23">
+<link rel="stylesheet" href="br.css?v=25">
 <style>
   /* ===== Wuud hero panel — embossed cladding, finish-driven via CSS vars ===== */
   .wuud-stage { perspective: 1400px; }
@@ -193,16 +193,16 @@
 
   <div class="wuud-finishes" role="group" aria-label="Choose a finish">
     <button class="wuud-swatch" type="button" data-finish="graphite" aria-pressed="true">
-      <span class="wuud-swatch__dot wuud-swatch__dot--graphite"></span>Painted graphite <span class="wuud-swatch__code">W03</span>
+      <span class="wuud-swatch__dot wuud-swatch__dot--graphite"></span><span class="wuud-swatch__name" data-content="finishes.graphite.name">Painted graphite</span> <span class="wuud-swatch__code" data-content="finishes.graphite.code">W03</span>
     </button>
     <button class="wuud-swatch" type="button" data-finish="birch" aria-pressed="false">
-      <span class="wuud-swatch__dot wuud-swatch__dot--birch"></span>Natural birch <span class="wuud-swatch__code">W04</span>
+      <span class="wuud-swatch__dot wuud-swatch__dot--birch"></span><span class="wuud-swatch__name" data-content="finishes.birch.name">Natural birch</span> <span class="wuud-swatch__code" data-content="finishes.birch.code">W04</span>
     </button>
     <button class="wuud-swatch" type="button" data-finish="oak" aria-pressed="false">
-      <span class="wuud-swatch__dot wuud-swatch__dot--oak"></span>Translucent oak <span class="wuud-swatch__code">W02</span>
+      <span class="wuud-swatch__dot wuud-swatch__dot--oak"></span><span class="wuud-swatch__name" data-content="finishes.oak.name">Translucent oak</span> <span class="wuud-swatch__code" data-content="finishes.oak.code">W02</span>
     </button>
     <button class="wuud-swatch" type="button" data-finish="smoked" aria-pressed="false">
-      <span class="wuud-swatch__dot wuud-swatch__dot--smoked"></span>Stained smoked <span class="wuud-swatch__code">W01</span>
+      <span class="wuud-swatch__dot wuud-swatch__dot--smoked"></span><span class="wuud-swatch__name" data-content="finishes.smoked.name">Stained smoked</span> <span class="wuud-swatch__code" data-content="finishes.smoked.code">W01</span>
     </button>
   </div>
   <p class="bra-caption" style="margin-top: var(--bra-s-3); font-size: 11px; max-width: 60ch;" data-content="hero_note">
@@ -317,7 +317,7 @@
   <div class="bra-footer__grid">
     <div class="bra-footer__brand">
       <div class="bra-footer__brand-line">Beyond Rational</div>
-      <p class="bra-body" style="margin-top: var(--bra-s-3); max-width: 36ch; color: var(--bra-ink-2);">
+      <p class="bra-body" style="margin-top: var(--bra-s-3); max-width: 36ch; color: var(--bra-ink-2);" data-content="footer.brand_tagline">
         Conscious acoustics. Official distributor of Aisti® in Denmark.
       </p>
     </div>
@@ -339,13 +339,13 @@
     <div>
       <h4>Contact</h4>
       <ul>
-        <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;">hello@beyondrational.com</a></li>
-        <li><span class="bra-body" style="font-size: 14px;">Firskovvej 36, 2800 Kongens Lyngby</span></li>
+        <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;"><span data-content="footer.email">hello@beyondrational.com</span></a></li>
+        <li><span class="bra-body" style="font-size: 14px;" data-content="footer.address">Firskovvej 36, 2800 Kongens Lyngby</span></li>
       </ul>
     </div>
   </div>
   <div class="bra-footer__base">
-    <span class="bra-micro">© 2026 Beyond Rational ApS</span>
+    <span class="bra-micro" data-content="footer.copyright">© 2026 Beyond Rational ApS</span>
     <a class="bra-micro" href="privatlivspolitik.html" style="text-decoration: none;">Privatlivspolitik</a>
     <a class="bra-micro" href="betalingsbetingelser.html" style="text-decoration: none;">Betalingsbetingelser</a>
     <a class="bra-micro" href="design-system.html" style="text-decoration: none;">Design system</a>
@@ -361,18 +361,21 @@
   var stage  = panel ? panel.closest('.wuud-stage') : null;
   if (!panel) return;
 
-  var FINISHES = {
-    graphite: { cls: '',          label: 'W03 · Painted graphite' },
-    birch:    { cls: 'is-birch',  label: 'W04 · Natural birch' },
-    oak:      { cls: 'is-oak',    label: 'W02 · Translucent oak' },
-    smoked:   { cls: 'is-smoked', label: 'W01 · Stained smoked' }
-  };
+  // Panel class per finish key — structural, tied to CSS (.is-birch etc.),
+  // not CMS content. Display text (label) is read live from the swatch
+  // button's own text so it always matches whatever the CMS shows there.
+  var FINISH_CLASS = { graphite: '', birch: 'is-birch', oak: 'is-oak', smoked: 'is-smoked' };
 
   function setFinish(name) {
-    var f = FINISHES[name]; if (!f) return;
-    panel.className = 'prod-hero-panel' + (f.cls ? ' ' + f.cls : '');
+    if (!(name in FINISH_CLASS)) return;
+    var btn = document.querySelector('.wuud-swatch[data-finish="' + name + '"]');
+    panel.className = 'prod-hero-panel' + (FINISH_CLASS[name] ? ' ' + FINISH_CLASS[name] : '');
     panel.setAttribute('data-finish', name);
-    if (label) label.textContent = f.label;
+    if (label && btn) {
+      var code = btn.querySelector('.wuud-swatch__code');
+      var nameEl = btn.querySelector('.wuud-swatch__name');
+      label.textContent = (code ? code.textContent : '') + ' · ' + (nameEl ? nameEl.textContent : '');
+    }
     document.querySelectorAll('.wuud-swatch').forEach(function (b) {
       b.setAttribute('aria-pressed', String(b.getAttribute('data-finish') === name));
     });
@@ -381,6 +384,10 @@
   document.querySelectorAll('.wuud-swatch').forEach(function (btn) {
     btn.addEventListener('click', function () { setFinish(btn.getAttribute('data-finish')); });
   });
+
+  // Sync the initial panel label to the swatch text once CMS content loads
+  // (page starts on "graphite" — the label above is a static fallback until then).
+  document.addEventListener('br-content-ready', function () { setFinish(panel.getAttribute('data-finish') || 'graphite'); });
 
   // Cursor-driven tilt + sheen (pointer devices only, respect reduced motion)
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -406,7 +413,7 @@
 })();
 </script>
 
-<script src="br-content.js?v=20" defer></script>
+<script src="br-content.js?v=21" defer></script>
 <script src="br.js?v=22" defer></script>
 </body>
 </html>

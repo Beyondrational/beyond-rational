@@ -7,7 +7,7 @@
 <meta name="description" content="Case study: Aisti® acoustic tiles reduced reverberation time by 29% in a commercial office in Helsinki city centre. 600×1200 mm, 40 mm, ceiling-mounted.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=23">
+<link rel="stylesheet" href="br.css?v=25">
 </head>
 <body class="bra" data-page="case-bulevardi-2">
 
@@ -100,15 +100,10 @@
       <span class="bra-reveal-line" data-reveal>What was</span><br>
       <span class="bra-reveal-line" data-reveal>installed.</span>
     </h2>
-    <div class="bra-spec">
-      <div class="bra-spec-row"><div class="bra-spec-key">Product</div><div class="bra-spec-val">Aisti® Aalto</div></div>
-      <div class="bra-spec-row"><div class="bra-spec-key">Format</div><div class="bra-spec-val">600 × 1200 mm</div></div>
-      <div class="bra-spec-row"><div class="bra-spec-key">Thickness</div><div class="bra-spec-val">40 mm</div></div>
-      <div class="bra-spec-row"><div class="bra-spec-key">Finish</div><div class="bra-spec-val">Birch · pale fibre</div></div>
-      <div class="bra-spec-row"><div class="bra-spec-key">Mounting</div><div class="bra-spec-val">Wide · 200 mm batten</div></div>
-      <div class="bra-spec-row"><div class="bra-spec-key">Area</div><div class="bra-spec-val">~180 m²</div></div>
-      <div class="bra-spec-row"><div class="bra-spec-key">Location</div><div class="bra-spec-val">Helsinki centre, FI</div></div>
-      <div class="bra-spec-row"><div class="bra-spec-key">Installed</div><div class="bra-spec-val">Q3 2025</div></div>
+    <div class="bra-spec" data-content-each="spec.items">
+      <template>
+        <div class="bra-spec-row"><div class="bra-spec-key" data-each="key"></div><div class="bra-spec-val" data-each="value"></div></div>
+      </template>
     </div>
   </div>
 </section>
@@ -152,15 +147,10 @@
         </h2>
       </div>
       <div>
-        <div class="bra-spec">
-          <div class="bra-spec-row"><div class="bra-spec-key">RT60 before</div><div class="bra-spec-val">> 1.20 s</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">RT60 after</div><div class="bra-spec-val">~0.85 s</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">Improvement</div><div class="bra-spec-val">~29 %</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">α at 125 Hz</div><div class="bra-spec-val">0.55</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">α at 500 Hz</div><div class="bra-spec-val">0.90</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">α at 1 kHz</div><div class="bra-spec-val">0.95</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">Absorption class</div><div class="bra-spec-val">Class A</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">Test standard</div><div class="bra-spec-val">EN ISO 354</div></div>
+        <div class="bra-spec" data-content-each="performance.items">
+          <template>
+            <div class="bra-spec-row"><div class="bra-spec-key" data-each="key"></div><div class="bra-spec-val" data-each="value"></div></div>
+          </template>
         </div>
         <p class="bra-body" style="margin-top: var(--bra-s-3); color: var(--bra-ink-2);" data-content="results.note">
           Reverberation time measured in-situ pre and post installation. Absorption coefficients from EN ISO 354 reverberation room test. Configuration: 40 mm / 200 mm air gap.
@@ -173,18 +163,12 @@
 <!-- ===== Marquee ===== -->
 <section class="bra-marquee">
   <div class="bra-marquee__track">
-    <span>−29 % RT60</span>
-    <span>600 × 1200 mm</span>
-    <span>Helsinki</span>
-    <span>~180 m²</span>
-    <span>40 mm · 200 mm gap</span>
-    <span>Class A</span>
-    <span>−29 % RT60</span>
-    <span>600 × 1200 mm</span>
-    <span>Helsinki</span>
-    <span>~180 m²</span>
-    <span>40 mm · 200 mm gap</span>
-    <span>Class A</span>
+    <span class="bra-marquee__group" data-content-each="marquee.items">
+      <template><span class="bra-marquee__item" data-each="text"></span></template>
+    </span>
+    <span class="bra-marquee__group" data-content-each="marquee.items">
+      <template><span class="bra-marquee__item" data-each="text"></span></template>
+    </span>
   </div>
 </section>
 
@@ -225,7 +209,7 @@
   <div class="bra-footer__grid">
     <div class="bra-footer__brand">
       <div class="bra-footer__brand-line">Beyond Rational</div>
-      <p class="bra-body" style="margin-top: var(--bra-s-3); max-width: 36ch; color: var(--bra-ink-2);">
+      <p class="bra-body" style="margin-top: var(--bra-s-3); max-width: 36ch; color: var(--bra-ink-2);" data-content="footer.brand_tagline">
         Conscious acoustics. Official distributor of Aisti® in Denmark.
       </p>
     </div>
@@ -247,13 +231,13 @@
     <div>
       <h4>Contact</h4>
       <ul>
-        <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;">hello@beyondrational.com</a></li>
-        <li><span class="bra-body" style="font-size: 14px;">Firskovvej 36, 2800 Kongens Lyngby</span></li>
+        <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;"><span data-content="footer.email">hello@beyondrational.com</span></a></li>
+        <li><span class="bra-body" style="font-size: 14px;" data-content="footer.address">Firskovvej 36, 2800 Kongens Lyngby</span></li>
       </ul>
     </div>
   </div>
   <div class="bra-footer__base">
-    <span class="bra-micro">© 2026 Beyond Rational ApS</span>
+    <span class="bra-micro" data-content="footer.copyright">© 2026 Beyond Rational ApS</span>
     <a class="bra-micro" href="privatlivspolitik.html" style="text-decoration: none;">Privatlivspolitik</a>
     <a class="bra-micro" href="betalingsbetingelser.html" style="text-decoration: none;">Betalingsbetingelser</a>
     <a class="bra-micro" href="design-system.html" style="text-decoration: none;">Design system</a>
@@ -262,6 +246,6 @@
 </footer>
 
 <script src="br.js?v=22" defer></script>
-<script src="br-content.js?v=20" defer></script>
+<script src="br-content.js?v=21" defer></script>
 </body>
 </html>

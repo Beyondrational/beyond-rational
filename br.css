@@ -62,12 +62,12 @@
 
   /* Space */
   --bra-s-1: 8px;
-  --bra-s-2: 16px;
-  --bra-s-3: 32px;
-  --bra-s-4: 56px;
-  --bra-s-5: 96px;
-  --bra-s-6: 160px;
-  --bra-s-7: 240px;
+  --bra-s-2: 14px;
+  --bra-s-3: 26px;
+  --bra-s-4: 44px;
+  --bra-s-5: 72px;
+  --bra-s-6: 116px;
+  --bra-s-7: 176px;
 
   /* Container */
   --bra-pad-x: clamp(24px, 5vw, 80px);
@@ -1132,7 +1132,11 @@ form[data-form].is-active { display: flex; flex-direction: column; gap: 0; }
   letter-spacing: -0.012em;
   line-height: 1;
 }
-.bra-marquee__track > span::after {
+.bra-marquee__group {
+  display: inline-flex;
+  gap: var(--bra-s-4);
+}
+.bra-marquee__track .bra-marquee__item::after {
   content: "·";
   margin-left: var(--bra-s-4);
   color: var(--bra-oak);

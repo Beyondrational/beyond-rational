@@ -7,7 +7,7 @@
 <meta name="description" content="Case study: Aisti® acoustic tiles installed in a 40,000 m² commercial office in Stora Essingen, Stockholm. NRC ≥ 0.75 across the speech range.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=23">
+<link rel="stylesheet" href="br.css?v=25">
 </head>
 <body class="bra" data-page="case-angtvatten-22">
 
@@ -100,15 +100,10 @@
       <span class="bra-reveal-line" data-reveal>What was</span><br>
       <span class="bra-reveal-line" data-reveal>installed.</span>
     </h2>
-    <div class="bra-spec">
-      <div class="bra-spec-row"><div class="bra-spec-key">Product</div><div class="bra-spec-val">Aisti® Aalto</div></div>
-      <div class="bra-spec-row"><div class="bra-spec-key">Format</div><div class="bra-spec-val">600 × 600 mm</div></div>
-      <div class="bra-spec-row"><div class="bra-spec-key">Thickness</div><div class="bra-spec-val">20 mm</div></div>
-      <div class="bra-spec-row"><div class="bra-spec-key">Finish</div><div class="bra-spec-val">Stone · mid-grey</div></div>
-      <div class="bra-spec-row"><div class="bra-spec-key">Mounting</div><div class="bra-spec-val">Tight · T-grid</div></div>
-      <div class="bra-spec-row"><div class="bra-spec-key">Area</div><div class="bra-spec-val">~320 m²</div></div>
-      <div class="bra-spec-row"><div class="bra-spec-key">Location</div><div class="bra-spec-val">Stora Essingen, SE</div></div>
-      <div class="bra-spec-row"><div class="bra-spec-key">Installed</div><div class="bra-spec-val">Q4 2025</div></div>
+    <div class="bra-spec" data-content-each="spec.items">
+      <template>
+        <div class="bra-spec-row"><div class="bra-spec-key" data-each="key"></div><div class="bra-spec-val" data-each="value"></div></div>
+      </template>
     </div>
   </div>
 </section>
@@ -159,13 +154,10 @@
         </h2>
       </div>
       <div>
-        <div class="bra-spec">
-          <div class="bra-spec-row"><div class="bra-spec-key">α at 500 Hz</div><div class="bra-spec-val">0.75</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">α at 1 kHz</div><div class="bra-spec-val">0.75</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">α at 2 kHz</div><div class="bra-spec-val">0.80</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">Absorption class</div><div class="bra-spec-val">Class A</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">vs. mineral wool</div><div class="bra-spec-val">No measurable difference</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">Test standard</div><div class="bra-spec-val">EN ISO 354</div></div>
+        <div class="bra-spec" data-content-each="performance.items">
+          <template>
+            <div class="bra-spec-row"><div class="bra-spec-key" data-each="key"></div><div class="bra-spec-val" data-each="value"></div></div>
+          </template>
         </div>
         <p class="bra-body" style="margin-top: var(--bra-s-3); color: var(--bra-ink-2);" data-content="results.note">
           Absorption coefficients from EN ISO 354 reverberation room test. Configuration: 20 mm / tight (plate-flush). α ≥ 0.90 across speech bands qualifies as Class A.
@@ -178,18 +170,12 @@
 <!-- ===== Marquee ===== -->
 <section class="bra-marquee">
   <div class="bra-marquee__track">
-    <span>Class A</span>
-    <span>600 × 600 mm</span>
-    <span>Stockholm</span>
-    <span>~320 m²</span>
-    <span>T-grid install</span>
-    <span>Q4 2025</span>
-    <span>Class A</span>
-    <span>600 × 600 mm</span>
-    <span>Stockholm</span>
-    <span>~320 m²</span>
-    <span>T-grid install</span>
-    <span>Q4 2025</span>
+    <span class="bra-marquee__group" data-content-each="marquee.items">
+      <template><span class="bra-marquee__item" data-each="text"></span></template>
+    </span>
+    <span class="bra-marquee__group" data-content-each="marquee.items">
+      <template><span class="bra-marquee__item" data-each="text"></span></template>
+    </span>
   </div>
 </section>
 
@@ -230,7 +216,7 @@
   <div class="bra-footer__grid">
     <div class="bra-footer__brand">
       <div class="bra-footer__brand-line">Beyond Rational</div>
-      <p class="bra-body" style="margin-top: var(--bra-s-3); max-width: 36ch; color: var(--bra-ink-2);">
+      <p class="bra-body" style="margin-top: var(--bra-s-3); max-width: 36ch; color: var(--bra-ink-2);" data-content="footer.brand_tagline">
         Conscious acoustics. Official distributor of Aisti® in Denmark.
       </p>
     </div>
@@ -252,13 +238,13 @@
     <div>
       <h4>Contact</h4>
       <ul>
-        <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;">hello@beyondrational.com</a></li>
-        <li><span class="bra-body" style="font-size: 14px;">Firskovvej 36, 2800 Kongens Lyngby</span></li>
+        <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;"><span data-content="footer.email">hello@beyondrational.com</span></a></li>
+        <li><span class="bra-body" style="font-size: 14px;" data-content="footer.address">Firskovvej 36, 2800 Kongens Lyngby</span></li>
       </ul>
     </div>
   </div>
   <div class="bra-footer__base">
-    <span class="bra-micro">© 2026 Beyond Rational ApS</span>
+    <span class="bra-micro" data-content="footer.copyright">© 2026 Beyond Rational ApS</span>
     <a class="bra-micro" href="privatlivspolitik.html" style="text-decoration: none;">Privatlivspolitik</a>
     <a class="bra-micro" href="betalingsbetingelser.html" style="text-decoration: none;">Betalingsbetingelser</a>
     <a class="bra-micro" href="design-system.html" style="text-decoration: none;">Design system</a>
@@ -267,6 +253,6 @@
 </footer>
 
 <script src="br.js?v=22" defer></script>
-<script src="br-content.js?v=20" defer></script>
+<script src="br-content.js?v=21" defer></script>
 </body>
 </html>

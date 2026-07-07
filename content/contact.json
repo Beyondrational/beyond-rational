@@ -1,8 +1,106 @@
 {
+ "hero": {
+  "eyebrow": "Specify · sample · visit",
+  "title_l1": "Tell us",
+  "title_l2": "about the room.",
+  "lede": "Pick a path below. The form fits the conversation: sample, project spec, or general information. We answer Monday to Friday.",
+  "image": "assets/br-office-2.webp"
+ },
+ "form_section": {
+  "section_label": "Get in touch",
+  "title_l1": "One form,",
+  "title_l2": "four paths.",
+  "intro": "Pick a tab that fits what you need. The form changes to ask the right questions. We answer Monday to Friday.",
+  "contact_info": {
+   "email": "morten@beyondrational.com",
+   "phone": "+45 22 55 54 70",
+   "office": "Firskovvej 36, 2800 Kongens Lyngby",
+   "hours": "Mon–Fri"
+  },
+  "tabs": {
+   "sample": "Sample box",
+   "specify": "Specify for project",
+   "info": "Information",
+   "other": "Other"
+  },
+  "form_sample": {
+   "name_label": "Full name *",
+   "email_label": "Email *",
+   "phone_label": "Phone",
+   "company_label": "Studio / company *",
+   "finish_label": "Preferred colour (optional)",
+   "finish_placeholder": "e.g. white, dark blue — or leave blank",
+   "address_label": "Delivery address *",
+   "address_placeholder": "Street, city, postal code, country",
+   "submit_label": "Request a sample"
+  },
+  "form_specify": {
+   "name_label": "Full name *",
+   "email_label": "Email *",
+   "role_label": "Your role",
+   "role_options": [
+    { "value": "Architect" },
+    { "value": "Interior designer" },
+    { "value": "Developer / contractor" },
+    { "value": "Project manager" },
+    { "value": "Acoustic consultant" }
+   ],
+   "company_label": "Studio / company *",
+   "project_label": "Project name *",
+   "type_label": "Project type",
+   "type_options": [
+    { "value": "New build" },
+    { "value": "Refurbishment" },
+    { "value": "Tenant fit-out" },
+    { "value": "Public / civic" },
+    { "value": "Other" }
+   ],
+   "area_label": "Area (m²)",
+   "area_placeholder": "e.g. 1200",
+   "deadline_label": "Target completion",
+   "brief_label": "Brief *",
+   "brief_placeholder": "Programme, ceiling height, acoustic targets, finishes you are pairing with…",
+   "submit_label": "Send the brief"
+  },
+  "form_info": {
+   "name_label": "Full name *",
+   "email_label": "Email *",
+   "company_label": "Studio / outlet",
+   "kind_label": "What do you need?",
+   "kind_options": [
+    { "value": "Technical paper" },
+    { "value": "Spec sheet" },
+    { "value": "EPD / sustainability data" },
+    { "value": "Press kit" },
+    { "value": "CAD & BIM files" },
+    { "value": "Commercial / dealer" },
+    { "value": "General enquiry" }
+   ],
+   "msg_label": "Anything else?",
+   "msg_placeholder": "Optional — give us context so we send the right thing.",
+   "submit_label": "Send the request"
+  },
+  "form_other": {
+   "name_label": "Full name *",
+   "email_label": "Email *",
+   "company_label": "Organisation",
+   "msg_label": "Your message *",
+   "msg_placeholder": "What's on your mind?",
+   "submit_label": "Send the message"
+  }
+ },
  "contact_cards": {
   "section_label": "Direct line",
   "title": "Beyond Rational is run by Morten and Rasmus.",
   "intro": "Both pick up the phone, both read every brief.",
+  "morten": {
+   "eyebrow": "Managing partner",
+   "name": "Morten Gyldendal Melberg",
+   "role": "Commercial, partnerships, projects.",
+   "email": "morten@beyondrational.com",
+   "phone": "+45 22 55 54 70",
+   "photo": "assets/morten-melberg.jpg"
+  },
   "rasmus": {
    "eyebrow": "Partner",
    "name": "Rasmus Gyldendal Melberg",
@@ -11,6 +109,14 @@
    "phone": "+45 24 48 14 01",
    "photo": "assets/rasmus-melberg.jpg"
   }
+ },
+ "studio_info": {
+  "title_l1": "Firskovvej 36,",
+  "title_l2": "Kongens Lyngby.",
+  "email": "hello@beyondrational.com",
+  "email_note": "For samples, preorders, and project briefs. We answer Mon–Fri.",
+  "phone": "+45 22 55 54 70",
+  "phone_note": "Morten Gyldendal Melberg, managing partner."
  },
  "journey": {
   "title_l1": "Follow our",
