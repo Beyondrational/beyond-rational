@@ -151,7 +151,7 @@
     },
     "rival": {
       "name": "Rockfon Sonar 20mm",
-      "note": "Mineral wool · lifecycle emissions, A1-C4"
+      "note": "Mineral wool · lifecycle emissions, A1-C4 (fossil)"
     },
     "disclaimer": "Calculations are based on manufacturers' EPD — compared with stone wool. Aisti Aalto 20 mm vs Rockfon Sonar 20mm. Aisti figures: EPD Hub HUB-5632 (Aisti Corporation Oy, published 06.03.2026) — lifecycle emissions is GWP-fossil summed across A1-C4; stored CO₂ is GWP-biogenic at A1-A3 (factory gate, before any end-of-life release). Rockfon figure from its public Sonar 20mm datasheet."
   },

@@ -1050,9 +1050,12 @@ form[data-form].is-active { display: flex; flex-direction: column; gap: 0; }
    per-cell grid-column bookkeeping needed. Tones cycle paper/stone/ink. */
 .bra-gallery--auto { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 1fr; }
 /* nth-of-type (not nth-child) — a <template> tag sits as an inert sibling
-   among the rendered cells, which would otherwise throw off the count. */
-.bra-gallery--auto .bra-gallery-cell:nth-of-type(3n+2) { background: var(--bra-stone); }
-.bra-gallery--auto .bra-gallery-cell:nth-of-type(3n+3) { background: var(--bra-ink); color: var(--bra-on-oak); }
+   among the rendered cells, which would otherwise throw off the count.
+   :not(...) lets an explicit --ink/--oak/--stone modifier on a cell always
+   win over the auto-cycle (otherwise the cycle's higher specificity silently
+   overrides a deliberately-set tone, e.g. a 2-card gallery's 2nd cell). */
+.bra-gallery--auto .bra-gallery-cell:nth-of-type(3n+2):not(.bra-gallery-data--ink):not(.bra-gallery-data--oak):not(.bra-gallery-data--stone) { background: var(--bra-stone); }
+.bra-gallery--auto .bra-gallery-cell:nth-of-type(3n+3):not(.bra-gallery-data--ink):not(.bra-gallery-data--oak):not(.bra-gallery-data--stone) { background: var(--bra-ink); color: var(--bra-on-oak); }
 @media (max-width: 900px) { .bra-gallery--auto { grid-auto-flow: row; } }
 
 /* Ratio bar (horizontal) */
@@ -1380,7 +1383,18 @@ body.is-loading { overflow: hidden; }
   font-size: 14px;
   letter-spacing: -0.010em;
   white-space: nowrap;
+  display: block;
 }
+.bra-nav__brand-logo {
+  display: block;
+  height: 20px;
+  width: auto;
+  /* Logo art is solid black — invert to white over the dark nav state
+     instead of needing a second logo file. */
+  filter: invert(0);
+  transition: filter var(--bra-dur-base) var(--bra-ease);
+}
+.bra-nav.is-dark .bra-nav__brand-logo { filter: invert(1); }
 .bra-nav__links {
   display: flex;
   gap: var(--bra-s-3);
@@ -1497,6 +1511,11 @@ body.bra-nav-locked { overflow: hidden; }
   font-size: clamp(28px, 3.4vw, 48px);
   line-height: 1.04;
   letter-spacing: -0.015em;
+}
+.bra-footer__brand-logo {
+  display: block;
+  height: clamp(32px, 3.4vw, 44px);
+  width: auto;
 }
 .bra-footer h4 {
   font-family: var(--bra-font);

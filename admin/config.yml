@@ -24,6 +24,7 @@ collections:
         name: "site"
         label: "Footer (shown on every page)"
         fields:
+          - { label: "Logo (nav + footer, every page)", name: "logo", widget: "image" }
           - label: "Footer"
             name: "footer"
             widget: "object"
