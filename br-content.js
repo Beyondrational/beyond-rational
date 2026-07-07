@@ -36,8 +36,18 @@
     const attr = el.dataset.contentAttr;
     if (attr) {
       el.setAttribute(attr, value);
+    } else if (el.dataset.contentHtml === 'true' && el.hasAttribute('data-reveal') && window.braSplitRevealText) {
+      // Reveal-lines strip tags on split anyway (char-by-char), so just
+      // animate the plain text rather than skipping the reveal entirely.
+      const plain = value.replace(/<[^>]+>/g, '');
+      window.braSplitRevealText(el, plain);
     } else if (el.dataset.contentHtml === 'true') {
       el.innerHTML = value;
+    } else if (el.hasAttribute('data-reveal') && window.braSplitRevealText) {
+      // Plain textContent would wipe out the char-reveal spans br.js already
+      // built for this element — re-split instead so the scroll-in animation
+      // still plays with the real CMS text.
+      window.braSplitRevealText(el, value);
     } else {
       el.textContent = value;
     }

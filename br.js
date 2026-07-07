@@ -90,29 +90,56 @@
   });
 
   /* ---------- Character reveal (word-level wrap) ---------- */
+  // Spread every reveal-line's chars across the same total window, so a
+  // short single word (e.g. "Wuud.") settles over the same duration as a
+  // long phrase (e.g. contact's "about the room.") instead of finishing
+  // almost instantly.
+  var REVEAL_SPREAD_MS = 350;
+
+  function splitRevealChars(el, text) {
+    const wasIn = el.classList.contains('is-in');
+    el.classList.remove('is-in');
+    el.innerHTML = '';
+    const words = text.split(' ');
+    const totalSlots = [...text].length - 1;
+    const perCharDelay = totalSlots > 0 ? REVEAL_SPREAD_MS / totalSlots : 0;
+    let charIdx = 0;
+    words.forEach((word, wIdx) => {
+      const wWrap = document.createElement('span');
+      wWrap.className = 'bra-reveal-word';
+      [...word].forEach((ch) => {
+        const span = document.createElement('span');
+        span.className = 'bra-reveal-char';
+        span.style.transitionDelay = `${Math.round(charIdx * perCharDelay)}ms`;
+        span.textContent = ch;
+        wWrap.appendChild(span);
+        charIdx++;
+      });
+      el.appendChild(wWrap);
+      if (wIdx < words.length - 1) {
+        el.appendChild(document.createTextNode(' '));
+        charIdx++;
+      }
+    });
+    if (wasIn) {
+      // Force a reflow so the browser registers the freshly hidden chars
+      // before is-in goes back on, otherwise the transition is skipped.
+      void el.offsetWidth;
+      el.classList.add('is-in');
+    }
+  }
+
+  // Exposed so br-content.js can re-split a reveal-line's chars after it
+  // swaps in the CMS text — otherwise its plain textContent write wipes
+  // out the char spans set up below and the line just pops in unanimated.
+  window.braSplitRevealText = function (el, text) {
+    if (reduceMotion) { el.textContent = text; return; }
+    splitRevealChars(el, text);
+  };
+
   if (!reduceMotion) {
     document.querySelectorAll('[data-reveal]').forEach((el) => {
-      const text = el.textContent || '';
-      el.innerHTML = '';
-      const words = text.split(' ');
-      let charIdx = 0;
-      words.forEach((word, wIdx) => {
-        const wWrap = document.createElement('span');
-        wWrap.className = 'bra-reveal-word';
-        [...word].forEach((ch) => {
-          const span = document.createElement('span');
-          span.className = 'bra-reveal-char';
-          span.style.transitionDelay = `${charIdx * 24}ms`;
-          span.textContent = ch;
-          wWrap.appendChild(span);
-          charIdx++;
-        });
-        el.appendChild(wWrap);
-        if (wIdx < words.length - 1) {
-          el.appendChild(document.createTextNode(' '));
-          charIdx++;
-        }
-      });
+      splitRevealChars(el, el.textContent || '');
     });
     const revealIO = new IntersectionObserver((entries) => {
       entries.forEach((e) => {

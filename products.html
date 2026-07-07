@@ -114,7 +114,8 @@
   .deck__stage { position: relative; }
   .deck__panel {
     position: absolute; inset: 0;
-    display: grid; grid-template-columns: 1fr 1.02fr; gap: clamp(36px, 5vw, 88px);
+    display: grid; grid-template-columns: 1fr 1.02fr; grid-template-rows: minmax(0, 1fr);
+    gap: clamp(36px, 5vw, 88px);
     align-items: stretch;
     opacity: 0;
     transition: opacity 560ms var(--bra-ease);
@@ -123,7 +124,7 @@
   .deck__panel.is-active { opacity: 1; pointer-events: auto; }
   .deck__panel.is-past { opacity: 0; }
 
-  .deck__info { display: flex; flex-direction: column; justify-content: center; }
+  .deck__info { display: flex; flex-direction: column; justify-content: center; min-height: 0; }
   .deck__name { font-family: var(--bra-font); font-weight: 500;
     font-size: clamp(48px, 7vw, 108px); line-height: 0.94; letter-spacing: -0.03em;
     color: var(--bra-on-oak); }
@@ -133,9 +134,10 @@
     font-size: clamp(16px, 1.25vw, 19px); line-height: 1.5; color: rgba(244,242,237,0.76); }
   .deck__cta { margin-top: var(--bra-s-4); color: var(--bra-on-oak); }
 
-  /* Visual scales to the full stage height (down to the nav rule below),
-     capped at its existing max-width so it never gets wider than before. */
-  .deck__visual { display: block; justify-self: end; width: 100%; max-width: 640px; height: 100%; }
+  /* Visual fills the panel's own row height exactly (min-height:0 stops the grid
+     item's intrinsic image aspect ratio from overriding the stretch and overflowing
+     past the nav rule below), capped at its existing max-width. */
+  .deck__visual { display: block; justify-self: end; width: 100%; max-width: 640px; height: 100%; min-height: 0; }
   .deck__visual-inner { display: block; overflow: hidden; height: 100%; background: var(--bra-oak-deep);
     border: 1px solid rgba(244,242,237,0.22); }
 
@@ -375,8 +377,8 @@
   </div>
 </footer>
 
-<script src="br.js?v=22" defer></script>
-<script src="br-content.js?v=21" defer></script>
+<script src="br.js?v=24" defer></script>
+<script src="br-content.js?v=23" defer></script>
 <script>
 /* Product deck — pin + scroll-flip through the range (native scroll, class-driven) */
 (function () {
