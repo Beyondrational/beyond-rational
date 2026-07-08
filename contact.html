@@ -7,7 +7,7 @@
 <meta name="description" content="Request a sample box. Specify Aisti for your project. Visit the studio in Copenhagen.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=26">
+<link rel="stylesheet" href="br.css?v=27">
 <style>
   /* Form fields tuned for v1 design system */
   .bra-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: var(--bra-s-2); }
@@ -131,7 +131,7 @@
 
       <div style="max-width: 560px;">
         <!-- Form 1 — Sample box -->
-        <form data-validate action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="sample" class="is-active">
+        <form data-validate data-form="sample" class="is-active">
           <div class="bra-field">
             <label class="bra-field__label" for="s-name" data-content="form_section.form_sample.name_label">Full name *</label>
             <input class="bra-field__input" type="text" name="contact_name" id="s-name" required autocomplete="name">
@@ -159,8 +159,6 @@
             <textarea class="bra-field__textarea" name="description" id="s-addr" required placeholder="Street, city, postal code, country" data-content="form_section.form_sample.address_placeholder" data-content-attr="placeholder"></textarea>
           </div>
           <input type="hidden" name="name" value="Sample box request">
-          <input type="hidden" name="team_id" value="1">
-          <input type="hidden" name="tag_ids" value="6">
           <button type="submit" class="bra-btn-mag" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
             <span data-content="form_section.form_sample.submit_label">Request a sample</span>
             <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -170,7 +168,7 @@
         </form>
 
         <!-- Form 2 — Specify for project -->
-        <form data-validate action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="specify">
+        <form data-validate data-form="specify">
           <div class="bra-field">
             <label class="bra-field__label" for="p-name" data-content="form_section.form_specify.name_label">Full name *</label>
             <input class="bra-field__input" type="text" name="contact_name" id="p-name" required autocomplete="name">
@@ -218,8 +216,6 @@
             <textarea class="bra-field__textarea" name="description" id="p-brief" required placeholder="Programme, ceiling height, acoustic targets, finishes you are pairing with…" data-content="form_section.form_specify.brief_placeholder" data-content-attr="placeholder"></textarea>
           </div>
           <input type="hidden" name="name" value="Project specification request">
-          <input type="hidden" name="team_id" value="1">
-          <input type="hidden" name="tag_ids" value="6">
           <button type="submit" class="bra-btn-mag" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
             <span data-content="form_section.form_specify.submit_label">Send the brief</span>
             <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -229,7 +225,7 @@
         </form>
 
         <!-- Form 3 — Information -->
-        <form data-validate action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="info">
+        <form data-validate data-form="info">
           <div class="bra-field">
             <label class="bra-field__label" for="i-name" data-content="form_section.form_info.name_label">Full name *</label>
             <input class="bra-field__input" type="text" name="contact_name" id="i-name" required autocomplete="name">
@@ -255,8 +251,6 @@
             <textarea class="bra-field__textarea" name="description" id="i-msg" placeholder="Optional — give us context so we send the right thing." data-content="form_section.form_info.msg_placeholder" data-content-attr="placeholder"></textarea>
           </div>
           <input type="hidden" name="name" value="Information request">
-          <input type="hidden" name="team_id" value="1">
-          <input type="hidden" name="tag_ids" value="6">
           <button type="submit" class="bra-btn-mag" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
             <span data-content="form_section.form_info.submit_label">Send the request</span>
             <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -266,7 +260,7 @@
         </form>
 
         <!-- Form 4 — Other -->
-        <form data-validate action="https://beyond-rational.odoo.com/website/form/" method="post" data-form="other">
+        <form data-validate data-form="other">
           <div class="bra-field">
             <label class="bra-field__label" for="o-name" data-content="form_section.form_other.name_label">Full name *</label>
             <input class="bra-field__input" type="text" name="contact_name" id="o-name" required autocomplete="name">
@@ -286,8 +280,6 @@
             <textarea class="bra-field__textarea" name="description" id="o-msg" required placeholder="What's on your mind?" data-content="form_section.form_other.msg_placeholder" data-content-attr="placeholder"></textarea>
           </div>
           <input type="hidden" name="name" value="General enquiry">
-          <input type="hidden" name="team_id" value="1">
-          <input type="hidden" name="tag_ids" value="6">
           <button type="submit" class="bra-btn-mag" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
             <span data-content="form_section.form_other.submit_label">Send the message</span>
             <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -382,8 +374,9 @@
         <p class="bra-lede" data-content="journey.body">
           Beyond Rational supplies a curated range of conscious acoustic and surface materials for modern architecture — chosen for performance, surface, and a low footprint. Follow along as we bring new materials to Denmark.
         </p>
-        <form class="bra-newsletter" data-newsletter onsubmit="return false;">
-          <input type="email" placeholder="you@studio.com" aria-label="Email" required>
+        <form class="bra-newsletter" data-newsletter>
+          <input type="hidden" name="name" value="Newsletter signup">
+          <input type="email" name="email" placeholder="you@studio.com" aria-label="Email" required>
           <button type="submit">Subscribe</button>
         </form>
       </div>
@@ -431,7 +424,8 @@
   </div>
 </footer>
 
-<script src="br.js?v=24" defer></script>
+<script src="br.js?v=25" defer></script>
 <script src="br-content.js?v=23" defer></script>
+<script src="br-forms.js?v=1" defer></script>
 </body>
 </html>

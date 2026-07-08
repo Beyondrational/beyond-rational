@@ -119,9 +119,11 @@ function forwardToHubSpot(formName, params, isNewsletter) {
 }
 
 function HtmlOutput_thanks() {
+  // Update this once beyondrational.com's DNS points at GitHub Pages instead
+  // of the old Squarespace site — until then this is the real live URL.
   return HtmlService.createHtmlOutput(
     '<!DOCTYPE html><html><head><meta charset="utf-8">' +
-    '<meta http-equiv="refresh" content="1;url=https://beyondrational.com/contact.html?sent=1#form-section">' +
+    '<meta http-equiv="refresh" content="1;url=https://beyondrational.github.io/beyond-rational/contact.html?sent=1#form-section">' +
     '<style>body{font-family:sans-serif;padding:48px;color:#1c1c1a;}</style></head>' +
     '<body>Thanks — redirecting you back…</body></html>'
   );

@@ -1,5 +1,11 @@
 # Form notifier — deploy instructions
 
+**Superseded 2026-07-07:** the live site's forms submit to HubSpot's Forms
+API instead (see `br-forms.js` in the repo root) — the Beyond Rational
+Workspace has a policy that blocks anonymous access to Apps Script web apps,
+which this deployment never got past. Left here in case that gets resolved
+and this path is worth revisiting.
+
 Replaces the old Odoo `website/form/` submission target. Runs entirely on
 Google Workspace, no separate hosting needed.
 

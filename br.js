@@ -132,7 +132,13 @@
   // Exposed so br-content.js can re-split a reveal-line's chars after it
   // swaps in the CMS text — otherwise its plain textContent write wipes
   // out the char spans set up below and the line just pops in unanimated.
+  // Skip the rebuild entirely when the CMS text matches what's already
+  // rendered (the normal case, since the static HTML is written to match
+  // its own content.json) — otherwise the line plays its reveal once on
+  // load, then immediately replays it once content arrives, looking like
+  // it "loads twice".
   window.braSplitRevealText = function (el, text) {
+    if (el.textContent === text) return;
     if (reduceMotion) { el.textContent = text; return; }
     splitRevealChars(el, text);
   };

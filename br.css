@@ -2452,6 +2452,10 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
 .bra-newsletter button { background: none; border: 0; cursor: pointer; font-family: var(--bra-font); font-weight: 700;
   font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: inherit; padding: 0 4px; white-space: nowrap; }
 
+/* ---------- Form submit result (br-forms.js) ---------- */
+.bra-form-result { margin-top: var(--bra-s-2); font-family: var(--bra-font); font-size: 14px; color: var(--bra-ink); }
+.bra-form-result.is-error { color: #9E3B65; }
+
 /* ============================================================
    Design-system additions v1.3 — Comparison & proof
    CO2 savings calculator · versus card · proof matrix
