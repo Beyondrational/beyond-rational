@@ -3,14 +3,26 @@
     "eyebrow": "Product · Embossed wood cladding",
     "title": "Wuud.",
     "lede": "Embossed wooden cladding for interior and exterior architecture. Real wood — birch, alder, aspen, pine — modified to hold deep relief, then finished natural, translucent or painted. Developed in Finland; brought to Denmark by Beyond Rational.",
-    "bg_image": "assets/aisti-042.jpg"
+    "bg_image": "assets/wuud_helsinki-design-week-2023_aukusti-heinonen_05.jpg"
   },
   "hero_note": "Surfaces shown are an indicative rendering of the finish range. Final samples and patterns on request.",
   "finishes": {
-    "graphite": { "name": "Painted graphite", "code": "W03" },
-    "birch":    { "name": "Natural birch",    "code": "W04" },
-    "oak":      { "name": "Translucent oak",  "code": "W02" },
-    "smoked":   { "name": "Stained smoked",   "code": "W01" }
+    "graphite": {
+      "name": "Painted graphite",
+      "code": "W03"
+    },
+    "birch": {
+      "name": "Natural birch",
+      "code": "W04"
+    },
+    "oak": {
+      "name": "Translucent oak",
+      "code": "W02"
+    },
+    "smoked": {
+      "name": "Stained smoked",
+      "code": "W01"
+    }
   },
   "idea": {
     "eyebrow": "The idea",
@@ -64,37 +76,37 @@
       "meta": "Finish sample"
     },
     {
-      "image": "assets/aisti-003.jpg",
+      "image": "assets/wuud_render_01.jpg",
       "title": "Panel detail",
       "meta": "Surface"
     },
     {
-      "image": "assets/aisti-042.jpg",
+      "image": "assets/wuud_render_09.jpg",
       "title": "Relief, raked light",
       "meta": "Texture"
     },
     {
-      "image": "assets/aisti-035.jpg",
+      "image": "assets/wuud_render_03.jpg",
       "title": "Mounted",
       "meta": "In place"
     },
     {
-      "image": "assets/aisti-012.jpg",
+      "image": "assets/wuud_render_02.jpg",
       "title": "Cladding run",
       "meta": "Interior"
     },
     {
-      "image": "assets/aisti-026.jpg",
+      "image": "assets/wuud_render_011.jpg",
       "title": "Wall, daylit",
       "meta": "Interior"
     },
     {
-      "image": "assets/br-office-2.webp",
+      "image": "assets/screenshot-2026-02-25-at-17.31.25.png",
       "title": "Full height",
       "meta": "In place"
     },
     {
-      "image": "assets/aisti-025.jpg",
+      "image": "assets/screenshot-2026-02-25-at-17.31.48.png",
       "title": "Edge profile",
       "meta": "Detail"
     }
