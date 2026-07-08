@@ -92,9 +92,12 @@ collections:
               - { label: "Section label",     name: "section_label", widget: "string" }
               - { label: "Title line 1",      name: "title_l1",      widget: "string" }
               - { label: "Title line 2 (em)", name: "title_l2_em",   widget: "string" }
-              - { label: "Founded year",      name: "stat_founded",  widget: "string" }
-              - { label: "Supplier count",    name: "stat_people",   widget: "string" }
-              - { label: "In business since", name: "stat_studios",  widget: "string" }
+              - { label: "Founded year",             name: "stat_founded",        widget: "string" }
+              - { label: "Founded year — label",     name: "stat_founded_label",  widget: "string" }
+              - { label: "Supplier count",           name: "stat_people",         widget: "string" }
+              - { label: "Supplier count — label",   name: "stat_people_label",   widget: "string" }
+              - { label: "In business since",        name: "stat_studios",        widget: "string" }
+              - { label: "In business since — label", name: "stat_studios_label", widget: "string" }
               - { label: "Body",              name: "body",          widget: "text"   }
               - { label: "Image",             name: "image",         widget: "image"  }
               - { label: "Link label",        name: "link_label",    widget: "string", default: "Contact" }
