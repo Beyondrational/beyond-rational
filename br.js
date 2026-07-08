@@ -89,20 +89,18 @@
     el.addEventListener('mouseleave', () => { inner.style.transform = ''; });
   });
 
-  /* ---------- Character reveal (word-level wrap) ---------- */
-  // Spread every reveal-line's chars across the same total window, so a
-  // short single word (e.g. "Wuud.") settles over the same duration as a
-  // long phrase (e.g. contact's "about the room.") instead of finishing
-  // almost instantly.
-  var REVEAL_SPREAD_MS = 350;
+  /* ---------- Character reveal (word-level wrap) ----------
+     Design-system spec (design-system.html, "Character reveal"): each char
+     rises 110% with a 24ms stagger; words stay together, only the line
+     wrapper masks. Keep this flat per-char delay matching that spec exactly
+     rather than reinterpreting it. */
+  var REVEAL_CHAR_DELAY_MS = 24;
 
   function splitRevealChars(el, text) {
     const wasIn = el.classList.contains('is-in');
     el.classList.remove('is-in');
     el.innerHTML = '';
     const words = text.split(' ');
-    const totalSlots = [...text].length - 1;
-    const perCharDelay = totalSlots > 0 ? REVEAL_SPREAD_MS / totalSlots : 0;
     let charIdx = 0;
     words.forEach((word, wIdx) => {
       const wWrap = document.createElement('span');
@@ -110,7 +108,7 @@
       [...word].forEach((ch) => {
         const span = document.createElement('span');
         span.className = 'bra-reveal-char';
-        span.style.transitionDelay = `${Math.round(charIdx * perCharDelay)}ms`;
+        span.style.transitionDelay = `${charIdx * REVEAL_CHAR_DELAY_MS}ms`;
         span.textContent = ch;
         wWrap.appendChild(span);
         charIdx++;

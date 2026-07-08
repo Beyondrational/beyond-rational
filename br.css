@@ -224,6 +224,11 @@
   display: grid;
   grid-template-columns: 1fr 1.6fr;
 }
+/* Compact 2-up variant (e.g. a short fact list) — a plain inline
+   grid-template-columns would beat the mobile media query below (inline
+   specificity always wins), permanently stranding it in 2 columns on
+   phones. This class-based version lets the media query win as intended. */
+.bra-spec--tight { grid-template-columns: 1fr 1fr; gap: 0 var(--bra-s-2); }
 .bra-spec-row { display: contents; }
 .bra-spec-key,
 .bra-spec-val {
@@ -2097,8 +2102,14 @@ body.bra-nav-locked { overflow: hidden; }
 }
 @media (max-width: 600px) {
   .bra-spec { grid-template-columns: 1fr; }
-  .bra-spec-key { padding-bottom: 4px; border-bottom: none; font-weight: 500; color: var(--bra-ink-2); }
-  .bra-spec-val { text-align: left; padding-top: 0; font-size: var(--bra-fs-h3); }
+  /* Key and value must share the same padding-top so their text lines up
+     at the top of their shared row — otherwise the key (small text, big
+     top padding) reads visually lower than its own value (big text, no
+     top padding), making each key look paired with the row ABOVE it. The
+     gap between one pair and the next lives entirely in padding-bottom. */
+  .bra-spec-key { padding: var(--bra-s-3) 0 4px; border-bottom: none; font-weight: 500; color: var(--bra-ink-2); }
+  .bra-spec-val { text-align: left; padding: 0 0 var(--bra-s-3); font-size: var(--bra-fs-h3); }
+  .bra-spec-row:first-child .bra-spec-key { padding-top: 0; }
 }
 
 /* ============================================================
