@@ -1392,7 +1392,7 @@ body.is-loading { overflow: hidden; }
 }
 .bra-nav__brand-logo {
   display: block;
-  height: 20px;
+  height: 40px;
   width: auto;
   /* Logo art is solid black — invert to white over the dark nav state
      instead of needing a second logo file. */
