@@ -35,7 +35,12 @@
 
     const attr = el.dataset.contentAttr;
     if (attr) {
-      el.setAttribute(attr, value);
+      // Skip no-op writes: re-setting src/href etc. to the same value it
+      // already has still resets that resource (an <img> restarts its load
+      // and fires 'load' again, dropping any one-time listener a page script
+      // attached before this ran) — same class of bug the reveal-text skip
+      // below guards against, just for attributes instead of textContent.
+      if (el.getAttribute(attr) !== String(value)) el.setAttribute(attr, value);
     } else if (el.dataset.contentHtml === 'true' && el.hasAttribute('data-reveal') && window.braSplitRevealText) {
       // Reveal-lines strip tags on split anyway (char-by-char), so just
       // animate the plain text rather than skipping the reveal entirely.

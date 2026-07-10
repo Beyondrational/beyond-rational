@@ -154,9 +154,11 @@
   .deck__panel.is-active .deck__cta  { animation: deck-up 640ms var(--bra-ease) 380ms both; }
   @keyframes deck-up { to { opacity: 1; transform: none; } }
 
-  /* Image: wipe in from the right + settle */
+  /* Image: wipe in from the right + settle. Gated on .is-loaded (added by JS
+     once the image has actually finished loading) so the panel never wipes
+     open onto an empty frame while the photo is still downloading. */
   .deck__visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .deck__panel.is-active .deck__visual img { animation: deck-img 1000ms var(--bra-ease) both; }
+  .deck__panel.is-active .deck__visual-inner.is-loaded img { animation: deck-img 1000ms var(--bra-ease) both; }
   @keyframes deck-img {
     from { clip-path: inset(0 0 0 100%); transform: scale(1.09); }
     to   { clip-path: inset(0 0 0 0);    transform: scale(1); }
@@ -275,7 +277,7 @@
           <a href="product-aisti.html" class="bra-cta deck__cta">View product</a>
         </div>
         <a href="product-aisti.html" class="deck__visual" aria-label="Aisti Aalto">
-          <span class="deck__visual-inner"><img src="assets/aisti-026.jpg" data-content="items.0.image" data-content-attr="src" alt="Aisti Aalto acoustic tile in a daylit interior" loading="lazy"></span>
+          <span class="deck__visual-inner"><img src="assets/aisti-026.jpg" data-content="items.0.image" data-content-attr="src" alt="Aisti Aalto acoustic tile in a daylit interior"></span>
         </a>
       </article>
 
@@ -290,7 +292,7 @@
           <a href="product-wuud.html" class="bra-cta deck__cta">View product</a>
         </div>
         <a href="product-wuud.html" class="deck__visual" aria-label="Wuud">
-          <span class="deck__visual-inner"><img src="assets/aisti-042.jpg" data-content="items.1.image" data-content-attr="src" alt="Wuud embossed wooden cladding" loading="lazy"></span>
+          <span class="deck__visual-inner"><img src="assets/aisti-042.jpg" data-content="items.1.image" data-content-attr="src" alt="Wuud embossed wooden cladding"></span>
         </a>
       </article>
 
@@ -305,7 +307,7 @@
           <a href="product-sappa.html" class="bra-cta deck__cta">View product</a>
         </div>
         <a href="product-sappa.html" class="deck__visual" aria-label="Sappa">
-          <span class="deck__visual-inner"><img src="assets/aisti-035.jpg" data-content="items.2.image" data-content-attr="src" alt="Sappa material" loading="lazy"></span>
+          <span class="deck__visual-inner"><img src="assets/aisti-035.jpg" data-content="items.2.image" data-content-attr="src" alt="Sappa material"></span>
         </a>
       </article>
 
@@ -320,7 +322,7 @@
           <a href="product-mogu.html" class="bra-cta deck__cta">View product</a>
         </div>
         <a href="product-mogu.html" class="deck__visual" aria-label="Mogu">
-          <span class="deck__visual-inner"><img src="assets/aisti-025.jpg" data-content="items.3.image" data-content-attr="src" alt="Mogu material" loading="lazy"></span>
+          <span class="deck__visual-inner"><img src="assets/aisti-025.jpg" data-content="items.3.image" data-content-attr="src" alt="Mogu material"></span>
         </a>
       </article>
 
@@ -378,7 +380,7 @@
 </footer>
 
 <script src="br.js?v=28" defer></script>
-<script src="br-content.js?v=23" defer></script>
+<script src="br-content.js?v=24" defer></script>
 <script>
 /* Product deck — pin + scroll-flip through the range (native scroll, class-driven) */
 (function () {
@@ -411,8 +413,24 @@
   };
   var splitAll = function () { panels.forEach(function (p) { splitName(p.querySelector('.deck__name')); }); };
 
+  // Mark each panel's image ready the moment it's actually loaded, so the
+  // wipe-in animation (gated on .is-loaded in CSS, see the deck-img rule
+  // above) never plays against an empty frame — it fires once is-active
+  // AND is-loaded are both true, whichever settles second.
+  var markLoaded = function (visual) { if (visual) visual.classList.add('is-loaded'); };
+  panels.forEach(function (p) {
+    var visual = p.querySelector('.deck__visual-inner');
+    var img = visual && visual.querySelector('img');
+    if (!img) return;
+    if (img.complete && img.naturalWidth) { markLoaded(visual); return; }
+    img.addEventListener('load', function () { markLoaded(visual); }, { once: true });
+  });
+
+  var isPinned = function () { return window.matchMedia('(min-width: 821px)').matches; };
+
   var current = -1;
   var update = function () {
+    if (!isPinned()) return; // mobile uses its own one-shot reveal below, not scroll-fraction flip
     var total = deck.offsetHeight - window.innerHeight;
     var top = deck.getBoundingClientRect().top;
     var scrolled = Math.min(Math.max(-top, 0), Math.max(total, 1));
@@ -432,6 +450,35 @@
     if (bar) bar.style.transform = 'scaleX(' + ((idx + 1) / n) + ')';
   };
 
+  // Mobile: no pin, no scroll-fraction flip — each panel reveals once, the
+  // first time it scrolls into view, and stays revealed. Without this, the
+  // same scroll math used for the desktop flip would toggle is-active off
+  // and back on every time a panel scrolls out of and back into range,
+  // replaying its whole entrance animation each time you scroll up.
+  var mobileIO = null;
+  var startMobileReveal = function () {
+    if (mobileIO) return;
+    mobileIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('is-active'); mobileIO.unobserve(e.target); }
+      });
+    }, { threshold: 0.35 });
+    panels.forEach(function (p) { mobileIO.observe(p); });
+  };
+  var stopMobileReveal = function () {
+    if (mobileIO) { mobileIO.disconnect(); mobileIO = null; }
+  };
+
+  var applyMode = function () {
+    if (isPinned()) {
+      stopMobileReveal();
+      current = -1;
+      update();
+    } else {
+      startMobileReveal();
+    }
+  };
+
   var go = function (i) {
     var total = deck.offsetHeight - window.innerHeight;
     var deckTop = deck.getBoundingClientRect().top + window.pageYOffset;
@@ -444,9 +491,9 @@
   setHeight();
   splitAll();
   window.addEventListener('scroll', update, { passive: true });
-  window.addEventListener('resize', function () { setHeight(); update(); });
-  document.addEventListener('br-content-ready', function () { setHeight(); splitAll(); update(); });
-  update();
+  window.addEventListener('resize', function () { setHeight(); applyMode(); });
+  document.addEventListener('br-content-ready', function () { setHeight(); splitAll(); applyMode(); });
+  applyMode();
 })();
 </script>
 </body>
