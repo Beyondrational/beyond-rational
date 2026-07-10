@@ -45,6 +45,7 @@
       setTimeout(() => {
         loader.classList.add('is-done');
         document.body.classList.remove('is-loading');
+        document.dispatchEvent(new CustomEvent('br-loader-done'));
         // Remove from DOM after slide-up finishes so it doesn't block hit-testing
         setTimeout(() => loader.remove(), 1300);
       }, dismissAt);
@@ -145,12 +146,37 @@
     document.querySelectorAll('[data-reveal]').forEach((el) => {
       splitRevealChars(el, el.textContent || '');
     });
-    const revealIO = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) { e.target.classList.add('is-in'); revealIO.unobserve(e.target); }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('[data-reveal]').forEach((el) => revealIO.observe(el));
+    // Above-the-fold headers sit in the viewport from the first frame, so
+    // the IntersectionObserver below fires almost immediately. If that
+    // happens while the page loader curtain is still up, or while a
+    // cross-document view transition is still animating the incoming
+    // page, the char reveal plays out hidden/underneath and then the
+    // header just pops in fully revealed once it becomes visible — read
+    // as the reveal firing twice. Hold off starting the observer until
+    // both are out of the way so headers reveal exactly once, visibly,
+    // same as the design-system reference (which has neither in play).
+    const revealGate = Promise.race([
+      Promise.all([
+        (window.navigation && window.navigation.transition)
+          ? window.navigation.transition.finished.catch(() => {})
+          : Promise.resolve(),
+        (loader && document.body.classList.contains('is-loading'))
+          ? new Promise((resolve) => document.addEventListener('br-loader-done', resolve, { once: true }))
+          : Promise.resolve(),
+      ]),
+      // Safety net: never let a stuck/never-settling transition promise
+      // permanently withhold the reveal — 2.5s comfortably outlasts the
+      // loader (max ~1.8s) and the page-transition (550ms) in the normal case.
+      new Promise((resolve) => setTimeout(resolve, 2500)),
+    ]);
+    revealGate.then(() => {
+      const revealIO = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { e.target.classList.add('is-in'); revealIO.unobserve(e.target); }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('[data-reveal]').forEach((el) => revealIO.observe(el));
+    });
   } else {
     document.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-in'));
   }
