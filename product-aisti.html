@@ -115,6 +115,33 @@
   </div>
 </section>
 
+<!-- ===== Edge types ===== -->
+<section class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);" data-content="edge_types.eyebrow">Formats</p>
+  <div class="bra-grid-2" style="align-items: end; margin-bottom: var(--bra-s-4);">
+    <h2 class="bra-h2">
+      <span class="bra-reveal-line" data-reveal data-content="edge_types.title">Explore our edge types</span>
+    </h2>
+    <p class="bra-body" style="color: var(--bra-ink-2); max-width: 44ch;" data-content="edge_types.body">
+      Aisti Aalto tiles are available in three edge profiles — A, B, and E — each offering a distinct aesthetic and installation method to suit your project.
+    </p>
+  </div>
+
+  <div class="bra-cardset bra-cardset--overlay" data-content-each="edge_types.items">
+    <template>
+      <article class="bra-cardset__card">
+        <figure class="bra-cardset__media">
+          <img data-each="image" data-each-attr="src" alt="Aisti edge profile" loading="lazy">
+        </figure>
+        <div class="bra-cardset__content">
+          <p class="bra-caption bra-cardset__eyebrow" data-each="method"></p>
+          <h3 class="bra-cardset__title" data-each="name"></h3>
+        </div>
+      </article>
+    </template>
+  </div>
+</section>
+
 <!-- ===== Spec sheet ===== -->
 <section id="spec" class="bra-surface-stone">
   <div class="bra-container bra-section">

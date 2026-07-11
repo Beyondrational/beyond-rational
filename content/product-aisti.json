@@ -120,6 +120,28 @@
       }
     ]
   },
+  "edge_types": {
+    "eyebrow": "Formats",
+    "title": "Explore our edge types",
+    "body": "Aisti Aalto tiles are available in three edge profiles — A, B, and E — each offering a distinct aesthetic and installation method to suit your project.",
+    "items": [
+      {
+        "image": "assets/aisti-edge-a.webp",
+        "name": "Edge A",
+        "method": "In T-grid"
+      },
+      {
+        "image": "assets/aisti-edge-b.webp",
+        "name": "Edge B",
+        "method": "Direct mount"
+      },
+      {
+        "image": "assets/aisti-edge-e.webp",
+        "name": "Edge E",
+        "method": "In T-grid"
+      }
+    ]
+  },
   "technology": {
     "section_label": "The technology",
     "title_l1": "Foam-formed,",

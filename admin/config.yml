@@ -498,6 +498,22 @@ collections:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Meta",  name: "meta",  widget: "string" }
 
+          - label: "Edge types"
+            name: "edge_types"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title",   name: "title",   widget: "string" }
+              - { label: "Body",    name: "body",    widget: "text"   }
+              - label: "Edge profiles"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: "Image",  name: "image",  widget: "image"  }
+                  - { label: "Name",   name: "name",   widget: "string" }
+                  - { label: "Installation method", name: "method", widget: "string" }
+
           - label: "Spec sheet"
             name: "spec"
             widget: "object"
