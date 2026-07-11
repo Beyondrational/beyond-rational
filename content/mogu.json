@@ -1,12 +1,51 @@
 {
   "hero": {
-    "eyebrow": "Product · In development",
+    "eyebrow": "Product · Mycelium acoustic panels",
     "title": "Mogu.",
-    "lede": "A new acoustic material joining the Beyond Rational range. This page is a placeholder — the full presentation, imagery, and specifications are on their way.",
+    "lede": "Soft, velvety acoustic panels grown from mycelium and upcycled textile residue. A 3D-shaped surface engineered to maximise absorption, brought to Denmark by Beyond Rational.",
     "bg_image": "assets/aisti-025.jpg"
   },
-  "spec_title_l1": "Details",
-  "spec_title_l2": "coming soon.",
+  "hero_note": "Surfaces shown are an indicative rendering of the finish range. Final samples and the full colour range on request.",
+  "finishes": {
+    "white": { "name": "Natural white" },
+    "sand": { "name": "Sand" },
+    "charcoal": { "name": "Charcoal" }
+  },
+  "idea": {
+    "eyebrow": "The idea",
+    "title_l1": "Grown, not",
+    "title_l2": "machined.",
+    "points": [
+      {
+        "num": "01",
+        "title": "Mycelium, not foam",
+        "body": "Panels are grown from mycelium combined with upcycled textile residue — a soft, foam-like material that reaches its final shape through biological growth, not chemical processing."
+      },
+      {
+        "num": "02",
+        "title": "Shaped for absorption",
+        "body": "A velvety, three-dimensional surface is engineered specifically to absorb the frequencies of speech — tuned for offices, meeting rooms and homes alike."
+      },
+      {
+        "num": "03",
+        "title": "Circular by design",
+        "body": "VOC-free and 100% circular, with a screw-less fixing system for easy mounting and removal. Naturally white by default, with a wider colour range available."
+      }
+    ]
+  },
+  "spec": {
+    "eyebrow": "The spec",
+    "title_l1": "Soft surface,",
+    "title_l2": "serious absorption.",
+    "rows": [
+      { "key": "Core", "value": "Mycelium and upcycled textile residue" },
+      { "key": "Acoustic focus", "value": "Tuned to the frequencies of speech" },
+      { "key": "Fire", "value": "Fire-rated core (class on request)" },
+      { "key": "Moisture", "value": "Moisture-proof" },
+      { "key": "Formats", "value": "—" },
+      { "key": "End of life", "value": "100% circular, VOC-free" }
+    ]
+  },
   "gallery_head": {
     "eyebrow": "Gallery",
     "title_l1": "Mogu,",

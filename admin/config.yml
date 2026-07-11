@@ -857,8 +857,38 @@ collections:
               - { label: "Title",   name: "title",   widget: "string" }
               - { label: "Lede",    name: "lede",    widget: "text"   }
               - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
-          - { label: "Spec title line 1", name: "spec_title_l1", widget: "string" }
-          - { label: "Spec title line 2", name: "spec_title_l2", widget: "string" }
+          - { label: "Hero panel note (below the colour swatches)", name: "hero_note", widget: "text" }
+          - label: "Finishes (hero panel swatches)"
+            name: "finishes"
+            widget: "object"
+            fields:
+              - label: "Natural white"
+                name: "white"
+                widget: "object"
+                fields: [ { label: "Name", name: "name", widget: "string" } ]
+              - label: "Sand"
+                name: "sand"
+                widget: "object"
+                fields: [ { label: "Name", name: "name", widget: "string" } ]
+              - label: "Charcoal"
+                name: "charcoal"
+                widget: "object"
+                fields: [ { label: "Name", name: "name", widget: "string" } ]
+          - label: "The idea"
+            name: "idea"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",     name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - label: "Points (3)"
+                name: "points"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Number", name: "num",   widget: "string" }
+                  - { label: "Title",  name: "title", widget: "string" }
+                  - { label: "Body",   name: "body",  widget: "text"   }
           - label: "Gallery heading"
             name: "gallery_head"
             widget: "object"
@@ -876,6 +906,20 @@ collections:
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Title", name: "title", widget: "string", required: false }
               - { label: "Meta",  name: "meta",  widget: "string", required: false }
+          - label: "Spec sheet"
+            name: "spec"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",     name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - label: "Rows"
+                name: "rows"
+                widget: "list"
+                summary: "{{fields.key}}: {{fields.value}}"
+                fields:
+                  - { label: "Label", name: "key",   widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
           - label: "Closing CTA"
             name: "cta"
             widget: "object"
@@ -900,8 +944,38 @@ collections:
               - { label: "Title",   name: "title",   widget: "string" }
               - { label: "Lede",    name: "lede",    widget: "text"   }
               - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
-          - { label: "Spec title line 1", name: "spec_title_l1", widget: "string" }
-          - { label: "Spec title line 2", name: "spec_title_l2", widget: "string" }
+          - { label: "Hero panel note (below the finish swatches)", name: "hero_note", widget: "text" }
+          - label: "Finishes (hero panel swatches)"
+            name: "finishes"
+            widget: "object"
+            fields:
+              - label: "Natural"
+                name: "natural"
+                widget: "object"
+                fields: [ { label: "Name", name: "name", widget: "string" } ]
+              - label: "Chalk"
+                name: "chalk"
+                widget: "object"
+                fields: [ { label: "Name", name: "name", widget: "string" } ]
+              - label: "Charcoal"
+                name: "charcoal"
+                widget: "object"
+                fields: [ { label: "Name", name: "name", widget: "string" } ]
+          - label: "The idea"
+            name: "idea"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",     name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - label: "Points (3)"
+                name: "points"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Number", name: "num",   widget: "string" }
+                  - { label: "Title",  name: "title", widget: "string" }
+                  - { label: "Body",   name: "body",  widget: "text"   }
           - label: "Gallery heading"
             name: "gallery_head"
             widget: "object"
@@ -919,6 +993,20 @@ collections:
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Title", name: "title", widget: "string", required: false }
               - { label: "Meta",  name: "meta",  widget: "string", required: false }
+          - label: "Spec sheet"
+            name: "spec"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",     name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - label: "Rows"
+                name: "rows"
+                widget: "list"
+                summary: "{{fields.key}}: {{fields.value}}"
+                fields:
+                  - { label: "Label", name: "key",   widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
           - label: "Closing CTA"
             name: "cta"
             widget: "object"

@@ -7,26 +7,18 @@
 <meta name="description" content="Sappa — a new acoustic material in the Beyond Rational range. In development; full presentation coming soon.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=29">
+<link rel="stylesheet" href="br.css?v=30">
 <style>
+  /* ===== Sappa hero panel — hemp-fibre finishes, on the shared .prod-hero-panel structure ===== */
   .prod-hero-panel {
-    width: 100%; aspect-ratio: 16 / 7; border: 2px solid var(--bra-ink);
-    position: relative; overflow: hidden;
-    background:
-      radial-gradient(ellipse 60% 60% at 26% 20%, #9fb08a 0%, transparent 60%),
-      linear-gradient(140deg, #8c9a73 0%, #59624a 55%, #353c2d 100%);
+    --p-hi: #e3d2ae; --p-mid: #c2a877; --p-lo: #9c8054; --p-ink: #3a2d1a;
   }
-  .prod-hero-panel__grain {
-    position: absolute; inset: 0;
-    background: repeating-linear-gradient(90deg, transparent 0 12px, rgba(0,0,0,0.08) 12px 13px);
-    mix-blend-mode: overlay; opacity: 0.5;
+  .prod-hero-panel__texture {
+    background: repeating-linear-gradient(96deg, transparent 0 5px, rgba(0,0,0,0.05) 5px 6px);
+    mix-blend-mode: multiply; opacity: 0.6;
   }
-  .prod-hero-panel__label {
-    position: absolute; bottom: var(--bra-s-3); left: var(--bra-s-3);
-    font-family: var(--bra-font); font-weight: 600;
-    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
-    color: rgba(244,242,237,0.85);
-  }
+  .prod-hero-panel.is-chalk    { --p-hi:#f2ede2; --p-mid:#e2d8c4; --p-lo:#c9bb9c; --p-ink:#3a3226; }
+  .prod-hero-panel.is-charcoal { --p-hi:#4a4642; --p-mid:#2c2926; --p-lo:#171514; --p-ink:#f4f2ed; }
 </style>
 </head>
 <body class="bra" data-page="sappa">
@@ -66,7 +58,7 @@
   <div class="bra-container home-hero__inner">
     <header class="home-hero__top">
       <a href="products.html" class="bra-caption home-hero__back">← Products</a>
-      <span class="bra-caption" data-content="hero.eyebrow">Product · In development</span>
+      <span class="bra-caption" data-content="hero.eyebrow">Product · Hemp acoustic panels</span>
     </header>
 
     <div class="home-hero__center">
@@ -74,13 +66,68 @@
         <span class="bra-reveal-line" data-reveal data-content="hero.title">Sappa.</span>
       </h1>
       <p class="home-hero__sub home-reveal" data-stagger data-content="hero.lede">
-        A new acoustic material joining the Beyond Rational range. This page is a placeholder; the full presentation, imagery, and specifications are on their way.
+        Acoustic panels grown from hemp — a fast-renewing natural fibre, bound with a cement-free mineral binder. For walls and ceilings, brought to Denmark by Beyond Rational.
       </p>
     </div>
 
     <footer class="home-hero__foot">
       <span class="bra-micro">Beyond Rational · Copenhagen</span>
     </footer>
+  </div>
+</section>
+
+<!-- ===== Hero panel (interactive, finish-driven) ===== -->
+<section class="bra-container" style="padding-bottom: var(--bra-s-6);">
+  <div class="prod-stage">
+    <div class="prod-hero-panel" id="sappaPanel" data-hero-panel data-default-finish="natural" data-finish="natural">
+      <div class="prod-hero-panel__texture"></div>
+      <div class="prod-hero-panel__sheen"></div>
+      <div class="prod-hero-panel__wordmark"><span class="prod-hero-panel__mark">SAPPA</span></div>
+      <span class="prod-hero-panel__label" data-hero-panel-label>Natural</span>
+    </div>
+  </div>
+
+  <div class="prod-finishes" data-finish-group role="group" aria-label="Choose a finish">
+    <button class="prod-swatch" type="button" data-finish="natural" aria-pressed="true">
+      <span class="prod-swatch__dot" style="background: radial-gradient(circle at 35% 30%, #e3d2ae, #9c8054);"></span><span class="prod-swatch__name" data-content="finishes.natural.name">Natural</span>
+    </button>
+    <button class="prod-swatch" type="button" data-finish="chalk" aria-pressed="false">
+      <span class="prod-swatch__dot" style="background: radial-gradient(circle at 35% 30%, #f2ede2, #c9bb9c);"></span><span class="prod-swatch__name" data-content="finishes.chalk.name">Chalk</span>
+    </button>
+    <button class="prod-swatch" type="button" data-finish="charcoal" aria-pressed="false">
+      <span class="prod-swatch__dot" style="background: radial-gradient(circle at 35% 30%, #4a4642, #171514);"></span><span class="prod-swatch__name" data-content="finishes.charcoal.name">Charcoal</span>
+    </button>
+  </div>
+  <p class="bra-caption" style="margin-top: var(--bra-s-3); font-size: 11px; max-width: 60ch;" data-content="hero_note">
+    Surfaces shown are an indicative rendering of the finish range. Final samples and the full colour range on request.
+  </p>
+</section>
+
+<!-- ===== The idea — three points on ink ===== -->
+<section class="bra-surface-ink">
+  <div class="bra-container bra-section">
+    <p class="bra-caption" style="margin-bottom: var(--bra-s-3);" data-content="idea.eyebrow">The idea</p>
+    <h2 class="bra-h1" style="max-width: 20ch;">
+      <span class="bra-reveal-line" data-reveal data-content="idea.title_l1">Grown, not</span><br>
+      <span class="bra-reveal-line" data-reveal data-content="idea.title_l2">manufactured.</span>
+    </h2>
+    <div class="prod-points">
+      <div class="prod-point">
+        <div class="prod-point__num" data-content="idea.points.0.num">01</div>
+        <div class="prod-point__title" data-content="idea.points.0.title">A fast-renewing raw material</div>
+        <p class="prod-point__body" data-content="idea.points.0.body">Hemp needs little water, no pesticides, and reaches full height in months, not years — capturing atmospheric carbon roughly twice as efficiently as forestry across its growing cycle.</p>
+      </div>
+      <div class="prod-point">
+        <div class="prod-point__num" data-content="idea.points.1.num">02</div>
+        <div class="prod-point__title" data-content="idea.points.1.title">Zero-waste by construction</div>
+        <p class="prod-point__body" data-content="idea.points.1.body">The panels are pressed from stem chips — the residue left over once fibre is stripped from the plant for other industrial uses. Material that would otherwise be discarded becomes the product.</p>
+      </div>
+      <div class="prod-point">
+        <div class="prod-point__num" data-content="idea.points.2.num">03</div>
+        <div class="prod-point__title" data-content="idea.points.2.title">Cradle to cradle</div>
+        <p class="prod-point__body" data-content="idea.points.2.body">A cement-free mineral binder holds the hemp chips together, with no synthetic flame retardants added — the panel is naturally fire-resistant and recyclable at end of life.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -109,22 +156,19 @@
   </div>
 </section>
 
-<!-- ===== Skeleton spec ===== -->
+<!-- ===== Spec ===== -->
 <section id="spec" class="bra-surface-stone">
   <div class="bra-container bra-section">
-    <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">The spec</p>
+    <p class="bra-caption" style="margin-bottom: var(--bra-s-3);" data-content="spec.eyebrow">The spec</p>
     <div class="bra-grid-2">
       <h2 class="bra-h1">
-        <span class="bra-reveal-line" data-reveal data-content="spec_title_l1">Details</span><br>
-        <span class="bra-reveal-line" data-reveal data-content="spec_title_l2">coming soon.</span>
+        <span class="bra-reveal-line" data-reveal data-content="spec.title_l1">Hemp, bound</span><br>
+        <span class="bra-reveal-line" data-reveal data-content="spec.title_l2">for the room.</span>
       </h2>
-      <div class="bra-spec">
-        <div class="bra-spec-row"><div class="bra-spec-key">Core</div><div class="bra-spec-val">—</div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">Formats</div><div class="bra-spec-val">—</div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">Thickness</div><div class="bra-spec-val">—</div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">Absorption</div><div class="bra-spec-val">—</div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">Fire</div><div class="bra-spec-val">—</div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">End of life</div><div class="bra-spec-val">—</div></div>
+      <div class="bra-spec" data-content-each="spec.rows">
+        <template>
+          <div class="bra-spec-row"><div class="bra-spec-key" data-each="key"></div><div class="bra-spec-val" data-each="value"></div></div>
+        </template>
       </div>
     </div>
   </div>
@@ -194,7 +238,7 @@
   </div>
 </footer>
 
-<script src="br.js?v=28" defer></script>
+<script src="br.js?v=29" defer></script>
 <script src="br-content.js?v=24" defer></script>
 </body>
 </html>

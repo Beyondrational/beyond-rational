@@ -1,12 +1,51 @@
 {
   "hero": {
-    "eyebrow": "Product · In development",
+    "eyebrow": "Product · Hemp acoustic panels",
     "title": "Sappa.",
-    "lede": "A new acoustic material joining the Beyond Rational range. This page is a placeholder — the full presentation, imagery, and specifications are on their way.",
+    "lede": "Acoustic panels grown from hemp — a fast-renewing natural fibre, bound with a cement-free mineral binder. For walls and ceilings, brought to Denmark by Beyond Rational.",
     "bg_image": "assets/aisti-035.jpg"
   },
-  "spec_title_l1": "Details",
-  "spec_title_l2": "coming soon.",
+  "hero_note": "Surfaces shown are an indicative rendering of the finish range. Final samples and the full colour range on request.",
+  "finishes": {
+    "natural": { "name": "Natural" },
+    "chalk": { "name": "Chalk" },
+    "charcoal": { "name": "Charcoal" }
+  },
+  "idea": {
+    "eyebrow": "The idea",
+    "title_l1": "Grown, not",
+    "title_l2": "manufactured.",
+    "points": [
+      {
+        "num": "01",
+        "title": "A fast-renewing raw material",
+        "body": "Hemp needs little water, no pesticides, and reaches full height in months, not years — capturing atmospheric carbon roughly twice as efficiently as forestry across its growing cycle."
+      },
+      {
+        "num": "02",
+        "title": "Zero-waste by construction",
+        "body": "The panels are pressed from stem chips — the residue left over once fibre is stripped from the plant for other industrial uses. Material that would otherwise be discarded becomes the product."
+      },
+      {
+        "num": "03",
+        "title": "Cradle to cradle",
+        "body": "A cement-free mineral binder holds the hemp chips together, with no synthetic flame retardants added — the panel is naturally fire-resistant and recyclable at end of life."
+      }
+    ]
+  },
+  "spec": {
+    "eyebrow": "The spec",
+    "title_l1": "Hemp, bound",
+    "title_l2": "for the room.",
+    "rows": [
+      { "key": "Core", "value": "Hemp fibre, cement-free mineral binder" },
+      { "key": "Application", "value": "Interior walls and ceilings" },
+      { "key": "Fire", "value": "Naturally fire-resistant — no flame retardants added" },
+      { "key": "Formats", "value": "—" },
+      { "key": "Thickness", "value": "—" },
+      { "key": "End of life", "value": "Cradle-to-cradle, recyclable" }
+    ]
+  },
   "gallery_head": {
     "eyebrow": "Gallery",
     "title_l1": "Sappa,",

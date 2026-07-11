@@ -12,6 +12,7 @@
      data-vbars        · vertical bars rise on scroll-in
      data-tile-stage   · 3D tile cursor follow
      data-config-group · configurator option group
+     data-hero-panel   · product finish/colour selector panel (+ tilt/sheen)
    ============================================================ */
 
 (function () {
@@ -219,6 +220,60 @@
     });
   }, { threshold: 0.3 });
   document.querySelectorAll('[data-ratio], [data-vbars]').forEach((el) => fillIO.observe(el));
+
+  /* ---------- Product hero panel (finish/colour selector + tilt/sheen) ----------
+     Shared by product pages using the .prod-hero-panel / .prod-swatch markup
+     (br.css). Each panel declares its own default finish via
+     data-default-finish; clicking a swatch swaps an `is-{finish}` class,
+     which the page's own <style> block maps to CSS custom properties for
+     that material's palette. Extracted here (rather than copy-pasted per
+     page, as Wuud's earlier one-off version did) so Sappa/Mogu/future
+     product pages share one implementation. */
+  document.querySelectorAll('[data-hero-panel]').forEach((panel) => {
+    const stage = panel.closest('.prod-stage');
+    const group = panel.closest('[data-finish-group]') || document;
+    const label = group.querySelector('[data-hero-panel-label]');
+    const defaultFinish = panel.dataset.defaultFinish || '';
+
+    function setFinish(name) {
+      const btn = group.querySelector(`.prod-swatch[data-finish="${name}"]`);
+      if (!btn) return;
+      panel.className = 'prod-hero-panel' + (name === defaultFinish ? '' : ` is-${name}`);
+      panel.setAttribute('data-finish', name);
+      if (label) {
+        const code = btn.querySelector('.prod-swatch__code');
+        const nameEl = btn.querySelector('.prod-swatch__name');
+        label.textContent = (nameEl ? nameEl.textContent : '') + (code ? ' · ' + code.textContent : '');
+      }
+      group.querySelectorAll('.prod-swatch').forEach((b) => {
+        b.setAttribute('aria-pressed', String(b.getAttribute('data-finish') === name));
+      });
+    }
+
+    group.querySelectorAll('.prod-swatch').forEach((btn) => {
+      btn.addEventListener('click', () => setFinish(btn.getAttribute('data-finish')));
+    });
+    document.addEventListener('br-content-ready', () => setFinish(panel.getAttribute('data-finish') || defaultFinish));
+
+    const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (stage && fine && !reduceMotion) {
+      const MAX = 5; // degrees
+      stage.addEventListener('pointermove', (e) => {
+        const r = panel.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width;
+        const py = (e.clientY - r.top) / r.height;
+        panel.style.transform =
+          `rotateY(${((px - 0.5) * 2 * MAX).toFixed(2)}deg) rotateX(${((0.5 - py) * 2 * MAX).toFixed(2)}deg)`;
+        panel.style.setProperty('--mx', `${(px * 100).toFixed(1)}%`);
+        panel.style.setProperty('--my', `${(py * 100).toFixed(1)}%`);
+      });
+      stage.addEventListener('pointerleave', () => {
+        panel.style.transform = '';
+        panel.style.removeProperty('--mx');
+        panel.style.removeProperty('--my');
+      });
+    }
+  });
 
   /* ---------- Logo stroke-draw + cursor parallax ---------- */
   const logo = document.querySelector('.br-logo');

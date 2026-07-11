@@ -2883,3 +2883,73 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
   .project-row__meta, .project-row__year { display: none; }
 }
 .bra-matrix__yes .bra-ic, .bra-matrix__no .bra-ic { width: 20px; height: 20px; vertical-align: middle; }
+
+/* ============================================================
+   Product hero panel — interactive finish/colour selector
+   Shared by product pages that offer a swatch-driven material
+   preview (currently Sappa, Mogu). Each page supplies its own
+   palette via CSS custom properties on .is-{finish} modifier
+   classes and its own texture overlay; this block is the
+   reusable structure + swatch UI + "three points" idea section.
+   ============================================================ */
+.prod-stage { perspective: 1400px; }
+.prod-hero-panel {
+  --p-hi: #2a2a2a; --p-mid: #131313; --p-lo: #050505; --p-ink: #f4f2ed;
+  width: 100%; aspect-ratio: 16 / 7; border: 2px solid var(--bra-ink);
+  position: relative; overflow: hidden;
+  background: radial-gradient(ellipse 85% 95% at 50% 25%, var(--p-hi) 0%, var(--p-mid) 55%, var(--p-lo) 100%);
+  transition: background 0.6s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.prod-hero-panel__texture { position: absolute; inset: 0; opacity: 0.9; }
+.prod-hero-panel__sheen {
+  position: absolute; inset: -20%;
+  background: radial-gradient(circle at var(--mx, 30%) var(--my, 25%), rgba(255,255,255,0.14) 0%, transparent 38%);
+  mix-blend-mode: screen; transition: opacity 0.4s ease; pointer-events: none;
+}
+.prod-hero-panel__wordmark { position: absolute; inset: 0; display: grid; place-items: center; }
+.prod-hero-panel__mark {
+  display: inline-block; white-space: nowrap;
+  font-family: var(--bra-font); font-weight: 700;
+  font-size: clamp(48px, 11vw, 168px); letter-spacing: 0.08em;
+  color: var(--p-ink); line-height: 1; transition: color 0.6s ease;
+}
+.prod-hero-panel__label {
+  position: absolute; bottom: var(--bra-s-3); left: var(--bra-s-3);
+  font-family: var(--bra-font); font-weight: 600;
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: color-mix(in oklch, var(--p-ink) 65%, transparent); transition: color 0.6s ease;
+}
+
+.prod-finishes { display: flex; flex-wrap: wrap; gap: var(--bra-s-2); margin-top: var(--bra-s-3); align-items: center; }
+.prod-swatch {
+  appearance: none; cursor: pointer; display: inline-flex; align-items: center; gap: 10px;
+  padding: 8px 14px 8px 8px; border: 2px solid color-mix(in oklch, var(--bra-ink) 18%, transparent);
+  border-radius: 999px; background: transparent; font-family: var(--bra-font);
+  font-size: 13px; font-weight: 600; letter-spacing: 0.02em; color: var(--bra-ink);
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.2s ease;
+}
+.prod-swatch:hover { transform: translateY(-1px); border-color: color-mix(in oklch, var(--bra-ink) 45%, transparent); }
+.prod-swatch[aria-pressed="true"] { border-color: var(--bra-ink); background: color-mix(in oklch, var(--bra-ink) 6%, transparent); }
+.prod-swatch__dot { width: 20px; height: 20px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.18); flex: none; }
+
+.prod-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: var(--bra-s-3); }
+.prod-chip {
+  font-family: var(--bra-font); font-size: 13px; font-weight: 600; letter-spacing: 0.02em;
+  padding: 7px 14px; border: 2px solid color-mix(in oklch, var(--bra-on-oak) 28%, transparent);
+  border-radius: 999px; color: var(--bra-on-oak);
+}
+
+.prod-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(32px, 4vw, 72px); margin-top: var(--bra-s-5); }
+.prod-point__num {
+  font-family: var(--bra-font); font-weight: 100; font-size: 40px; letter-spacing: -0.02em;
+  color: color-mix(in oklch, var(--bra-on-oak) 45%, transparent); padding-bottom: var(--bra-s-2);
+  border-bottom: 2px solid color-mix(in oklch, var(--bra-on-oak) 25%, transparent); margin-bottom: var(--bra-s-3);
+}
+.prod-point__title { font-family: var(--bra-font); font-weight: 500; font-size: clamp(20px, 2vw, 26px); line-height: 1.05; color: var(--bra-on-oak); margin-bottom: var(--bra-s-2); }
+.prod-point__body { font-size: 15px; line-height: 1.55; color: color-mix(in oklch, var(--bra-on-oak) 78%, transparent); max-width: 34ch; }
+
+@media (max-width: 720px) {
+  .prod-points { grid-template-columns: 1fr; gap: var(--bra-s-4); }
+}

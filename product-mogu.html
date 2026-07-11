@@ -7,26 +7,18 @@
 <meta name="description" content="Mogu — a new acoustic material in the Beyond Rational range. In development; full presentation coming soon.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=29">
+<link rel="stylesheet" href="br.css?v=30">
 <style>
+  /* ===== Mogu hero panel — mycelium felt finishes, on the shared .prod-hero-panel structure ===== */
   .prod-hero-panel {
-    width: 100%; aspect-ratio: 16 / 7; border: 2px solid var(--bra-ink);
-    position: relative; overflow: hidden;
-    background:
-      radial-gradient(ellipse 60% 60% at 26% 20%, #c8b6a4 0%, transparent 60%),
-      linear-gradient(140deg, #b3a08c 0%, #7a6a59 55%, #4a4038 100%);
+    --p-hi: #f5f1e8; --p-mid: #e6ded0; --p-lo: #cfc4ac; --p-ink: #3a352c;
   }
-  .prod-hero-panel__grain {
-    position: absolute; inset: 0;
-    background: repeating-linear-gradient(90deg, transparent 0 12px, rgba(0,0,0,0.08) 12px 13px);
-    mix-blend-mode: overlay; opacity: 0.5;
+  .prod-hero-panel__texture {
+    opacity: 0.16; mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
   }
-  .prod-hero-panel__label {
-    position: absolute; bottom: var(--bra-s-3); left: var(--bra-s-3);
-    font-family: var(--bra-font); font-weight: 600;
-    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
-    color: rgba(244,242,237,0.85);
-  }
+  .prod-hero-panel.is-sand     { --p-hi:#d9c3a0; --p-mid:#b89a6e; --p-lo:#8f7248; --p-ink:#2e2415; }
+  .prod-hero-panel.is-charcoal { --p-hi:#4a4642; --p-mid:#2c2926; --p-lo:#171514; --p-ink:#f4f2ed; }
 </style>
 </head>
 <body class="bra" data-page="mogu">
@@ -66,7 +58,7 @@
   <div class="bra-container home-hero__inner">
     <header class="home-hero__top">
       <a href="products.html" class="bra-caption home-hero__back">← Products</a>
-      <span class="bra-caption" data-content="hero.eyebrow">Product · In development</span>
+      <span class="bra-caption" data-content="hero.eyebrow">Product · Mycelium acoustic panels</span>
     </header>
 
     <div class="home-hero__center">
@@ -74,13 +66,68 @@
         <span class="bra-reveal-line" data-reveal data-content="hero.title">Mogu.</span>
       </h1>
       <p class="home-hero__sub home-reveal" data-stagger data-content="hero.lede">
-        A new acoustic material joining the Beyond Rational range. This page is a placeholder; the full presentation, imagery, and specifications are on their way.
+        Soft, velvety acoustic panels grown from mycelium and upcycled textile residue. A 3D-shaped surface engineered to maximise absorption, brought to Denmark by Beyond Rational.
       </p>
     </div>
 
     <footer class="home-hero__foot">
       <span class="bra-micro">Beyond Rational · Copenhagen</span>
     </footer>
+  </div>
+</section>
+
+<!-- ===== Hero panel (interactive, finish-driven) ===== -->
+<section class="bra-container" style="padding-bottom: var(--bra-s-6);">
+  <div class="prod-stage">
+    <div class="prod-hero-panel" id="moguPanel" data-hero-panel data-default-finish="white" data-finish="white">
+      <div class="prod-hero-panel__texture"></div>
+      <div class="prod-hero-panel__sheen"></div>
+      <div class="prod-hero-panel__wordmark"><span class="prod-hero-panel__mark">MOGU</span></div>
+      <span class="prod-hero-panel__label" data-hero-panel-label>Natural white</span>
+    </div>
+  </div>
+
+  <div class="prod-finishes" data-finish-group role="group" aria-label="Choose a colour">
+    <button class="prod-swatch" type="button" data-finish="white" aria-pressed="true">
+      <span class="prod-swatch__dot" style="background: radial-gradient(circle at 35% 30%, #f5f1e8, #cfc4ac);"></span><span class="prod-swatch__name" data-content="finishes.white.name">Natural white</span>
+    </button>
+    <button class="prod-swatch" type="button" data-finish="sand" aria-pressed="false">
+      <span class="prod-swatch__dot" style="background: radial-gradient(circle at 35% 30%, #d9c3a0, #8f7248);"></span><span class="prod-swatch__name" data-content="finishes.sand.name">Sand</span>
+    </button>
+    <button class="prod-swatch" type="button" data-finish="charcoal" aria-pressed="false">
+      <span class="prod-swatch__dot" style="background: radial-gradient(circle at 35% 30%, #4a4642, #171514);"></span><span class="prod-swatch__name" data-content="finishes.charcoal.name">Charcoal</span>
+    </button>
+  </div>
+  <p class="bra-caption" style="margin-top: var(--bra-s-3); font-size: 11px; max-width: 60ch;" data-content="hero_note">
+    Surfaces shown are an indicative rendering of the finish range. Final samples and the full colour range on request.
+  </p>
+</section>
+
+<!-- ===== The idea — three points on ink ===== -->
+<section class="bra-surface-ink">
+  <div class="bra-container bra-section">
+    <p class="bra-caption" style="margin-bottom: var(--bra-s-3);" data-content="idea.eyebrow">The idea</p>
+    <h2 class="bra-h1" style="max-width: 20ch;">
+      <span class="bra-reveal-line" data-reveal data-content="idea.title_l1">Grown, not</span><br>
+      <span class="bra-reveal-line" data-reveal data-content="idea.title_l2">machined.</span>
+    </h2>
+    <div class="prod-points">
+      <div class="prod-point">
+        <div class="prod-point__num" data-content="idea.points.0.num">01</div>
+        <div class="prod-point__title" data-content="idea.points.0.title">Mycelium, not foam</div>
+        <p class="prod-point__body" data-content="idea.points.0.body">Panels are grown from mycelium combined with upcycled textile residue — a soft, foam-like material that reaches its final shape through biological growth, not chemical processing.</p>
+      </div>
+      <div class="prod-point">
+        <div class="prod-point__num" data-content="idea.points.1.num">02</div>
+        <div class="prod-point__title" data-content="idea.points.1.title">Shaped for absorption</div>
+        <p class="prod-point__body" data-content="idea.points.1.body">A velvety, three-dimensional surface is engineered specifically to absorb the frequencies of speech — tuned for offices, meeting rooms and homes alike.</p>
+      </div>
+      <div class="prod-point">
+        <div class="prod-point__num" data-content="idea.points.2.num">03</div>
+        <div class="prod-point__title" data-content="idea.points.2.title">Circular by design</div>
+        <p class="prod-point__body" data-content="idea.points.2.body">VOC-free and 100% circular, with a screw-less fixing system for easy mounting and removal. Naturally white by default, with a wider colour range available.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -109,22 +156,19 @@
   </div>
 </section>
 
-<!-- ===== Skeleton spec ===== -->
+<!-- ===== Spec ===== -->
 <section id="spec" class="bra-surface-stone">
   <div class="bra-container bra-section">
-    <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">The spec</p>
+    <p class="bra-caption" style="margin-bottom: var(--bra-s-3);" data-content="spec.eyebrow">The spec</p>
     <div class="bra-grid-2">
       <h2 class="bra-h1">
-        <span class="bra-reveal-line" data-reveal data-content="spec_title_l1">Details</span><br>
-        <span class="bra-reveal-line" data-reveal data-content="spec_title_l2">coming soon.</span>
+        <span class="bra-reveal-line" data-reveal data-content="spec.title_l1">Soft surface,</span><br>
+        <span class="bra-reveal-line" data-reveal data-content="spec.title_l2">serious absorption.</span>
       </h2>
-      <div class="bra-spec">
-        <div class="bra-spec-row"><div class="bra-spec-key">Core</div><div class="bra-spec-val">—</div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">Formats</div><div class="bra-spec-val">—</div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">Thickness</div><div class="bra-spec-val">—</div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">Absorption</div><div class="bra-spec-val">—</div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">Fire</div><div class="bra-spec-val">—</div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">End of life</div><div class="bra-spec-val">—</div></div>
+      <div class="bra-spec" data-content-each="spec.rows">
+        <template>
+          <div class="bra-spec-row"><div class="bra-spec-key" data-each="key"></div><div class="bra-spec-val" data-each="value"></div></div>
+        </template>
       </div>
     </div>
   </div>
@@ -194,7 +238,7 @@
   </div>
 </footer>
 
-<script src="br.js?v=28" defer></script>
+<script src="br.js?v=29" defer></script>
 <script src="br-content.js?v=24" defer></script>
 </body>
 </html>
