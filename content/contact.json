@@ -27,7 +27,7 @@
    "name_label": "Full name *",
    "email_label": "Email *",
    "phone_label": "Phone",
-   "company_label": "Studio / company *",
+   "company_label": "Office / company *",
    "finish_label": "Preferred colour (optional)",
    "finish_placeholder": "e.g. white, dark blue — or leave blank",
    "address_label": "Delivery address *",
@@ -45,7 +45,7 @@
     { "value": "Project manager" },
     { "value": "Acoustic consultant" }
    ],
-   "company_label": "Studio / company *",
+   "company_label": "Office / company *",
    "project_label": "Project name *",
    "type_label": "Project type",
    "type_options": [
@@ -65,7 +65,7 @@
   "form_info": {
    "name_label": "Full name *",
    "email_label": "Email *",
-   "company_label": "Studio / outlet",
+   "company_label": "Office / outlet",
    "kind_label": "What do you need?",
    "kind_options": [
     { "value": "Technical paper" },

@@ -17,7 +17,7 @@
     contact_name: 'Full name',
     email_from: 'Email',
     phone: 'Phone',
-    partner_name: 'Studio / company',
+    partner_name: 'Office / company',
     finish: 'Preferred colour',
     description: 'Message',
     function: 'Role',
