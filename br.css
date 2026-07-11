@@ -509,7 +509,17 @@
      cuts them, while the negative margin keeps line spacing unchanged. */
   padding-bottom: 0.18em;
   margin-bottom: -0.18em;
+  /* Hidden from first paint, not just once br.js gets around to it — without
+     this, the raw un-split text renders normally for a frame (defer scripts
+     run after parsing, not before first paint), then vanishes when JS builds
+     the char spans, then reveals again once the observer fires: a visible
+     flash-then-hide "flick" ahead of the real animation. No transition here
+     on purpose — this is a hard show/hide gate, not part of the animation;
+     br.js flips it the instant the char spans exist (or immediately for
+     prefers-reduced-motion, which skips the char-split entirely). */
+  opacity: 0;
 }
+.bra-reveal-line.is-in { opacity: 1; }
 .bra-reveal-word {
   display: inline-block;
   white-space: nowrap;
