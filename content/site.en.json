@@ -1,0 +1,43 @@
+{
+ "logo": "assets/logo.svg",
+ "nav": {
+  "products": "Products",
+  "projects": "Projects",
+  "contact": "Contact"
+ },
+ "footer": {
+  "brand_tagline": "Conscious acoustics. Official distributor of Aisti® in Denmark.",
+  "email": "hello@beyondrational.com",
+  "address": "Firskovvej 36, 2800 Kongens Lyngby",
+  "copyright": "© 2026 Beyond Rational ApS",
+  "product_heading": "Product",
+  "aisti_label": "Aisti® Acoustic Tile",
+  "office_heading": "Office",
+  "projects_label": "Projects",
+  "contact_heading": "Contact",
+  "privacy_label": "Privatlivspolitik",
+  "terms_label": "Betalingsbetingelser",
+  "design_system_label": "Design system",
+  "design_system_version": "B_R Design System · v1.0"
+ },
+ "loader": {
+  "brand": "Beyond Rational",
+  "loading": "Loading"
+ },
+ "cookie": {
+  "text": "We use minimal cookies to understand what works. See our <a href=\"privatlivspolitik.html\">privacy policy</a>.",
+  "decline": "Decline",
+  "accept": "Accept"
+ },
+ "misc": {
+  "scroll_hint": "Scroll ↓",
+  "back_home": "← Home",
+  "back_products": "← Products",
+  "select_placeholder": "Select",
+  "subscribe": "Subscribe",
+  "email_label": "Email",
+  "phone_label": "Phone",
+  "office_label": "Office",
+  "hours_label": "Hours"
+ }
+}

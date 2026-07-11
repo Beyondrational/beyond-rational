@@ -1,4 +1,5 @@
 {
+  "loader_tag": "Mogu / 2026",
   "hero": {
     "eyebrow": "Product · Mycelium acoustic panels",
     "title": "Mogu.",
@@ -7,9 +8,15 @@
   },
   "hero_note": "Surfaces shown are an indicative rendering of the finish range. Final samples and the full colour range on request.",
   "finishes": {
-    "white": { "name": "Natural white" },
-    "sand": { "name": "Sand" },
-    "charcoal": { "name": "Charcoal" }
+    "white": {
+      "name": "Natural white"
+    },
+    "sand": {
+      "name": "Sand"
+    },
+    "charcoal": {
+      "name": "Charcoal"
+    }
   },
   "idea": {
     "eyebrow": "The idea",
@@ -38,12 +45,30 @@
     "title_l1": "Soft surface,",
     "title_l2": "serious absorption.",
     "rows": [
-      { "key": "Core", "value": "Mycelium and upcycled textile residue" },
-      { "key": "Acoustic focus", "value": "Tuned to the frequencies of speech" },
-      { "key": "Fire", "value": "Fire-rated core (class on request)" },
-      { "key": "Moisture", "value": "Moisture-proof" },
-      { "key": "Formats", "value": "—" },
-      { "key": "End of life", "value": "100% circular, VOC-free" }
+      {
+        "key": "Core",
+        "value": "Mycelium and upcycled textile residue"
+      },
+      {
+        "key": "Acoustic focus",
+        "value": "Tuned to the frequencies of speech"
+      },
+      {
+        "key": "Fire",
+        "value": "Fire-rated core (class on request)"
+      },
+      {
+        "key": "Moisture",
+        "value": "Moisture-proof"
+      },
+      {
+        "key": "Formats",
+        "value": "—"
+      },
+      {
+        "key": "End of life",
+        "value": "100% circular, VOC-free"
+      }
     ]
   },
   "gallery_head": {

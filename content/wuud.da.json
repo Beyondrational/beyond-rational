@@ -1,0 +1,163 @@
+{
+  "loader_tag": "Wuud / 2026",
+  "hero": {
+    "eyebrow": "Produkt · Præget træbeklædning",
+    "title": "Wuud.",
+    "lede": "Præget træbeklædning til interiør- og eksteriørarkitektur. Ægte træ — birk, el, asp, fyr — modificeret til at bære dyb relief, herefter finish natur, transparent eller malet. Udviklet i Finland; bragt til Danmark af Beyond Rational.",
+    "bg_image": "assets/wuud_helsinki-design-week-2023_aukusti-heinonen_05.jpg"
+  },
+  "hero_note": "Overfladerne vist er en vejledende gengivelse af finish-udvalget. Endelige vareprøver og mønstre efter aftale.",
+  "finishes": {
+    "graphite": {
+      "name": "Malet grafit",
+      "code": "W03"
+    },
+    "birch": {
+      "name": "Natur birk",
+      "code": "W04"
+    },
+    "oak": {
+      "name": "Transparent eg",
+      "code": "W02"
+    },
+    "smoked": {
+      "name": "Bejdset røget",
+      "code": "W01"
+    }
+  },
+  "idea": {
+    "eyebrow": "Idéen",
+    "title_l1": "Træ, bearbejdet",
+    "title_l2": "til relief.",
+    "points": [
+      {
+        "num": "01",
+        "title": "Præget, ikke printet",
+        "body": "En ny træmodificerende proces presser mønster ind i overfladen af ægte tømmer — ægte dybde, der fanger lys og kaster skygge. Standardmønstre eller helt custom."
+      },
+      {
+        "num": "02",
+        "title": "Ude og inde",
+        "body": "Den samme modifikation, der former reliefet, vejrbestandiggør træet og tilføjer brandhæmning — så ét pladesprog går fra indervægge til bygningsfacader."
+      },
+      {
+        "num": "03",
+        "title": "Fra finsk forskning",
+        "body": "Udviklet ud fra et Business Finland & Aalto University-forskningsprogram. Bevidst, samtidig beklædning — nu tilgængelig gennem Beyond Rational i Danmark."
+      }
+    ],
+    "species_label": "Træsorter",
+    "species": [
+      "Birk",
+      "El",
+      "Asp",
+      "Fyr"
+    ]
+  },
+  "gallery_head": {
+    "eyebrow": "Galleri",
+    "title_l1": "Wuud,",
+    "title_l2": "i praksis.",
+    "body": "Finish, mønstre og plader in situ. Billeder styres i CMS'et — tilføj eller udskift dem på /admin."
+  },
+  "gallery": [
+    {
+      "image": "assets/wuud-sample-graphite.svg",
+      "title": "Malet grafit",
+      "meta": "Finish-prøve"
+    },
+    {
+      "image": "assets/wuud-sample-birch.svg",
+      "title": "Natur birk",
+      "meta": "Finish-prøve"
+    },
+    {
+      "image": "assets/wuud-sample-oak.svg",
+      "title": "Transparent eg",
+      "meta": "Finish-prøve"
+    },
+    {
+      "image": "assets/wuud_render_01.jpg",
+      "title": "Pladedetalje",
+      "meta": "Overflade"
+    },
+    {
+      "image": "assets/wuud_render_09.jpg",
+      "title": "Relief, strejflys",
+      "meta": "Tekstur"
+    },
+    {
+      "image": "assets/wuud_render_03.jpg",
+      "title": "Monteret",
+      "meta": "På stedet"
+    },
+    {
+      "image": "assets/wuud_render_02.jpg",
+      "title": "Beklædningsforløb",
+      "meta": "Interiør"
+    },
+    {
+      "image": "assets/wuud_render_011.jpg",
+      "title": "Væg, dagslys",
+      "meta": "Interiør"
+    },
+    {
+      "image": "assets/screenshot-2026-02-25-at-17.31.25.png",
+      "title": "Fuld højde",
+      "meta": "På stedet"
+    },
+    {
+      "image": "assets/screenshot-2026-02-25-at-17.31.48.png",
+      "title": "Kantprofil",
+      "meta": "Detalje"
+    }
+  ],
+  "spec": {
+    "eyebrow": "Specifikationen",
+    "title_l1": "Ægte træ,",
+    "title_l2": "bygget til at holde.",
+    "rows": [
+      {
+        "key": "Type",
+        "value": "Præget træbeklædning"
+      },
+      {
+        "key": "Brug",
+        "value": "Interiør & eksteriør"
+      },
+      {
+        "key": "Træsorter",
+        "value": "Birk · El · Asp · Fyr"
+      },
+      {
+        "key": "Finish",
+        "value": "Natur · Transparent · Malet"
+      },
+      {
+        "key": "Mønstre",
+        "value": "Standard & custom"
+      },
+      {
+        "key": "Overflade",
+        "value": "Præget, vejrbestandig"
+      },
+      {
+        "key": "Brand",
+        "value": "Brandhæmmende behandling"
+      },
+      {
+        "key": "Oprindelse",
+        "value": "Fremstillet i Finland"
+      },
+      {
+        "key": "Formater",
+        "value": "Efter aftale"
+      }
+    ]
+  },
+  "cta": {
+    "title_l1": "Bestil",
+    "title_l2": "vareprøver & priser.",
+    "lede": "Vil du have Wuud-plader, mønstre og priser til et projekt? Fortæl os briefet, så sender vi finish, formater og et tilbud."
+  }
+}

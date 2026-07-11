@@ -659,10 +659,40 @@
     };
     toggle.addEventListener('click', () => setOpen(!navEl.classList.contains('is-open')));
     scrim.addEventListener('click', () => setOpen(false));
-    navLinks.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+    navLinks.querySelectorAll('a, button').forEach((a) => a.addEventListener('click', () => setOpen(false)));
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
     // Close menu if resized up to desktop
     window.addEventListener('resize', () => { if (window.innerWidth > 720) setOpen(false); });
+  }
+
+  /* ---------- Language toggle (EN/DA) ----------
+     Label always shows the language you'd SWITCH to, not the current one
+     (a plain toggle, not a locale picker) — read fresh from
+     window.brCurrentLang() each render so it stays correct across the
+     br-content.js-driven switch (no full page reload). br.js and
+     br-content.js load in different orders on different pages (a
+     pre-existing inconsistency), so window.brCurrentLang may not exist
+     yet at the immediate render() below — re-render on br-content-ready
+     too, so the label is never stuck showing the wrong direction while
+     the page is actually already showing the other language. */
+  const langToggles = document.querySelectorAll('[data-lang-toggle]');
+  if (langToggles.length) {
+    const renderLangToggles = () => {
+      const current = (window.brCurrentLang && window.brCurrentLang()) || 'en';
+      langToggles.forEach((btn) => {
+        btn.textContent = current === 'en' ? 'DA' : 'EN';
+        btn.setAttribute('aria-label', current === 'en' ? 'Switch to Danish' : 'Skift til engelsk');
+      });
+    };
+    renderLangToggles();
+    document.addEventListener('br-content-ready', renderLangToggles);
+    langToggles.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const current = (window.brCurrentLang && window.brCurrentLang()) || 'en';
+        if (window.brSetLanguage) window.brSetLanguage(current === 'en' ? 'da' : 'en');
+        renderLangToggles();
+      });
+    });
   }
 
   /* ---------- Nav theme switch over dark sections ---------- */
@@ -972,7 +1002,14 @@
     window.scrollTo({ top: 0, behavior: (window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth') });
   });
 
-  /* ---- Cookie / consent banner (auto-injected on every page) ---- */
+  /* ---- Cookie / consent banner (auto-injected on every page) ----
+     Text below is a Danish fallback shown before content loads (matches
+     the site's pre-i18n default so nothing changes for the common case).
+     Once content/site.<lang>.json loads, the br-content-ready listener
+     swaps it to whatever language is active — this banner is injected by
+     JS rather than living in each page's HTML, so it can't carry
+     data-content attributes the normal content loader would find; it
+     reads directly from the loaded data instead. */
   var cookie = document.querySelector('[data-cookie]');
   if (!cookie) {
     cookie = document.createElement('div');
@@ -986,6 +1023,16 @@
       '</div>';
     document.body.appendChild(cookie);
   }
+  document.addEventListener('br-content-ready', function (e) {
+    var c = e.detail && e.detail.cookie;
+    if (!c) return;
+    var textEl = cookie.querySelector('.bra-cookie__text');
+    var declineEl = cookie.querySelector('[data-consent="decline"]');
+    var acceptEl = cookie.querySelector('[data-consent="accept"]');
+    if (textEl && c.text) textEl.innerHTML = c.text;
+    if (declineEl && c.decline) declineEl.textContent = c.decline;
+    if (acceptEl && c.accept) acceptEl.textContent = c.accept;
+  });
   var CONSENT_KEY = 'brConsent';
   if (!localStorage.getItem(CONSENT_KEY)) {
     setTimeout(function () { cookie.classList.add('is-in'); }, 800);

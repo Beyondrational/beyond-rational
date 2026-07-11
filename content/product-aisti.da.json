@@ -1,0 +1,186 @@
+{
+  "loader_tag": "Aisti / 2026",
+  "hero": {
+    "eyebrow": "Produktet",
+    "title": "Aisti® Aalto.",
+    "lede": "Skumformet naturlig træfiber. Absorptionsklasse A, to formater, to tykkelser. Passer til standard T-skinneloft eller monteres direkte med klæber. Fuld produktionskapacitet fra august 2026 — forudbestil nu.",
+    "bg_image": "assets/aisti-person-angtvatten.webp"
+  },
+  "spec": {
+    "items": [
+      { "key": "Kerne",           "value": "Naturlig træfiber" },
+      { "key": "Formater",        "value": "600×600 / 600×1200" },
+      { "key": "Tykkelse",        "value": "20 eller 40 mm" },
+      { "key": "Absorption",      "value": "Class A" },
+      { "key": "Emissioner",      "value": "M1 / French A+" },
+      { "key": "Brand",           "value": "Euroclass B-s1,d0" },
+      { "key": "Indlejret CO₂e", "value": "op til −6,71/m²" },
+      { "key": "Endt levetid",    "value": "100% genanvendelig" }
+    ],
+    "downloads": [
+      { "label": "Download specifikationer", "href": "https://aisti.com/documents/9a4qSK39RnOcg6LbSymtLgo403" },
+      { "label": "EPD 20mm",                "href": "https://aisti.com/documents/_kU7OOv0SxGCLYSZqk-HKQo4e7" },
+      { "label": "EPD 40mm",                "href": "https://aisti.com/documents/QzrA_VDSSVawPcyPQ5OOnAo47b" }
+    ]
+  },
+  "facts": {
+    "format": {
+      "big1": "600 × 600 mm",
+      "big2": "1200 × 600 mm",
+      "note": "Passer til standard T-skinnesystemer."
+    },
+    "thickness": {
+      "big1": "20 mm",
+      "big2": "40 mm",
+      "note": "20 mm til nedhængte lofter, 40 mm til direkte montering."
+    },
+    "material_life": [
+      { "key": "Kerne",  "value": "Træfiber" },
+      { "key": "Brand",  "value": "B-s1,d0" },
+      { "key": "CO₂e",  "value": "op til −6,71/m²" },
+      { "key": "Genanv.", "value": "100 %" }
+    ]
+  },
+  "versus": {
+    "ours": {
+      "name": "Aisti® Aalto",
+      "tag": "Vores plade",
+      "points": [
+        { "text": "Naturlig træfiber" },
+        { "text": "Ingen syntetiske bindemidler" },
+        { "text": "Lagrer kulstof (negativt fodaftryk)" },
+        { "text": "100% genanvendelig" },
+        { "text": "Ingen irriterende fibre" }
+      ]
+    },
+    "theirs": {
+      "name": "Mineraluld",
+      "tag": "Standarden",
+      "points": [
+        { "text": "Mineralfiber" },
+        { "text": "Syntetiske bindemidler" },
+        { "text": "Positivt kulstoffodaftryk" },
+        { "text": "Deponi ved endt levetid" },
+        { "text": "Kan irritere hud og lunger" }
+      ]
+    }
+  },
+  "gallery": {
+    "eyebrow": "På stedet",
+    "title": "Aisti-galleri",
+    "items": [
+      {
+        "image": "assets/aisti-026.jpg",
+        "title": "Dagslysinteriør",
+        "meta": "Produktfotografi"
+      },
+      {
+        "image": "assets/aisti-003.jpg",
+        "title": "Plade, strejflys",
+        "meta": "Materialestudie"
+      },
+      {
+        "image": "assets/aisti-035.jpg",
+        "title": "Monteret",
+        "meta": "Detalje"
+      },
+      {
+        "image": "assets/aisti-042.jpg",
+        "title": "Overflade, komprimeret",
+        "meta": "Materialestudie"
+      },
+      {
+        "image": "assets/aisti-025.jpg",
+        "title": "Værksted",
+        "meta": "Bag pressen"
+      },
+      {
+        "image": "assets/aisti-008.jpg",
+        "title": "Loft, roligt",
+        "meta": "Produktfotografi"
+      },
+      {
+        "image": "assets/aisti-person-angtvatten.webp",
+        "title": "I brug",
+        "meta": "Kontorinteriør"
+      },
+      {
+        "image": "assets/aisti-012.jpg",
+        "title": "Vægdetalje",
+        "meta": "Produktfotografi"
+      },
+      {
+        "image": "assets/aisti-tile-001.webp",
+        "title": "Træfiber",
+        "meta": "Materialestudie"
+      },
+      {
+        "image": "assets/br-office.webp",
+        "title": "Loftinstallation",
+        "meta": "På stedet"
+      }
+    ]
+  },
+  "edge_types": {
+    "eyebrow": "Formater",
+    "title": "Udforsk vores kantprofiler",
+    "body": "Aisti Aalto-plader fås i tre kantprofiler — A, B og E — hver med sit eget udtryk og sin egen monteringsmetode, alt efter dit projekt.",
+    "items": [
+      {
+        "image": "assets/aisti-edge-a.webp",
+        "name": "Kant A",
+        "method": "I T-skinne"
+      },
+      {
+        "image": "assets/aisti-edge-b.webp",
+        "name": "Kant B",
+        "method": "Direkte montering"
+      },
+      {
+        "image": "assets/aisti-edge-e.webp",
+        "name": "Kant E",
+        "method": "I T-skinne"
+      }
+    ]
+  },
+  "technology": {
+    "section_label": "Teknologien",
+    "title_l1": "Skumformet,",
+    "title_l2": "ikke presset.",
+    "body_p1": "Aistis skumformningsteknologi, tilpasset fra den finske papirindustri, opslæmmer træfiber i skum i stedet for at presse den flad. Fibrene sætter sig i en åben, porøs struktur, der opfanger lyd på tværs af et bredt frekvensområde, uden bindemidler eller plastik.",
+    "body_p2": "Teknologien er omkostningseffektiv og energibevidst og producerer plader, der er lette, plastfrie og 100% genanvendelige. Fremstillet i Jyväskylä, Finland.",
+    "image": "assets/aisti-042.jpg"
+  },
+  "video": {
+    "section_label": "Video",
+    "title_l1": "Filmen,",
+    "title_l2": "i praksis.",
+    "items": [
+      { "youtube_id": "zMcN2KxKzCk", "label": "Baking with Mikko" },
+      { "youtube_id": "sAePbA3sEHA", "label": "Teknologien bag Aistis akustikplader" }
+    ]
+  },
+  "co2": {
+    "section_label": "CO₂-besparelse",
+    "title_l1": "Aisti Aalto,",
+    "title_l2": "i tal.",
+    "aisti_lifecycle": {
+      "name": "Aisti® Aalto",
+      "note": "Livscyklusemissioner, A1-C4 (fossil)"
+    },
+    "aisti_stored": {
+      "name": "Aisti® Aalto",
+      "note": "Lagret CO₂ · biogent kulstof ved fabriksport (A1-A3)"
+    },
+    "rival": {
+      "name": "Rockfon Sonar 20mm",
+      "note": "Mineraluld · livscyklusemissioner, A1-C4 (fossil)"
+    },
+    "disclaimer": "Beregninger er baseret på producenternes EPD — sammenlignet med stenuld. Aisti Aalto 20 mm vs Rockfon Sonar 20mm. Aisti-tal: EPD Hub HUB-5632 (Aisti Corporation Oy, publiceret 06.03.2026) — livscyklusemissioner er GWP-fossil summeret over A1-C4; lagret CO₂ er GWP-biogent ved A1-A3 (fabriksport, før eventuel frigivelse ved endt levetid). Rockfon-tal fra dets offentlige Sonar 20mm-datablad."
+  },
+  "cta": {
+    "title_l1": "Specificér",
+    "title_l2": "Aisti.",
+    "lede": "Produktionen når fuld kapacitet i august 2026. Forudbestil nu, eller anmod om vareprøver og den fulde datapakke."
+  }
+}

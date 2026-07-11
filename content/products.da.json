@@ -1,0 +1,40 @@
+{
+  "loader_tag": "Produkter / 2026",
+  "hero": {
+    "eyebrow": "Produkter",
+    "title": "Vores produkter.",
+    "lede": "Fire bæredygtige akustikmaterialer til moderne arkitektur. Hver især udvalgt for ydeevne, overflade og lavt fodaftryk — og hver med sin egen side.",
+    "bg_image": "assets/aisti-042.jpg"
+  },
+  "items": [
+    {
+      "name": "Aisti® Aalto",
+      "tag": "Tilgængelig 2026",
+      "body": "Skumformet naturlig træfiber. Absorptionsklasse A, to formater, to tykkelser. Passer til standard T-skinneloft eller monteres direkte med klæber. Officiel distributør i Danmark.",
+      "image": "assets/aisti-026.jpg"
+    },
+    {
+      "name": "Wuud",
+      "tag": "Under udvikling",
+      "body": "Præget træbeklædning til interiør og eksteriør — ægte birk, el, asp og fyr, modificeret til at bære dyb relief. Finsk-udviklet; finish og mønstre efter aftale.",
+      "image": "assets/aisti-042.jpg"
+    },
+    {
+      "name": "Sappa",
+      "tag": "Under udvikling",
+      "body": "Akustikplader dyrket af hamp — en hurtigt fornybar naturfiber, bundet med et cementfrit mineralsk bindemiddel. Til vægge og lofter.",
+      "image": "assets/aisti-035.jpg"
+    },
+    {
+      "name": "Mogu",
+      "tag": "Under udvikling",
+      "body": "Bløde, fløjlsagtige akustikplader dyrket af mycelium og genanvendte tekstilrester. Udviklet til absorption; naturligt hvide, med et bredere farveudvalg efter aftale.",
+      "image": "assets/aisti-025.jpg"
+    }
+  ],
+  "cta": {
+    "title_l1": "Specificér",
+    "title_l2": "sortimentet.",
+    "lede": "Send briefet, så hjælper vi dig med at vælge det rette materiale, format og montering til dit rum."
+  }
+}

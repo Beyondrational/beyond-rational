@@ -7,7 +7,7 @@
 <meta name="description" content="Request a sample box. Specify Aisti for your project. Visit the office in Copenhagen.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=30">
+<link rel="stylesheet" href="br.css?v=31">
 <style>
   /* Form fields tuned for v1 design system */
   .bra-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: var(--bra-s-2); }
@@ -43,14 +43,14 @@
 <!-- Page loader (CLOU-style curtain, once per session) -->
 <div class="br-loader" aria-hidden="true">
   <div class="br-loader__top">
-    <span class="br-loader__top-l">Beyond Rational</span>
-    <span class="br-loader__top-r">Aisti / 2026</span>
+    <span class="br-loader__top-l" data-content="loader.brand">Beyond Rational</span>
+    <span class="br-loader__top-r" data-content="loader_tag">Contact / 2026</span>
   </div>
   <div class="br-loader__middle">
     <div class="br-loader__counter">00</div>
   </div>
   <div class="br-loader__bottom">
-    <span class="br-loader__bottom-l">Loading</span>
+    <span class="br-loader__bottom-l" data-content="loader.loading">Loading</span>
     <div class="br-loader__bar"></div>
   </div>
 </div>
@@ -63,9 +63,10 @@
 <nav class="bra-nav">
   <a href="index.html" class="bra-nav__brand"><img src="assets/logo.svg" alt="Beyond Rational" class="bra-nav__brand-logo" data-content="logo" data-content-attr="src"></a>
   <div class="bra-nav__links">
-    <a href="products.html" class="bra-nav__link">Products</a>
-    <a href="projects.html" class="bra-nav__link">Projects</a>
-    <a href="contact.html" class="bra-nav__link" aria-current="page">Contact</a>
+    <a href="products.html" class="bra-nav__link" data-content="nav.products">Products</a>
+    <a href="projects.html" class="bra-nav__link" data-content="nav.projects">Projects</a>
+    <a href="contact.html" class="bra-nav__link" aria-current="page" data-content="nav.contact">Contact</a>
+    <button type="button" class="bra-nav__lang" data-lang-toggle>DA</button>
   </div>
 </nav>
 
@@ -78,7 +79,7 @@
 
   <div class="bra-container home-hero__inner">
     <header class="home-hero__top">
-      <a href="index.html" class="bra-caption home-hero__back">← Home</a>
+      <a href="index.html" class="bra-caption home-hero__back" data-content="misc.back_home">← Home</a>
       <span class="bra-caption" data-content="hero.eyebrow">Specify · sample · visit</span>
     </header>
 
@@ -122,10 +123,10 @@
           Pick a tab that fits what you need. The form changes to ask the right questions. We answer Monday to Friday.
         </p>
         <div class="bra-spec" style="margin-top: var(--bra-s-4); max-width: 420px;">
-          <div class="bra-spec-row"><div class="bra-spec-key">Email</div><div class="bra-spec-val" style="font-size: 18px;" data-content="form_section.contact_info.email">morten@beyondrational.com</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">Phone</div><div class="bra-spec-val" style="font-size: 18px;" data-content="form_section.contact_info.phone">+45 22 55 54 70</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">Office</div><div class="bra-spec-val" style="font-size: 18px;" data-content="form_section.contact_info.office">Firskovvej 36, 2800 Kongens Lyngby</div></div>
-          <div class="bra-spec-row"><div class="bra-spec-key">Hours</div><div class="bra-spec-val" style="font-size: 18px;" data-content="form_section.contact_info.hours">Mon–Fri</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key" data-content="misc.email_label">Email</div><div class="bra-spec-val" style="font-size: 18px;" data-content="form_section.contact_info.email">morten@beyondrational.com</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key" data-content="misc.phone_label">Phone</div><div class="bra-spec-val" style="font-size: 18px;" data-content="form_section.contact_info.phone">+45 22 55 54 70</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key" data-content="misc.office_label">Office</div><div class="bra-spec-val" style="font-size: 18px;" data-content="form_section.contact_info.office">Firskovvej 36, 2800 Kongens Lyngby</div></div>
+          <div class="bra-spec-row"><div class="bra-spec-key" data-content="misc.hours_label">Hours</div><div class="bra-spec-val" style="font-size: 18px;" data-content="form_section.contact_info.hours">Mon–Fri</div></div>
         </div>
       </div>
 
@@ -181,7 +182,7 @@
             <div class="bra-field">
               <label class="bra-field__label" for="p-role" data-content="form_section.form_specify.role_label">Your role</label>
               <select class="bra-field__select" name="function" id="p-role" data-content-each="form_section.form_specify.role_options">
-                <option value="">Select</option>
+                <option value="" data-content="misc.select_placeholder">Select</option>
                 <template><option data-each="value"></option></template>
               </select>
             </div>
@@ -198,7 +199,7 @@
             <div class="bra-field">
               <label class="bra-field__label" for="p-type" data-content="form_section.form_specify.type_label">Project type</label>
               <select class="bra-field__select" name="project_type" id="p-type" data-content-each="form_section.form_specify.type_options">
-                <option value="">Select</option>
+                <option value="" data-content="misc.select_placeholder">Select</option>
                 <template><option data-each="value"></option></template>
               </select>
             </div>
@@ -312,8 +313,8 @@
         <div class="bra-gallery-data__note" style="margin-top: var(--bra-s-2);" data-content="contact_cards.morten.role">Commercial, partnerships, projects.</div>
       </div>
       <div class="bra-spec" style="margin-top: var(--bra-s-3);">
-        <div class="bra-spec-row"><div class="bra-spec-key">Email</div><div class="bra-spec-val"><a href="mailto:morten@beyondrational.com" data-content="contact_cards.morten.email">morten@beyondrational.com</a></div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">Phone</div><div class="bra-spec-val"><a href="tel:+4522555470" data-content="contact_cards.morten.phone">+45 22 55 54 70</a></div></div>
+        <div class="bra-spec-row"><div class="bra-spec-key" data-content="misc.email_label">Email</div><div class="bra-spec-val"><a href="mailto:morten@beyondrational.com" data-content="contact_cards.morten.email">morten@beyondrational.com</a></div></div>
+        <div class="bra-spec-row"><div class="bra-spec-key" data-content="misc.phone_label">Phone</div><div class="bra-spec-val"><a href="tel:+4522555470" data-content="contact_cards.morten.phone">+45 22 55 54 70</a></div></div>
       </div>
     </div>
 
@@ -324,8 +325,8 @@
         <div class="bra-gallery-data__note" style="margin-top: var(--bra-s-2);" data-content="contact_cards.rasmus.role">Product, design, specification.</div>
       </div>
       <div class="bra-spec" style="margin-top: var(--bra-s-3);">
-        <div class="bra-spec-row"><div class="bra-spec-key">Email</div><div class="bra-spec-val"><a href="mailto:rasmus@beyondrational.com" data-content="contact_cards.rasmus.email">rasmus@beyondrational.com</a></div></div>
-        <div class="bra-spec-row"><div class="bra-spec-key">Phone</div><div class="bra-spec-val"><a href="tel:+4524481401" data-content="contact_cards.rasmus.phone">+45 24 48 14 01</a></div></div>
+        <div class="bra-spec-row"><div class="bra-spec-key" data-content="misc.email_label">Email</div><div class="bra-spec-val"><a href="mailto:rasmus@beyondrational.com" data-content="contact_cards.rasmus.email">rasmus@beyondrational.com</a></div></div>
+        <div class="bra-spec-row"><div class="bra-spec-key" data-content="misc.phone_label">Phone</div><div class="bra-spec-val"><a href="tel:+4524481401" data-content="contact_cards.rasmus.phone">+45 24 48 14 01</a></div></div>
       </div>
     </div>
     <div class="bra-gallery-cell" style="grid-column: span 5; padding: 0;">
@@ -345,14 +346,14 @@
 
     <div class="bra-gallery bra-gallery--auto">
       <div class="bra-gallery-cell bra-gallery-data">
-        <div class="bra-gallery-data__label">Email</div>
+        <div class="bra-gallery-data__label" data-content="misc.email_label">Email</div>
         <div class="bra-h3" style="font-size: 22px; margin-top: 8px;" data-content="studio_info.email">hello@beyondrational.com</div>
         <div class="bra-gallery-data__note" style="margin-top: var(--bra-s-2);" data-content="studio_info.email_note">
           For samples, preorders, and project briefs. We answer Mon–Fri.
         </div>
       </div>
       <div class="bra-gallery-cell bra-gallery-data bra-gallery-data--ink">
-        <div class="bra-gallery-data__label">Phone</div>
+        <div class="bra-gallery-data__label" data-content="misc.phone_label">Phone</div>
         <div class="bra-h3" style="font-size: 22px; margin-top: 8px;" data-content="studio_info.phone">+45 22 55 54 70</div>
         <div class="bra-gallery-data__note" style="margin-top: var(--bra-s-2);" data-content="studio_info.phone_note">
           Morten Gyldendal Melberg, managing partner.
@@ -376,8 +377,8 @@
         </p>
         <form class="bra-newsletter" data-newsletter>
           <input type="hidden" name="name" value="Newsletter signup">
-          <input type="email" name="email" placeholder="you@office.com" aria-label="Email" required>
-          <button type="submit">Subscribe</button>
+          <input type="email" name="email" placeholder="you@office.com" aria-label="Email" data-content="misc.email_label" data-content-attr="aria-label" required>
+          <button type="submit" data-content="misc.subscribe">Subscribe</button>
         </form>
       </div>
     </div>
@@ -393,22 +394,22 @@
       </p>
     </div>
     <div>
-      <h4>Product</h4>
+      <h4 data-content="footer.product_heading">Product</h4>
       <ul>
-        <li><a href="product-aisti.html" class="bra-cta" style="border: none; padding: 0;">Aisti® Acoustic Tile</a></li>
+        <li><a href="product-aisti.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.aisti_label">Aisti® Acoustic Tile</a></li>
         <li><a href="product-wuud.html" class="bra-cta" style="border: none; padding: 0;">Wuud</a></li>
         <li><a href="product-sappa.html" class="bra-cta" style="border: none; padding: 0;">Sappa</a></li>
         <li><a href="product-mogu.html" class="bra-cta" style="border: none; padding: 0;">Mogu</a></li>
       </ul>
     </div>
     <div>
-      <h4>Office</h4>
+      <h4 data-content="footer.office_heading">Office</h4>
       <ul>
-        <li><a href="projects.html" class="bra-cta" style="border: none; padding: 0;">Projects</a></li>
+        <li><a href="projects.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.projects_label">Projects</a></li>
       </ul>
     </div>
     <div>
-      <h4>Contact</h4>
+      <h4 data-content="footer.contact_heading">Contact</h4>
       <ul>
         <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;"><span data-content="footer.email">hello@beyondrational.com</span></a></li>
         <li><span class="bra-body" style="font-size: 14px;" data-content="footer.address">Firskovvej 36, 2800 Kongens Lyngby</span></li>
@@ -417,15 +418,15 @@
   </div>
   <div class="bra-footer__base">
     <span class="bra-micro" data-content="footer.copyright">© 2026 Beyond Rational ApS</span>
-    <a class="bra-micro" href="privatlivspolitik.html" style="text-decoration: none;">Privatlivspolitik</a>
-    <a class="bra-micro" href="betalingsbetingelser.html" style="text-decoration: none;">Betalingsbetingelser</a>
-    <a class="bra-micro" href="design-system.html" style="text-decoration: none;">Design system</a>
-    <span class="bra-micro">B_R Design System · v1.0</span>
+    <a class="bra-micro" href="privatlivspolitik.html" style="text-decoration: none;" data-content="footer.privacy_label">Privatlivspolitik</a>
+    <a class="bra-micro" href="betalingsbetingelser.html" style="text-decoration: none;" data-content="footer.terms_label">Betalingsbetingelser</a>
+    <a class="bra-micro" href="design-system.html" style="text-decoration: none;" data-content="footer.design_system_label">Design system</a>
+    <span class="bra-micro" data-content="footer.design_system_version">B_R Design System · v1.0</span>
   </div>
 </footer>
 
-<script src="br.js?v=29" defer></script>
-<script src="br-content.js?v=24" defer></script>
+<script src="br.js?v=30" defer></script>
+<script src="br-content.js?v=25" defer></script>
 <script src="br-forms.js?v=1" defer></script>
 </body>
 </html>

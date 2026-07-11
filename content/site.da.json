@@ -1,0 +1,43 @@
+{
+ "logo": "assets/logo.svg",
+ "nav": {
+  "products": "Produkter",
+  "projects": "Projekter",
+  "contact": "Kontakt"
+ },
+ "footer": {
+  "brand_tagline": "Bevidst akustik. Officiel distributør af Aisti® i Danmark.",
+  "email": "hello@beyondrational.com",
+  "address": "Firskovvej 36, 2800 Kongens Lyngby",
+  "copyright": "© 2026 Beyond Rational ApS",
+  "product_heading": "Produkt",
+  "aisti_label": "Aisti® Akustikplade",
+  "office_heading": "Kontor",
+  "projects_label": "Projekter",
+  "contact_heading": "Kontakt",
+  "privacy_label": "Privatlivspolitik",
+  "terms_label": "Betalingsbetingelser",
+  "design_system_label": "Designsystem",
+  "design_system_version": "B_R Designsystem · v1.0"
+ },
+ "loader": {
+  "brand": "Beyond Rational",
+  "loading": "Indlæser"
+ },
+ "cookie": {
+  "text": "Vi bruger minimale cookies for at forstå hvad der virker. Se vores <a href=\"privatlivspolitik.html\">privatlivspolitik</a>.",
+  "decline": "Afvis",
+  "accept": "Accepter"
+ },
+ "misc": {
+  "scroll_hint": "Scroll ↓",
+  "back_home": "← Forside",
+  "back_products": "← Produkter",
+  "select_placeholder": "Vælg",
+  "subscribe": "Tilmeld",
+  "email_label": "Email",
+  "phone_label": "Telefon",
+  "office_label": "Kontor",
+  "hours_label": "Åbningstider"
+ }
+}

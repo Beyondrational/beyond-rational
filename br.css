@@ -1429,6 +1429,23 @@ body.is-loading { overflow: hidden; }
   transform: scaleX(1);
 }
 
+/* Language toggle — sits among the nav links (desktop + mobile menu alike),
+   styled as a small pill rather than a link so it reads as a control. */
+.bra-nav__lang {
+  font-family: var(--bra-font);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  padding: 5px 10px;
+  border: 1.5px solid currentColor;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: opacity var(--bra-dur-base) var(--bra-ease);
+}
+.bra-nav__lang:hover { opacity: 0.65; }
+
 /* Hamburger toggle — injected by br.js, hidden on desktop */
 .bra-nav__toggle {
   display: none;
@@ -1483,6 +1500,7 @@ body.is-loading { overflow: hidden; }
     padding: 8px 0;
   }
   .bra-nav__link::after { display: none; }
+  .bra-nav__lang { margin-top: var(--bra-s-2); font-size: 13px; padding: 8px 16px; }
   /* Dim the page behind the open menu */
   .bra-nav__scrim {
     position: fixed;

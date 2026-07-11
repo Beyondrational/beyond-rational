@@ -1,0 +1,113 @@
+{
+  "loader_tag": "Sappa / 2026",
+  "hero": {
+    "eyebrow": "Produkt · Akustikplader af hamp",
+    "title": "Sappa.",
+    "lede": "Akustikplader dyrket af hamp — en hurtigt fornybar naturfiber, bundet med et cementfrit mineralsk bindemiddel. Til vægge og lofter, bragt til Danmark af Beyond Rational.",
+    "bg_image": "assets/aisti-035.jpg"
+  },
+  "hero_note": "Overfladerne vist er en vejledende gengivelse af finish-udvalget. Endelige vareprøver og det fulde farveudvalg efter aftale.",
+  "finishes": {
+    "natural": { "name": "Natur" },
+    "chalk": { "name": "Kridt" },
+    "charcoal": { "name": "Kul" }
+  },
+  "idea": {
+    "eyebrow": "Idéen",
+    "title_l1": "Dyrket, ikke",
+    "title_l2": "fremstillet.",
+    "points": [
+      {
+        "num": "01",
+        "title": "Et hurtigt fornybart råmateriale",
+        "body": "Hamp kræver kun lidt vand, ingen pesticider, og når fuld højde på måneder, ikke år — og opfanger atmosfærisk kulstof cirka dobbelt så effektivt som skovbrug gennem sin vækstcyklus."
+      },
+      {
+        "num": "02",
+        "title": "Nulaffald i konstruktionen",
+        "body": "Pladerne presses af stænglestykker — restproduktet, der er tilbage, når fiber trækkes ud af planten til anden industriel brug. Materiale, der ellers ville blive kasseret, bliver til produktet."
+      },
+      {
+        "num": "03",
+        "title": "Fra vugge til vugge",
+        "body": "Et cementfrit mineralsk bindemiddel holder hampestykkerne sammen, uden tilsatte syntetiske flammehæmmere — pladen er naturligt brandbestandig og genanvendelig ved endt levetid."
+      }
+    ]
+  },
+  "spec": {
+    "eyebrow": "Specifikationen",
+    "title_l1": "Hamp, bundet",
+    "title_l2": "til rummet.",
+    "rows": [
+      { "key": "Kerne", "value": "Hampefiber, cementfrit mineralsk bindemiddel" },
+      { "key": "Anvendelse", "value": "Indervægge og lofter" },
+      { "key": "Brand", "value": "Naturligt brandbestandig — ingen tilsatte flammehæmmere" },
+      { "key": "Formater", "value": "—" },
+      { "key": "Tykkelse", "value": "—" },
+      { "key": "Endt levetid", "value": "Vugge til vugge, genanvendelig" }
+    ]
+  },
+  "gallery_head": {
+    "eyebrow": "Galleri",
+    "title_l1": "Sappa,",
+    "title_l2": "i praksis.",
+    "body": "Billeder styres i CMS'et — tilføj eller udskift dem på /admin."
+  },
+  "gallery": [
+    {
+      "image": "assets/aisti-003.jpg",
+      "title": "Overflade",
+      "meta": "Materialestudie"
+    },
+    {
+      "image": "assets/aisti-026.jpg",
+      "title": "Interiør",
+      "meta": "På stedet"
+    },
+    {
+      "image": "assets/aisti-042.jpg",
+      "title": "Detalje",
+      "meta": "Tekstur"
+    },
+    {
+      "image": "assets/aisti-person-angtvatten.webp",
+      "title": "I brug",
+      "meta": "Kontor"
+    },
+    {
+      "image": "assets/aisti-035.jpg",
+      "title": "Monteret",
+      "meta": "Detalje"
+    },
+    {
+      "image": "assets/aisti-008.jpg",
+      "title": "Loft",
+      "meta": "På stedet"
+    },
+    {
+      "image": "assets/aisti-012.jpg",
+      "title": "Væg",
+      "meta": "På stedet"
+    },
+    {
+      "image": "assets/br-office-2.webp",
+      "title": "Installation",
+      "meta": "Interiør"
+    },
+    {
+      "image": "assets/aisti-tile-001.webp",
+      "title": "Materiale",
+      "meta": "Studie"
+    },
+    {
+      "image": "assets/aisti-025.jpg",
+      "title": "Værksted",
+      "meta": "Bag kulisserne"
+    }
+  ],
+  "cta": {
+    "title_l1": "Tilmeld",
+    "title_l2": "din interesse.",
+    "lede": "Vil du høre, når Sappa er klar? Send os en besked, så holder vi dig opdateret."
+  }
+}

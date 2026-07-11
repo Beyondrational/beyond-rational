@@ -1,4 +1,5 @@
 {
+  "loader_tag": "Sappa / 2026",
   "hero": {
     "eyebrow": "Product · Hemp acoustic panels",
     "title": "Sappa.",
@@ -7,9 +8,15 @@
   },
   "hero_note": "Surfaces shown are an indicative rendering of the finish range. Final samples and the full colour range on request.",
   "finishes": {
-    "natural": { "name": "Natural" },
-    "chalk": { "name": "Chalk" },
-    "charcoal": { "name": "Charcoal" }
+    "natural": {
+      "name": "Natural"
+    },
+    "chalk": {
+      "name": "Chalk"
+    },
+    "charcoal": {
+      "name": "Charcoal"
+    }
   },
   "idea": {
     "eyebrow": "The idea",
@@ -38,12 +45,30 @@
     "title_l1": "Hemp, bound",
     "title_l2": "for the room.",
     "rows": [
-      { "key": "Core", "value": "Hemp fibre, cement-free mineral binder" },
-      { "key": "Application", "value": "Interior walls and ceilings" },
-      { "key": "Fire", "value": "Naturally fire-resistant — no flame retardants added" },
-      { "key": "Formats", "value": "—" },
-      { "key": "Thickness", "value": "—" },
-      { "key": "End of life", "value": "Cradle-to-cradle, recyclable" }
+      {
+        "key": "Core",
+        "value": "Hemp fibre, cement-free mineral binder"
+      },
+      {
+        "key": "Application",
+        "value": "Interior walls and ceilings"
+      },
+      {
+        "key": "Fire",
+        "value": "Naturally fire-resistant — no flame retardants added"
+      },
+      {
+        "key": "Formats",
+        "value": "—"
+      },
+      {
+        "key": "Thickness",
+        "value": "—"
+      },
+      {
+        "key": "End of life",
+        "value": "Cradle-to-cradle, recyclable"
+      }
     ]
   },
   "gallery_head": {

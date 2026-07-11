@@ -7,7 +7,7 @@
 <meta name="description" content="Beyond Rational supplies sustainable, design-driven acoustic materials for modern architecture. Official distributor of Aisti® in Denmark.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=30">
+<link rel="stylesheet" href="br.css?v=31">
 <style>
   /* =====================================================
      Landing hero — full-bleed cinematic image
@@ -179,14 +179,14 @@
 <!-- Page loader (CLOU-style curtain, once per session) -->
 <div class="br-loader" aria-hidden="true">
   <div class="br-loader__top">
-    <span class="br-loader__top-l">Beyond Rational</span>
+    <span class="br-loader__top-l" data-content="loader.brand">Beyond Rational</span>
     <span class="br-loader__top-r">Home / 2026</span>
   </div>
   <div class="br-loader__middle">
     <div class="br-loader__counter">00</div>
   </div>
   <div class="br-loader__bottom">
-    <span class="br-loader__bottom-l">Loading</span>
+    <span class="br-loader__bottom-l" data-content="loader.loading">Loading</span>
     <div class="br-loader__bar"></div>
   </div>
 </div>
@@ -197,9 +197,10 @@
 <nav class="bra-nav">
   <a href="index.html" class="bra-nav__brand"><img src="assets/logo.svg" alt="Beyond Rational" class="bra-nav__brand-logo" data-content="logo" data-content-attr="src"></a>
   <div class="bra-nav__links">
-    <a href="products.html" class="bra-nav__link">Products</a>
-    <a href="projects.html" class="bra-nav__link">Projects</a>
-    <a href="contact.html" class="bra-nav__link">Contact</a>
+    <a href="products.html" class="bra-nav__link" data-content="nav.products">Products</a>
+    <a href="projects.html" class="bra-nav__link" data-content="nav.projects">Projects</a>
+    <a href="contact.html" class="bra-nav__link" data-content="nav.contact">Contact</a>
+    <button type="button" class="bra-nav__lang" data-lang-toggle>DA</button>
   </div>
 </nav>
 
@@ -242,7 +243,7 @@
         </a>
         <a href="contact.html" class="bra-cta" style="color: var(--bra-on-oak);" data-content="hero.cta_secondary">Contact</a>
       </div>
-      <span class="bra-micro">Scroll ↓</span>
+      <span class="bra-micro" data-content="misc.scroll_hint">Scroll ↓</span>
     </footer>
   </div>
 </section>
@@ -425,22 +426,22 @@
       </p>
     </div>
     <div>
-      <h4>Product</h4>
+      <h4 data-content="footer.product_heading">Product</h4>
       <ul>
-        <li><a href="product-aisti.html" class="bra-cta" style="border: none; padding: 0;">Aisti® Acoustic Tile</a></li>
+        <li><a href="product-aisti.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.aisti_label">Aisti® Acoustic Tile</a></li>
         <li><a href="product-wuud.html" class="bra-cta" style="border: none; padding: 0;">Wuud</a></li>
         <li><a href="product-sappa.html" class="bra-cta" style="border: none; padding: 0;">Sappa</a></li>
         <li><a href="product-mogu.html" class="bra-cta" style="border: none; padding: 0;">Mogu</a></li>
       </ul>
     </div>
     <div>
-      <h4>Office</h4>
+      <h4 data-content="footer.office_heading">Office</h4>
       <ul>
-        <li><a href="projects.html" class="bra-cta" style="border: none; padding: 0;">Projects</a></li>
+        <li><a href="projects.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.projects_label">Projects</a></li>
       </ul>
     </div>
     <div>
-      <h4>Contact</h4>
+      <h4 data-content="footer.contact_heading">Contact</h4>
       <ul>
         <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;"><span data-content="footer.email">hello@beyondrational.com</span></a></li>
         <li><span class="bra-body" style="font-size: 14px;" data-content="footer.address">Firskovvej 36, 2800 Kongens Lyngby</span></li>
@@ -449,14 +450,14 @@
   </div>
   <div class="bra-footer__base">
     <span class="bra-micro" data-content="footer.copyright">© 2026 Beyond Rational ApS</span>
-    <a class="bra-micro" href="privatlivspolitik.html" style="text-decoration: none;">Privatlivspolitik</a>
-    <a class="bra-micro" href="betalingsbetingelser.html" style="text-decoration: none;">Betalingsbetingelser</a>
-    <a class="bra-micro" href="design-system.html" style="text-decoration: none;">Design system</a>
-    <span class="bra-micro">B_R Design System · v1.0</span>
+    <a class="bra-micro" href="privatlivspolitik.html" style="text-decoration: none;" data-content="footer.privacy_label">Privatlivspolitik</a>
+    <a class="bra-micro" href="betalingsbetingelser.html" style="text-decoration: none;" data-content="footer.terms_label">Betalingsbetingelser</a>
+    <a class="bra-micro" href="design-system.html" style="text-decoration: none;" data-content="footer.design_system_label">Design system</a>
+    <span class="bra-micro" data-content="footer.design_system_version">B_R Design System · v1.0</span>
   </div>
 </footer>
 
-<script src="br.js?v=29" defer></script>
-<script src="br-content.js?v=24" defer></script>
+<script src="br.js?v=30" defer></script>
+<script src="br-content.js?v=25" defer></script>
 </body>
 </html>

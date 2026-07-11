@@ -1,0 +1,96 @@
+{
+  "loader_tag": "Forside / 2026",
+  "hero": {
+    "eyebrow_left": "Beyond Rational · København",
+    "eyebrow_right": "Bevidst akustik",
+    "title_l1": "Bevidst akustik",
+    "title_l2_em": "til moderne arkitektur.",
+    "subtitle": "Beyond Rational er en københavnsk virksomhed, der leverer bæredygtige, designdrevne akustikmaterialer. Vi kombinerer skandinavisk æstetik med high-performance funktionalitet — og samarbejder med arkitekter, designere og developere, der værdsætter kvalitet, innovation og impact.",
+    "cta_primary": "Se vores løsninger",
+    "cta_secondary": "Kontakt",
+    "bg_image": "assets/aisti-person-angtvatten.webp"
+  },
+  "range": {
+    "section_label": "Hvad vi tilbyder",
+    "meta": "Beyond Rational",
+    "intro": "Beyond Rational er en københavnsk virksomhed, der leverer et kurateret udvalg af bevidste akustik- og overfladematerialer til moderne arkitektur — udvalgt for ydeevne, overflade og lavt fodaftryk.",
+    "link_label": "Se alle produkter",
+    "items": [
+      {
+        "name": "Aisti® Acoustic Tile",
+        "image": "assets/aisti-026.jpg",
+        "tag": "Tilgængelig 2026",
+        "href": "product-aisti.html"
+      },
+      {
+        "name": "Wuud",
+        "image": "assets/wuud_render_01.jpg",
+        "tag": "Under udvikling",
+        "href": "product-wuud.html"
+      },
+      {
+        "name": "Sappa",
+        "image": "assets/skærmbillede-2026-07-08-kl.-13.28.04.png",
+        "tag": "Under udvikling",
+        "href": "product-sappa.html"
+      },
+      {
+        "name": "Mogu",
+        "image": "assets/skærmbillede-2026-07-08-kl.-13.36.48.png",
+        "tag": "Under udvikling",
+        "href": "product-mogu.html"
+      }
+    ]
+  },
+  "process": {
+    "section_label": "Missionserklæring",
+    "title_l1": "Godt for rummet,",
+    "title_l2_em": "godt for planeten.",
+    "body_p1": "Beyond Rational eksisterer for at gøre det bevidste valg til det nemme valg. Vi kuraterer akustik- og overfladematerialer, der lever op til den standard, arkitekter forventer, uden de kompromiser der normalt følger med \"bæredygtighed\" — ingen nedgradering i finish, ingen nedgradering i specifikation.",
+    "body_p2": "Ethvert materiale, vi fører, vælges først og fremmest på egne meritter: hvordan det lyder, hvordan det ser ud, hvordan det holder. Det lavere fodaftryk er udgangspunktet, vi starter fra — ikke det kompromis, vi beder arkitekter acceptere.",
+    "image": "assets/aisti-042.jpg"
+  },
+  "studio": {
+    "body": "Beyond Rational har base i København. Vores partner Aisti producerer i Jyväskylä, Finland. Vi specificerer og leverer i hele Danmark.",
+    "stat_studios_label": "I drift siden",
+    "stat_founded_label": "Base i København",
+    "title_l1": "Københavnsk kontor.",
+    "stat_people_label": "Leverandører",
+    "link_label": "Kontakt",
+    "stat_studios": "2024",
+    "stat_founded": "CPH",
+    "section_label": "Hvem vi er",
+    "title_l2_em": "Globalt inspireret.",
+    "stat_people": "4",
+    "image": "assets/br-office.webp"
+  },
+  "cases": {
+    "section_label": "Cases",
+    "link_label": "Alle cases",
+    "items": [
+      {
+        "href": "case-angtvatten-22.html",
+        "image": "assets/aisti-026.jpg",
+        "eyebrow": "Case · Stockholm",
+        "title": "Ångtvätten 22",
+        "meta1": "Trivsel på kontoret · 600×600 mm, 20 mm, mørkeblå",
+        "meta2": "Plader installeret i standard T-skinne, som absorberer lydrefleksioner og reducerer efterklang i kontormiljøet."
+      },
+      {
+        "href": "case-bulevardi-2.html",
+        "image": "assets/aisti-008.jpg",
+        "eyebrow": "Case · Helsinki",
+        "title": "Bulevardi 2",
+        "meta1": "Efterklangsreduktion · 600×1200 mm, 40 mm, hvid",
+        "meta2": "Efterklangstiden blev forbedret med ca. 29% på tværs af oktavbånd efter loftinstallation."
+      }
+    ]
+  },
+  "cta": {
+    "section_label": "Kom i kontakt",
+    "title_l1": "Send briefet.",
+    "title_l2_em": "Vi læser det grundigt.",
+    "body": "Vi svarer mandag til fredag og arbejder direkte med arkitekter, designere og bygningsejere.",
+    "email": "hello@beyondrational.com"
+  }
+}

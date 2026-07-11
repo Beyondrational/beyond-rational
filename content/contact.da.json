@@ -1,0 +1,127 @@
+{
+ "loader_tag": "Kontakt / 2026",
+ "hero": {
+  "eyebrow": "Specificér · vareprøve · besøg",
+  "title_l1": "Fortæl os",
+  "title_l2": "om rummet.",
+  "lede": "Vælg en vej nedenfor. Formularen tilpasser sig samtalen: vareprøve, projektspecifikation eller generel information. Vi svarer mandag til fredag.",
+  "image": "assets/br-office-2.webp"
+ },
+ "form_section": {
+  "section_label": "Kom i kontakt",
+  "title_l1": "Én formular,",
+  "title_l2": "fire veje.",
+  "intro": "Vælg en fane, der passer til dit behov. Formularen tilpasser sig for at stille de rette spørgsmål. Vi svarer mandag til fredag.",
+  "contact_info": {
+   "email": "morten@beyondrational.com",
+   "phone": "+45 22 55 54 70",
+   "office": "Firskovvej 36, 2800 Kongens Lyngby",
+   "hours": "Man–fre"
+  },
+  "tabs": {
+   "sample": "Vareprøve",
+   "specify": "Specificér til projekt",
+   "info": "Information",
+   "other": "Andet"
+  },
+  "form_sample": {
+   "name_label": "Fulde navn *",
+   "email_label": "Email *",
+   "phone_label": "Telefon",
+   "company_label": "Kontor / virksomhed *",
+   "finish_label": "Foretrukken farve (valgfrit)",
+   "finish_placeholder": "f.eks. hvid, mørkeblå — eller lad stå tomt",
+   "address_label": "Leveringsadresse *",
+   "address_placeholder": "Vej, by, postnummer, land",
+   "submit_label": "Bestil vareprøve"
+  },
+  "form_specify": {
+   "name_label": "Fulde navn *",
+   "email_label": "Email *",
+   "role_label": "Din rolle",
+   "role_options": [
+    { "value": "Architect" },
+    { "value": "Interior designer" },
+    { "value": "Developer / contractor" },
+    { "value": "Project manager" },
+    { "value": "Acoustic consultant" }
+   ],
+   "company_label": "Kontor / virksomhed *",
+   "project_label": "Projektnavn *",
+   "type_label": "Projekttype",
+   "type_options": [
+    { "value": "New build" },
+    { "value": "Refurbishment" },
+    { "value": "Tenant fit-out" },
+    { "value": "Public / civic" },
+    { "value": "Other" }
+   ],
+   "area_label": "Areal (m²)",
+   "area_placeholder": "f.eks. 1200",
+   "deadline_label": "Forventet færdiggørelse",
+   "brief_label": "Brief *",
+   "brief_placeholder": "Program, loftshøjde, akustiske mål, finish du kombinerer med…",
+   "submit_label": "Send briefet"
+  },
+  "form_info": {
+   "name_label": "Fulde navn *",
+   "email_label": "Email *",
+   "company_label": "Kontor / forhandler",
+   "kind_label": "Hvad har du brug for?",
+   "kind_options": [
+    { "value": "Technical paper" },
+    { "value": "Spec sheet" },
+    { "value": "EPD / sustainability data" },
+    { "value": "Press kit" },
+    { "value": "CAD & BIM files" },
+    { "value": "Commercial / dealer" },
+    { "value": "General enquiry" }
+   ],
+   "msg_label": "Andet?",
+   "msg_placeholder": "Valgfrit — giv os kontekst, så vi sender det rette.",
+   "submit_label": "Send forespørgsel"
+  },
+  "form_other": {
+   "name_label": "Fulde navn *",
+   "email_label": "Email *",
+   "company_label": "Organisation",
+   "msg_label": "Din besked *",
+   "msg_placeholder": "Hvad tænker du på?",
+   "submit_label": "Send besked"
+  }
+ },
+ "contact_cards": {
+  "section_label": "Direkte linje",
+  "title": "Beyond Rational drives af Morten og Rasmus.",
+  "intro": "Begge tager telefonen, begge læser hver eneste brief.",
+  "morten": {
+   "eyebrow": "Adm. partner",
+   "name": "Morten Gyldendal Melberg",
+   "role": "Kommerciel, partnerskaber, projekter.",
+   "email": "morten@beyondrational.com",
+   "phone": "+45 22 55 54 70",
+   "photo": "assets/morten-melberg.jpg"
+  },
+  "rasmus": {
+   "eyebrow": "Partner",
+   "name": "Rasmus Gyldendal Melberg",
+   "role": "Produkt, design, specifikation.",
+   "email": "rasmus@beyondrational.com",
+   "phone": "+45 24 48 14 01",
+   "photo": "assets/rasmus-melberg.jpg"
+  }
+ },
+ "studio_info": {
+  "title_l1": "Firskovvej 36,",
+  "title_l2": "Kongens Lyngby.",
+  "email": "hello@beyondrational.com",
+  "email_note": "Til vareprøver, forudbestillinger og projektbriefs. Vi svarer man–fre.",
+  "phone": "+45 22 55 54 70",
+  "phone_note": "Morten Gyldendal Melberg, adm. partner."
+ },
+ "journey": {
+  "title_l1": "Følg vores",
+  "title_l2": "rejse.",
+  "body": "Beyond Rational leverer et kurateret udvalg af bevidste akustik- og overfladematerialer til moderne arkitektur — udvalgt for ydeevne, overflade og lavt fodaftryk. Følg med, mens vi bringer nye materialer til Danmark."
+ }
+}

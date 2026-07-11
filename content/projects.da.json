@@ -1,0 +1,72 @@
+{
+  "loader_tag": "Projekter / 2026",
+  "hero": {
+    "eyebrow": "Cases",
+    "title_l1": "Plader",
+    "title_l2": "i praksis.",
+    "subtitle": "Demoinstallationer med Aisti®-pladen, leveret fra pilotanlægget i Jyväskylä, Finland, og installeret af professionelle teams.",
+    "bg_image": "assets/aisti-026.jpg"
+  },
+  "gallery": [
+    {
+      "image": "assets/aisti-026.jpg",
+      "title": "Aisti®-plade, interiør",
+      "meta": "Produktfotografi"
+    },
+    {
+      "image": "assets/aisti-003.jpg",
+      "title": "Plade, strejflys",
+      "meta": "Materialestudie"
+    },
+    {
+      "image": "assets/aisti-035.jpg",
+      "title": "Overfladedetalje",
+      "meta": "Materialestudie"
+    },
+    {
+      "image": "assets/aisti-042.jpg",
+      "title": "Træfiber, komprimeret",
+      "meta": "Materialestudie"
+    },
+    {
+      "image": "assets/aisti-025.jpg",
+      "title": "Bag pressen",
+      "meta": "Produktion"
+    },
+    {
+      "image": "assets/aisti-008.jpg",
+      "title": "Loft, roligt",
+      "meta": "Produktfotografi"
+    }
+  ],
+  "cases": [
+    {
+      "case_label": "Case 01 · Stockholm",
+      "country": "SE",
+      "title": "Ångtvätten 22",
+      "meta": "Stora Essingen, Stockholm · Erhvervskontor, 40.000 m² ejendom",
+      "body": "Aisti®-plader i mørkeblå, 600×600 mm i 20 mm, installeret i standard T-skinne af et professionelt team. Pladerne absorberer lydrefleksioner og reducerer efterklang — installeret side om side med mineraluld for at vise ingen forskel i akustisk ydeevne."
+    },
+    {
+      "case_label": "Case 02 · Helsinki",
+      "country": "FI",
+      "title": "Bulevardi 2",
+      "meta": "Helsinki centrum · Erhvervskontor",
+      "body": "Aisti®-plader i hvid, 600×1200 mm i 40 mm, loftmonteret. Efterklangstiden — tiden det tager for lyden at aftage 60 dB — blev forbedret med ca. 29% på tværs af oktavbåndene efter installation."
+    }
+  ],
+  "list": [
+    {
+      "num": "01 /",
+      "title": "Ångtvätten 22",
+      "meta": "Stockholm · Trivsel på kontoret · 600×600, 20 mm, mørkeblå",
+      "year": "SE"
+    },
+    {
+      "num": "02 /",
+      "title": "Bulevardi 2",
+      "meta": "Helsinki · Efterklangsreduktion · 600×1200, 40 mm, hvid",
+      "year": "FI"
+    }
+  ]
+}

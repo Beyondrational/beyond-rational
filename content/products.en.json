@@ -1,4 +1,5 @@
 {
+  "loader_tag": "Products / 2026",
   "hero": {
     "eyebrow": "Products",
     "title": "Our Products.",
@@ -21,13 +22,13 @@
     {
       "name": "Sappa",
       "tag": "In development",
-      "body": "A new addition to the Beyond Rational range. Full presentation and specifications coming soon.",
+      "body": "Acoustic panels grown from hemp — a fast-renewing natural fibre, bound with a cement-free mineral binder. For walls and ceilings.",
       "image": "assets/aisti-035.jpg"
     },
     {
       "name": "Mogu",
       "tag": "In development",
-      "body": "A new addition to the Beyond Rational range. Full presentation and specifications coming soon.",
+      "body": "Soft, velvety acoustic panels grown from mycelium and upcycled textile residue. Engineered for absorption; naturally white, with a wider colour range on request.",
       "image": "assets/aisti-025.jpg"
     }
   ],

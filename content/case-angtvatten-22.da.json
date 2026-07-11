@@ -1,0 +1,67 @@
+{
+  "loader_tag": "Case 01 / Stockholm",
+  "hero": {
+    "eyebrow": "Case 01 · Stockholm · 2025",
+    "title_l1": "Ångtvätten",
+    "title_l2": "22.",
+    "lede": "En 40.000 m² erhvervsejendom i Stora Essingen. Åbne kontorlandskaber med et loft, der skulle absorbere lyd — uden at gøre opmærksom på sig selv.",
+    "image": "assets/aisti-person-angtvatten.webp"
+  },
+  "brief": {
+    "eyebrow": "Opgaven",
+    "title_l1": "Tale,",
+    "title_l2": "ikke støj.",
+    "body_p1": "Ejendomsadministrationen ønskede en loftsløsning, der kunne forbedre taleforståeligheden i det åbne kontorlandskab. Rummet havde et standard nedhængt T-skinneloft — hurtigt at installere, men akustisk ubehandlet.",
+    "body_p2": "Kravet var klart: opnå Class A-absorption i 500 Hz–2 kHz-området uden at ændre loftets æstetik. Pladen skulle fremstå som en neutral overflade, ikke som en akustisk behandling.",
+    "body_p3": "Aisti® blev installeret side om side med standard mineraluldsplader som en blindsammenligning. Installatører og brugere rapporterede ingen synlig forskel mellem de to produkter."
+  },
+  "spec": {
+    "items": [
+      { "key": "Produkt",    "value": "Aisti® Aalto" },
+      { "key": "Format",     "value": "600 × 600 mm" },
+      { "key": "Tykkelse",   "value": "20 mm" },
+      { "key": "Finish",     "value": "Sten · mellemgrå" },
+      { "key": "Montering",  "value": "Tæt · T-skinne" },
+      { "key": "Areal",      "value": "~320 m²" },
+      { "key": "Placering",  "value": "Stora Essingen, SE" },
+      { "key": "Installeret", "value": "Q4 2025" }
+    ]
+  },
+  "gallery": [
+    { "image": "assets/aisti-person-angtvatten.webp", "title": "Ångtvätten 22", "meta": "På stedet" },
+    { "image": "assets/aisti-render-3.webp", "title": "Loftinstallation", "meta": "Mørkeblå, 600×600" },
+    { "image": "assets/aisti-feeling-angtvatten.webp", "title": "Rummet", "meta": "Stemning" },
+    { "image": "assets/portrait-1662451190177.jpeg", "title": "Stora Essingen", "meta": "Ejendommen" }
+  ],
+  "results": {
+    "eyebrow": "Resultatet",
+    "title_l1": "Class A,",
+    "title_l2": "bekræftet.",
+    "note": "Absorptionskoefficienter fra EN ISO 354-efterklangsrumtest. Konfiguration: 20 mm / tæt (pladeflugtende). α ≥ 0,90 på tværs af talebåndene kvalificerer til Class A."
+  },
+  "performance": {
+    "items": [
+      { "key": "α ved 500 Hz",      "value": "0.75" },
+      { "key": "α ved 1 kHz",       "value": "0.75" },
+      { "key": "α ved 2 kHz",       "value": "0.80" },
+      { "key": "Absorptionsklasse", "value": "Class A" },
+      { "key": "vs. mineraluld",    "value": "Ingen målbar forskel" },
+      { "key": "Teststandard",      "value": "EN ISO 354" }
+    ]
+  },
+  "cta": {
+    "title_l1": "Specificér",
+    "title_l2": "dit projekt.",
+    "lede": "Send briefet. Vi hjælper dig med at vælge format, tykkelse og montering til dit rum — og skaffer dig vareprøver forud for fuld produktion i august 2026."
+  },
+  "marquee": {
+    "items": [
+      { "text": "Class A" },
+      { "text": "600 × 600 mm" },
+      { "text": "Stockholm" },
+      { "text": "~320 m²" },
+      { "text": "T-skinneinstallation" },
+      { "text": "Q4 2025" }
+    ]
+  }
+}

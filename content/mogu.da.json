@@ -1,0 +1,137 @@
+{
+  "loader_tag": "Mogu / 2026",
+  "hero": {
+    "eyebrow": "Produkt · Akustikplader af mycelium",
+    "title": "Mogu.",
+    "lede": "Bløde, fløjlsagtige akustikplader dyrket af mycelium og genanvendte tekstilrester. En 3D-formet overflade udviklet til at maksimere absorption, bragt til Danmark af Beyond Rational.",
+    "bg_image": "assets/aisti-025.jpg"
+  },
+  "hero_note": "Overfladerne vist er en vejledende gengivelse af finish-udvalget. Endelige vareprøver og det fulde farveudvalg efter aftale.",
+  "finishes": {
+    "white": {
+      "name": "Naturhvid"
+    },
+    "sand": {
+      "name": "Sand"
+    },
+    "charcoal": {
+      "name": "Kul"
+    }
+  },
+  "idea": {
+    "eyebrow": "Idéen",
+    "title_l1": "Dyrket, ikke",
+    "title_l2": "maskinbearbejdet.",
+    "points": [
+      {
+        "num": "01",
+        "title": "Mycelium, ikke skum",
+        "body": "Plader dyrkes af mycelium kombineret med genanvendte tekstilrester — et blødt, skumlignende materiale, der når sin endelige form gennem biologisk vækst, ikke kemisk forarbejdning."
+      },
+      {
+        "num": "02",
+        "title": "Formet til absorption",
+        "body": "En fløjlsagtig, tredimensionel overflade er udviklet specifikt til at absorbere talens frekvenser — tilpasset kontorer, mødelokaler og hjem."
+      },
+      {
+        "num": "03",
+        "title": "Cirkulær by design",
+        "body": "VOC-fri og 100% cirkulær, med et skrueløst monteringssystem for nem opsætning og afmontering. Naturligt hvid som standard, med et bredere farveudvalg tilgængeligt."
+      }
+    ]
+  },
+  "spec": {
+    "eyebrow": "Specifikationen",
+    "title_l1": "Blød overflade,",
+    "title_l2": "seriøs absorption.",
+    "rows": [
+      {
+        "key": "Kerne",
+        "value": "Mycelium og genanvendte tekstilrester"
+      },
+      {
+        "key": "Akustisk fokus",
+        "value": "Tilpasset talens frekvenser"
+      },
+      {
+        "key": "Brand",
+        "value": "Brandklassificeret kerne (klasse efter aftale)"
+      },
+      {
+        "key": "Fugt",
+        "value": "Fugtbestandig"
+      },
+      {
+        "key": "Formater",
+        "value": "—"
+      },
+      {
+        "key": "Endt levetid",
+        "value": "100% cirkulær, VOC-fri"
+      }
+    ]
+  },
+  "gallery_head": {
+    "eyebrow": "Galleri",
+    "title_l1": "Mogu,",
+    "title_l2": "i praksis.",
+    "body": "Billeder styres i CMS'et — tilføj eller udskift dem på /admin."
+  },
+  "gallery": [
+    {
+      "image": "assets/aisti-026.jpg",
+      "title": "Interiør",
+      "meta": "På stedet"
+    },
+    {
+      "image": "assets/aisti-003.jpg",
+      "title": "Overflade",
+      "meta": "Materialestudie"
+    },
+    {
+      "image": "assets/aisti-person-angtvatten.webp",
+      "title": "I brug",
+      "meta": "Kontor"
+    },
+    {
+      "image": "assets/aisti-042.jpg",
+      "title": "Detalje",
+      "meta": "Tekstur"
+    },
+    {
+      "image": "assets/aisti-008.jpg",
+      "title": "Loft",
+      "meta": "På stedet"
+    },
+    {
+      "image": "assets/br-office.webp",
+      "title": "Installation",
+      "meta": "Interiør"
+    },
+    {
+      "image": "assets/aisti-035.jpg",
+      "title": "Monteret",
+      "meta": "Detalje"
+    },
+    {
+      "image": "assets/aisti-012.jpg",
+      "title": "Væg",
+      "meta": "På stedet"
+    },
+    {
+      "image": "assets/aisti-tile-001.webp",
+      "title": "Materiale",
+      "meta": "Studie"
+    },
+    {
+      "image": "assets/aisti-025.jpg",
+      "title": "Værksted",
+      "meta": "Bag kulisserne"
+    }
+  ],
+  "cta": {
+    "title_l1": "Tilmeld",
+    "title_l2": "din interesse.",
+    "lede": "Vil du høre, når Mogu er klar? Send os en besked, så holder vi dig opdateret."
+  }
+}
