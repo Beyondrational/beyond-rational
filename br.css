@@ -2815,6 +2815,10 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
 .bra-cardset--overlay .bra-cardset__title,
 .bra-cardset--overlay .bra-cardset__body { color: var(--bra-on-oak); }
 
+/* Aisti edge-type photos are square (690x690) — the shared 3:4 overlay
+   ratio cropped their top/bottom via object-fit: cover. */
+body[data-page="product-aisti"] .bra-cardset--overlay .bra-cardset__card { aspect-ratio: 1 / 1; }
+
 /* 04 — frame: minimal, no image, bordered text-only */
 .bra-cardset--frame .bra-cardset__card { border: 2px solid var(--bra-ink); padding: var(--bra-s-4); }
 .bra-cardset--frame .bra-cardset__media { display: none; }
