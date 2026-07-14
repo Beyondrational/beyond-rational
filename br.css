@@ -790,6 +790,48 @@ form[data-form].is-active { display: flex; flex-direction: column; gap: 0; }
   line-height: 1.5;
   color: rgba(28,28,26,0.72);
 }
+
+/* Per-point value tags — persistent readout under the chart, since hover
+   tooltips have no touch equivalent. Updates with the active line. */
+.bra-chart__values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: var(--bra-s-3);
+}
+.bra-chart__value-tag {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid rgba(28,28,26,0.14);
+  border-radius: 999px;
+  font-family: var(--bra-font);
+  font-variant-numeric: tabular-nums;
+}
+.bra-chart__value-tag::before {
+  content: "";
+  align-self: center;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--tag-color, var(--bra-ink));
+}
+.bra-chart__value-freq {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--bra-ink-2);
+}
+.bra-chart__value-alpha {
+  font-size: 12px;
+  font-weight: 500;
+}
+@media (max-width: 600px) {
+  .bra-chart__value-tag { padding: 5px 9px; }
+  .bra-chart__value-freq { font-size: 9px; }
+  .bra-chart__value-alpha { font-size: 11px; }
+}
 .bra-chart__hint-action {
   display: inline-block;
   margin-left: 6px;
@@ -1580,6 +1622,10 @@ body.bra-nav-locked { overflow: hidden; }
 @media (max-width: 720px) {
   .bra-footer__grid { grid-template-columns: 1fr 1fr; }
   .bra-footer__brand { grid-column: span 2; }
+  /* Product has 4 links vs. Office's 1 and Contact's 2 — pairing it next
+     to either left a tall gap beside the shorter column. Give it the full
+     row alone so Office + Contact (similar heights) share the next row. */
+  .bra-footer__grid > div:nth-child(2) { grid-column: span 2; }
 }
 
 /* Page top spacer to clear sticky nav */

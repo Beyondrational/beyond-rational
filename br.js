@@ -357,6 +357,7 @@
     const hitzones = svg.querySelectorAll('.bra-chart-hitzone');
     const markers = svg.querySelectorAll('.bra-chart-marker');
     const lines = svg.querySelectorAll('.bra-chart-line');
+    const valuesEl = chart.querySelector('[data-chart-values]');
     if (!hitzones.length || !markers.length) return;
 
     // Build a lookup: variant -> [{ cx, cy, freq, alpha, el }]
@@ -385,6 +386,20 @@
     // Locked variant: stays highlighted even when nothing is hovered.
     // null = unlocked, all lines shown at full opacity.
     let lockedVariant = null;
+    const defaultVariant = markers[0] ? markers[0].getAttribute('data-variant') : null;
+
+    // Per-point value tags below the chart — the hover tooltip has no touch
+    // equivalent, so this keeps every frequency's value readable on mobile.
+    const renderValueTags = (variant) => {
+      if (!valuesEl) return;
+      const points = variantPoints[variant || defaultVariant] || [];
+      valuesEl.innerHTML = points.map((p) =>
+        '<span class="bra-chart__value-tag" style="--tag-color:' + variantColor(variant || defaultVariant) + '">' +
+          '<span class="bra-chart__value-freq">' + p.freq + '</span>' +
+          '<span class="bra-chart__value-alpha">α ' + p.alpha + '</span>' +
+        '</span>'
+      ).join('');
+    };
 
     // Scrub-mode tracking: if mouse moves fast along a line, suppress tooltip transitions
     let lastScrubAt = 0;
@@ -518,6 +533,7 @@
       lockedVariant = lockedVariant === variant ? null : variant;
       applyHighlight(lockedVariant);
       syncControllers();
+      renderValueTags(lockedVariant);
     };
 
     // Set lock to a specific variant (idempotent), null clears
@@ -525,10 +541,13 @@
       lockedVariant = variant || null;
       applyHighlight(lockedVariant);
       syncControllers();
+      renderValueTags(lockedVariant);
     };
 
     // Expose API on the chart element for external controllers
     chart._chartAPI = { setLock, toggleLock, getLock: () => lockedVariant };
+
+    renderValueTags(defaultVariant);
 
     // SVG-internal hover targets
     hitzones.forEach((hz) => {
@@ -1090,6 +1109,16 @@
     var activeAlt = (chips.filter(function (c) { return c.classList.contains('is-active'); })[0] || chips[0]);
     var altKey = activeAlt ? activeAlt.getAttribute('data-co2-alt') : null;
 
+    // Fixed scale (based on the slider's max, across every row, visible or
+    // not) so bars actually grow/shrink as area changes — normalizing to
+    // the *current* totals instead would keep every bar's relative
+    // proportion constant (all factors scale linearly with area), making
+    // the bars look static even though the kg numbers are updating.
+    var maxArea = parseFloat(range.max) || 1000;
+    var maxAbs = Math.max.apply(null, rows.map(function (r) {
+      return Math.abs(maxArea * (parseFloat(r.getAttribute('data-factor')) || 0));
+    }).concat([1]));
+
     // Supports either one "ours" row, or several (e.g. lifecycle + stored
     // carbon shown as separate bars but summed together for the total saving).
     function oursRows() { return rows.filter(function (r) { return r.hasAttribute('data-ours'); }); }
@@ -1104,8 +1133,6 @@
         if (!altKey) return true;
         return r.getAttribute('data-key') === altKey;
       });
-      var totals = visible.map(function (r) { return area * (parseFloat(r.getAttribute('data-factor')) || 0); });
-      var maxAbs = Math.max.apply(null, totals.map(Math.abs).concat([1]));
 
       rows.forEach(function (r) {
         var isVis = visible.indexOf(r) !== -1;
