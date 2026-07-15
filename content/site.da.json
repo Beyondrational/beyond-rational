@@ -3,6 +3,7 @@
  "nav": {
   "products": "Produkter",
   "projects": "Projekter",
+  "blog": "Journal",
   "contact": "Kontakt"
  },
  "footer": {
@@ -14,6 +15,7 @@
   "aisti_label": "Aisti® Akustikplade",
   "office_heading": "Kontor",
   "projects_label": "Projekter",
+  "blog_label": "Journal",
   "contact_heading": "Kontakt",
   "privacy_label": "Privatlivspolitik",
   "terms_label": "Betalingsbetingelser",

@@ -1,0 +1,32 @@
+{
+  "loader_tag": "Journal / 2026",
+  "hero": {
+    "eyebrow": "Journal",
+    "title_l1": "Notes on",
+    "title_l2": "conscious acoustics.",
+    "subtitle": "Short reads on acoustics, bio-based materials, and what actually matters when you're specifying a ceiling.",
+    "bg_image": "assets/aisti-042.jpg"
+  },
+  "posts": [
+    {
+      "eyebrow": "Workplace",
+      "title": "Why open-plan offices still get acoustics wrong",
+      "date": "May 2026"
+    },
+    {
+      "eyebrow": "Materials",
+      "title": "What \"bio-based\" actually means on a spec sheet",
+      "date": "May 2026"
+    },
+    {
+      "eyebrow": "Technology",
+      "title": "Foam-forming, in plain language",
+      "date": "June 2026"
+    },
+    {
+      "eyebrow": "Specification",
+      "title": "Reading an EPD without a chemistry degree",
+      "date": "June 2026"
+    }
+  ]
+}

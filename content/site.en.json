@@ -3,6 +3,7 @@
  "nav": {
   "products": "Products",
   "projects": "Projects",
+  "blog": "Journal",
   "contact": "Contact"
  },
  "footer": {
@@ -14,6 +15,7 @@
   "aisti_label": "Aisti® Acoustic Tile",
   "office_heading": "Office",
   "projects_label": "Projects",
+  "blog_label": "Journal",
   "contact_heading": "Contact",
   "privacy_label": "Privatlivspolitik",
   "terms_label": "Betalingsbetingelser",

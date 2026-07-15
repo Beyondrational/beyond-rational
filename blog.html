@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal · Beyond Rational</title>
+<meta name="description" content="Notes on acoustics, bio-based materials, and conscious building — from Beyond Rational.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="br.css?v=38">
+</head>
+<body class="bra" data-page="blog">
+
+<!-- Page loader (CLOU-style curtain, once per session) -->
+<div class="br-loader" aria-hidden="true">
+  <div class="br-loader__top">
+    <span class="br-loader__top-l" data-content="loader.brand">Beyond Rational</span>
+    <span class="br-loader__top-r" data-content="loader_tag">Journal / 2026</span>
+  </div>
+  <div class="br-loader__middle">
+    <div class="br-loader__counter">00</div>
+  </div>
+  <div class="br-loader__bottom">
+    <span class="br-loader__bottom-l" data-content="loader.loading">Loading</span>
+    <div class="br-loader__bar"></div>
+  </div>
+</div>
+
+<div class="bra-cursor" aria-hidden="true"></div>
+<div class="bra-scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<nav class="bra-nav">
+  <a href="index.html" class="bra-nav__brand"><img src="assets/logo.svg" alt="Beyond Rational" class="bra-nav__brand-logo" data-content="logo" data-content-attr="src"></a>
+  <div class="bra-nav__links">
+    <a href="products.html" class="bra-nav__link" data-content="nav.products">Products</a>
+    <a href="projects.html" class="bra-nav__link" data-content="nav.projects">Projects</a>
+    <a href="blog.html" class="bra-nav__link" aria-current="page" data-content="nav.blog">Journal</a>
+    <a href="contact.html" class="bra-nav__link" data-content="nav.contact">Contact</a>
+    <button type="button" class="bra-nav__lang" data-lang-toggle>DA</button>
+  </div>
+</nav>
+
+<!-- ===== Cinematic hero ===== -->
+<section class="home-hero home-hero--sub" data-on-dark>
+  <div class="home-hero__bg" aria-hidden="true">
+    <img src="assets/aisti-042.jpg" data-content="hero.bg_image" data-content-attr="src" alt="" width="1920" height="1440" loading="eager" fetchpriority="high">
+  </div>
+  <div class="home-hero__grain" aria-hidden="true"></div>
+
+  <div class="bra-container home-hero__inner">
+    <header class="home-hero__top">
+      <a href="index.html" class="bra-caption home-hero__back" data-content="misc.back_home">← Home</a>
+      <span class="bra-caption" data-content="hero.eyebrow">Journal</span>
+    </header>
+
+    <div class="home-hero__center">
+      <h1 class="home-hero__title">
+        <span class="bra-reveal-line" data-reveal data-content="hero.title_l1">Notes on</span><br>
+        <span class="bra-reveal-line" data-reveal data-content="hero.title_l2">conscious acoustics.</span>
+      </h1>
+      <p class="home-hero__sub home-reveal" data-stagger data-content="hero.subtitle">Short reads on acoustics, bio-based materials, and what actually matters when you're specifying a ceiling.</p>
+    </div>
+
+    <footer class="home-hero__foot">
+      <span class="bra-micro">Beyond Rational · Copenhagen</span>
+    </footer>
+  </div>
+</section>
+
+<!-- ===== Post grid ===== -->
+<section class="bra-container bra-section">
+  <div class="bra-card-grid bra-stagger" data-stagger>
+
+    <a href="blog-open-plan-acoustics.html" class="bra-card bra-card--stone bra-stagger-item" style="text-decoration: none; color: inherit;">
+      <img class="bra-card__img" src="assets/br-office.webp" alt="Open-plan office" loading="lazy">
+      <p class="bra-card__eyebrow" data-content="posts.0.eyebrow">Workplace</p>
+      <h3 class="bra-card__title" style="margin-top: 6px;" data-content="posts.0.title">Why open-plan offices still get acoustics wrong</h3>
+      <p class="bra-card__meta" style="margin-top: var(--bra-s-2);" data-content="posts.0.date">May 2026</p>
+    </a>
+
+    <a href="blog-bio-based-materials.html" class="bra-card bra-stagger-item" style="text-decoration: none; color: inherit;">
+      <img class="bra-card__img" src="assets/aisti-042.jpg" alt="Wood fibre material detail" loading="lazy">
+      <p class="bra-card__eyebrow" data-content="posts.1.eyebrow">Materials</p>
+      <h3 class="bra-card__title" style="margin-top: 6px;" data-content="posts.1.title">What "bio-based" actually means on a spec sheet</h3>
+      <p class="bra-card__meta" style="margin-top: var(--bra-s-2);" data-content="posts.1.date">May 2026</p>
+    </a>
+
+    <a href="blog-foam-forming.html" class="bra-card bra-card--ink bra-stagger-item" style="text-decoration: none; color: inherit;">
+      <img class="bra-card__img" src="assets/aisti-003.jpg" alt="Tile surface, raked light" loading="lazy">
+      <p class="bra-card__eyebrow" data-content="posts.2.eyebrow">Technology</p>
+      <h3 class="bra-card__title" style="margin-top: 6px;" data-content="posts.2.title">Foam-forming, in plain language</h3>
+      <p class="bra-card__meta" style="margin-top: var(--bra-s-2);" data-content="posts.2.date">June 2026</p>
+    </a>
+
+    <a href="blog-reading-an-epd.html" class="bra-card bra-card--oak bra-stagger-item" style="text-decoration: none; color: inherit;">
+      <img class="bra-card__img" src="assets/aisti-025.jpg" alt="Production workshop" loading="lazy">
+      <p class="bra-card__eyebrow" data-content="posts.3.eyebrow">Specification</p>
+      <h3 class="bra-card__title" style="margin-top: 6px;" data-content="posts.3.title">Reading an EPD without a chemistry degree</h3>
+      <p class="bra-card__meta" style="margin-top: var(--bra-s-2);" data-content="posts.3.date">June 2026</p>
+    </a>
+
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="bra-surface-oak">
+  <div class="bra-container bra-section">
+    <div class="bra-grid-2" style="align-items: end;">
+      <h2 class="bra-mega" style="line-height: 0.86;">
+        <span class="bra-reveal-line" data-reveal>Specify</span><br>
+        <span class="bra-reveal-line" data-reveal>your project.</span>
+      </h2>
+      <div class="bra-stack-wide">
+        <p class="bra-lede">
+          Send the brief. We'll help you select format, thickness, and mounting for your specific room — and get you samples ahead of full production in August 2026.
+        </p>
+        <a href="contact.html" style="text-decoration: none; align-self: flex-start; display: inline-block;">
+          <button class="bra-btn-mag bra-btn-mag--inv" data-magnetic>
+            <span>Request a sample</span>
+            <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bra-footer">
+  <div class="bra-footer__grid bra-stagger" data-stagger>
+    <div class="bra-footer__brand bra-stagger-item">
+      <img src="assets/logo.svg" alt="Beyond Rational" class="bra-footer__brand-logo" data-content="logo" data-content-attr="src">
+      <p class="bra-body" style="margin-top: var(--bra-s-3); max-width: 36ch; color: var(--bra-ink-2);" data-content="footer.brand_tagline">
+        Conscious acoustics. Official distributor of Aisti® in Denmark.
+      </p>
+    </div>
+    <div class="bra-stagger-item">
+      <h4 data-content="footer.product_heading">Product</h4>
+      <ul>
+        <li><a href="product-aisti.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.aisti_label">Aisti® Acoustic Tile</a></li>
+        <li><a href="product-wuud.html" class="bra-cta" style="border: none; padding: 0;">Wuud</a></li>
+        <li><a href="product-sappa.html" class="bra-cta" style="border: none; padding: 0;">Sappa</a></li>
+        <li><a href="product-mogu.html" class="bra-cta" style="border: none; padding: 0;">Mogu</a></li>
+      </ul>
+    </div>
+    <div class="bra-stagger-item">
+      <h4 data-content="footer.office_heading">Office</h4>
+      <ul>
+        <li><a href="projects.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.projects_label">Projects</a></li>
+        <li><a href="blog.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.blog_label">Journal</a></li>
+      </ul>
+    </div>
+    <div class="bra-stagger-item">
+      <h4 data-content="footer.contact_heading">Contact</h4>
+      <ul>
+        <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;"><span data-content="footer.email">hello@beyondrational.com</span></a></li>
+        <li><span class="bra-body" style="font-size: 14px;" data-content="footer.address">Firskovvej 36, 2800 Kongens Lyngby</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bra-footer__base home-reveal" data-stagger>
+    <span class="bra-micro" data-content="footer.copyright">© 2026 Beyond Rational ApS</span>
+    <a class="bra-micro" href="privatlivspolitik.html" style="text-decoration: none;" data-content="footer.privacy_label">Privatlivspolitik</a>
+    <a class="bra-micro" href="betalingsbetingelser.html" style="text-decoration: none;" data-content="footer.terms_label">Betalingsbetingelser</a>
+    <a class="bra-micro" href="design-system.html" style="text-decoration: none;" data-content="footer.design_system_label">Design system</a>
+    <span class="bra-micro" data-content="footer.design_system_version">B_R Design System · v1.0</span>
+  </div>
+</footer>
+
+<script src="br.js?v=33" defer></script>
+<script src="br-content.js?v=25" defer></script>
+</body>
+</html>

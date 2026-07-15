@@ -1,0 +1,32 @@
+{
+  "loader_tag": "Journal / 2026",
+  "hero": {
+    "eyebrow": "Journal",
+    "title_l1": "Noter om",
+    "title_l2": "bevidst akustik.",
+    "subtitle": "Korte læsninger om akustik, biobaserede materialer, og hvad der faktisk betyder noget, når du specificerer et loft.",
+    "bg_image": "assets/aisti-042.jpg"
+  },
+  "posts": [
+    {
+      "eyebrow": "Arbejdsplads",
+      "title": "Hvorfor open-plan kontorer stadig får akustikken galt",
+      "date": "Maj 2026"
+    },
+    {
+      "eyebrow": "Materialer",
+      "title": "Hvad \"biobaseret\" faktisk betyder på et datablad",
+      "date": "Maj 2026"
+    },
+    {
+      "eyebrow": "Teknologi",
+      "title": "Skumformning, i almindeligt sprog",
+      "date": "Juni 2026"
+    },
+    {
+      "eyebrow": "Specifikation",
+      "title": "Sådan læser du en EPD uden en kemi-uddannelse",
+      "date": "Juni 2026"
+    }
+  ]
+}
