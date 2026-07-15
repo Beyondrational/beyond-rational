@@ -666,13 +666,17 @@
     toggle.innerHTML = '<span></span><span></span>';
     navEl.appendChild(toggle);
 
-    // Inject scrim
+    // Inject scrim on <body>, not inside .bra-nav — the nav has a
+    // backdrop-filter, which gives it its own containing block for
+    // position:fixed descendants, so a scrim nested inside it can only
+    // ever cover the nav bar's own box instead of the full viewport.
     const scrim = document.createElement('div');
     scrim.className = 'bra-nav__scrim';
-    navEl.appendChild(scrim);
+    document.body.appendChild(scrim);
 
     const setOpen = (open) => {
       navEl.classList.toggle('is-open', open);
+      scrim.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
       document.body.classList.toggle('bra-nav-locked', open);
     };

@@ -1553,7 +1553,9 @@ body.is-loading { overflow: hidden; }
   }
   .bra-nav__link::after { display: none; }
   .bra-nav__lang { margin-top: var(--bra-s-2); font-size: 13px; padding: 8px 16px; }
-  /* Dim the page behind the open menu */
+  /* Dim the page behind the open menu — lives on <body>, not inside
+     .bra-nav (see br.js), so its own is-open class drives visibility
+     rather than an ancestor selector. */
   .bra-nav__scrim {
     position: fixed;
     inset: 0;
@@ -1561,9 +1563,9 @@ body.is-loading { overflow: hidden; }
     opacity: 0;
     pointer-events: none;
     transition: opacity var(--bra-dur-base) var(--bra-ease);
-    z-index: 1;
+    z-index: 45;
   }
-  .bra-nav.is-open .bra-nav__scrim { opacity: 1; pointer-events: auto; }
+  .bra-nav__scrim.is-open { opacity: 1; pointer-events: auto; }
 }
 body.bra-nav-locked { overflow: hidden; }
 
