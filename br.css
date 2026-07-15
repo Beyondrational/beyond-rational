@@ -1924,6 +1924,13 @@ body.bra-nav-locked { overflow: hidden; }
 .bra-card--ink   { background: var(--bra-ink);  color: var(--bra-on-oak); }
 .bra-card--oak   { background: var(--bra-oak);  color: var(--bra-on-oak); }
 .bra-card--stone { background: var(--bra-stone); }
+/* When the card itself is an <a> (e.g. a blog index card), the shared
+   `.bra a { color: inherit }` rule outranks the two rules above (equal
+   specificity, later source order) and pulls the parent's dark ink
+   colour back in instead. Target the title directly with enough
+   specificity to win regardless. */
+.bra-card--ink .bra-card__title,
+.bra-card--oak .bra-card__title { color: var(--bra-on-oak); }
 
 .bra-card__eyebrow {
   font-family: var(--bra-font);
