@@ -19,7 +19,7 @@
       "meta": "Material study"
     },
     {
-      "image": "assets/aisti-035.jpg",
+      "image": "assets/aisti-012.jpg",
       "title": "Surface detail",
       "meta": "Material study"
     },
@@ -29,16 +29,36 @@
       "meta": "Material study"
     },
     {
-      "image": "assets/aisti-025.jpg",
-      "title": "Behind the press",
-      "meta": "Production"
+      "image": "assets/aisti-person-angtvatten.webp",
+      "title": "On site",
+      "meta": "Ångtvätten 22"
     },
     {
-      "image": "assets/aisti-008.jpg",
+      "image": "assets/br-office.webp",
       "title": "Ceiling, calm",
       "meta": "Product photography"
     }
   ],
+  "supplier_head": {
+    "eyebrow": "Elsewhere",
+    "title": "Also from our suppliers.",
+    "body": "Installations by Sappa and Mogu themselves, shown here as a preview of the finish and format range Beyond Rational brings to Denmark."
+  },
+  "supplier_cards": [
+    {
+      "eyebrow": "Installation by Sappa",
+      "title": "Hemp panel ceiling"
+    },
+    {
+      "eyebrow": "Installation by Mogu",
+      "title": "Foresta System wall"
+    }
+  ],
+  "testimonial": {
+    "quote": "The ceiling reads as a <em>calm, neutral surface</em> — you would never guess it is doing acoustic work.",
+    "name": "Project architect",
+    "role": "Vandkunsten, Copenhagen"
+  },
   "cases": [
     {
       "case_label": "Case 01 · Stockholm",

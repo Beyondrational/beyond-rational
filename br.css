@@ -1649,9 +1649,15 @@ body.bra-nav-locked { overflow: hidden; }
     grid-row: auto !important;
     box-shadow: 0 0 0 1px rgba(28,28,26,0.12);
   }
+  /* The desktop row height (clamp(150px,19vw,260px)) reads fine against
+     the wide desktop columns it was tuned for, but at 2 narrower columns
+     the same short row crops each photo down to a thin strip. Fix the
+     row height instead so each cell keeps a sane, legible aspect ratio. */
+  .bra-gallery--img { grid-auto-rows: 260px; }
 }
 @media (max-width: 600px) {
   .bra-gallery { grid-template-columns: 1fr !important; }
+  .bra-gallery--img { grid-auto-rows: 320px; }
 }
 
 @media (max-width: 720px) {

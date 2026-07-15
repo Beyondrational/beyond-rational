@@ -19,7 +19,7 @@
       "meta": "Materialestudie"
     },
     {
-      "image": "assets/aisti-035.jpg",
+      "image": "assets/aisti-012.jpg",
       "title": "Overfladedetalje",
       "meta": "Materialestudie"
     },
@@ -29,16 +29,36 @@
       "meta": "Materialestudie"
     },
     {
-      "image": "assets/aisti-025.jpg",
-      "title": "Bag pressen",
-      "meta": "Produktion"
+      "image": "assets/aisti-person-angtvatten.webp",
+      "title": "På stedet",
+      "meta": "Ångtvätten 22"
     },
     {
-      "image": "assets/aisti-008.jpg",
+      "image": "assets/br-office.webp",
       "title": "Loft, roligt",
       "meta": "Produktfotografi"
     }
   ],
+  "supplier_head": {
+    "eyebrow": "Andre steder",
+    "title": "Også fra vores leverandører.",
+    "body": "Installationer af Sappa og Mogu selv, vist her som en forsmag på det finish- og formatudvalg, Beyond Rational bringer til Danmark."
+  },
+  "supplier_cards": [
+    {
+      "eyebrow": "Installation af Sappa",
+      "title": "Hampeplade-loft"
+    },
+    {
+      "eyebrow": "Installation af Mogu",
+      "title": "Foresta System-væg"
+    }
+  ],
+  "testimonial": {
+    "quote": "Loftet fremstår som en <em>rolig, neutral overflade</em> — man ville aldrig gætte, at det udfører akustisk arbejde.",
+    "name": "Projektarkitekt",
+    "role": "Vandkunsten, København"
+  },
   "cases": [
     {
       "case_label": "Case 01 · Stockholm",
