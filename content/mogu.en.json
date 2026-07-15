@@ -4,7 +4,7 @@
     "eyebrow": "Product · Mycelium acoustic panels",
     "title": "Mogu.",
     "lede": "Soft, velvety acoustic panels grown from mycelium and upcycled textile residue. A 3D-shaped surface engineered to maximise absorption, brought to Denmark by Beyond Rational.",
-    "bg_image": "assets/aisti-025.jpg"
+    "bg_image": "assets/mogu-hero-lifestyle.jpg"
   },
   "hero_note": "Surfaces shown are an indicative rendering of the finish range. Final samples and the full colour range on request.",
   "finishes": {
@@ -79,54 +79,24 @@
   },
   "gallery": [
     {
-      "image": "assets/aisti-026.jpg",
-      "title": "Interior",
+      "image": "assets/mogu-gallery-cityview.jpg",
+      "title": "Wall panel",
       "meta": "In place"
     },
     {
-      "image": "assets/aisti-003.jpg",
-      "title": "Surface",
-      "meta": "Material study"
-    },
-    {
-      "image": "assets/aisti-person-angtvatten.webp",
-      "title": "In use",
-      "meta": "Office"
-    },
-    {
-      "image": "assets/aisti-042.jpg",
-      "title": "Detail",
-      "meta": "Texture"
-    },
-    {
-      "image": "assets/aisti-008.jpg",
-      "title": "Ceiling",
+      "image": "assets/mogu-gallery-office.jpg",
+      "title": "Office",
       "meta": "In place"
     },
     {
-      "image": "assets/br-office.webp",
-      "title": "Install",
-      "meta": "Interior"
+      "image": "assets/mogu-gallery-colors.jpg",
+      "title": "Colours",
+      "meta": "Range"
     },
     {
-      "image": "assets/aisti-035.jpg",
-      "title": "Mounted",
-      "meta": "Detail"
-    },
-    {
-      "image": "assets/aisti-012.jpg",
-      "title": "Wall",
-      "meta": "In place"
-    },
-    {
-      "image": "assets/aisti-tile-001.webp",
+      "image": "assets/mogu-gallery-material.jpg",
       "title": "Material",
       "meta": "Study"
-    },
-    {
-      "image": "assets/aisti-025.jpg",
-      "title": "Workshop",
-      "meta": "Behind the scenes"
     }
   ],
   "cta": {

@@ -4,7 +4,7 @@
     "eyebrow": "Product · Hemp acoustic panels",
     "title": "Sappa.",
     "lede": "Acoustic panels grown from hemp — a fast-renewing natural fibre, bound with a cement-free mineral binder. For walls and ceilings, brought to Denmark by Beyond Rational.",
-    "bg_image": "assets/aisti-035.jpg"
+    "bg_image": "assets/sappa-hero-ceiling.jpg"
   },
   "hero_note": "Surfaces shown are an indicative rendering of the finish range. Final samples and the full colour range on request.",
   "finishes": {
@@ -79,54 +79,24 @@
   },
   "gallery": [
     {
-      "image": "assets/aisti-003.jpg",
-      "title": "Surface",
-      "meta": "Material study"
+      "image": "assets/sappa-gallery-panel.jpg",
+      "title": "Panel",
+      "meta": "Product"
     },
     {
-      "image": "assets/aisti-026.jpg",
+      "image": "assets/sappa-gallery-texture.jpg",
+      "title": "Texture",
+      "meta": "Material detail"
+    },
+    {
+      "image": "assets/sappa-gallery-colors.jpg",
+      "title": "Colours",
+      "meta": "Range"
+    },
+    {
+      "image": "assets/sappa-gallery-interior.jpg",
       "title": "Interior",
       "meta": "In place"
-    },
-    {
-      "image": "assets/aisti-042.jpg",
-      "title": "Detail",
-      "meta": "Texture"
-    },
-    {
-      "image": "assets/aisti-person-angtvatten.webp",
-      "title": "In use",
-      "meta": "Office"
-    },
-    {
-      "image": "assets/aisti-035.jpg",
-      "title": "Mounted",
-      "meta": "Detail"
-    },
-    {
-      "image": "assets/aisti-008.jpg",
-      "title": "Ceiling",
-      "meta": "In place"
-    },
-    {
-      "image": "assets/aisti-012.jpg",
-      "title": "Wall",
-      "meta": "In place"
-    },
-    {
-      "image": "assets/br-office-2.webp",
-      "title": "Install",
-      "meta": "Interior"
-    },
-    {
-      "image": "assets/aisti-tile-001.webp",
-      "title": "Material",
-      "meta": "Study"
-    },
-    {
-      "image": "assets/aisti-025.jpg",
-      "title": "Workshop",
-      "meta": "Behind the scenes"
     }
   ],
   "cta": {

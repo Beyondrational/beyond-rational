@@ -4,7 +4,7 @@
     "eyebrow": "Produkt · Akustikplader af hamp",
     "title": "Sappa.",
     "lede": "Akustikplader dyrket af hamp — en hurtigt fornybar naturfiber, bundet med et cementfrit mineralsk bindemiddel. Til vægge og lofter, bragt til Danmark af Beyond Rational.",
-    "bg_image": "assets/aisti-035.jpg"
+    "bg_image": "assets/sappa-hero-ceiling.jpg"
   },
   "hero_note": "Overfladerne vist er en vejledende gengivelse af finish-udvalget. Endelige vareprøver og det fulde farveudvalg efter aftale.",
   "finishes": {
@@ -55,54 +55,24 @@
   },
   "gallery": [
     {
-      "image": "assets/aisti-003.jpg",
-      "title": "Overflade",
-      "meta": "Materialestudie"
+      "image": "assets/sappa-gallery-panel.jpg",
+      "title": "Panel",
+      "meta": "Produkt"
     },
     {
-      "image": "assets/aisti-026.jpg",
+      "image": "assets/sappa-gallery-texture.jpg",
+      "title": "Tekstur",
+      "meta": "Materialedetalje"
+    },
+    {
+      "image": "assets/sappa-gallery-colors.jpg",
+      "title": "Farver",
+      "meta": "Udvalg"
+    },
+    {
+      "image": "assets/sappa-gallery-interior.jpg",
       "title": "Interiør",
       "meta": "På stedet"
-    },
-    {
-      "image": "assets/aisti-042.jpg",
-      "title": "Detalje",
-      "meta": "Tekstur"
-    },
-    {
-      "image": "assets/aisti-person-angtvatten.webp",
-      "title": "I brug",
-      "meta": "Kontor"
-    },
-    {
-      "image": "assets/aisti-035.jpg",
-      "title": "Monteret",
-      "meta": "Detalje"
-    },
-    {
-      "image": "assets/aisti-008.jpg",
-      "title": "Loft",
-      "meta": "På stedet"
-    },
-    {
-      "image": "assets/aisti-012.jpg",
-      "title": "Væg",
-      "meta": "På stedet"
-    },
-    {
-      "image": "assets/br-office-2.webp",
-      "title": "Installation",
-      "meta": "Interiør"
-    },
-    {
-      "image": "assets/aisti-tile-001.webp",
-      "title": "Materiale",
-      "meta": "Studie"
-    },
-    {
-      "image": "assets/aisti-025.jpg",
-      "title": "Værksted",
-      "meta": "Bag kulisserne"
     }
   ],
   "cta": {
