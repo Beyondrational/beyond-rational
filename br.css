@@ -1238,6 +1238,14 @@ form[data-form].is-active { display: flex; flex-direction: column; gap: 0; }
 /* ---------- Page loader (CLOU-style curtain) ---------- */
 body.is-loading { overflow: hidden; }
 
+/* Set synchronously (inline script, before first paint) on repeat
+   navigations within a session. Without this, the loader sits fully
+   visible in the DOM until the deferred br.js runs sessionStorage's
+   removal — late enough that a cross-document view-transition's "new
+   page" snapshot can capture it mid-visible, reading as a second loader
+   flashing in right after the curtain-wipe transition. */
+html.br-loader-skip .br-loader { display: none; }
+
 .br-loader {
   position: fixed;
   inset: 0;
