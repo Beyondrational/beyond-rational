@@ -6,12 +6,6 @@
     "lede": "Akustikplader dyrket af hamp — en hurtigt fornybar naturfiber, bundet med et cementfrit mineralsk bindemiddel. Til vægge og lofter, bragt til Danmark af Beyond Rational.",
     "bg_image": "assets/sappa-hero-ceiling.jpg"
   },
-  "hero_note": "Overfladerne vist er en vejledende gengivelse af finish-udvalget. Endelige vareprøver og det fulde farveudvalg efter aftale.",
-  "finishes": {
-    "natural": { "name": "Natur" },
-    "chalk": { "name": "Kridt" },
-    "charcoal": { "name": "Kul" }
-  },
   "idea": {
     "eyebrow": "Idéen",
     "title_l1": "Dyrket, ikke",

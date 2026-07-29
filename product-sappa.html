@@ -7,20 +7,8 @@
 <meta name="description" content="Sappa — a new acoustic material in the Beyond Rational range. In development; full presentation coming soon.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=40">
+<link rel="stylesheet" href="br.css?v=41">
 <script>if(sessionStorage.getItem("brLoaderShown")){document.documentElement.classList.add("br-loader-skip")}</script>
-<style>
-  /* ===== Sappa hero panel — hemp-fibre finishes, on the shared .prod-hero-panel structure ===== */
-  .prod-hero-panel {
-    --p-hi: #e3d2ae; --p-mid: #c2a877; --p-lo: #9c8054; --p-ink: #3a2d1a;
-  }
-  .prod-hero-panel__texture {
-    background: repeating-linear-gradient(96deg, transparent 0 5px, rgba(0,0,0,0.05) 5px 6px);
-    mix-blend-mode: multiply; opacity: 0.6;
-  }
-  .prod-hero-panel.is-chalk    { --p-hi:#f2ede2; --p-mid:#e2d8c4; --p-lo:#c9bb9c; --p-ink:#3a3226; }
-  .prod-hero-panel.is-charcoal { --p-hi:#4a4642; --p-mid:#2c2926; --p-lo:#171514; --p-ink:#f4f2ed; }
-</style>
 </head>
 <body class="bra" data-page="sappa">
 
@@ -76,33 +64,6 @@
       <span class="bra-micro">Beyond Rational · Copenhagen</span>
     </footer>
   </div>
-</section>
-
-<!-- ===== Hero panel (interactive, finish-driven) ===== -->
-<section class="bra-container" style="padding-bottom: var(--bra-s-6);">
-  <div class="prod-stage">
-    <div class="prod-hero-panel" id="sappaPanel" data-hero-panel data-default-finish="natural" data-finish="natural">
-      <div class="prod-hero-panel__texture"></div>
-      <div class="prod-hero-panel__sheen"></div>
-      <div class="prod-hero-panel__wordmark"><span class="prod-hero-panel__mark">SAPPA</span></div>
-      <span class="prod-hero-panel__label" data-hero-panel-label>Natural</span>
-    </div>
-  </div>
-
-  <div class="prod-finishes" data-finish-group role="group" aria-label="Choose a finish">
-    <button class="prod-swatch" type="button" data-finish="natural" aria-pressed="true">
-      <span class="prod-swatch__dot" style="background: radial-gradient(circle at 35% 30%, #e3d2ae, #9c8054);"></span><span class="prod-swatch__name" data-content="finishes.natural.name">Natural</span>
-    </button>
-    <button class="prod-swatch" type="button" data-finish="chalk" aria-pressed="false">
-      <span class="prod-swatch__dot" style="background: radial-gradient(circle at 35% 30%, #f2ede2, #c9bb9c);"></span><span class="prod-swatch__name" data-content="finishes.chalk.name">Chalk</span>
-    </button>
-    <button class="prod-swatch" type="button" data-finish="charcoal" aria-pressed="false">
-      <span class="prod-swatch__dot" style="background: radial-gradient(circle at 35% 30%, #4a4642, #171514);"></span><span class="prod-swatch__name" data-content="finishes.charcoal.name">Charcoal</span>
-    </button>
-  </div>
-  <p class="bra-caption" style="margin-top: var(--bra-s-3); font-size: 11px; max-width: 60ch;" data-content="hero_note">
-    Surfaces shown are an indicative rendering of the finish range. Final samples and the full colour range on request.
-  </p>
 </section>
 
 <!-- ===== The idea — three points on ink ===== -->
@@ -241,7 +202,7 @@
   </div>
 </footer>
 
-<script src="br.js?v=33" defer></script>
+<script src="br.js?v=34" defer></script>
 <script src="br-content.js?v=25" defer></script>
 </body>
 </html>

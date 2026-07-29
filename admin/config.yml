@@ -788,38 +788,6 @@ collections:
               - { label: "Title",   name: "title",   widget: "string" }
               - { label: "Lede",    name: "lede",    widget: "text"   }
               - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
-          - { label: "Hero note (under finishes)", name: "hero_note", widget: "text" }
-
-          - label: "Finish swatches"
-            name: "finishes"
-            widget: "object"
-            hint: "The 4 finishes are fixed (tied to the interactive panel's CSS/colours) — only the display name and code are editable here."
-            fields:
-              - label: "Graphite"
-                name: "graphite"
-                widget: "object"
-                fields:
-                  - { label: "Name", name: "name", widget: "string" }
-                  - { label: "Code", name: "code", widget: "string" }
-              - label: "Birch"
-                name: "birch"
-                widget: "object"
-                fields:
-                  - { label: "Name", name: "name", widget: "string" }
-                  - { label: "Code", name: "code", widget: "string" }
-              - label: "Oak"
-                name: "oak"
-                widget: "object"
-                fields:
-                  - { label: "Name", name: "name", widget: "string" }
-                  - { label: "Code", name: "code", widget: "string" }
-              - label: "Smoked"
-                name: "smoked"
-                widget: "object"
-                fields:
-                  - { label: "Name", name: "name", widget: "string" }
-                  - { label: "Code", name: "code", widget: "string" }
-
           - label: "The idea"
             name: "idea"
             widget: "object"
@@ -899,38 +867,6 @@ collections:
               - { label: "Title",   name: "title",   widget: "string" }
               - { label: "Lede",    name: "lede",    widget: "text"   }
               - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
-          - { label: "Hero note (under finishes)", name: "hero_note", widget: "text" }
-
-          - label: "Finish swatches"
-            name: "finishes"
-            widget: "object"
-            hint: "The 4 finishes are fixed (tied to the interactive panel's CSS/colours) — only the display name and code are editable here."
-            fields:
-              - label: "Graphite"
-                name: "graphite"
-                widget: "object"
-                fields:
-                  - { label: "Name", name: "name", widget: "string" }
-                  - { label: "Code", name: "code", widget: "string" }
-              - label: "Birch"
-                name: "birch"
-                widget: "object"
-                fields:
-                  - { label: "Name", name: "name", widget: "string" }
-                  - { label: "Code", name: "code", widget: "string" }
-              - label: "Oak"
-                name: "oak"
-                widget: "object"
-                fields:
-                  - { label: "Name", name: "name", widget: "string" }
-                  - { label: "Code", name: "code", widget: "string" }
-              - label: "Smoked"
-                name: "smoked"
-                widget: "object"
-                fields:
-                  - { label: "Name", name: "name", widget: "string" }
-                  - { label: "Code", name: "code", widget: "string" }
-
           - label: "The idea"
             name: "idea"
             widget: "object"
@@ -1801,23 +1737,6 @@ collections:
               - { label: "Title",   name: "title",   widget: "string" }
               - { label: "Lede",    name: "lede",    widget: "text"   }
               - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
-          - { label: "Hero panel note (below the colour swatches)", name: "hero_note", widget: "text" }
-          - label: "Finishes (hero panel swatches)"
-            name: "finishes"
-            widget: "object"
-            fields:
-              - label: "Natural white"
-                name: "white"
-                widget: "object"
-                fields: [ { label: "Name", name: "name", widget: "string" } ]
-              - label: "Sand"
-                name: "sand"
-                widget: "object"
-                fields: [ { label: "Name", name: "name", widget: "string" } ]
-              - label: "Charcoal"
-                name: "charcoal"
-                widget: "object"
-                fields: [ { label: "Name", name: "name", widget: "string" } ]
           - label: "The idea"
             name: "idea"
             widget: "object"
@@ -1890,23 +1809,6 @@ collections:
               - { label: "Title",   name: "title",   widget: "string" }
               - { label: "Lede",    name: "lede",    widget: "text"   }
               - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
-          - { label: "Hero panel note (below the colour swatches)", name: "hero_note", widget: "text" }
-          - label: "Finishes (hero panel swatches)"
-            name: "finishes"
-            widget: "object"
-            fields:
-              - label: "Natural white"
-                name: "white"
-                widget: "object"
-                fields: [ { label: "Name", name: "name", widget: "string" } ]
-              - label: "Sand"
-                name: "sand"
-                widget: "object"
-                fields: [ { label: "Name", name: "name", widget: "string" } ]
-              - label: "Charcoal"
-                name: "charcoal"
-                widget: "object"
-                fields: [ { label: "Name", name: "name", widget: "string" } ]
           - label: "The idea"
             name: "idea"
             widget: "object"
@@ -1979,23 +1881,6 @@ collections:
               - { label: "Title",   name: "title",   widget: "string" }
               - { label: "Lede",    name: "lede",    widget: "text"   }
               - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
-          - { label: "Hero panel note (below the finish swatches)", name: "hero_note", widget: "text" }
-          - label: "Finishes (hero panel swatches)"
-            name: "finishes"
-            widget: "object"
-            fields:
-              - label: "Natural"
-                name: "natural"
-                widget: "object"
-                fields: [ { label: "Name", name: "name", widget: "string" } ]
-              - label: "Chalk"
-                name: "chalk"
-                widget: "object"
-                fields: [ { label: "Name", name: "name", widget: "string" } ]
-              - label: "Charcoal"
-                name: "charcoal"
-                widget: "object"
-                fields: [ { label: "Name", name: "name", widget: "string" } ]
           - label: "The idea"
             name: "idea"
             widget: "object"
@@ -2068,23 +1953,6 @@ collections:
               - { label: "Title",   name: "title",   widget: "string" }
               - { label: "Lede",    name: "lede",    widget: "text"   }
               - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
-          - { label: "Hero panel note (below the finish swatches)", name: "hero_note", widget: "text" }
-          - label: "Finishes (hero panel swatches)"
-            name: "finishes"
-            widget: "object"
-            fields:
-              - label: "Natural"
-                name: "natural"
-                widget: "object"
-                fields: [ { label: "Name", name: "name", widget: "string" } ]
-              - label: "Chalk"
-                name: "chalk"
-                widget: "object"
-                fields: [ { label: "Name", name: "name", widget: "string" } ]
-              - label: "Charcoal"
-                name: "charcoal"
-                widget: "object"
-                fields: [ { label: "Name", name: "name", widget: "string" } ]
           - label: "The idea"
             name: "idea"
             widget: "object"

@@ -7,20 +7,8 @@
 <meta name="description" content="Mogu — a new acoustic material in the Beyond Rational range. In development; full presentation coming soon.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="br.css?v=40">
+<link rel="stylesheet" href="br.css?v=41">
 <script>if(sessionStorage.getItem("brLoaderShown")){document.documentElement.classList.add("br-loader-skip")}</script>
-<style>
-  /* ===== Mogu hero panel — mycelium felt finishes, on the shared .prod-hero-panel structure ===== */
-  .prod-hero-panel {
-    --p-hi: #f5f1e8; --p-mid: #e6ded0; --p-lo: #cfc4ac; --p-ink: #3a352c;
-  }
-  .prod-hero-panel__texture {
-    opacity: 0.16; mix-blend-mode: multiply;
-    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-  }
-  .prod-hero-panel.is-sand     { --p-hi:#d9c3a0; --p-mid:#b89a6e; --p-lo:#8f7248; --p-ink:#2e2415; }
-  .prod-hero-panel.is-charcoal { --p-hi:#4a4642; --p-mid:#2c2926; --p-lo:#171514; --p-ink:#f4f2ed; }
-</style>
 </head>
 <body class="bra" data-page="mogu">
 
@@ -76,33 +64,6 @@
       <span class="bra-micro">Beyond Rational · Copenhagen</span>
     </footer>
   </div>
-</section>
-
-<!-- ===== Hero panel (interactive, finish-driven) ===== -->
-<section class="bra-container" style="padding-bottom: var(--bra-s-6);">
-  <div class="prod-stage">
-    <div class="prod-hero-panel" id="moguPanel" data-hero-panel data-default-finish="white" data-finish="white">
-      <div class="prod-hero-panel__texture"></div>
-      <div class="prod-hero-panel__sheen"></div>
-      <div class="prod-hero-panel__wordmark"><span class="prod-hero-panel__mark">MOGU</span></div>
-      <span class="prod-hero-panel__label" data-hero-panel-label>Natural white</span>
-    </div>
-  </div>
-
-  <div class="prod-finishes" data-finish-group role="group" aria-label="Choose a colour">
-    <button class="prod-swatch" type="button" data-finish="white" aria-pressed="true">
-      <span class="prod-swatch__dot" style="background: radial-gradient(circle at 35% 30%, #f5f1e8, #cfc4ac);"></span><span class="prod-swatch__name" data-content="finishes.white.name">Natural white</span>
-    </button>
-    <button class="prod-swatch" type="button" data-finish="sand" aria-pressed="false">
-      <span class="prod-swatch__dot" style="background: radial-gradient(circle at 35% 30%, #d9c3a0, #8f7248);"></span><span class="prod-swatch__name" data-content="finishes.sand.name">Sand</span>
-    </button>
-    <button class="prod-swatch" type="button" data-finish="charcoal" aria-pressed="false">
-      <span class="prod-swatch__dot" style="background: radial-gradient(circle at 35% 30%, #4a4642, #171514);"></span><span class="prod-swatch__name" data-content="finishes.charcoal.name">Charcoal</span>
-    </button>
-  </div>
-  <p class="bra-caption" style="margin-top: var(--bra-s-3); font-size: 11px; max-width: 60ch;" data-content="hero_note">
-    Surfaces shown are an indicative rendering of the finish range. Final samples and the full colour range on request.
-  </p>
 </section>
 
 <!-- ===== The idea — three points on ink ===== -->
@@ -241,7 +202,7 @@
   </div>
 </footer>
 
-<script src="br.js?v=33" defer></script>
+<script src="br.js?v=34" defer></script>
 <script src="br-content.js?v=25" defer></script>
 </body>
 </html>

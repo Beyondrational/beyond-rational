@@ -6,18 +6,6 @@
     "lede": "Acoustic panels grown from hemp — a fast-renewing natural fibre, bound with a cement-free mineral binder. For walls and ceilings, brought to Denmark by Beyond Rational.",
     "bg_image": "assets/sappa-hero-ceiling.jpg"
   },
-  "hero_note": "Surfaces shown are an indicative rendering of the finish range. Final samples and the full colour range on request.",
-  "finishes": {
-    "natural": {
-      "name": "Natural"
-    },
-    "chalk": {
-      "name": "Chalk"
-    },
-    "charcoal": {
-      "name": "Charcoal"
-    }
-  },
   "idea": {
     "eyebrow": "The idea",
     "title_l1": "Grown, not",

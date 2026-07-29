@@ -6,25 +6,6 @@
     "lede": "Præget træbeklædning til interiør- og eksteriørarkitektur. Ægte træ — birk, el, asp, fyr — modificeret til at bære dyb relief, herefter finish natur, transparent eller malet. Udviklet i Finland; bragt til Danmark af Beyond Rational.",
     "bg_image": "assets/wuud_helsinki-design-week-2023_aukusti-heinonen_05.jpg"
   },
-  "hero_note": "Overfladerne vist er en vejledende gengivelse af finish-udvalget. Endelige vareprøver og mønstre efter aftale.",
-  "finishes": {
-    "graphite": {
-      "name": "Malet grafit",
-      "code": "W03"
-    },
-    "birch": {
-      "name": "Natur birk",
-      "code": "W04"
-    },
-    "oak": {
-      "name": "Transparent eg",
-      "code": "W02"
-    },
-    "smoked": {
-      "name": "Bejdset røget",
-      "code": "W01"
-    }
-  },
   "idea": {
     "eyebrow": "Idéen",
     "title_l1": "Træ, bearbejdet",

@@ -6,18 +6,6 @@
     "lede": "Bløde, fløjlsagtige akustikplader dyrket af mycelium og genanvendte tekstilrester. En 3D-formet overflade udviklet til at maksimere absorption, bragt til Danmark af Beyond Rational.",
     "bg_image": "assets/mogu-hero-lifestyle.jpg"
   },
-  "hero_note": "Overfladerne vist er en vejledende gengivelse af finish-udvalget. Endelige vareprøver og det fulde farveudvalg efter aftale.",
-  "finishes": {
-    "white": {
-      "name": "Naturhvid"
-    },
-    "sand": {
-      "name": "Sand"
-    },
-    "charcoal": {
-      "name": "Kul"
-    }
-  },
   "idea": {
     "eyebrow": "Idéen",
     "title_l1": "Dyrket, ikke",
