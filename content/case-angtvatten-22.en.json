@@ -30,8 +30,7 @@
   "gallery": [
     { "image": "assets/aisti-person-angtvatten.webp", "title": "Ångtvätten 22", "meta": "In place" },
     { "image": "assets/aisti-render-3.webp", "title": "Ceiling install", "meta": "Dark blue, 600×600" },
-    { "image": "assets/aisti-feeling-angtvatten.webp", "title": "The space", "meta": "Atmosphere" },
-    { "image": "assets/portrait-1662451190177.jpeg", "title": "Stora Essingen", "meta": "The property" }
+    { "image": "assets/aisti-feeling-angtvatten.webp", "title": "The space", "meta": "Atmosphere" }
   ],
   "results": {
     "eyebrow": "The result",

@@ -7,9 +7,9 @@
     "bg_image": "assets/mogu-hero-lifestyle.jpg"
   },
   "idea": {
-    "eyebrow": "Idéen",
+    "eyebrow": "Væksten",
     "title_l1": "Dyrket, ikke",
-    "title_l2": "maskinbearbejdet.",
+    "title_l2": "udskåret.",
     "points": [
       {
         "num": "01",
@@ -29,7 +29,7 @@
     ]
   },
   "spec": {
-    "eyebrow": "Specifikationen",
+    "eyebrow": "Tallene",
     "title_l1": "Blød overflade,",
     "title_l2": "seriøs absorption.",
     "rows": [
@@ -60,9 +60,9 @@
     ]
   },
   "gallery_head": {
-    "eyebrow": "Galleri",
-    "title_l1": "Mogu,",
-    "title_l2": "i praksis.",
+    "eyebrow": "I brug",
+    "title_l1": "Blød form,",
+    "title_l2": "i rummet.",
     "body": "Billeder styres i CMS'et — tilføj eller udskift dem på /admin."
   },
   "gallery": [
@@ -85,11 +85,26 @@
       "image": "assets/mogu-gallery-material.jpg",
       "title": "Materiale",
       "meta": "Studie"
+    },
+    {
+      "image": "assets/mogu-gallery-hexagon.jpg",
+      "title": "Sekskantet væg",
+      "meta": "Installation"
+    },
+    {
+      "image": "assets/mogu-gallery-triangle.jpg",
+      "title": "Trekantet væg, farve",
+      "meta": "Installation, kontor"
+    },
+    {
+      "image": "assets/mogu-gallery-detail.jpg",
+      "title": "Panelkant",
+      "meta": "Materialedetalje"
     }
   ],
   "cta": {
-    "title_l1": "Tilmeld",
-    "title_l2": "din interesse.",
-    "lede": "Vil du høre, når Mogu er klar? Send os en besked, så holder vi dig opdateret."
+    "title_l1": "Kom på",
+    "title_l2": "farvelisten.",
+    "lede": "Nysgerrig på Mogus former og farveudvalg til dit projekt? Fortæl os, hvad du planlægger, så følger vi op, når det er klar."
   }
 }

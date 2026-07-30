@@ -7,9 +7,9 @@
     "bg_image": "assets/mogu-hero-lifestyle.jpg"
   },
   "idea": {
-    "eyebrow": "The idea",
-    "title_l1": "Grown, not",
-    "title_l2": "machined.",
+    "eyebrow": "The growth",
+    "title_l1": "Cultivated,",
+    "title_l2": "not carved.",
     "points": [
       {
         "num": "01",
@@ -29,7 +29,7 @@
     ]
   },
   "spec": {
-    "eyebrow": "The spec",
+    "eyebrow": "The numbers",
     "title_l1": "Soft surface,",
     "title_l2": "serious absorption.",
     "rows": [
@@ -60,9 +60,9 @@
     ]
   },
   "gallery_head": {
-    "eyebrow": "Gallery",
-    "title_l1": "Mogu,",
-    "title_l2": "in place.",
+    "eyebrow": "Applied",
+    "title_l1": "Soft form,",
+    "title_l2": "in the room.",
     "body": "Images are managed in the CMS — add or replace them at /admin."
   },
   "gallery": [
@@ -85,11 +85,26 @@
       "image": "assets/mogu-gallery-material.jpg",
       "title": "Material",
       "meta": "Study"
+    },
+    {
+      "image": "assets/mogu-gallery-hexagon.jpg",
+      "title": "Hexagon wall",
+      "meta": "Installation"
+    },
+    {
+      "image": "assets/mogu-gallery-triangle.jpg",
+      "title": "Triangle wall, colour",
+      "meta": "Office install"
+    },
+    {
+      "image": "assets/mogu-gallery-detail.jpg",
+      "title": "Panel edge",
+      "meta": "Material detail"
     }
   ],
   "cta": {
-    "title_l1": "Register",
-    "title_l2": "your interest.",
-    "lede": "Want to hear when Mogu is ready? Send us a line and we'll keep you posted."
+    "title_l1": "Get on the",
+    "title_l2": "colour list.",
+    "lede": "Curious about Mogu's shapes and colour range for your project? Tell us what you're planning and we'll follow up when it's ready."
   }
 }

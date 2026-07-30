@@ -30,8 +30,7 @@
   "gallery": [
     { "image": "assets/aisti-person-angtvatten.webp", "title": "Ångtvätten 22", "meta": "På stedet" },
     { "image": "assets/aisti-render-3.webp", "title": "Loftinstallation", "meta": "Mørkeblå, 600×600" },
-    { "image": "assets/aisti-feeling-angtvatten.webp", "title": "Rummet", "meta": "Stemning" },
-    { "image": "assets/portrait-1662451190177.jpeg", "title": "Stora Essingen", "meta": "Ejendommen" }
+    { "image": "assets/aisti-feeling-angtvatten.webp", "title": "Rummet", "meta": "Stemning" }
   ],
   "results": {
     "eyebrow": "Resultatet",

@@ -7,7 +7,7 @@
     "bg_image": "assets/wuud_helsinki-design-week-2023_aukusti-heinonen_05.jpg"
   },
   "idea": {
-    "eyebrow": "Idéen",
+    "eyebrow": "Processen",
     "title_l1": "Træ, bearbejdet",
     "title_l2": "til relief.",
     "points": [
@@ -36,9 +36,9 @@
     ]
   },
   "gallery_head": {
-    "eyebrow": "Galleri",
-    "title_l1": "Wuud,",
-    "title_l2": "i praksis.",
+    "eyebrow": "In situ",
+    "title_l1": "Årer,",
+    "title_l2": "i relief.",
     "body": "Finish, mønstre og plader in situ. Billeder styres i CMS'et — tilføj eller udskift dem på /admin."
   },
   "gallery": [

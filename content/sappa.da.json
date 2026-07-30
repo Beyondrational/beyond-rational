@@ -7,7 +7,7 @@
     "bg_image": "assets/sappa-hero-ceiling.jpg"
   },
   "idea": {
-    "eyebrow": "Idéen",
+    "eyebrow": "Materialet",
     "title_l1": "Dyrket, ikke",
     "title_l2": "fremstillet.",
     "points": [
@@ -29,7 +29,7 @@
     ]
   },
   "spec": {
-    "eyebrow": "Specifikationen",
+    "eyebrow": "Opbygningen",
     "title_l1": "Hamp, bundet",
     "title_l2": "til rummet.",
     "rows": [
@@ -42,9 +42,9 @@
     ]
   },
   "gallery_head": {
-    "eyebrow": "Galleri",
-    "title_l1": "Sappa,",
-    "title_l2": "i praksis.",
+    "eyebrow": "På stedet",
+    "title_l1": "Hamp,",
+    "title_l2": "på væggen.",
     "body": "Billeder styres i CMS'et — tilføj eller udskift dem på /admin."
   },
   "gallery": [
@@ -67,11 +67,36 @@
       "image": "assets/sappa-gallery-interior.jpg",
       "title": "Interiør",
       "meta": "På stedet"
+    },
+    {
+      "image": "assets/sappa-gallery-raw-material.jpg",
+      "title": "Hamp",
+      "meta": "Råmateriale"
+    },
+    {
+      "image": "assets/sappa-gallery-workshop.jpg",
+      "title": "Sildebensmønster i loft",
+      "meta": "Installation, værksted"
+    },
+    {
+      "image": "assets/sappa-gallery-color-bar.jpg",
+      "title": "Farve, i praksis",
+      "meta": "Installation, restaurant"
+    },
+    {
+      "image": "assets/sappa-gallery-pattern.jpg",
+      "title": "Vægmønster",
+      "meta": "Designdetalje"
+    },
+    {
+      "image": "assets/sappa-gallery-boardroom.jpg",
+      "title": "Mødelokale, loft",
+      "meta": "Installation, kontor"
     }
   ],
   "cta": {
-    "title_l1": "Tilmeld",
-    "title_l2": "din interesse.",
-    "lede": "Vil du høre, når Sappa er klar? Send os en besked, så holder vi dig opdateret."
+    "title_l1": "Følg",
+    "title_l2": "hampe-sortimentet.",
+    "lede": "Vil du være først til at høre, når Sappa lander i Danmark? Efterlad dine oplysninger, så følger vi op med vareprøver og priser."
   }
 }

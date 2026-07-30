@@ -7,7 +7,7 @@
     "bg_image": "assets/wuud_helsinki-design-week-2023_aukusti-heinonen_05.jpg"
   },
   "idea": {
-    "eyebrow": "The idea",
+    "eyebrow": "The process",
     "title_l1": "Wood, worked",
     "title_l2": "into relief.",
     "points": [
@@ -36,9 +36,9 @@
     ]
   },
   "gallery_head": {
-    "eyebrow": "Gallery",
-    "title_l1": "Wuud,",
-    "title_l2": "in place.",
+    "eyebrow": "In situ",
+    "title_l1": "Grain,",
+    "title_l2": "in relief.",
     "body": "Finishes, patterns and panels in situ. Images are managed in the CMS — add or replace them at /admin."
   },
   "gallery": [

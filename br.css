@@ -2442,10 +2442,12 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
   color: rgba(244,242,237,0.82); font-family: var(--bra-font); font-weight: 500; font-size: 12px; letter-spacing: 0.06em; }
 .bra-lightbox__close, .bra-lightbox__nav {
   position: absolute; display: inline-flex; align-items: center; justify-content: center;
-  border: 1px solid rgba(244,242,237,0.38); background: none; color: var(--bra-on-oak);
-  cursor: pointer; border-radius: 999px; transition: background var(--bra-dur-base) var(--bra-ease); font-size: 20px; line-height: 1;
+  border: 1px solid rgba(244,242,237,0.55); background: rgba(18,16,14,0.55); color: var(--bra-on-oak);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.35);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  cursor: pointer; border-radius: 999px; transition: background var(--bra-dur-base) var(--bra-ease), border-color var(--bra-dur-base) var(--bra-ease); font-size: 20px; line-height: 1;
 }
-.bra-lightbox__close:hover, .bra-lightbox__nav:hover { background: rgba(244,242,237,0.14); }
+.bra-lightbox__close:hover, .bra-lightbox__nav:hover { background: rgba(18,16,14,0.8); border-color: rgba(244,242,237,0.85); }
 .bra-lightbox__close { top: clamp(16px, 3vw, 32px); right: clamp(16px, 3vw, 32px); width: 44px; height: 44px; }
 .bra-lightbox__nav { top: 50%; transform: translateY(-50%); width: 48px; height: 48px; }
 .bra-lightbox__nav--prev { left: clamp(12px, 2vw, 28px); }

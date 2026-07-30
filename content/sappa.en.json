@@ -7,7 +7,7 @@
     "bg_image": "assets/sappa-hero-ceiling.jpg"
   },
   "idea": {
-    "eyebrow": "The idea",
+    "eyebrow": "The material",
     "title_l1": "Grown, not",
     "title_l2": "manufactured.",
     "points": [
@@ -29,7 +29,7 @@
     ]
   },
   "spec": {
-    "eyebrow": "The spec",
+    "eyebrow": "The build",
     "title_l1": "Hemp, bound",
     "title_l2": "for the room.",
     "rows": [
@@ -60,9 +60,9 @@
     ]
   },
   "gallery_head": {
-    "eyebrow": "Gallery",
-    "title_l1": "Sappa,",
-    "title_l2": "in place.",
+    "eyebrow": "On site",
+    "title_l1": "Hemp,",
+    "title_l2": "on the wall.",
     "body": "Images are managed in the CMS — add or replace them at /admin."
   },
   "gallery": [
@@ -85,11 +85,36 @@
       "image": "assets/sappa-gallery-interior.jpg",
       "title": "Interior",
       "meta": "In place"
+    },
+    {
+      "image": "assets/sappa-gallery-raw-material.jpg",
+      "title": "Hemp",
+      "meta": "Raw material"
+    },
+    {
+      "image": "assets/sappa-gallery-workshop.jpg",
+      "title": "Herringbone ceiling",
+      "meta": "Workshop install"
+    },
+    {
+      "image": "assets/sappa-gallery-color-bar.jpg",
+      "title": "Colour, applied",
+      "meta": "Hospitality install"
+    },
+    {
+      "image": "assets/sappa-gallery-pattern.jpg",
+      "title": "Wall pattern",
+      "meta": "Design detail"
+    },
+    {
+      "image": "assets/sappa-gallery-boardroom.jpg",
+      "title": "Boardroom ceiling",
+      "meta": "Office install"
     }
   ],
   "cta": {
-    "title_l1": "Register",
-    "title_l2": "your interest.",
-    "lede": "Want to hear when Sappa is ready? Send us a line and we'll keep you posted."
+    "title_l1": "Follow the",
+    "title_l2": "hemp range.",
+    "lede": "Want first access to Sappa when it lands in Denmark? Leave your details and we'll follow up with samples and pricing."
   }
 }
