@@ -2876,7 +2876,7 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
   aspect-ratio: 3 / 4;
   border: 2px solid var(--bra-ink);
 }
-.bra-cardset--overlay .bra-cardset__media { position: absolute; inset: 0; margin: 0; border: none; }
+.bra-cardset--overlay .bra-cardset__media { position: absolute; inset: 0; margin: 0; border: none; aspect-ratio: auto; }
 .bra-cardset--overlay .bra-cardset__content {
   position: absolute; left: 0; right: 0; bottom: 0;
   padding: var(--bra-s-3);
