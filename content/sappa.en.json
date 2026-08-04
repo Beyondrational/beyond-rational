@@ -3,7 +3,7 @@
   "hero": {
     "eyebrow": "Product · Hemp acoustic panels",
     "title": "Sappa.",
-    "lede": "Acoustic panels grown from hemp — a fast-renewing natural fibre, bound with a cement-free mineral binder. For walls and ceilings, brought to Denmark by Beyond Rational.",
+    "lede": "Acoustic panels grown from hemp — one of today's most sustainable raw materials, bound with a cement-free mineral binder. For walls and ceilings, brought to Denmark by Beyond Rational.",
     "bg_image": "assets/sappa-hero-ceiling.jpg"
   },
   "idea": {
@@ -14,7 +14,7 @@
       {
         "num": "01",
         "title": "A fast-renewing raw material",
-        "body": "Hemp needs little water, no pesticides, and reaches full height in months, not years — capturing atmospheric carbon roughly twice as efficiently as forestry across its growing cycle."
+        "body": "Hemp needs little water, no pesticides, and reaches full height in months, not years — capturing atmospheric carbon roughly twice as efficiently as forestry across its growing cycle. A rapidly renewable material, by nature."
       },
       {
         "num": "02",
@@ -24,7 +24,7 @@
       {
         "num": "03",
         "title": "Cradle to cradle",
-        "body": "A cement-free mineral binder holds the hemp chips together, with no synthetic flame retardants added — the panel is naturally fire-resistant and recyclable at end of life."
+        "body": "A cement-free mineral binder holds the hemp chips together, with no synthetic flame retardants added — naturally fire-resistant, fully recyclable. A complete cradle-to-cradle design."
       }
     ]
   },
@@ -115,6 +115,6 @@
   "cta": {
     "title_l1": "Follow the",
     "title_l2": "hemp range.",
-    "lede": "Want first access to Sappa when it lands in Denmark? Leave your details and we'll follow up with samples and pricing."
+    "lede": "Sappa is landing in Denmark. Leave your details and we'll follow up with samples and pricing."
   }
 }

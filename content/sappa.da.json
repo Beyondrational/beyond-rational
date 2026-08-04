@@ -3,7 +3,7 @@
   "hero": {
     "eyebrow": "Produkt · Akustikplader af hamp",
     "title": "Sappa.",
-    "lede": "Akustikplader dyrket af hamp — en hurtigt fornybar naturfiber, bundet med et cementfrit mineralsk bindemiddel. Til vægge og lofter, bragt til Danmark af Beyond Rational.",
+    "lede": "Akustikplader dyrket af hamp — et af nutidens mest bæredygtige råmaterialer, bundet med et cementfrit mineralsk bindemiddel. Til vægge og lofter, bragt til Danmark af Beyond Rational.",
     "bg_image": "assets/sappa-hero-ceiling.jpg"
   },
   "idea": {
@@ -14,7 +14,7 @@
       {
         "num": "01",
         "title": "Et hurtigt fornybart råmateriale",
-        "body": "Hamp kræver kun lidt vand, ingen pesticider, og når fuld højde på måneder, ikke år — og opfanger atmosfærisk kulstof cirka dobbelt så effektivt som skovbrug gennem sin vækstcyklus."
+        "body": "Hamp kræver kun lidt vand, ingen pesticider, og når fuld højde på måneder, ikke år — og opfanger atmosfærisk kulstof cirka dobbelt så effektivt som skovbrug gennem sin vækstcyklus. Et hurtigt fornybart materiale, af natur."
       },
       {
         "num": "02",
@@ -24,7 +24,7 @@
       {
         "num": "03",
         "title": "Fra vugge til vugge",
-        "body": "Et cementfrit mineralsk bindemiddel holder hampestykkerne sammen, uden tilsatte syntetiske flammehæmmere — pladen er naturligt brandbestandig og genanvendelig ved endt levetid."
+        "body": "Et cementfrit mineralsk bindemiddel holder hampestykkerne sammen, uden tilsatte syntetiske flammehæmmere — naturligt brandbestandig, fuldt genanvendelig. Et komplet vugge-til-vugge-design."
       }
     ]
   },
@@ -97,6 +97,6 @@
   "cta": {
     "title_l1": "Følg",
     "title_l2": "hampe-sortimentet.",
-    "lede": "Vil du være først til at høre, når Sappa lander i Danmark? Efterlad dine oplysninger, så følger vi op med vareprøver og priser."
+    "lede": "Sappa lander i Danmark. Efterlad dine oplysninger, så følger vi op med vareprøver og priser."
   }
 }

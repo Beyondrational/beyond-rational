@@ -3,7 +3,7 @@
   "hero": {
     "eyebrow": "Product · Embossed wood cladding",
     "title": "Wuud.",
-    "lede": "Embossed wooden cladding for interior and exterior architecture. Real wood — birch, alder, aspen, pine — modified to hold deep relief, then finished natural, translucent or painted. Developed in Finland; brought to Denmark by Beyond Rational.",
+    "lede": "Novel wooden cladding for contemporary architecture. Real wood — birch, alder, aspen, pine — modified to hold deep relief, then finished natural, translucent or painted. Developed in Finland; brought to Denmark by Beyond Rational.",
     "bg_image": "assets/wuud_helsinki-design-week-2023_aukusti-heinonen_05.jpg"
   },
   "idea": {
@@ -14,12 +14,12 @@
       {
         "num": "01",
         "title": "Embossed, not printed",
-        "body": "A novel wood-modifying process presses pattern into the surface of real timber — true depth that catches light and throws shadow. Standard patterns or fully custom."
+        "body": "A novel wood-modifying process presses pattern into the surface of real timber — true depth that catches light and throws shadow. Standard patterns. Or fully custom."
       },
       {
         "num": "02",
         "title": "Inside and out",
-        "body": "The same modification that forms the relief weatherproofs the wood and adds fire retardancy — so one panel language runs from interior walls to building façades."
+        "body": "The same modification weatherproofs the wood and adds fire retardancy — one panel language, from interior walls to building façades."
       },
       {
         "num": "03",
@@ -139,6 +139,6 @@
   "cta": {
     "title_l1": "Request",
     "title_l2": "samples & prices.",
-    "lede": "Want Wuud panels, patterns and pricing for a project? Tell us the brief and we'll send finishes, formats and a quote."
+    "lede": "Panels, patterns, pricing — tell us the brief and we'll send finishes, formats and a quote."
   }
 }

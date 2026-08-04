@@ -3,7 +3,7 @@
   "hero": {
     "eyebrow": "Produkt · Præget træbeklædning",
     "title": "Wuud.",
-    "lede": "Præget træbeklædning til interiør- og eksteriørarkitektur. Ægte træ — birk, el, asp, fyr — modificeret til at bære dyb relief, herefter finish natur, transparent eller malet. Udviklet i Finland; bragt til Danmark af Beyond Rational.",
+    "lede": "Ny træbeklædning til samtidig arkitektur. Ægte træ — birk, el, asp, fyr — modificeret til at bære dyb relief, herefter finish natur, transparent eller malet. Udviklet i Finland; bragt til Danmark af Beyond Rational.",
     "bg_image": "assets/wuud_helsinki-design-week-2023_aukusti-heinonen_05.jpg"
   },
   "idea": {
@@ -14,12 +14,12 @@
       {
         "num": "01",
         "title": "Præget, ikke printet",
-        "body": "En ny træmodificerende proces presser mønster ind i overfladen af ægte tømmer — ægte dybde, der fanger lys og kaster skygge. Standardmønstre eller helt custom."
+        "body": "En ny træmodificerende proces presser mønster ind i overfladen af ægte tømmer — ægte dybde, der fanger lys og kaster skygge. Standardmønstre. Eller helt custom."
       },
       {
         "num": "02",
         "title": "Ude og inde",
-        "body": "Den samme modifikation, der former reliefet, vejrbestandiggør træet og tilføjer brandhæmning — så ét pladesprog går fra indervægge til bygningsfacader."
+        "body": "Den samme modifikation vejrbestandiggør træet og tilføjer brandhæmning — ét pladesprog, fra indervægge til bygningsfacader."
       },
       {
         "num": "03",
@@ -139,6 +139,6 @@
   "cta": {
     "title_l1": "Bestil",
     "title_l2": "vareprøver & priser.",
-    "lede": "Vil du have Wuud-plader, mønstre og priser til et projekt? Fortæl os briefet, så sender vi finish, formater og et tilbud."
+    "lede": "Plader, mønstre, priser — fortæl os briefet, så sender vi finish, formater og et tilbud."
   }
 }
