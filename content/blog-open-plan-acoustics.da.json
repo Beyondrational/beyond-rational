@@ -1,0 +1,19 @@
+{
+  "loader_tag": "Journal / 2026",
+  "hero": {
+    "eyebrow": "Arbejdsplads · Maj 2026",
+    "title_l1": "Åbne kontorer",
+    "title_l2": "får stadig dette galt.",
+    "lede": "Lys og sigtelinjer specificeres først. Akustik specificeres sidst, hvis overhovedet. Den rækkefølge er grunden til, at så mange pæne kontorer er svære at tænke i.",
+    "image": "assets/br-office.webp"
+  },
+  "article": {
+    "p1": "Gå ind i de fleste åbne kontorer bygget de sidste ti år, og du vil finde det samme brief fulgt: synlige lofter for højde, hårde gulve for holdbarhed, glaspartier for lys. Hvert af de valg er fornuftigt for sig selv. Lagt oven på hinanden fjerner de næsten enhver blød overflade, rummet havde til at absorbere lyd med.",
+    "p2": "Resultatet bliver sjældent beskrevet som et støjproblem — det bliver beskrevet som et koncentrationsproblem, et mødelokale-bookingproblem, et \"hvorfor har alle høretelefoner på\"-problem. Efterklangstid er sjældent det første, nogen bebrejder, fordi det er usynligt. Man ser ikke et ubehandlet loft være larmende. Man lægger blot gradvist mærke til, at et opkald i hjørnet af rummet kan høres fra ens skrivebord, og at en femminutters samtale to skriveborde væk vælter eftermiddagen.",
+    "h1": "Løsningen er som regel et loft, ikke en politik",
+    "p3": "De fleste trivselsinitiativer rettet mod støj — stille timer, telefonbokse, \"biblioteksregler\" — er forsøg på at styre adfærd omkring et rum, der ikke gør sit arbejde. De hjælper, men de arbejder imod rummet i stedet for med det. Et loft med reel absorption ændrer udgangspunktet: tale klinger hurtigere af, baggrundsstøj bygger sig ikke op i løbet af dagen, og en hævet stemme to rækker væk forbliver en baggrundssummen i stedet for en distraktion.",
+    "p4": "Det mål, der betyder noget her, er efterklangstid — hvor lang tid det tager lyd at klinge af med 60 dB, efter kilden stopper. Bygningsreglementet sætter mål for det afhængigt af rummets brug, men et ubehandlet åbent kontor med et hårdt loft vil typisk sejle forbi de mål. Tilføj en klasse A-absorbent på tværs af loftfladen, og efterklangstiden falder markant — som regel nok alene til at bringe et rum tilbage i et behageligt niveau, uden at røre gulv eller vægge.",
+    "h2": "Man burde ikke skulle vælge mellem stilhed og rent design",
+    "p5": "Grunden til, at akustisk behandling blev specificeret sidst i så lang tid, er, at det plejede at se ud som akustisk behandling — perforerede plader, synlig batting, en tydeligt \"akustisk\" tekstur boltet på et ellers færdigt loft. Det kompromis var det, der skubbede det til bunden af briefet. En plade, der fremstår som en enkel, neutral flade, fjerner kompromiset helt: arkitekter får det flade, stille loft, de specificerede til visualiseringen, og det løser samtidig et problem, ingen ville sætte en linje i budgettet af."
+  }
+}

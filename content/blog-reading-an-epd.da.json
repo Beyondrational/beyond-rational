@@ -1,0 +1,21 @@
+{
+  "loader_tag": "Journal / 2026",
+  "hero": {
+    "eyebrow": "Specifikation · Juni 2026",
+    "title_l1": "At læse en EPD,",
+    "title_l2": "uden kemien.",
+    "lede": "En praktisk guide til de fire afsnit i en miljøvaredeklaration, der reelt afgør en sammenligning.",
+    "image": "assets/aisti-025.jpg"
+  },
+  "article": {
+    "p1": "En miljøvaredeklaration (EPD) er lang, standardiseret og skrevet til LCA-praktikere snarere end arkitekter. Det meste kan man springe over. Fire ting på den afgør, om et produkt reelt har en lavere påvirkning end et andet.",
+    "h1": "1. Hvilke livscyklusfaser der reelt er dækket",
+    "p2": "Enhver EPD angiver sit omfang med EN 15804-fasekoderne: A1-A3 dækker råmaterialeforsyning, transport og fremstilling — \"vugge til port.\" A1-C4 udvider det gennem produktets brugsfase og endte levetid — \"vugge til grav.\" Et produkt angivet kun med A1-A3-tal ser bedre ud end et angivet med A1-C4, selv hvis de underliggende materialer er identiske, simpelthen fordi mindre af livscyklussen er talt med. Tjek altid, hvilke faser et tal dækker, før det sammenlignes med et andet produkts tal.",
+    "h2": "2. GWP-fossil versus GWP-biogent",
+    "p3": "Global opvarmningspotentiale (GWP) opdeles i fossile og biogene komponenter. GWP-fossil er udledninger fra afbrænding af fossile brændstoffer — det tal, man vil se lavt. GWP-biogent er ofte negativt på træbaserede produkter, fordi voksende træ opfanger atmosfærisk kulstof, der midlertidigt lagres i materialet. Det er reelt og værd at bemærke, men det er en anden slags tal end en udledningsreduktion — det er lagret kulstof, ikke undgået kulstof, og det frigives igen ved endt levetid, medmindre produktet reelt genanvendes frem for at blive brændt eller deponeret.",
+    "h3": "3. Den funktionelle enhed",
+    "p4": "Enhver EPD angiver en funktionel enhed — som regel \"pr. m²\" eller \"pr. kg\" produkt, ved en angivet tykkelse eller densitet. At sammenligne en 20 mm plades pr.-m²-tal med en 40 mm plades pr.-m²-tal vil få det tyndere produkt til at se bedre ud, fordi det, pr. kvadratmeter, bruger mindre materiale — hvilket måske eller måske ikke er den sammenligning, man reelt har brug for til sin specifikke anvendelse. Tjek altid, at den angivne enhed matcher det, man rent faktisk specificerer.",
+    "h4": "4. Hvem der har verificeret den",
+    "p5": "En EPD er kun så troværdig som sin verifikation. En tredjepartsverificeret, programoperatør-udstedt EPD (gennem et registreret EPD-program) er blevet kontrolleret op mod de underliggende LCA-data af nogen uden interesse i resultatet. En selverklæret miljøpåstand uden det verifikationstrin er en marketingudtalelse i en EPD's format — værd at spørge om, ikke værd at behandle som ligeværdig."
+  }
+}

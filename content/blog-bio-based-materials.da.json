@@ -1,0 +1,19 @@
+{
+  "loader_tag": "Journal / 2026",
+  "hero": {
+    "eyebrow": "Materialer · Maj 2026",
+    "title_l1": "Hvad \"bio-baseret\"",
+    "title_l2": "egentlig betyder.",
+    "lede": "Betegnelsen dukker op på rigtig mange specifikationsark lige nu. Den betyder ikke altid det samme to gange.",
+    "image": "assets/aisti-042.jpg"
+  },
+  "article": {
+    "p1": "\"Bio-baseret\" er en påstand om materialesammensætning, ikke en bæredygtighedsscore. Det betyder, at en del af et produkts masse stammer fra biologiske kilder — træ, hamp, mycelium, halm — frem for fossilt råstof. Det er reelt nyttigt at vide. Det er også en meget snævrere påstand, end ordet plejer at antyde på en moodboard.",
+    "p2": "Et produkt kan være 100% bio-baseret målt på masse og stadig bære et betydeligt CO2-aftryk, afhængigt af hvordan råmaterialet er dyrket, høstet, forarbejdet og transporteret, og hvad der bruges til at binde det sammen. Omvendt kan et produkt med en mindre bio-baseret andel nogle gange klare sig bedre på livscyklusudledninger end et \"fuldt\" bio-baseret et, hvis forarbejdningen er effektiv og transportafstanden kort. Sammensætning og aftryk hænger sammen, men de er ikke det samme mål.",
+    "h1": "Hvad man reelt bør tjekke",
+    "p3": "Tre ting fortæller mere end betegnelsen alene: hvad bindemidlet er (syntetiske harpikser og lim kan dominere et produkts miljøpåvirkning, selv når hovedfiberen er naturlig), hvor GWP-fossil og GWP-biogent står separat på EPD'en (biogen kulstoflagring er reel, men det er et andet tal end undgåede fossile udledninger, og at blande de to overdriver gevinsten), og hvad der sker ved endt levetid (et bio-baseret produkt, der ikke kan adskilles fra sit bindemiddel til genanvendelse eller kompostering, bliver blot en anden slags deponeret masse).",
+    "p4": "Intet af dette er en grund til at mistro bio-baserede materialer — det er en grund til at læse forbi ordet. En plade lavet af skumformet træfiber med et mineralsk eller cementfrit bindemiddel, ingen syntetiske flammehæmmere, og en dokumenteret genanvendelig endt levetid er et grundlæggende andet produkt end et, der blot deler den samme overskriftspåstand. Det er specifikationsarket, ikke betegnelsen, hvor den forskel viser sig.",
+    "h2": "Bed om EPD'en, ikke marketingteksten",
+    "p5": "En miljøvaredeklaration (EPD) er et standardiseret, tredjepartsverificeret dokument — det kan ikke sige ting, et brands hjemmeside kan slippe afsted med. Hvis en bio-baseret påstand ikke har en EPD til at bakke den op, er det som regel det første, det er værd at spørge om, før den kommer på specifikationen."
+  }
+}

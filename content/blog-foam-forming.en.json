@@ -1,0 +1,18 @@
+{
+  "loader_tag": "Journal / 2026",
+  "hero": {
+    "eyebrow": "Technology · June 2026",
+    "title_l1": "Foam-forming,",
+    "title_l2": "in plain language.",
+    "lede": "How you turn wood fibre into a rigid, porous, sound-absorbing tile — without pressing it flat, and without plastic.",
+    "image": "assets/aisti-003.jpg"
+  },
+  "article": {
+    "p1": "Most fibreboard is made the way you'd guess: fibres get mixed with a binder, laid flat, then pressed under heat until they compact into a dense sheet. That process is efficient and well understood, but it works against you if what you actually want is a porous material — pressing is, by definition, squeezing the air out.",
+    "p2": "Foam-forming does the opposite. Instead of suspending wood fibres in water and pressing them flat, the fibres are suspended in a stable foam — water, air, and a small amount of foaming agent — and cast into shape while the foam holds the fibres apart from each other. As the foam collapses and dries, it leaves behind an open, three-dimensional lattice of fibre rather than a compacted sheet. The technique isn't new; it's adapted from a papermaking process, applied here to a much thicker, more rigid product.",
+    "h1": "Why the openness matters for sound",
+    "p3": "Sound absorption in a porous material works by friction: as a sound wave pushes air through a network of tiny interconnected pores, that air movement loses energy to friction against the pore walls, and the wave loses amplitude. A dense, pressed board has very little of that open pore structure to work with. A foam-formed tile is mostly open space by volume, with fibre distributed through it in three dimensions rather than compacted into a flat plane — which is a large part of why it can reach Class A absorption without needing a separate acoustic backing or a perforated face.",
+    "h2": "And why it doesn't need what conventional boards do",
+    "p4": "Because the foam does the work of keeping the structure open, foam-formed tiles don't rely on synthetic binders to hold their shape the way some conventional wood-fibre or mineral-wool products do. Fewer additives means fewer places for VOCs or irritant fibres to come from, which is also why this class of material tends to carry clean indoor-air certifications. It's a case where the manufacturing process and the sustainability story aren't separate claims — the process is what makes the material lighter, more porous, and simpler in composition, all at once."
+  }
+}

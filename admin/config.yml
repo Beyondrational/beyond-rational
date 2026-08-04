@@ -2006,3 +2006,303 @@ collections:
               - { label: "Title line 1", name: "title_l1", widget: "string" }
               - { label: "Title line 2", name: "title_l2", widget: "string" }
               - { label: "Lede",         name: "lede",     widget: "text"   }
+
+
+  # =============== JOURNAL — index ===============
+  - name: "blog-en"
+    label: "Journal — index — EN"
+    files:
+      - file: "content/blog.en.json"
+        name: "blog-en"
+        label: "Journal index — EN"
+        fields:
+          - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Subtitle",     name: "subtitle", widget: "text"   }
+              - { label: "Hero background image", name: "bg_image", widget: "image" }
+          - label: "Posts (index cards — order/count must match the 4 post pages)"
+            name: "posts"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title",   name: "title",   widget: "string" }
+              - { label: "Date",    name: "date",    widget: "string" }
+
+  - name: "blog-da"
+    label: "Journal — index — DA"
+    files:
+      - file: "content/blog.da.json"
+        name: "blog-da"
+        label: "Journal index — DA"
+        fields:
+          - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Subtitle",     name: "subtitle", widget: "text"   }
+              - { label: "Hero background image", name: "bg_image", widget: "image" }
+          - label: "Posts (index cards — order/count must match the 4 post pages)"
+            name: "posts"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title",   name: "title",   widget: "string" }
+              - { label: "Date",    name: "date",    widget: "string" }
+
+  # =============== JOURNAL — Why open-plan offices still get acoustics wrong ===============
+  - name: "blog-open-plan-acoustics-en"
+    label: "Journal — Open-plan acoustics — EN"
+    files:
+      - file: "content/blog-open-plan-acoustics.en.json"
+        name: "blog-open-plan-acoustics-en"
+        label: "Post — EN"
+        fields:
+          - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Lede",         name: "lede",     widget: "text"   }
+              - { label: "Hero image",   name: "image",    widget: "image"  }
+          - label: "Article body"
+            name: "article"
+            widget: "object"
+            hint: "Fixed slots matching the page's layout — paragraph 1, paragraph 2, heading 1, paragraph 3, paragraph 4, heading 2, paragraph 5."
+            fields:
+              - { label: "Paragraph 1",  name: "p1", widget: "text" }
+              - { label: "Paragraph 2",  name: "p2", widget: "text" }
+              - { label: "Heading 1",    name: "h1", widget: "string" }
+              - { label: "Paragraph 3",  name: "p3", widget: "text" }
+              - { label: "Paragraph 4",  name: "p4", widget: "text" }
+              - { label: "Heading 2",    name: "h2", widget: "string" }
+              - { label: "Paragraph 5",  name: "p5", widget: "text" }
+
+  - name: "blog-open-plan-acoustics-da"
+    label: "Journal — Open-plan acoustics — DA"
+    files:
+      - file: "content/blog-open-plan-acoustics.da.json"
+        name: "blog-open-plan-acoustics-da"
+        label: "Post — DA"
+        fields:
+          - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Lede",         name: "lede",     widget: "text"   }
+              - { label: "Hero image",   name: "image",    widget: "image"  }
+          - label: "Article body"
+            name: "article"
+            widget: "object"
+            hint: "Fixed slots matching the page's layout — paragraph 1, paragraph 2, heading 1, paragraph 3, paragraph 4, heading 2, paragraph 5."
+            fields:
+              - { label: "Paragraph 1",  name: "p1", widget: "text" }
+              - { label: "Paragraph 2",  name: "p2", widget: "text" }
+              - { label: "Heading 1",    name: "h1", widget: "string" }
+              - { label: "Paragraph 3",  name: "p3", widget: "text" }
+              - { label: "Paragraph 4",  name: "p4", widget: "text" }
+              - { label: "Heading 2",    name: "h2", widget: "string" }
+              - { label: "Paragraph 5",  name: "p5", widget: "text" }
+
+  # =============== JOURNAL — What "bio-based" actually means ===============
+  - name: "blog-bio-based-materials-en"
+    label: "Journal — Bio-based materials — EN"
+    files:
+      - file: "content/blog-bio-based-materials.en.json"
+        name: "blog-bio-based-materials-en"
+        label: "Post — EN"
+        fields:
+          - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Lede",         name: "lede",     widget: "text"   }
+              - { label: "Hero image",   name: "image",    widget: "image"  }
+          - label: "Article body"
+            name: "article"
+            widget: "object"
+            hint: "Fixed slots matching the page's layout — paragraph 1, paragraph 2, heading 1, paragraph 3, paragraph 4, heading 2, paragraph 5."
+            fields:
+              - { label: "Paragraph 1",  name: "p1", widget: "text" }
+              - { label: "Paragraph 2",  name: "p2", widget: "text" }
+              - { label: "Heading 1",    name: "h1", widget: "string" }
+              - { label: "Paragraph 3",  name: "p3", widget: "text" }
+              - { label: "Paragraph 4",  name: "p4", widget: "text" }
+              - { label: "Heading 2",    name: "h2", widget: "string" }
+              - { label: "Paragraph 5",  name: "p5", widget: "text" }
+
+  - name: "blog-bio-based-materials-da"
+    label: "Journal — Bio-based materials — DA"
+    files:
+      - file: "content/blog-bio-based-materials.da.json"
+        name: "blog-bio-based-materials-da"
+        label: "Post — DA"
+        fields:
+          - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Lede",         name: "lede",     widget: "text"   }
+              - { label: "Hero image",   name: "image",    widget: "image"  }
+          - label: "Article body"
+            name: "article"
+            widget: "object"
+            hint: "Fixed slots matching the page's layout — paragraph 1, paragraph 2, heading 1, paragraph 3, paragraph 4, heading 2, paragraph 5."
+            fields:
+              - { label: "Paragraph 1",  name: "p1", widget: "text" }
+              - { label: "Paragraph 2",  name: "p2", widget: "text" }
+              - { label: "Heading 1",    name: "h1", widget: "string" }
+              - { label: "Paragraph 3",  name: "p3", widget: "text" }
+              - { label: "Paragraph 4",  name: "p4", widget: "text" }
+              - { label: "Heading 2",    name: "h2", widget: "string" }
+              - { label: "Paragraph 5",  name: "p5", widget: "text" }
+
+  # =============== JOURNAL — Foam-forming, in plain language ===============
+  - name: "blog-foam-forming-en"
+    label: "Journal — Foam-forming — EN"
+    files:
+      - file: "content/blog-foam-forming.en.json"
+        name: "blog-foam-forming-en"
+        label: "Post — EN"
+        fields:
+          - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Lede",         name: "lede",     widget: "text"   }
+              - { label: "Hero image",   name: "image",    widget: "image"  }
+          - label: "Article body"
+            name: "article"
+            widget: "object"
+            hint: "Fixed slots matching the page's layout — paragraph 1, paragraph 2, heading 1, paragraph 3, heading 2, paragraph 4."
+            fields:
+              - { label: "Paragraph 1",  name: "p1", widget: "text" }
+              - { label: "Paragraph 2",  name: "p2", widget: "text" }
+              - { label: "Heading 1",    name: "h1", widget: "string" }
+              - { label: "Paragraph 3",  name: "p3", widget: "text" }
+              - { label: "Heading 2",    name: "h2", widget: "string" }
+              - { label: "Paragraph 4",  name: "p4", widget: "text" }
+
+  - name: "blog-foam-forming-da"
+    label: "Journal — Foam-forming — DA"
+    files:
+      - file: "content/blog-foam-forming.da.json"
+        name: "blog-foam-forming-da"
+        label: "Post — DA"
+        fields:
+          - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Lede",         name: "lede",     widget: "text"   }
+              - { label: "Hero image",   name: "image",    widget: "image"  }
+          - label: "Article body"
+            name: "article"
+            widget: "object"
+            hint: "Fixed slots matching the page's layout — paragraph 1, paragraph 2, heading 1, paragraph 3, heading 2, paragraph 4."
+            fields:
+              - { label: "Paragraph 1",  name: "p1", widget: "text" }
+              - { label: "Paragraph 2",  name: "p2", widget: "text" }
+              - { label: "Heading 1",    name: "h1", widget: "string" }
+              - { label: "Paragraph 3",  name: "p3", widget: "text" }
+              - { label: "Heading 2",    name: "h2", widget: "string" }
+              - { label: "Paragraph 4",  name: "p4", widget: "text" }
+
+  # =============== JOURNAL — Reading an EPD without a chemistry degree ===============
+  - name: "blog-reading-an-epd-en"
+    label: "Journal — Reading an EPD — EN"
+    files:
+      - file: "content/blog-reading-an-epd.en.json"
+        name: "blog-reading-an-epd-en"
+        label: "Post — EN"
+        fields:
+          - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Lede",         name: "lede",     widget: "text"   }
+              - { label: "Hero image",   name: "image",    widget: "image"  }
+          - label: "Article body"
+            name: "article"
+            widget: "object"
+            hint: "Fixed slots matching the page's layout — paragraph 1, heading 1, paragraph 2, heading 2, paragraph 3, heading 3, paragraph 4, heading 4, paragraph 5."
+            fields:
+              - { label: "Paragraph 1",  name: "p1", widget: "text" }
+              - { label: "Heading 1",    name: "h1", widget: "string" }
+              - { label: "Paragraph 2",  name: "p2", widget: "text" }
+              - { label: "Heading 2",    name: "h2", widget: "string" }
+              - { label: "Paragraph 3",  name: "p3", widget: "text" }
+              - { label: "Heading 3",    name: "h3", widget: "string" }
+              - { label: "Paragraph 4",  name: "p4", widget: "text" }
+              - { label: "Heading 4",    name: "h4", widget: "string" }
+              - { label: "Paragraph 5",  name: "p5", widget: "text" }
+
+  - name: "blog-reading-an-epd-da"
+    label: "Journal — Reading an EPD — DA"
+    files:
+      - file: "content/blog-reading-an-epd.da.json"
+        name: "blog-reading-an-epd-da"
+        label: "Post — DA"
+        fields:
+          - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Lede",         name: "lede",     widget: "text"   }
+              - { label: "Hero image",   name: "image",    widget: "image"  }
+          - label: "Article body"
+            name: "article"
+            widget: "object"
+            hint: "Fixed slots matching the page's layout — paragraph 1, heading 1, paragraph 2, heading 2, paragraph 3, heading 3, paragraph 4, heading 4, paragraph 5."
+            fields:
+              - { label: "Paragraph 1",  name: "p1", widget: "text" }
+              - { label: "Heading 1",    name: "h1", widget: "string" }
+              - { label: "Paragraph 2",  name: "p2", widget: "text" }
+              - { label: "Heading 2",    name: "h2", widget: "string" }
+              - { label: "Paragraph 3",  name: "p3", widget: "text" }
+              - { label: "Heading 3",    name: "h3", widget: "string" }
+              - { label: "Paragraph 4",  name: "p4", widget: "text" }
+              - { label: "Heading 4",    name: "h4", widget: "string" }
+              - { label: "Paragraph 5",  name: "p5", widget: "text" }

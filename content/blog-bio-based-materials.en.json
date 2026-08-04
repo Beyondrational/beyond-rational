@@ -1,0 +1,19 @@
+{
+  "loader_tag": "Journal / 2026",
+  "hero": {
+    "eyebrow": "Materials · May 2026",
+    "title_l1": "What \"bio-based\"",
+    "title_l2": "actually means.",
+    "lede": "The label shows up on a lot of spec sheets right now. It doesn't always mean the same thing twice.",
+    "image": "assets/aisti-042.jpg"
+  },
+  "article": {
+    "p1": "\"Bio-based\" is a material-composition claim, not a sustainability score. It means some share of a product's mass comes from biological sources — wood, hemp, mycelium, straw — rather than fossil feedstock. That's a genuinely useful thing to know. It's also a much narrower claim than the word tends to imply on a mood board.",
+    "p2": "A product can be 100% bio-based by mass and still carry a meaningful carbon footprint, depending on how the raw material was grown, harvested, processed, and transported, and on what's used to bind it together. Conversely, a product with a smaller bio-based share can sometimes outperform a \"fully\" bio-based one on lifecycle emissions, if the processing is efficient and the transport distance is short. Composition and footprint are related, but they're not the same measurement.",
+    "h1": "What to actually check",
+    "p3": "Three things tell you more than the label alone: what the binder is (synthetic resins and adhesives can dominate a product's environmental impact even when the bulk fibre is natural), where GWP-fossil and GWP-biogenic land separately on the EPD (biogenic carbon storage is real, but it's a different number from avoided fossil emissions, and mixing the two overstates the win), and what happens at end of life (a bio-based product that can't be separated from its binder for recycling or composting just becomes a different kind of landfill mass).",
+    "p4": "None of this is a reason to distrust bio-based materials — it's a reason to read past the word. A tile made from foam-formed wood fibre with a mineral or cement-free binder, no synthetic flame retardants, and a documented recyclable end of life is a materially different product from one that happens to share the same headline claim. The spec sheet, not the label, is where that difference shows up.",
+    "h2": "Ask for the EPD, not the marketing copy",
+    "p5": "An Environmental Product Declaration is a standardised, third-party-verified document — it can't say things a brand's website can get away with. If a bio-based claim doesn't have an EPD backing it, that's usually the first thing worth asking about before it goes on the spec."
+  }
+}

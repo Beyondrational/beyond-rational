@@ -1,0 +1,18 @@
+{
+  "loader_tag": "Journal / 2026",
+  "hero": {
+    "eyebrow": "Teknologi · Juni 2026",
+    "title_l1": "Skumformning,",
+    "title_l2": "på almindeligt sprog.",
+    "lede": "Sådan bliver træfiber til en stiv, porøs, lydabsorberende plade — uden at blive presset flad, og uden plastik.",
+    "image": "assets/aisti-003.jpg"
+  },
+  "article": {
+    "p1": "De fleste fiberplader laves, som man ville gætte: fibre blandes med et bindemiddel, lægges fladt og presses derefter under varme, til de komprimeres til en tæt plade. Den proces er effektiv og velkendt, men den arbejder imod en, hvis det, man reelt vil have, er et porøst materiale — presning betyder per definition, at luften klemmes ud.",
+    "p2": "Skumformning gør det modsatte. I stedet for at suspendere træfibre i vand og presse dem flade, suspenderes fibrene i et stabilt skum — vand, luft og en lille mængde skummiddel — og støbes i form, mens skummet holder fibrene adskilt fra hinanden. Når skummet kollapser og tørrer, efterlader det et åbent, tredimensionelt netværk af fiber i stedet for en komprimeret plade. Teknikken er ikke ny; den er tilpasset fra en papirfremstillingsproces, her anvendt på et meget tykkere, mere stift produkt.",
+    "h1": "Hvorfor åbenheden betyder noget for lyd",
+    "p3": "Lydabsorption i et porøst materiale virker gennem friktion: når en lydbølge presser luft gennem et netværk af mikroskopiske, sammenhængende porer, mister den luftbevægelse energi til friktion mod porevæggene, og bølgen mister amplitude. En tæt, presset plade har meget lidt af den åbne porestruktur at arbejde med. En skumformet plade er for det meste åbent rum målt på volumen, med fiber fordelt gennem den i tre dimensioner i stedet for komprimeret til en flad plane — hvilket er en stor del af grunden til, at den kan opnå klasse A-absorption uden at have brug for en separat akustisk bagside eller en perforeret forside.",
+    "h2": "Og hvorfor den ikke har brug for det, konventionelle plader har",
+    "p4": "Fordi skummet gør arbejdet med at holde strukturen åben, er skumformede plader ikke afhængige af syntetiske bindemidler til at holde deres form, sådan som nogle konventionelle træfiber- eller mineraluldsprodukter er. Færre tilsætningsstoffer betyder færre steder for VOC'er eller irriterende fibre at komme fra, hvilket også er grunden til, at denne materialeklasse ofte bærer rene indeklimacertificeringer. Det er et tilfælde, hvor fremstillingsprocessen og bæredygtighedshistorien ikke er separate påstande — processen er det, der gør materialet lettere, mere porøst og enklere i sammensætning, alt på én gang."
+  }
+}
