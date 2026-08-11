@@ -188,6 +188,7 @@ collections:
               - { label: "Title line 2 (em)",    name: "title_l2_em",   widget: "string" }
               - { label: "Paragraph 1",          name: "body_p1",       widget: "text"   }
               - { label: "Paragraph 2",          name: "body_p2",       widget: "text"   }
+              - { label: "Paragraph 3",          name: "body_p3",       widget: "text"   }
               - { label: "Image",                name: "image",         widget: "image"  }
 
           - label: "Office"
@@ -285,6 +286,7 @@ collections:
               - { label: "Title line 2 (em)",    name: "title_l2_em",   widget: "string" }
               - { label: "Paragraph 1",          name: "body_p1",       widget: "text"   }
               - { label: "Paragraph 2",          name: "body_p2",       widget: "text"   }
+              - { label: "Paragraph 3",          name: "body_p3",       widget: "text"   }
               - { label: "Image",                name: "image",         widget: "image"  }
 
           - label: "Office"
