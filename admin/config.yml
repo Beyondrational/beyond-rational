@@ -933,6 +933,14 @@ collections:
               - { label: "Title",   name: "title",   widget: "string" }
               - { label: "Lede",    name: "lede",    widget: "text"   }
 
+          - label: "A conscious choice (positioning statement)"
+            name: "conscious"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Body",         name: "body",     widget: "text"   }
 
           - label: "Technology (foam-forming)"
             name: "technology"
@@ -1118,6 +1126,14 @@ collections:
               - { label: "Title",   name: "title",   widget: "string" }
               - { label: "Lede",    name: "lede",    widget: "text"   }
 
+          - label: "A conscious choice (positioning statement)"
+            name: "conscious"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Body",         name: "body",     widget: "text"   }
 
           - label: "Technology (foam-forming)"
             name: "technology"
