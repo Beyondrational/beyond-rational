@@ -205,7 +205,14 @@
     "title_l1": "Skumformet,",
     "title_l2": "ikke presset.",
     "body_p1": "Aistis skumformningsteknologi, tilpasset fra den finske papirindustri, opslæmmer træfiber i skum i stedet for at presse den flad. Fibrene sætter sig i en åben, porøs struktur, der opfanger lyd på tværs af et bredt frekvensområde, uden bindemidler eller plastik.",
-    "body_p2": "Teknologien er omkostningseffektiv og energibevidst og producerer plader, der er lette, plastfrie og 100% genanvendelige. Fremstillet i Jyväskylä, Finland."
+    "body_p2": "Teknologien er omkostningseffektiv og energibevidst og producerer plader, der er lette, plastfrie og 100% genanvendelige. Fremstillet i Jyväskylä, Finland.",
+    "body_p3": "I rummet betyder det mindre efterklang og baggrundsstøj — tale bliver tydeligere, samtaler føles mere naturlige, og rummet opleves simpelthen roligere at være i."
+  },
+  "partner": {
+    "eyebrow": "Partneren",
+    "title_l1": "Finsk opfindsomhed,",
+    "title_l2": "gjort ansvarlig.",
+    "body": "Aisti repræsenterer finsk opfindsomhed, innovation og ansvarlighed — og arbejder på at blive den førende leverandør af exceptionelt bæredygtige akustikprodukter, der er sikre og sunde for mennesker og miljø, og som frigør branchen fra mineraluld og fossilbaserede materialer, ét loft ad gangen."
   },
   "video": {
     "section_label": "Video",

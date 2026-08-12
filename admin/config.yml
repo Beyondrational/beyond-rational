@@ -951,6 +951,16 @@ collections:
               - { label: "Title line 2",  name: "title_l2",      widget: "string" }
               - { label: "Paragraph 1",   name: "body_p1",       widget: "text"   }
               - { label: "Paragraph 2",   name: "body_p2",       widget: "text"   }
+              - { label: "Paragraph 3",   name: "body_p3",       widget: "text"   }
+
+          - label: "The partner (Aisti brand narrative)"
+            name: "partner"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Body",         name: "body",     widget: "text"   }
 
           - label: "Image gallery"
             name: "gallery"
@@ -1144,6 +1154,16 @@ collections:
               - { label: "Title line 2",  name: "title_l2",      widget: "string" }
               - { label: "Paragraph 1",   name: "body_p1",       widget: "text"   }
               - { label: "Paragraph 2",   name: "body_p2",       widget: "text"   }
+              - { label: "Paragraph 3",   name: "body_p3",       widget: "text"   }
+
+          - label: "The partner (Aisti brand narrative)"
+            name: "partner"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - { label: "Body",         name: "body",     widget: "text"   }
 
           - label: "Image gallery"
             name: "gallery"
