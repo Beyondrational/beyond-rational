@@ -4,8 +4,7 @@
     "eyebrow": "Case 02 · Helsinki · 2025",
     "title_l1": "Bulevardi",
     "title_l2": "2.",
-    "lede": "A commercial office in the heart of Helsinki. High ceilings, hard surfaces, and a reverberation problem that made the space feel louder than it was.",
-    "image": "assets/br-office.webp"
+    "lede": "A commercial office in the heart of Helsinki. High ceilings, hard surfaces, and a reverberation problem that made the space feel louder than it was."
   },
   "brief": {
     "eyebrow": "The brief",
@@ -17,20 +16,53 @@
   },
   "spec": {
     "items": [
-      { "key": "Product",   "value": "Aisti® Aalto" },
-      { "key": "Format",    "value": "600 × 1200 mm" },
-      { "key": "Thickness", "value": "40 mm" },
-      { "key": "Finish",    "value": "Birch · pale fibre" },
-      { "key": "Mounting",  "value": "Wide · 200 mm batten" },
-      { "key": "Area",      "value": "~180 m²" },
-      { "key": "Location",  "value": "Helsinki centre, FI" },
-      { "key": "Installed", "value": "Q3 2025" }
+      {
+        "key": "Product",
+        "value": "Aisti® Aalto"
+      },
+      {
+        "key": "Format",
+        "value": "600 × 1200 mm"
+      },
+      {
+        "key": "Thickness",
+        "value": "40 mm"
+      },
+      {
+        "key": "Finish",
+        "value": "Birch · pale fibre"
+      },
+      {
+        "key": "Mounting",
+        "value": "Wide · 200 mm batten"
+      },
+      {
+        "key": "Area",
+        "value": "~180 m²"
+      },
+      {
+        "key": "Location",
+        "value": "Helsinki centre, FI"
+      },
+      {
+        "key": "Installed",
+        "value": "Q3 2025"
+      }
     ]
   },
   "gallery": [
-    { "image": "assets/br-office.webp", "title": "Bulevardi 2", "meta": "In place" },
-    { "image": "assets/br-office-2.webp", "title": "The space", "meta": "Helsinki city centre" },
-    { "image": "assets/aisti-render-2.png", "title": "Ceiling detail", "meta": "White, 600×1200" }
+    {
+      "title": "Bulevardi 2",
+      "meta": "In place"
+    },
+    {
+      "title": "The space",
+      "meta": "Helsinki city centre"
+    },
+    {
+      "title": "Ceiling detail",
+      "meta": "White, 600×1200"
+    }
   ],
   "results": {
     "eyebrow": "The result",
@@ -40,14 +72,38 @@
   },
   "performance": {
     "items": [
-      { "key": "RT60 before",      "value": "> 1.20 s" },
-      { "key": "RT60 after",       "value": "~0.85 s" },
-      { "key": "Improvement",      "value": "~29 %" },
-      { "key": "α at 125 Hz",      "value": "0.55" },
-      { "key": "α at 500 Hz",      "value": "0.90" },
-      { "key": "α at 1 kHz",       "value": "0.95" },
-      { "key": "Absorption class", "value": "Class A" },
-      { "key": "Test standard",    "value": "EN ISO 354" }
+      {
+        "key": "RT60 before",
+        "value": "> 1.20 s"
+      },
+      {
+        "key": "RT60 after",
+        "value": "~0.85 s"
+      },
+      {
+        "key": "Improvement",
+        "value": "~29 %"
+      },
+      {
+        "key": "α at 125 Hz",
+        "value": "0.55"
+      },
+      {
+        "key": "α at 500 Hz",
+        "value": "0.90"
+      },
+      {
+        "key": "α at 1 kHz",
+        "value": "0.95"
+      },
+      {
+        "key": "Absorption class",
+        "value": "Class A"
+      },
+      {
+        "key": "Test standard",
+        "value": "EN ISO 354"
+      }
     ]
   },
   "cta": {
@@ -57,12 +113,24 @@
   },
   "marquee": {
     "items": [
-      { "text": "−29 % RT60" },
-      { "text": "600 × 1200 mm" },
-      { "text": "Helsinki" },
-      { "text": "~180 m²" },
-      { "text": "40 mm · 200 mm gap" },
-      { "text": "Class A" }
+      {
+        "text": "−29 % RT60"
+      },
+      {
+        "text": "600 × 1200 mm"
+      },
+      {
+        "text": "Helsinki"
+      },
+      {
+        "text": "~180 m²"
+      },
+      {
+        "text": "40 mm · 200 mm gap"
+      },
+      {
+        "text": "Class A"
+      }
     ]
   }
 }

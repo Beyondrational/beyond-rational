@@ -3,33 +3,28 @@
   "hero": {
     "eyebrow": "Produkter",
     "title": "Vores produkter.",
-    "lede": "Fire bæredygtige akustikmaterialer til moderne arkitektur. Hver især udvalgt for ydeevne, overflade og lavt fodaftryk — og hver med sin egen side.",
-    "bg_image": "assets/aisti-042.jpg"
+    "lede": "Fire bæredygtige akustikmaterialer til moderne arkitektur. Hver især udvalgt for ydeevne, overflade og lavt fodaftryk — og hver med sin egen side."
   },
   "items": [
     {
       "name": "Aisti® Aalto",
       "tag": "Tilgængelig 2026",
-      "body": "Skumformet naturlig træfiber. Absorptionsklasse A, to formater, to tykkelser. Passer til standard T-skinneloft eller monteres direkte med klæber. Officiel distributør i Danmark.",
-      "image": "assets/aisti-person-angtvatten.webp"
+      "body": "Skumformet naturlig træfiber. Absorptionsklasse A, to formater, to tykkelser. Passer til standard T-skinneloft eller monteres direkte med klæber. Officiel distributør i Danmark."
     },
     {
       "name": "Wuud",
       "tag": "Under udvikling",
-      "body": "Præget træbeklædning til interiør og eksteriør — ægte birk, el, asp og fyr, modificeret til at bære dyb relief. Finsk-udviklet; finish og mønstre efter aftale.",
-      "image": "assets/wuud-deck-thumb.jpg"
+      "body": "Præget træbeklædning til interiør og eksteriør — ægte birk, el, asp og fyr, modificeret til at bære dyb relief. Finsk-udviklet; finish og mønstre efter aftale."
     },
     {
       "name": "Sappa",
       "tag": "Under udvikling",
-      "body": "Akustikplader dyrket af hamp — en hurtigt fornybar naturfiber, bundet med et cementfrit mineralsk bindemiddel. Til vægge og lofter.",
-      "image": "assets/sappa-hero-ceiling.jpg"
+      "body": "Akustikplader dyrket af hamp — en hurtigt fornybar naturfiber, bundet med et cementfrit mineralsk bindemiddel. Til vægge og lofter."
     },
     {
       "name": "Mogu",
       "tag": "Under udvikling",
-      "body": "Bløde, fløjlsagtige akustikplader dyrket af mycelium og genanvendte tekstilrester. Udviklet til absorption; naturligt hvide, med et bredere farveudvalg efter aftale.",
-      "image": "assets/mogu-hero-lifestyle.jpg"
+      "body": "Bløde, fløjlsagtige akustikplader dyrket af mycelium og genanvendte tekstilrester. Udviklet til absorption; naturligt hvide, med et bredere farveudvalg efter aftale."
     }
   ],
   "cta": {

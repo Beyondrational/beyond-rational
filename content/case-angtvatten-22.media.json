@@ -1,0 +1,16 @@
+{
+  "hero": {
+    "image": "assets/aisti-person-angtvatten.webp"
+  },
+  "gallery": [
+    {
+      "image": "assets/aisti-person-angtvatten.webp"
+    },
+    {
+      "image": "assets/aisti-render-3.webp"
+    },
+    {
+      "image": "assets/aisti-feeling-angtvatten.webp"
+    }
+  ]
+}

@@ -7,8 +7,7 @@
     "title_l2_em": "til moderne arkitektur.",
     "subtitle": "Beyond Rational er en københavnsk virksomhed, der leverer bæredygtige, designdrevne akustikmaterialer. Vi kombinerer skandinavisk æstetik med high-performance funktionalitet — og samarbejder med arkitekter, designere og developere, der værdsætter kvalitet, innovation og impact.",
     "cta_primary": "Se vores løsninger",
-    "cta_secondary": "Kontakt",
-    "bg_image": "assets/aisti-person-angtvatten.webp"
+    "cta_secondary": "Kontakt"
   },
   "range": {
     "section_label": "Hvad vi tilbyder",
@@ -18,25 +17,21 @@
     "items": [
       {
         "name": "Aisti® Acoustic Tile",
-        "image": "assets/aisti-026.jpg",
         "tag": "Tilgængelig 2026",
         "href": "product-aisti.html"
       },
       {
         "name": "Wuud",
-        "image": "assets/wuud_render_01.jpg",
         "tag": "Under udvikling",
         "href": "product-wuud.html"
       },
       {
         "name": "Sappa",
-        "image": "assets/skærmbillede-2026-07-08-kl.-13.28.04.png",
         "tag": "Under udvikling",
         "href": "product-sappa.html"
       },
       {
         "name": "Mogu",
-        "image": "assets/skærmbillede-2026-07-08-kl.-13.36.48.png",
         "tag": "Under udvikling",
         "href": "product-mogu.html"
       }
@@ -48,8 +43,7 @@
     "title_l2_em": "godt for planeten.",
     "body_p1": "Beyond Rational eksisterer for at gøre det bevidste valg til det nemme valg. Vi kuraterer akustik- og overfladematerialer, der lever op til den standard, arkitekter forventer, uden de kompromiser der normalt følger med \"bæredygtighed\" — ingen nedgradering i finish, ingen nedgradering i specifikation.",
     "body_p2": "Ethvert materiale, vi fører, vælges først og fremmest på egne meritter: hvordan det lyder, hvordan det ser ud, hvordan det holder. Det lavere fodaftryk er udgangspunktet, vi starter fra — ikke det kompromis, vi beder arkitekter acceptere.",
-    "body_p3": "Det bevidste valg burde være det oplagte. I byggebranchen er det sjældent — regler og en langvarig forsigtighed over for nye materialer har holdt markedet konservativt. Vi arbejder kun med branchens mest ambitiøse, visionære partnere for at ændre det, ét materiale ad gangen.",
-    "image": "assets/aisti-042.jpg"
+    "body_p3": "Det bevidste valg burde være det oplagte. I byggebranchen er det sjældent — regler og en langvarig forsigtighed over for nye materialer har holdt markedet konservativt. Vi arbejder kun med branchens mest ambitiøse, visionære partnere for at ændre det, ét materiale ad gangen."
   },
   "studio": {
     "body": "Beyond Rational har base i København. Vores partner Aisti producerer i Jyväskylä, Finland. Vi specificerer og leverer i hele Danmark.",
@@ -62,8 +56,7 @@
     "stat_founded": "CPH",
     "section_label": "Hvem vi er",
     "title_l2_em": "Globalt inspireret.",
-    "stat_people": "4",
-    "image": "assets/br-office.webp"
+    "stat_people": "4"
   },
   "cases": {
     "section_label": "Cases",
@@ -71,7 +64,6 @@
     "items": [
       {
         "href": "case-angtvatten-22.html",
-        "image": "assets/aisti-person-angtvatten.webp",
         "eyebrow": "Case · Stockholm",
         "title": "Ångtvätten 22",
         "meta1": "Trivsel på kontoret · 600×600 mm, 20 mm, mørkeblå",
@@ -79,7 +71,6 @@
       },
       {
         "href": "case-bulevardi-2.html",
-        "image": "assets/br-office.webp",
         "eyebrow": "Case · Helsinki",
         "title": "Bulevardi 2",
         "meta1": "Efterklangsreduktion · 600×1200 mm, 40 mm, hvid",

@@ -3,8 +3,7 @@
   "hero": {
     "eyebrow": "Product · Hemp acoustic panels",
     "title": "Sappa.",
-    "lede": "Acoustic panels grown from hemp — one of today's most sustainable raw materials, bound with a cement-free mineral binder. For walls and ceilings, brought to Denmark by Beyond Rational.",
-    "bg_image": "assets/sappa-hero-ceiling.jpg"
+    "lede": "Acoustic panels grown from hemp — one of today's most sustainable raw materials, bound with a cement-free mineral binder. For walls and ceilings, brought to Denmark by Beyond Rational."
   },
   "idea": {
     "eyebrow": "The material",
@@ -67,47 +66,38 @@
   },
   "gallery": [
     {
-      "image": "assets/sappa-gallery-panel.jpg",
       "title": "Panel",
       "meta": "Product"
     },
     {
-      "image": "assets/sappa-gallery-texture.jpg",
       "title": "Texture",
       "meta": "Material detail"
     },
     {
-      "image": "assets/sappa-gallery-colors.jpg",
       "title": "Colours",
       "meta": "Range"
     },
     {
-      "image": "assets/sappa-gallery-interior.jpg",
       "title": "Interior",
       "meta": "In place"
     },
     {
-      "image": "assets/sappa-gallery-raw-material.jpg",
       "title": "Hemp",
       "meta": "Raw material"
     },
     {
-      "image": "assets/sappa-gallery-workshop.jpg",
       "title": "Herringbone ceiling",
       "meta": "Workshop install"
     },
     {
-      "image": "assets/sappa-gallery-color-bar.jpg",
       "title": "Colour, applied",
       "meta": "Hospitality install"
     },
     {
-      "image": "assets/sappa-gallery-pattern.jpg",
       "title": "Wall pattern",
       "meta": "Design detail"
     },
     {
-      "image": "assets/sappa-gallery-boardroom.jpg",
       "title": "Boardroom ceiling",
       "meta": "Office install"
     }

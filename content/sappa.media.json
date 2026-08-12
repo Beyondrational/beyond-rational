@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "bg_image": "assets/sappa-hero-ceiling.jpg"
+  },
+  "gallery": [
+    {
+      "image": "assets/sappa-gallery-panel.jpg"
+    },
+    {
+      "image": "assets/sappa-gallery-texture.jpg"
+    },
+    {
+      "image": "assets/sappa-gallery-colors.jpg"
+    },
+    {
+      "image": "assets/sappa-gallery-interior.jpg"
+    },
+    {
+      "image": "assets/sappa-gallery-raw-material.jpg"
+    },
+    {
+      "image": "assets/sappa-gallery-workshop.jpg"
+    },
+    {
+      "image": "assets/sappa-gallery-color-bar.jpg"
+    },
+    {
+      "image": "assets/sappa-gallery-pattern.jpg"
+    },
+    {
+      "image": "assets/sappa-gallery-boardroom.jpg"
+    }
+  ]
+}

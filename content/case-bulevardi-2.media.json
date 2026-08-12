@@ -1,0 +1,16 @@
+{
+  "hero": {
+    "image": "assets/br-office.webp"
+  },
+  "gallery": [
+    {
+      "image": "assets/br-office.webp"
+    },
+    {
+      "image": "assets/br-office-2.webp"
+    },
+    {
+      "image": "assets/aisti-render-2.png"
+    }
+  ]
+}

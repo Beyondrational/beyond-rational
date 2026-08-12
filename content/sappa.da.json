@@ -3,8 +3,7 @@
   "hero": {
     "eyebrow": "Produkt · Akustikplader af hamp",
     "title": "Sappa.",
-    "lede": "Akustikplader dyrket af hamp — et af nutidens mest bæredygtige råmaterialer, bundet med et cementfrit mineralsk bindemiddel. Til vægge og lofter, bragt til Danmark af Beyond Rational.",
-    "bg_image": "assets/sappa-hero-ceiling.jpg"
+    "lede": "Akustikplader dyrket af hamp — et af nutidens mest bæredygtige råmaterialer, bundet med et cementfrit mineralsk bindemiddel. Til vægge og lofter, bragt til Danmark af Beyond Rational."
   },
   "idea": {
     "eyebrow": "Materialet",
@@ -33,12 +32,30 @@
     "title_l1": "Hamp, bundet",
     "title_l2": "til rummet.",
     "rows": [
-      { "key": "Kerne", "value": "Hampefiber, cementfrit mineralsk bindemiddel" },
-      { "key": "Anvendelse", "value": "Indervægge og lofter" },
-      { "key": "Brand", "value": "Naturligt brandbestandig — ingen tilsatte flammehæmmere" },
-      { "key": "Formater", "value": "—" },
-      { "key": "Tykkelse", "value": "—" },
-      { "key": "Endt levetid", "value": "Vugge til vugge, genanvendelig" }
+      {
+        "key": "Kerne",
+        "value": "Hampefiber, cementfrit mineralsk bindemiddel"
+      },
+      {
+        "key": "Anvendelse",
+        "value": "Indervægge og lofter"
+      },
+      {
+        "key": "Brand",
+        "value": "Naturligt brandbestandig — ingen tilsatte flammehæmmere"
+      },
+      {
+        "key": "Formater",
+        "value": "—"
+      },
+      {
+        "key": "Tykkelse",
+        "value": "—"
+      },
+      {
+        "key": "Endt levetid",
+        "value": "Vugge til vugge, genanvendelig"
+      }
     ]
   },
   "gallery_head": {
@@ -49,47 +66,38 @@
   },
   "gallery": [
     {
-      "image": "assets/sappa-gallery-panel.jpg",
       "title": "Panel",
       "meta": "Produkt"
     },
     {
-      "image": "assets/sappa-gallery-texture.jpg",
       "title": "Tekstur",
       "meta": "Materialedetalje"
     },
     {
-      "image": "assets/sappa-gallery-colors.jpg",
       "title": "Farver",
       "meta": "Udvalg"
     },
     {
-      "image": "assets/sappa-gallery-interior.jpg",
       "title": "Interiør",
       "meta": "På stedet"
     },
     {
-      "image": "assets/sappa-gallery-raw-material.jpg",
       "title": "Hamp",
       "meta": "Råmateriale"
     },
     {
-      "image": "assets/sappa-gallery-workshop.jpg",
       "title": "Sildebensmønster i loft",
       "meta": "Installation, værksted"
     },
     {
-      "image": "assets/sappa-gallery-color-bar.jpg",
       "title": "Farve, i praksis",
       "meta": "Installation, restaurant"
     },
     {
-      "image": "assets/sappa-gallery-pattern.jpg",
       "title": "Vægmønster",
       "meta": "Designdetalje"
     },
     {
-      "image": "assets/sappa-gallery-boardroom.jpg",
       "title": "Mødelokale, loft",
       "meta": "Installation, kontor"
     }

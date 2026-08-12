@@ -3,8 +3,7 @@
   "hero": {
     "eyebrow": "Produkt · Akustikplader af mycelium",
     "title": "Mogu.",
-    "lede": "Bløde, fløjlsagtige akustikplader dyrket af mycelium og genanvendte tekstilrester — dyrket af naturen, udviklet til at yde. En 3D-formet overflade bygget til at maksimere absorption, bragt til Danmark af Beyond Rational.",
-    "bg_image": "assets/mogu-hero-lifestyle.jpg"
+    "lede": "Bløde, fløjlsagtige akustikplader dyrket af mycelium og genanvendte tekstilrester — dyrket af naturen, udviklet til at yde. En 3D-formet overflade bygget til at maksimere absorption, bragt til Danmark af Beyond Rational."
   },
   "idea": {
     "eyebrow": "Væksten",
@@ -67,37 +66,30 @@
   },
   "gallery": [
     {
-      "image": "assets/mogu-gallery-cityview.jpg",
       "title": "Vægpanel",
       "meta": "På stedet"
     },
     {
-      "image": "assets/mogu-gallery-office.jpg",
       "title": "Kontor",
       "meta": "På stedet"
     },
     {
-      "image": "assets/mogu-gallery-colors.jpg",
       "title": "Farver",
       "meta": "Udvalg"
     },
     {
-      "image": "assets/mogu-gallery-material.jpg",
       "title": "Materiale",
       "meta": "Studie"
     },
     {
-      "image": "assets/mogu-gallery-hexagon.jpg",
       "title": "Sekskantet væg",
       "meta": "Installation"
     },
     {
-      "image": "assets/mogu-gallery-triangle.jpg",
       "title": "Trekantet væg, farve",
       "meta": "Installation, kontor"
     },
     {
-      "image": "assets/mogu-gallery-detail.jpg",
       "title": "Panelkant",
       "meta": "Materialedetalje"
     }

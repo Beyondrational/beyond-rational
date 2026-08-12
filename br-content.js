@@ -5,6 +5,12 @@
    ('brLang') > 'en', and is re-run on demand by the nav language
    toggle (br.js) via window.brSetLanguage(). Edits flow via
    Sveltia CMS (Decap i18n, structure: multiple_files).
+
+   Images are language-independent, so they live separately in
+   content/<page>.media.json (one shared file, no .en/.da split)
+   and get deep-merged over the language file — editing a photo
+   once in the CMS's "Images" collection updates both languages,
+   instead of the two text files silently drifting apart.
    ============================================================ */
 
 (function () {
@@ -21,6 +27,27 @@
   }
 
   const get = (obj, path) => path.split('.').reduce((o, k) => (o == null ? o : o[k]), obj);
+
+  // Deep-merges `source` (the shared, language-independent media file) over
+  // `target` (the language file) so an image value at content.hero.image
+  // overrides just that leaf, without clobbering the text sitting next to
+  // it. Objects recurse key-by-key; arrays merge index-by-index (media and
+  // language files are generated/edited from the same shape, so a gallery's
+  // Nth media entry always lines up with the Nth language entry); anything
+  // else (a string image path) from source simply wins.
+  function deepMerge(target, source) {
+    if (Array.isArray(source)) {
+      const base = Array.isArray(target) ? target : [];
+      return source.map((item, i) => deepMerge(base[i], item));
+    }
+    if (source && typeof source === 'object') {
+      const base = target && typeof target === 'object' && !Array.isArray(target) ? target : {};
+      const out = Object.assign({}, base);
+      Object.keys(source).forEach((k) => { out[k] = deepMerge(base[k], source[k]); });
+      return out;
+    }
+    return source;
+  }
 
   function bindSingleValues(data) {
     document.querySelectorAll('[data-content]').forEach((el) => {
@@ -120,7 +147,13 @@
       pageData = await res.json();
     } catch (e) { return; }
 
-    const data = Object.assign({}, siteData, pageData);
+    let mediaData = null;
+    try {
+      const mediaRes = await fetch(`content/${page}.media.json`, { cache: 'no-cache' });
+      if (mediaRes.ok) mediaData = await mediaRes.json();
+    } catch (e) { /* no shared media file for this page — fine */ }
+
+    const data = Object.assign({}, siteData, mediaData ? deepMerge(pageData, mediaData) : pageData);
     bindSingleValues(data);
     bindLists(data);
 

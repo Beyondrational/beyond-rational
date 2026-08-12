@@ -4,8 +4,7 @@
     "eyebrow": "Case 01 · Stockholm · 2025",
     "title_l1": "Ångtvätten",
     "title_l2": "22.",
-    "lede": "En 40.000 m² erhvervsejendom i Stora Essingen. Åbne kontorlandskaber med et loft, der skulle absorbere lyd — uden at gøre opmærksom på sig selv.",
-    "image": "assets/aisti-person-angtvatten.webp"
+    "lede": "En 40.000 m² erhvervsejendom i Stora Essingen. Åbne kontorlandskaber med et loft, der skulle absorbere lyd — uden at gøre opmærksom på sig selv."
   },
   "brief": {
     "eyebrow": "Opgaven",
@@ -17,20 +16,53 @@
   },
   "spec": {
     "items": [
-      { "key": "Produkt",    "value": "Aisti® Aalto" },
-      { "key": "Format",     "value": "600 × 600 mm" },
-      { "key": "Tykkelse",   "value": "20 mm" },
-      { "key": "Finish",     "value": "Sten · mellemgrå" },
-      { "key": "Montering",  "value": "Tæt · T-skinne" },
-      { "key": "Areal",      "value": "~320 m²" },
-      { "key": "Placering",  "value": "Stora Essingen, SE" },
-      { "key": "Installeret", "value": "Q4 2025" }
+      {
+        "key": "Produkt",
+        "value": "Aisti® Aalto"
+      },
+      {
+        "key": "Format",
+        "value": "600 × 600 mm"
+      },
+      {
+        "key": "Tykkelse",
+        "value": "20 mm"
+      },
+      {
+        "key": "Finish",
+        "value": "Sten · mellemgrå"
+      },
+      {
+        "key": "Montering",
+        "value": "Tæt · T-skinne"
+      },
+      {
+        "key": "Areal",
+        "value": "~320 m²"
+      },
+      {
+        "key": "Placering",
+        "value": "Stora Essingen, SE"
+      },
+      {
+        "key": "Installeret",
+        "value": "Q4 2025"
+      }
     ]
   },
   "gallery": [
-    { "image": "assets/aisti-person-angtvatten.webp", "title": "Ångtvätten 22", "meta": "På stedet" },
-    { "image": "assets/aisti-render-3.webp", "title": "Loftinstallation", "meta": "Mørkeblå, 600×600" },
-    { "image": "assets/aisti-feeling-angtvatten.webp", "title": "Rummet", "meta": "Stemning" }
+    {
+      "title": "Ångtvätten 22",
+      "meta": "På stedet"
+    },
+    {
+      "title": "Loftinstallation",
+      "meta": "Mørkeblå, 600×600"
+    },
+    {
+      "title": "Rummet",
+      "meta": "Stemning"
+    }
   ],
   "results": {
     "eyebrow": "Resultatet",
@@ -40,12 +72,30 @@
   },
   "performance": {
     "items": [
-      { "key": "α ved 500 Hz",      "value": "0.75" },
-      { "key": "α ved 1 kHz",       "value": "0.75" },
-      { "key": "α ved 2 kHz",       "value": "0.80" },
-      { "key": "Absorptionsklasse", "value": "Class A" },
-      { "key": "vs. mineraluld",    "value": "Ingen målbar forskel" },
-      { "key": "Teststandard",      "value": "EN ISO 354" }
+      {
+        "key": "α ved 500 Hz",
+        "value": "0.75"
+      },
+      {
+        "key": "α ved 1 kHz",
+        "value": "0.75"
+      },
+      {
+        "key": "α ved 2 kHz",
+        "value": "0.80"
+      },
+      {
+        "key": "Absorptionsklasse",
+        "value": "Class A"
+      },
+      {
+        "key": "vs. mineraluld",
+        "value": "Ingen målbar forskel"
+      },
+      {
+        "key": "Teststandard",
+        "value": "EN ISO 354"
+      }
     ]
   },
   "cta": {
@@ -55,12 +105,24 @@
   },
   "marquee": {
     "items": [
-      { "text": "Class A" },
-      { "text": "600 × 600 mm" },
-      { "text": "Stockholm" },
-      { "text": "~320 m²" },
-      { "text": "T-skinneinstallation" },
-      { "text": "Q4 2025" }
+      {
+        "text": "Class A"
+      },
+      {
+        "text": "600 × 600 mm"
+      },
+      {
+        "text": "Stockholm"
+      },
+      {
+        "text": "~320 m²"
+      },
+      {
+        "text": "T-skinneinstallation"
+      },
+      {
+        "text": "Q4 2025"
+      }
     ]
   }
 }

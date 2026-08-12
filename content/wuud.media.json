@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "bg_image": "assets/wuud_helsinki-design-week-2023_aukusti-heinonen_05.jpg"
+  },
+  "gallery": [
+    {
+      "image": "assets/wuud-sample-graphite.svg"
+    },
+    {
+      "image": "assets/wuud-sample-birch.svg"
+    },
+    {
+      "image": "assets/wuud-sample-oak.svg"
+    },
+    {
+      "image": "assets/wuud_render_01.jpg"
+    },
+    {
+      "image": "assets/wuud_render_09.jpg"
+    },
+    {
+      "image": "assets/wuud_render_03.jpg"
+    },
+    {
+      "image": "assets/wuud_render_02.jpg"
+    },
+    {
+      "image": "assets/wuud_render_011.jpg"
+    },
+    {
+      "image": "assets/screenshot-2026-02-25-at-17.31.25.png"
+    },
+    {
+      "image": "assets/screenshot-2026-02-25-at-17.31.48.png"
+    }
+  ]
+}

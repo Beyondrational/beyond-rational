@@ -3,8 +3,7 @@
   "hero": {
     "eyebrow": "Product · Mycelium acoustic panels",
     "title": "Mogu.",
-    "lede": "Soft, velvety acoustic panels grown from mycelium and upcycled textile residue — nature-grown, engineered to perform. A 3D-shaped surface built to maximise absorption, brought to Denmark by Beyond Rational.",
-    "bg_image": "assets/mogu-hero-lifestyle.jpg"
+    "lede": "Soft, velvety acoustic panels grown from mycelium and upcycled textile residue — nature-grown, engineered to perform. A 3D-shaped surface built to maximise absorption, brought to Denmark by Beyond Rational."
   },
   "idea": {
     "eyebrow": "The growth",
@@ -67,37 +66,30 @@
   },
   "gallery": [
     {
-      "image": "assets/mogu-gallery-cityview.jpg",
       "title": "Wall panel",
       "meta": "In place"
     },
     {
-      "image": "assets/mogu-gallery-office.jpg",
       "title": "Office",
       "meta": "In place"
     },
     {
-      "image": "assets/mogu-gallery-colors.jpg",
       "title": "Colours",
       "meta": "Range"
     },
     {
-      "image": "assets/mogu-gallery-material.jpg",
       "title": "Material",
       "meta": "Study"
     },
     {
-      "image": "assets/mogu-gallery-hexagon.jpg",
       "title": "Hexagon wall",
       "meta": "Installation"
     },
     {
-      "image": "assets/mogu-gallery-triangle.jpg",
       "title": "Triangle wall, colour",
       "meta": "Office install"
     },
     {
-      "image": "assets/mogu-gallery-detail.jpg",
       "title": "Panel edge",
       "meta": "Material detail"
     }

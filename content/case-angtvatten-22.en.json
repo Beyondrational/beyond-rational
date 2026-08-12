@@ -4,8 +4,7 @@
     "eyebrow": "Case 01 · Stockholm · 2025",
     "title_l1": "Ångtvätten",
     "title_l2": "22.",
-    "lede": "A 40,000 m² commercial property in Stora Essingen. Open-plan offices with a ceiling that needed to absorb sound — without calling attention to itself.",
-    "image": "assets/aisti-person-angtvatten.webp"
+    "lede": "A 40,000 m² commercial property in Stora Essingen. Open-plan offices with a ceiling that needed to absorb sound — without calling attention to itself."
   },
   "brief": {
     "eyebrow": "The brief",
@@ -17,20 +16,53 @@
   },
   "spec": {
     "items": [
-      { "key": "Product",   "value": "Aisti® Aalto" },
-      { "key": "Format",    "value": "600 × 600 mm" },
-      { "key": "Thickness", "value": "20 mm" },
-      { "key": "Finish",    "value": "Stone · mid-grey" },
-      { "key": "Mounting",  "value": "Tight · T-grid" },
-      { "key": "Area",      "value": "~320 m²" },
-      { "key": "Location",  "value": "Stora Essingen, SE" },
-      { "key": "Installed", "value": "Q4 2025" }
+      {
+        "key": "Product",
+        "value": "Aisti® Aalto"
+      },
+      {
+        "key": "Format",
+        "value": "600 × 600 mm"
+      },
+      {
+        "key": "Thickness",
+        "value": "20 mm"
+      },
+      {
+        "key": "Finish",
+        "value": "Stone · mid-grey"
+      },
+      {
+        "key": "Mounting",
+        "value": "Tight · T-grid"
+      },
+      {
+        "key": "Area",
+        "value": "~320 m²"
+      },
+      {
+        "key": "Location",
+        "value": "Stora Essingen, SE"
+      },
+      {
+        "key": "Installed",
+        "value": "Q4 2025"
+      }
     ]
   },
   "gallery": [
-    { "image": "assets/aisti-person-angtvatten.webp", "title": "Ångtvätten 22", "meta": "In place" },
-    { "image": "assets/aisti-render-3.webp", "title": "Ceiling install", "meta": "Dark blue, 600×600" },
-    { "image": "assets/aisti-feeling-angtvatten.webp", "title": "The space", "meta": "Atmosphere" }
+    {
+      "title": "Ångtvätten 22",
+      "meta": "In place"
+    },
+    {
+      "title": "Ceiling install",
+      "meta": "Dark blue, 600×600"
+    },
+    {
+      "title": "The space",
+      "meta": "Atmosphere"
+    }
   ],
   "results": {
     "eyebrow": "The result",
@@ -40,12 +72,30 @@
   },
   "performance": {
     "items": [
-      { "key": "α at 500 Hz",       "value": "0.75" },
-      { "key": "α at 1 kHz",        "value": "0.75" },
-      { "key": "α at 2 kHz",        "value": "0.80" },
-      { "key": "Absorption class",  "value": "Class A" },
-      { "key": "vs. mineral wool",  "value": "No measurable difference" },
-      { "key": "Test standard",    "value": "EN ISO 354" }
+      {
+        "key": "α at 500 Hz",
+        "value": "0.75"
+      },
+      {
+        "key": "α at 1 kHz",
+        "value": "0.75"
+      },
+      {
+        "key": "α at 2 kHz",
+        "value": "0.80"
+      },
+      {
+        "key": "Absorption class",
+        "value": "Class A"
+      },
+      {
+        "key": "vs. mineral wool",
+        "value": "No measurable difference"
+      },
+      {
+        "key": "Test standard",
+        "value": "EN ISO 354"
+      }
     ]
   },
   "cta": {
@@ -55,12 +105,24 @@
   },
   "marquee": {
     "items": [
-      { "text": "Class A" },
-      { "text": "600 × 600 mm" },
-      { "text": "Stockholm" },
-      { "text": "~320 m²" },
-      { "text": "T-grid install" },
-      { "text": "Q4 2025" }
+      {
+        "text": "Class A"
+      },
+      {
+        "text": "600 × 600 mm"
+      },
+      {
+        "text": "Stockholm"
+      },
+      {
+        "text": "~320 m²"
+      },
+      {
+        "text": "T-grid install"
+      },
+      {
+        "text": "Q4 2025"
+      }
     ]
   }
 }

@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "bg_image": "assets/aisti-042.jpg"
+  },
+  "items": [
+    {
+      "image": "assets/aisti-person-angtvatten.webp"
+    },
+    {
+      "image": "assets/wuud-deck-thumb.jpg"
+    },
+    {
+      "image": "assets/sappa-hero-ceiling.jpg"
+    },
+    {
+      "image": "assets/mogu-hero-lifestyle.jpg"
+    }
+  ]
+}

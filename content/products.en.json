@@ -3,33 +3,28 @@
   "hero": {
     "eyebrow": "Products",
     "title": "Our Products.",
-    "lede": "Four sustainable acoustic materials for modern architecture. Each chosen for performance, surface, and a low footprint — and each with its own page.",
-    "bg_image": "assets/aisti-042.jpg"
+    "lede": "Four sustainable acoustic materials for modern architecture. Each chosen for performance, surface, and a low footprint — and each with its own page."
   },
   "items": [
     {
       "name": "Aisti® Aalto",
       "tag": "Available 2026",
-      "body": "Foam-formed natural wood fibre. Absorption Class A, two formats, two thicknesses. Fits standard T-grid ceilings or mounts directly with adhesive. Official distributor in Denmark.",
-      "image": "assets/aisti-person-angtvatten.webp"
+      "body": "Foam-formed natural wood fibre. Absorption Class A, two formats, two thicknesses. Fits standard T-grid ceilings or mounts directly with adhesive. Official distributor in Denmark."
     },
     {
       "name": "Wuud",
       "tag": "In development",
-      "body": "Embossed wooden cladding for interior and exterior — real birch, alder, aspen and pine, modified to hold deep relief. Finnish-developed; finishes and patterns on request.",
-      "image": "assets/wuud-deck-thumb.jpg"
+      "body": "Embossed wooden cladding for interior and exterior — real birch, alder, aspen and pine, modified to hold deep relief. Finnish-developed; finishes and patterns on request."
     },
     {
       "name": "Sappa",
       "tag": "In development",
-      "body": "Acoustic panels grown from hemp — a fast-renewing natural fibre, bound with a cement-free mineral binder. For walls and ceilings.",
-      "image": "assets/sappa-hero-ceiling.jpg"
+      "body": "Acoustic panels grown from hemp — a fast-renewing natural fibre, bound with a cement-free mineral binder. For walls and ceilings."
     },
     {
       "name": "Mogu",
       "tag": "In development",
-      "body": "Soft, velvety acoustic panels grown from mycelium and upcycled textile residue. Engineered for absorption; naturally white, with a wider colour range on request.",
-      "image": "assets/mogu-hero-lifestyle.jpg"
+      "body": "Soft, velvety acoustic panels grown from mycelium and upcycled textile residue. Engineered for absorption; naturally white, with a wider colour range on request."
     }
   ],
   "cta": {
