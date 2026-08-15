@@ -102,27 +102,5 @@
     "title_l1": "Specify",
     "title_l2": "your project.",
     "lede": "Send the brief. We'll help you select format, thickness, and mounting for your room — and get you samples ahead of full production in August 2026."
-  },
-  "marquee": {
-    "items": [
-      {
-        "text": "Class A"
-      },
-      {
-        "text": "600 × 600 mm"
-      },
-      {
-        "text": "Stockholm"
-      },
-      {
-        "text": "~320 m²"
-      },
-      {
-        "text": "T-grid install"
-      },
-      {
-        "text": "Q4 2025"
-      }
-    ]
   }
 }
