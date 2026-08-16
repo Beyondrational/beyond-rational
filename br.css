@@ -509,6 +509,11 @@
      cuts them, while the negative margin keeps line spacing unchanged. */
   padding-bottom: 0.18em;
   margin-bottom: -0.18em;
+  /* Same trick, top side: Nordic diacritics (Å, Ä, Ö, Æ, Ø) sit above
+     normal cap-height, and overflow:hidden was clipping the ring/dots —
+     most visibly the "Å" in "Ångtvätten". */
+  padding-top: 0.18em;
+  margin-top: -0.18em;
   /* Hidden from first paint, not just once br.js gets around to it — without
      this, the raw un-split text renders normally for a frame (defer scripts
      run after parsing, not before first paint), then vanishes when JS builds
