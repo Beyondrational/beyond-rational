@@ -153,8 +153,20 @@
     // page, the char reveal plays out hidden/underneath and then the
     // header just pops in fully revealed once it becomes visible — read
     // as the reveal firing twice. Hold off starting the observer until
-    // both are out of the way so headers reveal exactly once, visibly,
-    // same as the design-system reference (which has neither in play).
+    // all three are out of the way so headers reveal exactly once, visibly,
+    // same as the design-system reference (which has none of them in play).
+    //
+    // The third wait (content-ready) matters even for visitors with no
+    // stored language preference mismatch: the static HTML always ships
+    // in English, and br-content.js swaps in the resolved-language text
+    // (e.g. Danish, if that's what's saved in localStorage) once its fetch
+    // resolves. Without this gate, a fast-resolving IntersectionObserver
+    // can reveal the English placeholder first, then — the instant the
+    // real text lands — braSplitRevealText sees a text mismatch and
+    // replays the whole char reveal with the corrected copy. That's the
+    // "animation runs twice" / "text jumps" symptom. Waiting for the first
+    // br-content-ready means the reveal only ever plays once, already
+    // showing the final, correct text.
     const revealGate = Promise.race([
       Promise.all([
         (window.navigation && window.navigation.transition)
@@ -163,10 +175,12 @@
         (loader && document.body.classList.contains('is-loading'))
           ? new Promise((resolve) => document.addEventListener('br-loader-done', resolve, { once: true }))
           : Promise.resolve(),
+        new Promise((resolve) => document.addEventListener('br-content-ready', resolve, { once: true })),
       ]),
-      // Safety net: never let a stuck/never-settling transition promise
-      // permanently withhold the reveal — 2.5s comfortably outlasts the
-      // loader (max ~1.8s) and the page-transition (550ms) in the normal case.
+      // Safety net: never let a stuck/never-settling transition, loader, or
+      // content fetch permanently withhold the reveal — 2.5s comfortably
+      // outlasts the loader (max ~1.8s), the page-transition (550ms), and
+      // a same-origin JSON fetch in the normal case.
       new Promise((resolve) => setTimeout(resolve, 2500)),
     ]);
     revealGate.then(() => {
