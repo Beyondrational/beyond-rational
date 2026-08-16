@@ -1,25 +1,5 @@
 {
   "hero": {
     "bg_image": "assets/aisti-026.jpg"
-  },
-  "gallery": [
-    {
-      "image": "assets/aisti-026.jpg"
-    },
-    {
-      "image": "assets/aisti-003.jpg"
-    },
-    {
-      "image": "assets/aisti-012.jpg"
-    },
-    {
-      "image": "assets/aisti-042.jpg"
-    },
-    {
-      "image": "assets/aisti-person-angtvatten.webp"
-    },
-    {
-      "image": "assets/br-office.webp"
-    }
-  ]
+  }
 }

@@ -1,28 +1,5 @@
 {
   "hero": {
     "bg_image": "assets/mogu-hero-lifestyle.jpg"
-  },
-  "gallery": [
-    {
-      "image": "assets/mogu-gallery-cityview.jpg"
-    },
-    {
-      "image": "assets/mogu-gallery-office.jpg"
-    },
-    {
-      "image": "assets/mogu-gallery-colors.jpg"
-    },
-    {
-      "image": "assets/mogu-gallery-material.jpg"
-    },
-    {
-      "image": "assets/mogu-gallery-hexagon.jpg"
-    },
-    {
-      "image": "assets/mogu-gallery-triangle.jpg"
-    },
-    {
-      "image": "assets/mogu-gallery-detail.jpg"
-    }
-  ]
+  }
 }

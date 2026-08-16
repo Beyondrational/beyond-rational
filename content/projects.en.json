@@ -9,27 +9,33 @@
   "gallery": [
     {
       "title": "Aisti® tile, interior",
-      "meta": "Product photography"
+      "meta": "Product photography",
+      "image": "assets/aisti-026.jpg"
     },
     {
       "title": "Tile, raked light",
-      "meta": "Material study"
+      "meta": "Material study",
+      "image": "assets/aisti-003.jpg"
     },
     {
       "title": "Surface detail",
-      "meta": "Material study"
+      "meta": "Material study",
+      "image": "assets/aisti-012.jpg"
     },
     {
       "title": "Wood fibre, compressed",
-      "meta": "Material study"
+      "meta": "Material study",
+      "image": "assets/aisti-042.jpg"
     },
     {
       "title": "On site",
-      "meta": "Ångtvätten 22"
+      "meta": "Ångtvätten 22",
+      "image": "assets/aisti-person-angtvatten.webp"
     },
     {
       "title": "Ceiling, calm",
-      "meta": "Product photography"
+      "meta": "Product photography",
+      "image": "assets/br-office.webp"
     }
   ],
   "supplier_head": {

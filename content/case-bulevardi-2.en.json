@@ -53,11 +53,13 @@
   "gallery": [
     {
       "title": "The space",
-      "meta": "Helsinki city centre"
+      "meta": "Helsinki city centre",
+      "image": "assets/br-office-2.webp"
     },
     {
       "title": "Ceiling detail",
-      "meta": "White, 600×1200"
+      "meta": "White, 600×1200",
+      "image": "assets/aisti-render-2.png"
     }
   ],
   "results": {

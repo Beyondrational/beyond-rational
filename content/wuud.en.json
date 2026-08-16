@@ -43,43 +43,53 @@
   "gallery": [
     {
       "title": "Painted graphite",
-      "meta": "Finish sample"
+      "meta": "Finish sample",
+      "image": "assets/wuud-sample-graphite.svg"
     },
     {
       "title": "Natural birch",
-      "meta": "Finish sample"
+      "meta": "Finish sample",
+      "image": "assets/wuud-sample-birch.svg"
     },
     {
       "title": "Translucent oak",
-      "meta": "Finish sample"
+      "meta": "Finish sample",
+      "image": "assets/wuud-sample-oak.svg"
     },
     {
       "title": "Panel detail",
-      "meta": "Surface"
+      "meta": "Surface",
+      "image": "assets/wuud_render_01.jpg"
     },
     {
       "title": "Relief, raked light",
-      "meta": "Texture"
+      "meta": "Texture",
+      "image": "assets/wuud_render_09.jpg"
     },
     {
       "title": "Mounted",
-      "meta": "In place"
+      "meta": "In place",
+      "image": "assets/wuud_render_03.jpg"
     },
     {
       "title": "Cladding run",
-      "meta": "Interior"
+      "meta": "Interior",
+      "image": "assets/wuud_render_02.jpg"
     },
     {
       "title": "Wall, daylit",
-      "meta": "Interior"
+      "meta": "Interior",
+      "image": "assets/wuud_render_011.jpg"
     },
     {
       "title": "Full height",
-      "meta": "In place"
+      "meta": "In place",
+      "image": "assets/screenshot-2026-02-25-at-17.31.25.png"
     },
     {
       "title": "Edge profile",
-      "meta": "Detail"
+      "meta": "Detail",
+      "image": "assets/screenshot-2026-02-25-at-17.31.48.png"
     }
   ],
   "spec": {

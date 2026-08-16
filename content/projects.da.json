@@ -9,27 +9,33 @@
   "gallery": [
     {
       "title": "Aisti®-plade, interiør",
-      "meta": "Produktfotografi"
+      "meta": "Produktfotografi",
+      "image": "assets/aisti-026.jpg"
     },
     {
       "title": "Plade, strejflys",
-      "meta": "Materialestudie"
+      "meta": "Materialestudie",
+      "image": "assets/aisti-003.jpg"
     },
     {
       "title": "Overfladedetalje",
-      "meta": "Materialestudie"
+      "meta": "Materialestudie",
+      "image": "assets/aisti-012.jpg"
     },
     {
       "title": "Træfiber, komprimeret",
-      "meta": "Materialestudie"
+      "meta": "Materialestudie",
+      "image": "assets/aisti-042.jpg"
     },
     {
       "title": "På stedet",
-      "meta": "Ångtvätten 22"
+      "meta": "Ångtvätten 22",
+      "image": "assets/aisti-person-angtvatten.webp"
     },
     {
       "title": "Loft, roligt",
-      "meta": "Produktfotografi"
+      "meta": "Produktfotografi",
+      "image": "assets/br-office.webp"
     }
   ],
   "supplier_head": {

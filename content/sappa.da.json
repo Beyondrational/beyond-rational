@@ -67,39 +67,48 @@
   "gallery": [
     {
       "title": "Panel",
-      "meta": "Produkt"
+      "meta": "Produkt",
+      "image": "assets/sappa-gallery-panel.jpg"
     },
     {
       "title": "Tekstur",
-      "meta": "Materialedetalje"
+      "meta": "Materialedetalje",
+      "image": "assets/sappa-gallery-texture.jpg"
     },
     {
       "title": "Farver",
-      "meta": "Udvalg"
+      "meta": "Udvalg",
+      "image": "assets/sappa-gallery-colors.jpg"
     },
     {
       "title": "Interiør",
-      "meta": "På stedet"
+      "meta": "På stedet",
+      "image": "assets/sappa-gallery-interior.jpg"
     },
     {
       "title": "Hamp",
-      "meta": "Råmateriale"
+      "meta": "Råmateriale",
+      "image": "assets/sappa-gallery-raw-material.jpg"
     },
     {
       "title": "Sildebensmønster i loft",
-      "meta": "Installation, værksted"
+      "meta": "Installation, værksted",
+      "image": "assets/sappa-gallery-workshop.jpg"
     },
     {
       "title": "Farve, i praksis",
-      "meta": "Installation, restaurant"
+      "meta": "Installation, restaurant",
+      "image": "assets/sappa-gallery-color-bar.jpg"
     },
     {
       "title": "Vægmønster",
-      "meta": "Designdetalje"
+      "meta": "Designdetalje",
+      "image": "assets/sappa-gallery-pattern.jpg"
     },
     {
       "title": "Mødelokale, loft",
-      "meta": "Installation, kontor"
+      "meta": "Installation, kontor",
+      "image": "assets/sappa-gallery-boardroom.jpg"
     }
   ],
   "cta": {

@@ -141,43 +141,53 @@
     "items": [
       {
         "title": "Dagslysinteriør",
-        "meta": "Produktfotografi"
+        "meta": "Produktfotografi",
+        "image": "assets/aisti-026.jpg"
       },
       {
         "title": "Plade, strejflys",
-        "meta": "Materialestudie"
+        "meta": "Materialestudie",
+        "image": "assets/aisti-003.jpg"
       },
       {
         "title": "Monteret",
-        "meta": "Detalje"
+        "meta": "Detalje",
+        "image": "assets/aisti-035.jpg"
       },
       {
         "title": "Overflade, komprimeret",
-        "meta": "Materialestudie"
+        "meta": "Materialestudie",
+        "image": "assets/aisti-042.jpg"
       },
       {
         "title": "Værksted",
-        "meta": "Bag pressen"
+        "meta": "Bag pressen",
+        "image": "assets/aisti-025.jpg"
       },
       {
         "title": "Loft, roligt",
-        "meta": "Produktfotografi"
+        "meta": "Produktfotografi",
+        "image": "assets/aisti-008.jpg"
       },
       {
         "title": "I brug",
-        "meta": "Kontorinteriør"
+        "meta": "Kontorinteriør",
+        "image": "assets/aisti-person-angtvatten.webp"
       },
       {
         "title": "Vægdetalje",
-        "meta": "Produktfotografi"
+        "meta": "Produktfotografi",
+        "image": "assets/aisti-012.jpg"
       },
       {
         "title": "Træfiber",
-        "meta": "Materialestudie"
+        "meta": "Materialestudie",
+        "image": "assets/aisti-tile-001.webp"
       },
       {
         "title": "Loftinstallation",
-        "meta": "På stedet"
+        "meta": "På stedet",
+        "image": "assets/br-office.webp"
       }
     ]
   },
@@ -188,15 +198,18 @@
     "items": [
       {
         "name": "Kant A",
-        "method": "I T-skinne"
+        "method": "I T-skinne",
+        "image": "assets/aisti-edge-a.webp"
       },
       {
         "name": "Kant B",
-        "method": "Direkte montering"
+        "method": "Direkte montering",
+        "image": "assets/aisti-edge-b.webp"
       },
       {
         "name": "Kant E",
-        "method": "I T-skinne"
+        "method": "I T-skinne",
+        "image": "assets/aisti-edge-e.webp"
       }
     ]
   },

@@ -2,36 +2,10 @@
   "hero": {
     "bg_image": "assets/aisti-person-angtvatten.webp"
   },
-  "range": {
-    "items": [
-      {
-        "image": "assets/aisti-026.jpg"
-      },
-      {
-        "image": "assets/wuud_render_01.jpg"
-      },
-      {
-        "image": "assets/skærmbillede-2026-07-08-kl.-13.28.04.png"
-      },
-      {
-        "image": "assets/skærmbillede-2026-07-08-kl.-13.36.48.png"
-      }
-    ]
-  },
   "process": {
     "image": "assets/aisti-042.jpg"
   },
   "studio": {
     "image": "assets/img_8118.jpg"
-  },
-  "cases": {
-    "items": [
-      {
-        "image": "assets/aisti-person-angtvatten.webp"
-      },
-      {
-        "image": "assets/br-office.webp"
-      }
-    ]
   }
 }

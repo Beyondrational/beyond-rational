@@ -53,11 +53,13 @@
   "gallery": [
     {
       "title": "Loftinstallation",
-      "meta": "Mørkeblå, 600×600"
+      "meta": "Mørkeblå, 600×600",
+      "image": "assets/aisti-render-3.webp"
     },
     {
       "title": "Rummet",
-      "meta": "Stemning"
+      "meta": "Stemning",
+      "image": "assets/aisti-feeling-angtvatten.webp"
     }
   ],
   "results": {

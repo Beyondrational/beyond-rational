@@ -67,31 +67,38 @@
   "gallery": [
     {
       "title": "Vægpanel",
-      "meta": "På stedet"
+      "meta": "På stedet",
+      "image": "assets/mogu-gallery-cityview.jpg"
     },
     {
       "title": "Kontor",
-      "meta": "På stedet"
+      "meta": "På stedet",
+      "image": "assets/mogu-gallery-office.jpg"
     },
     {
       "title": "Farver",
-      "meta": "Udvalg"
+      "meta": "Udvalg",
+      "image": "assets/mogu-gallery-colors.jpg"
     },
     {
       "title": "Materiale",
-      "meta": "Studie"
+      "meta": "Studie",
+      "image": "assets/mogu-gallery-material.jpg"
     },
     {
       "title": "Sekskantet væg",
-      "meta": "Installation"
+      "meta": "Installation",
+      "image": "assets/mogu-gallery-hexagon.jpg"
     },
     {
       "title": "Trekantet væg, farve",
-      "meta": "Installation, kontor"
+      "meta": "Installation, kontor",
+      "image": "assets/mogu-gallery-triangle.jpg"
     },
     {
       "title": "Panelkant",
-      "meta": "Materialedetalje"
+      "meta": "Materialedetalje",
+      "image": "assets/mogu-gallery-detail.jpg"
     }
   ],
   "cta": {

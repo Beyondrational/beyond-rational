@@ -141,43 +141,53 @@
     "items": [
       {
         "title": "Daylit interior",
-        "meta": "Product photography"
+        "meta": "Product photography",
+        "image": "assets/aisti-026.jpg"
       },
       {
         "title": "Tile, raked light",
-        "meta": "Material study"
+        "meta": "Material study",
+        "image": "assets/aisti-003.jpg"
       },
       {
         "title": "Mounted",
-        "meta": "Detail"
+        "meta": "Detail",
+        "image": "assets/aisti-035.jpg"
       },
       {
         "title": "Surface, compressed",
-        "meta": "Material study"
+        "meta": "Material study",
+        "image": "assets/aisti-042.jpg"
       },
       {
         "title": "Workshop",
-        "meta": "Behind the press"
+        "meta": "Behind the press",
+        "image": "assets/aisti-025.jpg"
       },
       {
         "title": "Ceiling, calm",
-        "meta": "Product photography"
+        "meta": "Product photography",
+        "image": "assets/aisti-008.jpg"
       },
       {
         "title": "In use",
-        "meta": "Office interior"
+        "meta": "Office interior",
+        "image": "assets/aisti-person-angtvatten.webp"
       },
       {
         "title": "Wall detail",
-        "meta": "Product photography"
+        "meta": "Product photography",
+        "image": "assets/aisti-012.jpg"
       },
       {
         "title": "Wood fibre",
-        "meta": "Material study"
+        "meta": "Material study",
+        "image": "assets/aisti-tile-001.webp"
       },
       {
         "title": "Ceiling install",
-        "meta": "In place"
+        "meta": "In place",
+        "image": "assets/br-office.webp"
       }
     ]
   },
@@ -188,15 +198,18 @@
     "items": [
       {
         "name": "Edge A",
-        "method": "In T-grid"
+        "method": "In T-grid",
+        "image": "assets/aisti-edge-a.webp"
       },
       {
         "name": "Edge B",
-        "method": "Direct mount"
+        "method": "Direct mount",
+        "image": "assets/aisti-edge-b.webp"
       },
       {
         "name": "Edge E",
-        "method": "In T-grid"
+        "method": "In T-grid",
+        "image": "assets/aisti-edge-e.webp"
       }
     ]
   },

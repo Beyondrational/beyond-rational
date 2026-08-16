@@ -43,43 +43,53 @@
   "gallery": [
     {
       "title": "Malet grafit",
-      "meta": "Finish-prøve"
+      "meta": "Finish-prøve",
+      "image": "assets/wuud-sample-graphite.svg"
     },
     {
       "title": "Natur birk",
-      "meta": "Finish-prøve"
+      "meta": "Finish-prøve",
+      "image": "assets/wuud-sample-birch.svg"
     },
     {
       "title": "Transparent eg",
-      "meta": "Finish-prøve"
+      "meta": "Finish-prøve",
+      "image": "assets/wuud-sample-oak.svg"
     },
     {
       "title": "Pladedetalje",
-      "meta": "Overflade"
+      "meta": "Overflade",
+      "image": "assets/wuud_render_01.jpg"
     },
     {
       "title": "Relief, strejflys",
-      "meta": "Tekstur"
+      "meta": "Tekstur",
+      "image": "assets/wuud_render_09.jpg"
     },
     {
       "title": "Monteret",
-      "meta": "På stedet"
+      "meta": "På stedet",
+      "image": "assets/wuud_render_03.jpg"
     },
     {
       "title": "Beklædningsforløb",
-      "meta": "Interiør"
+      "meta": "Interiør",
+      "image": "assets/wuud_render_02.jpg"
     },
     {
       "title": "Væg, dagslys",
-      "meta": "Interiør"
+      "meta": "Interiør",
+      "image": "assets/wuud_render_011.jpg"
     },
     {
       "title": "Fuld højde",
-      "meta": "På stedet"
+      "meta": "På stedet",
+      "image": "assets/screenshot-2026-02-25-at-17.31.25.png"
     },
     {
       "title": "Kantprofil",
-      "meta": "Detalje"
+      "meta": "Detalje",
+      "image": "assets/screenshot-2026-02-25-at-17.31.48.png"
     }
   ],
   "spec": {

@@ -67,39 +67,48 @@
   "gallery": [
     {
       "title": "Panel",
-      "meta": "Product"
+      "meta": "Product",
+      "image": "assets/sappa-gallery-panel.jpg"
     },
     {
       "title": "Texture",
-      "meta": "Material detail"
+      "meta": "Material detail",
+      "image": "assets/sappa-gallery-texture.jpg"
     },
     {
       "title": "Colours",
-      "meta": "Range"
+      "meta": "Range",
+      "image": "assets/sappa-gallery-colors.jpg"
     },
     {
       "title": "Interior",
-      "meta": "In place"
+      "meta": "In place",
+      "image": "assets/sappa-gallery-interior.jpg"
     },
     {
       "title": "Hemp",
-      "meta": "Raw material"
+      "meta": "Raw material",
+      "image": "assets/sappa-gallery-raw-material.jpg"
     },
     {
       "title": "Herringbone ceiling",
-      "meta": "Workshop install"
+      "meta": "Workshop install",
+      "image": "assets/sappa-gallery-workshop.jpg"
     },
     {
       "title": "Colour, applied",
-      "meta": "Hospitality install"
+      "meta": "Hospitality install",
+      "image": "assets/sappa-gallery-color-bar.jpg"
     },
     {
       "title": "Wall pattern",
-      "meta": "Design detail"
+      "meta": "Design detail",
+      "image": "assets/sappa-gallery-pattern.jpg"
     },
     {
       "title": "Boardroom ceiling",
-      "meta": "Office install"
+      "meta": "Office install",
+      "image": "assets/sappa-gallery-boardroom.jpg"
     }
   ],
   "cta": {

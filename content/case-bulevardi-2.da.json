@@ -53,11 +53,13 @@
   "gallery": [
     {
       "title": "Rummet",
-      "meta": "Helsinki centrum"
+      "meta": "Helsinki centrum",
+      "image": "assets/br-office-2.webp"
     },
     {
       "title": "Loftdetalje",
-      "meta": "Hvid, 600×1200"
+      "meta": "Hvid, 600×1200",
+      "image": "assets/aisti-render-2.png"
     }
   ],
   "results": {

@@ -144,7 +144,7 @@ collections:
       - file: "content/home.en.json"
         name: "home-en"
         label: "Home page — EN"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -177,6 +177,7 @@ collections:
                   - { label: "Name",  name: "name",  widget: "string" }
                   - { label: "Tag",   name: "tag",   widget: "string", required: false, hint: "Not currently displayed, kept for future use" }
                   - { label: "Link",  name: "href",  widget: "string", hint: "e.g. product-aisti.html, product-wuud.html" }
+                  - { label: "Image", name: "image", widget: "image", required: false }
 
           - label: "Mission statement"
             name: "process"
@@ -220,6 +221,7 @@ collections:
                   - { label: "Title",   name: "title",   widget: "string" }
                   - { label: "Meta 1",  name: "meta1",   widget: "string" }
                   - { label: "Meta 2",  name: "meta2",   widget: "text"   }
+                  - { label: "Image",   name: "image",   widget: "image", required: false }
 
           - label: "Closing CTA"
             name: "cta"
@@ -238,7 +240,7 @@ collections:
       - file: "content/home.da.json"
         name: "home-da"
         label: "Home page — DA"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -271,6 +273,7 @@ collections:
                   - { label: "Name",  name: "name",  widget: "string" }
                   - { label: "Tag",   name: "tag",   widget: "string", required: false, hint: "Not currently displayed, kept for future use" }
                   - { label: "Link",  name: "href",  widget: "string", hint: "e.g. product-aisti.html, product-wuud.html" }
+                  - { label: "Image", name: "image", widget: "image", required: false }
 
           - label: "Mission statement"
             name: "process"
@@ -314,6 +317,7 @@ collections:
                   - { label: "Title",   name: "title",   widget: "string" }
                   - { label: "Meta 1",  name: "meta1",   widget: "string" }
                   - { label: "Meta 2",  name: "meta2",   widget: "text"   }
+                  - { label: "Image",   name: "image",   widget: "image", required: false }
 
           - label: "Closing CTA"
             name: "cta"
@@ -332,7 +336,7 @@ collections:
       - file: "content/contact.en.json"
         name: "contact-page-en"
         label: "Contact page — EN"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -499,7 +503,7 @@ collections:
       - file: "content/contact.da.json"
         name: "contact-page-da"
         label: "Contact page — DA"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -666,7 +670,7 @@ collections:
       - file: "content/projects.en.json"
         name: "projects-en"
         label: "Projects page — EN"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -687,6 +691,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Meta",  name: "meta",  widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
 
           - label: "Case studies (prose panels)"
             name: "cases"
@@ -715,7 +720,7 @@ collections:
       - file: "content/projects.da.json"
         name: "projects-da"
         label: "Projects page — DA"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -736,6 +741,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Meta",  name: "meta",  widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
 
           - label: "Case studies (prose panels)"
             name: "cases"
@@ -764,7 +770,7 @@ collections:
       - file: "content/wuud.en.json"
         name: "wuud-en"
         label: "Wuud page — EN"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -811,6 +817,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string", required: false }
               - { label: "Meta",  name: "meta",  widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image", required: false }
 
           - label: "Spec"
             name: "spec"
@@ -842,7 +849,7 @@ collections:
       - file: "content/wuud.da.json"
         name: "wuud-da"
         label: "Wuud page — DA"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -889,6 +896,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string", required: false }
               - { label: "Meta",  name: "meta",  widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image", required: false }
 
           - label: "Spec"
             name: "spec"
@@ -920,7 +928,7 @@ collections:
       - file: "content/product-aisti.en.json"
         name: "product-aisti-en"
         label: "Product page (Aisti) — EN"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -975,6 +983,7 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Meta",  name: "meta",  widget: "string" }
+                  - { label: "Image", name: "image", widget: "image", required: false }
 
           - label: "Edge types"
             name: "edge_types"
@@ -990,6 +999,7 @@ collections:
                 fields:
                   - { label: "Name",   name: "name",   widget: "string" }
                   - { label: "Installation method", name: "method", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image", required: false }
 
           - label: "Spec sheet"
             name: "spec"
@@ -1123,7 +1133,7 @@ collections:
       - file: "content/product-aisti.da.json"
         name: "product-aisti-da"
         label: "Product page (Aisti) — DA"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -1178,6 +1188,7 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Meta",  name: "meta",  widget: "string" }
+                  - { label: "Image", name: "image", widget: "image", required: false }
 
           - label: "Edge types"
             name: "edge_types"
@@ -1193,6 +1204,7 @@ collections:
                 fields:
                   - { label: "Name",   name: "name",   widget: "string" }
                   - { label: "Installation method", name: "method", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image", required: false }
 
           - label: "Spec sheet"
             name: "spec"
@@ -1326,7 +1338,7 @@ collections:
       - file: "content/products.en.json"
         name: "products-en"
         label: "Products overview page — EN"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -1347,6 +1359,7 @@ collections:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Tag",  name: "tag",  widget: "string" }
               - { label: "Body", name: "body", widget: "text"   }
+              - { label: "Image", name: "image", widget: "image", required: false }
 
           - label: "Closing CTA"
             name: "cta"
@@ -1363,7 +1376,7 @@ collections:
       - file: "content/products.da.json"
         name: "products-da"
         label: "Products overview page — DA"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -1384,6 +1397,7 @@ collections:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Tag",  name: "tag",  widget: "string" }
               - { label: "Body", name: "body", widget: "text"   }
+              - { label: "Image", name: "image", widget: "image", required: false }
 
           - label: "Closing CTA"
             name: "cta"
@@ -1400,7 +1414,7 @@ collections:
       - file: "content/case-angtvatten-22.en.json"
         name: "case-angtvatten-22-en"
         label: "Ångtvätten 22 case page — EN"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -1440,6 +1454,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Meta",  name: "meta",  widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
           - label: "Results"
             name: "results"
             widget: "object"
@@ -1474,7 +1489,7 @@ collections:
       - file: "content/case-angtvatten-22.da.json"
         name: "case-angtvatten-22-da"
         label: "Ångtvätten 22 case page — DA"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -1514,6 +1529,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Meta",  name: "meta",  widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
           - label: "Results"
             name: "results"
             widget: "object"
@@ -1548,7 +1564,7 @@ collections:
       - file: "content/case-bulevardi-2.en.json"
         name: "case-bulevardi-2-en"
         label: "Bulevardi 2 case page — EN"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -1588,6 +1604,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Meta",  name: "meta",  widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
           - label: "Results"
             name: "results"
             widget: "object"
@@ -1622,7 +1639,7 @@ collections:
       - file: "content/case-bulevardi-2.da.json"
         name: "case-bulevardi-2-da"
         label: "Bulevardi 2 case page — DA"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -1662,6 +1679,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Meta",  name: "meta",  widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
           - label: "Results"
             name: "results"
             widget: "object"
@@ -1696,7 +1714,7 @@ collections:
       - file: "content/mogu.en.json"
         name: "mogu-en"
         label: "Mogu page — EN"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -1738,6 +1756,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string", required: false }
               - { label: "Meta",  name: "meta",  widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image", required: false }
           - label: "Spec sheet"
             name: "spec"
             widget: "object"
@@ -1767,7 +1786,7 @@ collections:
       - file: "content/mogu.da.json"
         name: "mogu-da"
         label: "Mogu page — DA"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -1809,6 +1828,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string", required: false }
               - { label: "Meta",  name: "meta",  widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image", required: false }
           - label: "Spec sheet"
             name: "spec"
             widget: "object"
@@ -1838,7 +1858,7 @@ collections:
       - file: "content/sappa.en.json"
         name: "sappa-en"
         label: "Sappa page — EN"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -1880,6 +1900,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string", required: false }
               - { label: "Meta",  name: "meta",  widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image", required: false }
           - label: "Spec sheet"
             name: "spec"
             widget: "object"
@@ -1909,7 +1930,7 @@ collections:
       - file: "content/sappa.da.json"
         name: "sappa-da"
         label: "Sappa page — DA"
-        description: "Images for this page live in the matching Images (shared EN/DA) collection further down — edit a photo there and it updates both languages."
+        description: "The hero/background photo for this page lives in the matching Images (shared EN/DA) collection further down — edit it there to update both languages at once. Any gallery or list photos on this page are edited directly here, per language."
         fields:
 
           - { label: "Loader tag (top-right of the loading screen)", name: "loader_tag", widget: "string" }
@@ -1951,6 +1972,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string", required: false }
               - { label: "Meta",  name: "meta",  widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image", required: false }
           - label: "Spec sheet"
             name: "spec"
             widget: "object"
@@ -1987,11 +2009,6 @@ collections:
             widget: "object"
             fields:
               - { label: "Image", name: "image", widget: "image", required: false }
-          - label: "Gallery"
-            name: "gallery"
-            widget: "list"
-            fields:
-              - { label: "Image", name: "image", widget: "image", required: false }
 
   - name: "case-bulevardi-2-media"
     label: "Case — Bulevardi 2 — Images (shared EN/DA)"
@@ -2004,11 +2021,6 @@ collections:
           - label: "Hero"
             name: "hero"
             widget: "object"
-            fields:
-              - { label: "Image", name: "image", widget: "image", required: false }
-          - label: "Gallery"
-            name: "gallery"
-            widget: "list"
             fields:
               - { label: "Image", name: "image", widget: "image", required: false }
 
@@ -2039,15 +2051,6 @@ collections:
             widget: "object"
             fields:
               - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
-          - label: "The range"
-            name: "range"
-            widget: "object"
-            fields:
-              - label: "Items"
-                name: "items"
-                widget: "list"
-                fields:
-                  - { label: "Image", name: "image", widget: "image", required: false }
           - label: "Mission statement"
             name: "process"
             widget: "object"
@@ -2058,15 +2061,6 @@ collections:
             widget: "object"
             fields:
               - { label: "Image", name: "image", widget: "image", required: false }
-          - label: "Cases"
-            name: "cases"
-            widget: "object"
-            fields:
-              - label: "Items"
-                name: "items"
-                widget: "list"
-                fields:
-                  - { label: "Image", name: "image", widget: "image", required: false }
 
   - name: "mogu-media"
     label: "Product — Mogu — Images (shared EN/DA)"
@@ -2081,11 +2075,6 @@ collections:
             widget: "object"
             fields:
               - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
-          - label: "Gallery"
-            name: "gallery"
-            widget: "list"
-            fields:
-              - { label: "Image", name: "image", widget: "image", required: false }
 
   - name: "product-aisti-media"
     label: "Product — Aisti — Images (shared EN/DA)"
@@ -2100,24 +2089,6 @@ collections:
             widget: "object"
             fields:
               - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
-          - label: "Gallery"
-            name: "gallery"
-            widget: "object"
-            fields:
-              - label: "Items"
-                name: "items"
-                widget: "list"
-                fields:
-                  - { label: "Image", name: "image", widget: "image", required: false }
-          - label: "Edge types"
-            name: "edge_types"
-            widget: "object"
-            fields:
-              - label: "Items"
-                name: "items"
-                widget: "list"
-                fields:
-                  - { label: "Image", name: "image", widget: "image", required: false }
           - label: "Technology"
             name: "technology"
             widget: "object"
@@ -2137,11 +2108,6 @@ collections:
             widget: "object"
             fields:
               - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
-          - label: "Items"
-            name: "items"
-            widget: "list"
-            fields:
-              - { label: "Image", name: "image", widget: "image", required: false }
 
   - name: "projects-media"
     label: "Projects — Images (shared EN/DA)"
@@ -2156,11 +2122,6 @@ collections:
             widget: "object"
             fields:
               - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
-          - label: "Gallery"
-            name: "gallery"
-            widget: "list"
-            fields:
-              - { label: "Image", name: "image", widget: "image", required: false }
 
   - name: "sappa-media"
     label: "Product — Sappa — Images (shared EN/DA)"
@@ -2175,11 +2136,6 @@ collections:
             widget: "object"
             fields:
               - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
-          - label: "Gallery"
-            name: "gallery"
-            widget: "list"
-            fields:
-              - { label: "Image", name: "image", widget: "image", required: false }
 
   - name: "wuud-media"
     label: "Product — Wuud — Images (shared EN/DA)"
@@ -2194,8 +2150,3 @@ collections:
             widget: "object"
             fields:
               - { label: "Hero background image", name: "bg_image", widget: "image", required: false }
-          - label: "Gallery"
-            name: "gallery"
-            widget: "list"
-            fields:
-              - { label: "Image", name: "image", widget: "image", required: false }

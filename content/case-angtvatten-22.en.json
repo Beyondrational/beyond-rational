@@ -53,11 +53,13 @@
   "gallery": [
     {
       "title": "Ceiling install",
-      "meta": "Dark blue, 600×600"
+      "meta": "Dark blue, 600×600",
+      "image": "assets/aisti-render-3.webp"
     },
     {
       "title": "The space",
-      "meta": "Atmosphere"
+      "meta": "Atmosphere",
+      "image": "assets/aisti-feeling-angtvatten.webp"
     }
   ],
   "results": {

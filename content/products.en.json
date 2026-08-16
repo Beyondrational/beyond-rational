@@ -9,22 +9,26 @@
     {
       "name": "Aisti® Aalto",
       "tag": "Available 2026",
-      "body": "Foam-formed natural wood fibre. Absorption Class A, two formats, two thicknesses. Fits standard T-grid ceilings or mounts directly with adhesive. Official distributor in Denmark."
+      "body": "Foam-formed natural wood fibre. Absorption Class A, two formats, two thicknesses. Fits standard T-grid ceilings or mounts directly with adhesive. Official distributor in Denmark.",
+      "image": "assets/aisti-person-angtvatten.webp"
     },
     {
       "name": "Wuud",
       "tag": "In development",
-      "body": "Embossed wooden cladding for interior and exterior — real birch, alder, aspen and pine, modified to hold deep relief. Finnish-developed; finishes and patterns on request."
+      "body": "Embossed wooden cladding for interior and exterior — real birch, alder, aspen and pine, modified to hold deep relief. Finnish-developed; finishes and patterns on request.",
+      "image": "assets/wuud-deck-thumb.jpg"
     },
     {
       "name": "Sappa",
       "tag": "In development",
-      "body": "Acoustic panels grown from hemp — a fast-renewing natural fibre, bound with a cement-free mineral binder. For walls and ceilings."
+      "body": "Acoustic panels grown from hemp — a fast-renewing natural fibre, bound with a cement-free mineral binder. For walls and ceilings.",
+      "image": "assets/sappa-hero-ceiling.jpg"
     },
     {
       "name": "Mogu",
       "tag": "In development",
-      "body": "Soft, velvety acoustic panels grown from mycelium and upcycled textile residue. Engineered for absorption; naturally white, with a wider colour range on request."
+      "body": "Soft, velvety acoustic panels grown from mycelium and upcycled textile residue. Engineered for absorption; naturally white, with a wider colour range on request.",
+      "image": "assets/mogu-hero-lifestyle.jpg"
     }
   ],
   "cta": {

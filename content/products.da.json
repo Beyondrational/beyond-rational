@@ -9,22 +9,26 @@
     {
       "name": "Aisti® Aalto",
       "tag": "Tilgængelig 2026",
-      "body": "Skumformet naturlig træfiber. Absorptionsklasse A, to formater, to tykkelser. Passer til standard T-skinneloft eller monteres direkte med klæber. Officiel distributør i Danmark."
+      "body": "Skumformet naturlig træfiber. Absorptionsklasse A, to formater, to tykkelser. Passer til standard T-skinneloft eller monteres direkte med klæber. Officiel distributør i Danmark.",
+      "image": "assets/aisti-person-angtvatten.webp"
     },
     {
       "name": "Wuud",
       "tag": "Under udvikling",
-      "body": "Præget træbeklædning til interiør og eksteriør — ægte birk, el, asp og fyr, modificeret til at bære dyb relief. Finsk-udviklet; finish og mønstre efter aftale."
+      "body": "Præget træbeklædning til interiør og eksteriør — ægte birk, el, asp og fyr, modificeret til at bære dyb relief. Finsk-udviklet; finish og mønstre efter aftale.",
+      "image": "assets/wuud-deck-thumb.jpg"
     },
     {
       "name": "Sappa",
       "tag": "Under udvikling",
-      "body": "Akustikplader dyrket af hamp — en hurtigt fornybar naturfiber, bundet med et cementfrit mineralsk bindemiddel. Til vægge og lofter."
+      "body": "Akustikplader dyrket af hamp — en hurtigt fornybar naturfiber, bundet med et cementfrit mineralsk bindemiddel. Til vægge og lofter.",
+      "image": "assets/sappa-hero-ceiling.jpg"
     },
     {
       "name": "Mogu",
       "tag": "Under udvikling",
-      "body": "Bløde, fløjlsagtige akustikplader dyrket af mycelium og genanvendte tekstilrester. Udviklet til absorption; naturligt hvide, med et bredere farveudvalg efter aftale."
+      "body": "Bløde, fløjlsagtige akustikplader dyrket af mycelium og genanvendte tekstilrester. Udviklet til absorption; naturligt hvide, med et bredere farveudvalg efter aftale.",
+      "image": "assets/mogu-hero-lifestyle.jpg"
     }
   ],
   "cta": {

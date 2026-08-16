@@ -18,22 +18,26 @@
       {
         "name": "Aisti® Acoustic Tile",
         "tag": "Tilgængelig 2026",
-        "href": "product-aisti.html"
+        "href": "product-aisti.html",
+        "image": "assets/aisti-026.jpg"
       },
       {
         "name": "Wuud",
         "tag": "Under udvikling",
-        "href": "product-wuud.html"
+        "href": "product-wuud.html",
+        "image": "assets/wuud_render_01.jpg"
       },
       {
         "name": "Sappa",
         "tag": "Under udvikling",
-        "href": "product-sappa.html"
+        "href": "product-sappa.html",
+        "image": "assets/skærmbillede-2026-07-08-kl.-13.28.04.png"
       },
       {
         "name": "Mogu",
         "tag": "Under udvikling",
-        "href": "product-mogu.html"
+        "href": "product-mogu.html",
+        "image": "assets/skærmbillede-2026-07-08-kl.-13.36.48.png"
       }
     ]
   },
@@ -67,14 +71,16 @@
         "eyebrow": "Case · Stockholm",
         "title": "Ångtvätten 22",
         "meta1": "Trivsel på kontoret · 600×600 mm, 20 mm, mørkeblå",
-        "meta2": "Plader installeret i standard T-skinne, som absorberer lydrefleksioner og reducerer efterklang i kontormiljøet."
+        "meta2": "Plader installeret i standard T-skinne, som absorberer lydrefleksioner og reducerer efterklang i kontormiljøet.",
+        "image": "assets/aisti-person-angtvatten.webp"
       },
       {
         "href": "case-bulevardi-2.html",
         "eyebrow": "Case · Helsinki",
         "title": "Bulevardi 2",
         "meta1": "Efterklangsreduktion · 600×1200 mm, 40 mm, hvid",
-        "meta2": "Efterklangstiden blev forbedret med ca. 29% på tværs af oktavbånd efter loftinstallation."
+        "meta2": "Efterklangstiden blev forbedret med ca. 29% på tværs af oktavbånd efter loftinstallation.",
+        "image": "assets/br-office.webp"
       }
     ]
   },
