@@ -1,0 +1,36 @@
+/* CMS preview styling — loaded into Sveltia's built-in preview pane via
+   CMS.registerPreviewStyle() in admin/index.html.
+
+   Sveltia's default preview renders generic markup (no .bra classes), so
+   br.css's rules — which are scoped to .bra — don't apply on their own.
+   This file pulls in the real design tokens (fonts, colors) and reapplies
+   the base typography to bare elements, so edited text at least reads in
+   the site's real font and palette instead of browser defaults. It does
+   NOT reproduce each page's actual layout — that would require a full
+   custom preview template per collection. */
+
+@import url("/br.css");
+
+body {
+  background: var(--bra-paper);
+  color: var(--bra-ink);
+  font-family: var(--bra-font);
+  font-size: var(--bra-fs-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  padding: var(--bra-s-3);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--bra-font);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--bra-ink);
+}
+
+p { line-height: 1.55; }
+
+a { color: var(--bra-oak); }
+
+img, svg { display: block; max-width: 100%; }

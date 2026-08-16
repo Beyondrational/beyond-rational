@@ -10,5 +10,10 @@
        replacement for Decap CMS. Reads the same admin/config.yml, same
        git-backend/OAuth-Worker setup underneath (no other changes needed). -->
   <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+  <script>
+    // Loads the site's real fonts/colors into the built-in preview pane.
+    // See admin/preview.css for what this does and doesn't cover.
+    CMS.registerPreviewStyle('/admin/preview.css');
+  </script>
 </body>
 </html>

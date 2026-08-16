@@ -1,4 +1,4 @@
-# Decap CMS configuration
+# Sveltia CMS configuration (also read by Decap-compatible tooling)
 
 backend:
   name: github
@@ -11,8 +11,8 @@ backend:
 media_folder: "assets"
 public_folder: "assets"
 
-site_url: https://beyondrational.github.io/beyond-rational
-display_url: https://beyondrational.github.io/beyond-rational
+site_url: https://beyondrational.com
+display_url: https://beyondrational.com
 
 collections:
 
