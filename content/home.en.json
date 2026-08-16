@@ -50,17 +50,17 @@
     "body_p3": "The conscious choice should be the obvious one. In construction it rarely is — regulation and a longstanding caution toward new materials have kept the market conservative. We work only with the most ambitious, visionary partners to change that, one material at a time."
   },
   "studio": {
-    "body": "Beyond Rational is based in Copenhagen. Our partner Aisti produces in Jyväskylä, Finland. We specify and supply across Denmark. Our team has years of experience designing and developing acoustic products and materials — giving us a unique perspective on the acoustic industry.",
-    "stat_studios_label": "In business since",
-    "stat_founded_label": "Based in Copenhagen",
-    "title_l1": "Copenhagen office.",
-    "stat_people_label": "Suppliers",
-    "link_label": "Contact",
-    "stat_studios": "2024",
-    "stat_founded": "CPH",
     "section_label": "Who we are",
+    "title_l1": "Copenhagen office.",
     "title_l2_em": "Globally inspired.",
-    "stat_people": "4"
+    "stat_founded": "CPH",
+    "stat_founded_label": "Based in Copenhagen",
+    "stat_people": "4",
+    "stat_people_label": "Suppliers",
+    "stat_studios": "2024",
+    "stat_studios_label": "In business since",
+    "body": "Beyond Rational is based in Copenhagen. Our partner Aisti produces in Jyväskylä, Finland. We specify and supply across Denmark. Our team has years of experience designing and developing acoustic products and materials — giving us a unique perspective on the acoustic industry.",
+    "link_label": "Contact"
   },
   "cases": {
     "section_label": "Cases",
