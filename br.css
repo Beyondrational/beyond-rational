@@ -2731,19 +2731,21 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
 .home-pair__media.is-in { opacity: 1; }
 .home-pair__fig { overflow: hidden; flex: none; min-height: 0; }
 .home-pair__fig img {
-  width: 100%; display: block;
+  width: 100%; height: 100%; display: block;
   object-fit: cover;
   transform: scale(1.06);
   transition: transform 1500ms var(--bra-ease);
 }
 .home-pair__media.is-in .home-pair__fig img { transform: scale(1); }
-/* Both figure variants size from their own width via aspect-ratio, not a
-   viewport-height clamp — a fixed height paired with a fluid-width column
-   was cropping tighter and tighter as the window narrowed toward the
-   820px breakpoint, before finally resetting on mobile. Sizing from width
-   at every breakpoint removes that awkward in-between zone entirely. */
-.home-pair__fig:not(.home-pair__fig--wide) img { aspect-ratio: 4 / 5; height: auto; }
-.home-pair__fig--wide img { aspect-ratio: 16 / 10; height: auto; }
+/* Aspect-ratio lives on the FIGURE, not the img — a fixed viewport-height
+   clamp paired with a fluid-width column was cropping tighter and tighter
+   as the window narrowed toward the 820px breakpoint. Sizing the figure
+   from its own width fixes that, but on a stacked (full-width) mobile or
+   portrait-tablet column a 4:5 figure alone still balloons to well over
+   half the screen — the mobile max-height clamp below caps that; the img
+   (100%/100% + object-fit: cover) simply fills whichever box results. */
+.home-pair__fig:not(.home-pair__fig--wide) { aspect-ratio: 4 / 5; }
+.home-pair__fig--wide { aspect-ratio: 16 / 10; }
 .home-pair__cap {
   display: flex; justify-content: space-between; gap: var(--bra-s-3);
   margin-top: var(--bra-s-2); padding-top: var(--bra-s-2);
@@ -2768,6 +2770,10 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
   .home-pair, .home-pair--media { grid-template-columns: 1fr; gap: var(--bra-s-4); }
   .home-pair--media > .home-pair__text:first-child { margin-left: 0; }
   .home-pair__media { order: 2; }
+  /* A full-width figure at a 4:5 (or even 16:10) ratio reads as oversized
+     once it's stacked above/below text instead of beside it — cap it so
+     the photo stays a supporting element, not the dominant one. */
+  .home-pair__fig { max-height: 44vh; }
 }
 @media (prefers-reduced-motion: reduce) {
   .home-pair__media, .home-reveal { opacity: 1; transform: none; }
@@ -2827,7 +2833,7 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
   .bra-columns, .bra-columns--reverse, .bra-columns--stacked, .bra-columns--ruled {
     grid-template-columns: 1fr; gap: var(--bra-s-4);
   }
-  .bra-columns__media { order: -1; aspect-ratio: 4 / 5; }
+  .bra-columns__media { order: -1; aspect-ratio: 4 / 5; max-height: 44vh; }
   .bra-columns--reverse .bra-columns__media { order: -1; }
   .bra-columns--stacked .bra-columns__media { aspect-ratio: 4 / 5; }
   .bra-columns--ruled .bra-columns__text {
