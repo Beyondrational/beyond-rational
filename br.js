@@ -52,7 +52,7 @@
     }
   }
 
-  /* ---------- Custom cursor + lag + dark detection ---------- */
+  /* ---------- Custom cursor + lag ---------- */
   const cursor = document.querySelector('.bra-cursor');
   let cx = 0, cy = 0, tx = 0, ty = 0;
   if (cursor && !reduceMotion) {
@@ -67,11 +67,6 @@
     document.querySelectorAll('button, a, input, select, textarea, [data-magnetic]').forEach((el) => {
       el.addEventListener('mouseenter', () => cursor.classList.add('is-large'));
       el.addEventListener('mouseleave', () => cursor.classList.remove('is-large'));
-    });
-    const darkSel = '.bra-vault, .bra-surface-oak, .bra-surface-ink, .bra-card--ink, .bra-card--oak, .bra-gallery-data--ink, .bra-gallery-data--oak, .br-logo-hero, [data-on-dark]';
-    document.querySelectorAll(darkSel).forEach((el) => {
-      el.addEventListener('mouseenter', () => cursor.classList.add('is-on-dark'));
-      el.addEventListener('mouseleave', () => cursor.classList.remove('is-on-dark'));
     });
   }
 
