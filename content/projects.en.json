@@ -4,7 +4,7 @@
     "eyebrow": "Cases",
     "title_l1": "Tiles",
     "title_l2": "in place.",
-    "subtitle": "Demo installations with the Aisti® tile, delivered from the pilot plant in Jyväskylä, Finland, and installed by professional teams."
+    "subtitle": "Aisti® demo installations in Stockholm and Helsinki, delivered from the pilot plant in Jyväskylä — alongside material studies and installations from our supplier partners Sappa, Mogu, and Wuud."
   },
   "gallery": [
     {
@@ -13,19 +13,19 @@
       "image": "assets/aisti-026.jpg"
     },
     {
-      "title": "Tile, raked light",
-      "meta": "Material study",
-      "image": "assets/aisti-003.jpg"
+      "title": "Hemp panel",
+      "meta": "Sappa · Material study",
+      "image": "assets/sappa-gallery-panel.jpg"
     },
     {
-      "title": "Surface detail",
-      "meta": "Material study",
-      "image": "assets/aisti-012.jpg"
+      "title": "Mycelium panel",
+      "meta": "Mogu · Material study",
+      "image": "assets/mogu-gallery-material.jpg"
     },
     {
-      "title": "Wood fibre, compressed",
-      "meta": "Material study",
-      "image": "assets/aisti-042.jpg"
+      "title": "Hexagon wall",
+      "meta": "Mogu · Installation",
+      "image": "assets/mogu-gallery-hexagon.jpg"
     },
     {
       "title": "On site",
@@ -33,24 +33,31 @@
       "image": "assets/aisti-person-angtvatten.webp"
     },
     {
-      "title": "Ceiling, calm",
-      "meta": "Product photography",
-      "image": "assets/br-office.webp"
+      "title": "Wuud, exhibited",
+      "meta": "Helsinki Design Week 2023",
+      "image": "assets/wuud_helsinki-design-week-2023_aukusti-heinonen_05.jpg"
     }
   ],
   "supplier_head": {
     "eyebrow": "Elsewhere",
     "title": "Also from our suppliers.",
-    "body": "Installations by Sappa and Mogu themselves, shown here as a preview of the finish and format range Beyond Rational brings to Denmark."
+    "body": "Work by Sappa, Mogu, and Wuud themselves, shown here as a preview of the finish and format range Beyond Rational brings to Denmark."
   },
   "supplier_cards": [
     {
       "eyebrow": "Installation by Sappa",
-      "title": "Hemp panel ceiling"
+      "title": "Hemp panel ceiling",
+      "image": "assets/sappa-hero-ceiling.jpg"
     },
     {
       "eyebrow": "Installation by Mogu",
-      "title": "Foresta System wall"
+      "title": "Foresta System wall",
+      "image": "assets/mogu-case-foresta.jpg"
+    },
+    {
+      "eyebrow": "Exhibition by Wuud",
+      "title": "Helsinki Design Week",
+      "image": "assets/wuud_helsinki-design-week-2023_aukusti-heinonen_05.jpg"
     }
   ],
   "cases": [

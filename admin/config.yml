@@ -713,6 +713,22 @@ collections:
               - { label: "Meta",   name: "meta",  widget: "string" }
               - { label: "Year",   name: "year",  widget: "string" }
 
+          - label: "Supplier section heading"
+            name: "supplier_head"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title",   name: "title",   widget: "string" }
+              - { label: "Body",    name: "body",    widget: "text"   }
+
+          - label: "Supplier cards"
+            name: "supplier_cards"
+            widget: "list"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title",   name: "title",   widget: "string" }
+              - { label: "Image",   name: "image",   widget: "image", required: false }
+
   # =============== PROJECTS ===============
   - name: "projects-da"
     label: "Projects — DA"
@@ -762,6 +778,22 @@ collections:
               - { label: "Title",  name: "title", widget: "string" }
               - { label: "Meta",   name: "meta",  widget: "string" }
               - { label: "Year",   name: "year",  widget: "string" }
+
+          - label: "Supplier section heading"
+            name: "supplier_head"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title",   name: "title",   widget: "string" }
+              - { label: "Body",    name: "body",    widget: "text"   }
+
+          - label: "Supplier cards"
+            name: "supplier_cards"
+            widget: "list"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title",   name: "title",   widget: "string" }
+              - { label: "Image",   name: "image",   widget: "image", required: false }
 
   # =============== WUUD ===============
   - name: "wuud-en"

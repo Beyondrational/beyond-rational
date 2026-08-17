@@ -4,7 +4,7 @@
     "eyebrow": "Cases",
     "title_l1": "Plader",
     "title_l2": "i praksis.",
-    "subtitle": "Demoinstallationer med Aisti®-pladen, leveret fra pilotanlægget i Jyväskylä, Finland, og installeret af professionelle teams."
+    "subtitle": "Aisti®-demoinstallationer i Stockholm og Helsinki, leveret fra pilotanlægget i Jyväskylä — sammen med materialestudier og installationer fra vores leverandørpartnere Sappa, Mogu og Wuud."
   },
   "gallery": [
     {
@@ -13,19 +13,19 @@
       "image": "assets/aisti-026.jpg"
     },
     {
-      "title": "Plade, strejflys",
-      "meta": "Materialestudie",
-      "image": "assets/aisti-003.jpg"
+      "title": "Hampeplade",
+      "meta": "Sappa · Materialestudie",
+      "image": "assets/sappa-gallery-panel.jpg"
     },
     {
-      "title": "Overfladedetalje",
-      "meta": "Materialestudie",
-      "image": "assets/aisti-012.jpg"
+      "title": "Mycelium-plade",
+      "meta": "Mogu · Materialestudie",
+      "image": "assets/mogu-gallery-material.jpg"
     },
     {
-      "title": "Træfiber, komprimeret",
-      "meta": "Materialestudie",
-      "image": "assets/aisti-042.jpg"
+      "title": "Sekskant-væg",
+      "meta": "Mogu · Installation",
+      "image": "assets/mogu-gallery-hexagon.jpg"
     },
     {
       "title": "På stedet",
@@ -33,24 +33,31 @@
       "image": "assets/aisti-person-angtvatten.webp"
     },
     {
-      "title": "Loft, roligt",
-      "meta": "Produktfotografi",
-      "image": "assets/br-office.webp"
+      "title": "Wuud, udstillet",
+      "meta": "Helsinki Design Week 2023",
+      "image": "assets/wuud_helsinki-design-week-2023_aukusti-heinonen_05.jpg"
     }
   ],
   "supplier_head": {
     "eyebrow": "Andre steder",
     "title": "Også fra vores leverandører.",
-    "body": "Installationer af Sappa og Mogu selv, vist her som en forsmag på det finish- og formatudvalg, Beyond Rational bringer til Danmark."
+    "body": "Arbejde af Sappa, Mogu og Wuud selv, vist her som en forsmag på det finish- og formatudvalg, Beyond Rational bringer til Danmark."
   },
   "supplier_cards": [
     {
       "eyebrow": "Installation af Sappa",
-      "title": "Hampeplade-loft"
+      "title": "Hampeplade-loft",
+      "image": "assets/sappa-hero-ceiling.jpg"
     },
     {
       "eyebrow": "Installation af Mogu",
-      "title": "Foresta System-væg"
+      "title": "Foresta System-væg",
+      "image": "assets/mogu-case-foresta.jpg"
+    },
+    {
+      "eyebrow": "Udstilling af Wuud",
+      "title": "Helsinki Design Week",
+      "image": "assets/wuud_helsinki-design-week-2023_aukusti-heinonen_05.jpg"
     }
   ],
   "cases": [
