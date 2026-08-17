@@ -1007,21 +1007,6 @@ form[data-form].is-active { display: flex; flex-direction: column; gap: 0; }
 /* Image galleries use fixed row height so cells tessellate evenly and
    images cover cleanly (data galleries keep auto height for their text). */
 .bra-gallery--img { grid-auto-rows: clamp(150px, 19vw, 260px); }
-
-/* Justified variant — fixed-width columns (so every image's left/right
-   edge lines up down the column, row after row), height follows each
-   image's own aspect ratio so nothing gets cropped. Standard masonry:
-   trades the asymmetric mosaic's tessellation for a Pinterest-style
-   column flow; reading order runs down each column, not left-to-right. */
-.bra-gallery--justified { display: block; columns: 3; column-gap: 2px; background: var(--bra-paper); }
-.bra-gallery--justified .bra-gallery-cell { position: relative; break-inside: avoid; margin-bottom: 2px; }
-.bra-gallery--justified .bra-gallery-img__img { width: 100%; height: auto; }
-@media (max-width: 900px) {
-  .bra-gallery--justified { columns: 2; }
-}
-@media (max-width: 500px) {
-  .bra-gallery--justified { columns: 1; }
-}
 .bra-gallery-cell {
   position: relative;
   background: var(--bra-paper);

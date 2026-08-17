@@ -6,38 +6,6 @@
     "title_l2": "i praksis.",
     "subtitle": "Aisti®-demoinstallationer i Stockholm og Helsinki, leveret fra pilotanlægget i Jyväskylä — sammen med materialestudier og installationer fra vores leverandørpartnere Sappa, Mogu og Wuud."
   },
-  "gallery": [
-    {
-      "title": "Aisti®-plade, interiør",
-      "meta": "Produktfotografi",
-      "image": "assets/aisti-026.jpg"
-    },
-    {
-      "title": "Hampeplade",
-      "meta": "Sappa · Materialestudie",
-      "image": "assets/sappa-gallery-panel.jpg"
-    },
-    {
-      "title": "Mycelium-plade",
-      "meta": "Mogu · Materialestudie",
-      "image": "assets/mogu-gallery-material.jpg"
-    },
-    {
-      "title": "Sekskant-væg",
-      "meta": "Mogu · Installation",
-      "image": "assets/mogu-gallery-hexagon.jpg"
-    },
-    {
-      "title": "På stedet",
-      "meta": "Ångtvätten 22",
-      "image": "assets/aisti-person-angtvatten.webp"
-    },
-    {
-      "title": "Wuud, udstillet",
-      "meta": "Helsinki Design Week 2023",
-      "image": "assets/wuud_helsinki-design-week-2023_aukusti-heinonen_05.jpg"
-    }
-  ],
   "supplier_head": {
     "eyebrow": "Andre steder",
     "title": "Også fra vores leverandører.",

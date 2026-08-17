@@ -684,15 +684,6 @@ collections:
               - { label: "Title line 2",  name: "title_l2",  widget: "string" }
               - { label: "Subtitle",      name: "subtitle",  widget: "text"   }
 
-          - label: "Image gallery (6 cells)"
-            name: "gallery"
-            widget: "list"
-            min: 1
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Meta",  name: "meta",  widget: "string" }
-              - { label: "Image", name: "image", widget: "image", required: false }
-
           - label: "Case studies (prose panels)"
             name: "cases"
             widget: "list"
@@ -749,15 +740,6 @@ collections:
               - { label: "Title line 1",  name: "title_l1",  widget: "string" }
               - { label: "Title line 2",  name: "title_l2",  widget: "string" }
               - { label: "Subtitle",      name: "subtitle",  widget: "text"   }
-
-          - label: "Image gallery (6 cells)"
-            name: "gallery"
-            widget: "list"
-            min: 1
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Meta",  name: "meta",  widget: "string" }
-              - { label: "Image", name: "image", widget: "image", required: false }
 
           - label: "Case studies (prose panels)"
             name: "cases"
