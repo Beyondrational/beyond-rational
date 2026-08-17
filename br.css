@@ -2764,7 +2764,7 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
   .home-pair, .home-pair--media { grid-template-columns: 1fr; gap: var(--bra-s-4); }
   .home-pair--media .home-pair__media { height: auto; }
   .home-pair--media > .home-pair__text:first-child { margin-left: 0; }
-  .home-pair__fig img { aspect-ratio: 4 / 5; }
+  .home-pair__fig:not(.home-pair__fig--wide) img { aspect-ratio: 4 / 5; }
   .home-pair__media { order: 2; }
 }
 @media (prefers-reduced-motion: reduce) {
