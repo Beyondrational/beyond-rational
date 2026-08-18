@@ -123,6 +123,17 @@
           }
         });
 
+        // A second, independent binding so one element (typically an <img>
+        // already using data-each/data-each-attr for its src) can also pull
+        // a *different* field onto a second attribute — e.g.
+        // data-each-alt="title" gives every looped image its own real alt
+        // text instead of the template's single static fallback string.
+        clone.querySelectorAll('[data-each-alt]').forEach((el) => {
+          const key = el.dataset.eachAlt;
+          const val = key.split('.').reduce((o, k) => (o == null ? o : o[k]), item);
+          if (val != null && val !== '') el.setAttribute('alt', val);
+        });
+
         container.appendChild(clone);
       });
     });

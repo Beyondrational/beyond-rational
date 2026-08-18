@@ -8,7 +8,11 @@
    Namespace: .bra-
    ============================================================ */
 
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;500;700;900&family=Archivo+Black&display=swap");
+/* Font is loaded via a <link rel="stylesheet"> in each page's <head>, not
+   @import here — @import is render-blocking and serial (browser must parse
+   this file before it even discovers the font request), which stalls LCP
+   on pages where the hero title is the largest paint. A <link> next to the
+   preconnect hints lets the browser start both in parallel. */
 
 /* ---------- Page transitions ---------- */
 /* Cross-document nav wipes like a curtain drawn open, not a hard cut. Progressive enhancement:
