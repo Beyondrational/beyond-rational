@@ -37,20 +37,28 @@
         "value": "Mycelium og genanvendte tekstilrester"
       },
       {
-        "key": "Akustisk fokus",
-        "value": "Tilpasset talens frekvenser"
+        "key": "Formater",
+        "value": "500×500 til 1600×1200 mm, 5 størrelser + custom"
+      },
+      {
+        "key": "Tykkelse",
+        "value": "20 / 30 / 40 mm"
+      },
+      {
+        "key": "Vægt",
+        "value": "1,0–10,8 kg/m², afhængig af størrelse og tykkelse"
+      },
+      {
+        "key": "Lydabsorption",
+        "value": "αw 0,3–0,4 i toppunkt, afhængig af tykkelse (ISO 354)"
       },
       {
         "key": "Brand",
-        "value": "Brandklassificeret kerne (klasse efter aftale)"
+        "value": "B-s2,d0 (naturel finish), EN 13501-2"
       },
       {
-        "key": "Fugt",
-        "value": "Fugtbestandig"
-      },
-      {
-        "key": "Formater",
-        "value": "—"
+        "key": "Emissioner",
+        "value": "TVOC 15 µg/m³ (Eurofins-testet)"
       },
       {
         "key": "Endt levetid",
