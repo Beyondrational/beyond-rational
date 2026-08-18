@@ -37,26 +37,84 @@
         "value": "Hampefiber, cementfrit mineralsk bindemiddel"
       },
       {
-        "key": "Anvendelse",
-        "value": "Indervægge og lofter"
-      },
-      {
-        "key": "Brand",
-        "value": "Naturligt brandbestandig — ingen tilsatte flammehæmmere"
-      },
-      {
         "key": "Formater",
-        "value": "—"
+        "value": "Kvadrat, rektangel & trekant, 30–120 cm"
       },
       {
         "key": "Tykkelse",
-        "value": "—"
+        "value": "30 mm"
+      },
+      {
+        "key": "Vægt",
+        "value": "~9 kg/m²"
+      },
+      {
+        "key": "Lydabsorption",
+        "value": "αw 0,45–0,60 (Klasse D–C), afhængig af montering"
+      },
+      {
+        "key": "Brand",
+        "value": "B-s1,d0 — ingen tilsatte flammehæmmere"
+      },
+      {
+        "key": "Anvendelse",
+        "value": "Indervægge og lofter"
       },
       {
         "key": "Endt levetid",
         "value": "Vugge til vugge, genanvendelig"
       }
     ]
+  },
+  "versus": {
+    "eyebrow": "Sammenligning",
+    "title_l1": "Sammenlignelig akustik.",
+    "title_l2": "Forskelligt materiale.",
+    "ours": {
+      "name": "Sappa",
+      "tag": "Hampeplade",
+      "points": [
+        {
+          "point": "Hampefiber — vokser på ~4 måneder"
+        },
+        {
+          "point": "CO2-negativ i produktion"
+        },
+        {
+          "point": "Ingen tilsatte flammehæmmere"
+        },
+        {
+          "point": "Cementfrit mineralsk bindemiddel"
+        },
+        {
+          "point": "αw 0,60 (Klasse C), 20 cm luftspalte"
+        }
+      ]
+    },
+    "them": {
+      "name": "Troldtekt",
+      "tag": "Cementbundet træuld",
+      "points": [
+        {
+          "point": "Cementbundet træfiber"
+        },
+        {
+          "point": "Cementbaseret bindemiddel"
+        },
+        {
+          "point": "B-s1,d0 brandklasse — samme som Sappa"
+        },
+        {
+          "point": "Industristandard siden 1935"
+        },
+        {
+          "point": "αw 0,60–0,75 (Klasse C), sammenlignelig dybde"
+        }
+      ]
+    },
+    "note_label": "Samme fysik, uanset mærke",
+    "note_body": "Ingen af pladerne når absorptionsklasse A alene — begge kræver mineraluld bagved for at komme derop, ligesom vores Aisti®-plade gør ved 40 mm med 200 mm luftspalte. Bar eller bagklædt, den akustiske ydeevne er reelt sammenlignelig mellem Sappa og Troldtekt; den egentlige forskel ligger i, hvad selve pladen er lavet af.",
+    "source": "Kilde: Sappas og Troldtekts offentliggjorte tekniske datablade."
   },
   "gallery_head": {
     "eyebrow": "På stedet",

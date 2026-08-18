@@ -1929,6 +1929,41 @@ collections:
                 fields:
                   - { label: "Label", name: "key",   widget: "string" }
                   - { label: "Value", name: "value", widget: "string" }
+          - label: "Versus comparison (head-to-head)"
+            name: "versus"
+            widget: "object"
+            hint: "Keep any factual/competitor claims here backed by a real published source — see 'Source citation' below."
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - label: "Our side"
+                name: "ours"
+                widget: "object"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Tag",  name: "tag",  widget: "string" }
+                  - label: "Points"
+                    name: "points"
+                    widget: "list"
+                    summary: "{{fields.point}}"
+                    fields:
+                      - { label: "Point", name: "point", widget: "string" }
+              - label: "Their side"
+                name: "them"
+                widget: "object"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Tag",  name: "tag",  widget: "string" }
+                  - label: "Points"
+                    name: "points"
+                    widget: "list"
+                    summary: "{{fields.point}}"
+                    fields:
+                      - { label: "Point", name: "point", widget: "string" }
+              - { label: "Note label",       name: "note_label", widget: "string" }
+              - { label: "Note body",        name: "note_body",  widget: "text"   }
+              - { label: "Source citation",  name: "source",     widget: "string" }
           - label: "Closing CTA"
             name: "cta"
             widget: "object"
@@ -2001,6 +2036,41 @@ collections:
                 fields:
                   - { label: "Label", name: "key",   widget: "string" }
                   - { label: "Value", name: "value", widget: "string" }
+          - label: "Versus comparison (head-to-head)"
+            name: "versus"
+            widget: "object"
+            hint: "Keep any factual/competitor claims here backed by a real published source — see 'Source citation' below."
+            fields:
+              - { label: "Eyebrow",      name: "eyebrow",  widget: "string" }
+              - { label: "Title line 1", name: "title_l1", widget: "string" }
+              - { label: "Title line 2", name: "title_l2", widget: "string" }
+              - label: "Our side"
+                name: "ours"
+                widget: "object"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Tag",  name: "tag",  widget: "string" }
+                  - label: "Points"
+                    name: "points"
+                    widget: "list"
+                    summary: "{{fields.point}}"
+                    fields:
+                      - { label: "Point", name: "point", widget: "string" }
+              - label: "Their side"
+                name: "them"
+                widget: "object"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Tag",  name: "tag",  widget: "string" }
+                  - label: "Points"
+                    name: "points"
+                    widget: "list"
+                    summary: "{{fields.point}}"
+                    fields:
+                      - { label: "Point", name: "point", widget: "string" }
+              - { label: "Note label",       name: "note_label", widget: "string" }
+              - { label: "Note body",        name: "note_body",  widget: "text"   }
+              - { label: "Source citation",  name: "source",     widget: "string" }
           - label: "Closing CTA"
             name: "cta"
             widget: "object"

@@ -37,26 +37,84 @@
         "value": "Hemp fibre, cement-free mineral binder"
       },
       {
-        "key": "Application",
-        "value": "Interior walls and ceilings"
-      },
-      {
-        "key": "Fire",
-        "value": "Naturally fire-resistant — no flame retardants added"
-      },
-      {
         "key": "Formats",
-        "value": "—"
+        "value": "Square, rectangle & triangle, 30–120 cm"
       },
       {
         "key": "Thickness",
-        "value": "—"
+        "value": "30 mm"
+      },
+      {
+        "key": "Weight",
+        "value": "~9 kg/m²"
+      },
+      {
+        "key": "Absorption",
+        "value": "αw 0.45–0.60 (Class D–C), by mounting"
+      },
+      {
+        "key": "Fire",
+        "value": "B-s1,d0 — no flame retardants added"
+      },
+      {
+        "key": "Application",
+        "value": "Interior walls and ceilings"
       },
       {
         "key": "End of life",
         "value": "Cradle-to-cradle, recyclable"
       }
     ]
+  },
+  "versus": {
+    "eyebrow": "Head-to-head",
+    "title_l1": "Comparable acoustics.",
+    "title_l2": "Different material.",
+    "ours": {
+      "name": "Sappa",
+      "tag": "Hemp panel",
+      "points": [
+        {
+          "point": "Hemp fibre — grows in ~4 months"
+        },
+        {
+          "point": "CO2-negative in production"
+        },
+        {
+          "point": "No added flame retardants"
+        },
+        {
+          "point": "Cement-free mineral binder"
+        },
+        {
+          "point": "αw 0.60 (Class C), 20 cm air gap"
+        }
+      ]
+    },
+    "them": {
+      "name": "Troldtekt",
+      "tag": "Cement-bonded wood wool",
+      "points": [
+        {
+          "point": "Cement-bonded wood fibre"
+        },
+        {
+          "point": "Cement-based binder"
+        },
+        {
+          "point": "B-s1,d0 fire class — same as Sappa"
+        },
+        {
+          "point": "Industry standard since 1935"
+        },
+        {
+          "point": "αw 0.60–0.75 (Class C), similar depth"
+        }
+      ]
+    },
+    "note_label": "Same physics, either brand",
+    "note_body": "Neither panel reaches absorption Class A on its own — both need mineral wool behind them to get there, exactly like our Aisti® tile does at 40 mm with a 200 mm air gap. Bare or backed, the acoustic performance is genuinely comparable between Sappa and Troldtekt; the real difference is what the panel itself is made from.",
+    "source": "Source: Sappa and Troldtekt published technical data sheets."
   },
   "gallery_head": {
     "eyebrow": "On site",
