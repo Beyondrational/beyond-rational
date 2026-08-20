@@ -2,14 +2,14 @@
   "loader_tag": "Aisti / 2026",
   "hero": {
     "eyebrow": "The product",
-    "title": "Aisti® Aalto.",
+    "title": "Aisti Aalto®.",
     "lede": "Foam-formed natural wood fibre. Absorption Class A, two formats, two thicknesses. Fits standard T-grid ceilings or mounts directly with adhesive. Full production capacity from August 2026 — preorder now."
   },
   "conscious": {
     "eyebrow": "A conscious choice",
     "title_l1": "Sets a new",
     "title_l2": "benchmark.",
-    "body": "At its core, Aisti® Aalto is a bio-based acoustic absorber built to perform at scale — not a compromise material, a genuine alternative. Crafted with a minimalist Scandinavian design approach, it blends into architectural concepts while doing real acoustic work, quietly improving comfort and wellbeing in the room."
+    "body": "At its core, Aisti Aalto is a bio-based acoustic absorber built to perform at scale — not a compromise material, a genuine alternative. Crafted with a minimalist Scandinavian design approach, it blends into architectural concepts while doing real acoustic work, quietly improving comfort and wellbeing in the room."
   },
   "spec": {
     "items": [
@@ -93,7 +93,7 @@
   },
   "versus": {
     "ours": {
-      "name": "Aisti® Aalto",
+      "name": "Aisti Aalto",
       "tag": "Our tile",
       "points": [
         {
@@ -247,11 +247,11 @@
     "title_l1": "Aisti Aalto,",
     "title_l2": "by the numbers.",
     "aisti_lifecycle": {
-      "name": "Aisti® Aalto",
+      "name": "Aisti Aalto",
       "note": "Lifecycle emissions, A1-C4 (fossil)"
     },
     "aisti_stored": {
-      "name": "Aisti® Aalto",
+      "name": "Aisti Aalto",
       "note": "Stored CO₂ · biogenic carbon at factory gate (A1-A3)"
     },
     "rival": {

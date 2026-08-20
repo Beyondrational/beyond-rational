@@ -2,14 +2,14 @@
   "loader_tag": "Aisti / 2026",
   "hero": {
     "eyebrow": "Produktet",
-    "title": "Aisti® Aalto.",
+    "title": "Aisti Aalto®.",
     "lede": "Skumformet naturlig træfiber. Absorptionsklasse A, to formater, to tykkelser. Passer til standard T-skinneloft eller monteres direkte med klæber. Fuld produktionskapacitet fra august 2026 — forudbestil nu."
   },
   "conscious": {
     "eyebrow": "Et bevidst valg",
     "title_l1": "Sætter en ny",
     "title_l2": "standard.",
-    "body": "I sin kerne er Aisti® Aalto en bio-baseret akustisk absorbent bygget til at yde i stor skala — ikke et kompromis-materiale, men et reelt alternativ. Udført med en minimalistisk skandinavisk designtilgang, glider den ind i arkitektoniske koncepter, mens den udfører reelt akustisk arbejde og stille forbedrer komfort og trivsel i rummet."
+    "body": "I sin kerne er Aisti Aalto en bio-baseret akustisk absorbent bygget til at yde i stor skala — ikke et kompromis-materiale, men et reelt alternativ. Udført med en minimalistisk skandinavisk designtilgang, glider den ind i arkitektoniske koncepter, mens den udfører reelt akustisk arbejde og stille forbedrer komfort og trivsel i rummet."
   },
   "spec": {
     "items": [
@@ -93,7 +93,7 @@
   },
   "versus": {
     "ours": {
-      "name": "Aisti® Aalto",
+      "name": "Aisti Aalto",
       "tag": "Vores plade",
       "points": [
         {
@@ -247,11 +247,11 @@
     "title_l1": "Aisti Aalto,",
     "title_l2": "i tal.",
     "aisti_lifecycle": {
-      "name": "Aisti® Aalto",
+      "name": "Aisti Aalto",
       "note": "Livscyklusemissioner, A1-C4 (fossil)"
     },
     "aisti_stored": {
-      "name": "Aisti® Aalto",
+      "name": "Aisti Aalto",
       "note": "Lagret CO₂ · biogent kulstof ved fabriksport (A1-A3)"
     },
     "rival": {
