@@ -43,6 +43,7 @@
   },
   "process": {
     "section_label": "Missionserklæring",
+    "meta": "Derfor findes vi",
     "title_l1": "Godt for rummet,",
     "title_l2_em": "godt for planeten.",
     "body_p1": "Beyond Rational eksisterer for at gøre det bevidste valg til det nemme valg. Vi kuraterer akustik- og overfladematerialer, der lever op til den standard, arkitekter forventer, uden de kompromiser der normalt følger med \"bæredygtighed\" — ingen nedgradering i finish, ingen nedgradering i specifikation.",
@@ -59,6 +60,7 @@
     "stat_studios": "2024",
     "stat_founded": "CPH",
     "section_label": "Hvem vi er",
+    "meta": "København · Jyväskylä",
     "title_l2_em": "Globalt inspireret.",
     "stat_people": "4"
   },
@@ -86,6 +88,7 @@
   },
   "cta": {
     "section_label": "Kom i kontakt",
+    "meta": "København",
     "title_l1": "Send briefet.",
     "title_l2_em": "Vi læser det grundigt.",
     "body": "Vi svarer mandag til fredag og arbejder direkte med arkitekter, designere og bygningsejere.",

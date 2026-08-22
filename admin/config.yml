@@ -132,7 +132,7 @@ collections:
                 summary: "{{fields.name}}"
                 fields:
                   - { label: "Name",  name: "name",  widget: "string", i18n: true }
-                  - { label: "Tag",   name: "tag",   widget: "string", required: false, hint: "Not currently displayed, kept for future use", i18n: true }
+                  - { label: "Tag",   name: "tag",   widget: "string", required: false, hint: "Small label above the product name on the homepage card", i18n: true }
                   - { label: "Link",  name: "href",  widget: "string", hint: "e.g. product-aisti.html, product-wuud.html", i18n: "duplicate" }
                   - { label: "Image", name: "image", widget: "image", required: false, i18n: "duplicate" }
 
@@ -142,6 +142,7 @@ collections:
             i18n: true
             fields:
               - { label: "Section label",        name: "section_label", widget: "string", i18n: true }
+              - { label: "Meta tag",             name: "meta",          widget: "string", required: false, hint: "Small label on the right of the section rule", i18n: true }
               - { label: "Title line 1",         name: "title_l1",      widget: "string", i18n: true }
               - { label: "Title line 2 (em)",    name: "title_l2_em",   widget: "string", i18n: true }
               - { label: "Paragraph 1",          name: "body_p1",       widget: "text", i18n: true }
@@ -154,6 +155,7 @@ collections:
             i18n: true
             fields:
               - { label: "Section label",     name: "section_label", widget: "string", i18n: true }
+              - { label: "Meta tag",          name: "meta",          widget: "string", required: false, hint: "Small label on the right of the section rule", i18n: true }
               - { label: "Title line 1",      name: "title_l1",      widget: "string", i18n: true }
               - { label: "Title line 2 (em)", name: "title_l2_em",   widget: "string", i18n: true }
               - { label: "Founded year",             name: "stat_founded",        widget: "string", i18n: true }
@@ -190,6 +192,7 @@ collections:
             i18n: true
             fields:
               - { label: "Section label",     name: "section_label", widget: "string", i18n: true }
+              - { label: "Meta tag",          name: "meta",          widget: "string", required: false, hint: "Small label on the right of the section rule", i18n: true }
               - { label: "Title line 1",      name: "title_l1",      widget: "string", i18n: true }
               - { label: "Title line 2 (em)", name: "title_l2_em",   widget: "string", i18n: true }
               - { label: "Body",              name: "body",          widget: "text", i18n: true }

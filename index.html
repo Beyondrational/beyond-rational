@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;500;700;900&family=Archivo+Black&display=swap">
-<link rel="stylesheet" href="br.css?v=51">
+<link rel="stylesheet" href="br.css?v=52">
 <script>if(sessionStorage.getItem("brLoaderShown")){document.documentElement.classList.add("br-loader-skip")}</script>
 <style>
   /* =====================================================
@@ -94,102 +94,6 @@
     flex-wrap: wrap;
   }
   .home-hero__foot { align-items: center; }
-
-  .notes-row {
-    display: grid;
-    grid-template-columns: 110px 1fr 1fr 40px;
-    align-items: baseline;
-    gap: var(--bra-s-3);
-    padding: var(--bra-s-3) 0;
-    border-top: 1px solid rgba(28,28,26,0.14);
-    transition: padding var(--bra-dur-base) var(--bra-ease);
-  }
-  .notes-row:last-child { border-bottom: 1px solid rgba(28,28,26,0.14); }
-  .notes-row:hover { padding-left: var(--bra-s-3); }
-  .notes-row__date {
-    font-family: var(--bra-font);
-    font-weight: 500; font-size: 12px;
-    color: var(--bra-ink-2);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
-  .notes-row__title {
-    font-family: var(--bra-font);
-    font-weight: 500;
-    font-size: clamp(18px, 1.6vw, 24px);
-    letter-spacing: -0.012em;
-    line-height: 1.20;
-  }
-  .notes-row__sub {
-    font-family: var(--bra-font);
-    font-weight: 400;
-    font-size: 14px;
-    color: var(--bra-ink-2);
-    line-height: 1.45;
-  }
-  .notes-row__arrow {
-    text-align: right;
-    transition: transform var(--bra-dur-base) var(--bra-ease);
-  }
-  .notes-row:hover .notes-row__arrow { transform: translate(4px, -4px); }
-  @media (max-width: 720px) {
-    .notes-row { grid-template-columns: 1fr; gap: 4px; }
-    .notes-row__arrow { display: none; }
-  }
-
-  /* =====================================================
-     Eye-catching media layer (home only) — additive,
-     reuses bra- vocabulary, copy untouched
-     ===================================================== */
-
-  /* Generic reveal-on-scroll figure (uses data-stagger -> .is-in) */
-  .br-figure { overflow: hidden; }
-  .br-figure img { width: 100%; height: auto; display: block; }
-  .br-figure--blend img { mix-blend-mode: multiply; }
-  .br-figure--wide img { aspect-ratio: 3 / 2; object-fit: cover; }
-
-  /* Editorial pair (.home-head / .home-pair / .studio-stats) now lives in
-     shared br.css — promoted once studio.html needed the same component. */
-
-
-  /* Full-bleed cinematic band */
-  .br-feature-band {
-    position: relative;
-    overflow: hidden;
-    margin: var(--bra-s-5) 0;
-  }
-  .br-feature-band__fig { overflow: hidden; }
-  .br-feature-band__fig img {
-    width: 100%;
-    height: clamp(420px, 72vh, 780px);
-    object-fit: cover;
-    display: block;
-    transform: scale(1.07);
-    transition: transform 1700ms var(--bra-ease);
-  }
-  .br-feature-band.is-in .br-feature-band__fig img { transform: scale(1); }
-  .br-feature-band::after {
-    content: "";
-    position: absolute; inset: 0;
-    pointer-events: none;
-    background: linear-gradient(180deg, transparent 52%, rgba(18,16,14,0.55) 100%);
-  }
-  .br-feature-band__cap {
-    position: absolute;
-    left: var(--bra-pad-x); right: var(--bra-pad-x);
-    bottom: var(--bra-s-3);
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: var(--bra-s-3);
-    color: var(--bra-on-oak);
-  }
-  .br-feature-band__cap .bra-micro { color: rgba(244,242,237,0.92); }
-
-  @media (prefers-reduced-motion: reduce) {
-    .br-feature-band__fig img { transform: none; transition: none; }
-  }
 </style>
 <script type="application/ld+json">
 {
@@ -270,7 +174,7 @@
     <footer class="home-hero__foot">
       <div style="display: flex; gap: var(--bra-s-3); align-items: center; flex-wrap: wrap;">
         <a href="products.html" style="text-decoration: none;">
-          <button class="bra-btn-mag bra-btn-mag--inv" data-magnetic>
+          <button class="bra-btn-mag bra-btn-mag--inv bra-btn-mag--solid" data-magnetic>
             <span class="bra-swap">
               <span class="bra-swap__a" data-content="hero.cta_primary">See our solutions</span>
               <span class="bra-swap__b" data-content="hero.cta_primary" aria-hidden="true">See our solutions</span>
@@ -279,7 +183,7 @@
         </a>
         <a href="contact.html" class="bra-cta" style="color: var(--bra-on-oak);" data-content="hero.cta_secondary">Contact</a>
       </div>
-      <span class="bra-micro" data-content="misc.scroll_hint">Scroll ↓</span>
+      <span class="bra-micro bra-scrollcue"><span data-content="misc.scroll_hint">Scroll ↓</span><span class="bra-scrollcue__line" aria-hidden="true"></span></span>
     </footer>
   </div>
 </section>
@@ -297,20 +201,24 @@
     Beyond Rational is a Copenhagen company supplying a curated range of conscious acoustic and surface materials for modern architecture — chosen for performance, surface, and a low footprint.
   </p>
 
-  <div class="bra-cardset bra-cardset--4up" data-content-each="range.items">
+  <div class="bra-cardset bra-cardset--4up bra-stagger" data-stagger data-content-each="range.items">
     <template>
-      <a class="bra-cardset__card" data-each="href" data-each-attr="href" style="text-decoration: none; color: inherit;">
+      <a class="bra-cardset__card bra-stagger-item" data-each="href" data-each-attr="href" style="text-decoration: none; color: inherit;">
         <figure class="bra-cardset__media">
           <img data-each="image" data-each-attr="src" alt="" loading="lazy">
         </figure>
         <div class="bra-cardset__content">
+          <span class="bra-cardset__eyebrow bra-caption" data-each="tag"></span>
           <h3 class="bra-cardset__title" data-each="name"></h3>
         </div>
       </a>
     </template>
   </div>
 
-  <a href="products.html" class="bra-cta" style="margin-top: var(--bra-s-4); display: inline-block;" data-content="range.link_label">See all products</a>
+  <a href="products.html" class="bra-btn-ghost" style="margin-top: var(--bra-s-4);">
+    <span data-content="range.link_label">See all products</span>
+    <span class="bra-cta__arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 <!-- =====================================================
@@ -319,7 +227,7 @@
 <section class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-5);">
   <div class="home-head">
     <p class="bra-caption" style="margin: 0;" data-content="process.section_label">Mission statement</p>
-    <span class="home-head__meta">02 — Mission</span>
+    <span class="home-head__meta" data-content="process.meta">Why we exist</span>
   </div>
 
   <div class="home-pair home-pair--media">
@@ -359,7 +267,7 @@
   <div class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-5);">
     <div class="home-head">
       <p class="bra-caption" style="margin: 0;" data-content="studio.section_label">Who we are</p>
-      <span class="home-head__meta">03 — Office</span>
+      <span class="home-head__meta" data-content="studio.meta">Copenhagen · Jyväskylä</span>
     </div>
 
     <div class="home-pair" style="align-items: end; margin-bottom: var(--bra-s-4);">
@@ -398,7 +306,10 @@
       </figcaption>
     </figure>
 
-    <a href="contact.html" class="bra-cta" style="margin-top: var(--bra-s-3); display: inline-block;" data-content="studio.link_label">Contact →</a>
+    <a href="contact.html" class="bra-btn-ghost" style="margin-top: var(--bra-s-4);">
+      <span data-content="studio.link_label">Contact</span>
+      <span class="bra-cta__arrow" aria-hidden="true">↗</span>
+    </a>
   </div>
 </section>
 
@@ -411,9 +322,9 @@
     <a href="projects.html" class="home-head__meta" style="text-decoration: none;" data-content="cases.link_label">All cases →</a>
   </div>
 
-  <div class="bra-gallery bra-gallery--auto" data-content-each="cases.items">
+  <div class="bra-gallery bra-gallery--auto bra-stagger" data-stagger data-content-each="cases.items">
     <template>
-      <a class="bra-gallery-cell bra-gallery-data bra-gallery-data--link" data-each="href" data-each-attr="href">
+      <a class="bra-gallery-cell bra-gallery-data bra-gallery-data--link bra-stagger-item" data-each="href" data-each-attr="href">
         <img class="bra-gallery-data__img" data-each="image" data-each-attr="src" alt="" loading="lazy">
         <div class="bra-gallery-data__label" data-each="eyebrow">Case · Stockholm</div>
         <div class="bra-h3" style="font-size: 22px; margin-top: 8px;" data-each="title">Ångtvätten 22</div>
@@ -429,19 +340,23 @@
      ===================================================== -->
 <section class="bra-surface-oak">
   <div class="bra-container bra-section">
-    <div class="split-tight" style="align-items: end;">
-      <p class="bra-caption" data-content="cta.section_label">Get in touch</p>
-      <div>
-        <h2 class="home-hero__title" style="color: var(--bra-on-oak); font-size: clamp(36px, 5vw, 80px); max-width: 16ch;">
-          <span class="bra-reveal-line" data-reveal data-content="cta.title_l1">Send the brief.</span><br>
-          <span class="bra-reveal-line" data-reveal data-content="cta.title_l2_em">We'll read it carefully.</span>
-        </h2>
-        <p class="bra-lede" style="margin-top: var(--bra-s-3); max-width: 48ch;" data-content="cta.body">
+    <div class="home-head">
+      <p class="bra-caption" style="margin: 0;" data-content="cta.section_label">Get in touch</p>
+      <span class="home-head__meta" data-content="cta.meta">Copenhagen</span>
+    </div>
+
+    <div class="cta-band">
+      <h2 class="home-hero__title cta-band__title">
+        <span class="bra-reveal-line" data-reveal data-content="cta.title_l1">Send the brief.</span><br>
+        <span class="bra-reveal-line" data-reveal data-content="cta.title_l2_em">We'll read it carefully.</span>
+      </h2>
+      <div class="cta-band__aside">
+        <p class="bra-lede" data-content="cta.body">
           We answer Monday to Friday and work directly with architects, designers, and property owners.
         </p>
-        <div style="display: flex; gap: var(--bra-s-3); align-items: center; margin-top: var(--bra-s-4); flex-wrap: wrap;">
+        <div class="cta-band__actions">
           <a href="contact.html" style="text-decoration: none;">
-            <button class="bra-btn-mag bra-btn-mag--inv" data-magnetic>
+            <button class="bra-btn-mag bra-btn-mag--inv bra-btn-mag--solid" data-magnetic>
               <span class="bra-swap">
                 <span class="bra-swap__a">Get in touch</span>
                 <span class="bra-swap__b" aria-hidden="true">Get in touch</span>
@@ -494,7 +409,7 @@
   </div>
 </footer>
 
-<script src="br.js?v=36" defer></script>
+<script src="br.js?v=37" defer></script>
 <script src="br-content.js?v=26" defer></script>
 </body>
 </html>

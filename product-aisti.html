@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;500;700;900&family=Archivo+Black&display=swap">
-<link rel="stylesheet" href="br.css?v=51">
+<link rel="stylesheet" href="br.css?v=52">
 <script>if(sessionStorage.getItem("brLoaderShown")){document.documentElement.classList.add("br-loader-skip")}</script>
 <script type="application/ld+json">
 {
@@ -568,7 +568,7 @@
       <p class="bra-co2calc__equiv" data-co2-equiv></p>
     </div>
     <p class="bra-co2calc__foot" data-content="co2.disclaimer">Calculations are based on manufacturers' EPD — compared with stone wool. Aisti Aalto 20 mm vs Rockfon Sonar 20mm. Aisti figures: EPD Hub HUB-5632 (Aisti Corporation Oy, published 06.03.2026) — lifecycle emissions is GWP-fossil summed across A1-C4; stored CO₂ is GWP-biogenic at A1-A3 (factory gate, before any end-of-life release). Rockfon figure from its public Sonar 20mm datasheet.</p>
-    <p class="bra-caption" style="margin-top: var(--bra-s-2); opacity: 0.55;">The kg CO₂e factors themselves are set in the page code, not here — ask your developer to update them when a new EPD is published.</p>
+    <p class="bra-caption bra-caption--note" style="margin-top: var(--bra-s-2); opacity: 0.55;">The kg CO₂e factors themselves are set in the page code, not here — ask your developer to update them when a new EPD is published.</p>
   </div>
 
   <!-- Head-to-head -->
@@ -605,7 +605,7 @@
         </p>
         <div style="display: flex; gap: var(--bra-s-3); align-items: center; flex-wrap: wrap;">
           <a href="contact.html" style="text-decoration: none;">
-            <button class="bra-btn-mag bra-btn-mag--inv" data-magnetic>
+            <button class="bra-btn-mag bra-btn-mag--inv bra-btn-mag--solid" data-magnetic>
               <span>Order</span>
               <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
@@ -662,7 +662,7 @@
   </div>
 </footer>
 
-<script src="br.js?v=36" defer></script>
+<script src="br.js?v=37" defer></script>
 <script src="br-content.js?v=26" defer></script>
 <script>
 /* Video switcher — chips swap the YouTube iframe's src (CMS-aware) */

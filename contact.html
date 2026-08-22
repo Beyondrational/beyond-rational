@@ -24,37 +24,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;500;700;900&family=Archivo+Black&display=swap">
-<link rel="stylesheet" href="br.css?v=51">
+<link rel="stylesheet" href="br.css?v=52">
 <script>if(sessionStorage.getItem("brLoaderShown")){document.documentElement.classList.add("br-loader-skip")}</script>
-<style>
-  /* Form fields tuned for v1 design system */
-  .bra-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: var(--bra-s-2); }
-  .bra-field__label {
-    font-family: var(--bra-font); font-weight: 700;
-    font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
-    color: var(--bra-ink-2);
-  }
-  .bra-field__input, .bra-field__select, .bra-field__textarea {
-    background: transparent;
-    border: 0; border-bottom: 2px solid var(--bra-ink);
-    padding: 10px 0;
-    font-family: var(--bra-font);
-    font-weight: 500;
-    font-size: 17px;
-    color: var(--bra-ink);
-    width: 100%;
-    transition: border-color var(--bra-dur-base) var(--bra-ease);
-  }
-  .bra-field__textarea { resize: vertical; min-height: 120px; line-height: 1.5; }
-  .bra-field__input:focus, .bra-field__select:focus, .bra-field__textarea:focus {
-    outline: none;
-    border-bottom-color: var(--bra-oak-warm);
-  }
-  .bra-field__input::placeholder, .bra-field__textarea::placeholder { color: var(--bra-ink-mute); }
-  .bra-form-cols { display: grid; grid-template-columns: 1fr 1fr; gap: var(--bra-s-3); }
-  @media (max-width: 720px) { .bra-form-cols { grid-template-columns: 1fr; } }
-
-</style>
 </head>
 <body class="bra" data-page="contact">
 
@@ -178,7 +149,7 @@
             <textarea class="bra-field__textarea" name="description" id="s-addr" required placeholder="Street, city, postal code, country" data-content="form_section.form_sample.address_placeholder" data-content-attr="placeholder"></textarea>
           </div>
           <input type="hidden" name="name" value="Sample box request">
-          <button type="submit" class="bra-btn-mag" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
+          <button type="submit" class="bra-btn-mag bra-btn-mag--solid" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
             <span data-content="form_section.form_sample.submit_label">Request a sample</span>
             <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
@@ -235,7 +206,7 @@
             <textarea class="bra-field__textarea" name="description" id="p-brief" required placeholder="Programme, ceiling height, acoustic targets, finishes you are pairing with…" data-content="form_section.form_specify.brief_placeholder" data-content-attr="placeholder"></textarea>
           </div>
           <input type="hidden" name="name" value="Project specification request">
-          <button type="submit" class="bra-btn-mag" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
+          <button type="submit" class="bra-btn-mag bra-btn-mag--solid" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
             <span data-content="form_section.form_specify.submit_label">Send the brief</span>
             <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
@@ -270,7 +241,7 @@
             <textarea class="bra-field__textarea" name="description" id="i-msg" placeholder="Optional — give us context so we send the right thing." data-content="form_section.form_info.msg_placeholder" data-content-attr="placeholder"></textarea>
           </div>
           <input type="hidden" name="name" value="Information request">
-          <button type="submit" class="bra-btn-mag" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
+          <button type="submit" class="bra-btn-mag bra-btn-mag--solid" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
             <span data-content="form_section.form_info.submit_label">Send the request</span>
             <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
@@ -299,7 +270,7 @@
             <textarea class="bra-field__textarea" name="description" id="o-msg" required placeholder="What's on your mind?" data-content="form_section.form_other.msg_placeholder" data-content-attr="placeholder"></textarea>
           </div>
           <input type="hidden" name="name" value="General enquiry">
-          <button type="submit" class="bra-btn-mag" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
+          <button type="submit" class="bra-btn-mag bra-btn-mag--solid" data-magnetic style="align-self: flex-start; margin-top: var(--bra-s-3);">
             <span data-content="form_section.form_other.submit_label">Send the message</span>
             <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
@@ -441,7 +412,7 @@
   </div>
 </footer>
 
-<script src="br.js?v=36" defer></script>
+<script src="br.js?v=37" defer></script>
 <script src="br-content.js?v=26" defer></script>
 <script src="br-forms.js?v=1" defer></script>
 </body>

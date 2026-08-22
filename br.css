@@ -1,11 +1,24 @@
 /* ============================================================
-   B_R Design System  ·  v1.0
+   B_R Design System  ·  v1.1
    Beyond Rational · Aisti
    ------------------------------------------------------------
    Architectural-monograph register. Single family (Archivo +
    Archivo Black) at five weights, warm cream surface, charred
    oak as brand carrier, 2 px heavy rules, no eyebrows.
    Namespace: .bra-
+   ------------------------------------------------------------
+   v1.1 — craft pass. Same palette, same family, same register;
+   the change is in surface, state and rhythm:
+     · paper grain over the whole page, raking light on every
+       dark band (a flat hex fill reads as a div, not material)
+     · lift/hairline/radius tokens so depth is one decision, and
+       shadows cast warm rather than neutral grey
+     · every control has hover, focus-visible, and active states
+       from one family (fill rises, object lifts, arrow travels)
+     · photography held by hairlines instead of 2 px ink frames,
+       and it moves inside its crop on hover
+     · nav is glass at the top of a page and condenses past the
+       fold; labels tracked out to small-caps across the system
    ============================================================ */
 
 /* Font is loaded via a <link rel="stylesheet"> in each page's <head>, not
@@ -77,9 +90,35 @@
   --bra-pad-x: clamp(24px, 5vw, 80px);
   --bra-max:   1600px;
 
+  /* Surfaces — a fractionally lighter paper for raised objects, a darker
+     one for sunk/inset ones. Same hue family as --bra-paper; the point is
+     depth by value, not by a second colour. */
+  --bra-paper-lift: #FAF8F3;
+  --bra-paper-sunk: #ECE9E1;
+
+  /* Hairlines — one source of truth instead of ad-hoc rgba() literals
+     scattered per component (they had drifted: .12 / .14 / .16 / .18 / .20). */
+  --bra-line:            rgba(28,28,26,0.12);
+  --bra-line-strong:     rgba(28,28,26,0.24);
+  --bra-line-inv:        rgba(244,242,237,0.16);
+  --bra-line-inv-strong: rgba(244,242,237,0.32);
+
+  /* Lift — warm-cast shadows. A neutral-grey shadow over a cream paper
+     reads as dirt; casting it toward the oak keeps the surface warm. */
+  --bra-lift-1: 0 1px 2px rgba(48,34,18,0.05), 0 6px 18px -8px rgba(48,34,18,0.10);
+  --bra-lift-2: 0 2px 4px rgba(48,34,18,0.07), 0 20px 46px -16px rgba(48,34,18,0.20);
+  --bra-lift-inv: 0 2px 4px rgba(0,0,0,0.16), 0 22px 50px -18px rgba(0,0,0,0.45);
+
+  /* Radius — 2px only: enough to take the laser-cut edge off a control,
+     not enough to read as a soft/rounded UI. Photography stays square. */
+  --bra-r:    2px;
+  --bra-r-lg: 3px;
+
   /* Motion */
   --bra-ease:        cubic-bezier(0.16, 1, 0.30, 1);
   --bra-ease-quart:  cubic-bezier(0.25, 1, 0.50, 1);
+  --bra-ease-inout:  cubic-bezier(0.65, 0, 0.35, 1);
+  --bra-dur-fast:    240ms;
   --bra-dur-base:    520ms;
   --bra-dur-slow:    1100ms;
 
@@ -109,6 +148,41 @@
 .bra a { color: inherit; text-decoration: none; }
 .bra h1, .bra h2, .bra h3, .bra h4 { font-family: var(--bra-font); font-weight: 500; letter-spacing: -0.015em; }
 
+/* Selection picks up the brand carrier instead of the browser's blue */
+.bra ::selection { background: var(--bra-oak); color: var(--bra-on-oak); }
+
+/* One focus treatment for the whole site. Keyboard-only (:focus-visible), so
+   it never fires on mouse clicks, and offset far enough to clear 2px borders. */
+.bra :focus-visible {
+  outline: 2px solid var(--bra-oak-warm);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+.bra-surface-oak :focus-visible,
+.bra-surface-ink :focus-visible,
+[data-on-dark] :focus-visible { outline-color: var(--bra-on-oak); }
+
+/* Anchored jumps stop under the fixed nav rather than behind it */
+.bra [id] { scroll-margin-top: 96px; }
+
+/* ---------- Paper grain ----------
+   A single fixed noise plane over the whole page at very low opacity. The
+   monograph register lives or dies on the surface reading as a material
+   rather than as an sRGB fill; the hero already had this locally, this
+   promotes it to every page and every section. */
+.bra::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.030;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.86' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23g)'/></svg>");
+  background-size: 220px 220px;
+}
+@media print { .bra::after { display: none; } }
+
 /* ---------- Container ---------- */
 .bra-container {
   padding-left: var(--bra-pad-x);
@@ -118,11 +192,28 @@
   margin-right: auto;
 }
 
-/* ---------- Surfaces ---------- */
-.bra-surface-oak  { background: var(--bra-oak);   color: var(--bra-on-oak); }
+/* ---------- Surfaces ----------
+   A dark band filled with one flat hex reads as a coloured <div>. Real
+   drenched material has light falling across it, so each dark surface gets
+   a raking highlight from the top edge and a settle toward the bottom.
+   Layered as background-image on the element itself rather than an
+   absolutely-positioned pseudo — no stacking context to fight with. */
+.bra-surface-oak {
+  background-color: var(--bra-oak);
+  background-image:
+    radial-gradient(130% 90% at 50% -10%, rgba(255,246,232,0.10), rgba(255,246,232,0) 58%),
+    linear-gradient(180deg, rgba(0,0,0,0.14) 0%, rgba(0,0,0,0) 22%, rgba(0,0,0,0.20) 100%);
+  color: var(--bra-on-oak);
+}
 .bra-surface-oak h1, .bra-surface-oak h2, .bra-surface-oak h3 { color: var(--bra-on-oak); }
 .bra-surface-stone { background: var(--bra-stone); }
-.bra-surface-ink   { background: var(--bra-ink);  color: var(--bra-on-oak); }
+.bra-surface-ink {
+  background-color: var(--bra-ink);
+  background-image:
+    radial-gradient(130% 90% at 50% -10%, rgba(255,255,255,0.07), rgba(255,255,255,0) 58%),
+    linear-gradient(180deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0) 24%, rgba(0,0,0,0.24) 100%);
+  color: var(--bra-on-oak);
+}
 
 /* ---------- Typography ---------- */
 .bra-mega {
@@ -160,28 +251,44 @@
 .bra-lede {
   font-weight: 400;
   font-size: var(--bra-fs-lede);
-  line-height: 1.40;
+  line-height: 1.44;
+  letter-spacing: -0.008em;
   max-width: 38ch;
   text-wrap: pretty;
 }
 .bra-body {
   font-size: var(--bra-fs-body);
-  line-height: 1.55;
+  line-height: 1.62;
   max-width: 65ch;
   text-wrap: pretty;
 }
+/* Labels carry the hierarchy at the small end: the further down the scale,
+   the wider the tracking and the more weight — so a 11px label still reads
+   as a deliberate typographic element next to a 116px display line. */
 .bra-caption {
   font-family: var(--bra-font);
-  font-weight: 500;
-  font-size: var(--bra-fs-small);
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--bra-ink-2);
 }
 .bra-micro {
   font-weight: 500;
   font-size: var(--bra-fs-micro);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
   color: var(--bra-ink-mute);
+}
+/* Escape hatch: the same small-print colour and size, but as prose. Caps
+   and 0.14em tracking are for two- or three-word labels; a full sentence
+   set that way stops being readable. */
+.bra-caption--note,
+.bra-micro--note {
+  text-transform: none;
+  letter-spacing: 0.005em;
+  font-weight: 400;
+  line-height: 1.5;
 }
 .bra-thin {
   font-family: var(--bra-font);
@@ -210,7 +317,17 @@
   padding-bottom: 5px;
   cursor: pointer;
 }
-/* Underline draws in from the left on hover (no arrow) */
+/* Two rules, not one: a permanent hairline so the link is legible as a link
+   at rest, and a solid 2px that wipes across it on hover. A link that only
+   shows its underline on hover has no affordance until you're already on it. */
+.bra-cta::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.30;
+}
 .bra-cta::after {
   content: "";
   position: absolute;
@@ -222,6 +339,20 @@
   transition: transform var(--bra-dur-base) var(--bra-ease);
 }
 .bra-cta:hover::after { transform: scaleX(1); }
+/* In a list of links (footer columns, nav-like stacks) the rest-state
+   hairline turns into nine underlines stacked on top of each other — the
+   list itself already reads as links, so opt those out. */
+.bra-footer .bra-cta::before,
+.bra-cta--bare::before { display: none; }
+/* Arrow variant — the glyph travels on hover, the standard "this goes
+   somewhere" tell. Opt-in so plain text CTAs stay plain. */
+.bra-cta__arrow {
+  display: inline-block;
+  margin-left: 0.5em;
+  transition: transform var(--bra-dur-base) var(--bra-ease);
+}
+.bra-cta:hover .bra-cta__arrow { transform: translate(3px, -3px); }
+.bra-cta--down:hover .bra-cta__arrow { transform: translateY(3px); }
 
 /* ---------- Spec sheet (heavy weights, no hairlines) ---------- */
 .bra-spec {
@@ -253,6 +384,16 @@
 }
 .bra-spec-row:last-child .bra-spec-key,
 .bra-spec-row:last-child .bra-spec-val { border-bottom-width: 4px; }
+/* Row-level hover across a `display: contents` row: both cells respond, so
+   scanning a 12-row spec sheet keeps your eye on one line. */
+.bra-spec-key, .bra-spec-val { transition: background-color var(--bra-dur-fast) var(--bra-ease), padding-left var(--bra-dur-base) var(--bra-ease); }
+.bra-spec-row:hover .bra-spec-key,
+.bra-spec-row:hover .bra-spec-val { background-color: color-mix(in oklch, var(--bra-oak) 6%, transparent); }
+.bra-spec-row:hover .bra-spec-key { padding-left: 10px; }
+.bra-surface-oak .bra-spec-row:hover .bra-spec-key,
+.bra-surface-oak .bra-spec-row:hover .bra-spec-val,
+.bra-gallery-data--ink .bra-spec-row:hover .bra-spec-key,
+.bra-gallery-data--ink .bra-spec-row:hover .bra-spec-val { background-color: rgba(255,255,255,0.06); }
 
 /* On dark tiles (gallery-data--ink/--oak, surface-oak) the default ink
    border is invisible — use a light hairline instead */
@@ -305,6 +446,34 @@
     linear-gradient(180deg,
       var(--bra-oak) 0%,
       var(--bra-oak-deep) 100%);
+}
+
+/* ---------- Scroll cue ----------
+   The hero's "Scroll ↓" was a static 11px string. A 40px rule with a
+   travelling segment says the same thing without asking anyone to read it. */
+.bra-scrollcue { display: inline-flex; align-items: center; gap: 10px; }
+.bra-scrollcue__line {
+  position: relative;
+  display: block;
+  width: 46px; height: 1px;
+  background: currentColor;
+  opacity: 0.35;
+  overflow: hidden;
+}
+.bra-scrollcue__line::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: currentColor;
+  transform: translateX(-100%);
+  animation: bra-scrollcue-run 2.4s var(--bra-ease-inout) infinite;
+}
+@keyframes bra-scrollcue-run {
+  0%   { transform: translateX(-100%); }
+  55%  { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bra-scrollcue__line::after { animation: none; transform: none; }
 }
 
 /* ---------- Hero ---------- */
@@ -428,24 +597,31 @@
   .bra-cursor { display: none; }
 }
 
-/* Magnetic primary button — drenched oak, heavy weight */
+/* Magnetic primary button — drenched oak, heavy weight.
+   Three things carry the "expensive control" read here: the fill rises from
+   the bottom edge rather than fading in, the whole button lifts 1px with a
+   warm shadow while it fills, and it presses back down on :active. */
 .bra-btn-mag {
   position: relative;
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 18px 32px;
+  padding: 17px 30px;
   border: 2px solid var(--bra-oak);
+  border-radius: var(--bra-r);
   background: transparent;
   color: var(--bra-oak);
   font-family: var(--bra-font);
   font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.08em;
+  font-size: 12px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   overflow: hidden;
   isolation: isolate;
-  transition: color var(--bra-dur-base) var(--bra-ease);
+  will-change: transform;
+  transition: color var(--bra-dur-base) var(--bra-ease),
+              transform var(--bra-dur-fast) var(--bra-ease),
+              box-shadow var(--bra-dur-base) var(--bra-ease);
 }
 .bra-btn-mag::before {
   content: "";
@@ -455,10 +631,41 @@
   transform: translateY(101%);
   transition: transform var(--bra-dur-base) var(--bra-ease);
 }
-.bra-btn-mag:hover { color: var(--bra-on-oak); }
+.bra-btn-mag:hover { color: var(--bra-on-oak); transform: translateY(-2px); box-shadow: var(--bra-lift-2); }
 .bra-btn-mag:hover::before { transform: translateY(0); }
+.bra-btn-mag:active { transform: translateY(0); box-shadow: var(--bra-lift-1); }
 .bra-btn-mag__arrow { transition: transform var(--bra-dur-base) var(--bra-ease); }
 .bra-btn-mag:hover .bra-btn-mag__arrow { transform: translateX(5px); }
+
+/* Solid variant — the one confident filled button on the site. Starts
+   drenched and empties upward on hover (the exact inverse of the outline
+   version), so the pair reads as one family rather than two buttons. */
+.bra-btn-mag--solid {
+  background: var(--bra-oak);
+  color: var(--bra-on-oak);
+  box-shadow: var(--bra-lift-1);
+}
+.bra-btn-mag--solid::before {
+  background: var(--bra-paper);
+  transform: translateY(0);
+}
+.bra-btn-mag--solid:hover { color: var(--bra-oak); }
+.bra-btn-mag--solid:hover::before { transform: translateY(-101%); }
+/* Same idea on a dark surface: cream fill that empties to reveal the oak. */
+.bra-btn-mag--solid.bra-btn-mag--inv {
+  background: var(--bra-on-oak);
+  color: var(--bra-oak-deep);
+  border-color: var(--bra-on-oak);
+}
+.bra-btn-mag--solid.bra-btn-mag--inv::before { background: transparent; }
+.bra-btn-mag--solid.bra-btn-mag--inv:hover { color: var(--bra-on-oak); background: transparent; }
+
+@media (prefers-reduced-motion: reduce) {
+  .bra-btn-mag,
+  .bra-btn-mag::before,
+  .bra-btn-mag__arrow { transition-duration: 1ms; }
+  .bra-btn-mag:hover { transform: none; }
+}
 
 /* Label roll — current text rolls up, a clone rolls in from below */
 .bra-swap { position: relative; display: inline-block; overflow: hidden; line-height: 1.1; vertical-align: bottom; padding-bottom: 0.12em; margin-bottom: -0.12em; }
@@ -487,6 +694,7 @@
   gap: 12px;
   padding: 18px 32px;
   border: 2px solid var(--bra-ink);
+  border-radius: var(--bra-r);
   background: transparent;
   color: var(--bra-ink);
   font-family: var(--bra-font);
@@ -495,7 +703,9 @@
   letter-spacing: -0.005em;
   overflow: hidden;
   isolation: isolate;
-  transition: color var(--bra-dur-base) var(--bra-ease);
+  transition: color var(--bra-dur-base) var(--bra-ease),
+              transform var(--bra-dur-fast) var(--bra-ease),
+              box-shadow var(--bra-dur-base) var(--bra-ease);
 }
 .bra-btn-fill::before {
   content: "";
@@ -505,8 +715,10 @@
   transform: translateY(101%);
   transition: transform var(--bra-dur-base) var(--bra-ease);
 }
-.bra-btn-fill:hover { color: var(--bra-paper); }
+.bra-btn-fill:hover { color: var(--bra-paper); transform: translateY(-2px); box-shadow: var(--bra-lift-2); }
 .bra-btn-fill:hover::before { transform: translateY(0); }
+.bra-btn-fill:active { transform: translateY(0); box-shadow: var(--bra-lift-1); }
+@media (prefers-reduced-motion: reduce) { .bra-btn-fill:hover { transform: none; } }
 
 /* Character reveal — word-level wrap, char-level animate */
 .bra-reveal-line {
@@ -582,32 +794,91 @@
   will-change: transform;
 }
 
-/* ---------- Form tabs (multi-form switcher) ---------- */
+/* ---------- Form tabs (multi-form switcher) ----------
+   Four separately-bordered rectangles read as four buttons that happen to
+   sit next to each other. A segmented control — one bordered track, tabs
+   sharing it, the active one drenched — reads as one control with four
+   states, which is what it actually is. */
 .bra-form-tabs {
-  display: flex;
-  gap: 8px;
+  display: inline-flex;
+  gap: 0;
   flex-wrap: wrap;
   margin-bottom: var(--bra-s-4);
-  padding-bottom: var(--bra-s-3);
-  border-bottom: 2px solid var(--bra-ink);
+  padding: 3px;
+  border: 2px solid var(--bra-ink);
+  border-radius: var(--bra-r-lg);
+  background: var(--bra-paper-sunk);
 }
 .bra-form-tab {
   font-family: var(--bra-font);
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: -0.005em;
-  padding: 10px 18px;
-  border: 2px solid var(--bra-ink);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 11px 20px;
+  border: 0;
+  border-radius: var(--bra-r);
   background: transparent;
-  color: var(--bra-ink);
+  color: var(--bra-ink-2);
+  cursor: pointer;
   transition: background var(--bra-dur-fast) var(--bra-ease),
-              color var(--bra-dur-fast) var(--bra-ease);
+              color var(--bra-dur-fast) var(--bra-ease),
+              box-shadow var(--bra-dur-fast) var(--bra-ease);
 }
-.bra-form-tab:hover { background: rgba(28,28,26,0.06); }
-.bra-form-tab.is-active { background: var(--bra-ink); color: var(--bra-on-oak); }
+.bra-form-tab:hover { color: var(--bra-ink); background: rgba(28,28,26,0.05); }
+.bra-form-tab.is-active {
+  background: var(--bra-oak);
+  color: var(--bra-on-oak);
+  box-shadow: var(--bra-lift-1);
+}
+@media (max-width: 600px) {
+  .bra-form-tabs { display: grid; grid-template-columns: 1fr 1fr; width: 100%; }
+}
 
 form[data-form] { display: none; }
 form[data-form].is-active { display: flex; flex-direction: column; gap: 0; }
+
+/* ---------- Form fields ----------
+   Promoted out of contact.html's page-local <style>: fields are a system
+   component, and the underline-only version there gave a required input no
+   visible target area at all until you clicked in it. */
+.bra-field { display: flex; flex-direction: column; gap: 7px; margin-bottom: var(--bra-s-3); }
+.bra-field__label {
+  font-family: var(--bra-font); font-weight: 700;
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--bra-ink-2);
+}
+.bra-field__input, .bra-field__select, .bra-field__textarea {
+  /* Lightest surface in the system, deliberately: an input has to read as
+     an input on the cream page AND inside a stone section, and only the
+     lift tone separates from both. */
+  background: var(--bra-paper-lift);
+  border: 1px solid var(--bra-line-strong);
+  border-bottom: 2px solid var(--bra-ink);
+  border-radius: var(--bra-r);
+  padding: 13px 14px;
+  font-family: var(--bra-font);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--bra-ink);
+  width: 100%;
+  transition: border-color var(--bra-dur-fast) var(--bra-ease),
+              background var(--bra-dur-fast) var(--bra-ease),
+              box-shadow var(--bra-dur-fast) var(--bra-ease);
+}
+.bra-field__textarea { resize: vertical; min-height: 132px; line-height: 1.55; }
+.bra-field__input:hover, .bra-field__select:hover, .bra-field__textarea:hover { border-color: var(--bra-ink-mute); border-bottom-color: var(--bra-ink); }
+.bra-field__input:focus, .bra-field__select:focus, .bra-field__textarea:focus {
+  outline: none;
+  background: #fff;
+  border-color: var(--bra-oak-warm);
+  border-bottom-color: var(--bra-oak);
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--bra-oak-warm) 22%, transparent);
+}
+.bra-field__input::placeholder, .bra-field__textarea::placeholder { color: var(--bra-ink-mute); }
+.bra-field__hint { font-family: var(--bra-font); font-size: 12px; color: var(--bra-ink-mute); }
+.bra-form-cols { display: grid; grid-template-columns: 1fr 1fr; gap: var(--bra-s-3); }
+@media (max-width: 720px) { .bra-form-cols { grid-template-columns: 1fr; } }
 
 /* ---------- Absorption chart (SVG line chart) ---------- */
 .bra-chart {
@@ -1032,16 +1303,21 @@ form[data-form].is-active { display: flex; flex-direction: column; gap: 0; }
 }
 .bra-gallery-img:hover .bra-gallery-img__img { transform: scale(1.05); }
 
+/* The caption used to sit fully off the bottom edge until hover, which on
+   a touch screen means it never appears at all. It now rests just below
+   the fold of the cell with its scrim already painted, and rises fully on
+   hover — visible everywhere, still rewarding on a pointer. */
 .bra-gallery-img__overlay {
   position: absolute;
   inset: auto 0 0 0;
   padding: var(--bra-s-3);
-  background: linear-gradient(180deg, transparent 0%, rgba(28,28,26,0.85) 70%);
+  background: linear-gradient(180deg, transparent 0%, rgba(28,28,26,0.88) 72%);
   color: var(--bra-on-oak);
-  transform: translateY(101%);
-  transition: transform var(--bra-dur-base) var(--bra-ease);
+  transform: translateY(0);
+  transition: transform var(--bra-dur-base) var(--bra-ease), opacity var(--bra-dur-base) var(--bra-ease);
 }
-.bra-gallery-img:hover .bra-gallery-img__overlay { transform: translateY(0); }
+.bra-gallery-img:hover .bra-gallery-img__meta,
+.bra-gallery-img:focus-within .bra-gallery-img__meta { opacity: 1; transform: none; }
 .bra-gallery-img__title {
   font-family: var(--bra-font);
   font-weight: 500;
@@ -1051,12 +1327,15 @@ form[data-form].is-active { display: flex; flex-direction: column; gap: 0; }
 }
 .bra-gallery-img__meta {
   font-family: var(--bra-font);
-  font-weight: 500;
-  font-size: 12px;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(244,242,237,0.7);
+  color: rgba(244,242,237,0.72);
   margin-top: 6px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity var(--bra-dur-base) var(--bra-ease), transform var(--bra-dur-base) var(--bra-ease);
 }
 
 /* Data cell — content tile */
@@ -1071,12 +1350,12 @@ form[data-form].is-active { display: flex; flex-direction: column; gap: 0; }
 
 .bra-gallery-data__label {
   font-family: var(--bra-font);
-  font-weight: 500;
+  font-weight: 700;
   font-size: 11px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: inherit;
-  opacity: 0.65;
+  opacity: 0.62;
 }
 .bra-gallery-data__big {
   font-family: var(--bra-font);
@@ -1105,15 +1384,42 @@ form[data-form].is-active { display: flex; flex-direction: column; gap: 0; }
 }
 .bra-gallery-data__img:not([src]), .bra-gallery-data__img[src=""] { display: none; }
 
-/* Whole cell as a clickable card (cases, case studies, etc.) */
-.bra-gallery-data--link { text-decoration: none; color: inherit; transition: opacity var(--bra-dur-base) var(--bra-ease); }
-.bra-gallery-data--link:hover { opacity: 0.82; }
+/* Whole cell as a clickable card (cases, case studies, etc.).
+   Fading the entire card to 82% on hover dims the photograph and the type
+   together and signals nothing in particular. Instead: the photo pushes in,
+   the surface warms, and the CTA moves — three small tells, none of which
+   cost legibility. */
+.bra-gallery-data--link {
+  text-decoration: none;
+  color: inherit;
+  /* clips so the photo's zoom can't spill over the neighbouring cell */
+  overflow: hidden;
+  transition: background-color var(--bra-dur-base) var(--bra-ease);
+}
+.bra-gallery-data--link .bra-gallery-data__img {
+  transition: transform 1400ms var(--bra-ease);
+  will-change: transform;
+}
+.bra-gallery-data--link:hover,
+.bra-gallery-data--link:focus-visible { background-color: var(--bra-paper-lift); }
+.bra-gallery-data--link:hover .bra-gallery-data__img,
+.bra-gallery-data--link:focus-visible .bra-gallery-data__img { transform: scale(1.045); }
+.bra-gallery-data--ink.bra-gallery-data--link:hover,
+.bra-gallery-data--oak.bra-gallery-data--link:hover { background-color: rgba(255,255,255,0.05); }
 .bra-gallery-data__cta {
   margin-top: auto;
   padding-top: var(--bra-s-3);
   font-family: var(--bra-font);
   font-weight: 700;
   font-size: 13px;
+  display: inline-block;
+  transition: transform var(--bra-dur-base) var(--bra-ease);
+}
+.bra-gallery-data--link:hover .bra-gallery-data__cta,
+.bra-gallery-data--link:focus-visible .bra-gallery-data__cta { transform: translateX(6px); }
+@media (prefers-reduced-motion: reduce) {
+  .bra-gallery-data--link .bra-gallery-data__img { transition: none; }
+  .bra-gallery-data--link:hover .bra-gallery-data__img { transform: none; }
 }
 
 /* Auto variant — divides evenly into however many cells are given, no
@@ -1224,8 +1530,9 @@ form[data-form].is-active { display: flex; flex-direction: column; gap: 0; }
 .bra-scroll-progress {
   position: fixed;
   top: 0; left: 0;
-  height: 2px;
-  background: var(--bra-oak);
+  height: 3px;
+  background: linear-gradient(90deg, var(--bra-oak-deep), var(--bra-oak) 55%, var(--bra-oak-warm));
+  box-shadow: 0 0 12px -2px color-mix(in oklch, var(--bra-oak-warm) 60%, transparent);
   width: 0;
   z-index: 200;
   pointer-events: none;
@@ -1263,7 +1570,12 @@ html.br-loader-skip .br-loader { display: none; }
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: var(--bra-ink);
+  /* Raking light, same as the oak/ink bands — the curtain should read as
+     the same material as the site it opens onto. */
+  background-color: var(--bra-ink);
+  background-image:
+    radial-gradient(120% 80% at 50% 0%, rgba(255,246,232,0.08), rgba(255,246,232,0) 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.22), rgba(0,0,0,0) 30%);
   color: var(--bra-on-oak);
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -1287,11 +1599,11 @@ html.br-loader-skip .br-loader { display: none; }
 .br-loader__top-r,
 .br-loader__bottom-l {
   font-family: var(--bra-font);
-  font-weight: 500;
-  font-size: 11px;
-  letter-spacing: 0.20em;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(244,242,237,0.65);
+  color: rgba(244,242,237,0.55);
 }
 
 .br-loader__middle {
@@ -1433,28 +1745,46 @@ html.br-loader-skip .br-loader { display: none; }
 }
 
 /* ---------- Site chrome (nav + footer) ---------- */
+/* Two states, not one. At the top of a page the bar is glass-clear so a
+   full-bleed hero actually reads full-bleed; past the fold it condenses —
+   shorter, blurred, hairlined and lifted — so it reads as chrome sitting
+   over the page rather than a permanent black slab across the artwork. */
 .bra-nav {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 50;
-  padding: 14px var(--bra-pad-x);
+  padding: 22px var(--bra-pad-x);
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: var(--bra-s-3);
-  background: color-mix(in oklch, var(--bra-paper) 84%, transparent);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(28,28,26,0.10);
-  transition: background var(--bra-dur-base) var(--bra-ease),
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: padding var(--bra-dur-base) var(--bra-ease),
+              background var(--bra-dur-base) var(--bra-ease),
               color var(--bra-dur-base) var(--bra-ease),
+              box-shadow var(--bra-dur-base) var(--bra-ease),
               border-color var(--bra-dur-base) var(--bra-ease);
 }
-.bra-nav.is-dark {
-  background: color-mix(in oklch, var(--bra-ink) 64%, transparent);
-  color: var(--bra-on-oak);
-  border-bottom-color: rgba(244,242,237,0.14);
+.bra-nav.is-scrolled {
+  padding: 12px var(--bra-pad-x);
+  background: color-mix(in oklch, var(--bra-paper) 86%, transparent);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  border-bottom-color: var(--bra-line);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset, var(--bra-lift-1);
 }
+.bra-nav.is-dark { color: var(--bra-on-oak); }
+.bra-nav.is-dark.is-scrolled {
+  background: color-mix(in oklch, var(--bra-ink) 72%, transparent);
+  border-bottom-color: var(--bra-line-inv);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset, 0 18px 40px -24px rgba(0,0,0,0.6);
+}
+/* Over a hero photo with no bar behind it, the label needs its own shadow
+   to stay legible against whatever pixel it happens to land on. */
+.bra-nav.is-dark:not(.is-scrolled) .bra-nav__link,
+.bra-nav.is-dark:not(.is-scrolled) .bra-nav__lang { text-shadow: 0 1px 14px rgba(0,0,0,0.45); }
+.bra-nav.is-dark:not(.is-scrolled) .bra-nav__brand-logo { filter: invert(1) drop-shadow(0 1px 14px rgba(0,0,0,0.35)); }
 .bra-nav__brand {
   font-family: var(--bra-font);
   font-weight: 600;
@@ -1480,12 +1810,17 @@ html.br-loader-skip .br-loader { display: none; }
 }
 .bra-nav__link {
   font-family: var(--bra-font);
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: -0.005em;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   position: relative;
   padding: 6px 2px;
+  transition: opacity var(--bra-dur-base) var(--bra-ease);
 }
+.bra-nav__links > .bra-nav__link { opacity: 0.72; }
+.bra-nav__link:hover,
+.bra-nav__link[aria-current="page"] { opacity: 1; }
 .bra-nav__link::after {
   content: "";
   position: absolute;
@@ -1506,18 +1841,33 @@ html.br-loader-skip .br-loader { display: none; }
    styled as a small pill rather than a link so it reads as a control. */
 .bra-nav__lang {
   font-family: var(--bra-font);
-  font-weight: 600;
-  font-size: 11px;
-  letter-spacing: 0.04em;
-  padding: 5px 10px;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  padding: 6px 11px;
   border: 1.5px solid currentColor;
   border-radius: 999px;
   background: transparent;
   color: inherit;
   cursor: pointer;
-  transition: opacity var(--bra-dur-base) var(--bra-ease);
+  transition: background var(--bra-dur-fast) var(--bra-ease),
+              color var(--bra-dur-fast) var(--bra-ease),
+              border-color var(--bra-dur-fast) var(--bra-ease);
 }
-.bra-nav__lang:hover { opacity: 0.65; }
+/* Fills solid on hover so it reads as a control you press, not a link.
+   Two rules because the fill has to invert against whichever nav state is
+   live — currentColor alone can't flip the label at the same time. */
+.bra-nav__lang:hover {
+  background: var(--bra-ink);
+  border-color: var(--bra-ink);
+  color: var(--bra-paper);
+}
+.bra-nav.is-dark .bra-nav__lang:hover {
+  background: var(--bra-on-oak);
+  border-color: var(--bra-on-oak);
+  color: var(--bra-ink);
+  text-shadow: none;
+}
 
 /* Hamburger toggle — injected by br.js, hidden on desktop */
 .bra-nav__toggle {
@@ -1590,9 +1940,12 @@ html.br-loader-skip .br-loader { display: none; }
 }
 body.bra-nav-locked { overflow: hidden; }
 
-/* Bottom footer (shared across pages) */
+/* Bottom footer (shared across pages).
+   Sits on the sunk tone rather than the page's own paper: the footer should
+   read as the page ending, and an identical background with only a rule
+   between it and the last section doesn't do that. */
 .bra-footer {
-  background: var(--bra-paper);
+  background: var(--bra-stone);
   border-top: 2px solid var(--bra-ink);
   padding: var(--bra-s-5) var(--bra-pad-x) var(--bra-s-3);
 }
@@ -1619,23 +1972,31 @@ body.bra-nav-locked { overflow: hidden; }
   font-family: var(--bra-font);
   font-weight: 700;
   font-size: 11px;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--bra-ink-2);
   margin-bottom: var(--bra-s-2);
+  padding-bottom: var(--bra-s-1);
+  border-bottom: 1px solid var(--bra-line);
 }
 .bra-footer ul { list-style: none; }
-.bra-footer li { padding: 5px 0; }
+.bra-footer li { padding: 6px 0; }
 .bra-footer li a {
   font-family: var(--bra-font);
   font-weight: 500;
   font-size: 15px;
+  display: inline-block;
+  transition: transform var(--bra-dur-base) var(--bra-ease), color var(--bra-dur-base) var(--bra-ease);
 }
+/* Footer links step right on hover — the cheapest possible way to make a
+   list of nine links feel like nine controls instead of nine strings. */
+.bra-footer li a:hover { transform: translateX(4px); color: var(--bra-oak); }
+@media (prefers-reduced-motion: reduce) { .bra-footer li a:hover { transform: none; } }
 .bra-footer__base {
   max-width: var(--bra-max);
-  margin: var(--bra-s-4) auto 0;
+  margin: var(--bra-s-5) auto 0;
   padding-top: var(--bra-s-3);
-  border-top: 1px solid rgba(28,28,26,0.10);
+  border-top: 1px solid var(--bra-line);
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -1651,8 +2012,10 @@ body.bra-nav-locked { overflow: hidden; }
   .bra-footer__grid > div:nth-child(2) { grid-column: span 2; }
 }
 
-/* Page top spacer to clear sticky nav */
-.bra-nav-spacer { height: 64px; }
+/* Page top spacer to clear the fixed nav. Sized for the bar's *expanded*
+   state (22px padding + 40px logo + 22px), since that is what is on screen
+   at scroll 0 — which is exactly when this spacer matters. */
+.bra-nav-spacer { height: 96px; }
 
 /* ---------- Responsive: collapse data/image grids that use inline spans ----------
    Gallery cells carry inline grid-column: span N. Reducing the grid's own track
@@ -2226,18 +2589,29 @@ body.bra-nav-locked { overflow: hidden; }
    Shared photo gallery (CMS-dynamic, wuud-style 3-col grid)
    Use with: <div class="brg" data-content-each="gallery">…template…</div>
    ============================================================ */
+/* Mosaic, not a contact sheet. A uniform 3×N grid of identical 4:3 tiles is
+   the most template-looking way to show ten photographs; a repeating 6-cell
+   rhythm (one large, one tall, four standard) reads as an edited spread.
+   The pattern is expressed with nth-child + dense packing so it tessellates
+   at ANY item count — which matters because the count is CMS-driven. */
 .brg {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: clamp(112px, 12vw, 178px);
+  grid-auto-flow: dense;
   gap: clamp(10px, 1.2vw, 20px);
   margin-top: var(--bra-s-4);
 }
 .brg__cell {
   position: relative; margin: 0; overflow: hidden;
-  aspect-ratio: 4 / 3;
-  border: 2px solid var(--bra-ink);
+  grid-column: span 2;
+  grid-row: span 2;
+  border-radius: var(--bra-r);
+  box-shadow: inset 0 0 0 1px var(--bra-line-strong);
   background: var(--bra-stone);
 }
+.brg__cell:nth-child(6n + 1) { grid-column: span 4; grid-row: span 3; }
+.brg__cell:nth-child(6n + 4) { grid-column: span 2; grid-row: span 3; }
 .brg__img {
   width: 100%; height: 100%; object-fit: cover; display: block;
   transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -2247,16 +2621,29 @@ body.bra-nav-locked { overflow: hidden; }
   position: absolute; left: 0; right: 0; bottom: 0;
   display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
   padding: 14px 16px; color: #f4f2ed;
-  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  background: linear-gradient(to top, rgba(0,0,0,0.72), rgba(0,0,0,0.12) 62%, transparent);
   opacity: 0; transform: translateY(8px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: opacity var(--bra-dur-base) var(--bra-ease), transform var(--bra-dur-base) var(--bra-ease);
 }
-.brg__cell:hover .brg__cap { opacity: 1; transform: none; }
+.brg__cell:hover .brg__cap,
+.brg__cell:focus-within .brg__cap { opacity: 1; transform: none; }
+/* No hover on touch, so the caption would never be reachable there */
+@media (hover: none) { .brg__cap { opacity: 1; transform: none; } }
 .brg__title { font-family: var(--bra-font); font-weight: 600; font-size: 14px; letter-spacing: 0.01em; }
 .brg__meta  { font-family: var(--bra-font); font-weight: 500; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(244,242,237,0.7); }
 .brg:empty { display: none; }
-@media (max-width: 900px) { .brg { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .brg { grid-template-columns: 1fr; } }
+@media (max-width: 900px) {
+  .brg { grid-template-columns: repeat(4, 1fr); grid-auto-rows: clamp(120px, 20vw, 200px); }
+  .brg__cell { grid-column: span 2; grid-row: span 2; }
+  .brg__cell:nth-child(6n + 1) { grid-column: span 4; grid-row: span 3; }
+  .brg__cell:nth-child(6n + 4) { grid-column: span 2; grid-row: span 2; }
+}
+@media (max-width: 560px) {
+  .brg { grid-template-columns: 1fr; grid-auto-rows: auto; }
+  .brg__cell,
+  .brg__cell:nth-child(6n + 1),
+  .brg__cell:nth-child(6n + 4) { grid-column: 1 / -1; grid-row: auto; aspect-ratio: 4 / 3; }
+}
 
 /* Aisti gallery — hover-reveal caption kept only on the first/leftmost image */
 body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__cap { opacity: 0; transform: translateY(8px); }
@@ -2330,13 +2717,16 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
 /* ---------- Filter chips ---------- */
 .bra-chips { display: flex; flex-wrap: wrap; gap: var(--bra-s-2); }
 .bra-chip {
-  font-family: var(--bra-font); font-weight: 500; font-size: 13px; letter-spacing: -0.005em;
-  padding: 8px 16px; border: 1.5px solid rgba(28,28,26,0.24); background: transparent; color: var(--bra-ink);
+  font-family: var(--bra-font); font-weight: 700; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 9px 17px; border: 1.5px solid var(--bra-line-strong); background: transparent; color: var(--bra-ink-2);
   cursor: pointer; border-radius: 999px;
-  transition: background var(--bra-dur-base) var(--bra-ease), color var(--bra-dur-base) var(--bra-ease), border-color var(--bra-dur-base) var(--bra-ease);
+  transition: background var(--bra-dur-fast) var(--bra-ease), color var(--bra-dur-fast) var(--bra-ease), border-color var(--bra-dur-fast) var(--bra-ease);
 }
-.bra-chip:hover { border-color: var(--bra-ink); }
-.bra-chip.is-active { background: var(--bra-ink); color: var(--bra-on-oak); border-color: var(--bra-ink); }
+.bra-chip:hover { border-color: var(--bra-ink); color: var(--bra-ink); }
+.bra-chip.is-active { background: var(--bra-oak); color: var(--bra-on-oak); border-color: var(--bra-oak); }
+.bra-surface-oak .bra-chip, .bra-surface-ink .bra-chip { color: rgba(244,242,237,0.72); border-color: var(--bra-line-inv-strong); }
+.bra-surface-oak .bra-chip:hover, .bra-surface-ink .bra-chip:hover { color: var(--bra-on-oak); border-color: var(--bra-on-oak); }
+.bra-surface-oak .bra-chip.is-active, .bra-surface-ink .bra-chip.is-active { background: var(--bra-on-oak); color: var(--bra-oak-deep); border-color: var(--bra-on-oak); }
 
 /* ---------- Steps / how it works ---------- */
 .bra-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 3vw, 56px); }
@@ -2378,7 +2768,7 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
 .bra-surface-oak .bra-logos__item:hover, .bra-surface-ink .bra-logos__item:hover { opacity: 1; }
 
 /* ---------- Callout / notice ---------- */
-.bra-callout { border-left: 3px solid var(--bra-oak); background: var(--bra-stone); padding: var(--bra-s-3) var(--bra-s-4); }
+.bra-callout { border-left: 4px solid var(--bra-oak); border-radius: 0 var(--bra-r) var(--bra-r) 0; background: var(--bra-stone); padding: var(--bra-s-3) var(--bra-s-4); }
 .bra-callout__label { display: block; font-family: var(--bra-font); font-weight: 600; font-size: 11px;
   letter-spacing: 0.12em; text-transform: uppercase; color: var(--bra-oak-warm); margin-bottom: var(--bra-s-2); }
 .bra-callout__body { font-size: 16px; line-height: 1.55; color: var(--bra-ink); max-width: 60ch; }
@@ -2389,11 +2779,13 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
 .bra-btn-ghost {
   display: inline-flex; align-items: center; gap: var(--bra-s-2);
   font-family: var(--bra-font); font-weight: 700; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
-  padding: 14px 28px; border: 2px solid rgba(28,28,26,0.30); background: transparent; color: var(--bra-ink); cursor: pointer;
+  padding: 14px 28px; border: 2px solid var(--bra-line-strong); border-radius: var(--bra-r);
+  background: transparent; color: var(--bra-ink); cursor: pointer;
   transition: border-color var(--bra-dur-base) var(--bra-ease), background var(--bra-dur-base) var(--bra-ease), transform 120ms var(--bra-ease);
 }
-.bra-btn-ghost:hover { border-color: var(--bra-ink); background: rgba(28,28,26,0.04); }
-.bra-btn-ghost:active { transform: translateY(1px); }
+.bra-btn-ghost:hover { border-color: var(--bra-ink); background: var(--bra-paper-lift); transform: translateY(-2px); box-shadow: var(--bra-lift-1); }
+.bra-btn-ghost:active { transform: translateY(0); box-shadow: none; }
+@media (prefers-reduced-motion: reduce) { .bra-btn-ghost:hover { transform: none; } }
 .bra-surface-oak .bra-btn-ghost, .bra-surface-ink .bra-btn-ghost { color: var(--bra-on-oak); border-color: rgba(244,242,237,0.40); }
 .bra-surface-oak .bra-btn-ghost:hover, .bra-surface-ink .bra-btn-ghost:hover { border-color: var(--bra-on-oak); background: rgba(244,242,237,0.06); }
 .bra-btn-mag[disabled], .bra-btn-fill[disabled], .bra-btn-ghost[disabled],
@@ -2474,11 +2866,12 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
    ============================================================ */
 
 /* ---------- Downloads / document list ---------- */
-.bra-downloads { border-top: 1px solid rgba(28,28,26,0.16); }
-.bra-download { display: flex; align-items: center; gap: var(--bra-s-3); padding: var(--bra-s-3) 0;
-  border-bottom: 1px solid rgba(28,28,26,0.16); text-decoration: none; color: var(--bra-ink);
-  transition: padding-left var(--bra-dur-base) var(--bra-ease); }
-.bra-download:hover { padding-left: var(--bra-s-2); }
+.bra-downloads { border-top: 2px solid var(--bra-ink); }
+.bra-download { display: flex; align-items: center; gap: var(--bra-s-3); padding: var(--bra-s-3) var(--bra-s-2);
+  margin: 0 calc(var(--bra-s-2) * -1);
+  border-bottom: 1px solid var(--bra-line-strong); text-decoration: none; color: var(--bra-ink);
+  transition: padding-left var(--bra-dur-base) var(--bra-ease), background-color var(--bra-dur-fast) var(--bra-ease); }
+.bra-download:hover { padding-left: var(--bra-s-3); background-color: color-mix(in oklch, var(--bra-oak) 6%, transparent); }
 .bra-download__icon { flex: none; width: 22px; height: 22px; color: var(--bra-oak-warm); }
 .bra-download__icon svg { width: 100%; height: 100%; display: block; stroke: currentColor; fill: none; stroke-width: 1.5; }
 .bra-download__main { flex: 1; min-width: 0; }
@@ -2493,7 +2886,7 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
 /* ---------- Form states (pairs with .bra-field) ---------- */
 .bra-field.is-error .bra-field__input,
 .bra-field.is-error .bra-field__textarea,
-.bra-field.is-error .bra-field__select { border-bottom-color: #a5382c; }
+.bra-field.is-error .bra-field__select { border-color: #a5382c; border-bottom-color: #a5382c; background: color-mix(in oklch, #a5382c 5%, var(--bra-paper-lift)); }
 .bra-field__error { display: none; font-family: var(--bra-font); font-weight: 500; font-size: 12px; color: #a5382c; margin-top: 4px; }
 .bra-field.is-error .bra-field__error { display: block; }
 .bra-form-note { padding: var(--bra-s-3) var(--bra-s-4); border-left: 3px solid; font-family: var(--bra-font);
@@ -2546,25 +2939,39 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
 
 /* ---------- Back-to-top ---------- */
 .bra-totop { position: fixed; right: clamp(16px, 3vw, 32px); bottom: clamp(16px, 3vw, 32px); z-index: 40;
-  width: 48px; height: 48px; border-radius: 999px; border: 1.5px solid var(--bra-ink); background: var(--bra-paper);
-  color: var(--bra-ink); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; font-size: 18px;
+  width: 50px; height: 50px; border-radius: var(--bra-r); border: 2px solid var(--bra-ink); background: var(--bra-paper-lift);
+  box-shadow: var(--bra-lift-1);
+  color: var(--bra-ink); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; font-size: 17px;
   opacity: 0; transform: translateY(12px); pointer-events: none;
-  transition: opacity var(--bra-dur-base) var(--bra-ease), transform var(--bra-dur-base) var(--bra-ease), background var(--bra-dur-base) var(--bra-ease); }
+  transition: opacity var(--bra-dur-base) var(--bra-ease), transform var(--bra-dur-base) var(--bra-ease),
+              background var(--bra-dur-base) var(--bra-ease), box-shadow var(--bra-dur-base) var(--bra-ease); }
 .bra-totop.is-visible { opacity: 1; transform: none; pointer-events: auto; }
-.bra-totop:hover { background: var(--bra-ink); color: var(--bra-on-oak); }
+.bra-totop:hover { background: var(--bra-oak); border-color: var(--bra-oak); color: var(--bra-on-oak); box-shadow: var(--bra-lift-2); transform: translateY(-3px); }
+.bra-totop:active { transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { .bra-totop:hover { transform: none; } }
 
 /* ---------- Cookie / consent banner ---------- */
-.bra-cookie { position: fixed; left: clamp(16px, 3vw, 32px); right: clamp(16px, 3vw, 32px); bottom: clamp(16px, 3vw, 32px);
-  z-index: 60; max-width: 520px; background: var(--bra-ink); color: var(--bra-on-oak);
-  padding: var(--bra-s-3) var(--bra-s-4); display: flex; gap: var(--bra-s-3); align-items: center; flex-wrap: wrap;
+/* Consent card. Was a hard black slab dropped over the hero — the single
+   most expensive-looking pixel-region on the site covered by the cheapest.
+   Now a paper card with the system's own rule weight and button family. */
+.bra-cookie { position: fixed; left: clamp(16px, 3vw, 32px); bottom: clamp(16px, 3vw, 32px);
+  right: auto; z-index: 60; max-width: min(460px, calc(100vw - 2 * clamp(16px, 3vw, 32px)));
+  background: var(--bra-paper-lift); color: var(--bra-ink);
+  border: 2px solid var(--bra-ink); border-radius: var(--bra-r);
+  box-shadow: var(--bra-lift-2);
+  padding: var(--bra-s-3); display: flex; gap: var(--bra-s-3); align-items: center; flex-wrap: wrap;
   transform: translateY(160%); transition: transform var(--bra-dur-slow) var(--bra-ease); }
 .bra-cookie.is-in { transform: none; }
-.bra-cookie__text { flex: 1; min-width: 200px; font-family: var(--bra-font); font-size: 13px; line-height: 1.5; color: rgba(244,242,237,0.82); }
-.bra-cookie__text a { color: var(--bra-on-oak); }
-.bra-cookie__actions { display: flex; gap: var(--bra-s-2); }
-.bra-cookie__btn { font-family: var(--bra-font); font-weight: 600; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;
-  padding: 10px 16px; cursor: pointer; border: 1.5px solid rgba(244,242,237,0.4); background: none; color: var(--bra-on-oak); }
-.bra-cookie__btn--accept { background: var(--bra-on-oak); color: var(--bra-ink); border-color: var(--bra-on-oak); }
+.bra-cookie__text { flex: 1; min-width: 190px; font-family: var(--bra-font); font-size: 13px; line-height: 1.55; color: var(--bra-ink-2); }
+.bra-cookie__text a { color: var(--bra-ink); text-decoration: underline; text-underline-offset: 3px; }
+.bra-cookie__actions { display: flex; gap: var(--bra-s-1); }
+.bra-cookie__btn { font-family: var(--bra-font); font-weight: 700; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 11px 16px; cursor: pointer; border: 1.5px solid var(--bra-line-strong); border-radius: var(--bra-r);
+  background: none; color: var(--bra-ink);
+  transition: background var(--bra-dur-fast) var(--bra-ease), color var(--bra-dur-fast) var(--bra-ease), border-color var(--bra-dur-fast) var(--bra-ease); }
+.bra-cookie__btn:hover { border-color: var(--bra-ink); }
+.bra-cookie__btn--accept { background: var(--bra-oak); color: var(--bra-on-oak); border-color: var(--bra-oak); }
+.bra-cookie__btn--accept:hover { background: var(--bra-oak-deep); border-color: var(--bra-oak-deep); }
 
 /* ---------- Newsletter (inline email capture) ---------- */
 .bra-newsletter { display: flex; gap: var(--bra-s-2); align-items: stretch; max-width: 440px; border-bottom: 2px solid currentColor; }
@@ -2705,6 +3112,10 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
    page (studio.html) needed the same component.
    ============================================================ */
 /* Section header: hairline + eyebrow + meta tag */
+/* A 1px hairline under a 12px label is the weakest possible way to open a
+   section. The rule is now 2px ink (the monograph weight used everywhere
+   else in the system) with the label sitting directly under its left end,
+   so each section opens with an actual mark on the page. */
 .home-head {
   display: flex;
   justify-content: space-between;
@@ -2712,18 +3123,26 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
   gap: var(--bra-s-3);
   flex-wrap: wrap;
   padding-top: var(--bra-s-2);
-  border-top: 1px solid rgba(28,28,26,0.16);
-  margin-bottom: var(--bra-s-5);
+  border-top: 2px solid var(--bra-ink);
+  margin-bottom: var(--bra-s-4);
 }
-.bra-surface-oak .home-head { border-top-color: rgba(244,242,237,0.22); }
+.bra-surface-oak .home-head,
+.bra-surface-ink .home-head { border-top-color: var(--bra-on-oak); }
+.home-head .bra-caption { color: var(--bra-ink); }
+.bra-surface-oak .home-head .bra-caption,
+.bra-surface-ink .home-head .bra-caption { color: var(--bra-on-oak); }
 .home-head__meta {
   font-family: var(--bra-font);
-  font-weight: 500; font-size: 12px;
-  letter-spacing: 0.10em; text-transform: uppercase;
-  color: var(--bra-ink-2);
+  font-weight: 500; font-size: 11px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--bra-ink-mute);
   font-variant-numeric: tabular-nums;
 }
 .bra-surface-oak .home-head__meta { color: rgba(244,242,237,0.62); }
+/* When the meta is a link (e.g. "All cases →") it should behave like one */
+a.home-head__meta { transition: color var(--bra-dur-base) var(--bra-ease), letter-spacing var(--bra-dur-base) var(--bra-ease); }
+a.home-head__meta:hover { color: var(--bra-ink); letter-spacing: 0.16em; }
+.bra-surface-oak a.home-head__meta:hover { color: var(--bra-on-oak); }
 
 /* Image + text pair, vertically bonded */
 .home-pair {
@@ -2741,7 +3160,17 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
 
 .home-pair__media { opacity: 0; transition: opacity 900ms var(--bra-ease); display: flex; flex-direction: column; }
 .home-pair__media.is-in { opacity: 1; }
-.home-pair__fig { overflow: hidden; flex: none; min-height: 0; }
+.home-pair__fig {
+  position: relative;
+  overflow: hidden;
+  flex: none;
+  min-height: 0;
+  background-color: var(--bra-paper-sunk);
+  border-radius: var(--bra-r);
+  box-shadow: inset 0 0 0 1px var(--bra-line-strong);
+}
+.bra-surface-oak .home-pair__fig,
+.bra-surface-ink .home-pair__fig { box-shadow: inset 0 0 0 1px var(--bra-line-inv); }
 .home-pair__fig img {
   width: 100%; height: 100%; display: block;
   object-fit: cover;
@@ -2761,7 +3190,7 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
 .home-pair__cap {
   display: flex; justify-content: space-between; gap: var(--bra-s-3);
   margin-top: var(--bra-s-2); padding-top: var(--bra-s-2);
-  border-top: 1px solid rgba(28,28,26,0.16);
+  border-top: 1px solid var(--bra-line-strong);
 }
 .bra-surface-oak .home-pair__cap { border-top-color: rgba(244,242,237,0.22); }
 
@@ -2803,13 +3232,28 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
   align-items: center;
 }
 .bra-columns__media, .bra-columns__text { min-width: 0; }
+/* Same treatment as the card media: a hard 2px ink rectangle around a
+   photograph reads as a picture frame from a template, not as a plate in a
+   monograph. Held by a hairline instead, and the crop breathes on hover. */
 .bra-columns__media {
+  position: relative;
   margin: 0;
   overflow: hidden;
-  border: 2px solid var(--bra-ink);
+  border-radius: var(--bra-r);
+  box-shadow: inset 0 0 0 1px var(--bra-line-strong);
+  background-color: var(--bra-paper-sunk);
   aspect-ratio: 4 / 3;
 }
-.bra-columns__media img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.bra-surface-oak .bra-columns__media,
+.bra-surface-ink .bra-columns__media { box-shadow: inset 0 0 0 1px var(--bra-line-inv); }
+.bra-columns__media img {
+  width: 100%; height: 100%; display: block; object-fit: cover;
+  transition: transform 1600ms var(--bra-ease);
+}
+.bra-columns:hover .bra-columns__media img { transform: scale(1.03); }
+@media (prefers-reduced-motion: reduce) {
+  .bra-columns__media img, .bra-columns:hover .bra-columns__media img { transition: none; transform: none; }
+}
 .bra-columns__eyebrow { margin-bottom: var(--bra-s-2); }
 .bra-columns__title {
   font-family: var(--bra-font);
@@ -2840,6 +3284,9 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
   padding-left: var(--bra-s-5);
   border-left: 2px solid var(--bra-ink);
 }
+/* Body copy in a half-width column can afford a step up from the 16px
+   default — this is the reading column on every product page. */
+.bra-columns--ruled .bra-columns__text .bra-body { font-size: 17px; }
 
 @media (max-width: 820px) {
   .bra-columns, .bra-columns--reverse, .bra-columns--stacked, .bra-columns--ruled {
@@ -2863,15 +3310,60 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
   gap: var(--bra-s-4);
 }
 .bra-cardset__card { display: flex; flex-direction: column; min-width: 0; }
+/* The 2px ink box that used to frame every thumbnail made a row of cards
+   read as a contact sheet. The photograph now sits flush, held by a 1px
+   inset line, and the frame's job (containing the crop) is done by
+   overflow:hidden so the image can move inside it on hover. */
+/* The photo container carries a ground colour (rather than every `img`
+   carrying one) so a lazy image decoding doesn't flash white — which on a
+   cream page reads as a hole punched in the paper — while transparent art
+   like the logo mark keeps its transparency. */
 .bra-cardset__media {
+  position: relative;
   margin: 0 0 var(--bra-s-3);
   overflow: hidden;
-  border: 2px solid var(--bra-ink);
+  border-radius: var(--bra-r);
+  box-shadow: inset 0 0 0 1px var(--bra-line-strong);
+  background-color: var(--bra-paper-sunk);
   aspect-ratio: 4 / 3;
   flex-shrink: 0;
 }
-.bra-cardset__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.bra-cardset__content { min-width: 0; }
+.bra-cardset__media img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transform: scale(1.001);
+  transition: transform 1400ms var(--bra-ease), filter 900ms var(--bra-ease);
+  will-change: transform;
+}
+/* Warm shade that lifts off the photo as it zooms — the image doesn't just
+   move, it also comes up out of the paper. */
+.bra-cardset__media::after {
+  content: "";
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(48,34,18,0) 42%, rgba(48,34,18,0.30) 100%);
+  opacity: 0;
+  transition: opacity var(--bra-dur-slow) var(--bra-ease);
+}
+.bra-cardset__content {
+  min-width: 0;
+  padding-top: var(--bra-s-2);
+  border-top: 1px solid var(--bra-line);
+  transition: border-color var(--bra-dur-base) var(--bra-ease);
+  position: relative;
+}
+/* The rule under the media draws itself dark, left to right, on hover —
+   the same wipe grammar as the text links, so the whole page agrees on
+   what "this is live" looks like. */
+.bra-cardset__content::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: -1px;
+  height: 2px;
+  background: var(--bra-ink);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--bra-dur-base) var(--bra-ease);
+}
 .bra-cardset__eyebrow { margin-bottom: 6px; }
 .bra-cardset__title {
   font-family: var(--bra-font);
@@ -2881,12 +3373,43 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
   letter-spacing: -0.012em;
   text-wrap: balance;
   margin-bottom: 6px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--bra-s-2);
+}
+/* Arrow is generated, not authored — every card in the CMS gets the
+   affordance without a markup or content-schema change, and text-only
+   cards (no href) correctly don't get one. */
+a.bra-cardset__card .bra-cardset__title::after {
+  content: "↗";
+  font-size: 0.72em;
+  font-weight: 700;
+  opacity: 0.35;
+  transform: translate(-2px, 2px);
+  transition: transform var(--bra-dur-base) var(--bra-ease), opacity var(--bra-dur-base) var(--bra-ease);
 }
 .bra-cardset__body {
   font-family: var(--bra-font);
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.55;
   color: var(--bra-ink-2);
+}
+
+/* Hover / focus state — one block, so keyboard users get the identical
+   treatment mouse users do. */
+a.bra-cardset__card:hover .bra-cardset__media img,
+a.bra-cardset__card:focus-visible .bra-cardset__media img { transform: scale(1.055); }
+a.bra-cardset__card:hover .bra-cardset__media::after,
+a.bra-cardset__card:focus-visible .bra-cardset__media::after { opacity: 1; }
+a.bra-cardset__card:hover .bra-cardset__content::before,
+a.bra-cardset__card:focus-visible .bra-cardset__content::before { transform: scaleX(1); }
+a.bra-cardset__card:hover .bra-cardset__title::after,
+a.bra-cardset__card:focus-visible .bra-cardset__title::after { transform: translate(2px, -2px); opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .bra-cardset__media img { transition: none; }
+  a.bra-cardset__card:hover .bra-cardset__media img { transform: none; }
 }
 
 /* 02 — row: horizontal list, image left, content right */
@@ -2899,14 +3422,18 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
 .bra-cardset--overlay .bra-cardset__card {
   position: relative; overflow: hidden;
   aspect-ratio: 3 / 4;
-  border: 2px solid var(--bra-ink);
+  border-radius: var(--bra-r);
+  box-shadow: inset 0 0 0 1px var(--bra-line-strong);
 }
-.bra-cardset--overlay .bra-cardset__media { position: absolute; inset: 0; margin: 0; border: none; aspect-ratio: auto; }
+.bra-cardset--overlay .bra-cardset__media { position: absolute; inset: 0; margin: 0; border: none; box-shadow: none; border-radius: 0; aspect-ratio: auto; }
 .bra-cardset--overlay .bra-cardset__content {
   position: absolute; left: 0; right: 0; bottom: 0;
   padding: var(--bra-s-3);
-  background: linear-gradient(to top, rgba(28,28,26,0.6), rgba(28,28,26,0));
+  border-top: 0;
+  background: linear-gradient(to top, rgba(28,28,26,0.74) 0%, rgba(28,28,26,0.30) 42%, rgba(28,28,26,0) 78%);
 }
+.bra-cardset--overlay .bra-cardset__content::before { display: none; }
+.bra-cardset--overlay .bra-cardset__media::after { display: none; }
 .bra-cardset--overlay .bra-cardset__eyebrow { color: rgba(244,242,237,0.75); }
 .bra-cardset--overlay .bra-cardset__title,
 .bra-cardset--overlay .bra-cardset__body { color: var(--bra-on-oak); }
@@ -2916,8 +3443,17 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
 body[data-page="product-aisti"] .bra-cardset--overlay .bra-cardset__card { aspect-ratio: 1 / 1; }
 
 /* 04 — frame: minimal, no image, bordered text-only */
-.bra-cardset--frame .bra-cardset__card { border: 2px solid var(--bra-ink); padding: var(--bra-s-4); }
+.bra-cardset--frame .bra-cardset__card {
+  border: 2px solid var(--bra-ink);
+  border-radius: var(--bra-r);
+  padding: var(--bra-s-4);
+  background: var(--bra-paper-lift);
+  transition: transform var(--bra-dur-base) var(--bra-ease), box-shadow var(--bra-dur-base) var(--bra-ease);
+}
+.bra-cardset--frame a.bra-cardset__card:hover { transform: translateY(-3px); box-shadow: var(--bra-lift-2); }
 .bra-cardset--frame .bra-cardset__media { display: none; }
+.bra-cardset--frame .bra-cardset__content { border-top: 0; padding-top: 0; }
+.bra-cardset--frame .bra-cardset__content::before { display: none; }
 
 /* 4-up — a single clean row of exactly 4 (e.g. a fixed product range), rather
    than the base 3-column grid's 3+1 wrap. Only above the 2-up breakpoint. */
@@ -2940,16 +3476,19 @@ body[data-page="product-aisti"] .bra-cardset--overlay .bra-cardset__card { aspec
   grid-template-columns: repeat(3, 1fr);
 }
 .studio-stats__cell {
-  padding: var(--bra-s-3);
-  border-right: 1px solid rgba(244,242,237,0.20);
+  padding: var(--bra-s-3) var(--bra-s-3) var(--bra-s-3) 0;
+  border-right: 1px solid var(--bra-line-inv);
+  border-top: 2px solid var(--bra-on-oak);
+  margin-top: var(--bra-s-2);
 }
+.studio-stats__cell + .studio-stats__cell { padding-left: var(--bra-s-3); }
 .studio-stats__cell:last-child { border-right: none; }
 .studio-stats__num {
   font-family: var(--bra-font);
   font-weight: 300;
-  font-size: clamp(40px, 5vw, 72px);
-  line-height: 1;
-  letter-spacing: -0.022em;
+  font-size: clamp(46px, 6vw, 84px);
+  line-height: 0.95;
+  letter-spacing: -0.028em;
   font-variant-numeric: tabular-nums;
 }
 .studio-stats__label {
@@ -2966,6 +3505,30 @@ body[data-page="product-aisti"] .bra-cardset--overlay .bra-cardset__card { aspec
   .studio-stats__cell { border-right: none; border-bottom: 1px solid rgba(244,242,237,0.20); }
 }
 
+/* Closing CTA band — headline runs the full measure, the supporting copy
+   and the actions hang off it in a narrower right column. Replaces a 5/7
+   split whose left column held nothing but a 12px label, which left a
+   half-screen hole in the most important section on the page. */
+.cta-band {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: clamp(32px, 5vw, 90px);
+  align-items: end;
+}
+.cta-band__title {
+  color: var(--bra-on-oak);
+  font-size: clamp(38px, 6vw, 96px);
+  max-width: 14ch;
+  margin: 0;
+}
+.cta-band__aside { display: flex; flex-direction: column; gap: var(--bra-s-4); padding-bottom: 6px; }
+.cta-band__aside .bra-lede { max-width: 40ch; margin: 0; }
+.cta-band__actions { display: flex; gap: var(--bra-s-3); align-items: center; flex-wrap: wrap; }
+@media (max-width: 900px) {
+  .cta-band { grid-template-columns: 1fr; align-items: start; gap: var(--bra-s-4); }
+  .cta-band__title { max-width: 18ch; }
+}
+
 /* Asymmetric split (5fr/7fr) — CTA layouts */
 .split-tight {
   display: grid;
@@ -2976,17 +3539,25 @@ body[data-page="product-aisti"] .bra-cardset--overlay .bra-cardset__card { aspec
 @media (max-width: 720px) { .split-tight { grid-template-columns: 1fr; } }
 
 /* Numbered link row — case/project index list (projects.html + homepage teaser) */
+/* An index of projects is a list of the most valuable links on the site;
+   it earns real row presence — a heavier rule, a taller target, a warm wash
+   and a title that steps toward the reader on hover. */
 .project-row {
   display: grid;
   grid-template-columns: 60px 1.5fr 1fr 100px 40px;
   align-items: baseline;
   gap: var(--bra-s-3);
-  padding: var(--bra-s-3) 0;
-  border-bottom: 1px solid rgba(28,28,26,0.20);
-  transition: padding var(--bra-dur-base) var(--bra-ease);
+  padding: var(--bra-s-4) var(--bra-s-2);
+  margin: 0 calc(var(--bra-s-2) * -1);
+  border-bottom: 1px solid var(--bra-line-strong);
+  border-radius: var(--bra-r);
+  transition: padding var(--bra-dur-base) var(--bra-ease), background-color var(--bra-dur-fast) var(--bra-ease);
   text-decoration: none; color: inherit;
 }
-.project-row:hover { padding-left: var(--bra-s-3); }
+.project-row:first-child { border-top: 2px solid var(--bra-ink); }
+.project-row:hover { padding-left: var(--bra-s-4); background-color: color-mix(in oklch, var(--bra-oak) 6%, transparent); }
+.project-row:hover .project-row__title { color: var(--bra-oak-deep); }
+@media (prefers-reduced-motion: reduce) { .project-row:hover { padding-left: var(--bra-s-2); } }
 .project-row__num {
   font-family: var(--bra-font);
   font-weight: 500; font-size: 13px;
@@ -2998,6 +3569,7 @@ body[data-page="product-aisti"] .bra-cardset--overlay .bra-cardset__card { aspec
   font-size: clamp(20px, 1.8vw, 26px);
   letter-spacing: -0.012em;
   line-height: 1.05;
+  transition: color var(--bra-dur-base) var(--bra-ease);
 }
 .project-row__meta {
   font-family: var(--bra-font);

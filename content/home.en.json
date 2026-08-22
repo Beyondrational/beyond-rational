@@ -43,6 +43,7 @@
   },
   "process": {
     "section_label": "Mission statement",
+    "meta": "Why we exist",
     "title_l1": "Good for the room,",
     "title_l2_em": "good for the planet.",
     "body_p1": "Beyond Rational exists to make the conscious choice the easy choice. We curate acoustic and surface materials that perform to the standard architects expect, without the compromises that usually come with \"sustainable\" — no downgrade in finish, no downgrade in specification.",
@@ -51,6 +52,7 @@
   },
   "studio": {
     "section_label": "Who we are",
+    "meta": "Copenhagen · Jyväskylä",
     "title_l1": "Copenhagen office.",
     "title_l2_em": "Globally inspired.",
     "stat_founded": "CPH",
@@ -86,6 +88,7 @@
   },
   "cta": {
     "section_label": "Get in touch",
+    "meta": "Copenhagen",
     "title_l1": "Send the brief.",
     "title_l2_em": "We'll read it carefully.",
     "body": "We answer Monday to Friday and work directly with architects, designers, and property owners.",

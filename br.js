@@ -672,10 +672,20 @@
     });
   }
 
-  /* ---------- Nav theme switch over dark sections ---------- */
+  /* ---------- Nav theme switch over dark sections + condense on scroll ----------
+     Two independent states on the same element: `is-dark` tracks what the bar
+     is currently flying over, `is-scrolled` tracks whether it has left the top
+     of the page at all (that one is what turns the transparent bar into a
+     blurred, hairlined strip). Both are read in the same rAF-throttled pass so
+     a fast scroll can't get one without the other. */
   const nav = document.querySelector('.bra-nav');
-  const darkSections = document.querySelectorAll('.bra-vault, .bra-surface-oak, .bra-surface-ink, .br-logo-hero, .home-hero');
-  if (nav && darkSections.length) {
+  if (nav) {
+    /* `[data-on-dark]` is the generic opt-in — a page with its own dark
+       component (products.html's sticky deck, for one) can flag it without
+       the class list here having to learn about every page's local CSS. */
+    const darkSections = document.querySelectorAll('.bra-vault, .bra-surface-oak, .bra-surface-ink, .br-logo-hero, .home-hero, [data-on-dark]');
+    const CONDENSE_AT = 24;
+    let navTicking = false;
     const update = () => {
       const top = 80;
       let isDark = false;
@@ -684,8 +694,13 @@
         if (r.top < top && r.bottom > top) isDark = true;
       });
       nav.classList.toggle('is-dark', isDark);
+      nav.classList.toggle('is-scrolled', window.scrollY > CONDENSE_AT);
+      navTicking = false;
     };
-    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('scroll', () => {
+      if (!navTicking) { requestAnimationFrame(update); navTicking = true; }
+    }, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
     update();
   }
 
