@@ -3000,6 +3000,210 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
   text-transform: uppercase; color: var(--bra-ink-2); }
 .bra-surface-oak .bra-testimonial__role, .bra-surface-ink .bra-testimonial__role { color: rgba(244,242,237,0.65); }
 
+/* ============================================================
+   Legal document (.bra-doc)
+   ------------------------------------------------------------
+   Promoted out of privatlivspolitik.html / betalingsbetingelser.html,
+   which carried the same `.legal` block byte for byte. A 16-clause
+   terms of sale is a document, not a page of prose: it needs an index
+   you can steer by, clause numbers that hang out of the reading column
+   so the text stays flush, and a print stylesheet — these get printed
+   and attached to orders far more often than they get read on screen.
+   ============================================================ */
+.bra-doc {
+  display: grid;
+  grid-template-columns: minmax(0, 210px) minmax(0, 66ch);
+  gap: clamp(32px, 6vw, 96px);
+  align-items: start;
+}
+
+/* ---- index rail ---- */
+.bra-doc__index { position: sticky; top: 104px; }
+.bra-doc__index-head {
+  font-family: var(--bra-font);
+  font-weight: 700; font-size: 11px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--bra-ink-2);
+  padding-bottom: var(--bra-s-2);
+  border-bottom: 2px solid var(--bra-ink);
+}
+.bra-doc__index ol { list-style: none; margin: 0; padding: 0; counter-reset: doc; }
+.bra-doc__index li { margin: 0; }
+.bra-doc__index a {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 8px;
+  padding: 7px 0;
+  font-family: var(--bra-font);
+  font-weight: 500; font-size: 13px;
+  line-height: 1.3;
+  color: var(--bra-ink-mute);
+  border-bottom: 1px solid var(--bra-line);
+  transition: color var(--bra-dur-fast) var(--bra-ease), padding-left var(--bra-dur-base) var(--bra-ease);
+}
+.bra-doc__index a::before {
+  counter-increment: doc;
+  content: counter(doc);
+  font-variant-numeric: tabular-nums;
+  color: var(--bra-oak-warm);
+}
+.bra-doc__index a:hover { color: var(--bra-ink); padding-left: 5px; }
+.bra-doc__index a.is-active { color: var(--bra-ink); font-weight: 700; }
+.bra-doc__index a.is-active::before { color: var(--bra-oak); }
+
+/* ---- document body ---- */
+.bra-doc__body { min-width: 0; }
+.bra-doc__body > section + section { margin-top: var(--bra-s-5); }
+.bra-doc__body h2 {
+  font-family: var(--bra-font);
+  font-weight: 500;
+  font-size: clamp(21px, 2vw, 28px);
+  letter-spacing: -0.014em;
+  line-height: 1.15;
+  padding-top: var(--bra-s-2);
+  border-top: 2px solid var(--bra-ink);
+  margin-bottom: var(--bra-s-3);
+  display: grid;
+  /* narrower than the clause rail: at 28px the same 2.4em opened a gap you
+     could park a car in between the numeral and the title */
+  grid-template-columns: 1.35em 1fr;
+  gap: 10px;
+}
+.bra-doc__body h2 .n { font-variant-numeric: tabular-nums; color: var(--bra-oak); }
+.bra-doc__body h3 {
+  font-family: var(--bra-font); font-weight: 700; font-size: 15px;
+  letter-spacing: 0.02em; margin: var(--bra-s-3) 0 var(--bra-s-1);
+}
+.bra-doc__body p {
+  font-size: 17px;
+  line-height: 1.68;
+  color: var(--bra-ink-2);
+  margin-bottom: var(--bra-s-2);
+  text-wrap: pretty;
+}
+/* Clause numbers hang in the margin instead of interrupting the first
+   line, which is what makes a numbered contract scannable. */
+.bra-doc__clause { display: grid; grid-template-columns: 2.4em 1fr; gap: 6px; }
+.bra-doc__clause .clause-no {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 2.1;
+  color: var(--bra-oak);
+  font-variant-numeric: tabular-nums;
+}
+.bra-doc__body ul { list-style: none; margin: 0 0 var(--bra-s-3); padding: 0; }
+.bra-doc__body li {
+  font-size: 17px; line-height: 1.6; color: var(--bra-ink-2);
+  padding: 9px 0 9px 22px; position: relative;
+  border-bottom: 1px solid var(--bra-line);
+}
+.bra-doc__body li::before {
+  content: ""; position: absolute; left: 0; top: 18px;
+  width: 9px; height: 2px; background: var(--bra-oak-warm);
+}
+.bra-doc__body a { color: var(--bra-ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.bra-doc__body a:hover { text-decoration-color: var(--bra-oak); text-decoration-thickness: 2px; }
+.bra-doc__body strong { color: var(--bra-ink); font-weight: 700; }
+.bra-doc__body address { font-style: normal; }
+
+/* ---- identity card: who the document is from ---- */
+.bra-doc__card {
+  background: var(--bra-paper-lift);
+  border: 2px solid var(--bra-ink);
+  border-radius: var(--bra-r);
+  padding: var(--bra-s-3) var(--bra-s-4);
+  box-shadow: var(--bra-lift-1);
+}
+.bra-doc__card dl { display: grid; grid-template-columns: auto 1fr; gap: 10px var(--bra-s-3); margin: 0; }
+.bra-doc__card dt {
+  font-family: var(--bra-font); font-weight: 700; font-size: 11px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--bra-ink-mute);
+  align-self: baseline; padding-top: 3px;
+}
+.bra-doc__card dd { margin: 0; font-size: 16px; color: var(--bra-ink); font-variant-numeric: tabular-nums; }
+/* The e-mail and phone links here are the point of the card, not incidental
+   links inside a sentence — so the inline exception to WCAG 2.5.8 does not
+   apply and they get a real 24px target. */
+.bra-doc__card dd a { display: inline-flex; align-items: center; min-height: 24px; }
+
+/* ---- document masthead: title + the facts that date it ---- */
+.bra-doc-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  border-top: 2px solid var(--bra-ink);
+  border-bottom: 1px solid var(--bra-line-strong);
+}
+.bra-doc-meta > div { padding: var(--bra-s-2) var(--bra-s-3) var(--bra-s-2) 0; }
+.bra-doc-meta dt {
+  font-family: var(--bra-font); font-weight: 700; font-size: 10px;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--bra-ink-mute);
+}
+.bra-doc-meta dd {
+  margin: 5px 0 0; font-family: var(--bra-font); font-weight: 500;
+  font-size: 15px; color: var(--bra-ink); font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 900px) {
+  .bra-doc { grid-template-columns: minmax(0, 1fr); gap: var(--bra-s-4); }
+  /* The rail becomes a disclosure at the top rather than 16 links the
+     reader has to scroll past to reach clause 1. */
+  .bra-doc__index { position: static; }
+  .bra-doc__index-wrap { border: 2px solid var(--bra-ink); border-radius: var(--bra-r); padding: var(--bra-s-2) var(--bra-s-3); }
+  .bra-doc__index-wrap > summary {
+    font-family: var(--bra-font); font-weight: 700; font-size: 11px;
+    letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer;
+    padding: 8px 0; min-height: 24px;
+    display: flex; align-items: center; justify-content: space-between; gap: var(--bra-s-2);
+  }
+  .bra-doc__index-wrap > summary::after {
+    content: "+"; font-size: 15px; line-height: 1; color: var(--bra-oak);
+  }
+  .bra-doc__index-wrap[open] > summary::after { content: "–"; }
+  .bra-doc__index-wrap[open] > summary { border-bottom: 1px solid var(--bra-line); margin-bottom: var(--bra-s-1); }
+  .bra-doc__index-head { display: none; }
+}
+@media (min-width: 901px) {
+  /* The disclosure is meaningless at this width, so the summary goes away
+     and the list simply shows. The markup ships `open` and br.js collapses
+     it on small viewports — NOT the other way round: forcing a closed
+     <details> visible with `display` renders the links but leaves them out
+     of the accessibility tree entirely, so they exist for mouse users and
+     vanish for everyone else. Verified with Accessibility.getFullAXTree. */
+  .bra-doc__index-wrap > summary { display: none; }
+}
+
+@media print {
+  .bra-nav, .bra-footer, .bra-doc__index, .bra-cookie, .bra-totop,
+  .bra-scroll-progress, .bra-cursor, .br-loader, .bra-skip, .bra-nav-spacer { display: none !important; }
+  .bra::after { display: none !important; }
+  .bra-doc { display: block; }
+  .bra { background: #fff; color: #000; }
+  .bra-doc__body p, .bra-doc__body li { color: #1a1a1a; font-size: 10.5pt; line-height: 1.5; }
+  .bra-doc__body h2 { font-size: 13pt; break-after: avoid; }
+  .bra-doc__body section { break-inside: auto; }
+  .bra-doc__clause { break-inside: avoid; }
+  .bra-doc__card, .bra-doc-meta { border-color: #000; box-shadow: none; background: none; }
+  /* A printed contract that hides its own URLs is useless as a reference */
+  .bra-doc__body a::after { content: " (" attr(href) ")"; font-size: 9pt; word-break: break-all; }
+  /* …but a mailto:/tel: link already prints its own address as the label */
+  .bra-doc__body a[href^="#"]::after,
+  .bra-doc__body a[href^="mailto:"]::after,
+  .bra-doc__body a[href^="tel:"]::after { content: ""; }
+  /* Scroll-driven reveals never resolve on a print render, so the title
+     prints half-faded unless every animated element is forced to its
+     end state. */
+  .bra-reveal-line, .bra-reveal-char, .home-reveal, .bra-stagger-item, .home-pair__media {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  /* A 116px display line eats half of page one for no benefit on paper */
+  .bra-mega, .home-hero__title { font-size: 24pt !important; line-height: 1.1 !important; }
+  .bra-lede { font-size: 11pt !important; }
+  @page { margin: 18mm 16mm; }
+}
+
 /* ---------- Sticky anchor sub-nav ---------- */
 .bra-subnav { position: sticky; top: 0; z-index: 9; display: flex; gap: var(--bra-s-3); flex-wrap: wrap;
   padding: 14px var(--bra-pad-x);

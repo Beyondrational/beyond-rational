@@ -979,6 +979,25 @@
     map.forEach(function (m) { io.observe(m.sec); });
   });
 
+  /* ---- Legal document index: collapse on small viewports ----
+     The markup ships <details open> so the index is always in the DOM and in
+     the accessibility tree. On a phone, sixteen clause links ahead of clause
+     one is a wall, so collapse it there. Doing it this way round means the
+     no-JS fallback is "open and fully readable" rather than "invisible to
+     assistive technology". */
+  var docIndex = document.querySelector('.bra-doc__index-wrap');
+  if (docIndex) {
+    var narrow = window.matchMedia('(max-width: 900px)');
+    var syncIndex = function () { docIndex.open = !narrow.matches; };
+    syncIndex();
+    narrow.addEventListener('change', syncIndex);
+    // Jumping to a clause on a phone should put the reader at the clause,
+    // not leave the index sitting open over it.
+    docIndex.addEventListener('click', function (e) {
+      if (narrow.matches && e.target.closest('a[href^="#"]')) docIndex.open = false;
+    });
+  }
+
   /* ---- Back-to-top (auto-injected once) ---- */
   var totop = document.querySelector('.bra-totop');
   if (!totop) {
