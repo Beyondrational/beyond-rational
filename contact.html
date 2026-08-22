@@ -24,10 +24,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;500;700;900&family=Archivo+Black&display=swap">
-<link rel="stylesheet" href="br.css?v=52">
+<link rel="stylesheet" href="br.css?v=53">
 <script>if(sessionStorage.getItem("brLoaderShown")){document.documentElement.classList.add("br-loader-skip")}</script>
 </head>
 <body class="bra" data-page="contact">
+
+<a class="bra-skip" href="#main">Skip to content</a>
 
 <!-- Page loader (CLOU-style curtain, once per session) -->
 <div class="br-loader" aria-hidden="true">
@@ -58,6 +60,8 @@
     <button type="button" class="bra-nav__lang" data-lang-toggle>DA</button>
   </div>
 </nav>
+
+<main id="main">
 
 <!-- ===== Cinematic hero ===== -->
 <section class="home-hero home-hero--sub" data-on-dark>
@@ -374,6 +378,8 @@
   </div>
 </section>
 
+</main>
+
 <footer class="bra-footer">
   <div class="bra-footer__grid bra-stagger" data-stagger>
     <div class="bra-footer__brand bra-stagger-item">
@@ -383,7 +389,7 @@
       </p>
     </div>
     <div class="bra-stagger-item">
-      <h4 data-content="footer.product_heading">Product</h4>
+      <h2 class="bra-footer__col-head" data-content="footer.product_heading">Product</h2>
       <ul>
         <li><a href="product-aisti.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.aisti_label">Aisti® Acoustic Tile</a></li>
         <li><a href="product-wuud.html" class="bra-cta" style="border: none; padding: 0;">Wuud</a></li>
@@ -392,13 +398,13 @@
       </ul>
     </div>
     <div class="bra-stagger-item">
-      <h4 data-content="footer.office_heading">Office</h4>
+      <h2 class="bra-footer__col-head" data-content="footer.office_heading">Office</h2>
       <ul>
         <li><a href="projects.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.projects_label">Projects</a></li>
       </ul>
     </div>
     <div class="bra-stagger-item">
-      <h4 data-content="footer.contact_heading">Contact</h4>
+      <h2 class="bra-footer__col-head" data-content="footer.contact_heading">Contact</h2>
       <ul>
         <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;"><span data-content="footer.email">hello@beyondrational.com</span></a></li>
         <li><span class="bra-body" style="font-size: 14px;" data-content="footer.address">Firskovvej 36, 2800 Kongens Lyngby</span></li>

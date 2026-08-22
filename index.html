@@ -24,77 +24,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;500;700;900&family=Archivo+Black&display=swap">
-<link rel="stylesheet" href="br.css?v=52">
+<link rel="stylesheet" href="br.css?v=53">
 <script>if(sessionStorage.getItem("brLoaderShown")){document.documentElement.classList.add("br-loader-skip")}</script>
-<style>
-  /* =====================================================
-     Landing hero — full-bleed cinematic image
-     ===================================================== */
-  .home-hero {
-    position: relative;
-    overflow: hidden;
-    isolation: isolate;
-    color: var(--bra-on-oak);
-  }
-  .home-hero__bg { position: absolute; inset: 0; z-index: -2; }
-  .home-hero__bg img {
-    width: 100%; height: 100%;
-    object-fit: cover; display: block;
-    transform: scale(1.08);
-    animation: home-hero-pan 18s var(--bra-ease) forwards;
-  }
-  @keyframes home-hero-pan { to { transform: scale(1); } }
-  .home-hero__bg::after {
-    content: ""; position: absolute; inset: 0;
-    background: linear-gradient(180deg,
-      rgba(18,16,14,0.58) 0%,
-      rgba(18,16,14,0.20) 40%,
-      rgba(18,16,14,0.84) 100%);
-  }
-  .home-hero__grain {
-    position: absolute; inset: 0; z-index: -1;
-    pointer-events: none;
-    opacity: 0.07; mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-  }
-  .home-hero__inner {
-    position: relative; z-index: 1;
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    gap: var(--bra-s-4);
-    padding-top: 104px;
-    padding-bottom: var(--bra-s-4);
-  }
-  .home-hero .bra-caption,
-  .home-hero .bra-micro { color: rgba(244,242,237,0.66); }
-  .home-hero__center { align-self: end; }
-  .home-hero__title {
-    font-family: var(--bra-font);
-    font-weight: 300;
-    font-size: clamp(46px, 7.4vw, 116px);
-    line-height: 1.00;
-    letter-spacing: -0.026em;
-    max-width: 17ch;
-    text-wrap: balance;
-  }
-  .home-hero__title em { font-style: normal; font-weight: 500; }
-  .home-hero__sub {
-    margin-top: var(--bra-s-3);
-    max-width: 46ch;
-    font-size: clamp(16px, 1.3vw, 19px);
-    line-height: 1.55;
-    color: rgba(244,242,237,0.84);
-  }
-  .home-hero__top, .home-hero__foot {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: var(--bra-s-3);
-    flex-wrap: wrap;
-  }
-  .home-hero__foot { align-items: center; }
-</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -115,6 +46,8 @@
 </script>
 </head>
 <body class="bra" data-page="home">
+
+<a class="bra-skip" href="#main">Skip to content</a>
 
 <!-- Page loader (CLOU-style curtain, once per session) -->
 <div class="br-loader" aria-hidden="true">
@@ -143,6 +76,8 @@
     <button type="button" class="bra-nav__lang" data-lang-toggle>DA</button>
   </div>
 </nav>
+
+<main id="main">
 
 <!-- =====================================================
      1 / HERO — full-bleed cinematic image
@@ -173,14 +108,12 @@
 
     <footer class="home-hero__foot">
       <div style="display: flex; gap: var(--bra-s-3); align-items: center; flex-wrap: wrap;">
-        <a href="products.html" style="text-decoration: none;">
-          <button class="bra-btn-mag bra-btn-mag--inv bra-btn-mag--solid" data-magnetic>
+        <a href="products.html" class="bra-btn-mag bra-btn-mag--inv bra-btn-mag--solid" data-magnetic>
             <span class="bra-swap">
               <span class="bra-swap__a" data-content="hero.cta_primary">See our solutions</span>
               <span class="bra-swap__b" data-content="hero.cta_primary" aria-hidden="true">See our solutions</span>
             </span>
-          </button>
-        </a>
+          </a>
         <a href="contact.html" class="bra-cta" style="color: var(--bra-on-oak);" data-content="hero.cta_secondary">Contact</a>
       </div>
       <span class="bra-micro bra-scrollcue"><span data-content="misc.scroll_hint">Scroll ↓</span><span class="bra-scrollcue__line" aria-hidden="true"></span></span>
@@ -193,7 +126,7 @@
      ===================================================== -->
 <section class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-5);">
   <div class="home-head">
-    <p class="bra-caption" style="margin: 0;" data-content="range.section_label">What we offer</p>
+    <h2 class="bra-caption" style="margin: 0;" data-content="range.section_label">What we offer</h2>
     <span class="home-head__meta" data-content="range.meta">Beyond Rational</span>
   </div>
 
@@ -226,7 +159,7 @@
      ===================================================== -->
 <section class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-5);">
   <div class="home-head">
-    <p class="bra-caption" style="margin: 0;" data-content="process.section_label">Mission statement</p>
+    <h2 class="bra-caption" style="margin: 0;" data-content="process.section_label">Mission statement</h2>
     <span class="home-head__meta" data-content="process.meta">Why we exist</span>
   </div>
 
@@ -266,7 +199,7 @@
 <section class="bra-surface-oak">
   <div class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-5);">
     <div class="home-head">
-      <p class="bra-caption" style="margin: 0;" data-content="studio.section_label">Who we are</p>
+      <h2 class="bra-caption" style="margin: 0;" data-content="studio.section_label">Who we are</h2>
       <span class="home-head__meta" data-content="studio.meta">Copenhagen · Jyväskylä</span>
     </div>
 
@@ -318,7 +251,7 @@
      ===================================================== -->
 <section class="bra-container" style="padding-top: var(--bra-s-5); padding-bottom: var(--bra-s-5);">
   <div class="home-head">
-    <p class="bra-caption" style="margin: 0;" data-content="cases.section_label">Cases</p>
+    <h2 class="bra-caption" style="margin: 0;" data-content="cases.section_label">Cases</h2>
     <a href="projects.html" class="home-head__meta" style="text-decoration: none;" data-content="cases.link_label">All cases →</a>
   </div>
 
@@ -341,7 +274,7 @@
 <section class="bra-surface-oak">
   <div class="bra-container bra-section">
     <div class="home-head">
-      <p class="bra-caption" style="margin: 0;" data-content="cta.section_label">Get in touch</p>
+      <h2 class="bra-caption" style="margin: 0;" data-content="cta.section_label">Get in touch</h2>
       <span class="home-head__meta" data-content="cta.meta">Copenhagen</span>
     </div>
 
@@ -355,20 +288,20 @@
           We answer Monday to Friday and work directly with architects, designers, and property owners.
         </p>
         <div class="cta-band__actions">
-          <a href="contact.html" style="text-decoration: none;">
-            <button class="bra-btn-mag bra-btn-mag--inv bra-btn-mag--solid" data-magnetic>
+          <a href="contact.html" class="bra-btn-mag bra-btn-mag--inv bra-btn-mag--solid" data-magnetic>
               <span class="bra-swap">
                 <span class="bra-swap__a">Get in touch</span>
                 <span class="bra-swap__b" aria-hidden="true">Get in touch</span>
               </span>
-            </button>
-          </a>
+            </a>
           <a href="mailto:hello@beyondrational.com" class="bra-cta" style="color: var(--bra-on-oak);" data-content="cta.email">hello@beyondrational.com</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ===== Shared footer ===== -->
 <footer class="bra-footer">
@@ -380,7 +313,7 @@
       </p>
     </div>
     <div class="bra-stagger-item">
-      <h4 data-content="footer.product_heading">Product</h4>
+      <h2 class="bra-footer__col-head" data-content="footer.product_heading">Product</h2>
       <ul>
         <li><a href="product-aisti.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.aisti_label">Aisti® Acoustic Tile</a></li>
         <li><a href="product-wuud.html" class="bra-cta" style="border: none; padding: 0;">Wuud</a></li>
@@ -389,13 +322,13 @@
       </ul>
     </div>
     <div class="bra-stagger-item">
-      <h4 data-content="footer.office_heading">Office</h4>
+      <h2 class="bra-footer__col-head" data-content="footer.office_heading">Office</h2>
       <ul>
         <li><a href="projects.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.projects_label">Projects</a></li>
       </ul>
     </div>
     <div class="bra-stagger-item">
-      <h4 data-content="footer.contact_heading">Contact</h4>
+      <h2 class="bra-footer__col-head" data-content="footer.contact_heading">Contact</h2>
       <ul>
         <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;"><span data-content="footer.email">hello@beyondrational.com</span></a></li>
         <li><span class="bra-body" style="font-size: 14px;" data-content="footer.address">Firskovvej 36, 2800 Kongens Lyngby</span></li>

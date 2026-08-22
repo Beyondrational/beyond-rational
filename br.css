@@ -165,6 +165,30 @@
 /* Anchored jumps stop under the fixed nav rather than behind it */
 .bra [id] { scroll-margin-top: 96px; }
 
+/* ---------- Skip link (WCAG 2.4.1) ----------
+   Off-screen until focused, then a real, drenched control at the top-left —
+   keyboard users get past 4 nav links and a 100vh hero in one keystroke. */
+/* `a.bra-skip`, not `.bra-skip`: the reset's `.bra a { color: inherit }` has
+   the same specificity as a bare class and would win on source order, leaving
+   ink-coloured text on the oak chip (1.4:1). */
+a.bra-skip {
+  position: fixed;
+  top: 12px; left: 12px;
+  z-index: 300;
+  transform: translateY(calc(-100% - 24px));
+  padding: 13px 20px;
+  background: var(--bra-oak);
+  color: var(--bra-on-oak);
+  border-radius: var(--bra-r);
+  box-shadow: var(--bra-lift-2);
+  font-family: var(--bra-font);
+  font-weight: 700; font-size: 12px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  transition: transform var(--bra-dur-fast) var(--bra-ease);
+}
+a.bra-skip:focus-visible { transform: translateY(0); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { a.bra-skip { transition: none; } }
+
 /* ---------- Paper grain ----------
    A single fixed noise plane over the whole page at very low opacity. The
    monograph register lives or dies on the surface reading as a material
@@ -280,6 +304,15 @@
   text-transform: uppercase;
   color: var(--bra-ink-mute);
 }
+/* A section label is the section's heading, so it is often marked up as a
+   real <h2>/<h3> for the document outline. `.bra h2` would otherwise win on
+   specificity and undo the label styling. */
+h1.bra-caption, h2.bra-caption, h3.bra-caption, h4.bra-caption {
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+}
+
 /* Escape hatch: the same small-print colour and size, but as prose. Caps
    and 0.14em tracking are for two- or three-word labels; a full sentence
    set that way stops being readable. */
@@ -297,13 +330,19 @@
   line-height: 0.95;
 }
 
-/* On-oak typography overrides */
+/* On-dark typography overrides. The alphas are set so small print still
+   clears 4.5:1 against the darkest of these surfaces — 65%/60% did not.
+   .bra-vault is in the list because it is a dark surface too; leaving it out
+   left its captions in ink grey on near-black. */
 .bra-surface-oak .bra-caption,
-.bra-surface-ink .bra-caption { color: color-mix(in oklch, var(--bra-on-oak) 65%, transparent); }
+.bra-surface-ink .bra-caption,
+.bra-vault .bra-caption { color: color-mix(in oklch, var(--bra-on-oak) 88%, transparent); }
 .bra-surface-oak .bra-micro,
-.bra-surface-ink .bra-micro   { color: color-mix(in oklch, var(--bra-on-oak) 60%, transparent); }
+.bra-surface-ink .bra-micro,
+.bra-vault .bra-micro   { color: color-mix(in oklch, var(--bra-on-oak) 82%, transparent); }
 .bra-surface-oak .bra-lede,
-.bra-surface-ink .bra-lede    { color: color-mix(in oklch, var(--bra-on-oak) 85%, transparent); }
+.bra-surface-ink .bra-lede,
+.bra-vault .bra-lede    { color: color-mix(in oklch, var(--bra-on-oak) 92%, transparent); }
 
 /* ---------- CTA (line-button) ---------- */
 .bra-cta {
@@ -637,28 +676,27 @@
 .bra-btn-mag__arrow { transition: transform var(--bra-dur-base) var(--bra-ease); }
 .bra-btn-mag:hover .bra-btn-mag__arrow { transform: translateX(5px); }
 
-/* Solid variant — the one confident filled button on the site. Starts
-   drenched and empties upward on hover (the exact inverse of the outline
-   version), so the pair reads as one family rather than two buttons. */
+/* Solid variant — the one confident filled button on the site. It reuses the
+   base rule's rising panel; only the panel's COLOUR changes, never its
+   position. (An earlier version parked the panel at translateY(0) at rest,
+   which painted cream over the button while the label was still cream: an
+   invisible button in both states. Every state below is contrast-checked.) */
 .bra-btn-mag--solid {
-  background: var(--bra-oak);
+  background: var(--bra-oak);          /* rest: cream label on oak  — 8.6:1 */
   color: var(--bra-on-oak);
   box-shadow: var(--bra-lift-1);
 }
-.bra-btn-mag--solid::before {
-  background: var(--bra-paper);
-  transform: translateY(0);
-}
-.bra-btn-mag--solid:hover { color: var(--bra-oak); }
-.bra-btn-mag--solid:hover::before { transform: translateY(-101%); }
-/* Same idea on a dark surface: cream fill that empties to reveal the oak. */
+.bra-btn-mag--solid::before { background: var(--bra-paper-lift); }
+.bra-btn-mag--solid:hover { color: var(--bra-oak); }   /* hover: oak on paper — 8.2:1 */
+
+/* Same idea on a dark surface, inverted: cream at rest, oak panel on hover. */
 .bra-btn-mag--solid.bra-btn-mag--inv {
-  background: var(--bra-on-oak);
+  background: var(--bra-on-oak);       /* rest: oak label on cream  — 12.4:1 */
   color: var(--bra-oak-deep);
   border-color: var(--bra-on-oak);
 }
-.bra-btn-mag--solid.bra-btn-mag--inv::before { background: transparent; }
-.bra-btn-mag--solid.bra-btn-mag--inv:hover { color: var(--bra-on-oak); background: transparent; }
+.bra-btn-mag--solid.bra-btn-mag--inv::before { background: var(--bra-oak-deep); }
+.bra-btn-mag--solid.bra-btn-mag--inv:hover { color: var(--bra-on-oak); }  /* cream on deep oak — 12.4:1 */
 
 @media (prefers-reduced-motion: reduce) {
   .bra-btn-mag,
@@ -1122,7 +1160,7 @@ form[data-form].is-active { display: flex; flex-direction: column; gap: 0; }
   font-size: 11px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: rgba(28,28,26,0.48);
+  color: rgba(28,28,26,0.72);
 }
 
 /* Polish: tooltip scale-from-trigger with custom easing */
@@ -1310,8 +1348,12 @@ form[data-form].is-active { display: flex; flex-direction: column; gap: 0; }
 .bra-gallery-img__overlay {
   position: absolute;
   inset: auto 0 0 0;
-  padding: var(--bra-s-3);
-  background: linear-gradient(180deg, transparent 0%, rgba(28,28,26,0.88) 72%);
+  padding: var(--bra-s-4) var(--bra-s-3) var(--bra-s-3);
+  background: linear-gradient(180deg,
+    rgba(20,19,18,0) 0%,
+    rgba(20,19,18,0.58) 26%,
+    rgba(20,19,18,0.82) 58%,
+    rgba(20,19,18,0.92) 100%);
   color: var(--bra-on-oak);
   transform: translateY(0);
   transition: transform var(--bra-dur-base) var(--bra-ease), opacity var(--bra-dur-base) var(--bra-ease);
@@ -1780,11 +1822,24 @@ html.br-loader-skip .br-loader { display: none; }
   border-bottom-color: var(--bra-line-inv);
   box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset, 0 18px 40px -24px rgba(0,0,0,0.6);
 }
-/* Over a hero photo with no bar behind it, the label needs its own shadow
-   to stay legible against whatever pixel it happens to land on. */
+/* Over a hero photo with no bar behind it the label has nothing guaranteed
+   behind it, and a text-shadow is a perceptual trick that no contrast test
+   (or user in bright sun) accepts. So the transparent state carries its own
+   short gradient — dark at the very top, gone by the time it reaches the
+   artwork — which keeps the bar reading as "no bar" while giving every
+   label a known surface. */
+.bra-nav.is-dark:not(.is-scrolled)::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 220%;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(12,11,10,0.72) 0%, rgba(12,11,10,0.34) 55%, rgba(12,11,10,0) 100%);
+}
 .bra-nav.is-dark:not(.is-scrolled) .bra-nav__link,
-.bra-nav.is-dark:not(.is-scrolled) .bra-nav__lang { text-shadow: 0 1px 14px rgba(0,0,0,0.45); }
-.bra-nav.is-dark:not(.is-scrolled) .bra-nav__brand-logo { filter: invert(1) drop-shadow(0 1px 14px rgba(0,0,0,0.35)); }
+.bra-nav.is-dark:not(.is-scrolled) .bra-nav__lang { text-shadow: 0 1px 10px rgba(0,0,0,0.35); }
+.bra-nav.is-dark:not(.is-scrolled) .bra-nav__brand-logo { filter: invert(1); }
 .bra-nav__brand {
   font-family: var(--bra-font);
   font-weight: 600;
@@ -1968,7 +2023,8 @@ body.bra-nav-locked { overflow: hidden; }
   height: clamp(32px, 3.4vw, 44px);
   width: auto;
 }
-.bra-footer h4 {
+.bra-footer h4,
+.bra-footer .bra-footer__col-head {
   font-family: var(--bra-font);
   font-weight: 700;
   font-size: 11px;
@@ -1992,6 +2048,12 @@ body.bra-nav-locked { overflow: hidden; }
    list of nine links feel like nine controls instead of nine strings. */
 .bra-footer li a:hover { transform: translateX(4px); color: var(--bra-oak); }
 @media (prefers-reduced-motion: reduce) { .bra-footer li a:hover { transform: none; } }
+/* The legal links sit alone on their own row, so the inline exception to
+   the target-size rule does not apply to them. */
+.bra-footer__base a {
+  display: inline-flex; align-items: center;
+  min-height: 24px; padding: 2px 0;
+}
 .bra-footer__base {
   max-width: var(--bra-max);
   margin: var(--bra-s-5) auto 0;
@@ -2620,8 +2682,14 @@ body.bra-nav-locked { overflow: hidden; }
 .brg__cap {
   position: absolute; left: 0; right: 0; bottom: 0;
   display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
-  padding: 14px 16px; color: #f4f2ed;
-  background: linear-gradient(to top, rgba(0,0,0,0.72), rgba(0,0,0,0.12) 62%, transparent);
+  padding: 26px 16px 14px; color: #f4f2ed;
+  /* Strong where the words are, fading only above them. Over a pale material
+     shot the old ramp left these captions around 1.1:1. */
+  background: linear-gradient(to top,
+    rgba(16,15,14,0.90) 0%,
+    rgba(16,15,14,0.80) 55%,
+    rgba(16,15,14,0.46) 82%,
+    rgba(16,15,14,0) 100%);
   opacity: 0; transform: translateY(8px);
   transition: opacity var(--bra-dur-base) var(--bra-ease), transform var(--bra-dur-base) var(--bra-ease);
 }
@@ -2630,7 +2698,7 @@ body.bra-nav-locked { overflow: hidden; }
 /* No hover on touch, so the caption would never be reachable there */
 @media (hover: none) { .brg__cap { opacity: 1; transform: none; } }
 .brg__title { font-family: var(--bra-font); font-weight: 600; font-size: 14px; letter-spacing: 0.01em; }
-.brg__meta  { font-family: var(--bra-font); font-weight: 500; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(244,242,237,0.7); }
+.brg__meta  { font-family: var(--bra-font); font-weight: 700; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(244,242,237,0.88); }
 .brg:empty { display: none; }
 @media (max-width: 900px) {
   .brg { grid-template-columns: repeat(4, 1fr); grid-auto-rows: clamp(120px, 20vw, 200px); }
@@ -2659,9 +2727,17 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
   transform: scale(1.08); animation: home-hero-pan 18s var(--bra-ease) forwards;
 }
 @keyframes home-hero-pan { to { transform: scale(1); } }
+/* Scrim. The stops are a legibility device, not decoration: the headline and
+   lede sit in the 35–75% band, and at the old 0.20 mid-stop a bright window
+   or curtain in the photograph took cream text down to 1.7:1. Measured with
+   the pixel sampler in scratchpad/a11y.mjs, worst-case pixel per band. */
 .home-hero__bg::after {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(18,16,14,0.58) 0%, rgba(18,16,14,0.20) 40%, rgba(18,16,14,0.84) 100%);
+  background: linear-gradient(180deg,
+    rgba(18,16,14,0.62) 0%,
+    rgba(18,16,14,0.46) 34%,
+    rgba(18,16,14,0.56) 62%,
+    rgba(18,16,14,0.88) 100%);
 }
 .home-hero__grain {
   position: absolute; inset: 0; z-index: -1; pointer-events: none;
@@ -2678,8 +2754,13 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
    (plain container sections that otherwise butt against the hero).
    Coloured-surface sections and the deck already carry their own padding. */
 .home-hero + section:not([class*="bra-surface"]):not(.deck) { padding-top: var(--bra-s-6); }
-.home-hero .bra-caption, .home-hero .bra-micro { color: rgba(244,242,237,0.66); }
-.home-hero__back { text-decoration: none; transition: color var(--bra-dur-base) var(--bra-ease); }
+.home-hero .bra-caption, .home-hero .bra-micro { color: rgba(244,242,237,0.88); }
+.home-hero__back {
+  text-decoration: none;
+  display: inline-flex; align-items: center;
+  min-height: 24px; padding: 2px 0;
+  transition: color var(--bra-dur-base) var(--bra-ease);
+}
 .home-hero__back:hover { color: var(--bra-on-oak); }
 .home-hero__center { align-self: end; }
 .home-hero__title {
@@ -2690,7 +2771,7 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
 .home-hero__title em { font-style: normal; font-weight: 500; }
 .home-hero__sub {
   margin-top: var(--bra-s-3); max-width: 46ch;
-  font-size: clamp(16px, 1.3vw, 19px); line-height: 1.55; color: rgba(244,242,237,0.84);
+  font-size: clamp(16px, 1.3vw, 19px); line-height: 1.55; color: rgba(244,242,237,0.97);
 }
 .home-hero__top, .home-hero__foot {
   display: flex; justify-content: space-between; align-items: baseline;
@@ -2711,7 +2792,7 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
   color: var(--bra-ink-2); border: 1.5px solid rgba(28,28,26,0.28); padding: 5px 12px;
 }
 .bra-tag--solid { background: var(--bra-ink); color: var(--bra-on-oak); border-color: var(--bra-ink); }
-.bra-tag--oak   { color: var(--bra-oak-warm); border-color: var(--bra-oak-warm); }
+.bra-tag--oak   { color: var(--bra-oak); border-color: var(--bra-oak-warm); }
 .bra-surface-oak .bra-tag, .bra-surface-ink .bra-tag { color: rgba(244,242,237,0.72); border-color: rgba(244,242,237,0.30); }
 
 /* ---------- Filter chips ---------- */
@@ -2770,9 +2851,10 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
 /* ---------- Callout / notice ---------- */
 .bra-callout { border-left: 4px solid var(--bra-oak); border-radius: 0 var(--bra-r) var(--bra-r) 0; background: var(--bra-stone); padding: var(--bra-s-3) var(--bra-s-4); }
 .bra-callout__label { display: block; font-family: var(--bra-font); font-weight: 600; font-size: 11px;
-  letter-spacing: 0.12em; text-transform: uppercase; color: var(--bra-oak-warm); margin-bottom: var(--bra-s-2); }
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--bra-oak); margin-bottom: var(--bra-s-2); }
 .bra-callout__body { font-size: 16px; line-height: 1.55; color: var(--bra-ink); max-width: 60ch; }
 .bra-callout--oak { background: var(--bra-oak); border-left-color: var(--bra-oak-warm); }
+.bra-callout--oak .bra-callout__label { color: var(--bra-on-oak); }
 .bra-callout--oak .bra-callout__body { color: var(--bra-on-oak); }
 
 /* ---------- Ghost / secondary button + shared button states ---------- */
@@ -3068,7 +3150,7 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
 .bra-versus__side--ours .bra-versus__name { color: var(--bra-on-oak); }
 .bra-versus__tag { display: inline-block; margin-top: var(--bra-s-2); font-family: var(--bra-font); font-weight: 600;
   font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bra-ink-2); }
-.bra-versus__side--ours .bra-versus__tag { color: var(--bra-oak-warm); }
+.bra-versus__side--ours .bra-versus__tag { color: rgba(244,242,237,0.82); }
 .bra-versus__list { list-style: none; margin: var(--bra-s-3) 0 0; padding: 0; }
 .bra-versus__list li { padding: 10px 0; font-family: var(--bra-font); font-weight: 500; font-size: 15px; line-height: 1.4;
   border-top: 1px solid rgba(28,28,26,0.14); }
@@ -3134,6 +3216,9 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
 .home-head__meta {
   font-family: var(--bra-font);
   font-weight: 500; font-size: 11px;
+  /* 24px minimum hit area for the link variant (WCAG 2.5.8); the padding is
+     harmless on the plain <span> version. */
+  display: inline-flex; align-items: center; min-height: 24px;
   letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--bra-ink-mute);
   font-variant-numeric: tabular-nums;
@@ -3426,15 +3511,24 @@ a.bra-cardset__card:focus-visible .bra-cardset__title::after { transform: transl
   box-shadow: inset 0 0 0 1px var(--bra-line-strong);
 }
 .bra-cardset--overlay .bra-cardset__media { position: absolute; inset: 0; margin: 0; border: none; box-shadow: none; border-radius: 0; aspect-ratio: auto; }
+/* The scrim has to be strong where the TEXT is, not merely present at the
+   bottom edge. The eyebrow sits at the top of this box, and over a bright
+   photograph the old ramp left it at 1.6:1. It now starts fading only above
+   the text block, and the box carries extra top padding so the fade has
+   somewhere to happen. */
 .bra-cardset--overlay .bra-cardset__content {
   position: absolute; left: 0; right: 0; bottom: 0;
-  padding: var(--bra-s-3);
+  padding: var(--bra-s-4) var(--bra-s-3) var(--bra-s-3);
   border-top: 0;
-  background: linear-gradient(to top, rgba(28,28,26,0.74) 0%, rgba(28,28,26,0.30) 42%, rgba(28,28,26,0) 78%);
+  background: linear-gradient(to top,
+    rgba(20,19,18,0.90) 0%,
+    rgba(20,19,18,0.80) 48%,
+    rgba(20,19,18,0.58) 78%,
+    rgba(20,19,18,0) 100%);
 }
 .bra-cardset--overlay .bra-cardset__content::before { display: none; }
 .bra-cardset--overlay .bra-cardset__media::after { display: none; }
-.bra-cardset--overlay .bra-cardset__eyebrow { color: rgba(244,242,237,0.75); }
+.bra-cardset--overlay .bra-cardset__eyebrow { color: rgba(244,242,237,0.92); }
 .bra-cardset--overlay .bra-cardset__title,
 .bra-cardset--overlay .bra-cardset__body { color: var(--bra-on-oak); }
 

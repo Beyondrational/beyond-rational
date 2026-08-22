@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;500;700;900&family=Archivo+Black&display=swap">
-<link rel="stylesheet" href="br.css?v=52">
+<link rel="stylesheet" href="br.css?v=53">
 <script>if(sessionStorage.getItem("brLoaderShown")){document.documentElement.classList.add("br-loader-skip")}</script>
 <script type="application/ld+json">
 {
@@ -85,6 +85,8 @@
 </head>
 <body class="bra" data-page="product-aisti">
 
+<a class="bra-skip" href="#main">Skip to content</a>
+
 <!-- Page loader (CLOU-style curtain, once per session) -->
 <div class="br-loader" aria-hidden="true">
   <div class="br-loader__top">
@@ -114,6 +116,8 @@
     <button type="button" class="bra-nav__lang" data-lang-toggle>DA</button>
   </div>
 </nav>
+
+<main id="main">
 
 <!-- ===== Cinematic hero ===== -->
 <section class="home-hero home-hero--sub" data-on-dark>
@@ -267,9 +271,7 @@
         </div>
         <div style="display: flex; gap: var(--bra-s-2); flex-wrap: wrap; margin-top: var(--bra-s-3);" data-content-each="spec.downloads">
           <template>
-            <a data-each="href" data-each-attr="href" target="_blank" rel="noopener">
-              <button class="bra-btn-fill"><span data-each="label"></span><span>↓</span></button>
-            </a>
+            <a class="bra-btn-fill" data-each="href" data-each-attr="href" target="_blank" rel="noopener"><span data-each="label"></span><span aria-hidden="true">↓</span></a>
           </template>
         </div>
       </div>
@@ -604,14 +606,12 @@
           Production ramps to full capacity in August 2026. Preorder now, or request samples and the full data package.
         </p>
         <div style="display: flex; gap: var(--bra-s-3); align-items: center; flex-wrap: wrap;">
-          <a href="contact.html" style="text-decoration: none;">
-            <button class="bra-btn-mag bra-btn-mag--inv bra-btn-mag--solid" data-magnetic>
+          <a href="contact.html" class="bra-btn-mag bra-btn-mag--inv bra-btn-mag--solid" data-magnetic>
               <span>Order</span>
               <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
               </svg>
-            </button>
-          </a>
+            </a>
           <a href="contact.html" class="bra-cta" style="color: var(--bra-on-oak);">Contact</a>
         </div>
         <form class="bra-newsletter" data-newsletter onsubmit="return false;" style="margin-top: var(--bra-s-4); color: var(--bra-on-oak);">
@@ -623,6 +623,8 @@
   </div>
 </section>
 
+</main>
+
 <!-- ===== Shared footer ===== -->
 <footer class="bra-footer">
   <div class="bra-footer__grid bra-stagger" data-stagger>
@@ -633,7 +635,7 @@
       </p>
     </div>
     <div class="bra-stagger-item">
-      <h4 data-content="footer.product_heading">Product</h4>
+      <h2 class="bra-footer__col-head" data-content="footer.product_heading">Product</h2>
       <ul>
         <li><a href="product-aisti.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.aisti_label">Aisti® Acoustic Tile</a></li>
         <li><a href="product-wuud.html" class="bra-cta" style="border: none; padding: 0;">Wuud</a></li>
@@ -642,13 +644,13 @@
       </ul>
     </div>
     <div class="bra-stagger-item">
-      <h4 data-content="footer.office_heading">Office</h4>
+      <h2 class="bra-footer__col-head" data-content="footer.office_heading">Office</h2>
       <ul>
         <li><a href="projects.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.projects_label">Projects</a></li>
       </ul>
     </div>
     <div class="bra-stagger-item">
-      <h4 data-content="footer.contact_heading">Contact</h4>
+      <h2 class="bra-footer__col-head" data-content="footer.contact_heading">Contact</h2>
       <ul>
         <li><a href="mailto:hello@beyondrational.com" class="bra-cta" style="border: none; padding: 0;"><span data-content="footer.email">hello@beyondrational.com</span></a></li>
         <li><span class="bra-body" style="font-size: 14px;" data-content="footer.address">Firskovvej 36, 2800 Kongens Lyngby</span></li>
