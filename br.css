@@ -403,6 +403,9 @@ h1.bra-caption, h2.bra-caption, h3.bra-caption, h4.bra-caption {
    specificity always wins), permanently stranding it in 2 columns on
    phones. This class-based version lets the media query win as intended. */
 .bra-spec--tight { grid-template-columns: 1fr 1fr; gap: 0 var(--bra-s-2); }
+/* Capped width for a short sheet (contact details), released again on tablet
+   where the surrounding two-column layout has already collapsed. */
+.bra-spec--narrow { max-width: 420px; }
 .bra-spec-row { display: contents; }
 .bra-spec-key,
 .bra-spec-val {
@@ -423,6 +426,10 @@ h1.bra-caption, h2.bra-caption, h3.bra-caption, h4.bra-caption {
 }
 .bra-spec-row:last-child .bra-spec-key,
 .bra-spec-row:last-child .bra-spec-val { border-bottom-width: 4px; }
+/* A mailto:/tel: in a spec sheet is a primary action — on the contact page
+   it is how you reach Morten and Rasmus — so it gets a real 24px target
+   rather than the 22px the line-height happens to give it (WCAG 2.5.8). */
+.bra-spec-key a, .bra-spec-val a { display: inline-flex; align-items: center; min-height: 24px; }
 /* Row-level hover across a `display: contents` row: both cells respond, so
    scanning a 12-row spec sheet keeps your eye on one line. */
 .bra-spec-key, .bra-spec-val { transition: background-color var(--bra-dur-fast) var(--bra-ease), padding-left var(--bra-dur-base) var(--bra-ease); }
@@ -3908,4 +3915,23 @@ body[data-page="product-aisti"] .bra-cardset--overlay .bra-cardset__card { aspec
 
 @media (max-width: 720px) {
   .prod-points { grid-template-columns: 1fr; gap: var(--bra-s-4); }
+}
+
+
+/* ============================================================
+   Tablet portrait (601–900px) — measure corrections
+   ------------------------------------------------------------
+   Must live at the END of this file: the rules it overrides are defined
+   further down (.home-pair__text sits ~900 lines below where this block
+   was first written, and won on source order — the override did nothing).
+   Why it exists: every two-column layout collapses to one at 900px, but
+   the measures inside were tuned for a HALF-width column and don't. On a
+   768px tablet that left text blocks at ~60% of the column with a void
+   down the right side. Only the blocks that actually read as broken are
+   touched — a 65ch paragraph is good typography, not a bug, and a short
+   measure on a display heading is deliberate.
+   ============================================================ */
+@media (min-width: 601px) and (max-width: 900px) {
+  .home-pair__text { max-width: 58ch; }
+  .bra-spec--narrow { max-width: none; }
 }
