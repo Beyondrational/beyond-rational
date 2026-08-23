@@ -123,15 +123,26 @@
           }
         });
 
-        // A second, independent binding so one element (typically an <img>
+        // Additional, independent bindings so one element (typically an <img>
         // already using data-each/data-each-attr for its src) can also pull
-        // a *different* field onto a second attribute — e.g.
-        // data-each-alt="title" gives every looped image its own real alt
-        // text instead of the template's single static fallback string.
-        clone.querySelectorAll('[data-each-alt]').forEach((el) => {
-          const key = el.dataset.eachAlt;
-          const val = key.split('.').reduce((o, k) => (o == null ? o : o[k]), item);
-          if (val != null && val !== '') el.setAttribute('alt', val);
+        // *different* fields onto other attributes. Any `data-each-<name>`
+        // sets attribute `<name>`, camelCase in the suffix becoming kebab:
+        //   data-each-alt="title"        -> alt="…"        (per-image alt text)
+        //   data-each-data-gated="gated" -> data-gated="…" (per-item flags)
+        // `attr` and `html` are reserved by the primary binding above.
+        const RESERVED = new Set(['attr', 'html']);
+        const toKebab = (s) => s.replace(/[A-Z]/g, (c) => '-' + c.toLowerCase());
+        clone.querySelectorAll('*').forEach((el) => {
+          Object.keys(el.dataset).forEach((dataKey) => {
+            if (!dataKey.startsWith('each') || dataKey === 'each') return;
+            const suffix = dataKey.slice(4);
+            const name = toKebab(suffix.charAt(0).toLowerCase() + suffix.slice(1));
+            if (RESERVED.has(name)) return;
+            const val = el.dataset[dataKey].split('.').reduce((o, k) => (o == null ? o : o[k]), item);
+            // `false` means "not set" for a flag — don't write gated="false"
+            if (val == null || val === '' || val === false) return;
+            el.setAttribute(name, val === true ? '' : val);
+          });
         });
 
         container.appendChild(clone);

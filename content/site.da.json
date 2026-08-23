@@ -39,5 +39,17 @@
     "phone_label": "Telefon",
     "office_label": "Kontor",
     "hours_label": "Åbningstider"
+  },
+  "gate": {
+    "title": "Hent dokumentet",
+    "body": "Fortæl hvem du er, så starter downloaden med det samme. Vi bruger det til at svare på spørgsmål om dit projekt — ikke andet.",
+    "name": "Fulde navn",
+    "email": "Arbejdsmail",
+    "company": "Tegnestue / firma",
+    "submit": "Hent",
+    "cancel": "Annuller",
+    "privacy": "Sådan behandler vi det",
+    "sending": "Sender…",
+    "error": "Kunne ikke sendes. Skriv til hello@beyondrational.com, så sender vi filen."
   }
 }

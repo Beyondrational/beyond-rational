@@ -48,16 +48,22 @@
     ],
     "downloads": [
       {
-        "label": "Download specifications",
-        "href": "https://aisti.com/documents/9a4qSK39RnOcg6LbSymtLgo403"
+        "label": "Aisti brochure",
+        "file": "assets/docs/aisti-brochure.pdf",
+        "meta": "PDF · 16 pages",
+        "gated": true
       },
       {
-        "label": "EPD 20mm",
-        "href": "https://aisti.com/documents/_kU7OOv0SxGCLYSZqk-HKQo4e7"
+        "label": "EPD · 20 mm",
+        "file": "assets/docs/aisti-epd-20mm.pdf",
+        "meta": "PDF · EN 15804+A2",
+        "gated": false
       },
       {
-        "label": "EPD 40mm",
-        "href": "https://aisti.com/documents/QzrA_VDSSVawPcyPQ5OOnAo47b"
+        "label": "EPD · 40 mm",
+        "file": "assets/docs/aisti-epd-40mm.pdf",
+        "meta": "PDF · EN 15804+A2",
+        "gated": false
       }
     ]
   },

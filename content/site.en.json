@@ -39,5 +39,17 @@
     "phone_label": "Phone",
     "office_label": "Office",
     "hours_label": "Hours"
+  },
+  "gate": {
+    "title": "Get the document",
+    "body": "Tell us who you are and the download starts right away. We use it to answer questions about your project — nothing else.",
+    "name": "Full name",
+    "email": "Work email",
+    "company": "Office / company",
+    "submit": "Download",
+    "cancel": "Cancel",
+    "privacy": "How we handle this",
+    "sending": "Sending…",
+    "error": "Couldn't send that. Email hello@beyondrational.com and we'll send the file."
   }
 }

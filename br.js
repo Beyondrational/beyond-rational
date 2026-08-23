@@ -998,6 +998,116 @@
     });
   }
 
+  /* ---- Document gate ----------------------------------------------
+     A download marked [data-gated] asks for name/email/company first, then
+     starts the download. Three deliberate choices:
+       · <dialog> does the focus trap, the Escape key and the backdrop —
+         a hand-rolled modal gets those wrong and locks keyboard users out.
+       · The anchor keeps its real href. If this script never runs, the file
+         downloads normally: losing a lead beats blocking an architect from
+         an EPD they need.
+       · One unlock per session, so the second document doesn't ask again.
+     Copy comes from content/site.<lang>.json like the consent bar. */
+  (function () {
+    var GATE_KEY = 'brDocUnlocked';
+    var gateCopy = {};
+    var dlg = null;
+    var pendingLink = null;
+
+    var startDownload = function (link) {
+      var a = document.createElement('a');
+      a.href = link.getAttribute('href');
+      a.download = link.getAttribute('download') || '';
+      document.body.appendChild(a); a.click(); a.remove();
+    };
+
+    var buildDialog = function () {
+      dlg = document.createElement('dialog');
+      dlg.className = 'bra-gate';
+      dlg.setAttribute('aria-labelledby', 'bra-gate-title');
+      dlg.innerHTML =
+        '<form class="bra-gate__form" method="dialog">' +
+          '<h2 class="bra-gate__title" id="bra-gate-title"></h2>' +
+          '<p class="bra-gate__body"></p>' +
+          '<div class="bra-field"><label class="bra-field__label" for="bra-gate-name"></label>' +
+            '<input class="bra-field__input" id="bra-gate-name" name="contact_name" type="text" required autocomplete="name"></div>' +
+          '<div class="bra-field"><label class="bra-field__label" for="bra-gate-email"></label>' +
+            '<input class="bra-field__input" id="bra-gate-email" name="email_from" type="email" required autocomplete="email"></div>' +
+          '<div class="bra-field"><label class="bra-field__label" for="bra-gate-company"></label>' +
+            '<input class="bra-field__input" id="bra-gate-company" name="partner_name" type="text" required autocomplete="organization"></div>' +
+          '<input type="hidden" name="name" value="Document download">' +
+          '<input type="hidden" name="document" value="">' +
+          '<p class="bra-form-result" hidden></p>' +
+          '<div class="bra-gate__actions">' +
+            '<button type="submit" class="bra-btn-mag bra-btn-mag--solid" value="send"></button>' +
+            '<button type="button" class="bra-cta bra-cta--bare" data-gate-cancel></button>' +
+          '</div>' +
+          '<p class="bra-gate__fine"><a href="privatlivspolitik.html"></a></p>' +
+        '</form>';
+      document.body.appendChild(dlg);
+      dlg.querySelector('[data-gate-cancel]').addEventListener('click', function () { dlg.close(); });
+      dlg.querySelector('form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var form = e.target;
+        var btn = form.querySelector('button[type="submit"]');
+        var label = btn.textContent;
+        var result = form.querySelector('.bra-form-result');
+        btn.disabled = true; btn.textContent = gateCopy.sending || 'Sending…';
+        result.hidden = true;
+        var done = function () {
+          try { sessionStorage.setItem(GATE_KEY, '1'); } catch (err) {}
+          dlg.close();
+          if (pendingLink) startDownload(pendingLink);
+          btn.disabled = false; btn.textContent = label;
+          form.reset();
+        };
+        var send = window.brSubmitForm ? window.brSubmitForm(form) : Promise.reject();
+        send.then(done).catch(function () {
+          // The file is the thing they came for — never hold it hostage to a
+          // failing CRM. Tell them, hand over the download, move on.
+          result.textContent = gateCopy.error || '';
+          result.hidden = false;
+          result.classList.add('is-error');
+          setTimeout(done, 1600);
+        });
+      });
+    };
+
+    var applyCopy = function () {
+      if (!dlg) return;
+      var c = gateCopy;
+      dlg.querySelector('.bra-gate__title').textContent = c.title || 'Get the document';
+      dlg.querySelector('.bra-gate__body').textContent = c.body || '';
+      dlg.querySelector('label[for="bra-gate-name"]').textContent = c.name || 'Full name';
+      dlg.querySelector('label[for="bra-gate-email"]').textContent = c.email || 'Work email';
+      dlg.querySelector('label[for="bra-gate-company"]').textContent = c.company || 'Office / company';
+      dlg.querySelector('button[type="submit"]').textContent = c.submit || 'Download';
+      dlg.querySelector('[data-gate-cancel]').textContent = c.cancel || 'Cancel';
+      dlg.querySelector('.bra-gate__fine a').textContent = c.privacy || 'Privacy policy';
+    };
+    document.addEventListener('br-content-ready', function (e) {
+      gateCopy = (e.detail && e.detail.gate) || gateCopy;
+      applyCopy();
+    });
+
+    // Delegated, not bound per link: the download rows are rendered by
+    // br-content.js from the CMS *after* this script runs, so binding to the
+    // links directly attaches zero listeners and the gate silently never fires.
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest && e.target.closest('a[data-gated]');
+      if (!link) return;
+      var unlocked = false;
+      try { unlocked = sessionStorage.getItem(GATE_KEY) === '1'; } catch (err) {}
+      if (unlocked) return;                      // already gave details this visit
+      e.preventDefault();
+      if (!dlg) { buildDialog(); applyCopy(); }
+      pendingLink = link;
+      var docName = (link.querySelector('.bra-download__title') || {}).textContent || link.getAttribute('href');
+      dlg.querySelector('input[name="document"]').value = docName;
+      dlg.showModal();
+    });
+  })();
+
   /* ---- Back-to-top (auto-injected once) ---- */
   var totop = document.querySelector('.bra-totop');
   if (!totop) {

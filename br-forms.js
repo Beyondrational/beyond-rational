@@ -25,7 +25,8 @@
     project_type: 'Project type',
     area_m2: 'Area (m²)',
     target_date: 'Target completion',
-    info_kind: 'What they need'
+    info_kind: 'What they need',
+    document: 'Document requested'
   };
   var SKIP_FIELDS = { name: true, email: true };
 
@@ -86,6 +87,11 @@
         });
     });
   }
+
+  // Exposed so other behaviours can reuse the same HubSpot submission without
+  // re-implementing the field mapping — the document gate in br.js needs to
+  // send a form and then act on the result.
+  window.brSubmitForm = submitToHubSpot;
 
   document.querySelectorAll('form[data-validate]').forEach(function (form) { wireForm(form); });
 

@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;500;700;900&family=Archivo+Black&display=swap">
-<link rel="stylesheet" href="br.css?v=55">
+<link rel="stylesheet" href="br.css?v=56">
 <script>if(sessionStorage.getItem("brLoaderShown")){document.documentElement.classList.add("br-loader-skip")}</script>
 <script type="application/ld+json">
 {
@@ -269,9 +269,15 @@
             <div class="bra-spec-row"><div class="bra-spec-key" data-each="key"></div><div class="bra-spec-val" data-each="value"></div></div>
           </template>
         </div>
-        <div style="display: flex; gap: var(--bra-s-2); flex-wrap: wrap; margin-top: var(--bra-s-3);" data-content-each="spec.downloads">
+        <div class="bra-downloads" style="margin-top: var(--bra-s-3);" data-content-each="spec.downloads">
           <template>
-            <a class="bra-btn-fill" data-each="href" data-each-attr="href" target="_blank" rel="noopener"><span data-each="label"></span><span aria-hidden="true">↓</span></a>
+            <a class="bra-download" data-each="file" data-each-attr="href" data-each-data-gated="gated" download>
+              <span class="bra-download__main">
+                <span class="bra-download__title" data-each="label"></span>
+                <span class="bra-download__meta" data-each="meta"></span>
+              </span>
+              <span class="bra-download__dl" aria-hidden="true">↓</span>
+            </a>
           </template>
         </div>
       </div>
@@ -664,8 +670,11 @@
   </div>
 </footer>
 
-<script src="br.js?v=38" defer></script>
-<script src="br-content.js?v=26" defer></script>
+<script src="br.js?v=39" defer></script>
+<script src="br-content.js?v=27" defer></script>
+<!-- The document gate posts to HubSpot through br-forms.js, so this page
+     needs it too — it used to load only on contact.html. -->
+<script src="br-forms.js?v=2" defer></script>
 <script>
 /* Video switcher — chips swap the YouTube iframe's src (CMS-aware) */
 (function () {

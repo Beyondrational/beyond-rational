@@ -2972,6 +2972,63 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
 .bra-surface-oak .bra-download { color: var(--bra-on-oak); border-color: rgba(244,242,237,0.18); }
 .bra-surface-oak .bra-downloads { border-color: rgba(244,242,237,0.18); }
 
+/* ---------- Document gate (native <dialog>) ----------
+   The browser gives the focus trap, Escape, inert background and backdrop;
+   this only dresses it. Sized so the three fields sit above the fold on a
+   phone — a gate that needs scrolling to find its own submit button is a
+   gate people abandon. */
+.bra-gate {
+  /* The UA centres a <dialog> with `margin: auto`. This site's reset
+     (`.bra * { margin: 0 }`) wipes that out, which parks the modal in the
+     top-left corner — put it back explicitly. */
+  margin: auto;
+  border: 2px solid var(--bra-ink);
+  border-radius: var(--bra-r-lg);
+  background: var(--bra-paper-lift);
+  color: var(--bra-ink);
+  padding: 0;
+  width: min(420px, calc(100vw - 32px));
+  box-shadow: var(--bra-lift-2);
+}
+.bra-gate::backdrop { background: rgba(18,16,14,0.55); backdrop-filter: blur(3px); }
+.bra-gate__form { padding: var(--bra-s-4); display: flex; flex-direction: column; gap: var(--bra-s-2); }
+.bra-gate__title {
+  font-family: var(--bra-font); font-weight: 500;
+  font-size: clamp(21px, 2.4vw, 26px); letter-spacing: -0.015em; line-height: 1.1;
+  margin: 0;
+}
+.bra-gate__body { font-size: 15px; line-height: 1.55; color: var(--bra-ink-2); margin: 0 0 var(--bra-s-2); }
+.bra-gate .bra-field { margin-bottom: 0; }
+.bra-gate__actions { display: flex; align-items: center; gap: var(--bra-s-3); margin-top: var(--bra-s-2); flex-wrap: wrap; }
+.bra-gate__fine { margin: var(--bra-s-1) 0 0; font-size: 12px; color: var(--bra-ink-mute); }
+.bra-gate__fine a { color: var(--bra-ink-2); text-decoration: underline; text-underline-offset: 3px; }
+.bra-gate .bra-form-result[hidden] { display: none; }
+/* .bra-cta was written for <a>; on a <button> the UA border shows through
+   and it reads as a second, competing box next to the primary action. */
+button.bra-cta { border: 0; background: none; cursor: pointer; font-family: var(--bra-font); }
+/* The dialog opens with the page still behind it; keep the animation short
+   and skip it entirely for reduced-motion. */
+.bra-gate[open] { animation: bra-gate-in 220ms var(--bra-ease) both; }
+@keyframes bra-gate-in { from { opacity: 0; transform: translateY(8px) scale(0.98); } }
+@media (prefers-reduced-motion: reduce) { .bra-gate[open] { animation: none; } }
+
+/* A gated row earns a marker, so it is obvious before the click that this
+   one asks for details — springing a form on someone is what makes gates
+   feel like a trick. */
+.bra-download[data-gated] .bra-download__title::after {
+  content: "";
+  display: inline-block;
+  width: 9px; height: 11px;
+  margin-left: 8px;
+  vertical-align: -1px;
+  border: 1.5px solid currentColor;
+  border-radius: 1px 1px 2px 2px;
+  border-top-width: 4px;
+  border-top-color: transparent;
+  box-shadow: inset 0 -1px 0 currentColor;
+  opacity: 0.5;
+}
+
 /* ---------- Form states (pairs with .bra-field) ---------- */
 .bra-field.is-error .bra-field__input,
 .bra-field.is-error .bra-field__textarea,

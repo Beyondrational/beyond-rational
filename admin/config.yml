@@ -73,6 +73,22 @@ collections:
               - { label: "Text (HTML allowed for the privacy-policy link)", name: "text",    widget: "text", i18n: true }
               - { label: "Decline button",                                  name: "decline", widget: "string", i18n: true }
               - { label: "Accept button",                                   name: "accept",  widget: "string", i18n: true }
+          - label: "Document gate (shown before a gated download)"
+            name: "gate"
+            widget: "object"
+            i18n: true
+            hint: "The box that asks for name, e-mail and company before a gated document downloads. Injected by br.js, like the cookie bar. Turn the gate on or off per document under the product page."
+            fields:
+              - { label: "Heading",              name: "title",   widget: "string", i18n: true }
+              - { label: "Explanation",          name: "body",    widget: "text",   i18n: true }
+              - { label: "Name field label",     name: "name",    widget: "string", i18n: true }
+              - { label: "E-mail field label",   name: "email",   widget: "string", i18n: true }
+              - { label: "Company field label",  name: "company", widget: "string", i18n: true }
+              - { label: "Submit button",        name: "submit",  widget: "string", i18n: true }
+              - { label: "Cancel button",        name: "cancel",  widget: "string", i18n: true }
+              - { label: "Privacy link text",    name: "privacy", widget: "string", i18n: true }
+              - { label: "While sending",        name: "sending", widget: "string", i18n: true }
+              - { label: "If sending fails",     name: "error",   widget: "text",   i18n: true, hint: "The file is handed over anyway — never block a download because the CRM is down." }
           - label: "Misc shared strings"
             name: "misc"
             widget: "object"
@@ -645,8 +661,10 @@ collections:
                 i18n: true
                 summary: "{{fields.label}}"
                 fields:
-                  - { label: "Button text", name: "label", widget: "string", i18n: true }
-                  - { label: "Link (opens in new tab)", name: "href", widget: "string", i18n: "duplicate" }
+                  - { label: "Title", name: "label", widget: "string", i18n: true }
+                  - { label: "File", name: "file", widget: "file", i18n: "duplicate", hint: "Upload the PDF. It is served from this site, so the download counts as a lead." }
+                  - { label: "Small print", name: "meta", widget: "string", required: false, i18n: true, hint: "e.g. \"PDF · 16 pages\" — shown under the title" }
+                  - { label: "Ask for contact details first", name: "gated", widget: "boolean", default: false, required: false, i18n: "duplicate", hint: "On: the visitor fills name, e-mail and company before the download starts, and lands in HubSpot. Off: it downloads straight away." }
 
           - label: "Performance data grid — product facts"
             name: "facts"
