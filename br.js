@@ -162,11 +162,30 @@
     // "animation runs twice" / "text jumps" symptom. Waiting for the first
     // br-content-ready means the reveal only ever plays once, already
     // showing the final, correct text.
+    // A cross-document view transition is NOT exposed on navigation.transition
+    // — that property only covers same-document navigations, so the old check
+    // here resolved instantly and the gate never actually waited. The incoming
+    // document gets the transition on the `pagereveal` event instead.
+    //
+    // Why it matters: during the transition the browser shows a *snapshot* of
+    // this page taken at its first render opportunity. Run the char reveal
+    // then and it plays out inside that frozen image — and when the
+    // transition ends and the live DOM appears, the header seems to jump and
+    // replay. That is the "header animates twice" report, and it is most
+    // obvious on phones and tablets where the transition is a bigger share of
+    // the total load.
+    const viewTransitionDone = new Promise((resolve) => {
+      // The inline <head> script caught pagereveal for us; by the time this
+      // deferred script runs the event has already fired (measured: ~6ms vs
+      // ~10ms), so listening for it here would always miss.
+      const vt = window.__brViewTransition;
+      if (vt && vt.finished) return vt.finished.then(resolve, resolve);
+      resolve();
+    });
+
     const revealGate = Promise.race([
       Promise.all([
-        (window.navigation && window.navigation.transition)
-          ? window.navigation.transition.finished.catch(() => {})
-          : Promise.resolve(),
+        viewTransitionDone,
         (loader && document.body.classList.contains('is-loading'))
           ? new Promise((resolve) => document.addEventListener('br-loader-done', resolve, { once: true }))
           : Promise.resolve(),

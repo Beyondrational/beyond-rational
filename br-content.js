@@ -152,9 +152,12 @@
 
   async function loadContent(lang) {
     const page = document.body.dataset.page;
-    if (!page) return;
 
-    document.documentElement.lang = lang;
+    // Only pages whose own copy is translatable follow the site language.
+    // The legal pages are Danish documents that ship with lang="da" in the
+    // markup; overwriting that with the UI language would tell a screen
+    // reader to read Danish text with an English voice.
+    if (page) document.documentElement.lang = lang;
 
     let siteData = {};
     try {
@@ -162,18 +165,27 @@
       if (siteRes.ok) siteData = await siteRes.json();
     } catch (e) { /* no site.json yet — fine */ }
 
-    let pageData;
-    try {
-      const res = await fetch(`content/${page}.${lang}.json`, { cache: 'no-cache' });
-      if (!res.ok) return;
-      pageData = await res.json();
-    } catch (e) { return; }
+    // A page without its own content file (the legal pages) still shares the
+    // nav, footer, cookie bar and gate strings — and still has to announce
+    // br-content-ready, because br.js holds every header reveal until that
+    // event fires. Returning early here left those pages waiting out the
+    // 2.5s safety timeout with an invisible <h1>, and left their shared
+    // strings untranslated.
+    let pageData = {};
+    if (page) {
+      try {
+        const res = await fetch(`content/${page}.${lang}.json`, { cache: 'no-cache' });
+        if (res.ok) pageData = await res.json();
+      } catch (e) { /* fall back to the static HTML for this page */ }
+    }
 
     let mediaData = null;
-    try {
-      const mediaRes = await fetch(`content/${page}.media.json`, { cache: 'no-cache' });
-      if (mediaRes.ok) mediaData = await mediaRes.json();
-    } catch (e) { /* no shared media file for this page — fine */ }
+    if (page) {
+      try {
+        const mediaRes = await fetch(`content/${page}.media.json`, { cache: 'no-cache' });
+        if (mediaRes.ok) mediaData = await mediaRes.json();
+      } catch (e) { /* no shared media file for this page — fine */ }
+    }
 
     const data = Object.assign({}, siteData, mediaData ? deepMerge(pageData, mediaData) : pageData);
     bindSingleValues(data);
