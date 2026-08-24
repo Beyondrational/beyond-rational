@@ -48,7 +48,9 @@
     "title_l2_em": "godt for planeten.",
     "body_p1": "Beyond Rational eksisterer for at gøre det bevidste valg til det nemme valg. Vi kuraterer akustik- og overfladematerialer, der lever op til den standard, arkitekter forventer, uden de kompromiser der normalt følger med \"bæredygtighed\" — ingen nedgradering i finish, ingen nedgradering i specifikation.",
     "body_p2": "Ethvert materiale, vi fører, vælges først og fremmest på egne meritter: hvordan det lyder, hvordan det ser ud, hvordan det holder. Det lavere fodaftryk er udgangspunktet, vi starter fra — ikke det kompromis, vi beder arkitekter acceptere.",
-    "body_p3": "Det bevidste valg burde være det oplagte. I byggebranchen er det sjældent — regler og en langvarig forsigtighed over for nye materialer har holdt markedet konservativt. Vi arbejder kun med branchens mest ambitiøse, visionære partnere for at ændre det, ét materiale ad gangen."
+    "body_p3": "Det bevidste valg burde være det oplagte. I byggebranchen er det sjældent — regler og en langvarig forsigtighed over for nye materialer har holdt markedet konservativt. Vi arbejder kun med branchens mest ambitiøse, visionære partnere for at ændre det, ét materiale ad gangen.",
+    "cap_left": "Åben porøs struktur",
+    "cap_right": "Bevidst by design"
   },
   "studio": {
     "section_label": "Hvem vi er",
@@ -62,7 +64,9 @@
     "stat_studios": "2024",
     "stat_studios_label": "I drift siden",
     "body": "Beyond Rational har base i København. Vores partner Aisti producerer i Jyväskylä, Finland. Vi specificerer og leverer i hele Danmark. Vores team har mangeårig erfaring med at designe og udvikle akustikprodukter og -materialer — hvilket giver os et unikt perspektiv på akustikbranchen.",
-    "link_label": "Kontakt"
+    "link_label": "Kontakt",
+    "cap_left": "Københavnerkontoret",
+    "cap_right": "Aisti® loftmontage"
   },
   "cases": {
     "section_label": "Cases",

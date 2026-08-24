@@ -34,14 +34,16 @@
       "country": "SE",
       "title": "Ångtvätten 22",
       "meta": "Stora Essingen, Stockholm · Commercial office, 40,000 m² property",
-      "body": "Aisti Aalto® tiles in dark blue, 600×600 mm at 20 mm, installed in the standard T-grid by a professional team. The tiles absorb sound reflections and reduce echo — installed side-by-side with mineral wool to show no difference in acoustic performance."
+      "body": "Aisti Aalto® tiles in dark blue, 600×600 mm at 20 mm, installed in the standard T-grid by a professional team. The tiles absorb sound reflections and reduce echo — installed side-by-side with mineral wool to show no difference in acoustic performance.",
+      "image": "assets/aisti-person-angtvatten.webp"
     },
     {
       "case_label": "Case 02 · Helsinki",
       "country": "FI",
       "title": "Bulevardi 2",
       "meta": "Helsinki city centre · Commercial office",
-      "body": "Aisti Aalto tiles in white, 600×1200 mm at 40 mm, ceiling-mounted. Reverberation time — the time for sound to decay 60 dB — improved roughly 29% across the octave bands after installation."
+      "body": "Aisti Aalto tiles in white, 600×1200 mm at 40 mm, ceiling-mounted. Reverberation time — the time for sound to decay 60 dB — improved roughly 29% across the octave bands after installation.",
+      "image": "assets/br-office.webp"
     }
   ],
   "list": [
@@ -57,5 +59,15 @@
       "meta": "Helsinki · Echo reduction · 600×1200, 40 mm, white",
       "year": "FI"
     }
-  ]
+  ],
+  "list_head": {
+    "section_label": "The list"
+  },
+  "cases_head": {
+    "section_label": "The cases",
+    "meta": "What happened in the room"
+  },
+  "cta": {
+    "body": "Send the brief. We'll help you select format, thickness, and mounting for your specific room — and get you samples ahead of full production in August 2026."
+  }
 }

@@ -150,7 +150,8 @@
     "email": "hello@beyondrational.com",
     "email_note": "For samples, preorders, and project briefs. We answer Mon–Fri.",
     "phone": "+45 22 55 54 70",
-    "phone_note": "Morten Gyldendal Melberg, managing partner."
+    "phone_note": "Morten Gyldendal Melberg, managing partner.",
+    "section_label": "Office"
   },
   "journey": {
     "title_l1": "Follow our",

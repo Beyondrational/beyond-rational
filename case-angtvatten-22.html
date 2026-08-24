@@ -83,7 +83,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 </head>
 <body class="bra" data-page="case-angtvatten-22">
 
-<a class="bra-skip" href="#main">Skip to content</a>
+<a class="bra-skip" href="#main" data-content="misc.skip_to_content">Skip to content</a>
 
 <div class="br-loader" aria-hidden="true">
   <div class="br-loader__top">
@@ -123,7 +123,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 
   <div class="bra-container home-hero__inner">
     <header class="home-hero__top">
-      <a href="projects.html" class="bra-caption home-hero__back">← Projects</a>
+      <a href="projects.html" class="bra-caption home-hero__back" data-content="misc.back_projects">← Projects</a>
       <span class="bra-caption" data-content="hero.eyebrow">Case 01 · Stockholm · 2025</span>
     </header>
 
@@ -138,7 +138,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
     </div>
 
     <footer class="home-hero__foot">
-      <span class="bra-micro">Beyond Rational · Copenhagen</span>
+      <span class="bra-micro" data-content="misc.site_tag">Beyond Rational · Copenhagen</span>
     </footer>
   </div>
 </section>
@@ -171,7 +171,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 
 <!-- ===== Spec ===== -->
 <section class="bra-container bra-section">
-  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Project spec</p>
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-3);" data-content="spec.section_label">Project spec</p>
   <div class="bra-grid-2">
     <h2 class="bra-h2">
       <span class="bra-reveal-line" data-reveal>What was</span><br>
@@ -233,7 +233,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 <!-- ===== Nav between cases ===== -->
 <section class="bra-container bra-section">
   <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--bra-s-3);">
-    <a href="projects.html" class="bra-cta">← All cases</a>
+    <a href="projects.html" class="bra-cta" data-content="misc.all_cases">← All cases</a>
     <a href="case-bulevardi-2.html" class="bra-cta">Next · Bulevardi 2 →</a>
   </div>
 </section>
@@ -251,7 +251,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
           Send the brief. We'll help you select format, thickness, and mounting for your room — and get you samples ahead of full production in August 2026.
         </p>
         <a href="contact.html" class="bra-btn-mag bra-btn-mag--inv bra-btn-mag--solid" style="align-self: flex-start;" data-magnetic>
-            <span>Request a sample</span>
+            <span data-content="misc.cta_request_sample">Request a sample</span>
             <svg class="bra-btn-mag__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2"/>
             </svg>
@@ -275,9 +275,9 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
       <h2 class="bra-footer__col-head" data-content="footer.product_heading">Product</h2>
       <ul>
         <li><a href="product-aisti.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.aisti_label">Aisti® Acoustic Tile</a></li>
-        <li><a href="product-wuud.html" class="bra-cta" style="border: none; padding: 0;">Wuud</a></li>
-        <li><a href="product-sappa.html" class="bra-cta" style="border: none; padding: 0;">Sappa</a></li>
-        <li><a href="product-mogu.html" class="bra-cta" style="border: none; padding: 0;">Mogu</a></li>
+        <li><a href="product-wuud.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.wuud_label">Wuud</a></li>
+        <li><a href="product-sappa.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.sappa_label">Sappa</a></li>
+        <li><a href="product-mogu.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.mogu_label">Mogu</a></li>
       </ul>
     </div>
     <div class="bra-stagger-item">
@@ -302,6 +302,6 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 </footer>
 
 <script src="br.js?v=40" defer></script>
-<script src="br-content.js?v=28" defer></script>
+<script src="br-content.js?v=29" defer></script>
 </body>
 </html>

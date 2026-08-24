@@ -150,7 +150,8 @@
     "email": "hello@beyondrational.com",
     "email_note": "Til vareprøver, forudbestillinger og projektbriefs. Vi svarer man–fre.",
     "phone": "+45 22 55 54 70",
-    "phone_note": "Morten Gyldendal Melberg, adm. partner."
+    "phone_note": "Morten Gyldendal Melberg, adm. partner.",
+    "section_label": "Kontor"
   },
   "journey": {
     "title_l1": "Følg vores",

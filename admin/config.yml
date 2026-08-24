@@ -50,6 +50,9 @@ collections:
               - { label: "Copyright",     name: "copyright",     widget: "string", i18n: true }
               - { label: "\"Product\" column heading", name: "product_heading", widget: "string", i18n: true }
               - { label: "Aisti link text",              name: "aisti_label",     widget: "string", i18n: true }
+              - { label: "Wuud link text",               name: "wuud_label",      widget: "string", i18n: true }
+              - { label: "Sappa link text",              name: "sappa_label",     widget: "string", i18n: true }
+              - { label: "Mogu link text",               name: "mogu_label",      widget: "string", i18n: true }
               - { label: "\"Office\" column heading",   name: "office_heading",  widget: "string", i18n: true }
               - { label: "Projects link text",           name: "projects_label",  widget: "string", i18n: true }
               - { label: "\"Contact\" column heading",  name: "contact_heading", widget: "string", i18n: true }
@@ -103,6 +106,12 @@ collections:
               - { label: "\"Phone\" field label",        name: "phone_label",       widget: "string", i18n: true }
               - { label: "\"Office\" field label",       name: "office_label",      widget: "string", i18n: true }
               - { label: "\"Hours\" field label",        name: "hours_label",       widget: "string", i18n: true }
+              - { label: "Site tag (small print under every sub-page hero)", name: "site_tag", widget: "string", i18n: true }
+              - { label: "Skip-to-content link",     name: "skip_to_content",    widget: "string", i18n: true, hint: "Only keyboard users see it — it appears on the first Tab." }
+              - { label: "Button: get in touch",     name: "cta_get_in_touch",   widget: "string", i18n: true, hint: "Shared across pages — changing it changes all of them." }
+              - { label: "Button: request a sample", name: "cta_request_sample", widget: "string", i18n: true }
+              - { label: "Link: view product",       name: "cta_view_product",   widget: "string", i18n: true }
+              - { label: "Link: read the full case", name: "cta_read_case",      widget: "string", i18n: true }
 
 
   # =============== HOME ===============
@@ -141,6 +150,8 @@ collections:
               - { label: "Meta tag",      name: "meta",          widget: "string", i18n: true }
               - { label: "Intro",         name: "intro",         widget: "text", i18n: true }
               - { label: "Link label",    name: "link_label",    widget: "string", i18n: true }
+              - { label: "Image caption, left",  name: "cap_left",  widget: "string", required: false, i18n: true }
+              - { label: "Image caption, right", name: "cap_right", widget: "string", required: false, i18n: true }
               - label: "Products"
                 name: "items"
                 widget: "list"
@@ -164,6 +175,8 @@ collections:
               - { label: "Paragraph 1",          name: "body_p1",       widget: "text", i18n: true }
               - { label: "Paragraph 2",          name: "body_p2",       widget: "text", i18n: true }
               - { label: "Paragraph 3",          name: "body_p3",       widget: "text", i18n: true }
+              - { label: "Image caption, left",  name: "cap_left",  widget: "string", required: false, i18n: true }
+              - { label: "Image caption, right", name: "cap_right", widget: "string", required: false, i18n: true }
 
           - label: "Office"
             name: "studio"
@@ -383,6 +396,7 @@ collections:
             widget: "object"
             i18n: true
             fields:
+              - { label: "Section label", name: "section_label", widget: "string", required: false, i18n: true }
               - { label: "Title line 1", name: "title_l1",  widget: "string", i18n: true }
               - { label: "Title line 2", name: "title_l2",  widget: "string", i18n: true }
               - { label: "Email",        name: "email",      widget: "string", i18n: true }
@@ -463,6 +477,25 @@ collections:
               - { label: "Title",   name: "title",   widget: "string", i18n: true }
               - { label: "Image",   name: "image",   widget: "image", required: false, i18n: "duplicate" }
 
+          - label: "List section heading"
+            name: "list_head"
+            widget: "object"
+            i18n: true
+            fields:
+              - { label: "Section label", name: "section_label", widget: "string", required: false, i18n: true }
+          - label: "Cases section heading"
+            name: "cases_head"
+            widget: "object"
+            i18n: true
+            fields:
+              - { label: "Section label", name: "section_label", widget: "string", required: false, i18n: true }
+              - { label: "Meta tag",      name: "meta",          widget: "string", required: false, i18n: true }
+          - label: "Closing CTA"
+            name: "cta"
+            widget: "object"
+            i18n: true
+            fields:
+              - { label: "Body", name: "body", widget: "text", required: false, i18n: true }
   # =============== WUUD ===============
   - name: "wuud"
     label: "Wuud"
@@ -665,7 +698,21 @@ collections:
                   - { label: "File", name: "file", widget: "file", i18n: "duplicate", hint: "Upload the PDF. It is served from this site, so the download counts as a lead." }
                   - { label: "Small print", name: "meta", widget: "string", required: false, i18n: true, hint: "e.g. \"PDF · 16 pages\" — shown under the title" }
                   - { label: "Ask for contact details first", name: "gated", widget: "boolean", default: false, required: false, i18n: "duplicate", hint: "On: the visitor fills name, e-mail and company before the download starts, and lands in HubSpot. Off: it downloads straight away." }
+              - { label: "Section label", name: "section_label", widget: "string", required: false, i18n: true }
 
+          - label: "Performance section"
+            name: "performance"
+            widget: "object"
+            i18n: true
+            fields:
+              - { label: "Section label", name: "section_label", widget: "string", required: false, i18n: true }
+              - label: "Variant descriptions"
+                name: "notes"
+                widget: "list"
+                required: false
+                i18n: true
+                field: { label: "Description", name: "note", widget: "text", i18n: true }
+                hint: "One line per absorption variant card, in the order they appear. The numbers on the cards come from the page code."
           - label: "Performance data grid — product facts"
             name: "facts"
             widget: "object"

@@ -32,7 +32,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 </head>
 <body class="bra" data-page="contact">
 
-<a class="bra-skip" href="#main">Skip to content</a>
+<a class="bra-skip" href="#main" data-content="misc.skip_to_content">Skip to content</a>
 
 <!-- Page loader (CLOU-style curtain, once per session) -->
 <div class="br-loader" aria-hidden="true">
@@ -90,7 +90,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
     </div>
 
     <footer class="home-hero__foot">
-      <span class="bra-micro">Beyond Rational · Copenhagen</span>
+      <span class="bra-micro" data-content="misc.site_tag">Beyond Rational · Copenhagen</span>
     </footer>
   </div>
 </section>
@@ -334,7 +334,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 <!-- ===== Office info ===== -->
 <section class="bra-surface-stone">
   <div class="bra-container bra-section">
-    <p class="bra-caption" style="margin-bottom: var(--bra-s-3);">Office</p>
+    <p class="bra-caption" style="margin-bottom: var(--bra-s-3);" data-content="studio_info.section_label">Office</p>
     <h2 class="bra-h2" style="margin-bottom: var(--bra-s-4); max-width: 18ch;">
       <span class="bra-reveal-line" data-reveal data-content="studio_info.title_l1">Firskovvej 36,</span><br>
       <span class="bra-reveal-line" data-reveal data-content="studio_info.title_l2">Kongens Lyngby.</span>
@@ -395,9 +395,9 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
       <h2 class="bra-footer__col-head" data-content="footer.product_heading">Product</h2>
       <ul>
         <li><a href="product-aisti.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.aisti_label">Aisti® Acoustic Tile</a></li>
-        <li><a href="product-wuud.html" class="bra-cta" style="border: none; padding: 0;">Wuud</a></li>
-        <li><a href="product-sappa.html" class="bra-cta" style="border: none; padding: 0;">Sappa</a></li>
-        <li><a href="product-mogu.html" class="bra-cta" style="border: none; padding: 0;">Mogu</a></li>
+        <li><a href="product-wuud.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.wuud_label">Wuud</a></li>
+        <li><a href="product-sappa.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.sappa_label">Sappa</a></li>
+        <li><a href="product-mogu.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.mogu_label">Mogu</a></li>
       </ul>
     </div>
     <div class="bra-stagger-item">
@@ -422,7 +422,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 </footer>
 
 <script src="br.js?v=40" defer></script>
-<script src="br-content.js?v=28" defer></script>
+<script src="br-content.js?v=29" defer></script>
 <script src="br-forms.js?v=2" defer></script>
 </body>
 </html>

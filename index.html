@@ -50,13 +50,13 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 </head>
 <body class="bra" data-page="home">
 
-<a class="bra-skip" href="#main">Skip to content</a>
+<a class="bra-skip" href="#main" data-content="misc.skip_to_content">Skip to content</a>
 
 <!-- Page loader (CLOU-style curtain, once per session) -->
 <div class="br-loader" aria-hidden="true">
   <div class="br-loader__top">
     <span class="br-loader__top-l" data-content="loader.brand">Beyond Rational</span>
-    <span class="br-loader__top-r">Home / 2026</span>
+    <span class="br-loader__top-r" data-content="loader_tag">Home / 2026</span>
   </div>
   <div class="br-loader__middle">
     <div class="br-loader__counter">00</div>
@@ -173,8 +173,8 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
              alt="Macro of foam-formed wood fibre tile edges in raked light" loading="lazy">
       </div>
       <figcaption class="home-pair__cap">
-        <span class="bra-micro">Open porous structure</span>
-        <span class="bra-micro">Conscious by design</span>
+        <span class="bra-micro" data-content="process.cap_left">Open porous structure</span>
+        <span class="bra-micro" data-content="process.cap_right">Conscious by design</span>
       </figcaption>
     </figure>
 
@@ -237,8 +237,8 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
              alt="Copenhagen office interior with Aisti acoustic ceiling tiles" loading="lazy">
       </div>
       <figcaption class="home-pair__cap">
-        <span class="bra-micro">Copenhagen office</span>
-        <span class="bra-micro">Aisti® ceiling install</span>
+        <span class="bra-micro" data-content="studio.cap_left">Copenhagen office</span>
+        <span class="bra-micro" data-content="studio.cap_right">Aisti® ceiling install</span>
       </figcaption>
     </figure>
 
@@ -265,6 +265,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
         <div class="bra-gallery-data__label" data-each="eyebrow">Case · Stockholm</div>
         <div class="bra-h3" style="font-size: 22px; margin-top: 8px;" data-each="title">Ångtvätten 22</div>
         <div class="bra-gallery-data__note" style="margin-top: var(--bra-s-2);" data-each="meta1">Office well-being · 600×600 mm, 20 mm, dark blue</div>
+        <div class="bra-gallery-data__note" data-each="meta2"></div>
         <span class="bra-gallery-data__cta">View case ↗</span>
       </a>
     </template>
@@ -293,8 +294,8 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
         <div class="cta-band__actions">
           <a href="contact.html" class="bra-btn-mag bra-btn-mag--inv bra-btn-mag--solid" data-magnetic>
               <span class="bra-swap">
-                <span class="bra-swap__a">Get in touch</span>
-                <span class="bra-swap__b" aria-hidden="true">Get in touch</span>
+                <span class="bra-swap__a" data-content="misc.cta_get_in_touch">Get in touch</span>
+                <span class="bra-swap__b" aria-hidden="true" data-content="misc.cta_get_in_touch">Get in touch</span>
               </span>
             </a>
           <a href="mailto:hello@beyondrational.com" class="bra-cta" style="color: var(--bra-on-oak);" data-content="cta.email">hello@beyondrational.com</a>
@@ -319,9 +320,9 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
       <h2 class="bra-footer__col-head" data-content="footer.product_heading">Product</h2>
       <ul>
         <li><a href="product-aisti.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.aisti_label">Aisti® Acoustic Tile</a></li>
-        <li><a href="product-wuud.html" class="bra-cta" style="border: none; padding: 0;">Wuud</a></li>
-        <li><a href="product-sappa.html" class="bra-cta" style="border: none; padding: 0;">Sappa</a></li>
-        <li><a href="product-mogu.html" class="bra-cta" style="border: none; padding: 0;">Mogu</a></li>
+        <li><a href="product-wuud.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.wuud_label">Wuud</a></li>
+        <li><a href="product-sappa.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.sappa_label">Sappa</a></li>
+        <li><a href="product-mogu.html" class="bra-cta" style="border: none; padding: 0;" data-content="footer.mogu_label">Mogu</a></li>
       </ul>
     </div>
     <div class="bra-stagger-item">
@@ -346,6 +347,6 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 </footer>
 
 <script src="br.js?v=40" defer></script>
-<script src="br-content.js?v=28" defer></script>
+<script src="br-content.js?v=29" defer></script>
 </body>
 </html>

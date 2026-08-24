@@ -18,7 +18,10 @@
     "privacy_label": "Privatlivspolitik",
     "terms_label": "Betalingsbetingelser",
     "design_system_label": "Designsystem",
-    "design_system_version": "B_R Designsystem · v1.0"
+    "design_system_version": "B_R Designsystem · v1.0",
+    "wuud_label": "Wuud",
+    "sappa_label": "Sappa",
+    "mogu_label": "Mogu"
   },
   "loader": {
     "brand": "Beyond Rational",
@@ -38,7 +41,15 @@
     "email_label": "Email",
     "phone_label": "Telefon",
     "office_label": "Kontor",
-    "hours_label": "Åbningstider"
+    "hours_label": "Åbningstider",
+    "site_tag": "Beyond Rational · København",
+    "skip_to_content": "Gå til indhold",
+    "cta_get_in_touch": "Kom i kontakt",
+    "cta_request_sample": "Bestil en vareprøve",
+    "cta_view_product": "Se produktet",
+    "cta_read_case": "Læs hele casen",
+    "back_projects": "← Projekter",
+    "all_cases": "← Alle cases"
   },
   "gate": {
     "title": "Hent dokumentet",

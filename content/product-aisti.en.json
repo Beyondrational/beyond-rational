@@ -65,7 +65,8 @@
         "meta": "PDF · EN 15804+A2",
         "gated": false
       }
-    ]
+    ],
+    "section_label": "The spec"
   },
   "facts": {
     "format": {
@@ -270,5 +271,13 @@
     "title_l1": "Specify",
     "title_l2": "Aisti.",
     "lede": "Production ramps to full capacity in August 2026. Preorder now, or request samples and the full data package."
+  },
+  "performance": {
+    "section_label": "Performance",
+    "notes": [
+      "Pure surface absorber. Peaks where speech lives (500 Hz–2 kHz).",
+      "Air gap unlocks bass. Broadband from 500 Hz onward.",
+      "Heavier plate. Class A from 250 Hz upward."
+    ]
   }
 }

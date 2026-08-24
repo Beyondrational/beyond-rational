@@ -65,7 +65,8 @@
         "meta": "PDF · EN 15804+A2",
         "gated": false
       }
-    ]
+    ],
+    "section_label": "Specifikationer"
   },
   "facts": {
     "format": {
@@ -270,5 +271,13 @@
     "title_l1": "Specificér",
     "title_l2": "Aisti.",
     "lede": "Produktionen når fuld kapacitet i august 2026. Forudbestil nu, eller anmod om vareprøver og den fulde datapakke."
+  },
+  "performance": {
+    "section_label": "Ydeevne",
+    "notes": [
+      "Ren overfladeabsorbent. Topper hvor talen ligger (500 Hz–2 kHz).",
+      "Luftgab frigør bassen. Bredbånd fra 500 Hz og opefter.",
+      "Tungere plade. Klasse A fra 250 Hz og opefter."
+    ]
   }
 }
