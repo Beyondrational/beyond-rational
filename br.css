@@ -1355,12 +1355,14 @@ form[data-form].is-active { display: flex; flex-direction: column; gap: 0; }
 .bra-gallery-img__overlay {
   position: absolute;
   inset: auto 0 0 0;
-  padding: var(--bra-s-4) var(--bra-s-3) var(--bra-s-3);
+  padding: 20px var(--bra-s-3) var(--bra-s-3);
+  /* Runs top-to-bottom and the title sits mid-box, so this one reaches full
+     density early rather than fading in late. Worst case 6.8:1. */
   background: linear-gradient(180deg,
     rgba(20,19,18,0) 0%,
-    rgba(20,19,18,0.58) 26%,
-    rgba(20,19,18,0.82) 58%,
-    rgba(20,19,18,0.92) 100%);
+    rgba(20,19,18,0.76) 20%,
+    rgba(20,19,18,0.84) 46%,
+    rgba(20,19,18,0.84) 100%);
   color: var(--bra-on-oak);
   transform: translateY(0);
   transition: transform var(--bra-dur-base) var(--bra-ease), opacity var(--bra-dur-base) var(--bra-ease);
@@ -2689,13 +2691,17 @@ body.bra-nav-locked { overflow: hidden; }
 .brg__cap {
   position: absolute; left: 0; right: 0; bottom: 0;
   display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
-  padding: 26px 16px 14px; color: #f4f2ed;
-  /* Strong where the words are, fading only above them. Over a pale material
-     shot the old ramp left these captions around 1.1:1. */
+  padding: 14px 16px 12px; color: #f4f2ed;
+  /* Dense enough behind the words, over as little of the photograph as
+     possible. The first pass at this hit 8.6:1 — far past the 4.5 it needed
+     — and read as a black slab across the image. Shortening the band does
+     more for that impression than thinning it: same density where the text
+     sits, roughly half the picture covered. Measured worst-case 5.1:1 on the
+     palest material shot in the gallery. */
   background: linear-gradient(to top,
-    rgba(16,15,14,0.90) 0%,
-    rgba(16,15,14,0.80) 55%,
-    rgba(16,15,14,0.46) 82%,
+    rgba(16,15,14,0.84) 0%,
+    rgba(16,15,14,0.76) 62%,
+    rgba(16,15,14,0.32) 88%,
     rgba(16,15,14,0) 100%);
   opacity: 0; transform: translateY(8px);
   transition: opacity var(--bra-dur-base) var(--bra-ease), transform var(--bra-dur-base) var(--bra-ease);
@@ -3786,12 +3792,14 @@ a.bra-cardset__card:focus-visible .bra-cardset__title::after { transform: transl
    somewhere to happen. */
 .bra-cardset--overlay .bra-cardset__content {
   position: absolute; left: 0; right: 0; bottom: 0;
-  padding: var(--bra-s-4) var(--bra-s-3) var(--bra-s-3);
+  padding: 20px var(--bra-s-3) var(--bra-s-3);
   border-top: 0;
+  /* Same reasoning as .brg__cap — shorter band, not a thinner one.
+     Worst case measured 5.0:1 over the brightest case photograph. */
   background: linear-gradient(to top,
-    rgba(20,19,18,0.90) 0%,
-    rgba(20,19,18,0.80) 48%,
-    rgba(20,19,18,0.58) 78%,
+    rgba(20,19,18,0.88) 0%,
+    rgba(20,19,18,0.80) 58%,
+    rgba(20,19,18,0.36) 86%,
     rgba(20,19,18,0) 100%);
 }
 .bra-cardset--overlay .bra-cardset__content::before { display: none; }
