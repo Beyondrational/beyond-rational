@@ -2685,23 +2685,29 @@ body.bra-nav-locked { overflow: hidden; }
 .brg__cell:nth-child(6n + 4) { grid-column: span 2; grid-row: span 3; }
 .brg__img {
   width: 100%; height: 100%; object-fit: cover; display: block;
-  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1),
+              filter 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 .brg__cell:hover .brg__img { transform: scale(1.04); }
+/* The caption only exists on hover, so the image can carry part of the load:
+   dimming the photograph while its caption is up guarantees the text has
+   something dark under it whatever the picture happens to be. That matters
+   here because these are near-white product renders — a gradient alone had
+   to be almost opaque to clear AA on them, which is what made the panels
+   read as black slabs. Dim + a light scrim gets the same legibility with a
+   fraction of the ink. */
+.brg__cell:hover .brg__img,
+.brg__cell:focus-within .brg__img { filter: brightness(0.58); }
+@media (hover: none) { .brg__img { filter: brightness(0.72); } }
 .brg__cap {
   position: absolute; left: 0; right: 0; bottom: 0;
   display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
   padding: 14px 16px 12px; color: #f4f2ed;
-  /* Dense enough behind the words, over as little of the photograph as
-     possible. The first pass at this hit 8.6:1 — far past the 4.5 it needed
-     — and read as a black slab across the image. Shortening the band does
-     more for that impression than thinning it: same density where the text
-     sits, roughly half the picture covered. Measured worst-case 5.1:1 on the
-     palest material shot in the gallery. */
+  /* Light, because the dimmed image above is doing the real work. */
   background: linear-gradient(to top,
-    rgba(16,15,14,0.84) 0%,
-    rgba(16,15,14,0.76) 62%,
-    rgba(16,15,14,0.32) 88%,
+    rgba(16,15,14,0.62) 0%,
+    rgba(16,15,14,0.46) 62%,
+    rgba(16,15,14,0.18) 88%,
     rgba(16,15,14,0) 100%);
   opacity: 0; transform: translateY(8px);
   transition: opacity var(--bra-dur-base) var(--bra-ease), transform var(--bra-dur-base) var(--bra-ease);
