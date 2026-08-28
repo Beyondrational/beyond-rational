@@ -91,6 +91,36 @@
      wrapper masks. Keep this flat per-char delay matching that spec exactly
      rather than reinterpreting it. */
   var REVEAL_CHAR_DELAY_MS = 24;
+  /* U+00AD. .bra-reveal-word is nowrap by design so a word never splits
+     mid-animation — but a Danish compound ("Betalingsbetingelser.") is a
+     single word wider than a phone screen, and nowrap leaves it hanging off
+     the edge. A soft hyphen in the source marks where the word may break:
+     the segments become separate wrappers with the character itself left
+     between them as a bare text node, so the browser breaks there — and
+     draws the hyphen — only on the screens where the line doesn't fit. */
+  var SOFT_HYPHEN = '\u00AD';
+
+  function appendRevealChar(target, ch, idx) {
+    const span = document.createElement('span');
+    span.className = 'bra-reveal-char';
+    span.style.transitionDelay = `${idx * REVEAL_CHAR_DELAY_MS}ms`;
+    span.textContent = ch;
+    target.appendChild(span);
+  }
+
+  // One word becomes one nowrap wrapper per soft-hyphen segment. The stagger
+  // counts real characters only, so a soft hyphen never costs a beat.
+  function appendRevealWord(line, word, startIdx) {
+    let charIdx = startIdx;
+    word.split(SOFT_HYPHEN).forEach((part, pIdx, parts) => {
+      const wWrap = document.createElement('span');
+      wWrap.className = 'bra-reveal-word';
+      [...part].forEach((ch) => { appendRevealChar(wWrap, ch, charIdx); charIdx++; });
+      line.appendChild(wWrap);
+      if (pIdx < parts.length - 1) line.appendChild(document.createTextNode(SOFT_HYPHEN));
+    });
+    return charIdx;
+  }
 
   function splitRevealChars(el, text) {
     const wasIn = el.classList.contains('is-in');
@@ -99,17 +129,7 @@
     const words = text.split(' ');
     let charIdx = 0;
     words.forEach((word, wIdx) => {
-      const wWrap = document.createElement('span');
-      wWrap.className = 'bra-reveal-word';
-      [...word].forEach((ch) => {
-        const span = document.createElement('span');
-        span.className = 'bra-reveal-char';
-        span.style.transitionDelay = `${charIdx * REVEAL_CHAR_DELAY_MS}ms`;
-        span.textContent = ch;
-        wWrap.appendChild(span);
-        charIdx++;
-      });
-      el.appendChild(wWrap);
+      charIdx = appendRevealWord(el, word, charIdx);
       if (wIdx < words.length - 1) {
         el.appendChild(document.createTextNode(' '));
         charIdx++;

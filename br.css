@@ -248,6 +248,15 @@ a.bra-skip:focus-visible { transform: translateY(0); outline-offset: 4px; }
   letter-spacing: -0.022em;
   text-wrap: balance;
 }
+/* Phones: the 60px floor of --bra-fs-mega is wider than the column can carry.
+   "betingelser." — already the hyphenated half of a compound — measures 309px
+   at 60px, against the 311px column a 375px screen gives it. Two pixels of
+   slack is no slack at all once a fallback font renders it, and below 375px
+   there is none. Scale with the viewport down here; it stays comfortably the
+   largest thing on the page, and 560px up is untouched at the same 60px. */
+@media (max-width: 560px) {
+  .bra-mega { font-size: clamp(38px, 13.5vw, 60px); }
+}
 .bra-h1 {
   font-family: var(--bra-font);
   font-weight: 500;
@@ -1433,6 +1442,13 @@ form[data-form].is-active { display: flex; flex-direction: column; gap: 0; }
   object-fit: cover;
   display: block;
 }
+/* The width above never actually took effect: `.bra img` sets
+   max-width: 100%, and a type + class selector outranks the single class
+   here, so the image was clamped straight back to the cell's content box.
+   The negative margins still applied, which is why the photo sat flush with
+   the cell's left edge and a full 2 * s-3 short of the right one — a bleed
+   on one side only. Out-specify the reset so both sides bleed. */
+.bra img.bra-gallery-data__img { max-width: none; }
 .bra-gallery-data__img:not([src]), .bra-gallery-data__img[src=""] { display: none; }
 
 /* Whole cell as a clickable card (cases, case studies, etc.).
@@ -3190,7 +3206,13 @@ button.bra-cta { border: 0; background: none; cursor: pointer; font-family: var(
   padding: var(--bra-s-3) var(--bra-s-4);
   box-shadow: var(--bra-lift-1);
 }
-.bra-doc__card dl { display: grid; grid-template-columns: auto 1fr; gap: 10px var(--bra-s-3); margin: 0; }
+/* minmax(0, 1fr), not 1fr: a plain 1fr floors at the column's min-content
+   width, and "hello@beyondrational.com" is one unbreakable 195px token — it
+   held the grid open wider than a 320px screen and pushed the card off the
+   edge. Zero minimum lets the column shrink; the break-word below lets the
+   address itself wrap instead of being clipped. */
+.bra-doc__card dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px var(--bra-s-3); margin: 0; }
+.bra-doc, .bra-doc__card dd { overflow-wrap: break-word; }
 .bra-doc__card dt {
   font-family: var(--bra-font); font-weight: 700; font-size: 11px;
   letter-spacing: 0.12em; text-transform: uppercase; color: var(--bra-ink-mute);
@@ -3200,7 +3222,11 @@ button.bra-cta { border: 0; background: none; cursor: pointer; font-family: var(
 /* The e-mail and phone links here are the point of the card, not incidental
    links inside a sentence — so the inline exception to WCAG 2.5.8 does not
    apply and they get a real 24px target. */
-.bra-doc__card dd a { display: inline-flex; align-items: center; min-height: 24px; }
+/* `anywhere` rather than `break-word`: only `anywhere` lowers the element's
+   min-content width, and this inline-flex box sizes to exactly that — with
+   break-word the address stays one 195px token and the box refuses to shrink
+   below it, however narrow the column gets. */
+.bra-doc__card dd a { display: inline-flex; align-items: center; min-height: 24px; overflow-wrap: anywhere; }
 
 /* ---- document masthead: title + the facts that date it ---- */
 .bra-doc-meta {
@@ -3337,7 +3363,10 @@ button.bra-cta { border: 0; background: none; cursor: pointer; font-family: var(
 
 /* ---------- Newsletter (inline email capture) ---------- */
 .bra-newsletter { display: flex; gap: var(--bra-s-2); align-items: stretch; max-width: 440px; border-bottom: 2px solid currentColor; }
-.bra-newsletter input { flex: 1; background: none; border: 0; padding: 12px 0; font-family: var(--bra-font);
+/* min-width: 0 — a flex item floors at its own min-content width by default,
+   and an <input> carries an intrinsic one wide enough to push the Subscribe
+   button off a 320px screen. */
+.bra-newsletter input { flex: 1; min-width: 0; background: none; border: 0; padding: 12px 0; font-family: var(--bra-font);
   font-weight: 500; font-size: 16px; color: inherit; }
 .bra-newsletter input::placeholder { color: var(--bra-ink-mute); }
 /* outline:none removed the only focus indicator this input had — keyboard
