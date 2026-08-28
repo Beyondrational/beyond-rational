@@ -149,6 +149,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
           <li><strong>hubspotutk</strong> og <strong>__hstc</strong> — genkender din browser på tværs af besøg (udløber efter seks måneder)</li>
           <li><strong>__hssc</strong> og <strong>__hssrc</strong> — holder styr på det enkelte besøg (udløber efter 30 minutter, henholdsvis når du lukker browseren)</li>
         </ul>
+        <p>Uanset dit valg fører vi en simpel, cookiefri besøgsstatistik via Vercel Web Analytics, som hoster sitet. Den tæller sidevisninger og noterer hvilken side du kom fra, men sætter ingen cookies, gemmer intet på din enhed og laver ingen profil af dig — den kan hverken genkende dig fra besøg til besøg eller på tværs af sites. Derfor kræver den ikke samtykke.</p>
         <p>Vi bruger ingen annoncenetværk, og vi deler ikke oplysninger om dit besøg med andre end HubSpot. Du kan trække dit samtykke tilbage ved at rydde sitets data i din browsers indstillinger — så vises bjælken igen, og der indlæses ingen sporing, før du eventuelt accepterer på ny.</p>
         <p>Uanset dit valg gemmer sitet tre tekniske indstillinger i din browsers lokale lager. De bliver på din enhed, sendes aldrig til os, og indeholder ingen personoplysninger:</p>
         <ul>
@@ -166,7 +167,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
         <ul>
           <li><strong>HubSpot</strong> — modtager det, du selv skriver i kontaktformularerne her på sitet, og — hvis du har accepteret cookies — statistik om hvilke sider du besøger. Begge dele går til HubSpots europæiske servere.</li>
           <li><strong>Odoo</strong> — vores CRM- og e-mailsystem, hvor korrespondance og ordrer registreres.</li>
-          <li><strong>Vercel</strong> — hosting og levering af selve sitet, herunder tekniske serverlogs.</li>
+          <li><strong>Vercel</strong> — hosting og levering af selve sitet, herunder tekniske serverlogs og den cookiefri besøgsstatistik beskrevet ovenfor.</li>
           <li><strong>Google Fonts</strong> — sitets skrifttyper hentes fra Googles servere, når du åbner en side. Din IP-adresse sendes derfor til Google. Vi sender ingen andre oplysninger den vej, og skrifterne bruges ikke til at genkende dig.</li>
         </ul>
         <p>Sker der overførsel til lande uden for EU/EØS, sker det kun på et gyldigt overførselsgrundlag. Vi videregiver derudover oplysninger, hvor loven kræver det.</p>
@@ -246,6 +247,13 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 <script src="br.js?v=41" defer></script>
 <script src="br-hubspot.js?v=3" defer></script>
 <script src="br-content.js?v=29" defer></script>
+<!-- Vercel Web Analytics — served first-party from /_vercel, and cookieless,
+     so it needs no consent gate and counts every visitor rather than only the
+     ones who accept. Same origin means the CSP's default 'self' already covers
+     both this script and the beacon it posts back; nothing to allow-list. -->
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
+
 <!-- Start of HubSpot Embed Code -->
 <!-- type="text/plain" makes this inert: the browser parses the tag but never
      fetches or runs it, so HubSpot sets no cookies until the visitor accepts

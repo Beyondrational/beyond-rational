@@ -716,6 +716,13 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
   activate(0);
 })();
 </script>
+<!-- Vercel Web Analytics — served first-party from /_vercel, and cookieless,
+     so it needs no consent gate and counts every visitor rather than only the
+     ones who accept. Same origin means the CSP's default 'self' already covers
+     both this script and the beacon it posts back; nothing to allow-list. -->
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
+
 <!-- Start of HubSpot Embed Code -->
 <!-- type="text/plain" makes this inert: the browser parses the tag but never
      fetches or runs it, so HubSpot sets no cookies until the visitor accepts
