@@ -272,7 +272,15 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 </footer>
 
 <script src="br.js?v=41" defer></script>
-<script src="br-hubspot.js?v=1" defer></script>
+<script src="br-hubspot.js?v=3" defer></script>
 <script src="br-content.js?v=29" defer></script>
+<!-- Start of HubSpot Embed Code -->
+<!-- type="text/plain" makes this inert: the browser parses the tag but never
+     fetches or runs it, so HubSpot sets no cookies until the visitor accepts
+     in the consent bar and br-hubspot.js activates it. The tag stays in the
+     markup so HubSpot's installation check, which reads the served HTML, can
+     find the portal's script — the standard consent-manager pattern. -->
+<script type="text/plain" id="hs-script-loader" async defer src="https://js-eu1.hs-scripts.com/148769719.js"></script>
+<!-- End of HubSpot Embed Code -->
 </body>
 </html>

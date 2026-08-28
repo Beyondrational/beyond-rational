@@ -1,31 +1,44 @@
 /* ============================================================
-   B_R HubSpot — the HubSpot tracking code (portal 148769719, EU1),
-   loaded only once the visitor has accepted in the consent bar.
+   B_R HubSpot — activates the tracking code once the visitor
+   has accepted in the consent bar.
 
-   HubSpot's tracker sets cookies (hubspotutk, __hstc, __hssc,
-   __hssrc) and reports page views back to HubSpot, so under the
-   Danish cookie rules it must not run before consent is given.
+   Each page carries the embed as an inert <script type="text/plain"
+   id="hs-script-loader">. The browser parses that tag but never
+   fetches or runs it, so nothing of HubSpot's exists on the page
+   before consent — no cookies, no requests. Keeping the tag in the
+   markup is what lets HubSpot's installation check find the portal
+   script, since that check reads the served HTML and cannot see a
+   script that only JS adds.
+
+   HubSpot's own doNotTrack switch is not enough for this: with it
+   set, the tracker still writes hubspotutk, __hstc, __hssc and
+   __hssrc on the first page view. Not loading it at all is the only
+   way to keep the page cookie-free until asked.
 
    br.js owns the bar: it stores the choice in localStorage under
-   brConsent ("accept" | "decline") and fires a br-consent event
-   the moment a visitor picks one — listening for that event means
-   tracking starts on the same page view rather than the next one.
+   brConsent ("accept" | "decline") and fires a br-consent event the
+   moment a visitor picks one, so tracking starts on the same page
+   view as the click rather than the next one.
    ============================================================ */
 
 (function () {
-  var HUBSPOT_PORTAL_ID = '148769719';
-  var HUBSPOT_SRC = 'https://js-eu1.hs-scripts.com/' + HUBSPOT_PORTAL_ID + '.js';
-  var SCRIPT_ID = 'hs-script-loader';
   var CONSENT_KEY = 'brConsent';
+  var PLACEHOLDER_ID = 'hs-script-loader';
 
-  function loadTracker() {
-    if (document.getElementById(SCRIPT_ID)) return;
+  function activateTracker() {
+    var placeholder = document.getElementById(PLACEHOLDER_ID);
+    if (!placeholder || placeholder.dataset.brActivated) return;
+    placeholder.dataset.brActivated = 'true';
+
+    // The live tag inherits the id so HubSpot finds what it expects; the
+    // placeholder gives it up rather than leaving two elements sharing one.
+    placeholder.removeAttribute('id');
     var script = document.createElement('script');
     script.type = 'text/javascript';
-    script.id = SCRIPT_ID;
+    script.id = PLACEHOLDER_ID;
     script.async = true;
     script.defer = true;
-    script.src = HUBSPOT_SRC;
+    script.src = placeholder.src;
     document.head.appendChild(script);
   }
 
@@ -40,11 +53,11 @@
   }
 
   if (storedConsent() === 'accept') {
-    loadTracker();
+    activateTracker();
     return;
   }
 
   document.addEventListener('br-consent', function (e) {
-    if (e.detail === 'accept') loadTracker();
+    if (e.detail === 'accept') activateTracker();
   });
 })();
