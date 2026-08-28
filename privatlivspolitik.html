@@ -77,10 +77,10 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
   </p>
 
   <dl class="bra-doc-meta" style="margin-top: var(--bra-s-4);">
-    <div><dt>Senest opdateret</dt><dd>22. august 2026</dd></div>
+    <div><dt>Senest opdateret</dt><dd>28. august 2026</dd></div>
     <div><dt>Dataansvarlig</dt><dd>Beyond Rational ApS</dd></div>
     <div><dt>CVR</dt><dd>45580350</dd></div>
-    <div><dt>Cookies</dt><dd>Ingen</dd></div>
+    <div><dt>Cookies</dt><dd>Kun med samtykke</dd></div>
   </dl>
 </section>
 
@@ -143,8 +143,14 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 
       <section id="cookies">
         <h2><span class="n">4</span> Cookies og lokal lagring</h2>
-        <p><strong>Dette site sætter ingen cookies.</strong> Vi bruger hverken analyseværktøjer, annoncenetværk eller sporing fra tredjepart, og vi laver ingen profilering af besøgende.</p>
-        <p>Sitet gemmer tre tekniske indstillinger i din browsers lokale lager. De bliver på din enhed, sendes aldrig til os, og indeholder ingen personoplysninger:</p>
+        <p><strong>Vi sætter kun cookies, hvis du siger ja.</strong> Vælger du “Afvis” i samtykkebjælken — eller svarer du slet ikke — indlæses der ingen cookies, og der sendes ingen oplysninger om dit besøg videre.</p>
+        <p>Accepterer du, indlæser vi HubSpots analyseværktøj, som sætter disse cookies for at måle, hvilke sider der bliver læst:</p>
+        <ul>
+          <li><strong>hubspotutk</strong> og <strong>__hstc</strong> — genkender din browser på tværs af besøg (udløber efter seks måneder)</li>
+          <li><strong>__hssc</strong> og <strong>__hssrc</strong> — holder styr på det enkelte besøg (udløber efter 30 minutter, henholdsvis når du lukker browseren)</li>
+        </ul>
+        <p>Vi bruger ingen annoncenetværk, og vi deler ikke oplysninger om dit besøg med andre end HubSpot. Du kan trække dit samtykke tilbage ved at rydde sitets data i din browsers indstillinger — så vises bjælken igen, og der indlæses ingen sporing, før du eventuelt accepterer på ny.</p>
+        <p>Uanset dit valg gemmer sitet tre tekniske indstillinger i din browsers lokale lager. De bliver på din enhed, sendes aldrig til os, og indeholder ingen personoplysninger:</p>
         <ul>
           <li><strong>brConsent</strong> — dit valg i samtykkebjælken, så du ikke bliver spurgt igen</li>
           <li><strong>brLang</strong> — om du læser sitet på dansk eller engelsk</li>
@@ -158,7 +164,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
         <p>Vi sælger ikke personoplysninger, og vi videregiver dem ikke til tredjepart med henblik på markedsføring.</p>
         <p>Vi bruger følgende databehandlere til at drive virksomheden. De behandler kun oplysninger på vores instruks og er omfattet af databehandleraftaler:</p>
         <ul>
-          <li><strong>HubSpot</strong> — modtager det, du selv skriver i kontaktformularerne her på sitet. Indsendelser går til HubSpots europæiske servere.</li>
+          <li><strong>HubSpot</strong> — modtager det, du selv skriver i kontaktformularerne her på sitet, og — hvis du har accepteret cookies — statistik om hvilke sider du besøger. Begge dele går til HubSpots europæiske servere.</li>
           <li><strong>Odoo</strong> — vores CRM- og e-mailsystem, hvor korrespondance og ordrer registreres.</li>
           <li><strong>Vercel</strong> — hosting og levering af selve sitet, herunder tekniske serverlogs.</li>
           <li><strong>Google Fonts</strong> — sitets skrifttyper hentes fra Googles servere, når du åbner en side. Din IP-adresse sendes derfor til Google. Vi sender ingen andre oplysninger den vej, og skrifterne bruges ikke til at genkende dig.</li>
@@ -238,6 +244,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 </footer>
 
 <script src="br.js?v=40" defer></script>
+<script src="br-hubspot.js?v=1" defer></script>
 <script src="br-content.js?v=29" defer></script>
 </body>
 </html>

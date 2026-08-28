@@ -22,7 +22,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://*.hs-scripts.com https://*.hs-analytics.net https://*.hs-banner.com https://*.hscollectedforms.net https://*.hsforms.net https://*.hsadspixel.net https://*.usemessages.com https://*.hsappstatic.net https://*.hubspot.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://*.hsappstatic.net; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com https://*.hubapi.com https://*.hubspot.com https://*.hsforms.com https://*.hsforms.net https://*.hscollectedforms.net; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://*.hubspot.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
         },
         {
           "key": "X-Frame-Options",
@@ -35,7 +35,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://*.hs-scripts.com https://*.hs-analytics.net https://*.hs-banner.com https://*.hscollectedforms.net https://*.hsforms.net https://*.hsadspixel.net https://*.usemessages.com https://*.hsappstatic.net https://*.hubspot.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://*.hsappstatic.net; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com https://*.hubapi.com https://*.hubspot.com https://*.hsforms.com https://*.hsforms.net https://*.hscollectedforms.net; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://*.hubspot.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
         },
         {
           "key": "X-Frame-Options",
@@ -48,7 +48,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://*.hs-scripts.com https://*.hs-analytics.net https://*.hs-banner.com https://*.hscollectedforms.net https://*.hsforms.net https://*.hsadspixel.net https://*.usemessages.com https://*.hsappstatic.net https://*.hubspot.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://*.hsappstatic.net; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com https://*.hubapi.com https://*.hubspot.com https://*.hsforms.com https://*.hsforms.net https://*.hscollectedforms.net; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://*.hubspot.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
         },
         {
           "key": "X-Frame-Options",
@@ -61,7 +61,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://*.hs-scripts.com https://*.hs-analytics.net https://*.hs-banner.com https://*.hscollectedforms.net https://*.hsforms.net https://*.hsadspixel.net https://*.usemessages.com https://*.hsappstatic.net https://*.hubspot.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://*.hsappstatic.net; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com https://*.hubapi.com https://*.hubspot.com https://*.hsforms.com https://*.hsforms.net https://*.hscollectedforms.net; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://*.hubspot.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
         },
         {
           "key": "X-Frame-Options",
@@ -74,7 +74,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://*.hs-scripts.com https://*.hs-analytics.net https://*.hs-banner.com https://*.hscollectedforms.net https://*.hsforms.net https://*.hsadspixel.net https://*.usemessages.com https://*.hsappstatic.net https://*.hubspot.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://*.hsappstatic.net; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com https://*.hubapi.com https://*.hubspot.com https://*.hsforms.com https://*.hsforms.net https://*.hscollectedforms.net; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://*.hubspot.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
         },
         {
           "key": "X-Frame-Options",
@@ -87,7 +87,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://*.hs-scripts.com https://*.hs-analytics.net https://*.hs-banner.com https://*.hscollectedforms.net https://*.hsforms.net https://*.hsadspixel.net https://*.usemessages.com https://*.hsappstatic.net https://*.hubspot.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://*.hsappstatic.net; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com https://*.hubapi.com https://*.hubspot.com https://*.hsforms.com https://*.hsforms.net https://*.hscollectedforms.net; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://*.hubspot.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
         },
         {
           "key": "X-Frame-Options",
@@ -100,7 +100,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://*.hs-scripts.com https://*.hs-analytics.net https://*.hs-banner.com https://*.hscollectedforms.net https://*.hsforms.net https://*.hsadspixel.net https://*.usemessages.com https://*.hsappstatic.net https://*.hubspot.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://*.hsappstatic.net; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com https://*.hubapi.com https://*.hubspot.com https://*.hsforms.com https://*.hsforms.net https://*.hscollectedforms.net; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://*.hubspot.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
         },
         {
           "key": "X-Frame-Options",
@@ -113,7 +113,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://*.hs-scripts.com https://*.hs-analytics.net https://*.hs-banner.com https://*.hscollectedforms.net https://*.hsforms.net https://*.hsadspixel.net https://*.usemessages.com https://*.hsappstatic.net https://*.hubspot.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://*.hsappstatic.net; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com https://*.hubapi.com https://*.hubspot.com https://*.hsforms.com https://*.hsforms.net https://*.hscollectedforms.net; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://*.hubspot.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
         },
         {
           "key": "X-Frame-Options",
@@ -126,7 +126,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://*.hs-scripts.com https://*.hs-analytics.net https://*.hs-banner.com https://*.hscollectedforms.net https://*.hsforms.net https://*.hsadspixel.net https://*.usemessages.com https://*.hsappstatic.net https://*.hubspot.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://*.hsappstatic.net; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com https://*.hubapi.com https://*.hubspot.com https://*.hsforms.com https://*.hsforms.net https://*.hscollectedforms.net; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://*.hubspot.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
         },
         {
           "key": "X-Frame-Options",
@@ -139,7 +139,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://*.hs-scripts.com https://*.hs-analytics.net https://*.hs-banner.com https://*.hscollectedforms.net https://*.hsforms.net https://*.hsadspixel.net https://*.usemessages.com https://*.hsappstatic.net https://*.hubspot.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://*.hsappstatic.net; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com https://*.hubapi.com https://*.hubspot.com https://*.hsforms.com https://*.hsforms.net https://*.hscollectedforms.net; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://*.hubspot.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
         },
         {
           "key": "X-Frame-Options",
@@ -152,7 +152,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://*.hs-scripts.com https://*.hs-analytics.net https://*.hs-banner.com https://*.hscollectedforms.net https://*.hsforms.net https://*.hsadspixel.net https://*.usemessages.com https://*.hsappstatic.net https://*.hubspot.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://*.hsappstatic.net; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com https://*.hubapi.com https://*.hubspot.com https://*.hsforms.com https://*.hsforms.net https://*.hscollectedforms.net; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://*.hubspot.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
         },
         {
           "key": "X-Frame-Options",
@@ -165,7 +165,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://*.hs-scripts.com https://*.hs-analytics.net https://*.hs-banner.com https://*.hscollectedforms.net https://*.hsforms.net https://*.hsadspixel.net https://*.usemessages.com https://*.hsappstatic.net https://*.hubspot.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://*.hsappstatic.net; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com https://*.hubapi.com https://*.hubspot.com https://*.hsforms.com https://*.hsforms.net https://*.hscollectedforms.net; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://*.hubspot.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
         },
         {
           "key": "X-Frame-Options",
@@ -178,7 +178,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://*.hs-scripts.com https://*.hs-analytics.net https://*.hs-banner.com https://*.hscollectedforms.net https://*.hsforms.net https://*.hsadspixel.net https://*.usemessages.com https://*.hsappstatic.net https://*.hubspot.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://*.hsappstatic.net; img-src 'self' data: https:; connect-src 'self' https://api-eu1.hsforms.com https://api.github.com https://github.com https://*.hubapi.com https://*.hubspot.com https://*.hsforms.com https://*.hsforms.net https://*.hscollectedforms.net; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://*.hubspot.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api-eu1.hsforms.com; object-src 'none'"
         },
         {
           "key": "X-Frame-Options",
