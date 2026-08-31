@@ -3,13 +3,13 @@
   "hero": {
     "eyebrow": "The product",
     "title": "Aisti Aalto®.",
-    "lede": "Foam-formed natural wood fibre. Absorption Class A, two formats, two thicknesses. Fits standard T-grid ceilings or mounts directly with adhesive. Full production capacity from August 2026 — preorder now."
+    "lede": "Foam-formed natural wood fibre. Absorption Class A, two formats, two thicknesses, three edge profiles. Fits standard T-grid ceilings or mounts directly with adhesive. Available on request."
   },
   "conscious": {
     "eyebrow": "A conscious choice",
     "title_l1": "Sets a new",
     "title_l2": "benchmark.",
-    "body": "At its core, Aisti Aalto is a bio-based acoustic absorber built to perform at scale — not a compromise material, a genuine alternative. Crafted with a minimalist Scandinavian design approach, it blends into architectural concepts while doing real acoustic work, quietly improving comfort and wellbeing in the room."
+    "body": "At its core, Aisti Aalto is a bio-based acoustic absorber built to perform at scale — not a compromise material, a genuine alternative. The core is chemi-thermomechanical wood pulp, made without toxic substances, with no plastic binders and no mineral wool. At 1.8 kg/m² it is light to handle and light on the structure, and it carries no green premium — the performance argument does not cost extra."
   },
   "spec": {
     "items": [
@@ -26,6 +26,10 @@
         "value": "20 or 40 mm"
       },
       {
+        "key": "Weight",
+        "value": "1.8 kg/m²"
+      },
+      {
         "key": "Absorption",
         "value": "Class A"
       },
@@ -38,12 +42,16 @@
         "value": "Euroclass B-s1,d0"
       },
       {
-        "key": "Embodied CO₂e",
-        "value": "up to −6.71/m²"
+        "key": "Carbon footprint",
+        "value": "1.29–1.74 kg CO₂e/m²"
+      },
+      {
+        "key": "Stored carbon",
+        "value": "−3.09 to −6.71 kg CO₂e/m²"
       },
       {
         "key": "End of life",
-        "value": "100% recyclable"
+        "value": "Core fully recyclable"
       }
     ],
     "downloads": [
@@ -77,7 +85,7 @@
     "thickness": {
       "big1": "20 mm",
       "big2": "40 mm",
-      "note": "20 mm for suspended ceilings, 40 mm for direct mounting."
+      "note": "20 mm and 40 mm, both in either format. Mounting is set by the edge profile, not the thickness."
     },
     "material_life": [
       {
@@ -89,12 +97,12 @@
         "value": "B-s1,d0"
       },
       {
-        "key": "CO₂e",
-        "value": "up to −6.71/m²"
+        "key": "Stored C",
+        "value": "−3.09 to −6.71"
       },
       {
-        "key": "Recyc.",
-        "value": "100 %"
+        "key": "End of life",
+        "value": "Core recyclable"
       }
     ]
   },
@@ -225,7 +233,7 @@
     "title_l1": "Foam-formed,",
     "title_l2": "not pressed.",
     "body_p1": "Aisti's foam-forming technology, adapted from the Finnish paper industry, suspends wood fibre in foam instead of pressing it flat. The fibres set into an open, porous structure that captures sound across a wide frequency range, without binders or plastics.",
-    "body_p2": "The technology is cost-effective and energy-conscious, producing tiles that are light in weight, plastic-free, and 100% recyclable. Produced in Jyväskylä, Finland.",
+    "body_p2": "Fire performance is built into the material, not sprayed on: a potassium-based salt treatment that reacts to heat and forms a protective ceramic layer over the fibres, slowing flame spread. The treatment is patented and unique to Aisti. The core material is fully recyclable — returned to the factory, it is pulped and made again. Produced in Jyväskylä, Finland.",
     "body_p3": "In the room, that translates to less reverberation and background noise — speech carries more clearly, conversations feel more natural, and the space simply feels calmer to be in."
   },
   "partner": {
@@ -270,7 +278,7 @@
   "cta": {
     "title_l1": "Specify",
     "title_l2": "Aisti.",
-    "lede": "Production ramps to full capacity in August 2026. Preorder now, or request samples and the full data package."
+    "lede": "Tell us about the room and we'll help you land format, thickness and edge profile. Samples and the full data package on request."
   },
   "performance": {
     "section_label": "Performance",

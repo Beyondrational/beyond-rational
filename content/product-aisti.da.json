@@ -3,13 +3,13 @@
   "hero": {
     "eyebrow": "Produktet",
     "title": "Aisti Aalto®.",
-    "lede": "Skumformet naturlig træfiber. Absorptionsklasse A, to formater, to tykkelser. Passer til standard T-skinneloft eller monteres direkte med klæber. Fuld produktionskapacitet fra august 2026 — forudbestil nu."
+    "lede": "Skumformet naturlig træfiber. Absorptionsklasse A, to formater, to tykkelser, tre kantprofiler. Passer i standard T-skinne eller monteres direkte med lim. Tilgængelig ved forespørgsel."
   },
   "conscious": {
     "eyebrow": "Et bevidst valg",
     "title_l1": "Sætter en ny",
     "title_l2": "standard.",
-    "body": "I sin kerne er Aisti Aalto en bio-baseret akustisk absorbent bygget til at yde i stor skala — ikke et kompromis-materiale, men et reelt alternativ. Udført med en minimalistisk skandinavisk designtilgang, glider den ind i arkitektoniske koncepter, mens den udfører reelt akustisk arbejde og stille forbedrer komfort og trivsel i rummet."
+    "body": "Aisti Aalto er grundlæggende en biobaseret akustikabsorbent bygget til at præstere i stor skala — ikke et kompromis, men et reelt alternativ. Kernen er kemitermomekanisk træmasse fremstillet uden giftige stoffer, uden plastbindemidler og uden mineraluld. Med 1,8 kg/m² er den let at håndtere og let for konstruktionen, og den koster ikke et grønt tillæg — argumentet er ikke dyrere end alternativet."
   },
   "spec": {
     "items": [
@@ -26,6 +26,10 @@
         "value": "20 eller 40 mm"
       },
       {
+        "key": "Vægt",
+        "value": "1,8 kg/m²"
+      },
+      {
         "key": "Absorption",
         "value": "Class A"
       },
@@ -38,12 +42,16 @@
         "value": "Euroclass B-s1,d0"
       },
       {
-        "key": "Indlejret CO₂e",
-        "value": "op til −6,71/m²"
+        "key": "CO₂-aftryk",
+        "value": "1,29–1,74 kg CO₂e/m²"
       },
       {
-        "key": "Endt levetid",
-        "value": "100% genanvendelig"
+        "key": "Lagret kulstof",
+        "value": "−3,09 til −6,71 kg CO₂e/m²"
+      },
+      {
+        "key": "Bortskaffelse",
+        "value": "Kernen kan genanvendes fuldt ud"
       }
     ],
     "downloads": [
@@ -77,7 +85,7 @@
     "thickness": {
       "big1": "20 mm",
       "big2": "40 mm",
-      "note": "20 mm til nedhængte lofter, 40 mm til direkte montering."
+      "note": "20 mm og 40 mm, begge i begge formater. Montagen bestemmes af kantprofilen, ikke af tykkelsen."
     },
     "material_life": [
       {
@@ -89,12 +97,12 @@
         "value": "B-s1,d0"
       },
       {
-        "key": "CO₂e",
-        "value": "op til −6,71/m²"
+        "key": "Lagret C",
+        "value": "−3,09 til −6,71"
       },
       {
-        "key": "Genanv.",
-        "value": "100 %"
+        "key": "Bortskaf.",
+        "value": "Kerne genanv."
       }
     ]
   },
@@ -225,7 +233,7 @@
     "title_l1": "Skumformet,",
     "title_l2": "ikke presset.",
     "body_p1": "Aistis skumformningsteknologi, tilpasset fra den finske papirindustri, opslæmmer træfiber i skum i stedet for at presse den flad. Fibrene sætter sig i en åben, porøs struktur, der opfanger lyd på tværs af et bredt frekvensområde, uden bindemidler eller plastik.",
-    "body_p2": "Teknologien er omkostningseffektiv og energibevidst og producerer plader, der er lette, plastfrie og 100% genanvendelige. Fremstillet i Jyväskylä, Finland.",
+    "body_p2": "Brandsikkerheden ligger i materialet, ikke i en overfladebehandling: en kaliumbaseret saltbehandling, der reagerer på varme og danner et beskyttende keramisk lag om fibrene, så flammespredningen bremses. Behandlingen er patenteret og unik for Aisti. Kernematerialet kan genanvendes fuldt ud — sendes pladen retur til fabrikken, pulpes den og bliver til nye plader. Produceret i Jyväskylä, Finland.",
     "body_p3": "I rummet betyder det mindre efterklang og baggrundsstøj — tale bliver tydeligere, samtaler føles mere naturlige, og rummet opleves simpelthen roligere at være i."
   },
   "partner": {
@@ -270,7 +278,7 @@
   "cta": {
     "title_l1": "Specificér",
     "title_l2": "Aisti.",
-    "lede": "Produktionen når fuld kapacitet i august 2026. Forudbestil nu, eller anmod om vareprøver og den fulde datapakke."
+    "lede": "Fortæl om rummet, så hjælper vi med format, tykkelse og kantprofil. Vareprøver og det fulde datablad efter forespørgsel."
   },
   "performance": {
     "section_label": "Ydeevne",
