@@ -2781,9 +2781,15 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
 }
 .home-hero__inner {
   position: relative; z-index: 1; min-height: 100vh;
-  display: grid; grid-template-rows: auto 1fr auto; gap: var(--bra-s-4);
+  /* Flex, not a three-row grid: the top bar is optional (the homepage has
+     none) and a fixed row template put the headline in the wrong row the
+     moment a child was missing — title jumped to the top of the screen.
+     Pushing the centre block down with margin-top:auto composes correctly
+     whether the bar is there or not. */
+  display: flex; flex-direction: column; gap: var(--bra-s-4);
   padding-top: 104px; padding-bottom: var(--bra-s-4);
 }
+.home-hero__center { margin-top: auto; }
 .home-hero--sub .home-hero__inner { min-height: 100vh; }
 /* Breathing room for the first content section directly under a hero
    (plain container sections that otherwise butt against the hero).
@@ -2797,7 +2803,6 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
   transition: color var(--bra-dur-base) var(--bra-ease);
 }
 .home-hero__back:hover { color: var(--bra-on-oak); }
-.home-hero__center { align-self: end; }
 .home-hero__title {
   font-family: var(--bra-font); font-weight: 300;
   font-size: clamp(46px, 7.4vw, 116px); line-height: 1.00;

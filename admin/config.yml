@@ -106,7 +106,6 @@ collections:
               - { label: "\"Phone\" field label",        name: "phone_label",       widget: "string", i18n: true }
               - { label: "\"Office\" field label",       name: "office_label",      widget: "string", i18n: true }
               - { label: "\"Hours\" field label",        name: "hours_label",       widget: "string", i18n: true }
-              - { label: "Site tag (small print under every sub-page hero)", name: "site_tag", widget: "string", i18n: true }
               - { label: "Skip-to-content link",     name: "skip_to_content",    widget: "string", i18n: true, hint: "Only keyboard users see it — it appears on the first Tab." }
               - { label: "Button: get in touch",     name: "cta_get_in_touch",   widget: "string", i18n: true, hint: "Shared across pages — changing it changes all of them." }
               - { label: "Button: request a sample", name: "cta_request_sample", widget: "string", i18n: true }
@@ -133,8 +132,6 @@ collections:
             widget: "object"
             i18n: true
             fields:
-              - { label: "Eyebrow left",          name: "eyebrow_left",  widget: "string", i18n: true }
-              - { label: "Eyebrow right",         name: "eyebrow_right", widget: "string", i18n: true }
               - { label: "Title line 1",          name: "title_l1",      widget: "string", i18n: true }
               - { label: "Title line 2 (emphasised)", name: "title_l2_em", widget: "string", i18n: true }
               - { label: "Subtitle",              name: "subtitle",      widget: "text", i18n: true }
@@ -246,7 +243,6 @@ collections:
             widget: "object"
             i18n: true
             fields:
-              - { label: "Eyebrow",     name: "eyebrow",  widget: "string", i18n: true }
               - { label: "Title line 1", name: "title_l1", widget: "string", i18n: true }
               - { label: "Title line 2", name: "title_l2", widget: "string", i18n: true }
               - { label: "Lede",        name: "lede",     widget: "text", i18n: true }
@@ -432,7 +428,6 @@ collections:
             widget: "object"
             i18n: true
             fields:
-              - { label: "Eyebrow",       name: "eyebrow",   widget: "string", i18n: true }
               - { label: "Title line 1",  name: "title_l1",  widget: "string", i18n: true }
               - { label: "Title line 2",  name: "title_l2",  widget: "string", i18n: true }
               - { label: "Subtitle",      name: "subtitle",  widget: "text", i18n: true }
@@ -515,7 +510,6 @@ collections:
             widget: "object"
             i18n: true
             fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
               - { label: "Title",   name: "title",   widget: "string", i18n: true }
               - { label: "Lede",    name: "lede",    widget: "text", i18n: true }
           - label: "The idea"
@@ -604,7 +598,6 @@ collections:
             widget: "object"
             i18n: true
             fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
               - { label: "Title",   name: "title",   widget: "string", i18n: true }
               - { label: "Lede",    name: "lede",    widget: "text", i18n: true }
 
@@ -854,7 +847,6 @@ collections:
             widget: "object"
             i18n: true
             fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
               - { label: "Title",   name: "title",   widget: "string", i18n: true }
               - { label: "Lede",    name: "lede",    widget: "text", i18n: true }
 
@@ -896,7 +888,6 @@ collections:
             widget: "object"
             i18n: true
             fields:
-              - { label: "Eyebrow",      name: "eyebrow",  widget: "string", i18n: true }
               - { label: "Title line 1", name: "title_l1", widget: "string", i18n: true }
               - { label: "Title line 2", name: "title_l2", widget: "string", i18n: true }
               - { label: "Lede",         name: "lede",     widget: "text", i18n: true }
@@ -982,7 +973,6 @@ collections:
             widget: "object"
             i18n: true
             fields:
-              - { label: "Eyebrow",      name: "eyebrow",  widget: "string", i18n: true }
               - { label: "Title line 1", name: "title_l1", widget: "string", i18n: true }
               - { label: "Title line 2", name: "title_l2", widget: "string", i18n: true }
               - { label: "Lede",         name: "lede",     widget: "text", i18n: true }
@@ -1068,7 +1058,6 @@ collections:
             widget: "object"
             i18n: true
             fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
               - { label: "Title",   name: "title",   widget: "string", i18n: true }
               - { label: "Lede",    name: "lede",    widget: "text", i18n: true }
           - label: "The idea"
@@ -1150,7 +1139,6 @@ collections:
             widget: "object"
             i18n: true
             fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
               - { label: "Title",   name: "title",   widget: "string", i18n: true }
               - { label: "Lede",    name: "lede",    widget: "text", i18n: true }
           - label: "The idea"

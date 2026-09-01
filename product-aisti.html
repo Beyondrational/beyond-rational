@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;500;700;900&family=Archivo+Black&display=swap">
-<link rel="stylesheet" href="br.css?v=61">
+<link rel="stylesheet" href="br.css?v=62">
 <script>if(sessionStorage.getItem("brLoaderShown")){document.documentElement.classList.add("br-loader-skip")}
 /* pagereveal fires before deferred scripts run, so br.js can never catch the
    incoming view transition itself — stash it here and let br.js await it. */
@@ -132,7 +132,6 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
   <div class="bra-container home-hero__inner">
     <header class="home-hero__top">
       <a href="products.html" class="bra-caption home-hero__back" data-content="misc.back_products">← Products</a>
-      <span class="bra-caption" data-content="hero.eyebrow">The product</span>
     </header>
 
     <div class="home-hero__center">
@@ -143,10 +142,6 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
         Foam-formed natural wood fibre. Absorption Class A, two formats, two thicknesses. Fits standard T-grid ceilings or mounts directly with adhesive. Full production capacity from August 2026.
       </p>
     </div>
-
-    <footer class="home-hero__foot">
-      <span class="bra-micro" data-content="misc.site_tag">Beyond Rational · Copenhagen</span>
-    </footer>
   </div>
 </section>
 
@@ -675,10 +670,10 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 
 <script src="br.js?v=41" defer></script>
 <script src="br-hubspot.js?v=3" defer></script>
-<script src="br-content.js?v=29" defer></script>
+<script src="br-content.js?v=30" defer></script>
 <!-- The document gate posts to HubSpot through br-forms.js, so this page
      needs it too — it used to load only on contact.html. -->
-<script src="br-forms.js?v=2" defer></script>
+<script src="br-forms.js?v=3" defer></script>
 <script>
 /* Video switcher — chips swap the YouTube iframe's src (CMS-aware) */
 (function () {
