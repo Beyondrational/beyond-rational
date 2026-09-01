@@ -9,7 +9,7 @@
     "eyebrow": "Opgaven",
     "title_l1": "Efterklang",
     "title_l2": "tæmmet.",
-    "body_p1": "Rummet havde en målt efterklangstid (RT60) over 1,2 sekunder — typisk for et ubehandlet kontor med høje lofter og synlig beton. Samtaler blev utydelige. Møder føltes trættende.",
+    "body_p1": "Rummet havde et ekkoproblem — høje lofter og hårde overflader, som i et hvilket som helst ubehandlet moderne kontor. Samtaler flød sammen. Møder blev trættende.",
     "body_p2": "Udfordringen var at behandle loftet uden nedhængte panelmoduler eller synlige absorptionsbaffler. Opgaven krævede en pladeflugtende, neutral loftoverflade, der kunne specificeres direkte fra en arkitekttegning.",
     "body_p3": "Aisti Aalto i 40 mm, monteret med en 200 mm lægte for at skabe et luftmellemrum, var specifikationen. Det bredere pladeformat — 600×1200 mm — reducerede antallet af synlige samlinger og holdt loftfladen ren."
   },
@@ -66,21 +66,13 @@
     "eyebrow": "Resultatet",
     "title_l1": "−29 %",
     "title_l2": "RT60.",
-    "note": "Efterklangstid målt in-situ før og efter installation. Absorptionskoefficienter fra EN ISO 354-efterklangsrumtest. Konfiguration: 40 mm / 200 mm luftmellemrum."
+    "note": "Absorptionskoefficienter fra EN ISO 354-efterklangsrumsmåling. Opbygning: 40 mm / 200 mm luftgab. Aisti oplyser en forbedring af efterklangstiden på 29 % på hvert oktavbånd efter montage."
   },
   "performance": {
     "items": [
       {
-        "key": "RT60 før",
-        "value": "> 1,20 s"
-      },
-      {
-        "key": "RT60 efter",
-        "value": "~0,85 s"
-      },
-      {
-        "key": "Forbedring",
-        "value": "~29 %"
+        "key": "Efterklangstid",
+        "value": "−29 %"
       },
       {
         "key": "α ved 125 Hz",
@@ -107,6 +99,6 @@
   "cta": {
     "title_l1": "Specificér",
     "title_l2": "dit projekt.",
-    "lede": "Send briefet. Vi hjælper dig med at vælge format, tykkelse og montering til dit rum — og skaffer dig vareprøver forud for fuld produktion i august 2026."
+    "lede": "Send briefet. Vi hjælper dig med at vælge format, tykkelse og montering til dit rum. Vareprøver og det fulde datablad efter forespørgsel."
   }
 }

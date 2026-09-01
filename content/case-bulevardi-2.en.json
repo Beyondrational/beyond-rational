@@ -9,7 +9,7 @@
     "eyebrow": "The brief",
     "title_l1": "Reverberation",
     "title_l2": "tamed.",
-    "body_p1": "The space had a measured reverberation time (RT60) above 1.2 seconds — typical for an untreated office with high ceilings and exposed concrete. Conversations blurred. Meetings felt tiring.",
+    "body_p1": "The space had an echo problem — high ceilings and hard surfaces, typical of an untreated modern office. Conversations blurred. Meetings felt tiring.",
     "body_p2": "The challenge was treating the ceiling without drop-in suspended panels or visible absorption baffles. The brief called for a flush, neutral ceiling surface that could be specified directly from an architectural drawing.",
     "body_p3": "Aisti Aalto at 40 mm, mounted with a 200 mm batten to create an air gap, was the specification. The wider tile format — 600×1200 mm — reduced the number of visible joints and kept the ceiling plane clean."
   },
@@ -66,21 +66,13 @@
     "eyebrow": "The result",
     "title_l1": "−29 %",
     "title_l2": "RT60.",
-    "note": "Reverberation time measured in-situ pre and post installation. Absorption coefficients from EN ISO 354 reverberation room test. Configuration: 40 mm / 200 mm air gap."
+    "note": "Absorption coefficients from EN ISO 354 reverberation room test. Configuration: 40 mm / 200 mm air gap. Aisti reports a 29% improvement in reverberation time on each octave band after installation."
   },
   "performance": {
     "items": [
       {
-        "key": "RT60 before",
-        "value": "> 1.20 s"
-      },
-      {
-        "key": "RT60 after",
-        "value": "~0.85 s"
-      },
-      {
-        "key": "Improvement",
-        "value": "~29 %"
+        "key": "Reverberation time",
+        "value": "−29 %"
       },
       {
         "key": "α at 125 Hz",
@@ -107,6 +99,6 @@
   "cta": {
     "title_l1": "Specify",
     "title_l2": "your project.",
-    "lede": "Send the brief. We'll help you select format, thickness, and mounting for your room — and get you samples ahead of full production in August 2026."
+    "lede": "Send the brief. We'll help you select format, thickness, and mounting for your room. Samples and the full data package on request."
   }
 }

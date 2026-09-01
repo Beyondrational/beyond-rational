@@ -66,7 +66,7 @@
     "eyebrow": "The result",
     "title_l1": "Class A,",
     "title_l2": "confirmed.",
-    "note": "Absorption coefficients from EN ISO 354 reverberation room test. Configuration: 20 mm / tight (plate-flush). α ≥ 0.90 across speech bands qualifies as Class A."
+    "note": "Absorption coefficients from EN ISO 354 reverberation room test. Configuration: 20 mm / tight (plate-flush). Aisti rates the tile absorption Class A to EN ISO 11654."
   },
   "performance": {
     "items": [
@@ -99,6 +99,6 @@
   "cta": {
     "title_l1": "Specify",
     "title_l2": "your project.",
-    "lede": "Send the brief. We'll help you select format, thickness, and mounting for your room — and get you samples ahead of full production in August 2026."
+    "lede": "Send the brief. We'll help you select format, thickness, and mounting for your room. Samples and the full data package on request."
   }
 }
