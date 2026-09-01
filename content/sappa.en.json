@@ -116,55 +116,55 @@
     "source": "Source: Sappa and Troldtekt published technical data sheets."
   },
   "gallery_head": {
-    "eyebrow": "On site",
+    "eyebrow": "From field to wall",
     "title_l1": "Hemp,",
     "title_l2": "on the wall.",
-    "body": "Images are managed in the CMS — add or replace them at /admin."
+    "body": "The panel flat, the fibre close, and the ceilings and walls it ends up in."
   },
   "gallery": [
     {
-      "title": "Panel",
-      "meta": "Product",
+      "title": "One panel, face up",
+      "meta": "Product shot",
       "image": "assets/sappa-gallery-panel.jpg"
     },
     {
-      "title": "Texture",
+      "title": "Corner and edge, close",
       "meta": "Material detail",
       "image": "assets/sappa-gallery-texture.jpg"
     },
     {
-      "title": "Colours",
-      "meta": "Range",
+      "title": "Colourways, overlapped",
+      "meta": "Finish range",
       "image": "assets/sappa-gallery-colors.jpg"
     },
     {
-      "title": "Interior",
-      "meta": "In place",
+      "title": "Loft lounge, dark screens",
+      "meta": "Interior",
       "image": "assets/sappa-gallery-interior.jpg"
     },
     {
-      "title": "Hemp",
+      "title": "Hemp, growing",
       "meta": "Raw material",
       "image": "assets/sappa-gallery-raw-material.jpg"
     },
     {
-      "title": "Herringbone ceiling",
-      "meta": "Workshop install",
+      "title": "Grid ceiling, shop floor",
+      "meta": "Retail interior",
       "image": "assets/sappa-gallery-workshop.jpg"
     },
     {
-      "title": "Colour, applied",
-      "meta": "Hospitality install",
+      "title": "Angled ceiling baffles, red light",
+      "meta": "Bar interior",
       "image": "assets/sappa-gallery-color-bar.jpg"
     },
     {
-      "title": "Wall pattern",
-      "meta": "Design detail",
+      "title": "Diamond motif, two tones",
+      "meta": "Wall panels",
       "image": "assets/sappa-gallery-pattern.jpg"
     },
     {
-      "title": "Boardroom ceiling",
-      "meta": "Office install",
+      "title": "Meeting room, grid ceiling",
+      "meta": "Office interior",
       "image": "assets/sappa-gallery-boardroom.jpg"
     }
   ],

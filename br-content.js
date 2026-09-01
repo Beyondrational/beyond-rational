@@ -81,6 +81,33 @@
     });
   }
 
+  /* ---------- Extra attributes ----------
+     data-content-attr binds one attribute, and an <img> spends it on src —
+     which left the alt text of statically-bound images stuck in whatever
+     language the HTML was written in. data-content-alt="gallery.0.title"
+     binds a second one, mirroring data-each-<name> in the template binder.
+     'attr' and 'html' are the binder's own keys, not attribute names. */
+  const RESERVED_CONTENT_KEYS = ['attr', 'html', 'each'];
+
+  // dataset gives camelCase; attributes want kebab (ariaLabel -> aria-label).
+  const toKebab = (s) => s.replace(/[A-Z]/g, (c) => '-' + c.toLowerCase());
+
+  function bindExtraAttributes(data) {
+    document.querySelectorAll('[data-content]').forEach((el) => {
+      Object.keys(el.dataset).forEach((key) => {
+        if (!key.startsWith('content') || key === 'content') return;
+        const rest = key.slice('content'.length);
+        const name = toKebab(rest.charAt(0).toLowerCase() + rest.slice(1));
+        if (RESERVED_CONTENT_KEYS.indexOf(name) !== -1) return;
+
+        const value = get(data, el.dataset[key]);
+        if (value == null || value === '') return;
+        // Same no-op guard as above: re-setting src restarts the image load.
+        if (el.getAttribute(name) !== String(value)) el.setAttribute(name, value);
+      });
+    });
+  }
+
   /* ---------- List iteration ----------
      <ul data-content-each="projects.list">
        <template>
@@ -131,7 +158,6 @@
         //   data-each-data-gated="gated" -> data-gated="…" (per-item flags)
         // `attr` and `html` are reserved by the primary binding above.
         const RESERVED = new Set(['attr', 'html']);
-        const toKebab = (s) => s.replace(/[A-Z]/g, (c) => '-' + c.toLowerCase());
         clone.querySelectorAll('*').forEach((el) => {
           Object.keys(el.dataset).forEach((dataKey) => {
             if (!dataKey.startsWith('each') || dataKey === 'each') return;
@@ -189,6 +215,7 @@
 
     const data = Object.assign({}, siteData, mediaData ? deepMerge(pageData, mediaData) : pageData);
     bindSingleValues(data);
+    bindExtraAttributes(data);
     bindLists(data);
 
     document.dispatchEvent(new CustomEvent('br-content-ready', { detail: data }));

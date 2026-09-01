@@ -52,14 +52,16 @@
   },
   "gallery": [
     {
-      "title": "Vores studie",
+      "title": "Vores mødelokale",
       "meta": "Beyond Rational, København",
-      "image": "assets/br-office-2.webp"
+      "image": "assets/br-office-2.webp",
+      "alt": "Beyond Rationals mødelokale i København"
     },
     {
-      "title": "Loftdetalje",
-      "meta": "Hvid, 600×1200",
-      "image": "assets/aisti-render-2.png"
+      "title": "Én plade, råhvid",
+      "meta": "Produktvisualisering",
+      "image": "assets/aisti-render-2.png",
+      "alt": "En enkelt råhvid Aisti-plade, produktvisualisering"
     }
   ],
   "results": {

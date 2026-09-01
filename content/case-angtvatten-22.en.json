@@ -52,14 +52,16 @@
   },
   "gallery": [
     {
-      "title": "Ceiling install",
-      "meta": "Dark blue, 600×600",
-      "image": "assets/aisti-render-3.webp"
+      "title": "One tile, charcoal",
+      "meta": "Product render",
+      "image": "assets/aisti-render-3.webp",
+      "alt": "A single charcoal Aisti tile, product render"
     },
     {
-      "title": "The space",
-      "meta": "Atmosphere",
-      "image": "assets/aisti-feeling-angtvatten.webp"
+      "title": "Dark ceiling grid, blue room",
+      "meta": "Ångtvätten 22",
+      "image": "assets/aisti-feeling-angtvatten.webp",
+      "alt": "Blue-walled room at Ångtvätten 22 under a dark ceiling grid"
     }
   ],
   "results": {

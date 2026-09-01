@@ -154,53 +154,53 @@
     "title": "Aisti gallery",
     "items": [
       {
-        "title": "Daylit interior",
-        "meta": "Product photography",
+        "title": "Balanced on its corner",
+        "meta": "Studio still life",
         "image": "assets/aisti-026.jpg"
       },
       {
-        "title": "Tile, raked light",
-        "meta": "Material study",
+        "title": "Smooth face, rough ground",
+        "meta": "Studio still life",
         "image": "assets/aisti-003.jpg"
       },
       {
-        "title": "Mounted",
-        "meta": "Detail",
+        "title": "Fanned stack, cut edges",
+        "meta": "Material study",
         "image": "assets/aisti-035.jpg"
       },
       {
-        "title": "Surface, compressed",
+        "title": "Corner and edge, close",
         "meta": "Material study",
         "image": "assets/aisti-042.jpg"
       },
       {
-        "title": "Workshop",
-        "meta": "Behind the press",
+        "title": "Tile, plinth, arc",
+        "meta": "Studio still life",
         "image": "assets/aisti-025.jpg"
       },
       {
-        "title": "Ceiling, calm",
-        "meta": "Product photography",
+        "title": "Loose fibre",
+        "meta": "Raw material",
         "image": "assets/aisti-008.jpg"
       },
       {
-        "title": "In use",
-        "meta": "Office interior",
+        "title": "Meeting room, dark ceiling grid",
+        "meta": "Ångtvätten 22",
         "image": "assets/aisti-person-angtvatten.webp"
       },
       {
-        "title": "Wall detail",
-        "meta": "Product photography",
+        "title": "Two tiles, offset",
+        "meta": "Wall mount",
         "image": "assets/aisti-012.jpg"
       },
       {
-        "title": "Wood fibre",
-        "meta": "Material study",
+        "title": "Tile against the rough",
+        "meta": "Studio still life",
         "image": "assets/aisti-tile-001.webp"
       },
       {
-        "title": "Ceiling install",
-        "meta": "In place",
+        "title": "Our meeting room",
+        "meta": "Beyond Rational, Copenhagen",
         "image": "assets/br-office.webp"
       }
     ]

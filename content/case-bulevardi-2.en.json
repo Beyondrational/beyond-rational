@@ -52,14 +52,16 @@
   },
   "gallery": [
     {
-      "title": "Our studio",
+      "title": "Our meeting room",
       "meta": "Beyond Rational, Copenhagen",
-      "image": "assets/br-office-2.webp"
+      "image": "assets/br-office-2.webp",
+      "alt": "Beyond Rational meeting room, Copenhagen"
     },
     {
-      "title": "Ceiling detail",
-      "meta": "White, 600×1200",
-      "image": "assets/aisti-render-2.png"
+      "title": "One tile, off-white",
+      "meta": "Product render",
+      "image": "assets/aisti-render-2.png",
+      "alt": "A single off-white Aisti tile, product render"
     }
   ],
   "results": {

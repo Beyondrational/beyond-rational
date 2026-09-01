@@ -116,55 +116,55 @@
     "source": "Kilde: Sappas og Troldtekts offentliggjorte tekniske datablade."
   },
   "gallery_head": {
-    "eyebrow": "På stedet",
+    "eyebrow": "Fra mark til væg",
     "title_l1": "Hamp,",
     "title_l2": "på væggen.",
-    "body": "Billeder styres i CMS'et — tilføj eller udskift dem på /admin."
+    "body": "Pladen fladt, fibrene tæt på, og de lofter og vægge, den ender i."
   },
   "gallery": [
     {
-      "title": "Panel",
-      "meta": "Produkt",
+      "title": "Én plade, forfra",
+      "meta": "Produktfoto",
       "image": "assets/sappa-gallery-panel.jpg"
     },
     {
-      "title": "Tekstur",
+      "title": "Hjørne og kant, tæt på",
       "meta": "Materialedetalje",
       "image": "assets/sappa-gallery-texture.jpg"
     },
     {
-      "title": "Farver",
-      "meta": "Udvalg",
+      "title": "Farver lagt over hinanden",
+      "meta": "Farveudvalg",
       "image": "assets/sappa-gallery-colors.jpg"
     },
     {
-      "title": "Interiør",
-      "meta": "På stedet",
+      "title": "Loftslounge, mørke skærme",
+      "meta": "Interiør",
       "image": "assets/sappa-gallery-interior.jpg"
     },
     {
-      "title": "Hamp",
+      "title": "Hamp på marken",
       "meta": "Råmateriale",
       "image": "assets/sappa-gallery-raw-material.jpg"
     },
     {
-      "title": "Sildebensmønster i loft",
-      "meta": "Installation, værksted",
+      "title": "Gitterloft, butiksgulv",
+      "meta": "Butiksinteriør",
       "image": "assets/sappa-gallery-workshop.jpg"
     },
     {
-      "title": "Farve, i praksis",
-      "meta": "Installation, restaurant",
+      "title": "Vinklede loftsbafler, rødt lys",
+      "meta": "Barinteriør",
       "image": "assets/sappa-gallery-color-bar.jpg"
     },
     {
-      "title": "Vægmønster",
-      "meta": "Designdetalje",
+      "title": "Rudemotiv i to toner",
+      "meta": "Vægplader",
       "image": "assets/sappa-gallery-pattern.jpg"
     },
     {
-      "title": "Mødelokale, loft",
-      "meta": "Installation, kontor",
+      "title": "Mødelokale, gitterloft",
+      "meta": "Kontorinteriør",
       "image": "assets/sappa-gallery-boardroom.jpg"
     }
   ],

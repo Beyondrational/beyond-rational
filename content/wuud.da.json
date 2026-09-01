@@ -34,61 +34,46 @@
     ]
   },
   "gallery_head": {
-    "eyebrow": "In situ",
+    "eyebrow": "Mønstre",
     "title_l1": "Årer,",
     "title_l2": "i relief.",
-    "body": "Finish, mønstre og plader in situ. Billeder styres i CMS'et — tilføj eller udskift dem på /admin."
+    "body": "Fem interiørvisualiseringer og to mønsterprøver — relieffet i rumskala og tæt på."
   },
   "gallery": [
     {
-      "title": "Malet grafit",
-      "meta": "Finish-prøve",
-      "image": "assets/wuud-sample-graphite.svg"
-    },
-    {
-      "title": "Natur birk",
-      "meta": "Finish-prøve",
-      "image": "assets/wuud-sample-birch.svg"
-    },
-    {
-      "title": "Transparent eg",
-      "meta": "Finish-prøve",
-      "image": "assets/wuud-sample-oak.svg"
-    },
-    {
-      "title": "Pladedetalje",
-      "meta": "Overflade",
+      "title": "Stue, skælmønstret væg",
+      "meta": "Visualisering",
       "image": "assets/wuud_render_01.jpg"
     },
     {
-      "title": "Relief, strejflys",
-      "meta": "Tekstur",
+      "title": "Kaffebar, chevronvæg",
+      "meta": "Visualisering",
       "image": "assets/wuud_render_09.jpg"
     },
     {
-      "title": "Monteret",
-      "meta": "På stedet",
+      "title": "Restaurantniche, mørke plader",
+      "meta": "Visualisering",
       "image": "assets/wuud_render_03.jpg"
     },
     {
-      "title": "Beklædningsforløb",
-      "meta": "Interiør",
-      "image": "assets/wuud_render_02.jpg"
-    },
-    {
-      "title": "Væg, dagslys",
-      "meta": "Interiør",
-      "image": "assets/wuud_render_011.jpg"
-    },
-    {
-      "title": "Fuld højde",
-      "meta": "På stedet",
+      "title": "W 01, streger i relief",
+      "meta": "Mønsterprøve",
       "image": "assets/screenshot-2026-02-25-at-17.31.25.png"
     },
     {
-      "title": "Kantprofil",
-      "meta": "Detalje",
+      "title": "W 03, chevron i relief",
+      "meta": "Mønsterprøve",
       "image": "assets/screenshot-2026-02-25-at-17.31.48.png"
+    },
+    {
+      "title": "Spisesal, mørk beklædning",
+      "meta": "Visualisering",
+      "image": "assets/wuud_render_02.jpg"
+    },
+    {
+      "title": "Soveværelse, blågråt relief",
+      "meta": "Visualisering",
+      "image": "assets/wuud_render_011.jpg"
     }
   ],
   "spec": {

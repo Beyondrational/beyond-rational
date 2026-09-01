@@ -154,53 +154,53 @@
     "title": "Aisti-galleri",
     "items": [
       {
-        "title": "Dagslysinteriør",
-        "meta": "Produktfotografi",
+        "title": "Balanceret på hjørnet",
+        "meta": "Studieopstilling",
         "image": "assets/aisti-026.jpg"
       },
       {
-        "title": "Plade, strejflys",
-        "meta": "Materialestudie",
+        "title": "Glat flade, rå bund",
+        "meta": "Studieopstilling",
         "image": "assets/aisti-003.jpg"
       },
       {
-        "title": "Monteret",
-        "meta": "Detalje",
+        "title": "Stak i vifte, skårne kanter",
+        "meta": "Materialestudie",
         "image": "assets/aisti-035.jpg"
       },
       {
-        "title": "Overflade, komprimeret",
+        "title": "Hjørne og kant, tæt på",
         "meta": "Materialestudie",
         "image": "assets/aisti-042.jpg"
       },
       {
-        "title": "Værksted",
-        "meta": "Bag pressen",
+        "title": "Plade, sokkel, bue",
+        "meta": "Studieopstilling",
         "image": "assets/aisti-025.jpg"
       },
       {
-        "title": "Loft, roligt",
-        "meta": "Produktfotografi",
+        "title": "Løs fiber",
+        "meta": "Råmateriale",
         "image": "assets/aisti-008.jpg"
       },
       {
-        "title": "I brug",
-        "meta": "Kontorinteriør",
+        "title": "Mødelokale, mørkt loftsgitter",
+        "meta": "Ångtvätten 22",
         "image": "assets/aisti-person-angtvatten.webp"
       },
       {
-        "title": "Vægdetalje",
-        "meta": "Produktfotografi",
+        "title": "To plader, forskudt",
+        "meta": "Vægmontering",
         "image": "assets/aisti-012.jpg"
       },
       {
-        "title": "Træfiber",
-        "meta": "Materialestudie",
+        "title": "Plade mod det rå",
+        "meta": "Studieopstilling",
         "image": "assets/aisti-tile-001.webp"
       },
       {
-        "title": "Loftinstallation",
-        "meta": "På stedet",
+        "title": "Vores mødelokale",
+        "meta": "Beyond Rational, København",
         "image": "assets/br-office.webp"
       }
     ]

@@ -66,45 +66,45 @@
     ]
   },
   "gallery_head": {
-    "eyebrow": "Applied",
+    "eyebrow": "Shapes & rooms",
     "title_l1": "Soft form,",
     "title_l2": "in the room.",
-    "body": "Images are managed in the CMS — add or replace them at /admin."
+    "body": "Hexagons and triangles — as single tiles, as colourways, and arrayed across a wall."
   },
   "gallery": [
     {
-      "title": "Wall panel",
-      "meta": "In place",
+      "title": "Hexagons on a wood wall",
+      "meta": "Corner office",
       "image": "assets/mogu-gallery-cityview.jpg"
     },
     {
-      "title": "Office",
-      "meta": "In place",
+      "title": "Desk by the window",
+      "meta": "Office interior",
       "image": "assets/mogu-gallery-office.jpg"
     },
     {
-      "title": "Colours",
-      "meta": "Range",
+      "title": "Faceted tiles, in colour",
+      "meta": "Colour range",
       "image": "assets/mogu-gallery-colors.jpg"
     },
     {
-      "title": "Material",
-      "meta": "Study",
+      "title": "One hexagon, blue-grey",
+      "meta": "Product shot",
       "image": "assets/mogu-gallery-material.jpg"
     },
     {
-      "title": "Hexagon wall",
-      "meta": "Installation",
+      "title": "Honeycomb cluster",
+      "meta": "Styled interior",
       "image": "assets/mogu-gallery-hexagon.jpg"
     },
     {
-      "title": "Triangle wall, colour",
-      "meta": "Office install",
+      "title": "Triangles, green and cream",
+      "meta": "Workspace wall",
       "image": "assets/mogu-gallery-triangle.jpg"
     },
     {
-      "title": "Panel edge",
-      "meta": "Material detail",
+      "title": "Discs at the joints",
+      "meta": "Fixing detail",
       "image": "assets/mogu-gallery-detail.jpg"
     }
   ],

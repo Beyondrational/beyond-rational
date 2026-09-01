@@ -52,14 +52,16 @@
   },
   "gallery": [
     {
-      "title": "Loftinstallation",
-      "meta": "Mørkeblå, 600×600",
-      "image": "assets/aisti-render-3.webp"
+      "title": "Én plade, koksgrå",
+      "meta": "Produktvisualisering",
+      "image": "assets/aisti-render-3.webp",
+      "alt": "En enkelt koksgrå Aisti-plade, produktvisualisering"
     },
     {
-      "title": "Rummet",
-      "meta": "Stemning",
-      "image": "assets/aisti-feeling-angtvatten.webp"
+      "title": "Mørkt loftsgitter, blåt rum",
+      "meta": "Ångtvätten 22",
+      "image": "assets/aisti-feeling-angtvatten.webp",
+      "alt": "Blåt rum på Ångtvätten 22 under et mørkt loftsgitter"
     }
   ],
   "results": {

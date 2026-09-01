@@ -66,45 +66,45 @@
     ]
   },
   "gallery_head": {
-    "eyebrow": "I brug",
+    "eyebrow": "Former og rum",
     "title_l1": "Blød form,",
     "title_l2": "i rummet.",
-    "body": "Billeder styres i CMS'et — tilføj eller udskift dem på /admin."
+    "body": "Sekskanter og trekanter — som enkeltfliser, som farver og sat op på væggen."
   },
   "gallery": [
     {
-      "title": "Vægpanel",
-      "meta": "På stedet",
+      "title": "Sekskanter på trævæg",
+      "meta": "Hjørnekontor",
       "image": "assets/mogu-gallery-cityview.jpg"
     },
     {
-      "title": "Kontor",
-      "meta": "På stedet",
+      "title": "Skrivebord ved vinduet",
+      "meta": "Kontorinteriør",
       "image": "assets/mogu-gallery-office.jpg"
     },
     {
-      "title": "Farver",
-      "meta": "Udvalg",
+      "title": "Facetterede fliser i farve",
+      "meta": "Farveudvalg",
       "image": "assets/mogu-gallery-colors.jpg"
     },
     {
-      "title": "Materiale",
-      "meta": "Studie",
+      "title": "Én sekskant, blågrå",
+      "meta": "Produktfoto",
       "image": "assets/mogu-gallery-material.jpg"
     },
     {
-      "title": "Sekskantet væg",
-      "meta": "Installation",
+      "title": "Bikubeklynge",
+      "meta": "Iscenesat interiør",
       "image": "assets/mogu-gallery-hexagon.jpg"
     },
     {
-      "title": "Trekantet væg, farve",
-      "meta": "Installation, kontor",
+      "title": "Trekanter i grøn og creme",
+      "meta": "Arbejdspladsvæg",
       "image": "assets/mogu-gallery-triangle.jpg"
     },
     {
-      "title": "Panelkant",
-      "meta": "Materialedetalje",
+      "title": "Skiver i samlingerne",
+      "meta": "Monteringsdetalje",
       "image": "assets/mogu-gallery-detail.jpg"
     }
   ],
