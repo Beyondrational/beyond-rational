@@ -303,6 +303,71 @@
     }
   }
 
+  /* ---------- Living wordmark: wordmark ⇄ monogram ----------
+     One edge crosses the mark. Behind it the wordmark is cut away, ahead
+     of it B_R already stands at final size; both clip rects travel on that
+     same edge, so the seam is invisible and the change of size happens
+     inside the cut rather than as a move the eye has to follow.
+     One infinite cycle drives every part, so the two halves of the wipe
+     can never drift apart, and it only runs while the mark is actually on
+     screen — an off-screen loop is battery spent on nothing. */
+  const markHost = document.querySelector('[data-mark-motion]');
+  if (markHost && !reduceMotion && typeof markHost.animate === 'function') {
+    const CYCLE = 6400;
+    const sweep = 'cubic-bezier(0.65, 0, 0.35, 1)';
+    // Hold, wipe to the monogram, hold, wipe back — as fractions of a cycle.
+    const OUT = 1600 / CYCLE, IN = 2380 / CYCLE, BACK = 4600 / CYCLE, HOME = 5380 / CYCLE;
+    const opts = { duration: CYCLE, iterations: Infinity, fill: 'both' };
+    // The monogram's own centre, so the mark lands back on the artwork's centre.
+    const at = (s) => `translate(${(92.5 - s * 38.959).toFixed(3)}px, ${(34.5 - s * 15.46).toFixed(3)}px) scale(${s})`;
+    const travel = [
+      { transform: 'none', offset: 0, easing: 'linear' },
+      { transform: 'none', offset: OUT, easing: sweep },
+      { transform: 'translateX(200px)', offset: IN, easing: 'linear' },
+      { transform: 'translateX(200px)', offset: BACK, easing: sweep },
+      { transform: 'none', offset: HOME, easing: 'linear' },
+      { transform: 'none', offset: 1 },
+    ];
+    const edge = markHost.querySelector('.br-mark__edge');
+    const mono = markHost.querySelector('.br-mark__mono');
+    const anims = [];
+    markHost.querySelectorAll('.br-mark__cut').forEach((cut) => anims.push(cut.animate(travel, opts)));
+    anims.push(edge.animate(travel, opts));
+    // Opacity is a second animation rather than more keyframes on the first:
+    // per-keyframe easing applies to every property in that keyframe, and the
+    // edge's fade and its travel do not want the same curve.
+    anims.push(edge.animate([
+      { opacity: 0, offset: 0 }, { opacity: 0, offset: OUT }, { opacity: 0.75, offset: OUT + 0.015 },
+      { opacity: 0.75, offset: IN - 0.015 }, { opacity: 0, offset: IN },
+      { opacity: 0, offset: BACK }, { opacity: 0.75, offset: BACK + 0.015 },
+      { opacity: 0.75, offset: HOME - 0.015 }, { opacity: 0, offset: HOME }, { opacity: 0, offset: 1 },
+    ], opts));
+    // A hair of scale after the cut, so the monogram settles instead of
+    // simply being there.
+    anims.push(mono.animate([
+      { transform: at(1.76), offset: 0, easing: 'linear' },
+      { transform: at(1.76), offset: OUT, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' },
+      { transform: at(1.8), offset: 0.45, easing: 'linear' },
+      { transform: at(1.8), offset: BACK, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' },
+      { transform: at(1.76), offset: HOME, easing: 'linear' },
+      { transform: at(1.76), offset: 1 },
+    ], opts));
+
+    markHost.classList.add('is-live');
+    let onScreen = false;
+    const setRunning = () => {
+      const run = onScreen && !document.hidden;
+      anims.forEach((a) => (run ? a.play() : a.pause()));
+    };
+    anims.forEach((a) => a.pause());
+    const markIO = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { onScreen = e.isIntersecting; });
+      setRunning();
+    }, { threshold: 0.25 });
+    markIO.observe(markHost);
+    document.addEventListener('visibilitychange', setRunning);
+  }
+
   /* ---------- Form tabs (multi-form switcher) ---------- */
   const activateTab = (target) => {
     document.querySelectorAll('.bra-form-tab').forEach((t) => {

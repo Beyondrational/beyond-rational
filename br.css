@@ -1739,6 +1739,34 @@ html.br-loader-skip .br-loader { display: none; }
   .br-loader__bar::after { transition: none; transform: scaleX(1); }
 }
 
+/* ---------- Living wordmark (studio plate) ----------
+   Stands where the office photograph used to, in the same framed slot, so
+   the section keeps its rhythm — but a hairline around empty oak reads as a
+   hole, so the plate is sunk a step darker than the band it sits in and
+   carries the same raking light the dark surfaces use. Wider than the photo
+   was (21:9 against 16:10): a mark needs air around it, not a portrait's
+   headroom. The .home-pair__fig.br-plate pairing outranks the --wide
+   aspect-ratio wherever the two land in this file. */
+.home-pair__fig.br-plate {
+  aspect-ratio: 21 / 9;
+  display: grid;
+  place-items: center;
+  background-color: var(--bra-oak-deep);
+  background-image: radial-gradient(120% 100% at 50% 0%, rgba(255,246,232,0.10), rgba(255,246,232,0) 62%);
+}
+.br-mark { color: var(--bra-on-oak); line-height: 0; }
+/* Percentage of the plate, floored so the two-line wordmark stays legible
+   on a phone and capped so it never turns into a second hero. */
+.br-plate .br-mark { width: clamp(180px, 46%, 560px); }
+.br-mark__svg { display: block; width: 100%; height: auto; }
+.br-mark__svg path { fill: currentColor; }
+/* The mark scales about the SVG origin, so the transform in br.js is plain
+   view-box arithmetic rather than a bounding-box guess. */
+.br-mark__mono { transform-box: view-box; transform-origin: 0 0; transform: translate(22.374px, 6.672px) scale(1.8); }
+.br-mark__edge { fill: currentColor; opacity: 0; }
+/* No script, or no appetite for motion: the wordmark, standing still. */
+.br-mark:not(.is-live) .br-mark__mono { opacity: 0; }
+
 /* ---------- Logo hero (cinematic, stroke-draw) ---------- */
 .br-logo-hero {
   position: relative;

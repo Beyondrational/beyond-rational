@@ -1303,11 +1303,6 @@ collections:
             widget: "object"
             fields:
               - { label: "Image", name: "image", widget: "image", required: false }
-          - label: "Office"
-            name: "studio"
-            widget: "object"
-            fields:
-              - { label: "Image", name: "image", widget: "image", required: false }
 
   - name: "mogu-media"
     label: "Product — Mogu — Images (shared EN/DA)"
