@@ -2135,6 +2135,21 @@ body.bra-nav-locked { overflow: hidden; }
   flex-wrap: wrap;
   gap: var(--bra-s-2);
 }
+/* space-between distributes whatever it is given, so the company line and the
+   CVR travel as one item — otherwise adding the CVR turns three evenly spread
+   items into four and shoves the legal links off their current positions. */
+.bra-footer__id {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  /* Space, not a separator glyph: below ~360px the CVR wraps to its own line,
+     where a leading "·" is left dangling with nothing to separate. There is no
+     way to detect that wrap in CSS, and guessing a breakpoint gets it wrong on
+     the next font or translation. Gap works at every width.
+     No colour override either — .bra-micro is already at --bra-ink-mute, which
+     was raised to 0.500 to clear 4.5:1 on paper; anything lighter fails AA. */
+  gap: 2px var(--bra-s-3);
+}
 @media (max-width: 720px) {
   .bra-footer__grid { grid-template-columns: 1fr 1fr; }
   .bra-footer__brand { grid-column: span 2; }
@@ -3946,10 +3961,10 @@ body[data-page="product-aisti"] .bra-cardset--overlay .bra-cardset__card { aspec
   grid-template-columns: repeat(3, 1fr);
 }
 .studio-stats__cell {
-  padding: var(--bra-s-3) var(--bra-s-3) var(--bra-s-3) 0;
+  padding: var(--bra-s-4) var(--bra-s-3) var(--bra-s-4) 0;
   border-right: 1px solid var(--bra-line-inv);
   border-top: 2px solid var(--bra-on-oak);
-  margin-top: var(--bra-s-2);
+  margin-top: var(--bra-s-3);
 }
 .studio-stats__cell + .studio-stats__cell { padding-left: var(--bra-s-3); }
 .studio-stats__cell:last-child { border-right: none; }
@@ -3968,11 +3983,27 @@ body[data-page="product-aisti"] .bra-cardset--overlay .bra-cardset__card { aspec
   letter-spacing: 0.10em;
   text-transform: uppercase;
   color: rgba(244,242,237,0.65);
-  margin-top: var(--bra-s-2);
+  margin-top: var(--bra-s-3);
 }
+
+/* The studio block sits in a 72px frame, but every gap inside it was 44 or
+   less and the stat numbers were pressed against their own rule at 28. The
+   whole thing read compressed inside a generous section. Stepped up one notch
+   on the scale. Scoped, because the denser blocks on this page — the gallery
+   grids, the case rows — want the tighter rhythm they already have. */
+.home-studio .home-head { margin-bottom: var(--bra-s-5); }
+.home-studio .home-pair,
+.home-studio .studio-stats { margin-bottom: var(--bra-s-5); }
+
 @media (max-width: 720px) {
   .studio-stats { grid-template-columns: 1fr; }
-  .studio-stats__cell { border-right: none; border-bottom: 1px solid rgba(244,242,237,0.20); }
+  /* No border-bottom: stacked, every cell still carries its own 2px top rule,
+     so a bottom rule draws each boundary a second time. Side by side that was
+     invisible; it only shows once the cells sit above one another. */
+  .studio-stats__cell { border-right: none; }
+  /* The left padding clears the column divider; stacked there is no divider to
+     clear, and it just indents every cell after the first. */
+  .studio-stats__cell + .studio-stats__cell { padding-left: 0; }
 }
 
 /* Closing CTA band — headline runs the full measure, the supporting copy
