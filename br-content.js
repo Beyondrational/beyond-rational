@@ -2,8 +2,9 @@
    B_R Content Loader — fetches content/<page>.<lang>.json and
    content/site.<lang>.json, populates data-content attributes.
    Language resolves as: ?lang= query param > localStorage
-   ('brLang') > 'en', and is re-run on demand by the nav language
-   toggle (br.js) via window.brSetLanguage(). Edits flow via
+   ('brLang', only ever written by the nav toggle) > a guess from the
+   visitor's own machine > 'en', and is re-run on demand by the nav
+   language toggle (br.js) via window.brSetLanguage(). Edits flow via
    Sveltia CMS (Decap i18n, structure: multiple_files).
 
    Images are language-independent, so they live separately in
@@ -17,13 +18,42 @@
   const SUPPORTED_LANGS = ['en', 'da'];
   const LANG_KEY = 'brLang';
 
+  // Denmark gets Danish. Both signals come off the visitor's own machine —
+  // no IP lookup, which would need a server this static site doesn't have and
+  // would hand every visitor's address to a third party to answer something
+  // the browser already knows.
+  //
+  // Timezone is checked first because the ask is about where someone is, not
+  // what their laptop is set to: plenty of Danes run an English OS. The
+  // language list is the second pass, so a Dane abroad, or behind a VPN, or
+  // on a phone that reports no timezone, still lands on Danish. Order within
+  // that list matters — navigator.languages is ranked, so whichever of da/en
+  // the visitor put first wins, rather than da winning just by appearing.
+  function guessLang() {
+    try {
+      if (Intl.DateTimeFormat().resolvedOptions().timeZone === 'Europe/Copenhagen') return 'da';
+    } catch (e) { /* no Intl / no timezone — fall through to the language list */ }
+
+    const langs = (navigator.languages && navigator.languages.length)
+      ? navigator.languages
+      : [navigator.language];
+    for (const entry of langs) {
+      const tag = String(entry || '').toLowerCase();
+      if (tag.startsWith('da')) return 'da';
+      if (tag.startsWith('en')) return 'en';
+    }
+    return 'en';
+  }
+
   function resolveLang() {
     const url = new URL(location.href);
     const q = url.searchParams.get('lang');
     if (SUPPORTED_LANGS.includes(q)) return q;
+    // Only the nav toggle writes this, so it always means a deliberate
+    // choice — never overrule it with a guess.
     const stored = localStorage.getItem(LANG_KEY);
     if (SUPPORTED_LANGS.includes(stored)) return stored;
-    return 'en';
+    return guessLang();
   }
 
   const get = (obj, path) => path.split('.').reduce((o, k) => (o == null ? o : o[k]), obj);
@@ -176,6 +206,19 @@
     });
   }
 
+  // The inline script at the top of <body> has usually already started these
+  // three requests. Take its Response if it was fetched for the language we
+  // ended up on, otherwise fetch normally. Consumed once and cleared: a
+  // Response body can only be read a single time, and brSetLanguage re-runs
+  // loadContent whenever the visitor uses the toggle.
+  function takePrefetched(key, lang) {
+    const pre = window.__brPre;
+    if (!pre || pre.lang !== lang || !pre[key]) return null;
+    const promise = pre[key];
+    pre[key] = null;
+    return promise;
+  }
+
   async function loadContent(lang) {
     const page = document.body.dataset.page;
 
@@ -185,30 +228,50 @@
     // reader to read Danish text with an English voice.
     if (page) document.documentElement.lang = lang;
 
-    let siteData = {};
-    try {
-      const siteRes = await fetch(`content/site.${lang}.json`, { cache: 'no-cache' });
-      if (siteRes.ok) siteData = await siteRes.json();
-    } catch (e) { /* no site.json yet — fine */ }
-
+    // All three start together. They used to be awaited one after another,
+    // which cost three round trips in sequence — on mobile data that alone
+    // pushed br-content-ready past the 2.5s safety timeout in br.js, so the
+    // headers revealed the English fallback and then swapped. Nothing here
+    // depends on anything else here, so there was never a reason to queue.
+    const sitePromise = takePrefetched('site', lang)
+      || fetch(`content/site.${lang}.json`, { cache: 'no-cache' });
     // A page without its own content file (the legal pages) still shares the
     // nav, footer, cookie bar and gate strings — and still has to announce
     // br-content-ready, because br.js holds every header reveal until that
-    // event fires. Returning early here left those pages waiting out the
+    // event fires. Skipping the fetch here left those pages waiting out the
     // 2.5s safety timeout with an invisible <h1>, and left their shared
     // strings untranslated.
+    const pagePromise = page
+      ? (takePrefetched('page', lang)
+         || fetch(`content/${page}.${lang}.json`, { cache: 'no-cache' }))
+      : null;
+    const mediaPromise = page
+      ? (takePrefetched('media', lang)
+         || fetch(`content/${page}.media.json`, { cache: 'no-cache' }))
+      : null;
+    // A rejection reaching the event loop before its await is an unhandled
+    // rejection; these no-op handlers keep the console clean without
+    // swallowing anything — the awaits below still see the failure.
+    [sitePromise, pagePromise, mediaPromise].forEach((q) => q && q.catch(() => {}));
+
+    let siteData = {};
+    try {
+      const siteRes = await sitePromise;
+      if (siteRes.ok) siteData = await siteRes.json();
+    } catch (e) { /* no site.json yet — fine */ }
+
     let pageData = {};
-    if (page) {
+    if (pagePromise) {
       try {
-        const res = await fetch(`content/${page}.${lang}.json`, { cache: 'no-cache' });
+        const res = await pagePromise;
         if (res.ok) pageData = await res.json();
       } catch (e) { /* fall back to the static HTML for this page */ }
     }
 
     let mediaData = null;
-    if (page) {
+    if (mediaPromise) {
       try {
-        const mediaRes = await fetch(`content/${page}.media.json`, { cache: 'no-cache' });
+        const mediaRes = await mediaPromise;
         if (mediaRes.ok) mediaData = await mediaRes.json();
       } catch (e) { /* no shared media file for this page — fine */ }
     }

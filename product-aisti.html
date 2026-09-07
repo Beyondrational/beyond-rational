@@ -92,6 +92,31 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 </head>
 <body class="bra" data-page="product-aisti">
 
+<script>/* Resolve the language and start the content fetch right here, instead of
+   waiting for the deferred br-content.js to download and parse. Measured
+   against production, that wait showed a Danish visitor the English fallback
+   for 434ms on a fast line, 2.1s on 4G and 4.3s on 3G. This has to sit inside
+   <body> because it needs document.body.dataset.page, and the page key is not
+   derivable from the filename (product-wuud.html is "wuud", but
+   product-aisti.html is "product-aisti"). br-content.js still resolves the
+   language itself and only consumes these if it agrees, so the two can never
+   end up disagreeing about what to show. */
+(function(){try{
+  var S=['en','da'],l=new URL(location.href).searchParams.get('lang');
+  if(S.indexOf(l)<0)l=localStorage.getItem('brLang');
+  if(S.indexOf(l)<0){l='en';
+    try{if(Intl.DateTimeFormat().resolvedOptions().timeZone==='Europe/Copenhagen')l='da'}catch(e){}
+    if(l==='en'){var L=navigator.languages||[navigator.language];
+      for(var i=0;i<L.length;i++){var t=String(L[i]||'').toLowerCase();
+        if(t.indexOf('da')===0){l='da';break}
+        if(t.indexOf('en')===0)break}}}
+  var p=document.body.dataset.page;
+  var f=function(u){var q=fetch(u,{cache:'no-cache'});q.catch(function(){});return q};
+  window.__brPre={lang:l,site:f('content/site.'+l+'.json'),
+    page:p?f('content/'+p+'.'+l+'.json'):null,
+    media:p?f('content/'+p+'.media.json'):null};
+}catch(e){}})();</script>
+
 <a class="bra-skip" href="#main" data-content="misc.skip_to_content">Skip to content</a>
 
 <!-- Page loader (CLOU-style curtain, once per session) -->
@@ -669,7 +694,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 
 <script src="br.js?v=43" defer></script>
 <script src="br-hubspot.js?v=3" defer></script>
-<script src="br-content.js?v=32" defer></script>
+<script src="br-content.js?v=33" defer></script>
 <!-- The document gate posts to HubSpot through br-forms.js, so this page
      needs it too — it used to load only on contact.html. -->
 <script src="br-forms.js?v=3" defer></script>
