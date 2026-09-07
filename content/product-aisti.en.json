@@ -260,6 +260,9 @@
     "section_label": "CO₂ savings",
     "title_l1": "Aisti Aalto,",
     "title_l2": "by the numbers.",
+    "area_label": "Ceiling area",
+    "saved_label": "CO₂e saved vs",
+    "equiv": "Roughly the same as {km} km of driving avoided.",
     "aisti_lifecycle": {
       "name": "Aisti Aalto",
       "note": "Lifecycle emissions, A1-C4 (fossil)"

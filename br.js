@@ -1317,7 +1317,11 @@ function braOnContentReady(fn) {
    rows carry data-factor (kg CO2e/m2), one row has data-ours.
    ============================================================ */
 (function () {
-  var fmt = function (n) { return Math.round(n).toLocaleString('en-US'); };
+  // Read at call time, not once: the language toggle re-renders in place,
+  // and 4710 is "4,710" in English but "4.710" in Danish.
+  var fmt = function (n) {
+    return Math.round(n).toLocaleString(document.documentElement.lang || 'en-US');
+  };
 
   document.querySelectorAll('[data-co2calc]').forEach(function (calc) {
     var range   = calc.querySelector('[data-co2-area]');
@@ -1332,6 +1336,12 @@ function braOnContentReady(fn) {
 
     var activeAlt = (chips.filter(function (c) { return c.classList.contains('is-active'); })[0] || chips[0]);
     var altKey = activeAlt ? activeAlt.getAttribute('data-co2-alt') : null;
+
+    // Built in code rather than bound in markup, because the number changes
+    // with the slider — so it needs a template from the CMS, not a fixed
+    // string. {km} is the only placeholder. The English default matches the
+    // static fallback in the page for a no-JSON/no-CMS load.
+    var equivTemplate = 'Roughly the same as {km} km of driving avoided.';
 
     // Fixed scale (based on the slider's max, across every row, visible or
     // not) so bars actually grow/shrink as area changes — normalizing to
@@ -1382,9 +1392,15 @@ function braOnContentReady(fn) {
         var saving = altTotal - oursTotal;
         if (saveEl) saveEl.textContent = fmt(saving);
         if (altNm) altNm.textContent = altRow.getAttribute('data-name') || altRow.querySelector('.bra-co2calc__name').firstChild.textContent.trim();
-        if (equivEl) equivEl.textContent = 'Roughly the same as ' + fmt(saving / kmFactor) + ' km of driving avoided.';
+        if (equivEl) equivEl.textContent = equivTemplate.replace('{km}', fmt(saving / kmFactor));
       }
     }
+
+    braOnContentReady(function (e) {
+      var c = e.detail && e.detail.co2;
+      if (c && c.equiv) equivTemplate = c.equiv;
+      render();   // also re-runs fmt(), so the thousands separator follows too
+    });
 
     range.addEventListener('input', render);
     chips.forEach(function (chip) {

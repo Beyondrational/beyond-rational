@@ -260,6 +260,9 @@
     "section_label": "CO₂-besparelse",
     "title_l1": "Aisti Aalto,",
     "title_l2": "i tal.",
+    "area_label": "Loftareal",
+    "saved_label": "CO₂e sparet ift.",
+    "equiv": "Svarer omtrent til {km} km sparet kørsel.",
     "aisti_lifecycle": {
       "name": "Aisti Aalto",
       "note": "Livscyklusemissioner, A1-C4 (fossil)"

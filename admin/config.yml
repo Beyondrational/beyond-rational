@@ -818,6 +818,9 @@ collections:
                 fields:
                   - { label: "Name", name: "name", widget: "string", i18n: true }
                   - { label: "Note", name: "note", widget: "string", i18n: true }
+              - { label: "Slider label", name: "area_label", widget: "string", i18n: true }
+              - { label: "Savings label", name: "saved_label", widget: "string", i18n: true, hint: "Sits before the compared product name, e.g. \"CO2e saved vs\"" }
+              - { label: "Driving equivalence", name: "equiv", widget: "string", i18n: true, hint: "Use {km} where the kilometre figure should appear" }
               - { label: "Disclaimer / source note", name: "disclaimer", widget: "text", hint: "The kg CO2e factors themselves are set in the page code — update those separately when a new EPD is published", i18n: true }
 
           - label: "Closing CTA"

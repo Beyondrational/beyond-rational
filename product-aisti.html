@@ -565,7 +565,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
   <div class="bra-co2calc" data-co2calc data-co2-km="0.15" style="margin-bottom: var(--bra-s-3);">
     <div class="bra-co2calc__control">
       <div class="bra-co2calc__ctrl-top">
-        <span class="bra-co2calc__label">Ceiling area</span>
+        <span class="bra-co2calc__label" data-content="co2.area_label">Ceiling area</span>
         <span class="bra-co2calc__area"><span data-co2-area-val>150</span> m²</span>
       </div>
       <input class="bra-co2calc__range" type="range" min="10" max="1000" step="10" value="150" data-co2-area aria-label="Ceiling area in square metres">
@@ -592,12 +592,11 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
     <div class="bra-co2calc__result">
       <div>
         <div class="bra-co2calc__save-num"><span data-co2-save>0</span> kg</div>
-        <div class="bra-co2calc__save-lbl">CO₂e saved vs <span data-co2-alt-name>Rockfon Sonar 20mm</span></div>
+        <div class="bra-co2calc__save-lbl"><span data-content="co2.saved_label">CO₂e saved vs</span> <span data-co2-alt-name>Rockfon Sonar 20mm</span></div>
       </div>
       <p class="bra-co2calc__equiv" data-co2-equiv></p>
     </div>
     <p class="bra-co2calc__foot" data-content="co2.disclaimer">Calculations are based on manufacturers' EPD — compared with stone wool. Aisti Aalto 20 mm vs Rockfon Sonar 20mm. Aisti figures: EPD Hub HUB-5632 (Aisti Corporation Oy, published 06.03.2026) — lifecycle emissions is GWP-fossil summed across A1-C4; stored CO₂ is GWP-biogenic at A1-A3 (factory gate, before any end-of-life release). Rockfon figure from its public Sonar 20mm datasheet.</p>
-    <p class="bra-caption bra-caption--note" style="margin-top: var(--bra-s-2); opacity: 0.55;">The kg CO₂e factors themselves are set in the page code, not here — ask your developer to update them when a new EPD is published.</p>
   </div>
 
   <!-- Head-to-head -->
@@ -693,7 +692,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 </footer>
 
 <script src="br-content.js?v=34" defer></script>
-<script src="br.js?v=44" defer></script>
+<script src="br.js?v=45" defer></script>
 <script src="br-hubspot.js?v=3" defer></script>
 <!-- The document gate posts to HubSpot through br-forms.js, so this page
      needs it too — it used to load only on contact.html. -->
