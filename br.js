@@ -14,6 +14,22 @@
      data-config-group · configurator option group
    ============================================================ */
 
+/* Subscribe to br-content-ready through this, never addEventListener directly.
+   br-content.js runs before this file now — it is the smaller script, and the
+   page cannot show the right language until it has bound — so by the time the
+   listeners below attach, the event may already have fired. Measured on a
+   throttled connection it fired 800ms before br.js executed at all, and four
+   subscribers missed the only dispatch that mattered: the reveal gate, the
+   language toggle label, the download gate's copy and the cookie bar's.
+   Replays the last payload for a late subscriber, and keeps listening too,
+   because the language toggle re-binds and dispatches again. Degrades to a
+   plain listener where br-content.js is absent (design-system.html), since
+   window.brContent is then simply never set. */
+function braOnContentReady(fn) {
+  if (window.brContent) fn({ detail: window.brContent });
+  document.addEventListener('br-content-ready', fn);
+}
+
 (function () {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -209,7 +225,9 @@
         (loader && document.body.classList.contains('is-loading'))
           ? new Promise((resolve) => document.addEventListener('br-loader-done', resolve, { once: true }))
           : Promise.resolve(),
-        new Promise((resolve) => document.addEventListener('br-content-ready', resolve, { once: true })),
+        // resolve() past the first call is a no-op, so the listener this
+        // leaves behind for the language toggle costs nothing here.
+        new Promise((resolve) => braOnContentReady(() => resolve())),
       ]),
       // Safety net: never let a stuck/never-settling transition, loader, or
       // content fetch permanently withhold the reveal — 2.5s comfortably
@@ -766,7 +784,7 @@
       });
     };
     renderLangToggles();
-    document.addEventListener('br-content-ready', renderLangToggles);
+    braOnContentReady(renderLangToggles);
     langToggles.forEach((btn) => {
       btn.addEventListener('click', () => {
         const current = (window.brCurrentLang && window.brCurrentLang()) || 'en';
@@ -1189,7 +1207,7 @@
       dlg.querySelector('[data-gate-cancel]').textContent = c.cancel || 'Cancel';
       dlg.querySelector('.bra-gate__fine a').textContent = c.privacy || 'Privacy policy';
     };
-    document.addEventListener('br-content-ready', function (e) {
+    braOnContentReady(function (e) {
       gateCopy = (e.detail && e.detail.gate) || gateCopy;
       applyCopy();
     });
@@ -1248,7 +1266,7 @@
       '</div>';
     document.body.appendChild(cookie);
   }
-  document.addEventListener('br-content-ready', function (e) {
+  braOnContentReady(function (e) {
     var c = e.detail && e.detail.cookie;
     if (!c) return;
     var textEl = cookie.querySelector('.bra-cookie__text');

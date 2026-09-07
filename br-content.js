@@ -281,6 +281,10 @@
     bindExtraAttributes(data);
     bindLists(data);
 
+    // Published before the dispatch, because br.js now loads after this file
+    // and its listeners may not exist yet. braOnContentReady() over there
+    // reads this to catch up on a dispatch it was too late to hear.
+    window.brContent = data;
     document.dispatchEvent(new CustomEvent('br-content-ready', { detail: data }));
   }
 
