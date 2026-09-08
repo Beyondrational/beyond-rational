@@ -1381,14 +1381,19 @@ form[data-form].is-active { display: flex; flex-direction: column; gap: 0; }
 .bra-gallery-img__overlay {
   position: absolute;
   inset: auto 0 0 0;
-  padding: 20px var(--bra-s-3) var(--bra-s-3);
-  /* Runs top-to-bottom and the title sits mid-box, so this one reaches full
-     density early rather than fading in late. Worst case 6.8:1. */
+  /* The title sits near the top of this box, so the scrim has to be at full
+     density by the time it reaches it. It used to get there at 20% of the
+     box height, which on a short cell was invisible and on the taller case
+     cells drew a hard edge across a pale photograph. Same density under the
+     text, reached over a longer ramp — the extra top padding is what buys
+     the ramp its room. */
+  padding: 56px var(--bra-s-3) var(--bra-s-3);
   background: linear-gradient(180deg,
     rgba(20,19,18,0) 0%,
-    rgba(20,19,18,0.76) 20%,
-    rgba(20,19,18,0.84) 46%,
-    rgba(20,19,18,0.84) 100%);
+    rgba(20,19,18,0.30) 26%,
+    rgba(20,19,18,0.80) 42%,
+    rgba(20,19,18,0.88) 58%,
+    rgba(20,19,18,0.88) 100%);
   color: var(--bra-on-oak);
   transform: translateY(0);
   transition: transform var(--bra-dur-base) var(--bra-ease), opacity var(--bra-dur-base) var(--bra-ease);
@@ -1574,6 +1579,24 @@ form[data-form].is-active { display: flex; flex-direction: column; gap: 0; }
     grid-column: span 12;
     grid-row: span 1;
   }
+}
+
+/* Two-image gallery (the case pages). The a/b/c/d cells above tessellate a
+   four-image block: given two, cell-a spanned seven columns of a single row —
+   a 7:1 letterbox that cropped a square product render down to a stripe — and
+   a quarter of the grid sat empty. Equal halves, two rows tall, gives each
+   picture roughly 5:4, which both a square render and a room photograph
+   survive under object-fit: cover. */
+.bra-gallery--pair > .bra-gallery-cell {
+  grid-column: span 6;
+  grid-row: span 2;
+}
+@media (max-width: 900px) {
+  .bra-gallery--pair > .bra-gallery-cell { grid-column: span 12; }
+}
+@media (max-width: 600px) {
+  /* One column already; two rows here would be a 640px-tall cell on a phone. */
+  .bra-gallery--pair > .bra-gallery-cell { grid-row: span 1; }
 }
 
 /* ---------- Marquee (monograph) ---------- */

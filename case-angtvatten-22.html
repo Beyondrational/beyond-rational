@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;500;700;900&family=Archivo+Black&display=swap">
-<link rel="stylesheet" href="br.css?v=70">
+<link rel="stylesheet" href="br.css?v=71">
 <script>if(sessionStorage.getItem("brLoaderShown")){document.documentElement.classList.add("br-loader-skip")}
 /* pagereveal fires before deferred scripts run, so br.js can never catch the
    incoming view transition itself — stash it here and let br.js await it. */
@@ -205,15 +205,15 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 
 <!-- ===== Gallery ===== -->
 <section class="bra-container" style="padding-bottom: var(--bra-s-5);">
-  <div class="bra-gallery bra-gallery--img bra-stagger" data-stagger>
-    <div class="bra-gallery-cell bra-gallery-img bra-cell-a bra-stagger-item" style="grid-row: span 1;">
+  <div class="bra-gallery bra-gallery--img bra-gallery--pair bra-stagger" data-stagger>
+    <div class="bra-gallery-cell bra-gallery-img bra-stagger-item">
       <img class="bra-gallery-img__img" src="assets/aisti-render-3.webp" data-content="gallery.0.image" data-content-attr="src" data-content-alt="gallery.0.alt" alt="A single charcoal Aisti tile, product render" loading="lazy">
       <div class="bra-gallery-img__overlay">
         <div class="bra-gallery-img__title" data-content="gallery.0.title">One tile, charcoal</div>
         <div class="bra-gallery-img__meta" data-content="gallery.0.meta">Product render</div>
       </div>
     </div>
-    <div class="bra-gallery-cell bra-gallery-img bra-cell-b bra-stagger-item">
+    <div class="bra-gallery-cell bra-gallery-img bra-stagger-item">
       <img class="bra-gallery-img__img" src="assets/aisti-feeling-angtvatten.webp" data-content="gallery.1.image" data-content-attr="src" data-content-alt="gallery.1.alt" alt="Blue-walled room at Ångtvätten 22 under a dark ceiling grid" loading="lazy">
       <div class="bra-gallery-img__overlay">
         <div class="bra-gallery-img__title" data-content="gallery.1.title">Dark ceiling grid, blue room</div>
