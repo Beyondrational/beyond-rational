@@ -416,7 +416,10 @@ h1.bra-caption, h2.bra-caption, h3.bra-caption, h4.bra-caption {
 /* ---------- Spec sheet (heavy weights, no hairlines) ---------- */
 .bra-spec {
   display: grid;
-  grid-template-columns: 1fr 1.6fr;
+  /* The value column carries the longer strings — a spec value that names its
+     thickness or its life-cycle module runs to a line and a half, and at the
+     old 1:1.6 it wrapped to a single orphaned word against the right edge. */
+  grid-template-columns: 0.75fr 2fr;
 }
 /* Compact 2-up variant (e.g. a short fact list) — a plain inline
    grid-template-columns would beat the mobile media query below (inline
@@ -443,6 +446,9 @@ h1.bra-caption, h2.bra-caption, h3.bra-caption, h4.bra-caption {
   letter-spacing: -0.012em;
   text-align: right;
   line-height: 1.1;
+  /* Ragged-left is what right alignment gives you; pretty stops the last line
+     from being one word. Ignored where unsupported, which is the old behaviour. */
+  text-wrap: pretty;
 }
 .bra-spec-row:last-child .bra-spec-key,
 .bra-spec-row:last-child .bra-spec-val { border-bottom-width: 4px; }

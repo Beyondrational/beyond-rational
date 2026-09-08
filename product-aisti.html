@@ -528,8 +528,12 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
   </div>
 </section>
 
-<!-- ===== Film — YouTube embeds, chips switch clips (CMS-editable) ===== -->
-<section class="bra-container bra-section">
+<!-- ===== Film — YouTube embeds, chips switch clips (CMS-editable) =====
+     On ink: performance, film and the calculator ran to 4,700px of unbroken
+     paper between the spec sheet and the closing band, which is the flattest
+     stretch on the page. The film is the one that wants a dark ground anyway. -->
+<section class="bra-surface-ink" data-on-dark>
+  <div class="bra-container bra-section">
   <p class="bra-caption" style="margin-bottom: var(--bra-s-3);" data-content="video.section_label">Video</p>
   <h2 class="bra-h2" style="margin-bottom: var(--bra-s-4); max-width: 18ch;">
     <span class="bra-reveal-line" data-reveal data-content="video.title_l1">The film,</span><br>
@@ -549,6 +553,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
     <iframe data-video-frame src="https://www.youtube.com/embed/zMcN2KxKzCk" title="Aisti® film" loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
+  </div>
   </div>
 </section>
 
@@ -690,7 +695,7 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
 </footer>
 
 <script src="br-content.js?v=34" defer></script>
-<script src="br.js?v=45" defer></script>
+<script src="br.js?v=46" defer></script>
 <script src="br-hubspot.js?v=3" defer></script>
 <!-- The document gate posts to HubSpot through br-forms.js, so this page
      needs it too — it used to load only on contact.html. -->
