@@ -2,23 +2,27 @@
   "loader_tag": "Aisti / 2026",
   "hero": {
     "title": "Aisti Aalto®.",
-    "lede": "Skumformet naturlig træfiber. Absorptionsklasse A, to formater, to tykkelser, tre kantprofiler. Passer i standard T-skinne eller monteres direkte med lim. Tilgængelig ved forespørgsel."
+    "lede": "Træfiber, skumformet uden plast eller mineralske bindemidler. Absorptionsklasse A i standardopbygningen, brandklasse B-s1,d0, M1 og fransk A+ for indeklima. Den går op i samme T-skinne, med samme fag, som den plade den erstatter."
   },
   "conscious": {
     "eyebrow": "Et bevidst valg",
-    "title_l1": "Sætter en ny",
-    "title_l2": "standard.",
-    "body": "Aisti Aalto er grundlæggende en biobaseret akustikabsorbent bygget til at præstere i stor skala — ikke et kompromis, men et reelt alternativ. Fibrene er kemitermomekanisk granmasse fra certificerede finske skove, fremstillet uden giftige stoffer, uden plast- eller syntetiske bindemidler og uden mineraluld. Med 1,8 kg/m² er den let at håndtere og let for konstruktionen, og den koster ikke et grønt tillæg — argumentet er ikke dyrere end alternativet."
+    "title_l1": "Den skal kunne",
+    "title_l2": "stå i beskrivelsen.",
+    "body": "Aisti Aalto er en biobaseret absorbent bygget til rigtige projekter, ikke til et bæredygtighedsbilag. Fibrene er kemitermomekanisk granmasse fra certificerede finske skove, skumformet uden plast, mineralske bindemidler eller generende fibre. Den er deklareret efter EN 13964:2014 — samme harmoniserede standard som stenuldspladen ved siden af — har 50 års forventet levetid, og Aisti prissætter den uden grøn merpris. Intet ved at foreskrive den kræver, at du argumenterer ud fra velvilje."
   },
   "spec": {
     "items": [
       {
         "key": "Kerne",
-        "value": "Naturlig træfiber"
+        "value": "Granfiber, ingen syntetiske bindemidler"
+      },
+      {
+        "key": "Standard",
+        "value": "EN 13964:2014"
       },
       {
         "key": "Formater",
-        "value": "600×600 / 600×1200"
+        "value": "600×600 / 600×1200 mm"
       },
       {
         "key": "Tykkelse",
@@ -26,31 +30,39 @@
       },
       {
         "key": "Vægt",
-        "value": "1,8 kg/m²"
+        "value": "1,78 kg/m² ved 20 mm · 3,57 ved 40 mm"
       },
       {
         "key": "Absorption",
-        "value": "Class A"
-      },
-      {
-        "key": "Emissioner",
-        "value": "M1 / French A+"
+        "value": "Klasse A, αw 0,90–0,95 · direkte monteret 20 mm: klasse C, αw 0,65"
       },
       {
         "key": "Brand",
-        "value": "Euroclass B-s1,d0"
+        "value": "Euroklasse B-s1,d0"
       },
       {
-        "key": "CO₂-aftryk",
-        "value": "1,29–1,74 kg CO₂e/m²"
+        "key": "Emission",
+        "value": "M1 · fransk VOC A+"
+      },
+      {
+        "key": "Fugt",
+        "value": "Klasse C, RH 95 % ved 30 °C"
+      },
+      {
+        "key": "Levetid",
+        "value": "50 år, EPD-reference"
+      },
+      {
+        "key": "Klimaaftryk",
+        "value": "A1–C4: 1,48 kg CO₂e/m² ved 20 mm · 2,01 ved 40 mm"
       },
       {
         "key": "Lagret kulstof",
-        "value": "−3,09 til −6,71 kg CO₂e/m²"
+        "value": "A1–A3: −3,09 kg CO₂e/m² ved 20 mm · −6,71 ved 40 mm"
       },
       {
-        "key": "Bortskaffelse",
-        "value": "Kernen kan genanvendes fuldt ud"
+        "key": "Endt levetid",
+        "value": "Kernen genanvendes — retur til fabrikken og opslemmes igen"
       }
     ],
     "downloads": [
@@ -111,19 +123,28 @@
       "tag": "Vores plade",
       "points": [
         {
-          "text": "Naturlig træfiber"
+          "text": "Granfiber, ingen syntetiske bindemidler"
         },
         {
-          "text": "Ingen syntetiske bindemidler"
+          "text": "Klasse A i 200 mm-opbygningen"
         },
         {
-          "text": "Lagrer kulstof (negativt fodaftryk)"
+          "text": "1,78 kg/m² ved 20 mm"
         },
         {
-          "text": "Kernen kan genanvendes fuldt ud"
+          "text": "B-s1,d0 — brændbar, lav røg"
         },
         {
-          "text": "Ingen irriterende fibre"
+          "text": "1,48 kg CO₂e/m² A1–C4"
+        },
+        {
+          "text": "Holder 3,09 kg CO₂e/m² til fabriksporten"
+        },
+        {
+          "text": "Kernen opslemmes og formes igen på fabrikken"
+        },
+        {
+          "text": "Ingen generende fibre"
         }
       ]
     },
@@ -132,19 +153,28 @@
       "tag": "Standarden",
       "points": [
         {
-          "text": "Mineralfiber"
+          "text": "Stenuld, syntetisk harpiksbinder"
         },
         {
-          "text": "Syntetiske bindemidler"
+          "text": "Klasse A, αw op til 1,00"
         },
         {
-          "text": "CO₂-aftrykket forbliver positivt"
+          "text": "2,3 kg/m² ved 20 mm"
+        },
+        {
+          "text": "A1 — højeste klasse, ikke brændbar"
+        },
+        {
+          "text": "2,29 kg CO₂e/m² A1–A3"
+        },
+        {
+          "text": "Intet lagret kulstof"
         },
         {
           "text": "Genanvendes via retursystemer"
         },
         {
-          "text": "Løse fibre — kræver forholdsregler ved montage"
+          "text": "Mineralfibre — kræver håndteringsforholdsregler"
         }
       ]
     }
@@ -233,7 +263,7 @@
     "title_l2": "ikke af plast.",
     "body_p1": "Det begynder som gran. Fibrene pulpes og blandes derefter med vand og et skummiddel, så millioner af små bobler bærer dem — skummet fordeler fibrene jævnt og efterlader en åben, porøs struktur, der opsuger lyd over et bredt frekvensområde. Når massen tørrer, dannes naturlige hydrogenbindinger, som holder strukturen sammen, og derfor kræver pladen hverken plast- eller syntetiske bindemidler. Pladerne støbes af det materiale.",
     "body_p2": "Brandsikkerheden ligger i materialet, ikke i en overfladebehandling. En kaliumbaseret saltbehandling reagerer på varme og danner et beskyttende keramisk lag på pladens overflade — en barriere, der skærmer træfibrene nedenunder og bremser flammespredningen, og det er dét, der bærer klassifikationen B-s1,d0. Løsningen er patenteret og unik for Aisti. Ved endt levetid kan kernen sendes retur til fabrikken, pulpes og formes på ny. Fremstillet i Finland.",
-    "body_p3": "I rummet betyder det mindre efterklang og baggrundsstøj — tale bliver tydeligere, samtaler føles mere naturlige, og rummet opleves simpelthen roligere at være i."
+    "body_p3": "I rummet mærkes det som mindre efterklang og mindre baggrundsstøj. Talen bærer, samtalen holder op med at konkurrere med loftet, og der er til at være en hel dag."
   },
   "partner": {
     "eyebrow": "Partneren",
@@ -261,33 +291,34 @@
     "title_l1": "Aisti Aalto,",
     "title_l2": "i tal.",
     "area_label": "Loftareal",
-    "saved_label": "CO₂e sparet ift.",
+    "saved_label": "Mindre kulstof til fabriksporten end",
     "equiv": "Svarer omtrent til {km} km sparet kørsel.",
     "aisti_lifecycle": {
-      "name": "Aisti Aalto",
-      "note": "Livscyklusemissioner, A1-C4 (fossil)"
+      "name": "Aisti Aalto 20 mm",
+      "note": "Produktionsfasen, A1–A3 (GWP-fossil)"
     },
     "aisti_stored": {
-      "name": "Aisti Aalto",
-      "note": "Lagret CO₂ · biogent kulstof ved fabriksport (A1-A3)"
+      "name": "Aisti Aalto 20 mm",
+      "note": "Kulstof bundet i fibrene frem til fabriksporten"
     },
     "rival": {
-      "name": "Rockfon Sonar 20mm",
-      "note": "Mineraluld · livscyklusemissioner, A1-C4 (fossil)"
+      "name": "Rockfon Sonar 20 mm",
+      "note": "Stenuld, A-kant · produktionsfasen, A1–A3"
     },
-    "disclaimer": "Beregninger er baseret på producenternes EPD — sammenlignet med stenuld. Aisti Aalto 20 mm vs Rockfon Sonar 20mm. Aisti-tal: EPD Hub HUB-5632 (Aisti Corporation Oy, publiceret 06.03.2026) — livscyklusemissioner er GWP-fossil summeret over A1-C4; lagret CO₂ er GWP-biogent ved A1-A3 (fabriksport, før eventuel frigivelse ved endt levetid). Rockfon-tal fra dets offentlige Sonar 20mm-datablad."
+    "disclaimer": "Begge tal er producenternes egne offentliggjorte tal for produktionsfasen, A1–A3, for en 20 mm plade med T-skinnekant. Aisti Aalto: 1,29 kg CO₂e/m² GWP-fossil, EPD Hub HUB-5632 (udgivet 06.03.2026) — en design-EPD baseret på en testlinje, før fabrikken i Kitee. Rockfon Sonar: 2,29 kg CO₂e/m², A-kant, datablad 09.2024. De 3,09 kg CO₂e/m² biogent kulstof i Aisti-pladen er bundet i loftets levetid og frigives ved endt levetid under EPD'ens bortskaffelsesscenarie — derfor vises det, men tælles ikke med som besparelse. Rockfon bemærker selv, at miljøtal sjældent kan sammenlignes direkte på tværs af producenter; læs det som en størrelsesorden, ikke som et certifikat."
   },
   "cta": {
     "title_l1": "Specificér",
     "title_l2": "Aisti.",
-    "lede": "Fortæl om rummet, så hjælper vi med format, tykkelse og kantprofil. Vareprøver og det fulde datablad efter forespørgsel."
+    "lede": "Send rummet — areal, højde, hvad det bruges til — så vender vi tilbage med format, tykkelse og kantprofil, den absorption du kan regne med, og hvor brandklassen stiller dig. Prøver og det fulde datablad på forespørgsel."
   },
   "performance": {
     "section_label": "Ydeevne",
     "notes": [
-      "Ren overfladeabsorbent. Topper hvor talen ligger (500 Hz–2 kHz).",
-      "Luftgab frigør bassen. Bredbånd fra 500 Hz og opefter.",
-      "Tungere plade. Klasse A fra 250 Hz og opefter."
+      "Direkte på underlaget, uden hulrum. Klasse C — αw 0,65. Vælg 200 mm-opbygningen, hvor klasse A kræves.",
+      "Standardopbygningen i skinne. αw 0,95, klasse A, og kurven holder fra 250 Hz og op.",
+      "Tungere plade, lavt hulrum. αw 0,90, klasse A, α = 1,00 gennem taleområdet.",
+      "Dybt hulrum og den tunge plade. αw 0,90, klasse A, og den eneste opbygning der når 0,55 ved 125 Hz."
     ]
   }
 }

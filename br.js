@@ -1387,7 +1387,13 @@ function braOnContentReady(fn) {
       var oRows = oursRows();
       var altRow = visible.filter(function (r) { return !r.hasAttribute('data-ours'); })[0];
       if (oRows.length && altRow) {
-        var oursTotal = oRows.reduce(function (sum, r) { return sum + area * (parseFloat(r.getAttribute('data-factor')) || 0); }, 0);
+        // The stored-carbon row is shown but kept out of the saving: the EPD's
+        // own disposal scenario releases nearly all of that biogenic carbon at
+        // end of life, so counting it as avoided emissions would overstate the
+        // comparison by roughly a factor of four.
+        var oursTotal = oRows
+          .filter(function (r) { return !r.hasAttribute('data-exclude-from-saving'); })
+          .reduce(function (sum, r) { return sum + area * (parseFloat(r.getAttribute('data-factor')) || 0); }, 0);
         var altTotal  = area * (parseFloat(altRow.getAttribute('data-factor')) || 0);
         var saving = altTotal - oursTotal;
         if (saveEl) saveEl.textContent = fmt(saving);

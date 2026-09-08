@@ -3,14 +3,14 @@
   "hero": {
     "title_l1": "Bevidst akustik",
     "title_l2_em": "til moderne arkitektur.",
-    "subtitle": "Beyond Rational er en københavnsk virksomhed, der leverer bæredygtige, designdrevne akustikmaterialer. Vi kombinerer skandinavisk æstetik med high-performance funktionalitet — og samarbejder med arkitekter, designere og developere, der værdsætter kvalitet, innovation og impact.",
+    "subtitle": "Vi leverer akustikmaterialer, der kan holde i beskrivelsen — deklareret efter samme standarder, monteret af samme fag, hvor det er kulstoffet der er taget ud, ikke ydelsen. København, sammen med arkitekter, ingeniører og entreprenører i hele Danmark.",
     "cta_primary": "Se vores løsninger",
     "cta_secondary": "Kontakt"
   },
   "range": {
     "section_label": "Hvad vi tilbyder",
     "meta": "Beyond Rational",
-    "intro": "Beyond Rational er en københavnsk virksomhed, der leverer et kurateret udvalg af bevidste akustik- og overfladematerialer til moderne arkitektur — udvalgt for ydeevne, overflade og lavt fodaftryk.",
+    "intro": "Fire materialer, hver med sin egen EPD og sine egne prøvningsrapporter. Valgt fordi de kan stå ved siden af det gængse på absorption, brand og montage — ikke fordi de tager sig godt ud på et billede.",
     "link_label": "Se alle produkter",
     "items": [
       {
@@ -42,11 +42,11 @@
   "process": {
     "section_label": "Missionserklæring",
     "meta": "Derfor findes vi",
-    "title_l1": "Godt for rummet,",
-    "title_l2_em": "godt for planeten.",
-    "body_p1": "Beyond Rational eksisterer for at gøre det bevidste valg til det nemme valg. Vi kuraterer akustik- og overfladematerialer, der lever op til den standard, arkitekter forventer, uden de kompromiser der normalt følger med \"bæredygtighed\" — ingen nedgradering i finish, ingen nedgradering i specifikation.",
-    "body_p2": "Ethvert materiale, vi fører, vælges først og fremmest på egne meritter: hvordan det lyder, hvordan det ser ud, hvordan det holder. Det lavere fodaftryk er udgangspunktet, vi starter fra — ikke det kompromis, vi beder arkitekter acceptere.",
-    "body_p3": "Det bevidste valg burde være det oplagte. I byggebranchen er det sjældent — regler og en langvarig forsigtighed over for nye materialer har holdt markedet konservativt. Vi arbejder kun med branchens mest ambitiøse, visionære partnere for at ændre det, ét materiale ad gangen.",
+    "title_l1": "Det bevidste valg",
+    "title_l2_em": "skal kunne tåle et review.",
+    "body_p1": "Beyond Rational findes for at gøre det bevidste valg til et, der kan forsvares. Vi fører akustik- og overflademateriale, der lever op til de standarder en beskrivende allerede arbejder efter — EN 13964 for loftssortimentet, absorptionsklasse A hvor opbygningen tillader det, deklarerede emissioner, offentliggjorte EPD'er. Aftrykket er mindre. Papirerne er ikke tyndere.",
+    "body_p2": "Hvert materiale er valgt på sine egne meritter først: hvordan det lyder, hvordan det ser ud, hvordan det fastgøres, hvordan det ældes. Hvor et materiale adskiller sig fra det gængse — og Aisti Aalto er B-s1,d0 hvor stenuld er A1 — siger vi det tidligt, for I finder det alligevel ved brandstrategien.",
+    "body_p3": "Byggeriet er konservativt af gode grunde, og et nyt materiale gør sig fortjent ved at kunne efterprøves. Derfor tager vi prøvningsrapporterne, EPD'en og monteringsdetaljen med til første møde og lader dem føre ordet.",
     "cap_left": "Åben porøs struktur",
     "cap_right": "Bevidst by design"
   },
@@ -61,7 +61,7 @@
     "stat_people_label": "Leverandører",
     "stat_studios": "2025",
     "stat_studios_label": "I drift siden",
-    "body": "Beyond Rational har base i København. Vores partner Aisti producerer i Finland. Vi specificerer og leverer i hele Danmark. Vores team har mangeårig erfaring med at designe og udvikle akustikprodukter og -materialer — hvilket giver os et unikt perspektiv på akustikbranchen.",
+    "body": "Beyond Rational har base i København. Vores partner Aisti producerer i Kitee i Finland. Vi specificerer og leverer i hele Danmark, og vores team har brugt år på at designe og udvikle akustikprodukter — derfor læser vi en EPD før vi læser en brochure.",
     "link_label": "Kontakt"
   },
   "cases": {
@@ -91,7 +91,7 @@
     "meta": "København",
     "title_l1": "Send briefet.",
     "title_l2_em": "Vi læser det grundigt.",
-    "body": "Vi svarer mandag til fredag og arbejder direkte med arkitekter, designere og bygningsejere.",
+    "body": "Send tegningen, rumskemaet eller bare arealet. Vi svarer mandag til fredag og arbejder direkte med arkitekter, ingeniører, entreprenører og bygningsejere.",
     "email": "hello@beyondrational.com"
   }
 }

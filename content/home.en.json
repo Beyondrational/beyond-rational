@@ -3,14 +3,14 @@
   "hero": {
     "title_l1": "Conscious acoustics",
     "title_l2_em": "for modern architecture.",
-    "subtitle": "Beyond Rational is a Copenhagen-based company supplying sustainable, design-driven acoustic materials. We combine Scandinavian aesthetics with high-performance functionality — and partner with architects, designers, and developers who care about quality, innovation, and impact.",
+    "subtitle": "We supply acoustic materials that hold up on the spec sheet — declared to the same standards, installed by the same trades, with the carbon taken out rather than the performance. Copenhagen, working with architects, engineers and contractors across Denmark.",
     "cta_primary": "See our solutions",
     "cta_secondary": "Contact"
   },
   "range": {
     "section_label": "What we offer",
     "meta": "Beyond Rational",
-    "intro": "Beyond Rational is a Copenhagen company supplying a curated range of conscious acoustic and surface materials for modern architecture — chosen for performance, surface, and a low footprint.",
+    "intro": "Four materials, each carrying its own EPD and test data. Chosen because they stand up next to the incumbent on absorption, fire and buildability — not because they photograph well.",
     "link_label": "See all products",
     "items": [
       {
@@ -42,11 +42,11 @@
   "process": {
     "section_label": "Mission statement",
     "meta": "Why we exist",
-    "title_l1": "Good for the room,",
-    "title_l2_em": "good for the planet.",
-    "body_p1": "Beyond Rational exists to make the conscious choice the easy choice. We curate acoustic and surface materials that perform to the standard architects expect, without the compromises that usually come with \"sustainable\" — no downgrade in finish, no downgrade in specification.",
-    "body_p2": "Every material we carry is chosen on its own merits first: how it sounds, how it looks, how it lasts. The lower footprint is the baseline we start from, not the trade-off we ask architects to accept.",
-    "body_p3": "The conscious choice should be the obvious one. In construction it rarely is — regulation and a longstanding caution toward new materials have kept the market conservative. We work only with the most ambitious, visionary partners to change that, one material at a time.",
+    "title_l1": "The conscious choice",
+    "title_l2_em": "has to survive review.",
+    "body_p1": "Beyond Rational exists to make the conscious choice a defensible one. We carry acoustic and surface materials that meet the standards a specifier already works to — EN 13964 for the ceiling range, Class A absorption where the build-up allows it, declared emissions, published EPDs. The footprint is lower. The paperwork is not thinner.",
+    "body_p2": "Every material is chosen on its own merits first: how it sounds, how it looks, how it is fixed, how it ages. Where a material differs from the incumbent — and Aisti Aalto is B-s1,d0 where stone wool is A1 — we say so early, because you will find it at the fire strategy anyway.",
+    "body_p3": "Construction is conservative for good reasons, and a new material earns its place by being checkable. So we bring the test reports, the EPD and the mounting detail to the first meeting, and let them do the arguing.",
     "cap_left": "Open porous structure",
     "cap_right": "Conscious by design"
   },
@@ -61,7 +61,7 @@
     "stat_people_label": "Suppliers",
     "stat_studios": "2025",
     "stat_studios_label": "In business since",
-    "body": "Beyond Rational is based in Copenhagen. Our partner Aisti produces in Finland. We specify and supply across Denmark. Our team has years of experience designing and developing acoustic products and materials — giving us a unique perspective on the acoustic industry.",
+    "body": "Beyond Rational is based in Copenhagen. Our partner Aisti produces in Kitee, Finland. We specify and supply across Denmark, and our team has spent years designing and developing acoustic products — which is why we read an EPD before we read a brochure.",
     "link_label": "Contact"
   },
   "cases": {
@@ -91,7 +91,7 @@
     "meta": "Copenhagen",
     "title_l1": "Send the brief.",
     "title_l2_em": "We'll read it carefully.",
-    "body": "We answer Monday to Friday and work directly with architects, designers, and property owners.",
+    "body": "Send the drawing, the room schedule or just the area. We answer Monday to Friday, and we work directly with architects, engineers, contractors and property owners.",
     "email": "hello@beyondrational.com"
   }
 }
