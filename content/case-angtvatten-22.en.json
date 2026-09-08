@@ -10,8 +10,8 @@
     "title_l1": "Speech,",
     "title_l2": "not noise.",
     "body_p1": "The building management wanted a ceiling solution that would improve speech intelligibility across the open floor. The space was a standard suspended T-grid layout — fast to install, but acoustically untreated.",
-    "body_p2": "The requirement was clear: achieve Class A absorption in the 500 Hz–2 kHz range without altering the aesthetics of the ceiling. The tile had to read as a neutral surface, not as an acoustic treatment.",
-    "body_p3": "Aisti Aalto was installed side-by-side with standard mineral wool tiles as a blind comparison. Installers and occupants reported no visible difference between the two products."
+    "body_p2": "The requirement was speech intelligibility across an open floor, and a ceiling that reads as a neutral surface rather than as acoustic treatment. Absorption had to do its work between 500 Hz and 2 kHz, where conversation sits.",
+    "body_p3": "Aisti Aalto went up alongside the standard mineral wool tile in the same grid, in the same 600 × 600 module, so the two could be compared in place."
   },
   "spec": {
     "items": [
@@ -48,7 +48,9 @@
         "value": "Q4 2025"
       }
     ],
-    "section_label": "Project spec"
+    "section_label": "Project spec",
+    "title_l1": "What was",
+    "title_l2": "installed."
   },
   "gallery": [
     {
@@ -66,9 +68,9 @@
   ],
   "results": {
     "eyebrow": "The result",
-    "title_l1": "Class A,",
-    "title_l2": "confirmed.",
-    "note": "Absorption coefficients from EN ISO 354 reverberation room test. Configuration: 20 mm / tight (plate-flush). Aisti rates the tile absorption Class A to EN ISO 11654."
+    "title_l1": "0.80 where",
+    "title_l2": "speech sits.",
+    "note": "Absorption coefficients from Aisti's EN ISO 354 reverberation room test, 20 mm mounted tight to the soffit. In that build-up Aisti rate the tile αw 0.65 — Class C to EN ISO 11654 — because absorption at 125 Hz falls to 0.10 and the single-number rating follows the weak end. Across 500 Hz to 2 kHz it holds 0.75 to 0.80. The same tile over a 200 mm plenum is rated αw 0.95, Class A."
   },
   "performance": {
     "items": [
@@ -85,16 +87,20 @@
         "value": "0.80"
       },
       {
-        "key": "Absorption class",
-        "value": "Class A"
+        "key": "α at 125 Hz",
+        "value": "0.10"
       },
       {
-        "key": "vs. mineral wool",
-        "value": "No measurable difference"
+        "key": "Rating, this build-up",
+        "value": "αw 0.65 · Class C"
+      },
+      {
+        "key": "Same tile, 200 mm plenum",
+        "value": "αw 0.95 · Class A"
       },
       {
         "key": "Test standard",
-        "value": "EN ISO 354"
+        "value": "EN ISO 354 / EN ISO 11654"
       }
     ]
   },

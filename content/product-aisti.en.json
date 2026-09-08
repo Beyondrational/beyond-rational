@@ -85,7 +85,9 @@
         "gated": false
       }
     ],
-    "section_label": "The spec"
+    "section_label": "The spec",
+    "title_l1": "Foam-formed",
+    "title_l2": "wood fibre."
   },
   "facts": {
     "format": {
@@ -135,7 +137,7 @@
           "text": "B-s1,d0 — combustible, low smoke"
         },
         {
-          "text": "1.48 kg CO₂e/m² A1–C4"
+          "text": "1.29 kg CO₂e/m² A1–A3"
         },
         {
           "text": "Holds 3.09 kg CO₂e/m² to the factory gate"
@@ -319,6 +321,8 @@
       "The standard grid build-up. αw 0.95, Class A, and the curve holds from 250 Hz up.",
       "Heavier plate, shallow cavity. αw 0.90, Class A, α = 1.00 through the speech bands.",
       "Deep cavity and the heavier plate. αw 0.90, Class A, and the only build-up that reaches 0.55 at 125 Hz."
-    ]
+    ],
+    "title_l1": "Aisti® — ",
+    "title_l2": "four configurations."
   }
 }

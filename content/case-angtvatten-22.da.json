@@ -10,8 +10,8 @@
     "title_l1": "Tale,",
     "title_l2": "ikke støj.",
     "body_p1": "Ejendomsadministrationen ønskede en loftsløsning, der kunne forbedre taleforståeligheden i det åbne kontorlandskab. Rummet havde et standard nedhængt T-skinneloft — hurtigt at installere, men akustisk ubehandlet.",
-    "body_p2": "Kravet var klart: opnå Class A-absorption i 500 Hz–2 kHz-området uden at ændre loftets æstetik. Pladen skulle fremstå som en neutral overflade, ikke som en akustisk behandling.",
-    "body_p3": "Aisti Aalto blev installeret side om side med standard mineraluldsplader som en blindsammenligning. Installatører og brugere rapporterede ingen synlig forskel mellem de to produkter."
+    "body_p2": "Kravet var taleforståelighed på et åbent kontorgulv og et loft, der læses som en neutral flade frem for som akustisk behandling. Absorptionen skulle virke mellem 500 Hz og 2 kHz, hvor samtalen ligger.",
+    "body_p3": "Aisti Aalto kom op ved siden af den gængse stenuldsplade i samme skinne og samme 600 × 600-modul, så de to kunne sammenlignes på stedet."
   },
   "spec": {
     "items": [
@@ -48,7 +48,9 @@
         "value": "Q4 2025"
       }
     ],
-    "section_label": "Projektspecifikation"
+    "section_label": "Projektspecifikation",
+    "title_l1": "Hvad der",
+    "title_l2": "blev monteret."
   },
   "gallery": [
     {
@@ -66,35 +68,39 @@
   ],
   "results": {
     "eyebrow": "Resultatet",
-    "title_l1": "Class A,",
-    "title_l2": "bekræftet.",
-    "note": "Absorptionskoefficienter fra EN ISO 354-efterklangsrumsmåling. Opbygning: 20 mm / tæt (planforsænket). Aisti klassificerer pladen i absorptionsklasse A efter EN ISO 11654."
+    "title_l1": "0,80 hvor",
+    "title_l2": "talen ligger.",
+    "note": "Absorptionskoefficienter fra Aistis EN ISO 354-måling i efterklangsrum, 20 mm monteret tæt mod underlaget. I den opbygning rater Aisti selv pladen αw 0,65 — klasse C efter EN ISO 11654 — fordi absorptionen ved 125 Hz falder til 0,10, og enkelttallet følger den svage ende. Fra 500 Hz til 2 kHz holder den 0,75 til 0,80. Samme plade over et 200 mm hulrum rates αw 0,95, klasse A."
   },
   "performance": {
     "items": [
       {
         "key": "α ved 500 Hz",
-        "value": "0.75"
+        "value": "0,75"
       },
       {
         "key": "α ved 1 kHz",
-        "value": "0.75"
+        "value": "0,75"
       },
       {
         "key": "α ved 2 kHz",
-        "value": "0.80"
+        "value": "0,80"
       },
       {
-        "key": "Absorptionsklasse",
-        "value": "Class A"
+        "key": "α ved 125 Hz",
+        "value": "0,10"
       },
       {
-        "key": "vs. mineraluld",
-        "value": "Ingen målbar forskel"
+        "key": "Vurdering, denne opbygning",
+        "value": "αw 0,65 · klasse C"
       },
       {
-        "key": "Teststandard",
-        "value": "EN ISO 354"
+        "key": "Samme plade, 200 mm hulrum",
+        "value": "αw 0,95 · klasse A"
+      },
+      {
+        "key": "Prøvningsstandard",
+        "value": "EN ISO 354 / EN ISO 11654"
       }
     ]
   },

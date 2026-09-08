@@ -85,7 +85,9 @@
         "gated": false
       }
     ],
-    "section_label": "Specifikationer"
+    "section_label": "Specifikationer",
+    "title_l1": "Skumformet",
+    "title_l2": "træfiber."
   },
   "facts": {
     "format": {
@@ -135,7 +137,7 @@
           "text": "B-s1,d0 — brændbar, lav røg"
         },
         {
-          "text": "1,48 kg CO₂e/m² A1–C4"
+          "text": "1,29 kg CO₂e/m² A1–A3"
         },
         {
           "text": "Holder 3,09 kg CO₂e/m² til fabriksporten"
@@ -319,6 +321,8 @@
       "Standardopbygningen i skinne. αw 0,95, klasse A, og kurven holder fra 250 Hz og op.",
       "Tungere plade, lavt hulrum. αw 0,90, klasse A, α = 1,00 gennem taleområdet.",
       "Dybt hulrum og den tunge plade. αw 0,90, klasse A, og den eneste opbygning der når 0,55 ved 125 Hz."
-    ]
+    ],
+    "title_l1": "Aisti® — ",
+    "title_l2": "fire opbygninger."
   }
 }
