@@ -6,8 +6,8 @@
   },
   "idea": {
     "eyebrow": "The growth",
-    "title_l1": "Cultivated,",
-    "title_l2": "not carved.",
+    "title_l1": "Grown on",
+    "title_l2": "textile waste.",
     "points": [
       {
         "num": "01",
@@ -21,15 +21,15 @@
       },
       {
         "num": "03",
-        "title": "Circular by design",
-        "body": "VOC-free and 100% circular, with a screw-less fixing system for easy mounting and removal. Naturally white by default, with a wider colour range available."
+        "title": "Comes down as easily as it goes up",
+        "body": "VOC-free, with a screw-less fixing system that takes the panels off the wall without damage. Naturally white as standard, with a wider colour range available."
       }
     ]
   },
   "spec": {
     "eyebrow": "The numbers",
-    "title_l1": "Soft surface,",
-    "title_l2": "serious absorption.",
+    "title_l1": "Mycelium,",
+    "title_l2": "measured.",
     "rows": [
       {
         "key": "Core",
@@ -61,7 +61,7 @@
       },
       {
         "key": "End of life",
-        "value": "100% circular, VOC-free"
+        "value": "Recyclable · VOC-free"
       }
     ]
   },

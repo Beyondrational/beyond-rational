@@ -6,8 +6,8 @@
   },
   "idea": {
     "eyebrow": "Væksten",
-    "title_l1": "Dyrket, ikke",
-    "title_l2": "udskåret.",
+    "title_l1": "Dyrket på",
+    "title_l2": "tekstilaffald.",
     "points": [
       {
         "num": "01",
@@ -21,15 +21,15 @@
       },
       {
         "num": "03",
-        "title": "Cirkulær by design",
-        "body": "VOC-fri og 100% cirkulær, med et skrueløst monteringssystem for nem opsætning og afmontering. Naturligt hvid som standard, med et bredere farveudvalg tilgængeligt."
+        "title": "Ned lige så let som op",
+        "body": "VOC-fri, med et skrueløst monteringssystem der tager pladerne af væggen uden skader. Naturligt hvid som standard, med et bredere farveudvalg."
       }
     ]
   },
   "spec": {
     "eyebrow": "Tallene",
-    "title_l1": "Blød overflade,",
-    "title_l2": "seriøs absorption.",
+    "title_l1": "Mycelium,",
+    "title_l2": "målt.",
     "rows": [
       {
         "key": "Kerne",
@@ -61,7 +61,7 @@
       },
       {
         "key": "Endt levetid",
-        "value": "100% cirkulær, VOC-fri"
+        "value": "Genanvendelig · VOC-fri"
       }
     ]
   },

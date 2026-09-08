@@ -2,12 +2,12 @@
   "loader_tag": "Sappa / 2026",
   "hero": {
     "title": "Sappa.",
-    "lede": "Akustikplader dyrket af hamp — et af nutidens mest bæredygtige råmaterialer, bundet med et cementfrit mineralsk bindemiddel. Til vægge og lofter, bragt til Danmark af Beyond Rational."
+    "lede": "Akustikplader presset af hampeskæver og et cementfrit mineralsk bindemiddel. Hamp når fuld højde på én sæson, med lidt vand og uden pesticider. Til vægge og lofter, bragt til Danmark af Beyond Rational."
   },
   "idea": {
     "eyebrow": "Materialet",
-    "title_l1": "Dyrket, ikke",
-    "title_l2": "fremstillet.",
+    "title_l1": "Fra stænglen,",
+    "title_l2": "til pladen.",
     "points": [
       {
         "num": "01",
@@ -21,15 +21,15 @@
       },
       {
         "num": "03",
-        "title": "Fra vugge til vugge",
-        "body": "Et cementfrit mineralsk bindemiddel holder hampestykkerne sammen, uden tilsatte syntetiske flammehæmmere — naturligt brandbestandig, fuldt genanvendelig. Et komplet vugge-til-vugge-design."
+        "title": "Bindemiddel uden cement",
+        "body": "Et cementfrit mineralsk bindemiddel holder hampeskæverne sammen, uden tilsatte syntetiske flammehæmmere — naturligt brandbestandig og genanvendelig ved endt levetid."
       }
     ]
   },
   "spec": {
     "eyebrow": "Opbygningen",
-    "title_l1": "Hamp, bundet",
-    "title_l2": "til rummet.",
+    "title_l1": "Hampeskæver,",
+    "title_l2": "mineralsk binder.",
     "rows": [
       {
         "key": "Kerne",
@@ -61,7 +61,7 @@
       },
       {
         "key": "Endt levetid",
-        "value": "Vugge til vugge, genanvendelig"
+        "value": "Genanvendelig"
       }
     ]
   },

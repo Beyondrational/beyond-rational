@@ -40,7 +40,7 @@
     ]
   },
   "process": {
-    "section_label": "Missionserklæring",
+    "section_label": "Præmissen",
     "meta": "Derfor findes vi",
     "title_l1": "Det bevidste valg",
     "title_l2_em": "skal kunne tåle et review.",
@@ -53,15 +53,15 @@
   "studio": {
     "section_label": "Hvem vi er",
     "meta": "København · Finland",
-    "title_l1": "Københavnsk kontor.",
-    "title_l2_em": "Globalt inspireret.",
+    "title_l1": "Vi læser EPD'en",
+    "title_l2_em": "før brochuren.",
     "stat_founded": "CPH",
     "stat_founded_label": "Base i København",
     "stat_people": "4",
     "stat_people_label": "Leverandører",
     "stat_studios": "2025",
     "stat_studios_label": "I drift siden",
-    "body": "Beyond Rational har base i København. Vores partner Aisti producerer i Kitee i Finland. Vi specificerer og leverer i hele Danmark, og vores team har brugt år på at designe og udvikle akustikprodukter — derfor læser vi en EPD før vi læser en brochure.",
+    "body": "Beyond Rational har base i København; vores partner Aisti producerer i Kitee i Finland. Vi specificerer og leverer i hele Danmark. Tilsammen har vi brugt år på at designe og udvikle akustikprodukter, hvilket først og fremmest er godt til at vide, hvilke spørgsmål man skal stille en producent.",
     "link_label": "Kontakt"
   },
   "cases": {

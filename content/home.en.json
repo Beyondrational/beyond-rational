@@ -40,7 +40,7 @@
     ]
   },
   "process": {
-    "section_label": "Mission statement",
+    "section_label": "The premise",
     "meta": "Why we exist",
     "title_l1": "The conscious choice",
     "title_l2_em": "has to survive review.",
@@ -53,15 +53,15 @@
   "studio": {
     "section_label": "Who we are",
     "meta": "Copenhagen · Finland",
-    "title_l1": "Copenhagen office.",
-    "title_l2_em": "Globally inspired.",
+    "title_l1": "We read the EPD",
+    "title_l2_em": "before the brochure.",
     "stat_founded": "CPH",
     "stat_founded_label": "Based in Copenhagen",
     "stat_people": "4",
     "stat_people_label": "Suppliers",
     "stat_studios": "2025",
     "stat_studios_label": "In business since",
-    "body": "Beyond Rational is based in Copenhagen. Our partner Aisti produces in Kitee, Finland. We specify and supply across Denmark, and our team has spent years designing and developing acoustic products — which is why we read an EPD before we read a brochure.",
+    "body": "Beyond Rational is based in Copenhagen; our partner Aisti produces in Kitee, Finland. We specify and supply across Denmark. Between us we have spent years designing and developing acoustic products, which is mostly useful for knowing which questions to put to a manufacturer.",
     "link_label": "Contact"
   },
   "cases": {

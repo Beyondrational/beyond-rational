@@ -2,12 +2,12 @@
   "loader_tag": "Sappa / 2026",
   "hero": {
     "title": "Sappa.",
-    "lede": "Acoustic panels grown from hemp — one of today's most sustainable raw materials, bound with a cement-free mineral binder. For walls and ceilings, brought to Denmark by Beyond Rational."
+    "lede": "Acoustic panels pressed from hemp shiv and a cement-free mineral binder. Hemp reaches full height in a season, on little water and no pesticides. For walls and ceilings, brought to Denmark by Beyond Rational."
   },
   "idea": {
     "eyebrow": "The material",
-    "title_l1": "Grown, not",
-    "title_l2": "manufactured.",
+    "title_l1": "From the stem,",
+    "title_l2": "to the panel.",
     "points": [
       {
         "num": "01",
@@ -21,15 +21,15 @@
       },
       {
         "num": "03",
-        "title": "Cradle to cradle",
-        "body": "A cement-free mineral binder holds the hemp chips together, with no synthetic flame retardants added — naturally fire-resistant, fully recyclable. A complete cradle-to-cradle design."
+        "title": "Binder without cement",
+        "body": "A cement-free mineral binder holds the hemp chips together, with no synthetic flame retardants added — naturally fire-resistant, and recyclable at end of life."
       }
     ]
   },
   "spec": {
     "eyebrow": "The build",
-    "title_l1": "Hemp, bound",
-    "title_l2": "for the room.",
+    "title_l1": "Hemp shiv,",
+    "title_l2": "mineral binder.",
     "rows": [
       {
         "key": "Core",
@@ -61,7 +61,7 @@
       },
       {
         "key": "End of life",
-        "value": "Cradle-to-cradle, recyclable"
+        "value": "Recyclable"
       }
     ]
   },

@@ -7,8 +7,8 @@
   },
   "brief": {
     "eyebrow": "Opgaven",
-    "title_l1": "Efterklang",
-    "title_l2": "tæmmet.",
+    "title_l1": "Høje lofter,",
+    "title_l2": "hårde overflader.",
     "body_p1": "Rummet havde et ekkoproblem — høje lofter og hårde overflader, som i et hvilket som helst ubehandlet moderne kontor. Samtaler flød sammen. Møder blev trættende.",
     "body_p2": "Udfordringen var at behandle loftet uden nedhængte panelmoduler eller synlige absorptionsbaffler. Opgaven krævede en pladeflugtende, neutral loftoverflade, der kunne specificeres direkte fra en arkitekttegning.",
     "body_p3": "Aisti Aalto i 40 mm, monteret med en 200 mm lægte for at skabe et luftmellemrum, var specifikationen. Det bredere pladeformat — 600×1200 mm — reducerede antallet af synlige samlinger og holdt loftfladen ren."
@@ -68,15 +68,15 @@
   ],
   "results": {
     "eyebrow": "Resultatet",
-    "title_l1": "−29 %",
+    "title_l1": "−29 %",
     "title_l2": "RT60.",
-    "note": "Absorptionskoefficienter fra EN ISO 354-efterklangsrumsmåling. Opbygning: 40 mm / 200 mm luftgab. Aisti oplyser en forbedring af efterklangstiden på 29 % på hvert oktavbånd efter montage."
+    "note": "Absorptionskoefficienter fra EN ISO 354-efterklangsrumsmåling. Opbygning: 40 mm / 200 mm luftgab. Aisti oplyser en forbedring af efterklangstiden på 29 % på hvert oktavbånd efter montage."
   },
   "performance": {
     "items": [
       {
         "key": "Efterklangstid",
-        "value": "−29 %"
+        "value": "−29 %"
       },
       {
         "key": "α ved 125 Hz",

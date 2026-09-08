@@ -46,7 +46,7 @@
       },
       {
         "key": "Fugt",
-        "value": "Klasse C, RH 95 % ved 30 °C"
+        "value": "Klasse C, RH 95 % ved 30 °C"
       },
       {
         "key": "Levetid",
@@ -269,9 +269,9 @@
   },
   "partner": {
     "eyebrow": "Partneren",
-    "title_l1": "Finsk opfindsomhed,",
-    "title_l2": "gjort ansvarlig.",
-    "body": "Aisti repræsenterer finsk opfindsomhed, innovation og ansvarlighed — og arbejder på at blive den førende leverandør af exceptionelt bæredygtige akustikprodukter, der er sikre og sunde for mennesker og miljø, og som frigør branchen fra mineraluld og fossilbaserede materialer, ét loft ad gangen."
+    "title_l1": "Det begyndte med",
+    "title_l2": "en loftsmontør.",
+    "body": "Aisti begyndte med et spørgsmål fra en af Mikko Paananens kunder: fandtes der en mere bæredygtig loftsplade, der ikke gav afkald på hverken ydeevne eller pris? Han drev selv et loftsmontagefirma dengang og kunne ikke finde en. Sporet førte til foam-forming — en fiberproces, der var undersøgt til akustik, men aldrig sat i produktion. Fremstillingen flytter fra pilotlinjen til en fabrik i Kitee i løbet af 2026, på en kontraktbunden strømmix af 70 % kernekraft og 30 % vandkraft."
   },
   "video": {
     "section_label": "Video",
