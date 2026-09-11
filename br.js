@@ -116,9 +116,62 @@ function braOnContentReady(fn) {
      draws the hyphen — only on the screens where the line doesn't fit. */
   var SOFT_HYPHEN = '\u00AD';
 
+  /* A registered or trademark sign set at the same size as the word it follows
+     is enormous on a display heading — 107px on the Aisti hero. Tag the span so
+     the stylesheet can set it at the size typography actually calls for. Body
+     copy is left alone: at 16px the full-size mark is correct. */
+  const TRADEMARK_CHARS = '\u00AE\u2122';
+  const TRADEMARK_CLASS = 'bra-reveal-char--mark';
+
+  /* Only headings: at 16px the full-size mark is correct, and shrinking it
+     there leaves an illegible smudge. Scoping the walk to h1-h3 rather than a
+     list of display classes keys the rule to document structure, which does
+     not drift when a class is renamed.
+
+     Every other route to the page — plain textContent binding, and the
+     reduced-motion path that skips splitting altogether — leaves the mark
+     bare. This catches all of them. It re-runs on every content-ready,
+     because the language toggle re-binds and the wrappers go with it. */
+  const TRADEMARK_SCOPE = 'h1, h2, h3';
+
+  function wrapTrademarkMarks(root) {
+    root.querySelectorAll(TRADEMARK_SCOPE).forEach(wrapTrademarkMarksIn);
+  }
+
+  function wrapTrademarkMarksIn(root) {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const targets = [];
+    let node;
+    while ((node = walker.nextNode())) {
+      if (node.parentElement && node.parentElement.closest('.' + TRADEMARK_CLASS)) continue;
+      if ([...TRADEMARK_CHARS].some((ch) => node.nodeValue.indexOf(ch) !== -1)) targets.push(node);
+    }
+    targets.forEach((textNode) => {
+      const fragment = document.createDocumentFragment();
+      let plain = '';
+      const flush = () => {
+        if (!plain) return;
+        fragment.appendChild(document.createTextNode(plain));
+        plain = '';
+      };
+      [...textNode.nodeValue].forEach((ch) => {
+        if (!TRADEMARK_CHARS.includes(ch)) { plain += ch; return; }
+        flush();
+        const mark = document.createElement('span');
+        mark.className = TRADEMARK_CLASS;
+        mark.textContent = ch;
+        fragment.appendChild(mark);
+      });
+      flush();
+      textNode.parentNode.replaceChild(fragment, textNode);
+    });
+  }
+
   function appendRevealChar(target, ch, idx) {
     const span = document.createElement('span');
-    span.className = 'bra-reveal-char';
+    span.className = TRADEMARK_CHARS.includes(ch)
+      ? 'bra-reveal-char ' + TRADEMARK_CLASS
+      : 'bra-reveal-char';
     span.style.transitionDelay = `${idx * REVEAL_CHAR_DELAY_MS}ms`;
     span.textContent = ch;
     target.appendChild(span);
@@ -172,6 +225,9 @@ function braOnContentReady(fn) {
     if (reduceMotion) { el.textContent = text; return; }
     splitRevealChars(el, text);
   };
+
+  braOnContentReady(() => wrapTrademarkMarks(document.body));
+  wrapTrademarkMarks(document.body);
 
   if (!reduceMotion) {
     document.querySelectorAll('[data-reveal]').forEach((el) => {

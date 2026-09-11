@@ -831,6 +831,17 @@ h1.bra-caption, h2.bra-caption, h3.bra-caption, h4.bra-caption {
   transform: translateY(0);
   opacity: 1;
 }
+/* Registered/trademark sign inside a heading. vertical-align rather than a
+   relative offset, so it keeps its place in the inline flow and does not
+   fight the translateY the reveal animates. Both lengths are em of the
+   reduced size, so this holds at every heading scale. */
+.bra-reveal-char--mark {
+  /* 0.45em is right on display type — 48px against a 107px hero. The floor is
+     what keeps a small heading legible: at 22px the same ratio gives a 10px
+     smudge, which is the problem this rule exists to avoid, one size down. */
+  font-size: clamp(12px, 0.45em, 64px);
+  vertical-align: 0.78em;
+}
 
 /* Number ticker — uses spec-style heavy + tabular */
 .bra-ticker {
