@@ -10,7 +10,7 @@
   "range": {
     "section_label": "What we offer",
     "meta": "Beyond Rational",
-    "intro": "Four materials, each carrying its own EPD and test data. Chosen because they stand up next to the incumbent on absorption, fire and buildability — not because they photograph well.",
+    "intro": "Four materials, each carrying its own EPD and test data. Chosen because they stand up next to the incumbent on absorption, fire and buildability.",
     "link_label": "See all products",
     "items": [
       {
@@ -42,26 +42,26 @@
   "process": {
     "section_label": "The premise",
     "meta": "Why we exist",
-    "title_l1": "The conscious choice",
-    "title_l2_em": "has to survive review.",
-    "body_p1": "Beyond Rational exists to make the conscious choice a defensible one. We carry acoustic and surface materials that meet the standards a specifier already works to — EN 13964 for the ceiling range, Class A absorption where the build-up allows it, declared emissions, published EPDs. The footprint is lower. The paperwork is not thinner.",
+    "title_l1": "Lower footprint.",
+    "title_l2_em": "Same papers.",
+    "body_p1": "Beyond Rational carries acoustic and surface materials that meet the standards a specifier already works to — EN 13964 for the ceiling range, Class A absorption where the build-up allows it, declared emissions, published EPDs. The same documentation as the incumbent, lower numbers in the EPD.",
     "body_p2": "Every material is chosen on its own merits first: how it sounds, how it looks, how it is fixed, how it ages. Where a material differs from the incumbent — and Aisti Aalto is B-s1,d0 where stone wool is A1 — we say so early, because you will find it at the fire strategy anyway.",
-    "body_p3": "Construction is conservative for good reasons, and a new material earns its place by being checkable. So we bring the test reports, the EPD and the mounting detail to the first meeting, and let them do the arguing.",
+    "body_p3": "Construction is conservative for good reasons, and a new material earns its place by being checkable. The test reports, the EPD and the mounting detail are on the table from the first meeting.",
     "cap_left": "Open porous structure",
-    "cap_right": "Conscious by design"
+    "cap_right": "No plastic, no mineral binder"
   },
   "studio": {
     "section_label": "Who we are",
-    "meta": "Copenhagen · Finland",
-    "title_l1": "We read the EPD",
-    "title_l2_em": "before the brochure.",
+    "meta": "Since 2025",
+    "title_l1": "Copenhagen",
+    "title_l2_em": "and Kitee.",
     "stat_founded": "CPH",
     "stat_founded_label": "Based in Copenhagen",
     "stat_people": "4",
     "stat_people_label": "Suppliers",
     "stat_studios": "2025",
     "stat_studios_label": "In business since",
-    "body": "Beyond Rational is based in Copenhagen; our partner Aisti produces in Kitee, Finland. We specify and supply across Denmark. Between us we have spent years designing and developing acoustic products, which is mostly useful for knowing which questions to put to a manufacturer.",
+    "body": "Beyond Rational is based in Copenhagen; our partner Aisti produces in Kitee, Finland. We specify and supply across Denmark. Between us we have spent years designing and developing acoustic products, before we started distributing them.",
     "link_label": "Contact"
   },
   "cases": {
@@ -89,9 +89,9 @@
   "cta": {
     "section_label": "Get in touch",
     "meta": "Copenhagen",
-    "title_l1": "Send the brief.",
-    "title_l2_em": "We'll read it carefully.",
-    "body": "Send the drawing, the room schedule or just the area. We answer Monday to Friday, and we work directly with architects, engineers, contractors and property owners.",
+    "title_l1": "Drawing,",
+    "title_l2_em": "or just the area.",
+    "body": "We answer Monday to Friday, and we work directly with architects, engineers, contractors and property owners.",
     "email": "hello@beyondrational.com"
   }
 }
