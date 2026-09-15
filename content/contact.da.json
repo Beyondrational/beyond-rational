@@ -1,15 +1,15 @@
 {
   "loader_tag": "Kontakt / 2026",
   "hero": {
-    "title_l1": "Fortæl os",
-    "title_l2": "om rummet.",
-    "lede": "Vælg en vej nedenfor. Formularen tilpasser sig samtalen: vareprøve, projektspecifikation eller generel information. Vi svarer mandag til fredag."
+    "title_l1": "Vareprøve, spec,",
+    "title_l2": "eller spørgsmål.",
+    "lede": "Formularen tilpasser sig efter, hvad du vælger, så du kun bliver bedt om det, der er relevant. Vi svarer mandag til fredag."
   },
   "form_section": {
     "section_label": "Kom i kontakt",
-    "title_l1": "Én formular,",
-    "title_l2": "fire veje.",
-    "intro": "Vælg en fane, der passer til dit behov. Formularen tilpasser sig for at stille de rette spørgsmål. Vi svarer mandag til fredag.",
+    "title_l1": "Svar",
+    "title_l2": "mandag til fredag.",
+    "intro": "Vælg den fane, der passer. Felterne skifter, så du kun udfylder det, vi har brug for.",
     "contact_info": {
       "email": "morten@beyondrational.com",
       "phone": "+45 22 55 54 70",
@@ -125,7 +125,7 @@
   "contact_cards": {
     "section_label": "Direkte linje",
     "title": "Beyond Rational drives af Morten og Rasmus.",
-    "intro": "Begge tager telefonen, begge læser hver eneste brief.",
+    "intro": "Direkte numre nedenfor — Morten tager det kommercielle, Rasmus det tekniske.",
     "morten": {
       "eyebrow": "Adm. partner",
       "name": "Morten Gyldendal Melberg",

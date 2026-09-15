@@ -1,7 +1,7 @@
 {
   "loader_tag": "Produkter / 2026",
   "hero": {
-    "title": "Vores produkter.",
+    "title": "Fire materialer.",
     "lede": "Fire akustikmaterialer, hver med sin egen EPD og sine egne prøvningsrapporter, og hver med sin egen side. Bragt til Danmark af Beyond Rational."
   },
   "items": [
@@ -31,8 +31,8 @@
     }
   ],
   "cta": {
-    "title_l1": "Specificér",
-    "title_l2": "sortimentet.",
-    "lede": "Send briefet, så hjælper vi dig med at vælge det rette materiale, format og montering til dit rum."
+    "title_l1": "Format, tykkelse,",
+    "title_l2": "montering.",
+    "lede": "Fire materialer med hver sin absorption, brandklasse og montageform. Fortæl os, hvad rummet skal, så siger vi hvilket af dem der passer."
   }
 }
