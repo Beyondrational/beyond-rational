@@ -208,16 +208,67 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
   </div>
 </section>
 
-<!-- ===== The partner — Aisti brand narrative ===== -->
-<section class="bra-surface-ink">
-  <div class="bra-container bra-section">
-    <p class="bra-caption" style="margin-bottom: var(--bra-s-3);" data-content="partner.eyebrow">The partner</p>
-    <div class="bra-grid-2" style="align-items: start;">
-      <h2 class="bra-h1" style="max-width: 16ch;">
-        <span class="bra-reveal-line" data-reveal data-content="partner.title_l1">It started with</span><br>
-        <span class="bra-reveal-line" data-reveal data-content="partner.title_l2">a ceiling fitter.</span>
-      </h2>
-      <p class="bra-body" style="font-size: 17px; max-width: 52ch;" data-content="partner.body">Aisti began with a question from one of Mikko Paananen's clients: was there a more sustainable ceiling tile that gave up nothing on performance or cost? He was running a ceiling installation company at the time and could not find one. The search led him to foam-forming — a fibre process that had been researched for acoustics but never taken to production. Manufacturing moves from the pilot line to a plant in Kitee during 2026, on a contracted mix of 70% nuclear and 30% hydro power.</p>
+<!-- ===== CO2 savings calculator ===== -->
+<section class="bra-container bra-section">
+  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);" data-content="co2.section_label">CO₂ savings</p>
+  <h2 class="bra-h2" style="margin-bottom: var(--bra-s-4); max-width: 20ch;">
+    <span class="bra-reveal-line" data-reveal data-content="co2.title_l1">Aisti Aalto,</span><br>
+    <span class="bra-reveal-line" data-reveal data-content="co2.title_l2">by the numbers.</span>
+  </h2>
+
+  <div class="bra-co2calc" data-co2calc data-co2-km="0.15" style="margin-bottom: var(--bra-s-3);">
+    <div class="bra-co2calc__control">
+      <div class="bra-co2calc__ctrl-top">
+        <span class="bra-co2calc__label" data-content="co2.area_label">Ceiling area</span>
+        <span class="bra-co2calc__area"><span data-co2-area-val>150</span> m²</span>
+      </div>
+      <input class="bra-co2calc__range" type="range" min="10" max="1000" step="10" value="150" data-co2-area aria-label="Ceiling area in square metres">
+    </div>
+
+    <div class="bra-co2calc__rows">
+      <div class="bra-co2calc__row" data-ours data-key="aisti-lifecycle" data-name="Aisti® Aalto" data-factor="1.29">
+        <span class="bra-co2calc__name"><span data-content="co2.aisti_lifecycle.name">Aisti Aalto 20 mm</span><small class="bra-co2calc__note" data-content="co2.aisti_lifecycle.note">Production stage, A1–A3 (GWP-fossil)</small></span>
+        <div class="bra-co2calc__bar"><span class="bra-co2calc__fill"></span></div>
+        <span class="bra-co2calc__val" data-co2-val>0</span>
+      </div>
+      <div class="bra-co2calc__row" data-ours data-key="aisti-stored" data-name="Aisti® Aalto" data-factor="-3.09" data-exclude-from-saving>
+        <span class="bra-co2calc__name"><span data-content="co2.aisti_stored.name">Aisti Aalto 20 mm</span><small class="bra-co2calc__note" data-content="co2.aisti_stored.note">Carbon held in the fibre to the factory gate</small></span>
+        <div class="bra-co2calc__bar"><span class="bra-co2calc__fill"></span></div>
+        <span class="bra-co2calc__val" data-co2-val>0</span>
+      </div>
+      <div class="bra-co2calc__row" data-key="mineral" data-name="Rockfon Sonar 20 mm" data-factor="2.29">
+        <span class="bra-co2calc__name"><span data-content="co2.rival.name">Rockfon Sonar 20 mm</span><small class="bra-co2calc__note" data-content="co2.rival.note">Stone wool, A edge · production stage, A1–A3</small></span>
+        <div class="bra-co2calc__bar"><span class="bra-co2calc__fill"></span></div>
+        <span class="bra-co2calc__val" data-co2-val>0</span>
+      </div>
+    </div>
+
+    <div class="bra-co2calc__result">
+      <div>
+        <div class="bra-co2calc__save-num"><span data-co2-save>0</span> kg</div>
+        <div class="bra-co2calc__save-lbl"><span data-content="co2.saved_label">Less carbon to the factory gate than</span> <span data-co2-alt-name>Rockfon Sonar 20mm</span></div>
+      </div>
+      <p class="bra-co2calc__equiv" data-co2-equiv></p>
+    </div>
+    <p class="bra-co2calc__foot" data-content="co2.disclaimer">Both figures are each manufacturer's own published production-stage number, A1–A3, for a 20 mm tile on a T-grid edge. Aisti Aalto: 1.29 kg CO₂e/m² GWP-fossil, EPD Hub HUB-5632 (published 06.03.2026) — a design-phase EPD, from a test line, ahead of the Kitee plant. Rockfon Sonar: 2.29 kg CO₂e/m², A edge, datasheet 09.2024. The 3.09 kg CO₂e/m² of biogenic carbon in the Aisti tile is held for the life of the ceiling and returns at end of life under the EPD's disposal scenario, so it is shown but not counted as a saving. Rockfon note that impact values are generally not directly comparable between manufacturers; treat this as an order of magnitude, not a certificate.</p>
+  </div>
+
+  <!-- Head-to-head -->
+  <div class="bra-versus">
+    <div class="bra-versus__side bra-versus__side--ours">
+      <h3 class="bra-versus__name" data-content="versus.ours.name">Aisti Aalto</h3>
+      <span class="bra-versus__tag" data-content="versus.ours.tag">Our tile</span>
+      <ul class="bra-versus__list" data-content-each="versus.ours.points">
+        <template><li data-each="text"></li></template>
+      </ul>
+    </div>
+    <div class="bra-versus__vs">vs</div>
+    <div class="bra-versus__side">
+      <h3 class="bra-versus__name" data-content="versus.theirs.name">Mineral wool</h3>
+      <span class="bra-versus__tag" data-content="versus.theirs.tag">The default</span>
+      <ul class="bra-versus__list" data-content-each="versus.theirs.points">
+        <template><li data-each="text"></li></template>
+      </ul>
     </div>
   </div>
 </section>
@@ -552,71 +603,6 @@ addEventListener("pagereveal",function(e){window.__brViewTransition=e.viewTransi
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
   </div>
-  </div>
-</section>
-
-<!-- ===== CO2 savings calculator ===== -->
-<section class="bra-container bra-section">
-  <p class="bra-caption" style="margin-bottom: var(--bra-s-2);" data-content="co2.section_label">CO₂ savings</p>
-  <h2 class="bra-h2" style="margin-bottom: var(--bra-s-4); max-width: 20ch;">
-    <span class="bra-reveal-line" data-reveal data-content="co2.title_l1">Aisti Aalto,</span><br>
-    <span class="bra-reveal-line" data-reveal data-content="co2.title_l2">by the numbers.</span>
-  </h2>
-
-  <div class="bra-co2calc" data-co2calc data-co2-km="0.15" style="margin-bottom: var(--bra-s-3);">
-    <div class="bra-co2calc__control">
-      <div class="bra-co2calc__ctrl-top">
-        <span class="bra-co2calc__label" data-content="co2.area_label">Ceiling area</span>
-        <span class="bra-co2calc__area"><span data-co2-area-val>150</span> m²</span>
-      </div>
-      <input class="bra-co2calc__range" type="range" min="10" max="1000" step="10" value="150" data-co2-area aria-label="Ceiling area in square metres">
-    </div>
-
-    <div class="bra-co2calc__rows">
-      <div class="bra-co2calc__row" data-ours data-key="aisti-lifecycle" data-name="Aisti® Aalto" data-factor="1.29">
-        <span class="bra-co2calc__name"><span data-content="co2.aisti_lifecycle.name">Aisti Aalto 20 mm</span><small class="bra-co2calc__note" data-content="co2.aisti_lifecycle.note">Production stage, A1–A3 (GWP-fossil)</small></span>
-        <div class="bra-co2calc__bar"><span class="bra-co2calc__fill"></span></div>
-        <span class="bra-co2calc__val" data-co2-val>0</span>
-      </div>
-      <div class="bra-co2calc__row" data-ours data-key="aisti-stored" data-name="Aisti® Aalto" data-factor="-3.09" data-exclude-from-saving>
-        <span class="bra-co2calc__name"><span data-content="co2.aisti_stored.name">Aisti Aalto 20 mm</span><small class="bra-co2calc__note" data-content="co2.aisti_stored.note">Carbon held in the fibre to the factory gate</small></span>
-        <div class="bra-co2calc__bar"><span class="bra-co2calc__fill"></span></div>
-        <span class="bra-co2calc__val" data-co2-val>0</span>
-      </div>
-      <div class="bra-co2calc__row" data-key="mineral" data-name="Rockfon Sonar 20 mm" data-factor="2.29">
-        <span class="bra-co2calc__name"><span data-content="co2.rival.name">Rockfon Sonar 20 mm</span><small class="bra-co2calc__note" data-content="co2.rival.note">Stone wool, A edge · production stage, A1–A3</small></span>
-        <div class="bra-co2calc__bar"><span class="bra-co2calc__fill"></span></div>
-        <span class="bra-co2calc__val" data-co2-val>0</span>
-      </div>
-    </div>
-
-    <div class="bra-co2calc__result">
-      <div>
-        <div class="bra-co2calc__save-num"><span data-co2-save>0</span> kg</div>
-        <div class="bra-co2calc__save-lbl"><span data-content="co2.saved_label">Less carbon to the factory gate than</span> <span data-co2-alt-name>Rockfon Sonar 20mm</span></div>
-      </div>
-      <p class="bra-co2calc__equiv" data-co2-equiv></p>
-    </div>
-    <p class="bra-co2calc__foot" data-content="co2.disclaimer">Both figures are each manufacturer's own published production-stage number, A1–A3, for a 20 mm tile on a T-grid edge. Aisti Aalto: 1.29 kg CO₂e/m² GWP-fossil, EPD Hub HUB-5632 (published 06.03.2026) — a design-phase EPD, from a test line, ahead of the Kitee plant. Rockfon Sonar: 2.29 kg CO₂e/m², A edge, datasheet 09.2024. The 3.09 kg CO₂e/m² of biogenic carbon in the Aisti tile is held for the life of the ceiling and returns at end of life under the EPD's disposal scenario, so it is shown but not counted as a saving. Rockfon note that impact values are generally not directly comparable between manufacturers; treat this as an order of magnitude, not a certificate.</p>
-  </div>
-
-  <!-- Head-to-head -->
-  <div class="bra-versus">
-    <div class="bra-versus__side bra-versus__side--ours">
-      <h3 class="bra-versus__name" data-content="versus.ours.name">Aisti Aalto</h3>
-      <span class="bra-versus__tag" data-content="versus.ours.tag">Our tile</span>
-      <ul class="bra-versus__list" data-content-each="versus.ours.points">
-        <template><li data-each="text"></li></template>
-      </ul>
-    </div>
-    <div class="bra-versus__vs">vs</div>
-    <div class="bra-versus__side">
-      <h3 class="bra-versus__name" data-content="versus.theirs.name">Mineral wool</h3>
-      <span class="bra-versus__tag" data-content="versus.theirs.tag">The default</span>
-      <ul class="bra-versus__list" data-content-each="versus.theirs.points">
-        <template><li data-each="text"></li></template>
-      </ul>
-    </div>
   </div>
 </section>
 
