@@ -2,9 +2,9 @@
    B_R Design System  ·  v1.1
    Beyond Rational · Aisti
    ------------------------------------------------------------
-   Architectural-monograph register. Single family (Archivo +
-   Archivo Black) at five weights, warm cream surface, charred
-   oak as brand carrier, 2 px heavy rules, no eyebrows.
+   Architectural-monograph register. Inter carries the system at
+   five weights; Lato Light appears only on the hero line. Warm
+   cream surface, charred oak as brand carrier, 2 px heavy rules.
    Namespace: .bra-
    ------------------------------------------------------------
    v1.1 — craft pass. Same palette, same family, same register;
@@ -64,8 +64,10 @@
   --bra-on-oak:    oklch(0.960 0.010 60);
 
   /* Type — single family commitment */
-  --bra-font:         "Archivo", system-ui, sans-serif;
-  --bra-font-display: "Archivo Black", "Archivo", sans-serif;
+  --bra-font:         "Inter", system-ui, sans-serif;
+  /* Lato carries the hero line only, the way the reference does: Inter runs
+     the site, Lato Light appears at the very top of the type scale. */
+  --bra-font-display: "Lato", "Inter", system-ui, sans-serif;
 
   /* Scale — big jumps */
   --bra-fs-micro:  11px;
@@ -2919,9 +2921,18 @@ body[data-page="product-aisti"] .brg__cell:not(:first-child):hover .brg__img { t
 }
 .home-hero__back:hover { color: var(--bra-on-oak); }
 .home-hero__title {
-  font-family: var(--bra-font); font-weight: 300;
   font-size: clamp(46px, 7.4vw, 116px); line-height: 1.00;
   letter-spacing: -0.026em; max-width: 17ch; text-wrap: balance;
+}
+/* `.bra h1` is (0,1,1) and beats a lone class, so the family and weight set
+   here have to clear it — the weight below had been dead since it was written,
+   and the hero has been rendering at 500 rather than the 300 it asks for.
+   Matched on h1 deliberately: the class is reused on section h2s further down
+   the page, and those stay on Inter, the way the reference keeps everything
+   below its largest line on one face. */
+.bra h1.home-hero__title {
+  font-family: var(--bra-font-display);
+  font-weight: 300;
 }
 .home-hero__title em { font-style: normal; font-weight: 500; }
 .home-hero__sub {
