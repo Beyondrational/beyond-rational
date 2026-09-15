@@ -1,0 +1,8 @@
+# Filer der aldrig skal serveres til besøgende.
+# Holder deployment-størrelsen nede og forhindrer at store filer
+# i disse mapper smutter med ved et uheld.
+
+*.md
+.github/
+google-apps-script/
+email/
