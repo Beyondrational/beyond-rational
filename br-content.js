@@ -302,4 +302,15 @@
   window.brCurrentLang = resolveLang;
 
   loadContent(resolveLang());
+
+  /* Inline editor bootstrap. A visitor pays one URLSearchParams read for this;
+     the editor itself — and its stylesheet, and the GitHub module — are only
+     fetched when someone deliberately adds ?edit to the URL. Kept here rather
+     than in ten HTML files so there is one place to remove it. */
+  if (new URL(location.href).searchParams.has('edit')) {
+    const s = document.createElement('script');
+    s.type = 'module';
+    s.src = 'br-edit.js';
+    document.head.appendChild(s);
+  }
 })();
