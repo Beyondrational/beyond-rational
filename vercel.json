@@ -186,5 +186,12 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/edit",
+      "destination": "/?edit",
+      "permanent": false
+    }
   ]
 }

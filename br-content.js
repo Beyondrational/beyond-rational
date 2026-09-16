@@ -303,11 +303,28 @@
 
   loadContent(resolveLang());
 
-  /* Inline editor bootstrap. A visitor pays one URLSearchParams read for this;
-     the editor itself — and its stylesheet, and the GitHub module — are only
-     fetched when someone deliberately adds ?edit to the URL. Kept here rather
-     than in ten HTML files so there is one place to remove it. */
-  if (new URL(location.href).searchParams.has('edit')) {
+  /* Inline editor bootstrap. A visitor pays one URLSearchParams read and one
+     sessionStorage probe for this; the editor itself — and its stylesheet, and
+     the GitHub module — are only fetched when someone deliberately asks for it.
+     Kept here rather than in ten HTML files so there is one place to remove it.
+
+     ?edit turns edit mode ON and then STICKS for the rest of the tab, because
+     this is a multi-page site: without the flag, clicking any nav link would
+     drop you back out of editing and ask for the token again on the next page.
+     The editor's "Forlad" clears it; closing the tab clears it too, along with
+     the token. */
+  const EDIT_KEY = 'brEditMode';
+  const askedForEdit = new URL(location.href).searchParams.has('edit');
+  let stillEditing = false;
+  try {
+    if (askedForEdit) sessionStorage.setItem(EDIT_KEY, '1');
+    stillEditing = sessionStorage.getItem(EDIT_KEY) === '1';
+  } catch (e) {
+    // Storage blocked (private window, blocked site data). ?edit on each page
+    // still works; it just will not follow you across a link.
+  }
+
+  if (askedForEdit || stillEditing) {
     const s = document.createElement('script');
     s.type = 'module';
     s.src = 'br-edit.js';
