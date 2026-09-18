@@ -1,7 +1,7 @@
 {
   "loader_tag": "Products / 2026",
   "hero": {
-    "title": "Four materials.",
+    "title": "Our Products.",
     "lede": "Four acoustic materials, each with its own EPD and test data, and each with its own page. Brought to Denmark by Beyond Rational."
   },
   "items": [
@@ -31,8 +31,8 @@
     }
   ],
   "cta": {
-    "title_l1": "Format, thickness,",
-    "title_l2": "mounting.",
-    "lede": "Four materials, each with its own absorption, fire class and mounting method. Tell us what the room has to do and we'll say which one fits."
+    "title_l1": "Specify",
+    "title_l2": "the range.",
+    "lede": "Send the brief and we'll help you choose the right material, format, and mounting for your room."
   }
 }

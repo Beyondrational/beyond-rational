@@ -6,9 +6,9 @@
   },
   "conscious": {
     "eyebrow": "A conscious choice",
-    "title_l1": "EN 13964.",
-    "title_l2": "50-year life.",
-    "body": "Aisti Aalto is a bio-based absorber, declared to EN 13964:2014 — the same harmonised standard as the mineral wool tile beside it. The fibre is chemi-thermomechanical spruce pulp from certified Finnish forests, foam-formed without plastic, mineral binders or irritating fibres. The reference service life is 50 years, and Aisti prices the tile without a green premium."
+    "title_l1": "Specify it on",
+    "title_l2": "the spec sheet.",
+    "body": "Aisti Aalto is a bio-based absorber built for real projects, not for a sustainability appendix. The fibre is chemi-thermomechanical spruce pulp from certified Finnish forests, foam-formed without plastic, mineral binders or irritating fibres. It is declared to EN 13964:2014 — the same harmonised standard as the mineral wool tile beside it — carries a 50-year reference service life, and Aisti prices it without a green premium. Nothing about specifying it asks you to argue from goodwill."
   },
   "spec": {
     "items": [
@@ -265,18 +265,18 @@
     "title_l2": "not by plastic.",
     "body_p1": "It starts as spruce. The fibres are pulped, then mixed with water and a foaming agent so that millions of tiny bubbles carry them — the foam spreads the fibre evenly and leaves an open, porous structure that absorbs sound across a wide frequency range. As the mixture dries, natural hydrogen bonds form and hold that structure together, which is why the tile needs no plastic or synthetic binders. The tiles are moulded from that material.",
     "body_p2": "Fire protection sits in the material, not in a coating. A potassium-based salt treatment reacts to heat and forms a protective ceramic layer on the surface of the tile — a barrier that shields the wood fibres beneath and slows flame spread, which is what carries the B-s1,d0 classification. The solution is patented and unique to Aisti. At end of life the core goes back to the factory to be pulped and formed again. Made in Finland.",
-    "body_p3": "In the room that reads as shorter reverberation time and a lower background level — most clearly between 500 Hz and 2 kHz, where speech sits."
+    "body_p3": "In the room that reads as less reverberation and less background noise. Speech carries, conversation stops competing with the ceiling, and the space is easier to be in for a day."
   },
   "partner": {
     "eyebrow": "The partner",
-    "title_l1": "Paananen,",
-    "title_l2": "ceiling fitter.",
+    "title_l1": "It started with",
+    "title_l2": "a ceiling fitter.",
     "body": "Aisti began with a question from one of Mikko Paananen's clients: was there a more sustainable ceiling tile that gave up nothing on performance or cost? He was running a ceiling installation company at the time and could not find one. The search led him to foam-forming — a fibre process that had been researched for acoustics but never taken to production. Manufacturing moves from the pilot line to a plant in Kitee during 2026, on a contracted mix of 70% nuclear and 30% hydro power."
   },
   "video": {
     "section_label": "Video",
-    "title_l1": "The process,",
-    "title_l2": "on film.",
+    "title_l1": "The film,",
+    "title_l2": "in place.",
     "items": [
       {
         "youtube_id": "zMcN2KxKzCk",
@@ -310,9 +310,9 @@
     "disclaimer": "Both figures are each manufacturer's own published production-stage number, A1–A3, for a 20 mm tile on a T-grid edge. Aisti Aalto: 1.29 kg CO₂e/m² GWP-fossil, EPD Hub HUB-5632 (published 06.03.2026) — a design-phase EPD, from a test line, ahead of the Kitee plant. Rockfon Sonar: 2.29 kg CO₂e/m², A edge, datasheet 09.2024. The 3.09 kg CO₂e/m² of biogenic carbon in the Aisti tile is held for the life of the ceiling and returns at end of life under the EPD's disposal scenario, so it is shown but not counted as a saving. Rockfon note that impact values are generally not directly comparable between manufacturers; treat this as an order of magnitude, not a certificate."
   },
   "cta": {
-    "title_l1": "Area,",
-    "title_l2": "height.",
-    "lede": "Send the room and we will come back with format, thickness and edge profile, the absorption you can expect, and where the fire class puts you. Samples and the full data package on request."
+    "title_l1": "Specify",
+    "title_l2": "Aisti.",
+    "lede": "Send the room — area, height, what it is used for — and we will come back with format, thickness and edge profile, the absorption you can expect, and where the fire class puts you. Samples and the full data package on request."
   },
   "performance": {
     "section_label": "Performance",
