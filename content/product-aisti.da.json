@@ -6,9 +6,9 @@
   },
   "conscious": {
     "eyebrow": "Et bevidst valg",
-    "title_l1": "EN 13964.",
-    "title_l2": "50 års levetid.",
-    "body": "Aisti Aalto er en biobaseret absorbent, deklareret efter EN 13964:2014 — samme harmoniserede standard som stenuldspladen ved siden af. Fibrene er kemitermomekanisk granmasse fra certificerede finske skove, skumformet uden plast, mineralske bindemidler eller generende fibre. Forventet levetid er 50 år, og Aisti prissætter pladen uden grøn merpris."
+    "title_l1": "Den skal kunne",
+    "title_l2": "stå i beskrivelsen.",
+    "body": "Aisti Aalto er en biobaseret absorbent bygget til rigtige projekter, ikke til et bæredygtighedsbilag. Fibrene er kemitermomekanisk granmasse fra certificerede finske skove, skumformet uden plast, mineralske bindemidler eller generende fibre. Den er deklareret efter EN 13964:2014 — samme harmoniserede standard som stenuldspladen ved siden af — har 50 års forventet levetid, og Aisti prissætter den uden grøn merpris. Intet ved at foreskrive den kræver, at du argumenterer ud fra velvilje."
   },
   "spec": {
     "items": [
@@ -265,18 +265,18 @@
     "title_l2": "ikke af plast.",
     "body_p1": "Det begynder som gran. Fibrene pulpes og blandes derefter med vand og et skummiddel, så millioner af små bobler bærer dem — skummet fordeler fibrene jævnt og efterlader en åben, porøs struktur, der opsuger lyd over et bredt frekvensområde. Når massen tørrer, dannes naturlige hydrogenbindinger, som holder strukturen sammen, og derfor kræver pladen hverken plast- eller syntetiske bindemidler. Pladerne støbes af det materiale.",
     "body_p2": "Brandsikkerheden ligger i materialet, ikke i en overfladebehandling. En kaliumbaseret saltbehandling reagerer på varme og danner et beskyttende keramisk lag på pladens overflade — en barriere, der skærmer træfibrene nedenunder og bremser flammespredningen, og det er dét, der bærer klassifikationen B-s1,d0. Løsningen er patenteret og unik for Aisti. Ved endt levetid kan kernen sendes retur til fabrikken, pulpes og formes på ny. Fremstillet i Finland.",
-    "body_p3": "I rummet betyder det kortere efterklangstid og lavere baggrundsniveau — tydeligst mellem 500 Hz og 2 kHz, hvor talen ligger."
+    "body_p3": "I rummet mærkes det som mindre efterklang og mindre baggrundsstøj. Talen bærer, samtalen holder op med at konkurrere med loftet, og der er til at være en hel dag."
   },
   "partner": {
     "eyebrow": "Partneren",
-    "title_l1": "Paananen,",
-    "title_l2": "loftsmontør.",
+    "title_l1": "Det begyndte med",
+    "title_l2": "en loftsmontør.",
     "body": "Aisti begyndte med et spørgsmål fra en af Mikko Paananens kunder: fandtes der en mere bæredygtig loftsplade, der ikke gav afkald på hverken ydeevne eller pris? Han drev selv et loftsmontagefirma dengang og kunne ikke finde en. Sporet førte til foam-forming — en fiberproces, der var undersøgt til akustik, men aldrig sat i produktion. Fremstillingen flytter fra pilotlinjen til en fabrik i Kitee i løbet af 2026, på en kontraktbunden strømmix af 70 % kernekraft og 30 % vandkraft."
   },
   "video": {
     "section_label": "Video",
-    "title_l1": "Processen,",
-    "title_l2": "på film.",
+    "title_l1": "Filmen,",
+    "title_l2": "i praksis.",
     "items": [
       {
         "youtube_id": "zMcN2KxKzCk",
@@ -310,9 +310,9 @@
     "disclaimer": "Begge tal er producenternes egne offentliggjorte tal for produktionsfasen, A1–A3, for en 20 mm plade med T-skinnekant. Aisti Aalto: 1,29 kg CO₂e/m² GWP-fossil, EPD Hub HUB-5632 (udgivet 06.03.2026) — en design-EPD baseret på en testlinje, før fabrikken i Kitee. Rockfon Sonar: 2,29 kg CO₂e/m², A-kant, datablad 09.2024. De 3,09 kg CO₂e/m² biogent kulstof i Aisti-pladen er bundet i loftets levetid og frigives ved endt levetid under EPD'ens bortskaffelsesscenarie — derfor vises det, men tælles ikke med som besparelse. Rockfon bemærker selv, at miljøtal sjældent kan sammenlignes direkte på tværs af producenter; læs det som en størrelsesorden, ikke som et certifikat."
   },
   "cta": {
-    "title_l1": "Areal,",
-    "title_l2": "højde.",
-    "lede": "Send rummet, så vender vi tilbage med format, tykkelse og kantprofil, den absorption du kan regne med, og hvor brandklassen stiller dig. Prøver og det fulde datablad på forespørgsel."
+    "title_l1": "Specificér",
+    "title_l2": "Aisti.",
+    "lede": "Send rummet — areal, højde, hvad det bruges til — så vender vi tilbage med format, tykkelse og kantprofil, den absorption du kan regne med, og hvor brandklassen stiller dig. Prøver og det fulde datablad på forespørgsel."
   },
   "performance": {
     "section_label": "Ydeevne",

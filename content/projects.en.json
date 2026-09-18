@@ -7,7 +7,7 @@
   },
   "supplier_head": {
     "eyebrow": "Elsewhere",
-    "title": "Sappa, Mogu and Wuud.",
+    "title": "Also from our suppliers.",
     "body": "Work by Sappa, Mogu, and Wuud themselves, shown here as a preview of the finish and format range Beyond Rational brings to Denmark."
   },
   "supplier_cards": [
@@ -66,11 +66,11 @@
   },
   "cases_head": {
     "section_label": "The cases",
-    "meta": "Two demo installations"
+    "meta": "What happened in the room"
   },
   "cta": {
-    "body": "Tell us the area, ceiling height and use, and we'll come back with format, thickness and mounting — and send samples of the relevant finishes.",
-    "title_l1": "Samples",
-    "title_l2": "and data."
+    "body": "Send the brief. We'll help you select format, thickness, and mounting for your specific room. Samples and the full data package on request.",
+    "title_l1": "Specify",
+    "title_l2": "your project."
   }
 }

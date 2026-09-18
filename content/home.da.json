@@ -10,7 +10,7 @@
   "range": {
     "section_label": "Hvad vi tilbyder",
     "meta": "Beyond Rational",
-    "intro": "Fire materialer, hver med sin egen EPD og sine egne prøvningsrapporter. Valgt fordi de kan stå ved siden af det gængse på absorption, brand og montage.",
+    "intro": "Fire materialer, hver med sin egen EPD og sine egne prøvningsrapporter. Valgt fordi de kan stå ved siden af det gængse på absorption, brand og montage — ikke fordi de tager sig godt ud på et billede.",
     "link_label": "Se alle produkter",
     "items": [
       {
@@ -42,26 +42,26 @@
   "process": {
     "section_label": "Præmissen",
     "meta": "Derfor findes vi",
-    "title_l1": "Lavere aftryk.",
-    "title_l2_em": "Samme papirer.",
-    "body_p1": "Beyond Rational fører akustik- og overflademateriale, der lever op til de standarder, den projekterende allerede arbejder efter — EN 13964 for loftssortimentet, absorptionsklasse A hvor opbygningen tillader det, deklarerede emissioner, offentliggjorte EPD'er. Samme dokumentation som for det gængse, lavere tal i EPD'en.",
+    "title_l1": "Det bevidste valg",
+    "title_l2_em": "skal kunne tåle et review.",
+    "body_p1": "Beyond Rational findes for at gøre det bevidste valg til et, der kan forsvares. Vi fører akustik- og overflademateriale, der lever op til de standarder en beskrivende allerede arbejder efter — EN 13964 for loftssortimentet, absorptionsklasse A hvor opbygningen tillader det, deklarerede emissioner, offentliggjorte EPD'er. Aftrykket er mindre. Papirerne er ikke tyndere.",
     "body_p2": "Hvert materiale er valgt på sine egne meritter først: hvordan det lyder, hvordan det ser ud, hvordan det fastgøres, hvordan det ældes. Hvor et materiale adskiller sig fra det gængse — og Aisti Aalto er B-s1,d0 hvor stenuld er A1 — siger vi det tidligt, for I finder det alligevel ved brandstrategien.",
-    "body_p3": "Byggeriet er konservativt af gode grunde, og et nyt materiale gør sig fortjent ved at kunne efterprøves. Prøvningsrapporterne, EPD'en og monteringsdetaljen ligger på bordet fra første møde.",
+    "body_p3": "Byggeriet er konservativt af gode grunde, og et nyt materiale gør sig fortjent ved at kunne efterprøves. Derfor tager vi prøvningsrapporterne, EPD'en og monteringsdetaljen med til første møde og lader dem føre ordet.",
     "cap_left": "Åben porøs struktur",
-    "cap_right": "Uden plast eller mineralsk binder"
+    "cap_right": "Bevidst by design"
   },
   "studio": {
     "section_label": "Hvem vi er",
-    "meta": "Siden 2025",
-    "title_l1": "København",
-    "title_l2_em": "og Kitee.",
+    "meta": "København · Finland",
+    "title_l1": "Vi læser EPD'en",
+    "title_l2_em": "før brochuren.",
     "stat_founded": "CPH",
     "stat_founded_label": "Base i København",
     "stat_people": "4",
     "stat_people_label": "Leverandører",
     "stat_studios": "2025",
     "stat_studios_label": "I drift siden",
-    "body": "Beyond Rational har base i København; vores partner Aisti producerer i Kitee i Finland. Vi specificerer og leverer i hele Danmark. Tilsammen har vi brugt år på at designe og udvikle akustikprodukter, før vi begyndte at distribuere dem.",
+    "body": "Beyond Rational har base i København; vores partner Aisti producerer i Kitee i Finland. Vi specificerer og leverer i hele Danmark. Tilsammen har vi brugt år på at designe og udvikle akustikprodukter, hvilket først og fremmest er godt til at vide, hvilke spørgsmål man skal stille en producent.",
     "link_label": "Kontakt"
   },
   "cases": {
@@ -89,9 +89,9 @@
   "cta": {
     "section_label": "Kom i kontakt",
     "meta": "København",
-    "title_l1": "Tegningen,",
-    "title_l2_em": "eller arealet.",
-    "body": "Vi svarer mandag til fredag og arbejder direkte med arkitekter, ingeniører, entreprenører og bygningsejere.",
+    "title_l1": "Send briefet.",
+    "title_l2_em": "Vi læser det grundigt.",
+    "body": "Send tegningen, rumskemaet eller bare arealet. Vi svarer mandag til fredag og arbejder direkte med arkitekter, ingeniører, entreprenører og bygningsejere.",
     "email": "hello@beyondrational.com"
   }
 }
